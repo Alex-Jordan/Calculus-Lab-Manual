@@ -1,0 +1,24 @@
+!config
+# Convert .xml file to .html or .tex using xsltproc, with 
+# an option to write to file or not
+# author: Chris Hughes
+# requires arara 3.0+
+#
+# Sample usage
+#
+# % arara: xlst: {convertTo: html}
+# % arara: xlst: {convertTo: tex}
+# % arara: xlst: {convertTo: tex, outputToFile: yes}
+# % arara: xlst: {convertTo: tex, outputToFile: no}
+#
+identifier: xslt
+name: XSLTproc
+commands: 
+- <arara> xsltproc @{outputToFile} ./xsl/@{convertTo} @{file}
+arguments: 
+- identifier: convertTo
+  flag: <arara> @{parameters.convertTo == "tex"? "lab2tex.xsl":"lab2html.xsl" }
+  default: tex
+- identifier: outputToFile
+  flag: <arara> @{ isTrue(parameters.convertTo == "tex", isTrue(parameters.outputToFile,"--output ".concat(getBasename(file).concat('.tex')),""),isTrue(parameters.outputToFile,"--output ".concat(getBasename(file)).concat('.html'),""))}
+  default: no

@@ -1,0 +1,2420 @@
+<?xml version="1.0" encoding="iso-8859-1" ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" 
+"http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd" 
+[ 
+<!ENTITY % MATHML.prefixed "INCLUDE"> 
+<!ENTITY % MATHML.prefix "m"> 
+] 
+> 
+<?xml-stylesheet type="text/css" href="251LabManual.css"?> 
+<html xmlns:m="http://www.w3.org/1998/Math/MathML" 
+ 
+xmlns="http://www.w3.org/1999/xhtml"  
+><head><title></title> 
+<!-- 
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=iso-8859-1" /> 
+see http://lists.w3.org/Archives/Public/www-math/2007May/0056.html  
+--> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<!-- html,mathplayer,xhtml,mozilla,xht --> 
+<meta name="src" content="251LabManual.tex" /> 
+<meta name="date" content="2014-10-30 00:13:00" /> 
+<link rel="stylesheet" type="text/css" href="251LabManual.css" /> 
+</head><body 
+>
+<script type="text/javascript"> 
+<!-- 
+if( navigator.appName=="Microsoft Internet Explorer"  
+&& navigator.platform=="Win32"  
+){  
+if( parseFloat(navigator.appVersion.substr(  
+navigator.appVersion.indexOf("MSIE ")+5))>="5.5"  
+){ try {  
+var oMP = new ActiveXObject("MathPlayer.Factory.1");  
+}  
+catch(e) { alert("Can't find Design Science's MathPalyer" +  
+"(http://www.dessci.com/webmath/mathplayer)");}  
+} else {  
+alert("Requires MSIE version 5.5 or later");  
+} }  
+ 
+--> 
+</script> 
+
+<h3 class="sectionHead"><span class="titlemark">A   </span> <a 
+ id="x1-1000A"></a>Rates of Change</h3>
+<div class="newtheorem">
+<!--l. 225--><p class="noindent" ><span class="head">
+<a 
+ id="x1-1001r1"></a>
+<span 
+class="cmbx-12">Activity 1</span><br 
+class="newline" />         </span>
+</p><!--l. 228--><p class="noindent" >Motion is frequently modeled using calculus. A building block for this application is the concept of <span 
+class="cmti-12">average</span>
+<span 
+class="cmti-12">velocity</span>. Average velocity is defined to be net displacement divided by elapsed time. More precisely, if
+<!--l. 228--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>p</mi></math> is a position
+function for something moving along a numbered line, then we define the average velocity over the time
+interval <!--l. 228--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" > <mfenced separators="" 
+open="["  close="]" ><mrow><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow></mfenced></math>
+to be:
+</p><!--tex4ht:inline--><!--l. 232--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="block" ><mtable 
+columnalign="left" class="align">
+                                <mtr><mtd 
+columnalign="right" class="align-odd"><!--mstyle 
+class="text"--><mtext  >&#x00A0;average&#x00A0;velocity</mtext><!--/mstyle--></mtd>                                <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>p</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>t</mrow><mrow 
+>1</mrow></msub 
+>)</mo></mrow> <mo 
+class="MathClass-bin">&#x2212;</mo> <mi 
+>p</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>t</mrow><mrow 
+>0</mrow></msub 
+>)</mo></mrow></mrow> 
+    <mrow 
+><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfrac>      <mspace width="2em"/></mtd>                                                                <mtd 
+columnalign="right" class="align-label"><mstyle 
+   id="x1-1002r1"  class="label" ></mstyle><!--endlabel--><!--mstyle 
+class="maketag"--><mtext  >&#x00A0;(1.1)</mtext><!--/mstyle-->
+</mtd></mtr></mtable></math>
+<div class="newtheorem">
+<!--l. 235--><p class="noindent" ><span class="head">
+<a 
+ id="x1-1003r1"></a>
+<span 
+class="cmbx-12">Problem 1.1</span>   </span>                                       According                                             to
+simplified Newtonian physics, if an object is dropped from a height of 200 m and allowed to free
+fall to the ground, then the height of the object (measure in m) is given by the position function
+                                                                                               
+                                                                                               
+<!--l. 236--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>p</mi></math>
+where
+<!--l. 236--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>p</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>2</mn><mn>0</mn><mn>0</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>4</mn><mo 
+class="MathClass-punc">.</mo><mn>9</mn><msup><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></math>
+where
+<!--l. 236--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>t</mi></math>
+is the amount of time that has passed since the object was dropped (measured in s).
+</p><!--l. 239--><p class="noindent" >
+1.1.1 What, <span 
+class="cmti-12">including units</span>, are the values of <!--l. 239--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>p</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+      three seconds and five seconds into the object&#x2019;s fall? Use these values when working <span 
+class="cmbx-12">??</span>&#x00A0;.
+1.1.2 <a 
+ id="x1-10052"></a> Calculate <!--l. 240--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow 
+><mi 
+>p</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><!--mstyle 
+class="text"--><mtext  >&#x00A0;5</mtext><!--/mstyle--><mspace width="0.3em" class="thinspace"/><!--mstyle 
+class="text"--><mtext  >&#x00A0;s</mtext><!--/mstyle--></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-bin">&#x2212;</mo><mi 
+>p</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><!--mstyle 
+class="text"--><mtext  >&#x00A0;3</mtext><!--/mstyle--><mspace width="0.3em" class="thinspace"/><!--mstyle 
+class="text"--><mtext  >&#x00A0;s</mtext><!--/mstyle--></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow>
+    <mrow 
+><!--mstyle 
+class="text"--><mtext  >&#x00A0;5</mtext><!--/mstyle--><mspace width="0.3em" class="thinspace"/><!--mstyle 
+class="text"--><mtext  >&#x00A0;s</mtext><!--/mstyle--><mo 
+class="MathClass-bin">&#x2212;</mo><!--mstyle 
+class="text"--><mtext  >&#x00A0;3</mtext><!--/mstyle--><mspace width="0.3em" class="thinspace"/><!--mstyle 
+class="text"--><mtext  >&#x00A0;s</mtext><!--/mstyle--></mrow></mfrac>   </math>;
+      <span 
+class="cmti-12">include units while making the calculation</span>. What does the result tell you in the context of
+      this problem?
+1.1.3 <a 
+ id="x1-10063"></a>Use <span 
+class="cmbx-12">??</span>&#x00A0; to find a formula for the average velocity of this object over the general time interval
+      <!--l. 241--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" > <mfenced separators="" 
+open="["  close="]" ><mrow><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></mrow></mfenced></math>.
+      The first couple of lines of this process are shown below. Copy these lines onto your paper and
+      continue the simplification process.
+      </p><!--tex4ht:inline--><!--l. 247--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="block" ><mtable 
+columnalign="left" class="align-star">
+                        <mtr><mtd 
+columnalign="right" class="align-odd"><mfrac><mrow 
+><mi 
+>p</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>t</mrow><mrow 
+>1</mrow></msub 
+>)</mo></mrow> <mo 
+class="MathClass-bin">&#x2212;</mo> <mi 
+>p</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>t</mrow><mrow 
+>0</mrow></msub 
+>)</mo></mrow></mrow>
+    <mrow 
+><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfrac>      </mtd>                        <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+> <mfenced separators="" 
+open="["  close="]" ><mrow><mn>2</mn><mn>0</mn><mn>0</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>4</mn><mo 
+class="MathClass-punc">.</mo><mn>9</mn><msubsup><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>1</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mrow></mfenced> <mo 
+class="MathClass-bin">&#x2212;</mo><mfenced separators="" 
+open="["  close="]" ><mrow><mn>2</mn><mn>0</mn><mn>0</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>4</mn><mo 
+class="MathClass-punc">.</mo><mn>9</mn><msubsup><mrow 
+><mi 
+>t</mi></mrow><mrow 
+>
+<mn>0</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mrow></mfenced> </mrow> 
+                    <mrow 
+><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfrac>                    <mspace width="2em"/></mtd>                        <mtd 
+columnalign="right" class="align-label"></mtd>                        <mtd 
+class="align-label">
+                        <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>                                    <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mn>2</mn><mn>0</mn><mn>0</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>4</mn><mo 
+class="MathClass-punc">.</mo><mn>9</mn><msubsup><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>1</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mn>0</mn><mn>0</mn> <mo 
+class="MathClass-bin">+</mo> <mn>4</mn><mo 
+class="MathClass-punc">.</mo><mn>9</mn><msubsup><mrow 
+><mi 
+>t</mi></mrow><mrow 
+>
+<mn>0</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mrow> 
+                  <mrow 
+><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfrac>                   <mspace width="2em"/></mtd>                         <mtd 
+columnalign="right" class="align-label"></mtd>                        <mtd 
+class="align-label">
+                        <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>                                    <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>4</mn><mo 
+class="MathClass-punc">.</mo><mn>9</mn><msubsup><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>1</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+> <mo 
+class="MathClass-bin">+</mo> <mn>4</mn><mo 
+class="MathClass-punc">.</mo><mn>9</mn><msubsup><mrow 
+><mi 
+>t</mi></mrow><mrow 
+>
+<mn>0</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mrow> 
+          <mrow 
+><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfrac>          <mspace width="2em"/></mtd>                                   <mtd 
+columnalign="right" class="align-label"></mtd>                        <mtd 
+class="align-label">
+<mspace width="2em"/></mtd></mtr></mtable></math>
+      <!--l. 249--><p class="noindent" ><span 
+class="cmbx-12">Hint: </span>In the next step you should factor <!--l. 250--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" > <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>4</mn><mo 
+class="MathClass-punc">.</mo><mn>9</mn></math>
+      from the numerator; the remaining factor will factor further.
+                                                                                               
+                                                                                               
+1.1.4 Check the formula you derived in <span 
+class="cmbx-12">??</span>&#x00A0; using
+      <!--l. 252--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mn>3</mn></math> and
+      <!--l. 252--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mn>5</mn></math>;
+      that is, compare the value generated by the formula to that you found in <span 
+class="cmbx-12">??</span>&#x00A0;.
+1.1.5 Using the formula found in <span 
+class="cmbx-12">??</span>&#x00A0;, replace <!--l. 254--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></math>
+      with <!--l. 254--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mn>3</mn></math> but
+      leave <!--l. 254--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>
+      as a variable; simplify the result. Then copy <span 
+class="cmbx-12">??</span>&#x00A0; onto your paper and fill in the missing entries.
+      </p><div class="table">
+      <!--l. 255--><p class="noindent" ><a 
+ id="x1-10091"></a></p><hr class="float" /><div class="float" 
+>
+                                                                                     <div class="caption" 
+><span class="id">Table&#x00A0;1.1:
+</span><span  
+class="content"><!--l. 257--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><msub><mrow 
+><mi 
+>p</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-bin">&#x2212;</mo><msub><mrow 
+><mi 
+>p</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>3</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow> 
+     <mrow 
+><mi 
+>t</mi><mo 
+class="MathClass-bin">&#x2212;</mo><mn>3</mn></mrow></mfrac>      </math></span></div><!--tex4ht:label?: x1-10091 -->
+      <div class="tabular">
+ <table id="TBL-1" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-1-1g"><col 
+id="TBL-1-1" /><col 
+id="TBL-1-2" /></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-1-1-"><td  style="text-align:center"  id="TBL-1-1-1"  
+class="td11"> <!--l. 260--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math> (s)  </td><td  style="text-align:center"  id="TBL-1-1-2"  
+class="td11"> <!--l. 260--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi></math> (<!--l. 260--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow 
+><!--mstyle 
+class="text"--><mtext  >&#x00A0;m</mtext><!--/mstyle--></mrow> <mrow 
+> <!--mstyle 
+class="text"--><mtext  >&#x00A0;s</mtext><!--/mstyle--> </mrow> </mfrac></math>)  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-2-"><td  style="text-align:center"  id="TBL-1-2-1"  
+class="td11"> 2.9                                                                                                                                   </td><td  style="text-align:center"  id="TBL-1-2-2"  
+class="td11">                                                                                                                                                                      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-3-"><td  style="text-align:center"  id="TBL-1-3-1"  
+class="td11"> 2.99                                                                                                                                 </td><td  style="text-align:center"  id="TBL-1-3-2"  
+class="td11">                                                                                                                                                                      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-4-"><td  style="text-align:center"  id="TBL-1-4-1"  
+class="td11"> 2.999                                                                                                                                </td><td  style="text-align:center"  id="TBL-1-4-2"  
+class="td11">                                                                                                                                                                      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-5-"><td  style="text-align:center"  id="TBL-1-5-1"  
+class="td11"> 3.001                                                                                                                                </td><td  style="text-align:center"  id="TBL-1-5-2"  
+class="td11">                                                                                                                                                                      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-6-"><td  style="text-align:center"  id="TBL-1-6-1"  
+class="td11"> 3.01                                                                                                                                 </td><td  style="text-align:center"  id="TBL-1-6-2"  
+class="td11">                                                                                                                                                                      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-7-"><td  style="text-align:center"  id="TBL-1-7-1"  
+class="td11"> 3.1                                                                                                                                   </td><td  style="text-align:center"  id="TBL-1-7-2"  
+class="td11">                                                                                                                                                                      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-1-8-"><td  style="text-align:center"  id="TBL-1-8-1"  
+class="td11">                                                                                      </td></tr></table>
+      </div> </div><hr class="endfloat" />
+      </div>
+1.1.6 As the value of <!--l. 277--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+></math>
+      gets closer to <!--l. 277--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mn>3</mn></math>,
+      the values in the <!--l. 277--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi></math>
+      column of <span 
+class="cmbx-12">??</span>&#x00A0; appear to be converging on a single number; what is this number and what do you
+      think it tells you in the context of this problem?
+</div>
+</div>
+<div class="newtheorem">
+<!--l. 287--><p class="noindent" ><span class="head">
+<a 
+ id="x1-1011r2"></a>
+<span 
+class="cmbx-12">Activity 2</span><br 
+class="newline" />         </span> One of the building blocks in differential calculus is <span 
+class="cmti-12">the secant line to a curve</span>.
+It is very easy for a line to be considered a secant line to a curve; the only requirement that must
+be fulfilled is that the line intersects the curve in at least two points.
+                                                                                               
+                                                                                               
+</p><!--l. 290--><p class="noindent" >In <span 
+class="cmbx-12">??</span>&#x00A0;, a secant line to the curve <!--l. 290--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+has been drawn through the points <!--l. 290--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>0</mn><mo 
+class="MathClass-punc">,</mo> <mn>3</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+and <!--l. 290--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>4</mn><mo 
+class="MathClass-punc">,</mo><mo 
+class="MathClass-bin">&#x2212;</mo><mn>5</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>.
+You should verify that the slope of this line is <!--l. 290--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" > <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn></math>.
+</p>
+<hr class="figure" /><div class="figure" 
+><a 
+ id="x1-10121"></a> <object data="251LabManual-2.svg" width="275.19763 " height="275.19763 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+<br />                                                                                    <div class="caption" 
+><span class="id">Figure&#x00A0;2.1:
+</span><span  
+class="content"><!--l. 301--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+and a secant line</span></div><!--tex4ht:label?: x1-10121 -->
+</div><hr class="endfigure" />
+<!--l. 304--><p class="noindent" >The formula for <!--l. 304--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>f</mi></math>
+is <!--l. 304--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>3</mn> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn><mi 
+>x</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></math>.
+We can use this formula to come up with a generalized formula for the slope of
+secant lines to this curve. Specifically, the slope of the line connecting the point
+<!--l. 304--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" > <mfenced separators="" 
+open="("  close=")" ><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>x</mrow><mrow 
+>0</mrow></msub 
+>)</mo></mrow></mrow></mfenced></math> to the
+point <!--l. 304--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" > <mfenced separators="" 
+open="("  close=")" ><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>x</mrow><mrow 
+>1</mrow></msub 
+>)</mo></mrow></mrow></mfenced></math>,
+is derived in <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0;.
+</p>
+<div class="newtheorem">
+<!--l. 306--><p class="noindent" ><span class="head">
+<a 
+ id="x1-1013r1"></a>
+<tspan font-family="cmbx" font-size="12">Example 2.1</tspan>   </span>
+                                                                                               
+                                                                                               
+</p><!--tex4ht:inline--><!--l. 316--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="block" ><mtable 
+columnalign="left" class="align-star">
+        <mtr><mtd 
+columnalign="right" class="align-odd"><msub><mrow 
+><mi 
+>m</mi></mrow><mrow 
+><!--mstyle 
+class="text"--><mtext  >&#x00A0;sec</mtext><!--/mstyle--></mrow></msub 
+></mtd>        <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>x</mrow><mrow 
+>1</mrow></msub 
+>)</mo></mrow> <mo 
+class="MathClass-bin">&#x2212;</mo> <mi 
+>f</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>x</mrow><mrow 
+>0</mrow></msub 
+>)</mo></mrow></mrow> 
+    <mrow 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfrac>      <mspace width="2em"/></mtd>                         <mtd 
+columnalign="right" class="align-odd"></mtd>        <mtd 
+class="align-even"><mspace width="2em"/></mtd>                                         <mtd 
+columnalign="right" class="align-label"></mtd>        <mtd 
+class="align-label">
+        <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>             <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+> <mfenced separators="" 
+open="("  close=")" ><mrow><mn>3</mn> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msubsup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mrow></mfenced> <mo 
+class="MathClass-bin">&#x2212;</mo><mfenced separators="" 
+open="("  close=")" ><mrow><mn>3</mn> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+>
+<mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msubsup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mrow></mfenced> </mrow> 
+                      <mrow 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfrac>                      <mspace width="2em"/></mtd>        <mtd 
+columnalign="right" class="align-odd"></mtd>        <mtd 
+class="align-even"><mspace width="2em"/></mtd>                                         <mtd 
+columnalign="right" class="align-label"></mtd>        <mtd 
+class="align-label">
+        <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>             <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mn>3</mn> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msubsup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>3</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+>
+<mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <msubsup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mrow> 
+                    <mrow 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfrac>                     <mspace width="2em"/></mtd>         <mtd 
+columnalign="right" class="align-odd"></mtd>        <mtd 
+class="align-even"><mspace width="2em"/></mtd>                                         <mtd 
+columnalign="right" class="align-label"></mtd>        <mtd 
+class="align-label">
+        <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>             <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+> <mfenced separators="" 
+open="("  close=")" ><mrow><mn>2</mn><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfenced> <mo 
+class="MathClass-bin">&#x2212;</mo><mfenced separators="" 
+open="("  close=")" ><mrow><msubsup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msubsup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+>
+<mn>0</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mrow></mfenced> </mrow> 
+               <mrow 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfrac>               <mspace width="2em"/></mtd>               <mtd 
+columnalign="right" class="align-odd"></mtd>        <mtd 
+class="align-even"><mspace width="2em"/></mtd>                                         <mtd 
+columnalign="right" class="align-label"></mtd>        <mtd 
+class="align-label">
+        <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>             <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mn>2</mn> <mfenced separators="" 
+open="("  close=")" ><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfenced> <mo 
+class="MathClass-bin">&#x2212;</mo><mfenced separators="" 
+open="("  close=")" ><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfenced> <mfenced separators="" 
+open="("  close=")" ><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfenced> </mrow> 
+                   <mrow 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfrac>                    <mspace width="2em"/></mtd>          <mtd 
+columnalign="right" class="align-odd"></mtd>        <mtd 
+class="align-even"><mi 
+>T</mi><mi 
+>h</mi><mi 
+>i</mi><mi 
+>s</mi> <mi 
+>f</mi><mi 
+>a</mi><mi 
+>c</mi><mi 
+>t</mi><mi 
+>o</mi><mi 
+>r</mi><mi 
+>i</mi><mi 
+>n</mi><mi 
+>g</mi> <mi 
+>t</mi><mi 
+>e</mi><mi 
+>c</mi><mi 
+>h</mi><mi 
+>n</mi><mi 
+>i</mi><mi 
+>q</mi><mi 
+>u</mi><mi 
+>e</mi> <mi 
+>i</mi><mi 
+>s</mi> <mi 
+>c</mi><mi 
+>a</mi><mi 
+>l</mi><mi 
+>l</mi><mi 
+>e</mi><mi 
+>d</mi>
+<mi 
+>f</mi><mi 
+>a</mi><mi 
+>c</mi><mi 
+>t</mi><mi 
+>o</mi><mi 
+>r</mi><mi 
+>i</mi><mi 
+>n</mi><mi 
+>g</mi> <mi 
+>b</mi><mi 
+>y</mi> <mi 
+>g</mi><mi 
+>r</mi><mi 
+>o</mi><mi 
+>u</mi><mi 
+>p</mi><mi 
+>i</mi><mi 
+>n</mi><mi 
+>g</mi>                <mspace width="2em"/></mtd>        <mtd 
+columnalign="right" class="align-label"></mtd>        <mtd 
+class="align-label"><mspace width="2em"/></mtd>        <mtd 
+columnalign="right" class="align-label"></mtd>        <mtd 
+class="align-label">
+        <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>             <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+> <mfenced separators="" 
+open="["  close="]" ><mrow><mn>2</mn> <mo 
+class="MathClass-bin">&#x2212;</mo><mfenced separators="" 
+open="("  close=")" ><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfenced></mrow></mfenced> <mfenced separators="" 
+open="("  close=")" ><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfenced> </mrow> 
+             <mrow 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfrac>             <mspace width="2em"/></mtd>                 <mtd 
+columnalign="right" class="align-odd"></mtd>        <mtd 
+class="align-even"><mspace width="2em"/></mtd>                                         <mtd 
+columnalign="right" class="align-label"></mtd>        <mtd 
+class="align-label">
+        <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>             <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mn>2</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><!--mstyle 
+class="text"--><mtext  >&#x00A0;&#x00A0;&#x00A0;for&#x00A0;</mtext><!--/mstyle--><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-rel">&#x2260;</mo><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><mspace width="2em"/></mtd>                 <mtd 
+columnalign="right" class="align-odd"></mtd>        <mtd 
+class="align-even"><mspace width="2em"/></mtd>                                         <mtd 
+columnalign="right" class="align-label"></mtd>        <mtd 
+class="align-label">
+<mspace width="2em"/></mtd></mtr></mtable></math>
+</div>
+<!--l. 319--><p class="noindent" >We can check our formula using the line in <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0;. If we let
+<!--l. 319--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn></math> and
+<!--l. 319--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn></math> then
+our simplified slope formula gives us:
+</p><!--tex4ht:inline--><!--l. 324--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="block" ><mtable 
+columnalign="left" class="align-star">
+                                    <mtr><mtd 
+columnalign="right" class="align-odd"><mn>2</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mtd>                                    <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mn>2</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>4</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>0</mn><mspace width="2em"/></mtd>                                    <mtd 
+columnalign="right" class="align-label"></mtd>                                    <mtd 
+class="align-label">
+                                    <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>                                               <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-bin">&#x2212;</mo><mn>2</mn><mspace width="1em" class="quad"/><!--mstyle 
+class="text"--><mtext  >&#x00A0;</mtext><!--mstyle 
+class="math"--><mi 
+>&#x2713;</mi><!--/mstyle--><mtext  ></mtext><!--/mstyle--><mspace width="2em"/></mtd>                                        <mtd 
+columnalign="right" class="align-label"></mtd>                                    <mtd 
+class="align-label">
+<mspace width="2em"/></mtd></mtr></mtable></math>
+<div class="newtheorem">
+<!--l. 326--><p class="noindent" ><span class="head">
+<a 
+ id="x1-1014r1"></a>
+                                                                                               
+                                                                                               
+<tspan font-family="cmbx" font-size="12">Problem 2.1</tspan>   </span> Let <!--l. 327--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>g</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>5</mn></math>.
+2.1.1 Following <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0;, find a formula for the slope of the secant line connecting the points <!--l. 329--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" > <mfenced separators="" 
+open="("  close=")" ><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>x</mrow><mrow 
+>0</mrow></msub 
+>)</mo></mrow></mrow></mfenced></math>
+      and <!--l. 329--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" > <mfenced separators="" 
+open="("  close=")" ><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-punc">,</mo><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>x</mrow><mrow 
+>1</mrow></msub 
+>)</mo></mrow></mrow></mfenced></math>.
+      Please note that factoring by grouping will not be necessary when simplifying the expression.
+2.1.2 Check your slope formula using the two points indicated in <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0;. That is, use the graph to find the
+      slope between the two points and then use your formula to find the slope; make sure that the two
+      values agree! </p><hr class="figure" /><div class="figure" 
+><a 
+ id="x1-10172"></a> <object data="251LabManual-4.svg" width="275.19763 " height="275.19763 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+<br />                                                                                    <div class="caption" 
+><span class="id">Figure&#x00A0;2.2:
+</span><span  
+class="content"><!--l. 340--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo> <mi 
+>g</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+and a secant line</span></div><!--tex4ht:label?: x1-10172 -->
+      </div><hr class="endfigure" />
+</div>
+</div>
+<div class="newtheorem">
+<!--l. 348--><p class="noindent" ><span class="head">
+<a 
+ id="x1-1018r3"></a>
+<tspan font-family="cmbx" font-size="12">Activity 3</tspan><br 
+class="newline" />         </span>While it&#x2019;s easy to see that the formula <!--l. 349--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow 
+><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>x</mrow><mrow 
+>1</mrow></msub 
+>)</mo></mrow><mo 
+class="MathClass-bin">&#x2212;</mo><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>x</mrow><mrow 
+>0</mrow></msub 
+>)</mo></mrow></mrow>
+    <mrow 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-bin">&#x2212;</mo><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfrac>     </math>
+gives the slope of the line connecting two points on the function <!--l. 350--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>f</mi></math>,
+the resultant expression can at times be awkward to work with. We actually already saw that when
+we had to use slight-of-hand factoring in <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0;.
+                                                                                               
+                                                                                               
+</p><!--l. 352--><p class="noindent" >The algebra associated with secant lines (and average velocities) can sometimes be simplified if we designate the
+variable <!--l. 352--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>h</mi></math> to
+be the run between the two points (or the length of the time interval). With this designation we have
+<!--l. 352--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <mi 
+>h</mi></math> which gives
+us <!--l. 352--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-rel">=</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <mi 
+>h</mi></math>. Making
+these substitutions we get <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0;. The expression on the right side of <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0; is called <tspan font-family="cmti" font-size="12">the difference quotient for</tspan>
+<!--l. 353--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>f</mi></math>.
+</p><!--tex4ht:inline--><!--l. 357--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="block" ><mtable 
+columnalign="left" class="align">
+                              <mtr><mtd 
+columnalign="right" class="align-odd"><mfrac><mrow 
+><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>x</mrow><mrow 
+>1</mrow></msub 
+>)</mo></mrow> <mo 
+class="MathClass-bin">&#x2212;</mo> <mi 
+>f</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>x</mrow><mrow 
+>0</mrow></msub 
+>)</mo></mrow></mrow>
+    <mrow 
+><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfrac>      </mtd>                              <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>x</mrow><mrow 
+>0</mrow></msub 
+> + h)</mo></mrow> <mo 
+class="MathClass-bin">&#x2212;</mo> <mi 
+>f</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>x</mrow><mrow 
+>0</mrow></msub 
+>)</mo></mrow></mrow> 
+           <mrow 
+><mi 
+>h</mi></mrow></mfrac>         <mspace width="2em"/></mtd>                                                            <mtd 
+columnalign="right" class="align-label"><mstyle 
+   id="x1-1019r1"  class="label" ></mstyle><!--endlabel--><!--mstyle 
+class="maketag"--><mtext  >&#x00A0;(3.1)</mtext><!--/mstyle-->
+</mtd></mtr></mtable></math>
+<!--l. 359--><p class="noindent" >Let&#x2019;s revisit the function <!--l. 359--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>f</mi></math>
+defined by <!--l. 359--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>3</mn> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn><mi 
+>x</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></math>
+from <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0;. The difference quotient for this function is derived in <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0;.
+</p>
+<div class="newtheorem">
+<!--l. 361--><p class="noindent" ><span class="head">
+<a 
+ id="x1-1020r1"></a>
+<tspan font-family="cmbx" font-size="12">Example 3.1</tspan>   </span>
+                                                                                               
+                                                                                               
+</p><!--tex4ht:inline--><!--l. 369--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="block" ><mtable 
+columnalign="left" class="align-star">
+               <mtr><mtd 
+columnalign="right" class="align-odd"><mfrac><mrow 
+><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>x</mrow><mrow 
+>0</mrow></msub 
+> + h)</mo></mrow> <mo 
+class="MathClass-bin">&#x2212;</mo> <mi 
+>f</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>x</mrow><mrow 
+>0</mrow></msub 
+>)</mo></mrow></mrow>
+           <mrow 
+><mi 
+>h</mi></mrow></mfrac>         </mtd>               <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+> <mfenced separators="" 
+open="["  close="]" ><mrow><mn>3</mn> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn> <mfenced separators="" 
+open="("  close=")" ><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <mi 
+>h</mi></mrow></mfenced> <mo 
+class="MathClass-bin">&#x2212;</mo><msup><mrow 
+><mfenced separators="" 
+open="("  close=")" ><mrow><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <mi 
+>h</mi></mrow></mfenced></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></mrow></mfenced> <mo 
+class="MathClass-bin">&#x2212;</mo><mfenced separators="" 
+open="["  close="]" ><mrow><mn>3</mn> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+>
+<mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <msubsup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mrow></mfenced> </mrow> 
+                                    <mrow 
+><mi 
+>h</mi></mrow></mfrac>                      <mspace width="2em"/></mtd>                     <mtd 
+columnalign="right" class="align-label"></mtd>               <mtd 
+class="align-label">
+               <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>                                 <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mn>3</mn> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn><mi 
+>h</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <msubsup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+>
+<mn>0</mn></mrow></msub 
+><mi 
+>h</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <msup><mrow 
+><mi 
+>h</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>3</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+>
+<mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">+</mo> <msubsup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow><mrow 
+><mn>2</mn></mrow></msubsup 
+></mrow> 
+                                          <mrow 
+><mi 
+>h</mi></mrow></mfrac>                          <mspace width="2em"/></mtd>               <mtd 
+columnalign="right" class="align-label"></mtd>               <mtd 
+class="align-label">
+               <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>                                 <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mn>2</mn><mi 
+>h</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+><mi 
+>h</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <msup><mrow 
+><mi 
+>h</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></mrow> 
+            <mrow 
+><mi 
+>h</mi></mrow></mfrac>        <mspace width="2em"/></mtd>                                              <mtd 
+columnalign="right" class="align-label"></mtd>               <mtd 
+class="align-label">
+               <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>                                 <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>h</mi> <mfenced separators="" 
+open="("  close=")" ><mrow><mn>2</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <mi 
+>h</mi></mrow></mfenced></mrow> 
+       <mrow 
+><mi 
+>h</mi></mrow></mfrac>       <mspace width="2em"/></mtd>                                               <mtd 
+columnalign="right" class="align-label"></mtd>               <mtd 
+class="align-label">
+               <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>                                 <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mn>2</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><msub><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <mi 
+>h</mi><!--mstyle 
+class="text"--><mtext  >&#x00A0;&#x00A0;for&#x00A0;</mtext><!--/mstyle--><mi 
+>h</mi><mo 
+class="MathClass-rel">&#x2260;</mo><mn>0</mn><mspace width="2em"/></mtd>                                          <mtd 
+columnalign="right" class="align-label"></mtd>               <mtd 
+class="align-label">
+<mspace width="2em"/></mtd></mtr></mtable></math>
+</div>
+<!--l. 371--><p class="noindent" >Please notice that all of the terms without a factor of
+<!--l. 371--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>h</mi></math>
+subtracted to zero. Please notice, too, that we avoided all of the tricky factoring that appeared in
+<tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0;!
+</p><!--l. 373--><p class="noindent" >For simplicity&#x2019;s sake, we generally drop the variable subscript when applying the difference quotient. So
+for future reference we will define the difference quotient as follows:
+</p>
+<div class="newtheorem">
+<!--l. 375--><p class="noindent" ><span class="head">
+<a 
+ id="x1-1021r1"></a>
+<tspan font-family="cmbx" font-size="12">Definition 3.1</tspan><br 
+class="newline" />   </span>The difference quotient The <tspan font-family="cmti" font-size="12">difference quotient </tspan>for the function <!--l. 376--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>f</mi></math>
+is the expression <!--l. 376--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow 
+><mi 
+>f</mi></mrow><mo 
+class="MathClass-close">(x+h)</mo></mrow><mo 
+class="MathClass-bin">&#x2212;</mo><mi 
+>f</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow>
+        <mrow 
+><mi 
+>h</mi></mrow></mfrac>       </math>.
+</p>
+</div>
+<div class="newtheorem">
+<!--l. 378--><p class="noindent" ><span class="head">
+<a 
+ id="x1-1022r1"></a>
+<tspan font-family="cmbx" font-size="12">Problem 3.1</tspan>   </span>Completely simplify the difference quotient for each of the following functions. Please
+note that the template for the difference quotient needs to be adapted to the function name and
+                                                                                               
+                                                                                               
+independent variable in each given equation. For example, the difference quotient for the function in <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0;
+is <!--l. 379--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow 
+><mi 
+>v</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi><mo 
+class="MathClass-bin">+</mo><mi 
+>h</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-bin">&#x2212;</mo><mi 
+>v</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow>
+       <mrow 
+><mi 
+>h</mi></mrow></mfrac>       </math>.
+3.1.1 <a 
+ id="x1-10231"></a> <!--l. 381--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>v</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>2</mn><mo 
+class="MathClass-punc">.</mo><mn>5</mn><msup><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>7</mn><mo 
+class="MathClass-punc">.</mo><mn>5</mn><mi 
+>t</mi></math>
+3.1.2 <!--l. 382--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>g</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>3</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>7</mn><mi 
+>x</mi></math>
+3.1.3 <!--l. 383--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>w</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo><mfrac><mrow>    <mn>3</mn></mrow> 
+<mrow><mi 
+>x</mi> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn></mrow></mfrac></math>
+</p>
+</div>
+<div class="newtheorem">
+<!--l. 387--><p class="noindent" ><span class="head">
+<a 
+ id="x1-1026r2"></a>
+<tspan font-family="cmbx" font-size="12">Problem 3.2</tspan>   </span>Suppose that an object is tossed into the air in such a way
+that the elevation of the object (measured in ft) is given by the function
+<!--l. 389--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn><mn>0</mn> <mo 
+class="MathClass-bin">+</mo> <mn>4</mn><mn>0</mn><mi 
+>t</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>1</mn><mn>6</mn><msup><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></math> where
+<!--l. 389--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>t</mi></math> is the
+amount of time that has passed since the object was tossed (measured in s).
+3.2.1 Simplify the difference quotient for <!--l. 391--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>s</mi></math>.
+3.2.2 <a 
+ id="x1-10282"></a> Ignoring the unit, use the difference quotient to determine the average velocity over the
+      interval <!--l. 392--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mn>1</mn><mo 
+class="MathClass-punc">.</mo><mn>6</mn><mo 
+class="MathClass-punc">,</mo> <mn>2</mn><mo 
+class="MathClass-punc">.</mo><mn>8</mn></mrow><mo 
+class="MathClass-close">]</mo></mrow></math>.
+      (Hint: Use <!--l. 392--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>t</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-punc">.</mo><mn>6</mn></math>
+      and <!--l. 393--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>h</mi> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mo 
+class="MathClass-punc">.</mo><mn>2</mn></math>.
+      Make sure thatyou understand why!)
+3.2.3 What, <tspan font-family="cmti" font-size="12">including units</tspan>, are the values of <!--l. 394--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>1</mn><mo 
+class="MathClass-punc">.</mo><mn>6</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+      and <!--l. 394--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>2</mn><mo 
+class="MathClass-punc">.</mo><mn>8</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>?
+      Use these values when working <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0;.
+3.2.4 <a 
+ id="x1-10304"></a> Use the expression <!--l. 395--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow 
+><mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>2</mn><mo 
+class="MathClass-punc">.</mo><mn>8</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-bin">&#x2212;</mo><mi 
+>s</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>1</mn><mo 
+class="MathClass-punc">.</mo><mn>6</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow>
+    <mrow 
+><mn>2</mn><mo 
+class="MathClass-punc">.</mo><mn>8</mn><mo 
+class="MathClass-bin">&#x2212;</mo><mn>1</mn><mo 
+class="MathClass-punc">.</mo><mn>6</mn></mrow></mfrac>    </math>
+      to verify the value you found in <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0;. <tspan font-family="cmti" font-size="12">Include the unit while making this calculation.</tspan>
+3.2.5 Ignoring the unit, use the difference quotient to determine the average velocity over the
+      interval <!--l. 396--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mrow ><mo 
+class="MathClass-open">[</mo><mrow><mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>4</mn><mo 
+class="MathClass-punc">,</mo> <mn>2</mn><mo 
+class="MathClass-punc">.</mo><mn>4</mn></mrow><mo 
+class="MathClass-close">]</mo></mrow></math>.
+                                                                                               
+                                                                                               
+</p>
+</div>
+<div class="newtheorem">
+<!--l. 400--><p class="noindent" ><span class="head">
+<a 
+ id="x1-1032r3"></a>
+<tspan font-family="cmbx" font-size="12">Problem 3.3</tspan>   </span>Moose and squirrel were having casual conversation when suddenly, without any
+apparent provocation, Boris Badenov launched anti-moose missile in their direction. Fortunately,
+squirrel had ability to fly as well as great knowledge of missile technology, and he was able to
+disarm missile well before it hit ground.
+</p><!--l. 403--><p class="noindent" >The elevation (foot) of the tip of the missile <!--l. 403--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>t</mi></math>
+seconds after it was launched is given by the function
+<!--l. 403--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>h</mi></math> defined
+by <!--l. 403--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>h</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-bin">&#x2212;</mo><mn>1</mn><mn>6</mn><msup><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn><mn>9</mn><mn>4</mn><mo 
+class="MathClass-punc">.</mo><mn>4</mn><mi 
+>t</mi> <mo 
+class="MathClass-bin">+</mo> <mn>1</mn><mn>5</mn></math>.
+3.3.1 What, including the unit, is the value of <!--l. 405--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>h</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>1</mn><mn>2</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+      and what does the value tell you about the flight of the missile?
+3.3.2 What, including the unit, is the value of <!--l. 406--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow 
+><mi 
+>h</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><!--mstyle 
+class="text"--><mtext  >&#x00A0;12</mtext><!--/mstyle--><mspace width="0.3em" class="thinspace"/><!--mstyle 
+class="text"--><mtext  >&#x00A0;s</mtext><!--/mstyle--></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-bin">&#x2212;</mo><mi 
+>h</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><!--mstyle 
+class="text"--><mtext  >&#x00A0;0</mtext><!--/mstyle--><mspace width="0.3em" class="thinspace"/><!--mstyle 
+class="text"--><mtext  >&#x00A0;s</mtext><!--/mstyle--></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow>
+        <mrow 
+><!--mstyle 
+class="text"--><mtext  >&#x00A0;12</mtext><!--/mstyle--><mspace width="0.3em" class="thinspace"/><!--mstyle 
+class="text"--><mtext  >&#x00A0;s</mtext><!--/mstyle--></mrow></mfrac>      </math>
+      and what does this value tell you about the flight of the missile?
+3.3.3 The velocity (<!--l. 407--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow 
+><!--mstyle 
+class="text"--><mtext  >&#x00A0;ft</mtext><!--/mstyle--></mrow> <mrow 
+> <!--mstyle 
+class="text"--><mtext  >&#x00A0;s</mtext><!--/mstyle--> </mrow> </mfrac></math>)
+      function for the missile is given by the function <!--l. 407--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>v</mi></math>
+      where <!--l. 407--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>v</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-bin">&#x2212;</mo><mn>3</mn><mn>2</mn><mi 
+>t</mi> <mo 
+class="MathClass-bin">+</mo> <mn>2</mn><mn>9</mn><mn>4</mn><mo 
+class="MathClass-punc">.</mo><mn>4</mn></math>.
+      What, including unit, is the value of <!--l. 407--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow 
+><mi 
+>v</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><!--mstyle 
+class="text"--><mtext  >&#x00A0;10</mtext><!--/mstyle--><mspace width="0.3em" class="thinspace"/><!--mstyle 
+class="text"--><mtext  >&#x00A0;s</mtext><!--/mstyle--></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-bin">&#x2212;</mo><mi 
+>v</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><!--mstyle 
+class="text"--><mtext  >&#x00A0;0</mtext><!--/mstyle--><mspace width="0.3em" class="thinspace"/><!--mstyle 
+class="text"--><mtext  >&#x00A0;s</mtext><!--/mstyle--></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow>
+        <mrow 
+><!--mstyle 
+class="text"--><mtext  >&#x00A0;10</mtext><!--/mstyle--><mspace width="0.3em" class="thinspace"/><!--mstyle 
+class="text"--><mtext  >&#x00A0;s</mtext><!--/mstyle--></mrow></mfrac>      </math>
+      and what does this value tell you about the flight of the missile?
+</p>
+</div>
+<div class="newtheorem">
+<!--l. 411--><p class="noindent" ><span class="head">
+<a 
+ id="x1-1036r4"></a>
+<tspan font-family="cmbx" font-size="12">Problem 3.4</tspan>   </span>Timmy lived a long life in the 19<sup class="textsuperscript"><tspan font-family="cmr" font-size="10">th</tspan></sup> century. When Timmy was seven he found a rock
+that weighed exactly half a stone. (Timmy lived in jolly old England, don?t you know.) That rock sat on
+Timmy&#x2019;s window sill for the next 80 years and wouldn?t you know the weight of that rock did
+                                                                                               
+                                                                                               
+not change even one smidge the entire time. In fact, the weight function for this rock was
+<!--l. 412--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>w</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>0</mn><mo 
+class="MathClass-punc">.</mo><mn>5</mn></math> where
+<!--l. 412--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>w</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></math> was the weight of the
+rock (stones) and <!--l. 412--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>t</mi></math>
+was the number of years that had passed since that day Timmy brought the rock home.
+3.4.1 What was the average rate of change in the weight of the rock over the 80 years it sat on
+      Timmy&#x2019;s window sill?
+3.4.2 Ignoring the unit, simplify the expression <!--l. 415--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow 
+><mi 
+>w</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>t</mrow><mrow 
+>1</mrow></msub 
+>)</mo></mrow><mo 
+class="MathClass-bin">&#x2212;</mo><mi 
+>w</mi></mrow><mo 
+class="MathClass-close">(<msub><mrow 
+>t</mrow><mrow 
+>0</mrow></msub 
+>)</mo></mrow></mrow>
+     <mrow 
+><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>1</mn></mrow></msub 
+><mo 
+class="MathClass-bin">&#x2212;</mo><msub><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>0</mn></mrow></msub 
+></mrow></mfrac>      </math>.
+      Does the result make sense in the context of this problem?
+3.4.3 Showing each step in the process and ignoring the unit, simplify the difference quotient for
+      <!--l. 417--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>w</mi></math>.
+      Does the result make sense in the context of this problem?
+</p>
+</div>
+<div class="newtheorem">
+<!--l. 422--><p class="noindent" ><span class="head">
+<a 
+ id="x1-1040r5"></a>
+<tspan font-family="cmbx" font-size="12">Problem 3.5</tspan>   </span>Truth be told, there was one day in 1842 when Timmy&#x2019;s mischievous
+son Nigel took that rock outside and chucked it into the air. The velocity of the rock
+(<!--l. 424--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow 
+><!--mstyle 
+class="text"--><mtext  >&#x00A0;ft</mtext><!--/mstyle--></mrow> <mrow 
+> <!--mstyle 
+class="text"--><mtext  >&#x00A0;s</mtext><!--/mstyle--> </mrow> </mfrac></math>) was given
+by <!--l. 424--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>v</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>6</mn><mn>0</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>3</mn><mn>2</mn><mi 
+>t</mi></math>
+where <!--l. 424--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>t</mi></math>
+was the number of seconds that had passed since Nigel chucked the rock.
+3.5.1 What, including the unit, are the values of <!--l. 426--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>v</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>0</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>,
+      <!--l. 426--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>v</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>1</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>,
+      and <!--l. 426--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>v</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>2</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+      and what do these values tell you in the context of this problem? Don&#x2019;t just write that the
+      values tell you the velocity at certain times; explain what the velocity values tell you about
+      the motion of the rock.
+3.5.2 Ignoring the unit, simplify the difference quotient for <!--l. 427--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>v</mi></math>.
+                                                                                               
+                                                                                               
+3.5.3 What is the unit for the difference quotient for <!--l. 428--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>v</mi></math>?
+      What does the value of the difference quotient (including unit) tell you in the context of this
+      problem?
+</p>
+</div>
+<div class="newtheorem">
+<!--l. 433--><p class="noindent" ><span class="head">
+<a 
+ id="x1-1044r6"></a>
+<tspan font-family="cmbx" font-size="12">Problem 3.6</tspan>   </span>Suppose that a vat was undergoing a controlled drain and that the amount of fluid left in the vat (gal) was
+given by the formula <!--l. 434--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>V</mi> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>t</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-rel">=</mo> <mn>1</mn><mn>0</mn><mn>0</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><msup><mrow 
+><mi 
+>t</mi></mrow><mrow 
+><mn>3</mn><mo 
+class="MathClass-bin">&#x2215;</mo><mn>2</mn></mrow></msup 
+></math>
+where <!--l. 434--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>t</mi></math>
+is the number of minutes that had passed since the draining process began.
+3.6.1 What, including a unit, is the value of <!--l. 436--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>V</mi> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>4</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+      and what does that value tell you in the context of this problem?
+3.6.2 Ignoring the unit, write down the formula you get for the difference quotient of
+      <!--l. 437--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>V</mi> </math> when
+      <!--l. 437--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>t</mi> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn></math>.
+      Copy <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0; onto your paper and fill in the missing values. Look for a pattern in the output and write
+      down enough digits for each entry so that the pattern is clearly illustrated; the first two entries in
+      the output column have been given to help you understand what is meant by this direction.
+      </p><div class="table">
+      <!--l. 438--><p class="noindent" ><a 
+ id="x1-10471"></a><a 
+ id="x1-20021"></a><a 
+ id="x1-20031"></a><a 
+ id="x1-30041"></a><a 
+ id="x1-30071"></a></p><hr class="float" /><div class="float" 
+>
+                                                                                     <div class="caption" 
+><span class="id">Table&#x00A0;3.1:
+</span><span  
+class="content"><!--l. 440--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>V</mi> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>4</mn><mo 
+class="MathClass-bin">+</mo><mi 
+>h</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-bin">&#x2212;</mo><mi 
+>V</mi> <mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>4</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow> 
+         <mrow 
+><mi 
+>h</mi></mrow></mfrac>        </math></span></div><!--tex4ht:label?: x1-10471 -->
+      <div class="tabular">
+ <table id="TBL-2" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-2-1g"><col 
+id="TBL-2-1" /><col 
+id="TBL-2-2" /></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-2-1-"><td  style="text-align:center"  id="TBL-2-1-1"  
+class="td11"> <!--l. 443--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>h</mi></math> (s)  </td><td  style="text-align:center"  id="TBL-2-1-2"  
+class="td11"> <!--l. 443--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi></math> (<!--l. 443--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow 
+><!--mstyle 
+class="text"--><mtext  >&#x00A0;m</mtext><!--/mstyle--></mrow> <mrow 
+> <!--mstyle 
+class="text"--><mtext  >&#x00A0;s</mtext><!--/mstyle--> </mrow> </mfrac></math>)  </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-2-"><td  style="text-align:center"  id="TBL-2-2-1"  
+class="td11"> -0.1                                                                                                                                  </td><td  style="text-align:center"  id="TBL-2-2-2"  
+class="td11"> -5.962                                                                                                                                                                                                                                                             </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-3-"><td  style="text-align:center"  id="TBL-2-3-1"  
+class="td11"> -0.01                                                                                                                                </td><td  style="text-align:center"  id="TBL-2-3-2"  
+class="td11"> -5.9962                                                                                                                                                                                                                                                           </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-4-"><td  style="text-align:center"  id="TBL-2-4-1"  
+class="td11"> -0.001                                                                                                                               </td><td  style="text-align:center"  id="TBL-2-4-2"  
+class="td11">                                                                                                                                                                      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-5-"><td  style="text-align:center"  id="TBL-2-5-1"  
+class="td11"> 0.001                                                                                                                                </td><td  style="text-align:center"  id="TBL-2-5-2"  
+class="td11">                                                                                                                                                                      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-6-"><td  style="text-align:center"  id="TBL-2-6-1"  
+class="td11"> 0.01                                                                                                                                 </td><td  style="text-align:center"  id="TBL-2-6-2"  
+class="td11">                                                                                                                                                                      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-7-"><td  style="text-align:center"  id="TBL-2-7-1"  
+class="td11"> 0.1                                                                                                                                   </td><td  style="text-align:center"  id="TBL-2-7-2"  
+class="td11">                                                                                                                                                                      </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-2-8-"><td  style="text-align:center"  id="TBL-2-8-1"  
+class="td11">                                                                                      </td></tr></table>
+      </div> </div><hr class="endfloat" />
+      </div>
+                                                                                               
+                                                                                               
+3.6.3 What is the unit for the <!--l. 459--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi></math>-values
+      in <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0;? What do these values (with their unit) tell you in the context of this problem?
+3.6.4 As the value of <!--l. 460--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>h</mi></math>
+      gets closer to <!--l. 460--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mn>0</mn></math>,
+      the values in the <!--l. 460--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi></math>
+      column of <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0; appear to be converging to a single number; what is this number and what do you
+      think that value (with itsunit) tells you in the context of this problem?
+</div>
+</div>
+<!--l. 475--><p class="noindent" >
+</p>
+<h4 class="likesubsectionHead"><a 
+ id="x1-2000A"></a>Supplemental Exercises</h4>
+<div class="newtheorem">
+<!--l. 480--><p class="noindent" ><span class="head">
+<a 
+ id="x1-2001r1"></a>
+<tspan font-family="cmbx" font-size="12">Exercises A.1</tspan><br 
+class="newline" />   </span>The function <!--l. 481--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>z</mi></math>
+shown in <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0; was generated by the formula <!--l. 481--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo> <mn>2</mn> <mo 
+class="MathClass-bin">+</mo> <mn>4</mn><mi 
+>x</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></math>.
+</p>
+<div class="minipage">
+<br />                                     <div class="caption" 
+><span class="id">Table&#x00A0;A.1:
+</span><span  
+class="content"><!--l. 486--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>z</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>4</mn><mo 
+class="MathClass-bin">+</mo><mi 
+>h</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-bin">&#x2212;</mo><mi 
+>z</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>4</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow> 
+        <mrow 
+><mi 
+>h</mi></mrow></mfrac>       </math></span></div><!--tex4ht:label?: x1-20021 -->
+<div class="tabular">
+ <table id="TBL-3" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-3-1g"><col 
+id="TBL-3-1" /><col 
+id="TBL-3-2" /></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-3-1-"><td  style="text-align:center"  id="TBL-3-1-1"  
+class="td11"> <!--l. 489--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>h</mi></math> </td><td  style="text-align:center"  id="TBL-3-1-2"  
+class="td11"> <!--l. 489--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi></math> </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-2-"><td  style="text-align:center"  id="TBL-3-2-1"  
+class="td11"> -0.1                                                              </td><td  style="text-align:center"  id="TBL-3-2-2"  
+class="td11"> -3.9                                                             </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-3-"><td  style="text-align:center"  id="TBL-3-3-1"  
+class="td11"> -0.01                                                            </td><td  style="text-align:center"  id="TBL-3-3-2"  
+class="td11">                                          </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-4-"><td  style="text-align:center"  id="TBL-3-4-1"  
+class="td11"> -0.001                                                           </td><td  style="text-align:center"  id="TBL-3-4-2"  
+class="td11">                                          </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-5-"><td  style="text-align:center"  id="TBL-3-5-1"  
+class="td11"> 0.001                                                            </td><td  style="text-align:center"  id="TBL-3-5-2"  
+class="td11">                                          </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-6-"><td  style="text-align:center"  id="TBL-3-6-1"  
+class="td11"> 0.01                                                             </td><td  style="text-align:center"  id="TBL-3-6-2"  
+class="td11">                                          </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-7-"><td  style="text-align:center"  id="TBL-3-7-1"  
+class="td11"> 0.1                                                               </td><td  style="text-align:center"  id="TBL-3-7-2"  
+class="td11">                                          </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-3-8-"><td  style="text-align:center"  id="TBL-3-8-1"  
+class="td11">                                           </td></tr></table>
+</div>
+                                                                                               
+                                                                                               
+</div> <div class="minipage">
+<object data="251LabManual-6.svg" width="275.19763 " height="275.19763 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+                                         <div class="caption" 
+><span class="id">Figure&#x00A0;A.1:
+</span><span  
+class="content"><!--l. 513--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo> <mn>2</mn> <mo 
+class="MathClass-bin">+</mo> <mn>4</mn><mi 
+>x</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></math></span></div><!--tex4ht:label?: x1-20031 -->
+</div>
+<div class="newtheorem">
+<!--l. 516--><p class="noindent" ><span class="head">
+<a 
+ id="x1-2004r1"></a>
+</span>
+</p>
+</div>
+<div class="newtheorem">
+<!--l. 533--><p class="noindent" ><span class="head">
+<a 
+ id="x1-2005r2"></a>
+</span>
+</p>
+</div>
+<div class="newtheorem">
+<!--l. 549--><p class="noindent" ><span class="head">
+<a 
+ id="x1-2006r3"></a>
+                                                                                               
+                                                                                               
+</span>
+</p>
+</div>
+<div class="newtheorem">
+<!--l. 587--><p class="noindent" ><span class="head">
+<a 
+ id="x1-2007r4"></a>
+</span>
+</p>
+</div>
+<div class="newtheorem">
+<!--l. 596--><p class="noindent" ><span class="head">
+<a 
+ id="x1-2008r5"></a>
+</span>
+</p>
+</div>
+</div>
+<a 
+ id="x1-2009r1"></a>
+<!--l. 1--><p class="noindent" >
+<tspan font-family="cmbx" font-size="12">A.1.1</tspan> Simplify the difference quotient for <!--l. 2--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>z</mi></math>.
+<a 
+ id="x1-2010r2"></a>
+</p><!--l. 4--><p class="noindent" >
+<tspan font-family="cmbx" font-size="12">A.1.2</tspan> Use the graph to find the slope of the secant line to <!--l. 5--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>z</mi></math>
+between the points where <!--l. 5--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-bin">&#x2212;</mo><mn>1</mn></math>
+and <!--l. 5--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mn>2</mn></math>.
+Check your simplified difference quotient for <!--l. 5--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>z</mi></math>
+by using it to find the slope of the same secant line.
+<a 
+ id="x1-2011r3"></a>
+</p><!--l. 7--><p class="noindent" >
+                                                                                               
+                                                                                               
+<tspan font-family="cmbx" font-size="12">A.1.3</tspan> Replace
+<!--l. 8--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>x</mi></math>
+with
+<!--l. 8--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mn>4</mn></math>
+in your difference quotient formula and simplify the result. Then copy <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0; onto your paper and
+fill in the missing values.
+<a 
+ id="x1-2012r4"></a>
+</p><!--l. 10--><p class="noindent" >
+<tspan font-family="cmbx" font-size="12">A.1.4</tspan>  As the value of <!--l. 11--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>h</mi></math>
+gets closer to <!--l. 11--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mn>0</mn></math>,
+the values in the <!--l. 11--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi></math>
+column of <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0; appear to be converging on a single number; what is this number?
+<a 
+ id="x1-2013r5"></a>
+</p><!--l. 13--><p class="noindent" >
+<tspan font-family="cmbx" font-size="12">A.1.5</tspan> The value found in <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0; is called <tspan font-family="cmti" font-size="12">the slope of the tangent line to </tspan><!--l. 14--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>z</mi></math>
+<tspan font-family="cmti" font-size="12">at </tspan><!--l. 14--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mn>4</mn></math>.
+Draw onto <tspan font-family="cmbx" font-size="12">??</tspan>&#x00A0; the line that passes through the point <!--l. 14--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>4</mn><mo 
+class="MathClass-punc">,</mo> <mn>2</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></math>
+with this slope. The line you just drew is called <tspan font-family="cmti" font-size="12">the tangent line to </tspan><!--l. 14--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>z</mi></math>
+<tspan font-family="cmti" font-size="12">at </tspan><!--l. 14--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mn>4</mn></math>.
+</p><!--l. 623--><p class="noindent" >
+</p>
+<h4 class="likesubsectionHead"><a 
+ id="x1-3000A"></a>Solutions to Supplemental Exercises</h4>
+<a 
+ id="x1-3001r1"></a>
+<!--l. 1--><p class="noindent" >
+<tspan font-family="cmbx" font-size="12">A.1.1</tspan> The difference quotient for <!--l. 2--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>z</mi></math>
+is:
+                                                                                               
+                                                                                               
+</p><!--tex4ht:inline--><!--l. 10--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="block" ><mtable 
+columnalign="left" class="align-star">
+                 <mtr><mtd 
+columnalign="right" class="align-odd"><mfrac><mrow 
+><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">(x + h)</mo></mrow> <mo 
+class="MathClass-bin">&#x2212;</mo> <mi 
+>z</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mi 
+>x</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow>
+         <mrow 
+><mi 
+>h</mi></mrow></mfrac>        </mtd>                 <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+> <mfenced separators="" 
+open="["  close="]" ><mrow><mn>2</mn> <mo 
+class="MathClass-bin">+</mo> <mn>4</mn> <mfenced separators="" 
+open="("  close=")" ><mrow><mi 
+>x</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>h</mi></mrow></mfenced> <mo 
+class="MathClass-bin">&#x2212;</mo><msup><mrow 
+><mfenced separators="" 
+open="("  close=")" ><mrow><mi 
+>x</mi> <mo 
+class="MathClass-bin">+</mo> <mi 
+>h</mi></mrow></mfenced></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></mrow></mfenced> <mo 
+class="MathClass-bin">&#x2212;</mo><mfenced separators="" 
+open="["  close="]" ><mrow><mn>2</mn> <mo 
+class="MathClass-bin">+</mo> <mn>4</mn><mi 
+>x</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></mrow></mfenced> </mrow> 
+                                 <mrow 
+><mi 
+>h</mi></mrow></mfrac>                    <mspace width="2em"/></mtd>                      <mtd 
+columnalign="right" class="align-label"></mtd>                 <mtd 
+class="align-label">
+                 <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>                                 <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mn>2</mn> <mo 
+class="MathClass-bin">+</mo> <mn>4</mn><mi 
+>x</mi> <mo 
+class="MathClass-bin">+</mo> <mn>4</mn><mi 
+>h</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi 
+>x</mi><mi 
+>h</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <msup><mrow 
+><mi 
+>h</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>4</mn><mi 
+>x</mi> <mo 
+class="MathClass-bin">+</mo> <msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></mrow> 
+                                      <mrow 
+><mi 
+>h</mi></mrow></mfrac>                       <mspace width="2em"/></mtd>                 <mtd 
+columnalign="right" class="align-label"></mtd>                 <mtd 
+class="align-label">
+                 <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>                                 <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mn>4</mn><mi 
+>h</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi 
+>x</mi><mi 
+>h</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <msup><mrow 
+><mi 
+>h</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></mrow> 
+            <mrow 
+><mi 
+>h</mi></mrow></mfrac>       <mspace width="2em"/></mtd>                                             <mtd 
+columnalign="right" class="align-label"></mtd>                 <mtd 
+class="align-label">
+                 <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>                                 <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>h</mi> <mfenced separators="" 
+open="("  close=")" ><mrow><mn>4</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi 
+>x</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <mi 
+>h</mi></mrow></mfenced></mrow> 
+       <mrow 
+><mi 
+>h</mi></mrow></mfrac>       <mspace width="2em"/></mtd>                                              <mtd 
+columnalign="right" class="align-label"></mtd>                 <mtd 
+class="align-label">
+                 <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>                                 <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi 
+>x</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <mi 
+>h</mi><mspace width="2em"/></mtd>                                                 <mtd 
+columnalign="right" class="align-label"></mtd>                 <mtd 
+class="align-label">
+<mspace width="2em"/></mtd></mtr></mtable></math>
+<a 
+ id="x1-3002r2"></a>
+<!--l. 12--><p class="noindent" >
+<tspan font-family="cmbx" font-size="12">A.1.2</tspan> The rise between the two points is <!--l. 13--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mn>9</mn></math>
+and the run is <!--l. 13--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mn>3</mn></math>,
+so the slope between the two points is given by <!--l. 13--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mfrac><mrow 
+><mn>9</mn></mrow>
+<mrow 
+><mn>3</mn></mrow></mfrac>  <mo 
+class="MathClass-rel">=</mo> <mn>3</mn></math>.
+</p><!--l. 15--><p class="noindent" >Using the difference quotient, if we let <!--l. 15--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>x</mi> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-bin">&#x2212;</mo><mn>1</mn></math>
+and <!--l. 15--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>h</mi> <mo 
+class="MathClass-rel">=</mo> <mn>3</mn></math> we
+get:
+</p><!--tex4ht:inline--><!--l. 20--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="block" ><mtable 
+columnalign="left" class="align-star">
+                                  <mtr><mtd 
+columnalign="right" class="align-odd"><mn>4</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mi 
+>x</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <mi 
+>h</mi></mtd>                                  <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mo 
+class="MathClass-bin">&#x2212;</mo><mn>1</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>3</mn><mspace width="2em"/></mtd>                                  <mtd 
+columnalign="right" class="align-label"></mtd>                                  <mtd 
+class="align-label">
+                                  <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>                                             <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mn>3</mn><mspace width="1em" class="quad"/><!--mstyle 
+class="text"--><mtext  >&#x00A0;</mtext><!--mstyle 
+class="math"--><mi 
+>&#x2713;</mi><!--/mstyle--><mtext  ></mtext><!--/mstyle--><mspace width="2em"/></mtd>                                            <mtd 
+columnalign="right" class="align-label"></mtd>                                  <mtd 
+class="align-label">
+<mspace width="2em"/></mtd></mtr></mtable></math>
+<a 
+ id="x1-3003r3"></a>
+<!--l. 22--><p class="noindent" >
+                                                                                               
+                                                                                               
+<tspan font-family="cmbx" font-size="12">A.1.3</tspan> </p><div class="minipage">
+<!--tex4ht:inline--><!--l. 29--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="block" ><mtable 
+columnalign="left" class="align-star">
+         <mtr><mtd 
+columnalign="right" class="align-odd"><mfrac><mrow 
+><mi 
+>z</mi></mrow><mo 
+class="MathClass-close">(4 + h)</mo></mrow> <mo 
+class="MathClass-bin">&#x2212;</mo> <mi 
+>z</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>4</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow>
+         <mrow 
+><mi 
+>h</mi></mrow></mfrac>        </mtd>         <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mn>4</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>2</mn><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>4</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow> <mo 
+class="MathClass-bin">&#x2212;</mo> <mi 
+>h</mi><mspace width="2em"/></mtd>         <mtd 
+columnalign="right" class="align-label"></mtd>         <mtd 
+class="align-label">
+         <mspace width="2em"/></mtd></mtr><mtr><mtd 
+columnalign="right" class="align-odd"></mtd>                        <mtd 
+class="align-even"> <mo 
+class="MathClass-rel">=</mo> <mo 
+class="MathClass-bin">&#x2212;</mo><mn>4</mn> <mo 
+class="MathClass-bin">&#x2212;</mo> <mi 
+>h</mi><mspace width="2em"/></mtd>              <mtd 
+columnalign="right" class="align-label"></mtd>         <mtd 
+class="align-label">
+<mspace width="2em"/></mtd></mtr></mtable></math>
+</div> <div class="minipage">                                          <div class="caption" 
+><span class="id">Table&#x00A0;A.1:
+</span><span  
+class="content"><!--l. 33--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo> <mfrac><mrow 
+><mi 
+>z</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>4</mn><mo 
+class="MathClass-bin">+</mo><mi 
+>h</mi></mrow><mo 
+class="MathClass-close">)</mo></mrow><mo 
+class="MathClass-bin">&#x2212;</mo><mi 
+>z</mi><mrow ><mo 
+class="MathClass-open">(</mo><mrow><mn>4</mn></mrow><mo 
+class="MathClass-close">)</mo></mrow></mrow> 
+        <mrow 
+><mi 
+>h</mi></mrow></mfrac>       </math></span></div><!--tex4ht:label?: x1-30041 -->
+<div class="tabular"> 
+<table id="TBL-4" class="tabular" 
+cellspacing="0" cellpadding="0"  
+><colgroup id="TBL-4-1g"><col 
+id="TBL-4-1" /><col 
+id="TBL-4-2" /></colgroup><tr  
+ style="vertical-align:baseline;" id="TBL-4-1-"><td  style="text-align:center"  id="TBL-4-1-1"  
+class="td11"> <!--l. 36--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>h</mi></math> </td><td  style="text-align:center"  id="TBL-4-1-2"  
+class="td11"> <!--l. 36--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi></math> </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-2-"><td  style="text-align:center"  id="TBL-4-2-1"  
+class="td11"> -0.1                                                              </td><td  style="text-align:center"  id="TBL-4-2-2"  
+class="td11"> -3.9                                                             </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-3-"><td  style="text-align:center"  id="TBL-4-3-1"  
+class="td11"> -0.01                                                            </td><td  style="text-align:center"  id="TBL-4-3-2"  
+class="td11"> -3.99                                                           </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-4-"><td  style="text-align:center"  id="TBL-4-4-1"  
+class="td11"> -0.001                                                           </td><td  style="text-align:center"  id="TBL-4-4-2"  
+class="td11"> -3.999                                                          </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-5-"><td  style="text-align:center"  id="TBL-4-5-1"  
+class="td11"> 0.001                                                            </td><td  style="text-align:center"  id="TBL-4-5-2"  
+class="td11"> -4.001                                                          </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-6-"><td  style="text-align:center"  id="TBL-4-6-1"  
+class="td11"> 0.01                                                             </td><td  style="text-align:center"  id="TBL-4-6-2"  
+class="td11"> -4.01                                                           </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-7-"><td  style="text-align:center"  id="TBL-4-7-1"  
+class="td11"> 0.1                                                               </td><td  style="text-align:center"  id="TBL-4-7-2"  
+class="td11"> -4.1                                                             </td>
+</tr><tr  
+ style="vertical-align:baseline;" id="TBL-4-8-"><td  style="text-align:center"  id="TBL-4-8-1"  
+class="td11">                                           </td></tr></table>
+</div></div>
+<a 
+ id="x1-3005r4"></a>
+<!--l. 54--><p class="noindent" >
+<tspan font-family="cmbx" font-size="12">A.1.4</tspan> The values are converging on <!--l. 55--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" > <mo 
+class="MathClass-bin">&#x2212;</mo> <mn>4</mn></math>.
+<a 
+ id="x1-3006r5"></a>
+</p><!--l. 57--><p class="noindent" >
+                                                                                               
+                                                                                               
+<tspan font-family="cmbx" font-size="12">A.1.5</tspan> </p><div class="minipage">
+<object data="251LabManual-8.svg" width="275.19763 " height="275.19763 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+                                    <div class="caption" 
+><span class="id">Figure&#x00A0;A.1:
+</span><span  
+class="content"><!--l. 66--><math 
+ xmlns="http://www.w3.org/1998/Math/MathML" display="inline" ><mi 
+>y</mi> <mo 
+class="MathClass-rel">=</mo> <mn>2</mn> <mo 
+class="MathClass-bin">+</mo> <mn>4</mn><mi 
+>x</mi> <mo 
+class="MathClass-bin">&#x2212;</mo> <msup><mrow 
+><mi 
+>x</mi></mrow><mrow 
+><mn>2</mn></mrow></msup 
+></math></span></div><!--tex4ht:label?: x1-30071 -->
+</div>
+ 
+</body> 
+</html> 
+
+                                                                                               
+                                                                                               
+                                                                                               
+
+
