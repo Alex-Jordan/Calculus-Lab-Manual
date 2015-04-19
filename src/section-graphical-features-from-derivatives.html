@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+<!--*                                    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2015-04-17T23:03:05-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CLM Graphical Features from Derivatives</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    TeX: {
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js"],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    
+    /* support for the sfrac command in MathJax (Beveled fraction)
+        see: https://github.com/mathjax/MathJax-docs/wiki/Beveled-fraction-like-sfrac,-nicefrac-bfrac */
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  var MML = MathJax.ElementJax.mml,
+      TEX = MathJax.InputJax.TeX;
+
+  TEX.Definitions.macros.sfrac = "myBevelFraction";
+
+  TEX.Parse.Augment({
+    myBevelFraction: function (name) {
+      var num = this.ParseArg(name),
+          den = this.ParseArg(name);
+      this.Push(MML.mfrac(num,den).With({bevelled: true}));
+    }
+  });
+});
+    </script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="http://sagecell.sagemath.org/static/jquery.min.js"></script><script src="http://sagecell.sagemath.org/embedded_sagecell.js"></script><script>
+$(function () {
+    // Make *any* div with class 'sage-compute' an executable Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.sage-compute',
+                           linked: true,
+                           evalButtonText: 'Evaluate'});
+});
+$(function () {
+    // Make *any* div with class 'sage-display' a visible, uneditable Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.sage-display',
+                           editor: 'codemirror-readonly',
+                           hide: ['evalButton', 'editorToggle', 'language']});
+});
+    </script><script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script><link href="http://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://aimath.org/knowl.js"></script><script src="http://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="http://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="http://aimath.org/mathbook/js/Mathbook.js"></script><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic%7CSource+Code+Pro:400" rel="stylesheet" type="text/css">
+<link href="http://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="http://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(
+% These macros are automatically generated from the "macros"
+% XML element.  Make permanent edits there.
+%
+%%%%%%%%%%%%%%%%%%%%%
+%
+%     Conveniences
+%
+%%%%%%%%%%%%%%%%%%%%%
+%
+%  Integers
+%  Usage:  \Z
+\newcommand{\Z}{\mathbb{Z}}
+%
+%  Real numbers, as set of scalars
+%  Usage:  \reals
+\newcommand{\reals}{\mathbb{R}}
+%
+%  n-space over real field
+%  Usage: \complex{integer-dimension}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+%
+%  evaluate a function
+%  Usage: \fe{function-name}{input}
+\newcommand{\fe}[2]{\mathop{{#1}{\left(#2\right)}}}
+%
+%  closed interval
+%  Usage: \cinterval{left-endpoint}{right-endpoint}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+%
+%  open interval
+%  Usage: \ointerval{left-endpoint}{right-endpoint}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+%
+%  closed-open interval
+%  Usage: \cointerval{left-endpoint}{right-endpoint}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+%
+%  open-closed interval
+%  Usage: \ocinterval{left-endpoint}{right-endpoint}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+%
+%  point
+%  Usage: \point{x}{y}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+%
+%  first derivative
+%  Usage: \fd{f}
+\newcommand{\fd}[1]{#1'}
+%
+%  second derivative
+%  Usage: \sd{f}
+\newcommand{\sd}[1]{#1''}
+%
+%  third derivative
+%  Usage: \td{f}
+\newcommand{\td}[1]{#1'''}
+%
+%  Leibniz notation
+%  Usage: \lz{y}{x}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+%
+%  higher Leibniz notation
+%  Usage: \lzn{n}{y}{x}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+%
+%  Leibniz operator
+%  Usage: \lzo{x}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+%
+%  Leibniz operator on ....
+%  Usage: \lzoo{x}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+%
+%  higher Leibniz operator
+%  Usage: \lzon{x}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+%
+
+
+
+    \newcommand{\tikzmark}[1]{}\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><span class="title">Portland Community College MTH 251 Lab Manual</span></h1>
+<p class="byline">Steve Simonds, Alex Jordan (Editor)</p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="section-antiderivatives.html">Previous</a><a class="up-button button toolbar-item" href="chapter-functions-derivatives-antiderivatives.html">Up</a><a class="next-button button toolbar-item" href="chapter-derivative-formulas.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-antiderivatives.html">Previous</a><a class="up-button button toolbar-item" href="chapter-functions-derivatives-antiderivatives.html">Up</a><a class="next-button button toolbar-item" href="chapter-derivative-formulas.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="to-the-student.html">To the Student</a></li>
+<li><a href="to-the-instructor.html">To the Instructor</a></li>
+</ul>
+<h2 class="link"><a href="chapter-rates-of-change.html"><span class="codenumber">1</span><span class="title">Rates Of Change</span></a></h2>
+<ul>
+<li><a href="section-velocity.html">Velocity</a></li>
+<li><a href="section-secant.html">Secant Line to a Curve</a></li>
+<li><a href="section-difference-quotient.html">The Difference Quotient</a></li>
+</ul>
+<h2 class="link"><a href="chapter-limits.html"><span class="codenumber">2</span><span class="title">Limits and Continuity</span></a></h2>
+<ul>
+<li><a href="section-limits.html">Limits</a></li>
+<li><a href="section-limit-laws.html">Limits Laws</a></li>
+<li><a href="section-indeterminate-limits.html">Indeterminate Limits</a></li>
+<li><a href="section-limits-at-infinity.html">Limits at Infinity</a></li>
+<li><a href="section-limits-at-infinity-tending-to-zero.html">Limits at Infinity Tending to Zero</a></li>
+<li><a href="section-ratios-of-infinities.html">Ratios of Infinities</a></li>
+<li><a href="section-nonexistent-limits.html">Non-existent Limits</a></li>
+<li><a href="section-vertical-asymptotes.html">Vertical Asymptotes</a></li>
+<li><a href="section-continuity.html">Continuity</a></li>
+<li><a href="section-discontinuities.html">Discontinuities</a></li>
+<li><a href="section-continuity-on-an-interval.html">Continuity on an Interval</a></li>
+<li><a href="section-discontinuous-formulas.html">Discontinuous Formulas</a></li>
+<li><a href="section-piecewise-defined-functions.html">Piecewise-Defined Functions</a></li>
+</ul>
+<h2 class="link"><a href="chapter-introduction-first-derivative.html"><span class="codenumber">3</span><span class="title">Introduction to the First Derivative</span></a></h2>
+<ul>
+<li><a href="section-instantaneous-velocity.html">Instantaneous Velocity</a></li>
+<li><a href="section-tangent-lines.html">Tangent Lines</a></li>
+<li><a href="section-first-derivative.html">The First Derivative</a></li>
+<li><a href="section-derivative-units.html">Derivative Units</a></li>
+</ul>
+<h2 class="link active"><a href="chapter-functions-derivatives-antiderivatives.html"><span class="codenumber">4</span><span class="title">Functions, Derivatives, and Antiderivatives</span></a></h2>
+<ul>
+<li><a href="section-graph-features.html">Graph Features</a></li>
+<li><a href="section-graphical-derivatives.html">Graphical Derivatives</a></li>
+<li><a href="section-nondifferentiability.html">Nondifferentiability</a></li>
+<li><a href="section-higher-order-derivatives.html">Higher Order Derivatives</a></li>
+<li><a href="section-antiderivatives.html">Antiderivatives</a></li>
+<li><a href="section-graphical-features-from-derivatives.html" class="active">Graphical Features from Derivatives</a></li>
+</ul>
+<h2 class="link"><a href="chapter-derivative-formulas.html"><span class="codenumber">5</span><span class="title">Derivative Formulas</span></a></h2>
+<ul>
+<li><a href="section-leibniz-notation.html">Leibniz Notation</a></li>
+<li><a href="section-derivative-operator.html">The Derivative Operator</a></li>
+<li><a href="section-power-rule.html">The Power Rule</a></li>
+<li><a href="section-constant-factor-rule.html">The Constant Factor Rule</a></li>
+<li><a href="section-constant-divisor-rule.html">The Constant Divisor Rule</a></li>
+<li><a href="section-sum-and-difference-rules.html">The Sum and Difference Rules</a></li>
+<li><a href="section-product-rule.html">Product Rule</a></li>
+<li><a href="section-quotient-rule.html">Quotient Rule</a></li>
+<li><a href="section-simplification.html">Simplification</a></li>
+<li><a href="section-product-and-quotient-together.html">Product and Quotient Rules Together</a></li>
+<li><a href="section-derivative-formulas-and-function-behavior.html">Derivative Formulas and Function Behavior</a></li>
+</ul>
+<h2 class="link"><a href="chapter-chain-rule.html"><span class="codenumber">6</span><span class="title">The Chain Rule</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="chapter-implicit-differentiation.html"><span class="codenumber">7</span><span class="title">Implicit Differentiation</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="chapter-related-rates.html"><span class="codenumber">8</span><span class="title">Related Rates</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="chapter-critical-numbers-graphing-from-formulas.html"><span class="codenumber">9</span><span class="title">Critical Numbers and Graphing from Formulas</span></a></h2>
+<ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="http://mathbook.pugetsound.edu">Authored in MathBook XML</a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-graphical-features-from-derivatives"><header><h1 class="heading">
+<span class="type">Activity</span><span class="codenumber">4.6</span><span class="title">Graphical Features from Derivatives</span>
+</h1></header><p>When given a function formula, we  often find the first and second derivative formulas to determine behaviors of the given function.  In a later lab we will use the first and second derivative formulas to help us graph a function given the formula for the function.  One thing we do with the derivative formulas is determine where they are positive, negative, zero, and undefined. This helps us determine where the given function is increasing, decreasing, concave up, concave down, and linear.</p>
+<section class="exercises" id="exercises-26"><header><h1 class="heading">
+<span class="type">Exercises</span><span class="codenumber">4.6.1</span><span class="title">Exercises</span>
+</h1></header><div class="exercisegroup">
+<article class="introduction" id="introduction-45"><p>In the next few exercises, you will construct a function and then answer questions about it.</p>
+<div id="sidebyside-22" class="sidebyside">
+<figure id="table-based-on-derivatives" class="left" style="width:58%;vertical-align:bottom;text-align:center;"><figcaption style="text-align:center;"><span class="heading">Table</span><span class="codenumber">4.6.1</span>Signs on \(\fd{f}\) and \(\sd{f}\)</figcaption><table class="center"><table>
+<tr>
+<td class="c b2 r0 l0 t3">Interval</td>
+<td class="c b2 r0 l0 t3">\(\fd{f}\)</td>
+<td class="c b2 r0 l0 t3">\(\sd{f}\)</td>
+</tr>
+<tr>
+<td class="c b0 r0 l0 t0">\(\ointerval{-\infty}{-1}\)</td>
+<td class="c b0 r0 l0 t0">Positive</td>
+<td class="c b0 r0 l0 t0">Negative</td>
+</tr>
+<tr>
+<td class="c b0 r0 l0 t0">\(\ointerval{-1}{\infty}\)</td>
+<td class="c b0 r0 l0 t0">Positive</td>
+<td class="c b0 r0 l0 t0">Positive</td>
+</tr>
+</table></table></figure>
+
+<figure id="figure-based-on-derivatives" style="width:38%;vertical-align:bottom;text-align:center;" class="right"><object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-48.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object>
+
+<figcaption style="text-align:center;"><span class="heading">Figure</span><span class="codenumber">4.6.2</span>\(y=\fe{f}{x}\)</figcaption></figure>
+
+</div></article><article class="exercise-like" id="exercise-based-on-derivatives"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1</span>
+</h5>
+<p>Draw onto <a href="section-graphical-features-from-derivatives.html#figure-based-on-derivatives">Figure&nbsp;4.6.2</a> a <em>continuous</em> function \(f\) that has a horizontal tangent line at the point \(\point{1}{2}\) along with the properties stated in <a href="section-graphical-features-from-derivatives.html#table-based-on-derivatives">Table&nbsp;4.6.1</a>.</p></article><article class="exercise-like" id="exercise-203"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">2</span>
+</h5>
+<p>Given the conditions stated in <a href="section-graphical-features-from-derivatives.html#exercise-based-on-derivatives">Exercise&nbsp;4.6.1.1</a>, does it have to be the case that \(\fe{\sd{f}}{-1}=0\)?</p></article><article class="exercise-like" id="exercise-204"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">3</span>
+</h5>
+<p>Is \(f\) increasing at \(-1\)?  How do you know?</p></article><article class="exercise-like" id="exercise-205"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">4</span>
+</h5>
+<p>Can a continuous, everywhere differentiable function satisfy the properties stated in <a href="section-graphical-features-from-derivatives.html#table-based-on-derivatives">Table&nbsp;4.6.1</a> and not have a slope of zero at \(1\)?  Draw a picture that supports your answer.</p></article>
+</div>
+<div class="exercisegroup">
+<article class="introduction" id="introduction-46"><p>In the next few exercises, you will construct a function and then answer questions about it.</p>
+<div id="sidebyside-23" class="sidebyside">
+<figure id="table-based-on-derivatives-two" class="left" style="width:58%;vertical-align:bottom;text-align:center;"><figcaption style="text-align:center;"><span class="heading">Table</span><span class="codenumber">4.6.7</span>Signs on \(\fd{g}\) and \(\sd{g}\)</figcaption><table class="center"><table>
+<tr>
+<td class="c b2 r0 l0 t3">Interval</td>
+<td class="c b2 r0 l0 t3">\(\fd{g}\)</td>
+<td class="c b2 r0 l0 t3">\(\sd{g}\)</td>
+</tr>
+<tr>
+<td class="c b0 r0 l0 t0">\(\ointerval{-\infty}{-1}\)</td>
+<td class="c b0 r0 l0 t0">Positive</td>
+<td class="c b0 r0 l0 t0">Positive</td>
+</tr>
+<tr>
+<td class="c b0 r0 l0 t0">\(\ointerval{-1}{\infty}\)</td>
+<td class="c b0 r0 l0 t0">Positive</td>
+<td class="c b0 r0 l0 t0">Negative</td>
+</tr>
+</table></table></figure>
+
+<figure id="figure-based-on-derivatives-two" style="width:38%;vertical-align:bottom;text-align:center;" class="right"><object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-49.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object>
+
+<figcaption style="text-align:center;"><span class="heading">Figure</span><span class="codenumber">4.6.8</span>\(y=\fe{g}{x}\)</figcaption></figure>
+
+</div></article><article class="exercise-like" id="exercise-based-on-derivatives-two"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">5</span>
+</h5>
+<p>Draw onto <a href="section-graphical-features-from-derivatives.html#figure-based-on-derivatives-two">Figure&nbsp;4.6.8</a> a continuous function \(g\) that has a vertical tangent line at the point \(\point{-1}{2}\) along with the properties stated in <a href="section-graphical-features-from-derivatives.html#table-based-on-derivatives-two">Table&nbsp;4.6.7</a>.</p></article><article class="exercise-like" id="exercise-207"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">6</span>
+</h5>
+<p>Given the conditions stated in <a href="section-graphical-features-from-derivatives.html#exercise-based-on-derivatives-two">Exercise&nbsp;4.6.1.5</a>, does it have to be the case that isundefined?</p></article><article class="exercise-like" id="exercise-208"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">7</span>
+</h5>
+<p>Is \(g\) increasing at \(-1\)?  How do you know?</p></article><article class="exercise-like" id="exercise-209"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">8</span>
+</h5>
+<p>Can a continuous, everywhere differentiable function satisfy the properties stated in <a href="section-graphical-features-from-derivatives.html#table-based-on-derivatives-two">Table&nbsp;4.6.7</a> and not have a vertical tangent line at \(1\)?  Draw a picture that supports your answer.</p></article>
+</div>
+<div class="exercisegroup">
+<article class="introduction" id="introduction-47"><p>In the next few exercises, you will construct a function and then answer questions about it.</p>
+<div id="sidebyside-24" class="sidebyside">
+<figure id="table-based-on-derivatives-three" class="left" style="width:58%;vertical-align:bottom;text-align:center;"><figcaption style="text-align:center;"><span class="heading">Table</span><span class="codenumber">4.6.13</span>Signs on \(\fd{k}\) and \(\sd{k}\)</figcaption><table class="center"><table>
+<tr>
+<td class="c b2 r0 l0 t3">Interval</td>
+<td class="c b2 r0 l0 t3">\(\fd{k}\)</td>
+<td class="c b2 r0 l0 t3">\(\sd{k}\)</td>
+</tr>
+<tr>
+<td class="c b0 r0 l0 t0">\(\ointerval{-\infty}{-1}\)</td>
+<td class="c b0 r0 l0 t0">Negative</td>
+<td class="c b0 r0 l0 t0">Positive</td>
+</tr>
+<tr>
+<td class="c b0 r0 l0 t0">\(\ointerval{-1}{\infty}\)</td>
+<td class="c b0 r0 l0 t0">Positive</td>
+<td class="c b0 r0 l0 t0">Negative</td>
+</tr>
+</table></table></figure>
+
+<figure id="figure-based-on-derivatives-three" style="width:38%;vertical-align:bottom;text-align:center;" class="right"><object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-50.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object>
+
+<figcaption style="text-align:center;"><span class="heading">Figure</span><span class="codenumber">4.6.14</span>\(y=\fe{k}{x}\)</figcaption></figure>
+
+</div></article><article class="exercise-like" id="exercise-based-on-derivatives-three"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">9</span>
+</h5>
+<p>Draw onto <a href="section-graphical-features-from-derivatives.html#figure-based-on-derivatives-three">Figure&nbsp;4.6.14</a> a continuous function \(k\) that passes through the point \(\point{-1}{2}\) and also satisfies the properties stated in <a href="section-graphical-features-from-derivatives.html#table-based-on-derivatives-three">Table&nbsp;4.6.13</a>.</p></article><article class="exercise-like" id="exercise-211"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">10</span>
+</h5>
+<p>At what values of \(x\) is \(k\) nondifferentiable?</p></article>
+</div>
+<div class="exercisegroup">
+<article class="introduction" id="introduction-48"><p>You should know by now that the first derivative  continually increases over intervals where the second derivative is constantly positive and that the first derivative continually decreases over intervals where the second derivative is constantly negative.  A person might infer from this that a function changes more and more quickly over intervals where the second derivative is constantly positive and that a function changes more and more slowly over intervals where the second derivative is constantly negative.   We are going to explore that idea in this problem.</p></article><article class="exercise-like" id="exercise-ice-cube"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">11</span>
+</h5>
+<p>Suppose that \(\fe{V}{t}\) is the volume of water in an ice cube (mL) where \(t\) is the amount of time that has passed since noon (measure in minutes).  Suppose that \(\fe{\fd{V}}{6}=0\,\frac{\text{ml}}{\text{min}}\) and that \(\fe{\sd{V}}{t}\) has a constant value of \(-0.3\,\frac{\sfrac{\text{ml}}{\text{min}}}{\text{min}}\) over the interval \(\cinterval{6}{11}\).  What is the value of \(\fe{\fd{V}}{11}\)?  When is \(V\) changing more quickly, at 12:06 pm or at 12:11 pm?</p></article><article class="exercise-like" id="exercise-213"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">12</span>
+</h5>
+<p>Referring to the function \(V\) in <a href="section-graphical-features-from-derivatives.html#exercise-ice-cube">Exercise&nbsp;4.6.1.11</a>, what would the shape of \(V\) be over the interval \(\cinterval{6}{11}\)?  (Choose from options <a href="section-graphical-features-from-derivatives.html#figure-curve-one">4.6.19(a)</a>–<a href="section-graphical-features-from-derivatives.html#figure-curve-four">4.6.19(d)</a>.)</p>
+<div id="sidebyside-curves" class="sidebyside">
+<figure id="figure-curve-one" style="width:11%;vertical-align:bottom;text-align:center;" class="left"><object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-51.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object>
+
+<figcaption style="text-align:center;"><span class="codenumber">(a)</span></figcaption></figure>
+
+<figure id="figure-curve-two" style="width:11%;vertical-align:bottom;text-align:center;" class="middle"><object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-52.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object>
+
+<figcaption style="text-align:center;"><span class="codenumber">(b)</span></figcaption></figure>
+
+<figure id="figure-curve-three" style="width:11%;vertical-align:bottom;text-align:center;" class="middle"><object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-53.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object>
+
+<figcaption style="text-align:center;"><span class="codenumber">(c)</span></figcaption></figure>
+
+<figure id="figure-curve-four" style="width:11%;vertical-align:bottom;text-align:center;" class="right"><object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-54.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object>
+
+<figcaption style="text-align:center;"><span class="codenumber">(d)</span></figcaption></figure>
+
+<figcaption style="text-align:center;"><span class="heading">Figure</span><span class="codenumber">4.6.19</span></figcaption>
+</div></article><article class="exercise-like" id="exercise-214"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">13</span>
+</h5>
+<p>Again referring to options <a href="section-graphical-features-from-derivatives.html#figure-curve-one">4.6.19(a)</a>–<a href="section-graphical-features-from-derivatives.html#figure-curve-four">4.6.19(d)</a>, which functions are changing more and more rapidly from left to right and which functions are changing more and more slowly from left to right? Which functions have positive second derivatives and which functions have negative second derivatives?  Do the functions with positive second derivative values both change more and more quickly from left to right?</p></article><article class="exercise-like" id="exercise-215"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">14</span>
+</h5>
+<p>Consider the signs on both the first and second derivatives in options <a href="section-graphical-features-from-derivatives.html#figure-curve-one">4.6.19(a)</a>–<a href="section-graphical-features-from-derivatives.html#figure-curve-four">4.6.19(d)</a>.  Is there something that the two functions that change more and more quickly have in common that is different in the functions that change more and more slowly?</p></article>
+</div>
+<div class="exercisegroup">
+<article class="introduction" id="introduction-49"><p>Resolve each of the following disputes.</p></article><article class="exercise-like" id="exercise-216"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">15</span>
+</h5>
+<p>One day Sara and Jermaine were working on an assignment.  One question asked them to draw a function over the domain \(\ointerval{-2}{\infty}\) with the properties that the function is always increasing and always concave down.  Sara insisted that the curve must have a vertical asymptote at \(-2\) and Jermaine insisted that the function must have a horizontal asymptote somewhere.  Were either of these students correct?</p></article><article class="exercise-like" id="exercise-217"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">16</span>
+</h5>
+<p>The next question Sara and Jermaine encountered described the same function with the added condition that the function is never positive.  Sara and Jermaine made the same contentions about asymptotes.  Is one of them now correct?</p></article><article class="exercise-like" id="exercise-218"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">17</span>
+</h5>
+<p>At another table Pedro and Yoshi were asked to draw a continuous curve that, among other properties, was never concave up.  Pedro said “OK, so the curve is always concave down” to which Yoshi replied “Pedro, you need to open your  mind to other possibilities.”  Who's right?</p></article><article class="exercise-like" id="exercise-219"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">18</span>
+</h5>
+<p>In the next problem Pedro and Yoshi were asked to draw a function that is everywhere continuous and that is concave down at every value of \(x\) <em>except</em> \(3\).  Yoshi declared “impossible” and Pedro responded “have some faith, Yosh-man.”  Pedro then began to draw. Is it possible that Pedro came up with such a function?</p></article>
+</div>
+<div class="exercisegroup">
+<article class="introduction" id="introduction-50"><p>Determine the correct answer to each of the following questions.  Pictures of the situation may help you determine the correct answers.</p></article><article class="exercise-like" id="exercise-220"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">19</span>
+</h5>
+<p>Which of the following propositions is true? If a given proposition is not true, draw a graph that illustrates its untruth.</p>
+<ol style="list-style-type: lower-alpha;">
+<li>If the graph of \(f\) has a vertical asymptote, then the graph of \(\fd{f}\) must also have a vertical asymptote.</li>
+<li>If the graph of \(\fd{f}\) has a vertical asymptote, then the graph of \(f\) must also have a vertical asymptote.</li>
+</ol></article><article class="exercise-like" id="exercise-221"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">20</span>
+</h5>
+<p>Suppose that the function \(f\) is everywhere continuous and concave down.  Suppose further that \(\fe{f}{7}=5\) and \(\fe{\fd{f}}{7}=3\).  Which of the following is true?</p>
+<ol style="list-style-type: lower-alpha;">
+<li>\(\fe{f}{9}\lt11\)</li>
+<li>\(\fe{f}{9}=11\)</li>
+<li>\(\fe{f}{9}\gt11\)</li>
+<li>There is not enough information to determine the relationship between \(\fe{f}{9}\) and \(11\).</li>
+</ol></article>
+</div></section></section></div></main>
+</div>
+</body>
+</html>

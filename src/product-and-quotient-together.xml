@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-product-and-quotient-together">
+    <title>Product and Quotient Rules Together</title>
+
+    <p>Sometimes both the product rule and quotient rule need to be applied when finding a derivative formula.</p>
+
+    <exercises>
+        <exercisegroup>
+            <introduction>
+                <p>Consider the functions defined by <m>\fe{f}{x}=x^2\frac{\fe{\sin}{x}}{e^x}</m> and <m>\fe{g}{x}=\frac{x^2\fe{\sin}{x}}{e^x}</m>.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Discuss why <m>f</m> and <m>g</m> are in fact two representations of the same function.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Find <m>\fe{\fd{f}}{x}</m> by first applying the product rule and then applying the quotient rule (where necessary).</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Find <m>\fe{\fd{g}}{x}</m> by first applying the quotient rule and then applying the product rule (where necessary).</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Rigorously establish that the formulas for <m>\fe{\fd{f}}{x}</m> and <m>\fe{\fd{g}}{x}</m> are indeed the same.</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</section>

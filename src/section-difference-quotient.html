@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<!--*                                    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2015-04-17T23:03:04-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CLM The Difference Quotient</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    TeX: {
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js"],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    
+    /* support for the sfrac command in MathJax (Beveled fraction)
+        see: https://github.com/mathjax/MathJax-docs/wiki/Beveled-fraction-like-sfrac,-nicefrac-bfrac */
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  var MML = MathJax.ElementJax.mml,
+      TEX = MathJax.InputJax.TeX;
+
+  TEX.Definitions.macros.sfrac = "myBevelFraction";
+
+  TEX.Parse.Augment({
+    myBevelFraction: function (name) {
+      var num = this.ParseArg(name),
+          den = this.ParseArg(name);
+      this.Push(MML.mfrac(num,den).With({bevelled: true}));
+    }
+  });
+});
+    </script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="http://sagecell.sagemath.org/static/jquery.min.js"></script><script src="http://sagecell.sagemath.org/embedded_sagecell.js"></script><script>
+$(function () {
+    // Make *any* div with class 'sage-compute' an executable Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.sage-compute',
+                           linked: true,
+                           evalButtonText: 'Evaluate'});
+});
+$(function () {
+    // Make *any* div with class 'sage-display' a visible, uneditable Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.sage-display',
+                           editor: 'codemirror-readonly',
+                           hide: ['evalButton', 'editorToggle', 'language']});
+});
+    </script><script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script><link href="http://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://aimath.org/knowl.js"></script><script src="http://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="http://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="http://aimath.org/mathbook/js/Mathbook.js"></script><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic%7CSource+Code+Pro:400" rel="stylesheet" type="text/css">
+<link href="http://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="http://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(
+% These macros are automatically generated from the "macros"
+% XML element.  Make permanent edits there.
+%
+%%%%%%%%%%%%%%%%%%%%%
+%
+%     Conveniences
+%
+%%%%%%%%%%%%%%%%%%%%%
+%
+%  Integers
+%  Usage:  \Z
+\newcommand{\Z}{\mathbb{Z}}
+%
+%  Real numbers, as set of scalars
+%  Usage:  \reals
+\newcommand{\reals}{\mathbb{R}}
+%
+%  n-space over real field
+%  Usage: \complex{integer-dimension}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+%
+%  evaluate a function
+%  Usage: \fe{function-name}{input}
+\newcommand{\fe}[2]{\mathop{{#1}{\left(#2\right)}}}
+%
+%  closed interval
+%  Usage: \cinterval{left-endpoint}{right-endpoint}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+%
+%  open interval
+%  Usage: \ointerval{left-endpoint}{right-endpoint}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+%
+%  closed-open interval
+%  Usage: \cointerval{left-endpoint}{right-endpoint}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+%
+%  open-closed interval
+%  Usage: \ocinterval{left-endpoint}{right-endpoint}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+%
+%  point
+%  Usage: \point{x}{y}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+%
+%  first derivative
+%  Usage: \fd{f}
+\newcommand{\fd}[1]{#1'}
+%
+%  second derivative
+%  Usage: \sd{f}
+\newcommand{\sd}[1]{#1''}
+%
+%  third derivative
+%  Usage: \td{f}
+\newcommand{\td}[1]{#1'''}
+%
+%  Leibniz notation
+%  Usage: \lz{y}{x}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+%
+%  higher Leibniz notation
+%  Usage: \lzn{n}{y}{x}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+%
+%  Leibniz operator
+%  Usage: \lzo{x}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+%
+%  Leibniz operator on ....
+%  Usage: \lzoo{x}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+%
+%  higher Leibniz operator
+%  Usage: \lzon{x}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+%
+
+
+
+    \newcommand{\tikzmark}[1]{}\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><span class="title">Portland Community College MTH 251 Lab Manual</span></h1>
+<p class="byline">Steve Simonds, Alex Jordan (Editor)</p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="section-secant.html">Previous</a><a class="up-button button toolbar-item" href="chapter-rates-of-change.html">Up</a><a class="next-button button toolbar-item" href="chapter-limits.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="section-secant.html">Previous</a><a class="up-button button toolbar-item" href="chapter-rates-of-change.html">Up</a><a class="next-button button toolbar-item" href="chapter-limits.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="to-the-student.html">To the Student</a></li>
+<li><a href="to-the-instructor.html">To the Instructor</a></li>
+</ul>
+<h2 class="link active"><a href="chapter-rates-of-change.html"><span class="codenumber">1</span><span class="title">Rates Of Change</span></a></h2>
+<ul>
+<li><a href="section-velocity.html">Velocity</a></li>
+<li><a href="section-secant.html">Secant Line to a Curve</a></li>
+<li><a href="section-difference-quotient.html" class="active">The Difference Quotient</a></li>
+</ul>
+<h2 class="link"><a href="chapter-limits.html"><span class="codenumber">2</span><span class="title">Limits and Continuity</span></a></h2>
+<ul>
+<li><a href="section-limits.html">Limits</a></li>
+<li><a href="section-limit-laws.html">Limits Laws</a></li>
+<li><a href="section-indeterminate-limits.html">Indeterminate Limits</a></li>
+<li><a href="section-limits-at-infinity.html">Limits at Infinity</a></li>
+<li><a href="section-limits-at-infinity-tending-to-zero.html">Limits at Infinity Tending to Zero</a></li>
+<li><a href="section-ratios-of-infinities.html">Ratios of Infinities</a></li>
+<li><a href="section-nonexistent-limits.html">Non-existent Limits</a></li>
+<li><a href="section-vertical-asymptotes.html">Vertical Asymptotes</a></li>
+<li><a href="section-continuity.html">Continuity</a></li>
+<li><a href="section-discontinuities.html">Discontinuities</a></li>
+<li><a href="section-continuity-on-an-interval.html">Continuity on an Interval</a></li>
+<li><a href="section-discontinuous-formulas.html">Discontinuous Formulas</a></li>
+<li><a href="section-piecewise-defined-functions.html">Piecewise-Defined Functions</a></li>
+</ul>
+<h2 class="link"><a href="chapter-introduction-first-derivative.html"><span class="codenumber">3</span><span class="title">Introduction to the First Derivative</span></a></h2>
+<ul>
+<li><a href="section-instantaneous-velocity.html">Instantaneous Velocity</a></li>
+<li><a href="section-tangent-lines.html">Tangent Lines</a></li>
+<li><a href="section-first-derivative.html">The First Derivative</a></li>
+<li><a href="section-derivative-units.html">Derivative Units</a></li>
+</ul>
+<h2 class="link"><a href="chapter-functions-derivatives-antiderivatives.html"><span class="codenumber">4</span><span class="title">Functions, Derivatives, and Antiderivatives</span></a></h2>
+<ul>
+<li><a href="section-graph-features.html">Graph Features</a></li>
+<li><a href="section-graphical-derivatives.html">Graphical Derivatives</a></li>
+<li><a href="section-nondifferentiability.html">Nondifferentiability</a></li>
+<li><a href="section-higher-order-derivatives.html">Higher Order Derivatives</a></li>
+<li><a href="section-antiderivatives.html">Antiderivatives</a></li>
+<li><a href="section-graphical-features-from-derivatives.html">Graphical Features from Derivatives</a></li>
+</ul>
+<h2 class="link"><a href="chapter-derivative-formulas.html"><span class="codenumber">5</span><span class="title">Derivative Formulas</span></a></h2>
+<ul>
+<li><a href="section-leibniz-notation.html">Leibniz Notation</a></li>
+<li><a href="section-derivative-operator.html">The Derivative Operator</a></li>
+<li><a href="section-power-rule.html">The Power Rule</a></li>
+<li><a href="section-constant-factor-rule.html">The Constant Factor Rule</a></li>
+<li><a href="section-constant-divisor-rule.html">The Constant Divisor Rule</a></li>
+<li><a href="section-sum-and-difference-rules.html">The Sum and Difference Rules</a></li>
+<li><a href="section-product-rule.html">Product Rule</a></li>
+<li><a href="section-quotient-rule.html">Quotient Rule</a></li>
+<li><a href="section-simplification.html">Simplification</a></li>
+<li><a href="section-product-and-quotient-together.html">Product and Quotient Rules Together</a></li>
+<li><a href="section-derivative-formulas-and-function-behavior.html">Derivative Formulas and Function Behavior</a></li>
+</ul>
+<h2 class="link"><a href="chapter-chain-rule.html"><span class="codenumber">6</span><span class="title">The Chain Rule</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="chapter-implicit-differentiation.html"><span class="codenumber">7</span><span class="title">Implicit Differentiation</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="chapter-related-rates.html"><span class="codenumber">8</span><span class="title">Related Rates</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="chapter-critical-numbers-graphing-from-formulas.html"><span class="codenumber">9</span><span class="title">Critical Numbers and Graphing from Formulas</span></a></h2>
+<ul></ul></nav><div class="extras"><nav><a class="mathbook-link" href="http://mathbook.pugetsound.edu">Authored in MathBook XML</a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-difference-quotient"><header><h1 class="heading">
+<span class="type">Activity</span><span class="codenumber">1.3</span><span class="title">The Difference Quotient</span>
+</h1></header><p>While it's easy to see that the formula \(\frac{\fe{f}{x_1}-\fe{f}{x_1}}{x_1-x_0}\) gives the slope of the line connecting two points on the function \(f\), the resultant expression can at times be awkward to work with. We actually already saw that when we had to use slight-of-hand factoring in <a knowl="./knowl/example-secant.html" knowl-id="xref-example-secant" title="Calculating Secant Slope">Example&nbsp;1.2.2</a>.</p>
+<p>The algebra associated with secant lines (and average velocities) can sometimes be simplified if we designate the variable \(h\) to be the run between the two points (or the length of the time interval). With this designation we have \(x_1-x_0=h\) which gives us \(x_1=x_0+h\). Making these substitutions we get <a href="section-difference-quotient.html#equation-difference-quotient">(1.3.1)</a>. The expression on the right side of <a href="section-difference-quotient.html#equation-difference-quotient">(1.3.1)</a> is called the <em class="terminology">difference quotient</em> for \(f\).</p>\begin{equation}\frac{\fe{f}{x_1}-\fe{f}{x_1}}{x_1-x_0}=\frac{\fe{f}{x_0+h}-\fe{f}{x_1}}{h}\label{equation-difference-quotient}\tag{1.3.1}\end{equation}<p>Let's revisit the function \(\fe{f}{x}=3+2x-x^2\) from <a knowl="./knowl/example-secant.html" knowl-id="xref-example-secant" title="Calculating Secant Slope">Example&nbsp;1.2.2</a>. The difference quotient for this function is derived in <a knowl="./knowl/example-difference-quotient.html" knowl-id="xref-example-difference-quotient" title="Calculating a Difference Quotient">Example&nbsp;1.3.1</a>.</p>
+<article class="example-like" id="example-difference-quotient"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">1.3.1</span><span class="title">Calculating a Difference Quotient</span>
+</h5>\begin{align*}
+\frac{\fe{f}{x_0+h}-\fe{f}{x_0}}{h}&amp;=\frac{\left[3+2\left(x_0+h\right)-\left(x_0+h\right)^2\right]-\left[3+2x_0-x_0^2\right]}{h}\\
+&amp;=\frac{3+2x_0+2h-x_0^2-2x_0h-h^2-3-2x_0+x_0^2}{h}\\
+&amp;=\frac{2h-2x_0h-h^2}{h}\\
+&amp;=\frac{h\left(2-2x_0-h\right)}{h}\\
+&amp;=2-2x_0-h\text{ for }h\neq 0
+\end{align*}<p>Please notice that all of the terms without a factor of \(h\) subtracted to zero. Please notice, too, that we avoided all of the tricky factoring that appeared in <a knowl="./knowl/example-secant.html" knowl-id="xref-example-secant" title="Calculating Secant Slope">Example&nbsp;1.2.2</a>!</p></article><p>For simplicity's sake, we generally drop the variable subscript when applying the difference quotient. So for future reference we will define the difference quotient as follows:</p>
+<article class="definition-like" id="definition-difference-quotient"><h5 class="heading">
+<span class="type">Definition</span><span class="codenumber">1.3.2</span><span class="title">The Difference Quotient</span>
+</h5>
+<p>The <em class="terminology">difference quotient</em> for the function \(y=\fe{f}{x}\) is the expression \(\frac{\fe{f}{x+h}-\fe{f}{x}}{h}\).</p></article><section class="exercises" id="exercises-3"><header><h1 class="heading">
+<span class="type">Exercises</span><span class="codenumber">1.3.1</span><span class="title">Exercises</span>
+</h1></header><div class="exercisegroup">
+<article class="introduction" id="introduction-3"><p>Completely simplify the difference quotient for each of the following functions. Please note that the template for the difference quotient needs to be adapted to the function name and independent variable in each given equation. For example, the difference quotient for the function in <a href="section-difference-quotient.html#exercise-first-difference-quotient">Exercise&nbsp;1.3.1.1</a> is \(\frac{\fe{v}{t+h}-\fe{v}{t}}{h}\).</p>
+<p>Please make sure that you lay out your work in a manner consistent with the way the work is shown in <a knowl="./knowl/example-difference-quotient.html" knowl-id="xref-example-difference-quotient" title="Calculating a Difference Quotient">Example&nbsp;1.3.1</a> (excluding the subscripts, of course).</p></article><article class="exercise-like" id="exercise-first-difference-quotient"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1</span>
+</h5>\(\fe{v}{t}=2.5t^2-7.5t\)</article><article class="exercise-like" id="exercise-10"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">2</span>
+</h5>\(\fe{g}{x}=3-7x\)</article><article class="exercise-like" id="exercise-11"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">3</span>
+</h5>\(\fe{w}{x}=\frac{3}{x+2}\)</article>
+</div>
+<div class="exercisegroup">
+<article class="introduction" id="introduction-4"><p>Suppose that an object is tossed into the air in such a way that the elevation of the object (measured in ft) is given by the function \(\fe{s}{t}=40+40t-16t^2\) where \(t\) is the amount of time that has passed since the object was tossed (measured in s).</p></article><article class="exercise-like" id="exercise-12"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">4</span>
+</h5>
+<p>Simplify the difference quotient for \(s\).</p></article><article class="exercise-like" id="exercise-difference-quotient-average-velocity"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">5</span>
+</h5>
+<p>Ignoring the unit, use the difference quotient to determine the average velocity over the interval \(\cinterval{1.6}{2.8}\). (<em>Hint:</em> Use \(t=1.6\) and \(h=1.2\). Make sure that you understand why!)</p></article><article class="exercise-like" id="exercise-14"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">6</span>
+</h5>
+<p>What, <em>including unit</em>, are the values of \(\fe{s}{1.6}\) and \(\fe{s}{2.8}\)? Use these values when working <a href="section-difference-quotient.html#exercise-difference-quotient-verify">Exercise&nbsp;1.3.1.7</a>.</p></article><article class="exercise-like" id="exercise-difference-quotient-verify"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">7</span>
+</h5>
+<p>Use the expression \(\frac{\fe{s}{2.8}-\fe{s}{1.6}}{2.8-1.6}\) to verify the value you found in <a href="section-difference-quotient.html#exercise-difference-quotient-average-velocity">Exercise&nbsp;1.3.1.5</a>. <em>Include the unit while making this calculation.</em></p></article><article class="exercise-like" id="exercise-16"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">8</span>
+</h5>
+<p>Ignoring the unit, use the difference quotient to determine the average velocity over the interval \(\cinterval{0.4}{2.4}\).</p></article>
+</div>
+<div class="exercisegroup">
+<article class="introduction" id="introduction-5"><p>Moose and squirrel were having casual conversation when suddenly, without any apparent provocation, Boris Badenov launched anti-moose missile in their direction. Fortunately, squirrel had ability to fly as well as great knowledge of missile technology, and he was able to disarm missile well before it hit ground.</p>
+<p>The elevation (ft) of the tip of the missile \(t\) seconds after it was launched is given by the function \(\fe{h}{t}=-16t^2+294.4t+15\).</p></article><article class="exercise-like" id="exercise-17"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">9</span>
+</h5>
+<p>What, including unit, is the value of \(\fe{h}{12}\) and what does the value tell you about the flight of the missile?</p></article><article class="exercise-like" id="exercise-18"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">10</span>
+</h5>
+<p>What, including unit, is the value of \(\frac{\fe{h}{10\,\text{s}}-\fe{f}{0\,\text{s}}}{10\,\text{s}}\) and what does this value tell you about the flight of the missile?</p></article><article class="exercise-like" id="exercise-19"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">11</span>
+</h5>
+<p>The velocity (<sup>m</sup>⁄<sub>s</sub>) function for the missile is \(\fe{v}{t}=-32t+294.4\). What, including unit, is the value of \(\frac{\fe{v}{10\,\text{s}}-\fe{v}{0\,\text{s}}}{10\,\text{s}}\) and what does this value tell you about the flight of the missile?</p></article>
+</div>
+<div class="exercisegroup">
+<article class="introduction" id="introduction-6"><p>Timmy lived a long life in the 19th century. When Timmy was seven he found a rock that weighed exactly half a stone. (Timmy lived in jolly old England, don't you know.) That rock sat on Timmy's window sill for the next 80 years and wouldn't you know the weight of that rock did not change even one smidge the entire time. In fact, the weight function for this rock was \(\fe{w}{t}=0.5\) where \(\fe{w}{t}\) was the weight of the rock (stones) and \(t\) was the number of years that had passed since that day Timmy brought the rock home.</p></article><article class="exercise-like" id="exercise-20"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">12</span>
+</h5>
+<p>What was the average rate of change in the weight of the rock over the 80 years it sat on Timmy's window sill?</p></article><article class="exercise-like" id="exercise-21"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">13</span>
+</h5>
+<p>Ignoring the unit, simplify the expression \(\frac{\fe{w}{t_1}-\fe{w}{t_0}}{t_1-t_0}\). Does the result make sense in the context of this problem?</p></article><article class="exercise-like" id="exercise-22"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">14</span>
+</h5>
+<p>Showing each step in the process and ignoring the unit, simplify the difference quotient for \(w\). Does the result make sense in the context of this problem?</p></article>
+</div>
+<div class="exercisegroup">
+<article class="introduction" id="introduction-7"><p>Truth be told, there was one day in 1842 when Timmy's mischievous son Nigel took that rock outside and chucked it into the air. The velocity of the rock (<sup>ft</sup>⁄<sub>s</sub>) was given by \(\fe{v}{t}=60-32t\) where \(t\) was the number of seconds that had passed since Nigel chucked the rock.</p></article><article class="exercise-like" id="exercise-23"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">15</span>
+</h5>
+<p>What, <em>including unit</em>, are the values of \(\fe{v}{0}\), \(\fe{v}{1}\), and \(\fe{v}{2}\) and what do these values tell you in the context of this problem? Don't just write that the values tell you the velocity at certain times; explain what the velocity values tell you about the motion of the rock.</p></article><article class="exercise-like" id="exercise-24"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">16</span>
+</h5>
+<p>Ignoring the unit, simplify the difference quotient for \(v\).</p></article><article class="exercise-like" id="exercise-25"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">17</span>
+</h5>
+<p> What is the unit for the difference quotient for \(v\)? What does the value of the difference quotient (including unit) tell you in the context of this problem?</p></article>
+</div>
+<div class="exercisegroup">
+<article class="introduction" id="introduction-8"><p>Suppose that a vat was undergoing a controlled drain and that the amount of fluid left in the vat (gal) was given by the formula \(\fe{V}{t}=100-2t^{3/2}\) where \(t\) is the number of minutes that had passed since the draining process began.</p></article><article class="exercise-like" id="exercise-vat-first"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">18</span>
+</h5>
+<p>What, <em>including unit</em>, is the value of \(\fe{V}{4}\) and what does that value tell you in the context of this problem?</p></article><article class="exercise-like" id="exercise-27"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">19</span>
+</h5>
+<p>Ignoring the unit, write down the formula you get for the difference quotient of \(V\) when \(t=4\). Copy <a href="section-difference-quotient.html#table-vat">Table&nbsp;1.3.22</a> onto your paper and fill in the missing values. <em>Look for a pattern in the output and write down enough digits for each entry so that the pattern is clearly illustrated;</em> the first two entries in the output column have been given to help you understand what is meant by this direction.</p>
+<figure id="table-vat"><figcaption style="text-align:center;"><span class="heading">Table</span><span class="codenumber">1.3.22</span>\(y=\frac{\fe{V}{4+h}-\fe{V}{4}}{h}\)</figcaption><table class="center"><table>
+<tr>
+<td class="c b2 r0 l0 t3">\(h\)</td>
+<td class="c b2 r0 l0 t3">\(y\)</td>
+</tr>
+<tr>
+<td class="l b0 r0 l0 t0">\(-0.1\)</td>
+<td class="l b0 r0 l0 t0">\(-5.962\ldots\)</td>
+</tr>
+<tr>
+<td class="l b0 r0 l0 t0">\(-0.01\)</td>
+<td class="l b0 r0 l0 t0">\(-5.9962\ldots\)</td>
+</tr>
+<tr>
+<td class="l b0 r0 l0 t0">\(-0.001\)</td>
+<td class="l b0 r0 l0 t0"></td>
+</tr>
+<tr>
+<td class="l b0 r0 l0 t0">\(\phantom{-}0.001\)</td>
+<td class="l b0 r0 l0 t0"></td>
+</tr>
+<tr>
+<td class="l b0 r0 l0 t0">\(\phantom{-}0.01\)</td>
+<td class="l b0 r0 l0 t0"></td>
+</tr>
+<tr>
+<td class="l b0 r0 l0 t0">\(\phantom{-}0.1\)</td>
+<td class="l b0 r0 l0 t0"></td>
+</tr>
+</table></table></figure></article><article class="exercise-like" id="exercise-28"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">20</span>
+</h5>
+<p>What is the unit for the \(y\) values in <a href="section-difference-quotient.html#table-vat">Table&nbsp;1.3.22</a>? What do these values (with their unit) tell you in the context of this problem?</p></article><article class="exercise-like" id="exercise-vat-last"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">21</span>
+</h5>
+<p>As the value of \(h\) gets closer to \(0\), the values in the \(y\) column of <a href="section-difference-quotient.html#table-vat">Table&nbsp;1.3.22</a> appear to be converging to a single number; what is this number and what do you think that value (with its unit) tells you in the context of this problem?</p></article>
+</div></section></section></div></main>
+</div>
+</body>
+</html>

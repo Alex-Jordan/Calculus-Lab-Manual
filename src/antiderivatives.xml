@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-antiderivatives">
+    <title>Antiderivatives</title>
+
+    <p>The derivative continuum can be expressed backwards as well as forwards.  When you move from function to function in the reverse direction the resultant functions are called <term>antiderivatives</term> and the process is called <term>antidifferentiation</term>.  These relationships are shown in <xref autoname="plural" ref="figure-derivative-chain"/> and <xref autoname="no" ref="figure-antiderivative-chain"/>.</p>
+
+    <figure xml:id="figure-derivative-chain">
+        <caption>Differentiating</caption>
+        <p><me>f\xrightarrow{\text{differentiate}}\fd{f}\xrightarrow{\text{differentiate}}\sd{f}\xrightarrow{\text{differentiate}}\td{f}\xrightarrow{\text{differentiate}}\cdots</me></p>
+    </figure>
+    <figure xml:id="figure-antiderivative-chain">
+        <caption>Antiifferentiating</caption>
+        <p><me>\cdots\td{f}\xrightarrow{\text{antidifferentiate}}\sd{f}\xrightarrow{\text{antidifferentiate}}\fd{f}\xrightarrow{\text{antidifferentiate}}f\xrightarrow{\text{antidifferentiate}}F</me></p>
+    </figure>
+
+    <p>There are (at least) two important differences between the differentiation chain and the antidifferentiation chain (besides their reversed order).</p>
+
+    <ul>
+        <li>When you differentiate, the resultant function is unique. When you antidifferentiate, you do not get a unique function<mdash/>you get a family of functions; specifically, you get a set of parallel curves.</li>
+        <li>We introduce a new function in the antidifferentiation chain. We say that <m>F</m> is an antiderivative of <m>f</m>.  This is where we stop in that direction; we do not have a variable name for an antiderivative of <m>F</m>.</li>
+    </ul>
+
+    <p>Since <m>F</m> is considered an antiderivative of <m>f</m>, it must be the case that <m>f</m> is the first derivative of <m>F</m>. Hence we can add <m>F</m> to our derivative chain resulting in <xref ref="figure-longer-derivative-chain"/>.</p>
+
+    <figure xml:id="figure-longer-derivative-chain">
+        <caption>Differentiating</caption>
+        <p><me>F\xrightarrow{\text{differentiate}}f\xrightarrow{\text{differentiate}}\fd{f}\xrightarrow{\text{differentiate}}\sd{f}\xrightarrow{\text{differentiate}}\td{f}\xrightarrow{\text{differentiate}}\cdots</me></p>                    
+    </figure>
+
+    <exercises>
+        <exercisegroup>
+            <introduction>
+                <p>Each of the linear functions in <xref ref="figure-parallel-lines"/> have the same first derivative function.</p>
+
+                <figure xml:id="figure-parallel-lines">
+                    <caption/>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot[pccplot,domain=-6.8:-4.6]{2*(x+8)};
+                            \addplot[pccplot,domain=-6.8:-2.6]{2*(x+6)};
+                            \addplot[pccplot,domain=-6.8:-0.6]{2*(x+4)};
+                            \addplot[pccplot,domain=-5.4:1.4]{2*(x+2)};
+                            \addplot[pccplot,domain=-3.4:3.4]{2*(x)};
+                            \addplot[pccplot,domain=-1.4:5.4]{2*(x-2)};
+                            \addplot[pccplot,domain=0.6:6.8]{2*(x-4)};
+                            \addplot[pccplot,domain=2.6:6.8]{2*(x-6)};
+                            \addplot[pccplot,domain=4.6:6.8]{2*(x-8)};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Draw this common first derivative function onto <xref ref="figure-parallel-lines"/> and label it <m>g</m>.</p>
+                </statement>
+            </exercise>
+             <exercise>
+                <statement>
+                    <p>Each of the given lines <xref ref="figure-parallel-lines"/> is called what in relation to <m>g</m>?</p>
+                </statement>
+            </exercise> 
+        </exercisegroup> 
+        <exercisegroup> 
+            <introduction>
+                <p>The function <m>f</m> is shown in <xref ref="figure-plot-antiderivative-one"/>. Reference this function in the following questions.</p>
+                <sidebyside>
+                    <figure xml:id="figure-plot-antiderivative-one" width="40%">
+                        <caption><m>y=\fe{f}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot[pccplot,domain=-6.8:-3,<-]{2};
+                                \addplot[pccplot,domain=-3:-1,-]{-2*(x+2)};
+                                \addplot[pccplot,domain=-1:6.8,->]{1};
+                                \addplot[holdot]coordinates {(-1,-2) (-1,1)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>                     
+                        </image>
+                    </figure>
+                    <figure xml:id="figure-plot-antiderivative-two" width="40%">
+                        <caption/>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>                     
+                        </image>
+                    </figure>
+                </sidebyside>
+                <sidebyside>
+                    <figure xml:id="figure-plot-antiderivative-three" width="40%">
+                        <caption/>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>                     
+                        </image>
+                    </figure>
+                    <figure xml:id="figure-plot-antiderivative-four" width="40%">
+                        <caption/>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>                     
+                        </image>
+                    </figure>
+                </sidebyside>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>At what values of <m>x</m> is <m>f</m> nondifferentiable?</p> 
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>At what values of <m>x</m> are antiderivatives of <m>f</m> nondifferentiable?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Draw onto <xref ref="figure-plot-antiderivative-two"/> the continuous antiderivative of <m>f</m> that passes through the point <m>\point{3}{1}</m>.  Please note that every antiderivative of <m>f</m> increases exactly one unit over the interval <m>\ointerval{-3}{-2}</m>.</p> 
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Because <m>f</m> is not continuous, there are other antiderivatives of <m>f</m> that pass through the point <m>\point{3}{1}</m>. Specifically, antiderivatives of <m>f</m> may or may not be continuous at <m>1</m>.  Draw onto <xref autoname="plural" ref="figure-plot-antiderivative-three"/> and <xref autoname="no" ref="figure-plot-antiderivative-four"/> different antiderivatives of <m>f</m> that pass through the point <m>\point{3}{1}</m>.</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+        <exercise>
+            <statement>
+                <p>The function <m>y=\fe{\sin}{x}</m> is an example of a periodic function.  Specifically, the function has a period of <m>2\pi</m> because over any interval of length <m>2\pi</m> the behavior of the function is exactly the same as it was the previous interval of length <m>2\pi</m>.  A little more precisely, <m>\fe{\sin}{x+2\pi}=\fe{\sin}{x}</m> regardless of the value of <m>x</m>.</p>
+
+                <p>Jasmine was thinking and told her lab assistant that derivatives and antiderivatives of periodic functions must also be periodic.  Jasmine's lab assistant told her that she was half right.  Which half did Jasmine have correct?  Also, draw a function that illustrates that the other half of Jasmine's statement is not correct.</p>
+            </statement>
+        </exercise>
+        <exercisegroup>
+            <introduction>
+                <p>Consider the function <m>g</m> shown in <xref ref="figure-line-segments"/>.</p>
+                <sidebyside>
+                    <figure xml:id="figure-line-segments" width="40%">
+                        <caption><m>y=\fe{g}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot[pccplot,domain=-6:-3,-]{2/3*(x+6)+2};
+                                \addplot[pccplot,domain=-3:1,-]{-3};
+                                \addplot[pccplot,domain=1:4,-]{2/3*(x-1)+2};
+                                \addplot[pccplot,domain=4:6,-]{-3};
+                                \addplot[holdot] coordinates {(-6, 2) (-3, 4) (-3, -3) (1, -3) (1,2) (4,4) (4,-3) (6,-3)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <figure xml:id="figure-line-segments-antiderivative" width="40%">
+                        <caption><m>y=\fe{G}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Let <m>G</m> be an antiderivative of <m>g</m>.  Suppose that <m>G</m> is continuous on <m>\cinterval{-6}{6}</m>, <m>\fe{G}{6}=3</m>, and that the greatest value <m>G</m> ever achieves is <m>6</m>.  Draw <m>G</m> onto <xref ref="figure-line-segments-antiderivative"/>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>At what values of <m>t</m> is <m>G</m> nondifferentiable?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>                    
+                    <p>At what values of <m>t</m> is <m>g</m> nondifferentiable?</p>
+                </statement>                    
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <p>Answer the following question in reference to a continuous function <m>g</m> whose first derivative is shown in <xref ref="figure-discontinuous-derivative"/>.  You do not need to state how you made your determination; just state the interval(s) or values of <m>x</m> that satisfy the stated property.</p>
+                <p>Note: the correct answer to one or more of these questions may be <q>There is no way of knowing.</q></p> 
+
+                <figure xml:id="figure-discontinuous-derivative">
+                    <caption><m>y=\fe{g}{x}</m></caption>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot[pccplot,domain=-6.8:-3,<-]{(x+5)^2+1};
+                            \addplot[pccplot,domain=-3:2,-]{-3/5*(x+3)+5};
+                            \addplot[pccplot,domain=2:4,-]{-3};
+                            \addplot[pccplot,domain=4:6.8,->]{1/3*(x-4)^3-2};
+                            \addplot[holdot] coordinates {(2,2) (2,-3) (4,-3) (4,-2)};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
+
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Over what intervals is <m>\sd{g}</m> positive and increasing?</p> 
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>At which values of <m>x</m> is <m>g</m> nondifferentiable?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Over which intervals is <m>g</m> not negative?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>At which values of <m>x</m> is every antiderivative of <m>g</m> nondifferentiable?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Over which intervals is the value of <m>\sd{g}</m> constant?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Over which intervals is <m>g</m> linear?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Over which intervals are antiderivatives of <m>g</m> linear?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Over which intervals is <m>\td{g}</m> not negative?</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</section>

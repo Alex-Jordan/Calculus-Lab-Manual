@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-sum-and-difference-rules">
+    <title>The Sum and Difference Rules</title>
+
+    <p>When taking the derivative of two or more terms, you can take the derivatives term by term and insert plus or minus signs as appropriate.  Collectively we call this the i<term>sum and difference rules</term> of differentiation.<men>\lzoo{x}{\fe{f}{x}\pm\fe{g}{x}}=\lzoo{x}{\fe{f}{x}}\pm\lzoo{x}{\fe{g}{x}}</men></p>
+
+    <p>In the following examples and problems we introduce linear and constant terms into the functions being differentiated.<men xml:id="equation-constant-rule">\lzoo{x}{k}=0\quad\text{for }k\in\reals</men><men xml:id="equation-linear-rule">\lzoo{x}{kx}=k\quad\text{for }k\in\reals</men></p>  
+
+    <table xml:id="table-sum-and-difference-rule">
+        <caption>Examples of the Sum and Difference Rules</caption>
+        <tabular top="major">
+            <col halign="center"/>
+            <col halign="center"/>
+            <col halign="center"/>
+            <row bottom="medium">
+                <cell>Given Function</cell>
+                <cell>You should <q>see</q></cell>
+                <cell>You should write</cell>
+            </row>
+            <row>
+                <cell><m>y=4\sqrt[5]{t^6}-\frac{1}{6\sqrt{t}}+8t</m></cell>
+                <cell><m>y=4t^{\sfrac{6}{5}}-\frac{1}{6}t^{-\sfrac{1}{2}}+8t</m></cell>
+                <cell><m>\begin{aligned}\lz{y}{t}&amp;=\frac{24}{5}t^{\sfrac{1}{5}}+\frac{1}{12}t^{-\sfrac{3}{2}}+8\\&amp;=\frac{24\sqrt[5]{t}}{5}+\frac{1}{12\sqrt{t^3}}+8\end{aligned}</m></cell>
+            </row>
+            <row>
+                <cell><m>\fe{P}{\gamma}=\frac{\fe{\sin}{\gamma}-\fe{\cos}{\gamma}}{2}+4</m></cell>
+                <cell><m>\fe{P}{\gamma}=\frac{1}{2}\fe{\sin}{\gamma}-\frac{1}{2}\fe{\cos}{\gamma}+4</m></cell>
+                <cell><m>\fe{\fd{P}}{\gamma}=\frac{1}{2}\fe{\cos}{\gamma}+\frac{1}{2}\fe{\sin}{\gamma}</m></cell>
+            </row>
+        </tabular>
+
+    </table>
+
+    <exercises>
+        <exercise>
+            <statement>
+                <p>Explain why both the constant rule (<xref ref="equation-constant-rule"/>) and linear rule (<xref ref="equation-linear-rule"/>) are <q>obvious.</q> Hint: think about the graphs <m>y=k</m> and <m>y=kx</m>.  What does a first derivative tell you about a graph?</p>
+            </statement>
+        </exercise>
+
+        <exercisegroup cols="2">
+            <introduction>
+                <p>Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative. In the last problem, <m>G</m>, <m>m_1</m>, and <m>m_2</m> are constants.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>T=\fe{\sin}{t}-2\fe{\cos}{t}+3</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{k}{\theta}=\frac{4\fe{\sec}{\theta}-3\fe{\csc}{\theta}}{4}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{r}{x}=\frac{x}{5}+7</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>r=\frac{x}{3\sqrt[3]{x}}-\frac{\fe{\ln}{x}}{9}+\fe{\ln}{2}</m></p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</section>

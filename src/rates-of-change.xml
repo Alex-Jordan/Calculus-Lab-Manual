@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+   
+<chapter xml:id="chapter-rates-of-change" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Rates Of Change</title>
+    
+    <xi:include href="./velocity.xml" />
+    <xi:include href="./secant.xml" />
+    <xi:include href="./difference-quotient.xml" />
+    
+</chapter>

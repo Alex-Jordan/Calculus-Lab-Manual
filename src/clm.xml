@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<!-- USE XINCLUDE SWITCH ON XSLTPROC -->
+
+<mathbook xmlns:xi="http://www.w3.org/2001/XInclude">
+
+    <xi:include href="./bookinfo.xml" />
+    
+    <book xml:id="clm">
+        <title>Portland Community College MTH 251 Lab Manual</title>
+
+        <xi:include href="./frontmatter.xml" />
+        <xi:include href="./rates-of-change.xml" />
+        <xi:include href="./limits-and-continuity.xml" />
+        <xi:include href="./introduction-first-derivative.xml" />
+        <xi:include href="./functions-derivatives-antiderivatives.xml" />
+        <xi:include href="./derivative-formulas.xml" />
+        <xi:include href="./chain-rule.xml" />
+        <xi:include href="./implicit-differentiation.xml" />
+        <xi:include href="./related-rates.xml" />
+        <xi:include href="./critical-numbers-graphing-from-formulas.xml" />
+<!--        <xi:include href="./gfdl-mathbook.xml" />
+-->
+   </book>
+
+</mathbook>

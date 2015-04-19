@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-graphical-derivatives">
+    <title>Graphical Derivatives</title>
+
+    <p>Much information about a function's first derivative can be gleaned simply by looking at a graph of the function. In fact, a person with good visual skills can <q>see</q> the graph of the derivative while looking at the graph of the function. This activity focuses on helping you develop that skill.</p>
+
+    <exercises> 
+        <exercisegroup> 
+            <introduction> 
+                <p>A parabolic function is shown in <xref ref="figure-graphical-derivative"/>. The next several questions are in reference to that function.</p>
+
+                <sidebyside> 
+                    <figure xml:id="figure-graphical-derivative" width="30%">
+                        <caption><m>y=\fe{g}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xmin=-8,xmax=8,ymin=-16,ymax=8,xtick={-6,-4,...,6}, minor xtick={-7,-6,...,7},ytick={-14,-12,...,6}, minor ytick={-15,-14,...,7},y post scale=1.5]
+                                \addplot+[
+                                    domain=-5.5:7.5,
+                                    <->,
+                                ]{-0.5*x^2+x+5.5};
+                                \addplot[
+                                    soldot
+                                ]coordinates{
+                                    (-5,-12)
+                                    (-3,-2)
+                                    (-1,4)
+                                    (1,6)
+                                    (3,4)
+                                    (5,-2)
+                                    (7,-12)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <figure xml:id="figure-graphical-derivative-plot" width="30%">
+                        <caption><m>y=\fe{g}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xmin=-8,xmax=8,ymin=-16,ymax=8,xtick={-6,-4,...,6}, minor xtick={-7,-6,...,7},ytick={-14,-12,...,6}, minor ytick={-15,-14,...,7},y post scale=1.5]
+                                \addplot+[
+                                    domain=-5.5:7.5,
+                                    <->,
+                                ]{-0.5*x^2+x+5.5};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <table xml:id="table-graphical-derivative" width="30%">
+                        <caption><m>y=\fe{\fd{g}}{x}</m></caption>
+                        <tabular top="major">
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <row bottom="medium">
+                                <cell><m>x</m></cell>
+                                <cell><m>y</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>-5</m></cell>
+                                <cell><m>6</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>-3</m></cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell><m>-1</m></cell>
+                                <cell><m>2</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>1</m></cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell><m>3</m></cell>
+                                <cell><m>-2</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>5</m></cell>
+                                <cell><m>-4</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>7</m></cell>
+                                <cell></cell>
+                            </row>
+                        </tabular>
+                    </table>
+                </sidebyside> 
+            </introduction> 
+            <exercise> 
+                <statement> 
+                    <p>Several values of the function <m>\fd{g}</m> are given in <xref ref="table-graphical-derivative"/>. For each given value draw a nice long line segment at the corresponding point on <m>g</m> whose slope is equal to the value of <m>g</m>. If we think of these line segments as actual lines, what do we call the lines?</p> 
+                </statement> 
+            </exercise> 
+            <exercise> 
+                <statement> 
+                    <p>What is the value of <m>\fd{g}</m> at <m>1</m>? How do you know? Go ahead and enter that value into <xref ref="table-graphical-derivative"/>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The function <m>g</m> is symmetric across the line <m>x=1</m>; that is, if we move equal distance to the left and right from this line the corresponding <m>y</m>-coordinates on <m>g</m> are always equal. Notice that the slopes of the tangent lines are <q>equal but opposite</q> at points that are equally removed from the axis of symmetry; this is reflected in the values of <m>\fe{\fd{g}}{1}</m> and <m>\fe{\fd{g}}{3}</m>. Use the idea of <q>equal but opposite slope equidistance from the axis of symmetry</q> to complete <xref ref="table-graphical-derivative"/>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Plot the points from <xref ref="table-graphical-derivative"/> onto <xref ref="figure-graphical-derivative-plot"/> and connect the dots. Determine the formula for the resultant linear function.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The formula for <m>g</m> is <m>-0.5x^2+x+5.5</m>. Use <xref ref="definition-first-derivative"/> to determine the formula for <m>\fe{\fd{g}}{x}</m>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The line you drew onto <xref ref="figure-graphical-derivative-plot"/> is <em>not</em> a tangent line to <m>g</m>. Just what exactly is this line?</p>
+                </statement>
+            </exercise>
+        </exercisegroup> 
+        <exercisegroup> 
+            <introduction> 
+                <p>A function <m>f</m> is shown in <xref ref="figure-cubic"/> and the corresponding first derivative function <m>\fd{f}</m> is shown in <xref ref="figure-cubic-derivative"/>. Answer each of the following questions referencing these two functions.</p>
+                <sidebyside>
+                    <figure xml:id="figure-cubic" width="40%">
+                        <caption><m>y=\fe{f}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[samples=50]
+                                \addplot+[
+                                    domain=-4.2:4,
+                                    <->,
+                                ]{x^3/3-4*x+1};
+                                \addplot[
+                                    soldot
+                                ]coordinates{
+                                    (-2,6.33333)
+                                    (0,1)
+                                    (3,-2)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <figure xml:id="figure-cubic-derivative" width="40%">
+                        <caption><m>y=\fe{\fd{f}}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot+[
+                                    domain=-3.3:3.3,
+                                    <->,
+                                ]{x^2-4};
+                                \addplot[
+                                    soldot
+                                ]coordinates{
+                                    (-2,0)
+                                    (0,-4)
+                                    (3,5)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Draw the tangent line to <m>f</m> at the three points indicated in <xref ref="figure-cubic"/> after first using the graph of <m>\fd{f}</m> to determine the exact slope of the respective tangent lines.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Write a sentence relating the slope of the tangent line to <m>f</m> with the corresponding <m>y</m>-coordinate on <m>\fd{f}</m>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Copy each of the following sentences onto your paper and supply the words or phrases that correctly complete each sentence.</p>
+                    <ul>
+                        <li>Over the interval where <m>\fd{f}</m> is negative, <m>f</m> is <ellipsis/></li> 
+                        <li>Over the interval where <m>\fd{f}</m> is positive, <m>f</m> is <ellipsis/></li> 
+                        <li>Over the interval where <m>\fd{f}</m> is increasing, <m>f</m> is <ellipsis/></li> 
+                        <li>Over the interval where <m>\fd{f}</m> is decreasing, <m>f</m> is <ellipsis/></li>
+                    </ul>
+                </statement>
+            </exercise> 
+        </exercisegroup> 
+        <exercise>
+            <statement>
+                <p>In each of <xref autoname="plural" ref="figure-sine"/> and <xref autoname="no" ref="figure-rational"/> a function (the solid curve) is given; both of these functions are symmetric about the <m>y</m>-axis. The first derivative of each function (the dash-dotted curves) have been drawn over the interval <m>\ointerval{0}{7}</m>. Use the given portion of the first derivative together with the symmetry of the function to help you draw each first derivative over the interval <m>\ointerval{-7}{0}</m>.</p>
+                <sidebyside>
+                    <figure xml:id="figure-sine" width="40%">
+                        <caption><m>y=\fe{g}{x}</m> and <m>y=\fe{\fd{g}}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[legend style={at={(1,1)},anchor=south east},legend entries={$y=\fe{g}{x}$,$y=\fe{\fd{g}}{x}$},samples=50,]
+                                \addplot+[
+                                    domain=-6.8:6.8,
+                                    <->,
+                                ]{4-2*cos(x*60)};
+                                \addplot+[
+                                    domain=0:6.8,
+                                    ->,
+                                ]{2*sin(x*60)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <figure xml:id="figure-rational" width="40%">
+                        <caption><m>y=\fe{k}{x}</m> and <m>y=\fe{\fd{k}}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[legend style={at={(1,1)},anchor=south east},legend entries={$y=\fe{g}{x}$,$y=\fe{\fd{g}}{x}$,$y=\frac{1}{2}$}]
+                                \addplot+[
+                                    variable=t,
+                                    domain=0:32.75,
+                                    <->,
+                                ]({-0.2998*1.1^t},{(0.2998*1.1^t)/2+1/(6*(0.2998*1.1^t)^3)+1/6});
+                                \addplot+[
+                                    variable=t,
+                                    domain=0:33.957,
+                                    <->,
+                                ]({0.26726*1.1^t},{1/2-1/(2*(0.26726*1.1^t)^2)});
+                                \addplot+[asymptote,
+                                    domain=-7:7,
+                                    <->,
+                                ]{1/2};
+                                \addplot+[
+                                    variable=t,
+                                    domain=0:32.75,
+                                    <->,
+                                ]({0.2998*1.1^t},{(0.2998*1.1^t)/2+1/(6*(0.2998*1.1^t)^3)+1/6});
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </statement>
+        </exercise>
+        <exercisegroup>
+            <introduction>
+                <p>A graph of the function <m>f</m> given by <m>\fe{f}{x}=\frac{1}{x}</m> is show in <xref ref="figure-one-over-x"/>.</p>
+                <sidebyside>
+                    <figure xml:id="figure-one-over-x" width="40%">
+                        <caption><m>y=\fe{f}{x}=\frac{1}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot[pccplot,
+                                    variable=t,
+                                    domain=0:39.278,
+                                    <->,
+                                ]({-1/6.5*1.1^t},{1/(-1/6.5*1.1^t)});
+                                \addplot[pccplot,
+                                    variable=t,
+                                    domain=0:39.278,
+                                    <->,
+                                ]({1/6.5*1.1^t},{1/(1/6.5*1.1^t)});
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                     <figure xml:id="figure-derivative-of-one-over-x" width="40%">
+                        <caption><m>y=\fe{\fd{f}}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </introduction>
+            <exercise xml:id="exercise-negative-derivative-of-one-over-x">
+                <statement>
+                    <p>Except at <m>0</m>, there is something that is always true about the value of <m>\fd{f}</m>; what is the common trait?</p> 
+                </statement>
+            </exercise>
+            <exercise xml:id="exercise-derivative-of-one-over-x">
+                <statement>
+                    <p>Use <xref ref="definition-first-derivative"/> to find the formula for <m>\fe{\fd{f}}{x}</m>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Does the formula for <m>\fe{\fd{f}}{x}</m> support your answer to <xref ref="exercise-derivative-of-one-over-x"/>?</p>
+                </statement>
+            </exercise>
+            <exercise xml:id="exercise-asymptotes-one-over-x">
+                <statement>
+                    <p>Use the formula for <m>\fe{\fd{f}}{x}</m> to determine the horizontal and vertical asymptotes to the graph of <m>y=\fe{\fd{f}}{x}</m>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p> Keeping it simple, draw onto <xref ref="figure-derivative-of-one-over-x"/> a curve with the asymptotes found in <xref ref="exercise-asymptotes-one-over-x"/> and the property determined in <xref ref="exercise-negative-derivative-of-one-over-x"/>. Does the curve you drew have the properties you would expect to see in the first derivative of <m>f</m>? For example, <m>f</m> is concave down over <m>\ointerval{-\infty}{0}</m>, and concave up over <m>\ointerval{0}{\infty}</m>; what are the corresponding differences in the behavior of <m>\fd{f}</m> over those two intervals?</p>
+                </statement>
+            </exercise> 
+        </exercisegroup>
+        <exercise>
+            <statement>
+                <p>A graph of the function <m>g</m> is shown in <xref ref="figure-arctangent"/>. The absolute minimum value ever obtained by <m>\fd{g}</m> is <m>3</m>. With that in mind, draw <m>\fd{g}</m> onto <xref ref="figure-derivative-of-arctangent"/>. Make sure that you draw and label any and all necessary asymptotes. Make sure that your graph of <m>\fd{g}</m> adequately reflects the symmetry in the graph of <m>g</m>.</p>
+                <sidebyside>
+                    <figure xml:id="figure-arctangent" width="40%">
+                        <caption><m>y=\fe{g}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot+[smooth,
+                                    domain=-6.8:6.8,
+                                    <->,
+                                ]{2-atan((x-1)*sqrt(3))/30};
+                                \addplot[asymptote,
+                                    domain=-7:7,
+                                    <->,
+                                ]{5};
+                                \addplot[asymptote,
+                                    domain=-7:7,
+                                    <->,
+                                ]{-1};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <figure xml:id="figure-derivative-of-arctangent" width="40%">
+                        <caption><m>y=\fe{\fd{g}}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </statement>
+        </exercise>
+
+        <exercisegroup>
+            <introduction>
+                <p>A function, <m>w</m>, is shown in <xref ref="figure-inflection-points"/>. A larger version of <xref ref="figure-inflection-points"/> is available in <xref provisional="Appendix B (page B3)"/>. Answer each of the following questions in reference to this function.</p>
+                <sidebyside>
+                    <figure xml:id="figure-inflection-points" width="40%">
+                        <caption><m>y=\fe{w}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xmin=-1,xmax=10,ymin=-1,ymax=10,xtick={-1,0,...,10}, minor xtick={-1,-0.5,...,10},ytick={0,1,...,10}, minor ytick={-1,-0.5,...,10},samples=100]
+                                \addplot+[
+                                    domain=-0.1:8.25,
+                                    <->,
+                                ]{x^5/60-5/16*x^4+19/9*x^3-13/2*x^2+28/3*x};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <table xml:id="table-inflection-points" width="40%">
+                        <caption>Properties of <m>\fd{w}</m> (positive, negative, increasing, or decreasing)</caption>
+                        <tabular top="major">
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <row bottom="medium">
+                                <cell>Interval</cell>
+                                <cell>Properties</cell>
+                            </row>
+                            <row>
+                                <cell><m>\ointerval{-\infty}{2}</m></cell>
+                                <cell />
+                            </row>
+                            <row>
+                                <cell><m>\ointerval{2}{3.25}</m></cell>
+                                <cell />
+                            </row>
+                            <row>
+                                <cell><m>\ointerval{3.25}{4}</m></cell>
+                                <cell />
+                            </row>
+                            <row>
+                                <cell><m>\ointerval{4}{6}</m></cell>
+                                <cell />
+                            </row>
+                            <row>
+                                <cell><m>\ointerval{6}{7}</m></cell>
+                                <cell />
+                            </row>
+                            <row>
+                                <cell><m>\ointerval{7}{\infty}</m></cell>
+                                <cell />
+                            </row>
+                        </tabular>
+                    </table>
+                </sidebyside>
+            </introduction>
+
+
+            <exercise>
+                <statement>
+                    <p> An <term>inflection point</term> is a point where the function is continuous and the concavity of the function changes. The inflection points on <m>w</m> occur at <m>2</m>, <m>3.25</m>, and <m>6</m>. With that in mind, over each interval stated in <xref ref="table-inflection-points"/> exactly two of the properties from its caption apply to <m>\fd{w}</m>. Complete <xref ref="table-inflection-points"/> with the appropriate pairs of properties.</p> 
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>In <xref ref="table-values-for-w-prime"/>, three possible values are given for <m>\fd{w}</m> at several values of <m>x</m>. In each case, one of the values is correct. Use tangent lines to <m>w</m> to determine each of the correct values. (This is where you probably want to use the graph on <xref provisional="page B3"/>.)</p>
+                    <sidebyside>
+                        <table xml:id="table-values-for-w-prime" width="40%">
+                            <caption>Choose the correct values for <m>\fd{w}</m></caption>
+                            <tabular top="major">
+                                <col halign="center"/>
+                                <col halign="center"/>
+                                <row bottom="medium">
+                                    <cell><m>x</m></cell>
+                                    <cell>Proposed values</cell>
+                                </row>
+                                <row>
+                                    <cell><m>0</m></cell>
+                                    <cell><m>\sfrac{2}{3}</m> or <m>\sfrac{8}{3}</m> or <m>\sfrac{28}{3}</m></cell>
+                                </row>
+                                <row>
+                                    <cell><m>1</m></cell>
+                                    <cell><m>\sfrac{1}{2}</m> or <m>\sfrac{3}{2}</m> or <m>\sfrac{5}{2}</m></cell>
+                                </row>
+                                <row>
+                                    <cell><m>3</m></cell>
+                                    <cell><m>\sfrac{1}{3}</m> or <m>1</m> or <m>3</m></cell>
+                                </row>
+                                <row>
+                                    <cell><m>5</m></cell>
+                                    <cell><m>-\sfrac{1}{2}</m> or <m>-1</m> or <m>-\sfrac{3}{2}</m></cell>
+                                </row>
+                                <row>
+                                    <cell><m>6</m></cell>
+                                    <cell><m>-\sfrac{4}{3}</m> or <m>-\sfrac{8}{3}</m> or <m>-4</m></cell>
+                                </row>
+                                <row>
+                                    <cell><m>8</m></cell>
+                                    <cell><m>1</m> or <m>6</m> or <m>12</m></cell>
+                                </row>
+                            </tabular>
+                        </table>
+                        <figure xml:id="figure-w-prime" width="40%">
+                            <caption><m>y=\fe{\fd{w}}{x}</m></caption>
+                            <image>
+                                <latex-image-code>
+                                <![CDATA[\begin{tikzpicture}
+                                \begin{axis}[xmin=-1,xmax=10,ymin=-5,ymax=5,xtick={-1,0,...,10}, minor xtick={-1,-0.5,...,10},ytick={-5,-4,...,5}, minor ytick={-5,-5.5,...,5},]
+                                \end{axis}
+                                \end{tikzpicture}]]>
+                                </latex-image-code>
+                            </image>
+                        </figure> 
+                    </sidebyside>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The value of <m>\fd{w}</m> is the same at <m>2</m>, <m>4</m>, and <m>7</m>. What is this common value?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Put it all together and draw <m>\fd{w}</m> onto <xref ref="figure-w-prime"/>.</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+
+    </exercises> 
+</section>

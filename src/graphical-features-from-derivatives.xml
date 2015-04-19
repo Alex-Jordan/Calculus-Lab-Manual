@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-graphical-features-from-derivatives">
+    <title>Graphical Features from Derivatives</title>
+
+    <p>When given a function formula, we  often find the first and second derivative formulas to determine behaviors of the given function.  In a later lab we will use the first and second derivative formulas to help us graph a function given the formula for the function.  One thing we do with the derivative formulas is determine where they are positive, negative, zero, and undefined. This helps us determine where the given function is increasing, decreasing, concave up, concave down, and linear.</p>
+
+    <exercises> 
+        <exercisegroup>
+            <introduction>
+                <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
+                <sidebyside>
+                    <table xml:id="table-based-on-derivatives">
+                        <caption>Signs on <m>\fd{f}</m> and <m>\sd{f}</m></caption>
+                        <tabular top="major">
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <row bottom="medium">
+                                <cell>Interval</cell>
+                                <cell><m>\fd{f}</m></cell>
+                                <cell><m>\sd{f}</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>\ointerval{-\infty}{-1}</m></cell>
+                                <cell>Positive</cell>
+                                <cell>Negative</cell>
+                            </row>
+                            <row>
+                                <cell><m>\ointerval{-1}{\infty}</m></cell>
+                                <cell>Positive</cell>
+                                <cell>Positive</cell>
+                            </row>
+                        </tabular>
+                    </table>
+                    <figure xml:id="figure-based-on-derivatives" width="40%">
+                        <caption><m>y=\fe{f}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </introduction>
+            <exercise xml:id="exercise-based-on-derivatives">
+                <statement>
+                    <p>Draw onto <xref ref="figure-based-on-derivatives"/> a <em>continuous</em> function <m>f</m> that has a horizontal tangent line at the point <m>\point{1}{2}</m> along with the properties stated in <xref ref="table-based-on-derivatives"/>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Given the conditions stated in <xref ref="exercise-based-on-derivatives"/>, does it have to be the case that <m>\fe{\sd{f}}{-1}=0</m>?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>                    
+                    <p>Is <m>f</m> increasing at <m>-1</m>?  How do you know?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>                    
+                    <p>Can a continuous, everywhere differentiable function satisfy the properties stated in <xref ref="table-based-on-derivatives"/> and not have a slope of zero at <m>1</m>?  Draw a picture that supports your answer.</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
+                <sidebyside>
+                    <table xml:id="table-based-on-derivatives-two">
+                        <caption>Signs on <m>\fd{g}</m> and <m>\sd{g}</m></caption>
+                        <tabular top="major">
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <row bottom="medium">
+                                <cell>Interval</cell>
+                                <cell><m>\fd{g}</m></cell>
+                                <cell><m>\sd{g}</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>\ointerval{-\infty}{-1}</m></cell>
+                                <cell>Positive</cell>
+                                <cell>Positive</cell>
+                            </row>
+                            <row>
+                                <cell><m>\ointerval{-1}{\infty}</m></cell>
+                                <cell>Positive</cell>
+                                <cell>Negative</cell>
+                            </row>
+                        </tabular>
+                    </table>
+                    <figure xml:id="figure-based-on-derivatives-two" width="40%">
+                        <caption><m>y=\fe{g}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                            \end{axis} 
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </introduction>
+            <exercise xml:id="exercise-based-on-derivatives-two">
+                <statement>
+                    <p>Draw onto <xref ref="figure-based-on-derivatives-two"/> a continuous function <m>g</m> that has a vertical tangent line at the point <m>\point{-1}{2}</m> along with the properties stated in <xref ref="table-based-on-derivatives-two"/>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Given the conditions stated in <xref ref="exercise-based-on-derivatives-two"/>, does it have to be the case that isundefined?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Is <m>g</m> increasing at <m>-1</m>?  How do you know?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Can a continuous, everywhere differentiable function satisfy the properties stated in <xref ref="table-based-on-derivatives-two"/> and not have a vertical tangent line at <m>1</m>?  Draw a picture that supports your answer.</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
+                <sidebyside>
+                    <table xml:id="table-based-on-derivatives-three">
+                        <caption>Signs on <m>\fd{k}</m> and <m>\sd{k}</m></caption>
+                        <tabular top="major">
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <col halign="center"/>
+                            <row bottom="medium">
+                                <cell>Interval</cell>
+                                <cell><m>\fd{k}</m></cell>
+                                <cell><m>\sd{k}</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>\ointerval{-\infty}{-1}</m></cell>
+                                <cell>Negative</cell>
+                                <cell>Positive</cell>
+                            </row>
+                            <row>
+                                <cell><m>\ointerval{-1}{\infty}</m></cell>
+                                <cell>Positive</cell>
+                                <cell>Negative</cell>
+                            </row>
+                        </tabular>
+                    </table>
+                    <figure xml:id="figure-based-on-derivatives-three" width="40%">
+                        <caption><m>y=\fe{k}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                            \end{axis} 
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </introduction>
+            <exercise xml:id="exercise-based-on-derivatives-three">
+                <statement>
+                    <p>Draw onto <xref ref="figure-based-on-derivatives-three"/> a continuous function <m>k</m> that passes through the point <m>\point{-1}{2}</m> and also satisfies the properties stated in <xref ref="table-based-on-derivatives-three"/>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>At what values of <m>x</m> is <m>k</m> nondifferentiable?</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <p>You should know by now that the first derivative  continually increases over intervals where the second derivative is constantly positive and that the first derivative continually decreases over intervals where the second derivative is constantly negative.  A person might infer from this that a function changes more and more quickly over intervals where the second derivative is constantly positive and that a function changes more and more slowly over intervals where the second derivative is constantly negative.   We are going to explore that idea in this problem.</p>
+            </introduction>
+            <exercise xml:id="exercise-ice-cube">
+                <statement>
+                    <p>Suppose that <m>\fe{V}{t}</m> is the volume of water in an ice cube (<quantity><unit prefix="milli" base="liter"/></quantity>) where <m>t</m> is the amount of time that has passed since noon (measure in minutes).  Suppose that <m>\fe{\fd{V}}{6}=0\,\frac{\text{ml}}{\text{min}}</m> and that <m>\fe{\sd{V}}{t}</m> has a constant value of <m>-0.3\,\frac{\sfrac{\text{ml}}{\text{min}}}{\text{min}}</m> over the interval <m>\cinterval{6}{11}</m>.  What is the value of <m>\fe{\fd{V}}{11}</m>?  When is <m>V</m> changing more quickly, at 12:06 pm or at 12:11 pm?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Referring to the function <m>V</m> in <xref ref="exercise-ice-cube"/>, what would the shape of <m>V</m> be over the interval <m>\cinterval{6}{11}</m>?  (Choose from options <xref autoname="no" ref="figure-curve-one"/><ndash/><xref autoname="no" ref="figure-curve-four"/>.)</p>
+                    <sidebyside xml:id="sidebyside-curves">
+                        <caption/>
+                        <figure xml:id="figure-curve-one" width="12%">
+                            <caption/>
+                            <image>
+                                <latex-image-code>
+                                <![CDATA[\begin{tikzpicture}
+                                \begin{axis}[axis x line=none, axis y line=none,xmin=0,xmax=1,ymin=,ymax=]
+                                    \addplot[domain=0:1,-]{sqrt((1-((x-1)/1.1)^2))};
+                                \end{axis}
+                                \end{tikzpicture}]]>
+                                </latex-image-code>
+                            </image>
+                        </figure>
+                        <figure xml:id="figure-curve-two" width="12%">
+                            <caption/>
+                            <image>
+                                <latex-image-code>
+                                <![CDATA[\begin{tikzpicture}
+                                \begin{axis}[axis x line=none, axis y line=none,xmin=0,xmax=1,ymin=,ymax=]
+                                    \addplot[domain=0:1,-]{(x/1.1)^2};
+                                \end{axis}
+                                \end{tikzpicture}]]>
+                                </latex-image-code>
+                            </image>
+                        </figure>
+                        <figure xml:id="figure-curve-three" width="12%">
+                            <caption/>
+                            <image>
+                                <latex-image-code>
+                                <![CDATA[\begin{tikzpicture}
+                                \begin{axis}[axis x line=none, axis y line=none,xmin=0,xmax=1,ymin=,ymax=]
+                                    \addplot[domain=0:1,-]{((x-1)/1.1)^2};
+                                \end{axis}
+                                \end{tikzpicture}]]>
+                                </latex-image-code>
+                            </image>
+                        </figure>
+                        <figure xml:id="figure-curve-four" width="12%">
+                            <caption/>
+                            <image>
+                                <latex-image-code>
+                                <![CDATA[\begin{tikzpicture}
+                                \begin{axis}[axis x line=none, axis y line=none,xmin=0,xmax=1,ymin=,ymax=]
+                                    \addplot[domain=0:1,-]{1-(x/1.1)^2};
+                                \end{axis}
+                                \end{tikzpicture}]]>
+                                </latex-image-code>
+                            </image>
+                        </figure>
+
+                    </sidebyside>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Again referring to options <xref autoname="no" ref="figure-curve-one"/><ndash/><xref autoname="no" ref="figure-curve-four"/>, which functions are changing more and more rapidly from left to right and which functions are changing more and more slowly from left to right? Which functions have positive second derivatives and which functions have negative second derivatives?  Do the functions with positive second derivative values both change more and more quickly from left to right?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Consider the signs on both the first and second derivatives in options <xref autoname="no" ref="figure-curve-one"/><ndash/><xref autoname="no" ref="figure-curve-four"/>.  Is there something that the two functions that change more and more quickly have in common that is different in the functions that change more and more slowly?</p>
+                </statement>
+            </exercise>
+       </exercisegroup>
+       <exercisegroup>
+           <introduction>
+               <p>Resolve each of the following disputes.</p> 
+           </introduction>
+           <exercise>
+               <statement>
+                   <p>One day Sara and Jermaine were working on an assignment.  One question asked them to draw a function over the domain <m>\ointerval{-2}{\infty}</m> with the properties that the function is always increasing and always concave down.  Sara insisted that the curve must have a vertical asymptote at <m>-2</m> and Jermaine insisted that the function must have a horizontal asymptote somewhere.  Were either of these students correct?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The next question Sara and Jermaine encountered described the same function with the added condition that the function is never positive.  Sara and Jermaine made the same contentions about asymptotes.  Is one of them now correct?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>At another table Pedro and Yoshi were asked to draw a continuous curve that, among other properties, was never concave up.  Pedro said <q>OK, so the curve is always concave down</q> to which Yoshi replied <q>Pedro, you need to open your  mind to other possibilities.</q>  Who's right?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>In the next problem Pedro and Yoshi were asked to draw a function that is everywhere continuous and that is concave down at every value of <m>x</m> <em>except</em> <m>3</m>.  Yoshi declared <q>impossible</q> and Pedro responded <q>have some faith, Yosh-man.</q>  Pedro then began to draw. Is it possible that Pedro came up with such a function?</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <p>Determine the correct answer to each of the following questions.  Pictures of the situation may help you determine the correct answers.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Which of the following propositions is true? If a given proposition is not true, draw a graph that illustrates its untruth.</p>
+                    <ol>
+                        <li>If the graph of <m>f</m> has a vertical asymptote, then the graph of <m>\fd{f}</m> must also have a vertical asymptote.</li>
+                        <li>If the graph of <m>\fd{f}</m> has a vertical asymptote, then the graph of <m>f</m> must also have a vertical asymptote.</li> 
+                    </ol>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Suppose that the function <m>f</m> is everywhere continuous and concave down.  Suppose further that <m>\fe{f}{7}=5</m> and <m>\fe{\fd{f}}{7}=3</m>.  Which of the following is true?</p>
+                    <ol>
+                        <li><m>\fe{f}{9}\lt11</m></li>
+                        <li><m>\fe{f}{9}=11</m></li>
+                        <li><m>\fe{f}{9}\gt11</m></li>
+                        <li>There is not enough information to determine the relationship between <m>\fe{f}{9}</m> and <m>11</m>.</li>
+                    </ol>
+                 </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises> 
+</section>

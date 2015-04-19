@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-derivative-operator">
+    <title>The Derivative Operator</title>
+
+    <p><m>\lz{y}{x}</m> is the name of a derivative in the same way that <m>\fe{\fd{f}}{x}</m> is the name of a derivative.  We need a different symbol that tells us to <em>take</em> the derivative of a given expression (in the same way that we have symbols that tell us to take a square root, sine, or  logarithm of an expression).</p>
+
+    <p>The symbol <m>\lzo{x}</m> is used to tell us to <em>take the derivative with respect to <m>x</m> of something</em>. <em>The symbol itself is an incomplete phrase</em> in the same way that the symbol <m>\sqrt{\phantom{x}}</m> is an incomplete phrase; in both cases we need to indicate the object to be manipulated<mdash/>what number or formula are we taking the square root of? What number or formula  are we differentiating?</p>
+
+    <p>One thing you can do to help you remember the difference between the symbols <m>\lz{y}{x}</m> and <m>\lzo{x}</m> is to get in the habit of always writing grouping symbols after <m>\lzo{x}</m>.  In this way the symbols <m>\lzoo{x}{\fe{\sin}{x}}</m> mean <q>the derivative with respect to <m>x</m> of the sine of <m>x</m></q>.  Similarly, the symbols <m>\lzoo{t}{t^2}</m> mean <q>the derivative with respect to <m>t</m> of <m>t</m>-squared</q>.</p>
+
+    <exercises>
+        <exercisegroup>
+            <introduction>
+                <p>Write the Leibniz notation for each of the following expressions.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>The derivative with respect to <m>\beta</m> of <m>\fe{\cos}{\beta}</m>.</p> 
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The derivative with respect to <m>x</m> of <m>\lz{y}{x}</m>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The derivative with respect to <m>t</m> of <m>\fe{\ln}{t}</m>.  (Yes, we will do such things.)</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The derivative of <m>z</m> with respect to <m>x</m>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The derivative with respect to <m>t</m> of <m>\fe{g}{8}</m>.  (Yes, we will also do such things.)</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+
+</section>

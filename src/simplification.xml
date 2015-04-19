@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-simplification">
+    <title>Simplification</title>
+
+    <p>In <xref autoname="plural" ref="unsimplified-product-first"/><ndash/><xref autoname="no" ref="unsimplified-product-last"/> from <xref ref="section-product-rule"/> and <xref autoname="plural" ref="unsimplified-quotient-first"/><ndash/><xref autoname="no" ref="unsimplified-quotient-last"/> from <xref ref="section-quotient-rule"/> you applied the product and quotient rules to expressions where the derivative could have been found much more quickly had you simplified the expression before taking the derivative.  For example, while you can find the correct derivative formula using the quotient rule when working problem <xref ref="unsimplified-quotient-last"/>, the derivative can be found much more quickly if you simplify the expression before applying the rules of differentiation. This is illustrated in <xref ref="example-simplify-first"/>.</p>
+
+    <example xml:id="example-simplify-first"> 
+        <p><md>
+        <mrow>\lzoo{x}{\frac{10}{2x}}&amp;=\lzoo{x}{5x^{-1}}</mrow>
+        <mrow>&amp;=-5x^{-2}</mrow>
+        <mrow>&amp;=-\frac{5}{x^{2}}</mrow>
+        </md></p>
+    </example> 
+
+    <p>Part of learning to take derivatives is learning  to make good choices about the methodology to employ when taking derivatives.  In <xref autoname="plural" ref="example-simplify-second"/> and <xref autoname="no" ref="example-simplify-third"/>, the need to use the product rule or quotient rule is obviated by first simplifying the expression being differentiated.</p>
+
+    <example xml:id="example-simplify-second">
+        <p><md>   
+        <mrow>\text{Find }\lz{y}{x}\text{ if }y&amp;=\fe{\sec}{x}\fe{\cos}{x}\text{.}&amp;y&amp;=\fe{\sec}{x}\fe{\cos}{x}</mrow>
+        <mrow>&amp;&amp;&amp;=\frac{1}{\fe{\cos}{x}}\fe{\cos}{x}</mrow>
+        <mrow>&amp;&amp;&amp;=1</mrow>
+        <mrow>&amp;&amp;\lz{y}{x}&amp;=0</mrow>
+        </md></p>
+    </example>
+
+    <example xml:id="example-simplify-third">
+        <p><md>   
+        <mrow>\text{Find }\fe{\fd{f}}{t}\text{ if }\fe{f}{t}&amp;=\frac{4t^5-3t^3}{2t^2}\text{.}&amp;\fe{f}{t}&amp;=\frac{4t^5-3t^3}{2t^2}</mrow>
+        <mrow>&amp;&amp;&amp;=\frac{4t^5}{2t^2}-\frac{3t^3}{2t^2}</mrow>
+        <mrow>&amp;&amp;&amp;=2t^3-\frac{3}{2}t</mrow>
+        <mrow>&amp;&amp;\fe{\fd{f}}{t}&amp;=6t^2-\frac{3}{2}</mrow>
+        </md></p>
+    </example>
+
+    <exercises>
+        <exercisegroup cols="2">
+            <introduction>
+                <p>Find the derivative with respect to <m>x</m> for each of the following functions after first completely simplifying the formula being differentiated.  In each case you should <em>not</em> use either the product rule or the quotient rule while finding the derivative formula.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>y=\frac{4x^{12}-5x^4+3x^2}{x^4}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{g}{x}=\frac{-4\fe{\sin}{x}}{\fe{\cos}{x}}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{h}{x}=\frac{4-x^6}{3x^{-2}}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{z}{x}=\fe{\sin^2}{x}+\fe{\cos^2}{x}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>z=(x+4)(x-4)</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{T}{x}=\frac{\fe{\ln}{x}}{\fe{\ln}{x^2}}</m></p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</section>

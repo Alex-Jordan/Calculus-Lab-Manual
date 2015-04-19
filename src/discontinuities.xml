@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-discontinuities">
+    <title>Discontinuities</title>
+
+    <p>When a function has a discontinuity at <m>a</m>, the function is sometimes continuous from only the right or only the left at <m>a</m>. (Please note that when we say <q>the function is continuous at <m>a</m></q> we mean that the function is continuous from <em>both</em> the right and left at <m>a</m>.)</p>
+
+    <definition>
+        <title>One-sided Continuity</title>
+        <statement>
+            <p>The function <m>f</m> is continuous from the left at <m>a</m> if and only if <m>\lim\limits_{x\to a^{-}}\fe{f}{x}=\fe{f}{a}</m>.</p>
+            <p>The function <m>f</m> is continuous from the right at <m>a</m> if and only if <m>\lim\limits_{x\to a^{+}}\fe{f}{x}=\fe{f}{a}</m>.</p>
+        </statement>
+    </definition> 
+
+    <p>Some discontinuities are classified as <term>removable discontinuities</term>. Specifically, discontinuities that are holes or skips (holes with a secondary point) are called removable.</p>
+
+    <definition>
+        <title>Removeable Discontinuity</title>
+        <statement>
+            <p>We say that <m>f</m> has a removable discontinuity at <m>a</m> if <m>f</m> is discontinuous at <m>a</m> but <m>\lim\limits_{x\to a}\fe{f}{x}</m> exists.</p>
+        </statement>
+    </definition>
+
+    <exercises>
+
+        <exercise>
+            <statement>
+                <p>Referring to the function <m>h</m> shown in <xref ref="figure-discontinuities"/>, state the values of <m>t</m> where the function is continuous from the right but not the left. Then state the values of <m>t</m> where the function is continuous from the left but not the right.</p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Referring again to the function <m>h</m> shown in <xref ref="figure-discontinuities"/>, state the values of <m>t</m> where the function has removable discontinuities.</p>
+            </statement>
+        </exercise>
+ 
+    </exercises>
+
+</section>

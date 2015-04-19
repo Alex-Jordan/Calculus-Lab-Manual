@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<frontmatter xml:id="index" xmlns:xi="http://www.w3.org/2001/XInclude">
+
+	<titlepage>
+
+        <author>
+            <personname>Steve Simonds</personname>
+            <department>Department of Mathematics</department>
+            <institution>Portland Community College</institution>
+            <email>ssimonds@pcc.edu</email>
+        </author>
+
+        <editor>
+            <personname>Alex Jordan</personname>
+            <department>Department of Mathematics</department>
+            <institution>Portland Community College</institution>
+            <email>alex.jordan@pcc.edu</email>
+        </editor>
+
+		<date>DRAFT <today /> DRAFT</date>
+
+	</titlepage>
+
+<!--	<colophon>
+
+        <copyright>
+            <year>2004<ndash />2014</year>
+            <holder>Robert A. Beezer</holder>
+            <minilicense>GFDL License.</minilicense>
+			<shortlicense>Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included in the appendix entitled <q>GNU Free Documentation License.</q></shortlicense>
+        </copyright>
+        <date>DRAFT <today /> DRAFT</date>
+
+	</colophon>
+
+	<acknowledgement>
+
+		<p>The writing of a substantial portion of this text was supported by a Course Release Unit from the University Enrichment Committee at the University of Puget Sound for the Spring<nbsp />2014 semester, in addition to previous sabbatical leaves.</p>
+
+		<p>Development of systems used to produce this textbook as an open source text have been supported by grants from the National Science Foundation (DUE-1022574) and the Shuttleworth Foundation (Flash Grant, 2013).</p>
+
+	</acknowledgement>
+-->
+
+        <preface xml:id="to-the-student">
+            <title>To the Student</title>
+
+            <p>MTH 251 is taught at Portland Community College using a lecture/lab format. The laboratory time is set aside for students to investigate the topic and practice the skills that are covered during their lecture periods.</p>
+
+            <p>The lab activities have been written under the presumption that students will be working in groups and will be actively discussing the examples and problems included in each activity. Many of the exercises and problems lend themselves quite naturally to discussion. Some of the more algebraic problems are not so much discussion problems as they are <q>practice and help</q> problems.</p>
+
+            <p>You do not need to fully understand an example be fore starting on the associated problems. The intent is that your understanding of the material will grow while you work on the problems.</p>
+
+            <p>When working through the lab activities, the students in a given group should be working on the same activity at the same time. Sometimes this means an individual student will have to go a little more slowly than he or she may like and sometimes it means an individual student will need to move on to the next activity before he or she fully grasps the current activity.</p>
+
+            <p>Many instructors will want you to focus some of your energy on the way you write your mathematics. It is important that you do not rush through the activities. Write your solutions as if they are going to be graded; that way you will know during lab time if you understand the proper way to write and organize your work.</p>
+
+            <p>If your lab section meets more than once a week, <em>you should not work on lab activities between lab sections that occur during the same week.</em> It is OK to work on lab activities outside of class once the entire classroom time allotted for that lab has passed.</p>
+
+            <p>There are no written solutions for the lab activity problems. Between your group mates, your instructor, and (if you have one) your lab assistant, you should know whether or not you have the correct answers and proper writing strategies for these problems.</p>
+
+            <p>Each lab has a section of supplementary exercises; these exercises are fully keyed with solutions. The supplementary exercises are not simply copies of the problems in the lab activities. While some questions will look familiar, many others will challenge you to apply the material covered in the lab to a new type of problem. These questions are meant to supplement your textbook homework, not replace your textbook homework.</p>
+
+        </preface>
+
+        <preface xml:id="to-the-instructor">
+
+            <title>To the Instructor</title>
+
+            <p>This manual is significantly different from earlier versions of the lab manual. The topics have been arranged in a developmental order. Because of this, students who work each activity in the order they appear may not get to all of the topics covered in a particular week.</p>
+
+            <p>It is strongly recommended that the instructor pick and choose what they consider to be the most vital activities for a given week, and that the instructor have the students work those activities first. For some activities you might also want to have the students only work selected problems in the activity. Students who complete the high priority activities and problems can then go back and work the activities that they initially skipped. There are also fully keyed problems in the supplementary exercises that the students could work on both during lab time and outside of class.</p>
+
+            <p>A suggested schedule for the labs is shown in Table <xref autoname="no" ref="table-suggested-schedule"/>. Again, the instructor should choose what they feel to be the most relevant activities and problems for a given week, and have the students work those activities and problems first.</p>
+
+            <table xml:id="table-suggested-schedule" long="yes">
+                <caption>Possible 10 week schedule for the labs. (Students should consult their syllabus for their schedule.)</caption>
+                <tabular top="major" halign="center">
+                    <col />
+                    <col halign="left"/>
+                    <col />
+                    <row valign="top" bottom="medium">
+                        <cell>Week</cell>
+                        <cell>Labs (Lab Activities)</cell>
+                        <cell>Supplementary Exercises</cell>
+                    </row>
+                    <row>
+                        <cell>1</cell>
+                        <cell><xref autoname="title" ref="section-velocity"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-secant"/></cell> 
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-difference-quotient"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row bottom="medium">
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-limits"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell>2</cell>
+                        <cell><xref autoname="title" ref="section-limit-laws"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-indeterminate-limits"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-limits-at-infinity"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-limits-at-infinity-tending-to-zero"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-ratios-of-infinities"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-nonexistent-limits"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-vertical-asymptotes"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-continuity"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-discontinuities"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-continuity-on-an-interval"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-discontinuous-formulas"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row bottom="medium">
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-piecewise-defined-functions"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell>3</cell>
+                        <cell><xref autoname="title" ref="section-instantaneous-velocity"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-tangent-lines"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-first-derivative"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row bottom="medium">
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-derivative-units"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell>4</cell>
+                        <cell><xref autoname="title" ref="section-graph-features"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-graphical-derivatives"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-nondifferentiability"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row bottom="medium">
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-higher-order-derivatives"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell>5</cell>
+                        <cell><xref autoname="title" ref="section-antiderivatives"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row bottom="medium">
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-graphical-features-from-derivatives"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell>6</cell>
+                        <cell><xref autoname="title" ref="section-leibniz-notation"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-derivative-operator"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-power-rule"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-constant-factor-rule"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-constant-divisor-rule"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-sum-and-difference-rules"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-product-rule"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-quotient-rule"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-simplification"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-product-and-quotient-together"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-derivative-formulas-and-function-behavior"/></cell>
+                        <cell></cell>
+                    </row>
+                </tabular> 
+            </table>
+        </preface>
+
+</frontmatter>

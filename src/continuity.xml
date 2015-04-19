@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-continuity">
+    <title>Continuity</title>
+
+    <p>Many statements we make about functions are only true over intervals where the function is <term>continuous</term>. When we say a function is continuous over an interval, we basically mean that there are no breaks in the function over that interval; that is, there are no vertical asymptotes, holes, jumps, or gaps along that interval.</p>
+
+    <definition xml:id="definition-continuity">
+        <title>Continuity</title>
+        <statement>
+            <p>The function <m>f</m> is <term>continuous at the number <m>a</m></term> if and only if <m>\lim\limits_{x\to a}\fe{f}{x}=\fe{f}{a}</m>.</p>
+
+            <p>There are three ways that the defining property can fail to be satisfied at a given value of <m>a</m>. To facilitate exploration of these three manner of failure, we can break the defining property into a spectrum of three properties.</p>
+
+            <ol cols="3">
+               <li xml:id="fofa-is-defined"><m>\fe{f}{a}</m> must be defined</li>
+               <li xml:id="limfofx-is-defined"><m>\lim\limits_{x\to a}\fe{f}{x}</m> must exist</li>
+               <li xml:id="limit-equals-value"><m>\lim\limits_{x\to a}\fe{f}{x}</m> must equal <m>\fe{f}{a}</m></li>
+            </ol>
+
+            <todo>Property numbers currently hard coded since referencing not working for ordered lists</todo>
+            <p>Please note that if either property 1 or property 2 fails to be satisfied at a given value of <m>a</m>, then property 3 also fails to be satisfied at <m>a</m>.</p>
+        </statement>
+    </definition> 
+
+    <exercises>
+
+        <figure xml:id="figure-discontinuities">
+            <image>
+                <latex-image-code>
+                <![CDATA[\begin{tikzpicture}
+                \begin{axis}[xlabel = {$t$},]
+                    \addplot[pccplot,
+                             domain=-6.7:-4,
+                             <-,]
+                             {1+6/5*(x+4)};
+                    \addplot[pccplot,
+                             domain=-4:-2,
+                             -]
+                             {4};
+                             ]
+                    \addplot[pccplot,
+                             domain=-2:3,
+                             -,]
+                             {-x+2};
+                             ]
+                    \addplot[pccplot,
+                             domain=0:22.4536998,
+                             variable=t,
+                             <-,]
+                             ({5-2/8.5*1.1^t},{1/(1/8.5*1.1^t)-2});
+                    \addplot[pccplot,
+                             domain=0:15.38769119,
+                             variable=t,
+                             ]
+                             ({5+1/sqrt(6.5)*1.1^t},{1/(1/sqrt(6.5)*1.1^t)^2});
+                    \addplot[asymptote
+                    ]coordinates{
+                        (5,-7)
+                        (5,7)};
+                    \addplot[soldot
+                    ]coordinates{
+                        (-4,4)
+                        (2,-3)};
+                    \addplot[holdot
+                    ]coordinates{
+                        (-4,1)
+                        (-1,3)
+                        (2,0)};
+                \end{axis}
+                \end{tikzpicture}]]>
+                </latex-image-code>
+            </image>
+            <caption><m>y=\fe{h}{x}</m></caption>
+        </figure>
+
+        <exercise>
+            <statement>
+                <p>State the values of <m>t</m> at which the function shown in <xref ref="figure-discontinuities"/> is discontinuous. For each instance of discontinuity, state (by number) all of the sub-properties in <xref ref="definition-continuity"/> that fail to be satisfied.</p> 
+            </statement>
+        </exercise>
+
+    </exercises>
+
+</section>

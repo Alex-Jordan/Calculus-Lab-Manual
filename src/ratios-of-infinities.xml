@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-ratios-of-infinities">
+    <title>Ratios of Infinities</title>
+
+    <p>Many limits have the form <m>\frac{\infty}{\infty}</m>, which we take to mean that the expressions in both the numerator and denominator are increasing or decreasing without bound. When confronted with a limit of type <m>\lim\limits_{x\to\infty}\frac{\fe{f}{x}}{\fe{g}{x}}</m> or <m>\lim\limits_{x\to-\infty}\frac{\fe{f}{x}}{\fe{g}{x}}</m> that has the form <m>\frac{\infty}{\infty}</m>, we can frequently resolve the limit if we first divide the dominant factor of the dominant term of the denominator from both the numerator and the denominator. When we do this, we need to completely simplify each of the resultant fractions and make sure that the resultant limit exists before we start to apply limit laws. We then apply the algebraic limit laws until all of the resultant limits can be replaced using limit laws R2 and R3. This process is illustrated in <xref ref="example-ratio-of-infinities"/>.</p>
+
+    <example xml:id="example-ratio-of-infinities">
+        <p><md>
+        <mrow>\lim_{t\to\infty}\frac{3t^2+5t}{3-5t^2}&amp;=\lim_{t\to\infty}\left(\frac{3t^2+5t}{3-5t^2}\cdot\frac{\sfrac{1}{t^2}}{\sfrac{1}{t^2}}\right)</mrow>
+        <mrow>&amp;=\lim_{t\to\infty}\frac{3+\sfrac{5}{t}}{\sfrac{3}{t^2}-5}\tikzmark{ratio of infinities}</mrow>
+        <mrow>&amp;=\frac{\lim_{t\to\infty}\left(3+\sfrac{5}{t}\right)}{\lim_{t\to\infty}\left(\sfrac{3}{t^2}-5\right)}&amp;&amp;\text{Limit Law A5}</mrow>
+        <mrow>&amp;=\frac{\lim_{t\to\infty}3+\lim_{t\to\infty}\frac{5}{t}}{\lim_{t\to\infty}\frac{3}{t^2}-\lim_{t\to\infty}5}&amp;&amp;\text{Limit Laws A1 and A2}</mrow>
+        <mrow>&amp;=\frac{3+0}{0-5}</mrow>
+        <mrow>&amp;=-\frac{3}{5}</mrow>
+        </md><annotate>\Annotate[][anchor=west]{0ex}{0.5ex}{3}{0.5}{ratio of infinities}{\parbox{0.4\linewidth}{The ``form'' of the limit is now $\frac{3+0}{0-5}$, so we can begin to apply the limit laws because the limits will all exist.}}</annotate></p>
+    </example>
+
+    <exercises>
+        <exercisegroup cols="3">
+            <introduction>
+                <p>Use the limit laws to establish the value of each limit after dividing the dominant term-factor in the denominator from both the numerator and denominator. Remember to simplify each resultant expression before you begin to apply the limit laws.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{t\to-\infty}\dfrac{4t^2}{4t^2+t^3}</m></p>
+               </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{t\to\infty}\dfrac{6e^t+10e^{2t}}{2e^{2t}}</m></p>
+               </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{y\to\infty}\sqrt{\dfrac{4y+5}{5+9y}}</m></p>
+               </statement>
+            </exercise>
+ 
+        </exercisegroup>
+
+    </exercises>
+
+</section>

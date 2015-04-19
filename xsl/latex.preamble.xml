@@ -1,0 +1,30 @@
+<latex-preamble>
+
+<latex-preamble-early>
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+</latex-preamble-early>
+
+
+
+<latex-preamble-late>
+<![CDATA[
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Rename "Chapter" to "Lab"
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\chaptername}{Lab}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Header and Footer
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\sectionmark}[1]{%
+ \markright{\slshape\MakeUppercase{%
+ Activity \thesection.%
+ \ #1}}}%
+]]>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\allowdisplaybreaks
+
+</latex-preamble-late>
+
+</latex-preamble>

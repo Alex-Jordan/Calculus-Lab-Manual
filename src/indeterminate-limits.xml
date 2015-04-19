@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-indeterminate-limits">
+    <title>Indeterminate Limits</title>
+
+    <p>Many limits have the form <m>\frac{0}{0}</m> which means the expressions in both the numerator and denominator limit to zero (<eg/><m>\lim\limits_{x\to3}\frac{2x-6}{x-3}</m>). The form <m>\frac{0}{0}</m> is called <term>indeterminate</term> because we do not know the value of the limit (or even if it exists) so long as the limit has that form. When confronted with limits of form <m>\frac{0}{0}</m> we must first manipulate the expression so that common factors causing the zeros in the numerator and denominator are isolated. Limit law A7 can then be used to justify eliminating the common factors and once they are gone we may proceed with the application of the remaining limit laws. <xref autoname="plural" ref="example-first-indeterminate"/> and <xref autoname="no" ref="example-second-indeterminate"/> illustrate this situation.</p>
+
+    <example xml:id="example-first-indeterminate">
+        <p><md>
+        <mrow>\lim_{x\to3}\frac{x^2-8x+15}{x-3}&amp;=\lim_{x\to3}\frac{(x-5)(x-3)}{x-3}</mrow>
+        <mrow>&amp;=\tikzmark{not indeterminate}\lim_{x\to3}(x-5)&amp;&amp;\text{Limit Law A7}</mrow>
+        <mrow>&amp;=\lim_{x\to3}x-\lim_{x\to3}5&amp;&amp;\text{Limit Law A2}</mrow>
+        <mrow>&amp;=3-5&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
+        <mrow>&amp;=-2</mrow>
+        </md><annotate>\Annotate[][anchor=north east]{0ex}{0}{-1}{-0.5}{not indeterminate}{\parbox{0.3\linewidth}{This limit does not have indeterminate form, so we may apply the remaining limit laws.}}</annotate></p>
+    </example>
+
+
+    <example xml:id="example-second-indeterminate">
+        <p><md>
+        <mrow>\lim_{\theta\to0}\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}&amp;=\lim_{\theta\to0}\left(\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}\cdot\frac{1+\fe{\cos}{\theta}}{1+\fe{\cos}{\theta}}\right)</mrow>
+        <mrow>&amp;=\lim_{\theta\to0}\frac{1-\fe{\cos^2}{\theta}}{\fe{\sin^2}{\theta}\cdot\left(1+\fe{\cos}{\theta}\right)}</mrow>
+        <mrow>&amp;=\lim_{\theta\to0}\frac{\fe{\sin^2}{\theta}}{\fe{\sin^2}{\theta}\cdot\left(1+\fe{\cos}{\theta}\right)}</mrow>
+        <mrow>&amp;=\tikzmark{second not indeterminate}\lim_{\theta\to0}\frac{1}{1+\fe{\cos}{\theta}}&amp;&amp;\text{Limit Law A7}</mrow>
+        <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}\left(1+\fe{\cos}{\theta}\right)}&amp;&amp;\text{Limit Law A5}</mrow>
+        <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}1+\lim_{\theta\to0}\fe{\cos}{\theta}}&amp;&amp;\text{Limit Law A1}</mrow>
+        <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}1+\fe{\cos}{\lim_{\theta\to0}\theta}}&amp;&amp;\text{Limit Law A6}</mrow>
+        <mrow>&amp;=\frac{1}{1+\fe{\cos}{0}}&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
+        <mrow>&amp;=\frac{1}{2}</mrow>
+        </md><annotate>\Annotate[][anchor=north east]{0ex}{0}{-1}{-0.5}{second not indeterminate}{\parbox{0.3\linewidth}{This limit does not have indeterminate form, so we may apply the remaining limit laws.}}</annotate></p>
+    </example>
+
+    <p>As seen in <xref ref="example-second-indeterminate"/>, trigonometric identities can come into play while trying to eliminate the form <m>\frac{0}{0}</m>. Elementary rules of logarithms can also play a role in this process. Before you begin evaluating limits whose initial form is <m>\frac{0}{0}</m>, you need to make sure that you recall some of these basic rules. That is the purpose of <xref ref="exercise-identities-review"/>.</p>
+
+    <exercises>
+        <exercise xml:id="exercise-identities-review">
+            <statement>
+                <p>Complete each of the following identities (over the real numbers). Make sure that you check with your lecture instructor so that you know which of these identities you are expected to memorize.</p>
+
+                <p>The following identities are valid for all values of <m>x</m> and <m>y</m>.<md>
+                <mrow>1-\fe{\cos^2}{x}&amp;=&amp;\fe{\tan^2}{x}&amp;=</mrow>
+                <mrow>\fe{\sin}{2x}&amp;=&amp;\fe{\tan}{2x}&amp;=</mrow>
+                <mrow>\fe{\sin}{x+y}&amp;=&amp;\fe{\cos}{x+y}&amp;=</mrow>
+                <mrow>\fe{\sin}{\frac{x}{2}}&amp;=&amp;\fe{\cos}{\frac{x}{2}}&amp;=</mrow>
+                </md></p>
+
+                <p>There are three versions of the following identity; write them all.<md>
+                <mrow>\fe{\cos}{2x}&amp;=&amp;\fe{\cos}{2x}&amp;=&amp;\fe{\cos}{2x}&amp;=</mrow>
+                </md></p>
+
+                <p>The following identities are valid for all positive values of <m>x</m> and <m>y</m> and all values of <m>n</m>.<md>
+                <mrow>\fe{\ln}{xy}&amp;=&amp;\fe{\ln}{\frac{x}{y}}&amp;=</mrow>
+                <mrow>\fe{\ln}{x^n}&amp;=&amp;\fe{\ln}{e^n}&amp;=</mrow>
+                </md></p>
+            </statement>
+       </exercise>
+
+       <exercisegroup cols="3" by="row">
+           <introduction>
+                <p>Use the limit laws to establish the value of each of the following limits after first manipulating the expression so that it
+no longer has form <m>\frac{0}{0}</m>. Make sure that you use the step-by-step, vertical format shown in <xref autoname="plural" ref="example-first-indeterminate"/> and <xref ref="example-second-indeterminate"/>. Make sure that you cite each limit law used.</p>
+           </introduction>
+
+           <exercise>
+               <statement>
+                   <p><m>\lim\limits_{x\to-4}\frac{x+4}{2x^2+5x-12}</m></p>
+               </statement>
+           </exercise>
+
+           <exercise>
+               <statement>
+                   <p><m>\lim\limits_{x\to0}\frac{\fe{\sin}{2x}}{\fe{\sin}{x}}</m></p>
+               </statement>
+           </exercise>
+
+           <exercise>
+               <statement>
+                   <p><m>\lim\limits_{\beta\to0}\frac{\fe{\sin}{\beta+\pi}}{\fe{\sin}{\beta}}</m></p>
+               </statement>
+           </exercise>
+
+           <exercise>
+               <statement>
+                   <p><m>\lim\limits_{t\to0}\frac{\fe{\cos}{2t}-1}{\fe{\cos}{t}-1}</m></p>
+               </statement>
+           </exercise>
+
+           <exercise>
+               <statement>
+                   <p><m>\lim\limits_{x\to1}\frac{4\fe{\ln}{x}+2\fe{\ln}{x^3}}{\fe{\ln}{x}-\fe{\ln}{\sqrt{x}}}</m></p>
+               </statement>
+           </exercise>
+
+           <exercise>
+               <statement>
+                   <p><m>\lim\limits_{w\to9}\frac{9-w}{\sqrt{w}-3}</m></p>
+               </statement>
+           </exercise>
+
+       </exercisegroup> 
+
+    </exercises>
+</section>

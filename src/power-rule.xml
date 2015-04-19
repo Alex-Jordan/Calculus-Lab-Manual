@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-power-rule">
+    <title>The Power Rule</title>
+
+    <p>The first differentiation rule we are going to explore is called <term>the power rule of differentiation</term>. <men>\lzoo{x}{x^n}=n\,x^{n-1}\quad\text{for }n\neq0</men> When <m>n</m> is a positive integer, it is fairly easy to establish this rule using <xref ref="definition-first-derivative"/>.  The proof of the rule gets a little more complicated when <m>n</m> is negative, fractional, or irrational.  For purposes of this lab, we are going to just accept the rule as valid.</p>
+
+    <p>This rule is one you just <q>do in your head</q> and then write down the result.  Three examples of what you would be expected to write when differentiating power functions are shown in <xref ref="table-power-rule"/>".</p>
+
+    <table xml:id="table-power-rule">
+        <caption>Examples of the Power Rule</caption>
+        <tabular top="major">
+            <col halign="center"/>
+            <col halign="center"/>
+            <col halign="center"/>
+            <row bottom="medium">
+                <cell>Given Function</cell>
+                <cell>You should <q>see</q></cell>
+                <cell>You should write</cell>
+            </row>
+            <row>
+                <cell><m>y=x^7</m></cell>
+                <cell></cell>
+                <cell><m>\lz{y}{x}=7x^6</m></cell>
+            </row>
+            <row>
+                <cell><m>\fe{f}{t}=\sqrt[3]{t^7}</m></cell>
+                <cell><m>\fe{f}{t}=t^{\sfrac{7}{3}}</m></cell>
+                <cell><m>\fe{\fd{f}}{t}=\frac{7}{3}t^{\sfrac{4}{3}}</m></cell>
+            </row>
+            <row>
+                <cell><m>z=\frac{1}{y^5}</m></cell>
+                <cell><m>z=y^{-5}</m></cell>
+                <cell><m>\lz{z}{y}=-5y^{-6}</m></cell>
+            </row>
+        </tabular>
+
+    </table>
+
+    <p>Notice that the type of notation used when naming the derivative is dictated by the manner in which the original function is expressed.  For example, <m>y=x^7</m> is telling us the relationship between two variables; in this situation we name the derivative using the notation <m>\lz{y}{x}</m>.  On the other hand, function notation is being used to name the rule in <m>\fe{f}{t}=\sqrt[3]{t^7}</m>; in this situation we name the derivative using the function notation <m>\fe{\fd{f}}{t}</m>.</p>
+
+    <exercises>
+        <exercisegroup cols="4">
+            <introduction>
+                <p>Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>\fe{f}{x}=x^{43}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>z=\frac{1}{t^{7}}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>P=\sqrt[5]{t^2}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{h}{x}=\frac{1}{\sqrt{x}}</m></p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</section>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-higher-order-derivatives">
+    <title>Higher Order Derivatives</title>
+
+    <p>Seeing as the first derivative of <m>f</m> is a function in its own right, <m>\fd{f}</m> must have its own first derivative.  The first derivative of <m>\fd{f}</m> is the <term>second derivative</term> of <m>f</m> and is symbolized as <m>\sd{f}</m> (<m>f</m> double-prime).  Likewise, <m>\td{f}</m> (<m>f</m> triple-prime) is the first derivative of <m>\sd{f}</m>, the second derivative of <m>\fd{f}</m>, and the <term>third derivative</term> of <m>f</m>.</p>
+
+    <p>All of the graphical relationships you’ve established between <m>f</m> and <m>\fd{f}</m> work their way down the derivative chain; this is illustrated in <xref ref="table-f-prime-and-f"/>.</p>
+
+    <table xml:id="table-f-prime-and-f">
+    <caption><m>\fd{f}</m> and <m>f</m>, <m>\sd{f}</m> and <m>\fd{f}</m>, <m>\td{f}</m> and <m>\sd{f}</m></caption>
+        <tabular top="major">
+            <col halign="left"/>
+            <col halign="left"/>
+            <row>
+                <cell>When <m>\fd{f}</m> is <ellipsis/></cell>
+                <cell><m>f</m> is <ellipsis/></cell>
+            </row>
+            <row>
+                <cell>When <m>\sd{f}</m> is <ellipsis/></cell>
+                <cell><m>\fd{f}</m> is <ellipsis/></cell>
+            </row>
+            <row bottom="medium">
+                <cell>When <m>\td{f}</m> is <ellipsis/></cell>
+                <cell><m>\sd{f}</m> is <ellipsis/></cell>
+            </row>
+            <row>
+                <cell>Positive</cell>
+                <cell>Increasing</cell>
+            </row>
+            <row>
+                <cell>Negative</cell>
+                <cell>Decreasing</cell>
+            </row>
+            <row>
+                <cell>Constantly Zero</cell>
+                <cell>Constant</cell>
+            </row>
+            <row>
+                <cell>Increasing</cell>
+                <cell>Concave Up</cell>
+            </row>
+            <row>
+                <cell>Decreasing</cell>
+                <cell>Concave Down</cell>
+            </row>
+            <row>
+                <cell>Constant Nonzero</cell>
+                <cell>Linear</cell>
+            </row>
+        </tabular> 
+    </table>
+
+    <exercises>
+        <exercise>
+            <statement>
+                <p>Extrapolating from <xref ref="table-f-prime-and-f"/>, what must be true about <m>f</m> over intervals where <m>\sd{f}</m> is, respectively: positive, negative, and constantly zero?</p> 
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>A function, <m>g</m>, and its first three derivatives are shown in <xref autoname="plural" ref="figure-derivatives-one"/><ndash/><xref autoname="no" ref="figure-derivatives-four"/>, although not in that order.  Determine which curve is which function (<m>g,\fd{g},\sd{g},\td{g}</m>).</p>
+                <sidebyside>
+                    <figure xml:id="figure-derivatives-one" width="23%">
+                        <caption />
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-0.5,0,...,3}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
+                                \addplot+[
+                                    domain=-0.5:4,
+                                    -,
+                                ]{(x^6-18*x^4+48*x^2)/64*3*exp(-(x/2)^2)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <figure xml:id="figure-derivatives-two" width="23%">
+                        <caption />
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-0.5,0,...,3}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
+                                \addplot+[
+                                    domain=-0.5:4,
+                                    -,
+                                ]{(x/2)^4*3*exp(-(x/2)^2)-1};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <figure xml:id="figure-derivatives-three" width="23%">
+                        <caption />
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-0.5,0,...,3}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
+                                \addplot+[samples=50,
+                                    domain=-0.5:4,
+                                    -,
+                                ]{(-x^7+30*x^5-192*x^3+192*x)/128*3*exp(-(x/2)^2)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <figure xml:id="figure-derivatives-four" width="23%">
+                        <caption />
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-0.5,0,...,3}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
+                                \addplot+[
+                                    domain=-0.5:4,
+                                    -,
+                                ]{(-x^5+8*x^3)/32*3*exp(-(x/2)^2)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+
+                </sidebyside>
+
+            </statement>
+        </exercise>
+        <exercisegroup>
+            <introduction>
+                <p>Three containers are shown in <xref autoname="plural" ref="figure-prism-uniform"/><ndash/><xref autoname="no" ref="figure-prism-bottom-heavy"/>. Each of the following questions are in reference to these containers.</p>
+                <sidebyside> 
+                    <figure xml:id="figure-prism-uniform">
+                        <caption />
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                                \pgfmathsetmacro{\cubex}{1}
+                                \pgfmathsetmacro{\cubey}{1.6}
+                                \pgfmathsetmacro{\cubez}{0.6}
+                                \shade[draw,fill=blue, opacity=0.5] (0,0,-\cubez) -- ++(-\cubex,0,0) -- ++(0,-\cubey,0) -- ++(\cubex,0,0) -- cycle;
+                                \shade[draw,fill=blue, opacity=0.5] (-\cubex,0,0) -- ++(0,0,-\cubez) -- ++(0,-\cubey,0) -- ++(0,0,\cubez) -- cycle;
+                                \shade[draw,fill=blue, opacity=0.5] (0,-\cubey,0) -- ++(-\cubex,0,0) -- ++(0,0,-\cubez) -- ++(\cubex,0,0) -- cycle;
+                                \shade[draw,fill=blue, opacity=0.5] (0,0,0) -- ++(-\cubex,0,0) -- ++(0,-\cubey,0) -- ++(\cubex,0,0) -- cycle;
+                                \shade[draw,fill=blue, opacity=0.5] (0,0,0) -- ++(0,0,-\cubez) -- ++(0,-\cubey,0) -- ++(0,0,\cubez) -- cycle;
+                                \shade[draw,fill=blue, opacity=0.5] (0,0,0) -- ++(-\cubex,0,0) -- ++(0,0,-\cubez) -- ++(\cubex,0,0) -- cycle;
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <figure xml:id="figure-prism-top-heavy">
+                        <caption />
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                                \pgfmathsetmacro{\cubex}{1}
+                                \pgfmathsetmacro{\cubey}{1.6}
+                                \pgfmathsetmacro{\cubez}{0.6}
+                                \pgfmathsetmacro{\smallx}{1/3}
+                                \shade[draw,fill=blue, opacity=0.5] (-\cubex,0,0) -- ++(0,0,-\cubez) -- ++(\smallx,-\cubey,0) -- ++(0,0,\cubez) -- cycle;
+                                \shade[draw,fill=blue, opacity=0.5] (-\smallx,-\cubey,0) -- ++(-\smallx,0,0) -- ++(0,0,-\cubez) -- ++(\smallx,0,0) -- cycle;
+                                \shade[draw,fill=blue, opacity=0.5] (0,0,-\cubez) -- ++(-\cubex,0,0) -- ++(\smallx,-\cubey,0) -- ++(\smallx,0,0) -- cycle;
+                                \shade[draw,fill=blue, opacity=0.5] (0,0,0) -- ++(0,0,-\cubez) -- ++(-\smallx,-\cubey,0) -- ++(0,0,\cubez) -- cycle;
+                                \shade[draw,fill=blue, opacity=0.5] (0,0,0) -- ++(-\cubex,0,0) -- ++(0,0,-\cubez) -- ++(\cubex,0,0) -- cycle;
+                                \shade[draw,fill=blue, opacity=0.5] (0,0,0) -- ++(-\cubex,0,0) -- ++(\smallx,-\cubey,0) -- ++(\smallx,0,0) -- cycle;
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <figure xml:id="figure-prism-bottom-heavy">
+                        <caption />
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                                \pgfmathsetmacro{\cubex}{1}
+                                \pgfmathsetmacro{\cubey}{-1.6}
+                                \pgfmathsetmacro{\cubez}{0.6}
+                                \pgfmathsetmacro{\smallx}{1/3}
+                                \shade[draw,fill=blue, opacity=0.5] (0,0,0) -- ++(-\cubex,0,0) -- ++(0,0,-\cubez) -- ++(\cubex,0,0) -- cycle;
+                                \shade[draw,fill=blue, opacity=0.5] (0,0,-\cubez) -- ++(-\cubex,0,0) -- ++(\smallx,-\cubey,0) -- ++(\smallx,0,0) -- cycle;
+                                \shade[draw,fill=blue, opacity=0.5] (-\cubex,0,0) -- ++(0,0,-\cubez) -- ++(\smallx,-\cubey,0) -- ++(0,0,\cubez) -- cycle;
+                                \shade[draw,fill=blue, opacity=0.5] (-\smallx,-\cubey,0) -- ++(-\smallx,0,0) -- ++(0,0,-\cubez) -- ++(\smallx,0,0) -- cycle;
+                                \shade[draw,fill=blue, opacity=0.5] (0,0,0) -- ++(0,0,-\cubez) -- ++(-\smallx,-\cubey,0) -- ++(0,0,\cubez) -- cycle;
+                                \shade[draw,fill=blue, opacity=0.5] (0,0,0) -- ++(-\cubex,0,0) -- ++(\smallx,-\cubey,0) -- ++(\smallx,0,0) -- cycle;
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside> 
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Suppose that water is being poured into each  of the containers at a constant rate.  Let <m>h_a</m>, <m>h_b</m>, and <m>h_c</m> be the heights (measured in <quantity><unit prefix="centi" base="meter"/></quantity>) of the liquid in containers <xref autoname="no" ref="figure-prism-uniform"/><ndash/><xref autoname="no" ref="figure-prism-bottom-heavy"/> respectively, <m>t</m> seconds after the water began to fill the containers.  What would you expect the sign to be on the second derivative functions <m>\sd{h_a}</m>, <m>\sd{h_b}</m>, and <m>\sd{h_c}</m> while the containers are being filled?  (Hint:  Think about the shape of the curves <m>y=\fe{\sd{h_a}}{t}</m>, <m>y=\fe{\sd{h_b}}{t}</m>, and <m>y=\fe{\sd{h_c}}{t}</m>.)</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Suppose that water is being drained from each  of the containers at a constant rate.  Let <m>h_a</m>, <m>h_b</m>, and <m>h_c</m> be the heights (measured in <quantity><unit prefix="centi" base="meter"/></quantity>) of the liquid remaining in the containers <m>t</m> seconds after the water began to drain.  What would you expect the sign to be on the second derivative functions <m>\sd{h_a}</m>, <m>\sd{h_b}</m>, and <m>\sd{h_c}</m>  while the containers are being drained?</p>
+                </statement>
+            </exercise> 
+        </exercisegroup>
+        <exercise>
+            <statement>
+                <p>During the recession of 2008<ndash/>2009, the total number of employed Americans decreased every month.  One month a talking head on the television made the observation that <q>at least the second derivative was positive this month.</q>  Why was it a good thing that the second derivative was positive?</p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>During the early 1980s the problem was inflation. Every month the average price for a gallon of milk was higher than the month before.  Was it a good thing when the second derivative of this function was positive?  Explain.</p> 
+            </statement>
+        </exercise>
+    </exercises>
+
+</section>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-limits-at-infinity">
+    <title>Limits at Infinity</title>
+
+    <p>We are frequently interested in a function's <q>end behavior</q>. That is, what is the behavior of the function as the input variable increases without bound or decreases without bound.</p> 
+
+    <p>Many times a function will approach a horizontal asymptote as its end behavior. Assuming that the horizontal asymptote <m>y=L</m> represents the end behavior of the function <m>f</m> both as <m>x</m> increases without bound and as <m>x</m> decreases into the negative without bound, we write <m>\lim\limits_{x\to\infty}\fe{f}{x}=L</m> and <m>\lim\limits_{x\to\infty}\fe{f}{x}=L</m>.</p>
+
+    <p>The formalistic way to read <m>\lim\limits_{x\to\infty}\fe{f}{x}=L</m> is <q>the limit of <m>\fe{f}{x}</m> as <m>x</m> approaches infinity equals <m>L</m></q>. When read that way, however, the words need to be taken <em>anything but literally</em>. In the first place, <m>x</m> isn't approaching anything! The entire point is that <m>x</m> is increasing without any bound on how large its value becomes. Secondly, there is no place on the real number line called <q>infinity</q>; infinity is not a number. Hence <m>x</m> certainly can't be approaching something that isn’t even there!</p> 
+
+    <exercises>
+
+        <exercise>
+            <statement>
+                 <p>For the function in <xref provisional="Figure 7.1 (Appendix B, page B1)"/> we could (correctly) write <m>\lim\limits_{x\to\infty}\fe{f_1}{x}=-2</m> and <m>\lim\limits_{x\to-\infty}\fe{f_1}{x}=-2</m>. Go ahead and write (and say aloud) the analogous limits for the functions in <xref provisional="Figures 7.2-7.5 (pages B1 and B2)"/>.</p> 
+            </statement>
+        </exercise>
+
+        <table xml:id="table-limit-at-minus-infinity">
+            <caption><m>\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}</m></caption>
+            <tabular top="major">
+            <col halign="right" />
+            <col halign="left"/>
+
+            <row bottom="medium">
+                <cell halign="center"><m>x</m></cell>
+                <cell halign="center"><m>\fe{f}{x}</m></cell>
+            </row>
+            <row>
+                <cell><m>-1000</m></cell>
+                <cell><m>1.498\ldots</m></cell>
+            </row>
+            <row>
+                <cell><m>-10{,}000</m></cell>
+                <cell><m>1.4998\ldots</m></cell>
+            </row>
+            <row>
+                <cell><m>-100{,}000</m></cell>
+                <cell><m>1.49998\ldots</m></cell>
+            </row>
+            <row>
+                <cell><m>-1{,}000{,}000</m></cell>
+                <cell><m>1.499998\ldots</m></cell>
+            </row>
+            </tabular>
+        </table>
+
+        <exercisegroup>
+            <introduction>
+                <p>Values of the function <m>f</m> defined by <m>\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}</m> are shown in <xref ref="table-limit-at-minus-infinity"/>. Both of the questions below are in reference to this function.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>What is the value of <m>\lim\limits_{x\to-\infty}\fe{f}{x}</m>?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>What is the equation of the horizontal asymptote for the graph of <m>y=\fe{f}{x}</m>?</p> 
+                </statement>
+            </exercise>
+
+        </exercisegroup>
+
+        <table xml:id="table-limit-crossing-asymptote">
+            <caption><m>\fe{g}{t}=1+\frac{\fe{\sin}{t}}{t}</m></caption>
+            <tabular top="major">
+            <col halign="left" />
+            <col halign="left"/>
+
+            <row bottom="medium">
+                <cell halign="center"><m>t</m></cell>
+                <cell halign="center"><m>\fe{g}{t}</m></cell>
+            </row>      
+            <row>       
+                <cell><m>10^3</m></cell>
+                <cell><m>1.008\ldots</m></cell>
+            </row>      
+            <row>       
+                <cell><m>10^4</m></cell>
+                <cell><m>0.9997\ldots</m></cell>
+            </row>      
+            <row>       
+                <cell><m>10^5</m></cell>
+                <cell><m>1.0000004\ldots</m></cell>
+            </row>      
+            <row>       
+                <cell><m>10^6</m></cell>
+                <cell><m>0.9999997\ldots</m></cell>
+            </row>      
+            <row>
+                <cell><m>10^7</m></cell>
+                <cell><m>1.00000004\ldots</m></cell>
+            </row>      
+            <row>
+                <cell><m>10^8</m></cell>
+                <cell><m>1.000000009\ldots</m></cell>
+            </row>      
+            <row>
+                <cell><m>10^9</m></cell>
+                <cell><m>1.0000000005\ldots</m></cell>
+            </row>      
+            <row>
+                <cell><m>10^{10}</m></cell>
+                <cell><m>0.99999999995\ldots</m></cell>
+            </row>      
+
+            </tabular>  
+        </table>    
+
+        <exercisegroup>
+            <introduction>
+                <p>Jorge and Vanessa were in a heated discussion about horizontal asymptotes. Jorge said that functions never cross horizontal asymptotes. Vanessa said Jorge was nuts. Vanessa whipped out her trusty calculator and generated the values in <xref ref="table-limit-crossing-asymptote"/> to prove her point.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>What is the value of <m>\lim\limits_{t\to\infty}\fe{g}{t}</m>?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>What is the equation of the horizontal asymptote for the graph of <m>y=\fe{g}{t}</m>?</p> 
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Just how many times does the curve <m>y=\fe{g}{t}</m> cross its horizontal asymptote?</p>
+                </statement>
+            </exercise>
+
+        </exercisegroup>
+
+    </exercises>
+
+</section>

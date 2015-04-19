@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-product-rule">
+    <title>Product Rule</title>
+
+    <p>The next rule we are going to explore is called the <term>product rule</term> of differentiation.  We use this rule when there are two or more variable factors in the expression we are differentiating. (Remember, we already have the constant factor rule to deal with two factors when one of the two factors is a constant.)<men xml:id="equation-product-rule">\lzoo{x}{\fe{f}{x}\fe{g}{x}}=\lzoo{x}{\fe{f}{x}}\cdot\fe{g}{x}+\fe{f}{x}\cdot\lzoo{x}{\fe{g}{x}}</men></p>
+
+    <p>Intuitively, what is happening in this rule is that we are alternately treating one factor as a constant (the one not being differentiated) and the other factor as a variable function (the one that is being differentiated).  We then add these two rates of change together.</p>
+
+    <p>Ultimately, you want to perform this rule in your head just like all of the other rules.  Your instructor, however, may initially want you to show steps; under that presumption, steps are going to be shown in each and every example of this lab when the product rule is applied. Two simple examples of the product rule are shown in <xref ref="table-product-rule"/>i.</p>
+ 
+    <table xml:id="table-product-rule">
+        <caption>Examples of the Product Rule</caption>
+        <tabular top="major">
+            <col halign="center"/>
+            <col halign="center"/>
+            <row bottom="medium">
+                <cell>Given Function</cell>
+                <cell>Derivative</cell>
+            </row>
+            <row>
+                <cell><m>\fe{y}{x}=x^2\fe{\sin}{x}</m></cell>
+                <cell><m>\begin{aligned}\fe{\fd{y}}{x}&amp;=\lzoo{x}{x^2}\cdot\fe{\sin}{x}+x^2\cdot\lzoo{x}{\fe{\sin}{x}}\\&amp;=2x\fe{\sin}{x}+x^2\fe{\cos}{x}\end{aligned}</m></cell>
+            </row>
+            <row>
+                <cell><m>P=e^t\fe{\cos}{t}</m></cell>
+                <cell><m>\begin{aligned}\lz{P}{t}&amp;=\lzoo{t}{e^t}\cdot\fe{\cos}{t}+e^t\cdot\lzoo{t}{\fe{\cos}{t}}\\&amp;=e^t\fe{\cos}{t}-e^t\fe{\sin}{t}\end{aligned}</m></cell>
+            </row>
+        </tabular>
+
+    </table>
+
+    <p>A decision you'll need to make is how to handle a constant factor in a term that requires the product rule.  Two options for taking the derivative of <m>\fe{f}{x}=5x^2\fe{\ln}{x}</m> are shown in <xref ref="figure-constant-factors-with-product-rule"/>.</p>
+
+    <figure xml:id="figure-constant-factors-with-product-rule"> 
+        <caption/>
+        <p><md>
+        <mrow>&amp;\textbf{Option A}&amp;&amp;\textbf{Option B}</mrow>
+        <mrow>\fe{\fd{f}}{x}&amp;=5\left[\lzoo{x}{x^2}\cdot\fe{\ln}{x}+x^2\cdot\lzoo{x}{\fe{\ln}{x}}\right]&amp;\fe{\fd{f}}{x}&amp;=\lzoo{x}{5x^2}\cdot\fe{\ln}{x}+5x^2\cdot\lzoo{x}{\fe{\ln}{x}}</mrow>
+        <mrow>&amp;=5\left[2x\fe{\ln}{x}+x^2\cdot\frac{1}{x}\right]&amp;&amp;=10x\fe{\ln}{x}+5x^2\cdot\frac{1}{x}</mrow>
+        <mrow>&amp;=10x\fe{\ln}{x}+5x&amp;&amp;=10x\fe{\ln}{x}+5x</mrow>
+        </md></p>
+    </figure>
+
+    <p>In Option B we are treating the factor of <m>5</m> as a part of the first variable factor.  In doing so, the factor of <m>5</m> distributes itself.  This is the preferred treatment of the author, so this is what you will see illustrated in this lab.</p> 
+
+    <exercises>
+        <exercisegroup cols="2">
+            <introduction>
+                <p>Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative. In the last problem, <m>G</m>, <m>m_1</m>, and <m>m_2</m> are constants.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>\fe{T}{t}=2\fe{\sec}{t}\fe{\tan}{t}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>k=\frac{e^t\sqrt{t}}{2}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=4x\fe{\ln}{x}+3^x-x^3</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{f}{x}=\fe{\cot}{x}\fe{\cot}{x}-1</m></p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup cols="3">
+            <introduction>
+                <p>Find each of the following derivatives <em>without first simplifying the formula</em>; that is, go ahead and use the product rule on the expression as written. Simplify each resultant derivative formula.  For each derivative, <em>check</em> your answer by simplifying the original expression and then taking the derivative of that simplified expression.</p> 
+            </introduction>
+            <exercise xml:id="unsimplified-product-first">
+                <statement>
+                    <p><m>\lzoo{x}{x^4x^7}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lzoo{x}{x\cdot x^{10}}</m></p>
+                </statement>
+            </exercise>
+            <exercise xml:id="unsimplified-product-last">
+                <statement>
+                    <p><m>\lzoo{x}{\sqrt{x}\sqrt{x^{21}}}</m></p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</section>

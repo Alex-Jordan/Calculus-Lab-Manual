@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-tangent-lines">
+    <title>Tangent Lines</title>
+
+    <p>In previous activities we saw that if <m>p</m> is a position function, then the difference quotient for <m>p</m> can be used to calculate average velocities and the expression <m>\frac{\fe{p}{t_0+h}-\fe{p}{t_0}}{h}</m> calculates the instantaneous velocity at time <m>t_0</m>.</p>
+
+    <p>Graphically, the difference quotient of a function <m>f</m> can be used to calculate the slope of secant lines to <m>f</m>. What happens when we take the run of the secant line to zero? Basically, we are connecting two points on the line that are really, really, (<em>really</em>), close to one another. As mentioned above, sending <m>h</m> to zero turns an average velocity into an instantaneous velocity. Graphically, sending <m>h</m> to zero turns a secant line into a <term>tangent line</term>.</p>
+
+    <example xml:id="example-tangent-line">
+        <p>The tangent line to the function <m>f</m> defined by <m>\fe{f}{x}=\sqrt{x}</m> at <m>x=4</m> is shown in <xref ref="figure-tangent-line"/>. Here is a calculation of the slope of this line.</p>
+        <sidebyside>
+            <paragraphs valign="top">
+                <p><md>
+                <mrow>m_{\text{tan}}&amp;=\lim_{h\to0}\frac{\fe{f}{4+h}-\fe{f}{4}}{h}</mrow>
+                <mrow>&amp;=\lim_{h\to0}\frac{\sqrt{4+h}-\sqrt{4}}{h}</mrow>
+                <mrow>&amp;=\lim_{h\to0}\left(\frac{\sqrt{4+h}-2}{h}\cdot\frac{\sqrt{4+h}+2}{\sqrt{4+h}+2}\right)</mrow>
+                <mrow>&amp;=\lim_{h\to0}\frac{4+h-4}{h\left(\sqrt{4+h}+2\right)}</mrow>
+                <mrow>&amp;=\lim_{h\to0}\frac{h}{h\left(\sqrt{4+h}+2\right)}</mrow>
+                <mrow>&amp;=\lim_{h\to0}\frac{1}{1\left(\sqrt{4+h}+2\right)}</mrow>
+                <mrow>&amp;=\frac{1}{1\left(\sqrt{4+0}+2\right)}</mrow>
+                <mrow>&amp;=\frac{1}{4}</mrow>
+                </md></p>
+            </paragraphs>
+            <figure xml:id="figure-tangent-line" valign="bottom">
+                <caption><m>y=\fe{f}{x}</m> and its tangent line at <m>x=4</m></caption>
+                <image>
+                    <latex-image-code>
+                    <![CDATA[\begin{tikzpicture}
+                    \begin{axis}[xmin=-2,
+                                 xmax=11,
+                                 ymin=-2,
+                                 ymax=11,
+                                 xtick = {-2,0,...,10},
+                                 ytick = {-2,0,...,10},
+                                 minor xtick = {-2,-1,...,11},
+                                 minor ytick = {-2,-1,...,-11},
+                                 legend entries = {$y=\fe{f}{x}$,{tangent line}},]
+                        \addplot+[variable=t,
+                            domain=0:3.25,
+                            ->,
+                        ]({t^2},{t});
+                        \addplot+[
+                            domain=-1.8:10.8,
+                            <->,
+                        ]{1+x/4};
+                        \addplot[
+                            soldot
+                        ]coordinates{
+                            (0,0)
+                            (4,2)};
+                    \end{axis}
+                    \end{tikzpicture}]]>
+                    </latex-image-code>
+                </image>
+            </figure>
+        </sidebyside>
+
+        <p>You should verify that the slope of the tangent line shown in <xref ref="figure-tangent-line"/> is indeed <m>\frac{1}{4}</m>. You should also verify that the equation of the tangent line is <m>y=\frac{1}{4}x+1</m>.</p> 
+    </example>
+
+    <exercises>
+        <exercisegroup>
+            <introduction>
+                <p>Consider the function <m>g</m> given by <m>\fe{g}{x}=5-\sqrt{4-x}</m> graphed in <xref ref="figure-tangent-line-exercise"/>.</p>
+
+                <figure xml:id="figure-tangent-line-exercise">
+                    <caption><m>y=\fe{g}{x}</m> and its tangent line at <m>x=3</m></caption>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[xmin=-7,
+                                     xmax=7,
+                                     ymin=-2,
+                                     ymax=12,
+                                     xtick = {-6,-4,...,6},
+                                     ytick = {-2,0,...,10},
+                                     minor xtick = {-7,-6,...,7},
+                                     minor ytick = {-2,-1,...,12},
+                                     legend entries = {$y=\fe{g}{x}$,{tangent line}}]
+                            \addplot+[variable=t,
+                                domain=5:1.8,
+                                ->,
+                            ]({4-(5-t)^2},{t});
+                            \addplot+[
+                                domain=-6.8:6.8,
+                                <->,
+                            ]{2.5+x/2};
+                            \addplot[
+                                soldot
+                            ]coordinates{
+                                (4,5)
+                                (3,4)};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
+
+            </introduction>
+            <exercise xml:id="exercise-tangent-line">
+                <statement>
+                    <p> Find the slope of the tangent line shown in <xref ref="figure-tangent-line-exercise"/> using <me>m_{\text{tan}}=\lim_{h\to0}\frac{\fe{g}{3+h}-\fe{g}{3}}{h}\text{.}</me> Show work consistent with that illustrated in <xref ref="example-tangent-line"/>.</p> 
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Use the line in <xref ref="figure-tangent-line-exercise"/> to verify your answer to <xref ref="exercise-tangent-line"/>.</p> 
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>State the equation of the tangent line to <m>g</m> at <m>x=3</m>.</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+
+</section>

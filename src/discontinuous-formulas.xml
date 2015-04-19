@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-discontinuous-formulas">
+    <title>Discontinuous Formulas</title>
+
+    <p>Discontinuities are a little more challenging to identify when working with formulas than when working with graphs. One reason for the added difficulty is that when working with a function formula you have to dig into your memory bank and retrieve fundamental properties about certain types of functions.</p>
+
+    <exercises>
+
+        <exercise>
+            <statement>
+                <p>What would cause a discontinuity on a rational function (a polynomial divided by another polynomial)?</p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>If <m>y</m> is a function of <m>u</m>, defined by <m>y=\fe{\ln}{u}</m>, what is always true about the <term>argument</term> of the function, <m>u</m>, over intervals where the function is continuous?</p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Name three values of <m>\theta</m> where the function <m>\fe{\tan}{\theta}</m> is discontinuous.</p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>What is the domain of the function <m>k</m>, where <m>\fe{k}{t}=\sqrt{t-4}</m>?</p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>What is the domain of the function <m>g</m>, where <m>\fe{g}{t}=\sqrt[3]{t-4}</m>?</p>
+             </statement>
+        </exercise>
+
+    </exercises>
+
+</section>

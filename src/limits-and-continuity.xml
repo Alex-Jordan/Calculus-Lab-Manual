@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+   
+<chapter xml:id="chapter-limits" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Limits and Continuity</title>
+    
+    <xi:include href="./limits.xml" />
+    <xi:include href="./limit-laws.xml" />
+    <xi:include href="./indeterminate-limits.xml" />
+    <xi:include href="./limits-at-infinity.xml" />
+    <xi:include href="./limits-at-infinity-tending-to-zero.xml" />
+    <xi:include href="./ratios-of-infinities.xml" />
+    <xi:include href="./nonexistent-limits.xml" />
+    <xi:include href="./vertical-asymptotes.xml" />
+    <xi:include href="./continuity.xml" />
+    <xi:include href="./discontinuities.xml" />
+    <xi:include href="./continuity-on-an-interval.xml" />
+    <xi:include href="./discontinuous-formulas.xml" />
+    <xi:include href="./piecewise-defined-functions.xml" />
+
+
+</chapter>

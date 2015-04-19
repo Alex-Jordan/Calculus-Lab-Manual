@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-constant-divisor-rule">
+    <title>The Constant Divisor Rule</title>
+
+    <p>When an expression is divided by the constant <m>k</m>, we can think of the expression as being multiplied by the fraction <m>\frac{1}{k}</m>.  In this way, the constant factor rule of differentiation can be applied when a formula is multiplied <em>or divided</em> by a constant.</p>
+
+    <table xml:id="table-constant-divisor-rule">
+        <caption>Examples of the Constant Divisor Rule</caption>
+        <tabular top="major">
+            <col halign="center"/>
+            <col halign="center"/>
+            <col halign="center"/>
+            <row bottom="medium">
+                <cell>Given Function</cell>
+                <cell>You should <q>see</q></cell>
+                <cell>You should write</cell>
+            </row>
+            <row>
+                <cell><m>\fe{f}{x}=\frac{x^4}{8}</m></cell>
+                <cell><m>\fe{f}{x}=\frac{1}{8}x^4</m></cell>
+                <cell><m>\fe{\fd{f}}{x}=\frac{1}{2}x^3</m></cell>
+            </row>
+            <row>
+                <cell><m>y=\frac{3\fe{\tan}{\alpha}}{2}</m></cell>
+                <cell><m>y=\frac{3}{2}\fe{\tan}{\alpha}</m></cell>
+                <cell><m>\lz{y}{\alpha}=\frac{3}{2}\fe{\sec^2}{\alpha}</m></cell>
+            </row>
+            <row>
+                <cell><m>z=\frac{\fe{\ln}{y}}{3}</m></cell>
+                <cell><m>z=\frac{1}{3}\fe{\ln}{y}</m></cell>
+                <cell><m>\lz{z}{y}=\frac{1}{3y}</m></cell>
+            </row>
+        </tabular>
+
+    </table>
+
+    <exercises>
+        <exercisegroup cols="3">
+            <introduction>
+                <p>Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative. In the last problem, <m>G</m>, <m>m_1</m>, and <m>m_2</m> are constants.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>\fe{z}{t}=\frac{\fe{\sin^{-1}}{t}}{6}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{V}{r}=\frac{\pi r^3}{3}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{f}{r}=\frac{Gm_1m_3}{r^2}</m></p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</section>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+   
+<chapter xml:id="chapter-introduction-first-derivative" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Introduction to the First Derivative</title>
+    
+    <xi:include href="./instantaneous-velocity.xml" />
+    <xi:include href="./tangent-lines.xml" />
+    <xi:include href="./first-derivative.xml" />
+    <xi:include href="./derivative-units.xml" />
+    
+</chapter>

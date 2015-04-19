@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-nondifferentiability">
+    <title>Nondifferentiability</title>
+
+    <p>A function is said to be nondifferentiable at any value its first derivative is undefined.  There are three graphical behaviors that lead to non-differentiability.</p>
+
+    <ul> 
+        <li><m>f</m> is nondifferentiable at <m>a</m> if <m>f</m> is discontinuous at <m>a</m>.</li> 
+        <li><m>f</m> is nondifferentiable at <m>a</m> if the slope of <m>f</m> is different from the left and right at <m>a</m>.</li> 
+        <li><m>f</m> is nondifferentiable at <m>a</m> if <m>f</m> has a vertical tangent line at <m>a</m>.</li> 
+    </ul> 
+
+    <exercises> 
+        <exercisegroup>
+            <introduction>
+                <p>Consider the function <m>k</m> shown in <xref ref="figure-nondifferentiable"/>.</p>
+                <sidebyside>
+                    <figure xml:id="figure-nondifferentiable" width="40%">
+                        <caption><m>y=\fe{k}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot[pccplot,
+                                    domain=-6.8:-3,
+                                    <-,
+                                ]{-2*(abs(x+4))^(1/3)*(x+4)/abs(x+4)+1};
+                                \addplot[pccplot,
+                                    domain=-3:-1,
+                                    -,
+                                ]{2*x+5};
+                                \addplot[pccplot,
+                                    domain=-1:4,
+                                    -,
+                                ]{2*x-3};
+                                \addplot[pccplot,
+                                    domain=4:6.8,
+                                    ->,
+                                ]{-4*(x-4)+5};
+                                \addplot[
+                                    soldot
+                                ]coordinates{
+                                    (-1,3)};
+                                \addplot[
+                                    holdot
+                                ]coordinates{
+                                    (-1,-5)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <figure xml:id="figure-nondifferentiable-derivative" width="40%">
+                        <caption><m>y=\fe{\fd{k}}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>There are four values where <m>k</m> is nondifferentiable; what are these values?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Draw <m>\fd{k}</m> onto <xref ref="figure-nondifferentiable-derivative"/>.</p>
+                </statement>
+            </exercise>
+        </exercisegroup> 
+        <exercisegroup> 
+            <introduction> 
+                <p>Consider the function <m>g</m> shown in <xref ref="figure-bounce"/>.</p>  
+                <sidebyside>
+                    <figure xml:id="figure-bounce" width="40%">
+                        <caption><m>y=\fe{g}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[samples = 289]
+                                \addplot+[
+                                    domain=-6.8:6.8,
+                                ]{5*abs(sin(36*x))-2};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <figure xml:id="figure-bounce-derivative" width="40%">
+                        <caption><m>y=\fe{\fd{g}}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot+[
+                                    domain=-5:-2.5,
+                                    -,
+                                ]{3.1415926*abs(cos(36*x))};
+                                \addplot[holdot] coordinates {(-5,3.1415926)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </introduction> 
+            <exercise> 
+                <statement> 
+                    <p><m>\fd{g}</m> has been drawn onto <xref ref="figure-bounce-derivative"/>  over the interval <m>\ointerval{-5}{-2.5}</m>. Use the piecewise symmetry and periodic behavior of <m>g</m> to help you draw the remainder of <m>\fd{g}</m> over <m>\ointerval{-7}{7}</m>.</p>
+                </statement> 
+            </exercise> 
+            <exercise> 
+                <statement>
+                     <p>What six-syllable word applies to <m>g</m> at <m>-5</m>, <m>0</m>, and <m>5</m>?</p>
+                </statement>
+            </exercise>
+            <exercise> 
+                <statement>                            
+                     <p>What five-syllable and six-syllable words apply to <m>\fd{g}</m> at <m>-5</m>, <m>0</m>, and <m>5</m>?</p>
+                </statement>
+            </exercise> 
+        </exercisegroup> 
+
+    </exercises> 
+
+</section>

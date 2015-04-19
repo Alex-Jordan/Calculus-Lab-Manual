@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-leibniz-notation">
+    <title>Leibniz Notation</title>
+
+    <p>While the primary focus of this lab is to help you develop shortcut skills for finding derivative formulas, there are inevitable notational issues that must be addressed.  It turns out that the latter issue is the one we are going to address first.</p>
+
+
+    <definition xml-id="definition-leibniz-notation">
+        <title>Leibniz Notation</title>
+        <statement>
+            <p>If <m>y=\fe{f}{x}</m>, we say that the derivative of <m>y</m> with respect to <m>x</m> is equal to <m>\fe{\fd{f}}{x}</m>. Symbolically, we write: <m>\lz{y}{x}=\fe{\fd{f}}{x}</m>.</p>
+
+            <p>While the symbol <m>\lz{y}{x}</m> certainly looks like a fraction, it is <em>not</em> a fraction.  The symbol is <term>Leibniz notation</term> for the first derivative of <m>y</m> with respect to <m>x</m>.  The short way of reading the symbol aloud is <q>d y d x</q></p>.
+
+            <p>If <m>z=\fe{g}{t}</m>, we say that the the derivative of <m>z</m> with respect to <m>t</m> is equal to <m>\fe{\fd{g}}{t}</m>.  Symbolically we write: <m>\lz{z}{t}=\fe{\fd{g}}{t}</m>. (Read aloud as <q>d z d t equals g prime of t</q>.)</p>
+        </statement>
+    </definition>
+
+    <exercises>
+        <exercisegroup cols="3">
+            <introduction>
+                <p>Take the derivative of both sides of each equation with respect to the independent variable as indicated in the function notation.  Write and say the derivative using Leibniz notation on the left side of the equal sign and function notation on the right side of the equal sign.  Make sure that every one in your group says at least one of the derivative equations aloud using both the formal reading and informal reading of the Leibniz notation.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>y=\fe{k}{t}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>V=\fe{f}{r}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>T=\fe{g}{P}</m></p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</section>

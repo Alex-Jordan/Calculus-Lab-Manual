@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+   
+<chapter xml:id="chapter-derivative-formulas" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Derivative Formulas</title>
+    
+    <xi:include href="./leibniz-notation.xml" />
+    <xi:include href="./derivative-operator.xml" />
+    <xi:include href="./power-rule.xml" />
+    <xi:include href="./constant-factor-rule.xml" />
+    <xi:include href="./constant-divisor-rule.xml" />
+    <xi:include href="./sum-and-difference-rules.xml" />
+    <xi:include href="./product-rule.xml" />
+    <xi:include href="./quotient-rule.xml" />
+    <xi:include href="./simplification.xml" />
+    <xi:include href="./product-and-quotient-together.xml" />
+    <xi:include href="./derivative-formulas-and-function-behavior.xml" />
+    
+</chapter>

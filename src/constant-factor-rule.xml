@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-constant-factor-rule">
+    <title>The Constant Factor Rule</title>
+
+    <p>The next rule you are going to practice is the <term>constant factor rule</term> of differentiation.  This is another rule you do in your head. <men>\lzoo{x}{k\ \fe{f}{x}}=k\cdot\lzoo{x}{\fe{f}{x}}\quad\text{for }k\in\reals\text{.}</men></p>
+
+    <p>In the following examples and problems several derivative rules are used that are shown in <xref provisional="Appendix C (pages C5 and C6)"/>.  While working this lab you should refer to those rules; you may want to cover up the chain rule and implicit derivative columns this week!  You should make a goal of having all of the basic formulas memorized within a week.</p>
+
+    <table xml:id="table-constant-factor-rule">
+        <caption>Examples of the Constant Factor Rule</caption>
+        <tabular top="major">
+            <col halign="center"/>
+            <col halign="center"/>
+            <row bottom="medium">
+                <cell>Given Function</cell>
+                <cell>You should write</cell>
+            </row>
+            <row>
+                <cell><m>\fe{f}{x}=6x^9</m></cell>
+                <cell><m>\fe{\fd{f}}{x}=54x^8</m></cell>
+            </row>
+            <row>
+                <cell><m>\fe{f}{\theta}=2\fe{\cos}{\theta}</m></cell>
+                <cell><m>\fe{\fd{f}}{\theta}=-2\fe{\sin}{\theta}</m></cell>
+            </row>
+            <row>
+                <cell><m>z=2\fe{\ln}{x}</m></cell>
+                <cell><m>\lz{z}{x}=\frac{2}{x}</m></cell>
+            </row>
+        </tabular>
+
+    </table>
+
+    <exercises>
+        <exercisegroup cols="3">
+            <introduction>
+                <p>Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>z=7t^4</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{P}{x}=-7\fe{\sin}{x}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{h}{t}=\frac{1}{3}\fe{\ln}{t}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{z}{x}=\pi\fe{\tan}{x}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>P=\frac{-8}{t^4}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>T=4\sqrt{t}</m></p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</section>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-derivative-formulas-and-function-behavior">
+    <title>Derivative Formulas and Function Behavior</title>
+
+    <p>Derivative formulas can give us much information about the behavior of a function.  For example, the derivative formula for <m>\fe{f}{x}=x^2</m> is <m>\fe{\fd{f}}{x}=2x</m>.  Clearly <m>\fd{f}</m> is negative when <m>x</m> is negative and <m>\fd{f}</m> is positive when <m>x</m> is positive.  This tells us that <m>f</m> is decreasing when <m>x</m> is negative and that <m>f</m> is increasing when <m>x</m> is positive.  This matches the behavior of the parabola <m>y=x^2</m>.</p>
+
+    <exercises>
+        <exercisegroup>
+            <introduction>
+                <p>The amount of time (seconds), <m>T</m>, required for a pendulum to complete one period is a function of the pendulum's length (meters), <m>L</m>.  Specifically, <m>T=2\pi\sqrt{\frac{L}{g}}</m> where <m>g</m> is the gravitational acceleration constant for Earth (roughly <quantity><mag>9.8</mag><unit base="meter"/><per base="second" exp="2"/></quantity>).</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Find <m>\lz{T}{L}</m> after first rewriting the formula for <m>T</m> as a constant times <m>\sqrt{L}</m>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The sign on <m>\lz{T}{L}</m> is the same regardless of the value of <m>L</m>.  What is this sign and what does it tell you about the relative periods of two pendulums with different lengths?</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <p>The gravitational force (Newtons) between two objects of masses <m>m_1</m> and <m>m_2</m> (<quantity><unit prefix="kilo" base="gram"/></quantity>) is a function of the distance (meters) between the objects' centers of mass, <m>r</m>.    Specifically, <m>\fe{F}{r}=\frac{Gm_1m_2}{r}</m> where <m>G</m> is the universal gravitational constant (which is approximately <m>6.7\times10^{-11}</m><quantity><unit base="newton"/><unit base="meter" exp="2"/><per prefix="kilo" base="gram" exp="2"/></quantity>.)</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Leaving <m>G</m>, <m>m_1</m>, and <m>m_2</m> as constants, find <m>\fe{\fd{F}}{r}</m> after first rewriting the formula for <m>F</m> as a constant times a power of <m>r</m>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The sign on <m>\fe{\fd{F}}{r}</m> is the same regardless of the value of <m>r</m>.  What is this sign and what does it tell you about the effect on the gravitational force between two objects when the distance between the objects is changed?</p>
+                </statement>
+            </exercise>
+            <exercise xml:id="exercise-evaluate-gravity">
+                <statement>
+                    <p>Leaving <m>G</m>, <m>m_1</m>, and <m>m_2</m> as constants, find <m>\fe{\fd{F}}{1.00\times10^{12}}</m>, <m>\fe{\fd{F}}{1.01\times10^{12}}</m>, and <m>\fe{\fd{F}}{1.02\times10^{12}}</m>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Calculate <m>\frac{\fe{F}{1.02\times10^{12}}-\fe{F}{1.00\times10^{12}}}{1.02\times10^{12}-1.00\times10^{12}}</m>. Which of the quantities found in <xref ref="exercise-evaluate-gravity"/> comes closest to this value?  Draw a sketch of <m>F</m> and discuss why this result makes sense.</p>  
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</section>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-instantaneous-velocity">
+    <title>Instantaneous Velocity</title>
+
+    <p>Most of the focus in <xref ref="chapter-rates-of-change"/> was on average rates of change. While the idea of rates of change at one specific instant was alluded to, we couldn't explore that idea formally because we hadn't yet talked about limits. Now that we have covered average rates of change and limits we can put those two ideas together to discuss rates of change at specific instances in time.</p>
+
+    <p>Suppose that an object is tossed into the air in such a way that the elevation of the object (measured in <quantity><unit base="foot"/></quantity>) is given by the function <m>s</m> defined by <m>\fe{s}{t}=40+40t-16t^2</m> where <m>t</m> is the amount of time that has passed since the object was tossed (measured in <quantity><unit base="second"/></quantity>). Let's determine the velocity of the object <m>2</m> seconds into this flight.</p>
+
+    <p>Recall that the difference quotient <m>\frac{\fe{s}{2+h}-\fe{s}{2}}{h}</m> gives us the average velocity for the object between the times <m>t=2</m> and <m>t=2+h</m>. So long as <m>h</m> is positive, we can think of <m>h</m> as the length of the time interval. To infer the velocity exactly <m>2</m> seconds into the flight we need the time interval as close to <m>0</m> as possible; this is done using the appropriate limit in <xref ref="example-instantaneous-velocity"/>.</p>
+
+    <example xml:id="example-instantaneous-velocity">
+
+        <p><md>
+        <mrow>\fe{v}{2}&amp;=\lim_{h\to0}\frac{\fe{s}{2+h}-\fe{s}{2}}{h}</mrow>
+        <mrow>&amp;=\lim_{h\to0}\frac{\left[40+40\left(2+h\right)-16\left(2+h\right)^2\right]-\left[40+40(2)-16(2)^2\right]}{h}</mrow>
+        <mrow>&amp;=\lim_{h\to0}\frac{40+80+40h-64-64h-16h^2-56}{h}</mrow>
+        <mrow>&amp;=\lim_{h\to0}\frac{-24h-16h^2}{h}</mrow>
+        <mrow>&amp;=\lim_{h\to0}\frac{h\left(-24-16h\right)}{h}</mrow>
+        <mrow>&amp;=\lim_{h\to0}\left(-24-16h\right)</mrow>
+        <mrow>&amp;=-24-16\cdot0</mrow>
+        <mrow>&amp;=-24</mrow>
+        </md></p>
+
+        <p>From this we can infer that the velocity of the object <m>2</m> seconds into its flight is <quantity><mag>-24</mag><unit base="foot"/><per base="second"/></quantity>. From that we know that the object is falling at a speed of <quantity><mag>24</mag><unit base="foot"/><per base="second"/></quantity>.</p>
+    </example>
+
+    <exercises>
+        <exercisegroup>
+            <introduction>
+                <p>Suppose that an object is tossed into the air so that its elevation (measured in <quantity><unit base="meter"/></quantity>) is given by the function <m>p</m> defined by <m>\fe{p}{t}=300+10t-4.9t^2</m> where <m>t</m> is the amount of time that has passed since the object was tossed (measured in <quantity><unit base="second"/></quantity>).</p>
+            </introduction>
+
+            <exercise xml:id="exercise-instantaneous-velocity">
+                <statement>
+                    <p>Evaluate <m>\lim\limits_{h\to0}\frac{\fe{p}{4+h}-\fe{p}{4}}{h}</m> showing each step in the simplification process (as illustrated in <xref ref="example-instantaneous-velocity"/>).</p>
+                </statement>
+            </exercise>
+
+            <exercise xml:id="exercise-instantaneous-velocity-second">
+                <statement>
+                    <p>What is the unit for the value calculated in <xref ref="exercise-instantaneous-velocity"/> and what does the value (including unit) tell you abou the motion of the object?</p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>Copy <xref ref="table-instantaneous-velocity"/> onto your paper and compute and record the missing values. Do these values support your answer to <xref ref="exercise-instantaneous-velocity-second"/>?</p>
+
+                    <table xml:id="table-instantaneous-velocity">
+                        <caption>Average Velocities</caption>
+                        <tabular top="major">
+                            <col halign="left"/>
+                            <col halign="left"/>
+                            <row bottom="medium">
+                                <cell halign="center"><m>t_1</m></cell>
+                                <cell halign="center"><m>\frac{\fe{p}{t_1}-\fe{p}{4}}{t_1-4}</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>3.9</m></cell>
+                                <cell />
+                            </row>
+                            <row>
+                                <cell><m>3.99</m></cell>
+                                <cell />
+                            </row>
+                            <row>
+                                <cell><m>3.999</m></cell>
+                                <cell />
+                            </row>
+                            <row>
+                                <cell><m>4.001</m></cell>
+                                <cell />
+                            </row>
+                            <row>
+                                <cell><m>4.01</m></cell>
+                                <cell />
+                            </row>
+                            <row>
+                                <cell><m>4.1</m></cell>
+                                <cell />
+                            </row>
+                        </tabular>
+                    </table>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+
+</section>
