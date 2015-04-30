@@ -25,17 +25,18 @@
             <email>alex.jordan@pcc.edu</email>
         </editor>
 
-		<date>DRAFT <today /> DRAFT</date>
+        <date>DRAFT <today /> DRAFT</date>
 
-	</titlepage>
+        </titlepage>
 
-<!--	<colophon>
+        <colophon>
 
         <copyright>
-            <year>2004<ndash />2014</year>
-            <holder>Robert A. Beezer</holder>
-            <minilicense>GFDL License.</minilicense>
-			<shortlicense>Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license is included in the appendix entitled <q>GNU Free Documentation License.</q></shortlicense>
+            <year>2012<ndash />2015</year>
+            <holder>Alex Jordan</holder>
+            <holder>Steve Simonds</holder>
+            <minilicense>Creative Commons BY-SA</minilicense>
+			<shortlicense>Permission is granted to copy, distribute and/or modify this document under the terms of the Creative Commons BY-SA License, Version 3.0 or any later version.</shortlicense>
         </copyright>
         <date>DRAFT <today /> DRAFT</date>
 
@@ -43,12 +44,11 @@
 
 	<acknowledgement>
 
-		<p>The writing of a substantial portion of this text was supported by a Course Release Unit from the University Enrichment Committee at the University of Puget Sound for the Spring<nbsp />2014 semester, in addition to previous sabbatical leaves.</p>
-
-		<p>Development of systems used to produce this textbook as an open source text have been supported by grants from the National Science Foundation (DUE-1022574) and the Shuttleworth Foundation (Flash Grant, 2013).</p>
+		<p>In 2012, Steve Simonds revised an earlier version of this document in Word/PDF form with some support from PCC's curriculum development grants.</p>
+		<p>In 2015, Alex Jordan converted the Word/PDF to MathBook XML (enabling the HTML output alongside a PDF) with some support from PCC's professional development grants.</p>
 
 	</acknowledgement>
--->
+
 
         <preface xml:id="to-the-student">
             <title>To the Student</title>
