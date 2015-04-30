@@ -272,9 +272,29 @@
                         <cell><xref autoname="title" ref="section-product-and-quotient-together"/></cell>
                         <cell></cell>
                     </row>
-                    <row>
+                    <row bottom="medium">
                         <cell></cell>
                         <cell><xref autoname="title" ref="section-derivative-formulas-and-function-behavior"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell>7</cell>
+                        <cell><xref autoname="title" ref="section-introduction-to-the-chain-rule"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-order-to-apply-rules"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row>
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-not-simplifying-first"/></cell>
+                        <cell></cell>
+                    </row>
+                    <row bottom="medium">
+                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-chain-rule-and-leibniz"/></cell>
                         <cell></cell>
                     </row>
                 </tabular> 

@@ -1,6 +1,6 @@
 %%                                    %%
 %% Generated from MathBook XML source %%
-%%    on 2015-04-17T19:45:04-07:00    %%
+%%    on 2015-04-30T12:20:31-07:00    %%
 %%                                    %%
 %%   http://mathbook.pugetsound.edu   %%
 %%                                    %%
@@ -450,12 +450,16 @@ figcap\romannumeral\value{figstack}\endcsname{#5}%
 \newcommand{\lzo}[1]{\frac{d}{d#1}}
 %
 %  Leibniz operator on ....
-%  Usage: \lzoo{x}
+%  Usage: \lzoo{x}{y}
 \newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
 %
 %  higher Leibniz operator
-%  Usage: \lzon{x}
+%  Usage: \lzon{x}{y}{n}
 \newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+%
+%  Leibniz operator at ....
+%  Usage: \lzoa{y}{x}{a}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
 %
 %% Title page information for book
 \title{Portland Community College MTH 251 Lab Manual}
@@ -469,7 +473,7 @@ Department of Mathematics\\
 Portland Community College\\
 \href{mailto:alex.jordan@pcc.edu}{\nolinkurl{alex.jordan@pcc.edu}}
 }
-\date{DRAFT April 17, 2015 DRAFT}
+\date{DRAFT April 30, 2015 DRAFT}
 \begin{document}
 \frontmatter
 %% half-title
@@ -554,7 +558,11 @@ Week&Labs (Lab Activities)&Supplementary Exercises\\\hrulemedium
 &\hyperref[section-quotient-rule]{Quotient Rule~\ref*{section-quotient-rule}}&\\
 &\hyperref[section-simplification]{Simplification~\ref*{section-simplification}}&\\
 &\hyperref[section-product-and-quotient-together]{Product and Quotient Rules Together~\ref*{section-product-and-quotient-together}}&\\
-&\hyperref[section-derivative-formulas-and-function-behavior]{Derivative Formulas and Function Behavior~\ref*{section-derivative-formulas-and-function-behavior}}&
+&\hyperref[section-derivative-formulas-and-function-behavior]{Derivative Formulas and Function Behavior~\ref*{section-derivative-formulas-and-function-behavior}}&\\\hrulemedium
+7&\hyperref[section-introduction-to-the-chain-rule]{Introduction to the Chain Rule~\ref*{section-introduction-to-the-chain-rule}}&\\
+&\hyperref[section-order-to-apply-rules]{Order to Apply Rules~\ref*{section-order-to-apply-rules}}&\\
+&\hyperref[section-not-simplifying-first]{Not Simplifying First~\ref*{section-not-simplifying-first}}&\\
+&\hyperref[section-chain-rule-and-leibniz]{Chain Rule with Leibniz Notation~\ref*{section-chain-rule-and-leibniz}}&\\\hrulemedium
 \end{longtable}
 \mainmatter
 \typeout{************************************************}
@@ -2471,8 +2479,7 @@ A parabolic function is shown in \hyperref[figure-graphical-derivative]{Figure~\
 \(1\)&\\
 \(3\)&\(-2\)\\
 \(5\)&\(-4\)\\
-\(7\)&\\
-\(-5\)&\(-5\)
+\(7\)&
 \end{tabular}
 }% end body 
 {\captionof{table}{\(y=\fe{\fd{g}}{x}\)\label{table-graphical-derivative}}
@@ -3775,6 +3782,11 @@ Find the first derivative formula for each of the following functions.  In each 
 \par%
 \end{exercisegroupbycol}%
 \end{exercisegroup}%
+\begin{exerciselist}
+\item[5.]\phantomsection\hypertarget{exercise-234}{\null}(This is just a prototype test of an embedded WeBWorK problem. It still has issues.)\space\space{}\par\smallskip
+\item[6.]\phantomsection\hypertarget{exercise-235}{\null}(This is just a prototype of an embedded GeoGebra HTML5 worksheet.)\space\space{}Move the green ``x'' on the left \(x\)-axis back and forth (keeping \(c=2\)), and explain how this reveals that \(\lzoo{x}{x^2}=2x\). Then explore the applet with other values of \(c\).%
+\par\smallskip
+\end{exerciselist}
 \typeout{************************************************}
 \typeout{Section 5.4 The Constant Factor Rule}
 \typeout{************************************************}
@@ -3800,27 +3812,27 @@ Given Function&You should write\\\hrulemedium
 \begin{exercisegroup}%
 Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative.%
 \begin{exercisegroupbycol}{3}%
-\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-234}{\null}
+\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-236}{\null}
 \(z=7t^4\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-235}{\null}
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-237}{\null}
 \(\fe{P}{x}=-7\fe{\sin}{x}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-236}{\null}
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-238}{\null}
 \(\fe{h}{t}=\frac{1}{3}\fe{\ln}{t}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-237}{\null}
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-239}{\null}
 \(\fe{z}{x}=\pi\fe{\tan}{x}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-238}{\null}
+\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-240}{\null}
 \(P=\frac{-8}{t^4}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-239}{\null}
+\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-241}{\null}
 \(T=4\sqrt{t}\)%
 \end{exercisegroupitem}%
 \par%
@@ -3849,15 +3861,15 @@ Given Function&You should ``see''&You should write\\\hrulemedium
 \begin{exercisegroup}%
 Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative. In the last problem, \(G\), \(m_1\), and \(m_2\) are constants.%
 \begin{exercisegroupbycol}{3}%
-\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-240}{\null}
+\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-242}{\null}
 \(\fe{z}{t}=\frac{\fe{\sin^{-1}}{t}}{6}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-241}{\null}
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-243}{\null}
 \(\fe{V}{r}=\frac{\pi r^3}{3}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-242}{\null}
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-244}{\null}
 \(\fe{f}{r}=\frac{Gm_1m_3}{r^2}\)%
 \end{exercisegroupitem}%
 \par%
@@ -3885,7 +3897,7 @@ Given Function&You should ``see''&You should write\\\hrulemedium
 \section*{Exercises}\label{exercises-32}
 
 \begin{exerciselist}
-\item[1.]\phantomsection\hypertarget{exercise-243}{\null}Explain why both the constant rule (\hyperref[equation-constant-rule]{[men]
+\item[1.]\phantomsection\hypertarget{exercise-245}{\null}Explain why both the constant rule (\hyperref[equation-constant-rule]{[men]
 ~\ref*{equation-constant-rule}}) and linear rule (\hyperref[equation-linear-rule]{[men]
 ~\ref*{equation-linear-rule}}) are ``obvious.'' Hint: think about the graphs \(y=k\) and \(y=kx\).  What does a first derivative tell you about a graph?%
 \par\smallskip
@@ -3893,19 +3905,19 @@ Given Function&You should ``see''&You should write\\\hrulemedium
 \begin{exercisegroup}%
 Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative. In the last problem, \(G\), \(m_1\), and \(m_2\) are constants.%
 \begin{exercisegroupbycol}{2}%
-\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-244}{\null}
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-246}{\null}
 \(T=\fe{\sin}{t}-2\fe{\cos}{t}+3\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-245}{\null}
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-247}{\null}
 \(\fe{k}{\theta}=\frac{4\fe{\sec}{\theta}-3\fe{\csc}{\theta}}{4}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-246}{\null}
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-248}{\null}
 \(\fe{r}{x}=\frac{x}{5}+7\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-247}{\null}
+\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-249}{\null}
 \(r=\frac{x}{3\sqrt[3]{x}}-\frac{\fe{\ln}{x}}{9}+\fe{\ln}{2}\)%
 \end{exercisegroupitem}%
 \par%
@@ -3951,19 +3963,19 @@ In Option B we are treating the factor of \(5\) as a part of the first variable 
 \begin{exercisegroup}%
 Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative. In the last problem, \(G\), \(m_1\), and \(m_2\) are constants.%
 \begin{exercisegroupbycol}{2}%
-\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-248}{\null}
+\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-250}{\null}
 \(\fe{T}{t}=2\fe{\sec}{t}\fe{\tan}{t}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-249}{\null}
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-251}{\null}
 \(k=\frac{e^t\sqrt{t}}{2}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-250}{\null}
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-252}{\null}
 \(y=4x\fe{\ln}{x}+3^x-x^3\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-251}{\null}
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-253}{\null}
 \(\fe{f}{x}=\fe{\cot}{x}\fe{\cot}{x}-1\)%
 \end{exercisegroupitem}%
 \par%
@@ -3976,7 +3988,7 @@ Find each of the following derivatives \emph{without first simplifying the formu
 \(\lzoo{x}{x^4x^7}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-253}{\null}
+\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-255}{\null}
 \(\lzoo{x}{x\cdot x^{10}}\)%
 \end{exercisegroupitem}%
 \par%
@@ -4010,19 +4022,19 @@ Given Function&Derivative\\\hrulemedium
 \begin{exercisegroup}%
 Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative. In the last problem, \(G\), \(m_1\), and \(m_2\) are constants.%
 \begin{exercisegroupbycol}{2}%
-\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-255}{\null}
+\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-257}{\null}
 \(\fe{g}{x}=\frac{4\fe{\ln}{x}}{x}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-256}{\null}
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-258}{\null}
 \(\fe{j}{y}=\frac{\sqrt[3]{y^5}}{\fe{\cos}{y}}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-257}{\null}
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-259}{\null}
 \(y=\frac{\fe{\sin}{x}}{4\fe{\sec}{x}}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-258}{\null}
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-260}{\null}
 \(\fe{f}{t}=\frac{t^2}{e^t}\)%
 \end{exercisegroupitem}%
 \par%
@@ -4035,7 +4047,7 @@ Find each of the following derivatives \emph{without first simplifying the formu
 \(\lzoo{t}{\frac{\fe{\sin}{t}}{\fe{\sin}{t}}}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-260}{\null}
+\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-262}{\null}
 \(\lzoo{x}{\frac{x^6}{x^2}}\)%
 \end{exercisegroupitem}%
 \par%
@@ -4083,27 +4095,27 @@ Part of learning to take derivatives is learning  to make good choices about the
 \begin{exercisegroup}%
 Find the derivative with respect to \(x\) for each of the following functions after first completely simplifying the formula being differentiated.  In each case you should \emph{not} use either the product rule or the quotient rule while finding the derivative formula.%
 \begin{exercisegroupbycol}{2}%
-\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-262}{\null}
+\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-264}{\null}
 \(y=\frac{4x^{12}-5x^4+3x^2}{x^4}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-263}{\null}
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-265}{\null}
 \(\fe{g}{x}=\frac{-4\fe{\sin}{x}}{\fe{\cos}{x}}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-264}{\null}
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-266}{\null}
 \(\fe{h}{x}=\frac{4-x^6}{3x^{-2}}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-265}{\null}
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-267}{\null}
 \(\fe{z}{x}=\fe{\sin^2}{x}+\fe{\cos^2}{x}\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-266}{\null}
+\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-268}{\null}
 \(z=(x+4)(x-4)\)%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-267}{\null}
+\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-269}{\null}
 \(\fe{T}{x}=\frac{\fe{\ln}{x}}{\fe{\ln}{x^2}}\)%
 \end{exercisegroupitem}%
 \par%
@@ -4122,19 +4134,19 @@ Sometimes both the product rule and quotient rule need to be applied when findin
 \begin{exercisegroup}%
 Consider the functions defined by \(\fe{f}{x}=x^2\frac{\fe{\sin}{x}}{e^x}\) and \(\fe{g}{x}=\frac{x^2\fe{\sin}{x}}{e^x}\).%
 \begin{exercisegroupbycol}{1}%
-\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-268}{\null}
+\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-270}{\null}
 Discuss why \(f\) and \(g\) are in fact two representations of the same function.%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-269}{\null}
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-271}{\null}
 Find \(\fe{\fd{f}}{x}\) by first applying the product rule and then applying the quotient rule (where necessary).%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-270}{\null}
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-272}{\null}
 Find \(\fe{\fd{g}}{x}\) by first applying the quotient rule and then applying the product rule (where necessary).%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-271}{\null}
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-273}{\null}
 Rigorously establish that the formulas for \(\fe{\fd{f}}{x}\) and \(\fe{\fd{g}}{x}\) are indeed the same.%
 \end{exercisegroupitem}%
 \par%
@@ -4153,11 +4165,11 @@ Derivative formulas can give us much information about the behavior of a functio
 \begin{exercisegroup}%
 The amount of time (seconds), \(T\), required for a pendulum to complete one period is a function of the pendulum's length (meters), \(L\).  Specifically, \(T=2\pi\sqrt{\frac{L}{g}}\) where \(g\) is the gravitational acceleration constant for Earth (roughly \SI{9.8}{\meter\per\second\tothe{2}}).%
 \begin{exercisegroupbycol}{1}%
-\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-272}{\null}
+\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-274}{\null}
 Find \(\lz{T}{L}\) after first rewriting the formula for \(T\) as a constant times \(\sqrt{L}\).%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-273}{\null}
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-275}{\null}
 The sign on \(\lz{T}{L}\) is the same regardless of the value of \(L\).  What is this sign and what does it tell you about the relative periods of two pendulums with different lengths?%
 \end{exercisegroupitem}%
 \par%
@@ -4166,11 +4178,11 @@ The sign on \(\lz{T}{L}\) is the same regardless of the value of \(L\).  What is
 \begin{exercisegroup}%
 The gravitational force (Newtons) between two objects of masses \(m_1\) and \(m_2\) (\si{\kilo\gram}) is a function of the distance (meters) between the objects' centers of mass, \(r\).    Specifically, \(\fe{F}{r}=\frac{Gm_1m_2}{r}\) where \(G\) is the universal gravitational constant (which is approximately \(6.7\times10^{-11}\)\si{\newton\meter\tothe{2}\per\kilo\gram\tothe{2}}.)%
 \begin{exercisegroupbycol}{1}%
-\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-274}{\null}
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-276}{\null}
 Leaving \(G\), \(m_1\), and \(m_2\) as constants, find \(\fe{\fd{F}}{r}\) after first rewriting the formula for \(F\) as a constant times a power of \(r\).%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-275}{\null}
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-277}{\null}
 The sign on \(\fe{\fd{F}}{r}\) is the same regardless of the value of \(r\).  What is this sign and what does it tell you about the effect on the gravitational force between two objects when the distance between the objects is changed?%
 \end{exercisegroupitem}%
 \par%
@@ -4178,7 +4190,7 @@ The sign on \(\fe{\fd{F}}{r}\) is the same regardless of the value of \(r\).  Wh
 Leaving \(G\), \(m_1\), and \(m_2\) as constants, find \(\fe{\fd{F}}{1.00\times10^{12}}\), \(\fe{\fd{F}}{1.01\times10^{12}}\), and \(\fe{\fd{F}}{1.02\times10^{12}}\).%
 \end{exercisegroupitem}%
 \par%
-\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-277}{\null}
+\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-279}{\null}
 Calculate \(\frac{\fe{F}{1.02\times10^{12}}-\fe{F}{1.00\times10^{12}}}{1.02\times10^{12}-1.00\times10^{12}}\). Which of the quantities found in \hyperref[exercise-evaluate-gravity]{Exercise~5} comes closest to this value?  Draw a sketch of \(F\) and discuss why this result makes sense.%
 \end{exercisegroupitem}%
 \par%
@@ -4188,6 +4200,352 @@ Calculate \(\frac{\fe{F}{1.02\times10^{12}}-\fe{F}{1.00\times10^{12}}}{1.02\time
 \typeout{Chapter 6 The Chain Rule}
 \typeout{************************************************}
 \chapter[The Chain Rule]{The Chain Rule}\label{chapter-chain-rule}
+\typeout{************************************************}
+\typeout{Section 6.1 Introduction to the Chain Rule}
+\typeout{************************************************}
+\section[Introduction to the Chain Rule]{Introduction to the Chain Rule}\label{section-introduction-to-the-chain-rule}
+The functions \(\fe{f}{t}=\fe{\sin}{t}\) and \(\fe{k}{t}=\fe{\sin}{3t}\) are shown in \hyperref[figure-sine-waves]{Figure~\ref*{figure-sine-waves}}. Since \(\fe{\fd{f}}{t}=\fe{\cos}{t}\), it is reasonable to speculate that \(\fe{\fd{k}}{t}=\fe{\cos}{3t}\).  But this would imply that \(\fe{\fd{k}}{0}=\fe{\fd{f}}{0}=1\), and a quick glance of the two functions at \(0\) should convince you that this is not true; clearly \(\fe{\fd{k}}{0}>\fe{\fd{f}}{0}\).%
+\begin{figure}
+\centering
+{
+\begin{tikzpicture}
+\begin{axis}[legend entries ={{$f$},{$k$}},
+    xmin=-3.1415926,
+    xtick={-3.1415926,-1.5707963,...,6.2831852},
+    minor xtick={},
+    xmax=6.2831852,
+    ymin=-2,
+    ymax=2,
+    y post scale = 1/1.5707963,
+    xticklabels={$-\pi$,$-\frac{\pi}{2}$,$0$,$\frac{\pi}{2}$,$\pi$,$\frac{3\pi}{2}$,$2\pi$}, 
+    xlabel={$t$},
+    domain=-3.1415926:6.2831852,
+    smooth]
+    \addplot+[]{sin(180*x/3.1415926)};
+    \addplot+[]{sin(3*180*x/3.1415926)};
+\end{axis}
+\end{tikzpicture}
+}
+\caption{\label{figure-sine-waves}}
+\end{figure}
+\par
+The function \(k\) moves through three periods for every one period generated by the function \(f\).  Since the amplitudes of the two functions are the same, the only way \(k\) can generate periods at a rate of \(3:1\) (compared to \(f\)) is if its rate of change is three times that of \(f\).  In fact, \(\fe{\fd{k}}{t}=3\fe{\cos}{3t}\); please note that \(3\) is the first derivative of \(3t\).  This means that the formula for \(\fe{\fd{k}}{t}\) is the product of the rates of change of the outside function (\(\lzoo{u}{\fe{\sin}{u}}=\fe{\cos}{u}\)) and the inside function (\(\lzoo{t}{3t}=3\)).%
+\par
+\(k\) is an example of a composite function (as illustrated in \hyperref[figure-composite-function]{Figure~\ref*{figure-composite-function}}).  If we define \(g\) by the rule \(\fe{g}{t}=3t\), then \(\fe{k}{t}=\fe{f}{\fe{g}{t}}\).%
+\begin{figure}
+\centering
+\[t\xrightarrow{g}3t\xrightarrow{f}\fe{\sin}{3t}\]Taking the output from \(g\) and processing it through a second function, \(f\), is the action that characterizes \(k\) as a composite function.%
+\caption{\(\fe{g}{t}=3t\), \(\fe{f}{u}=\fe{\sin}{u}\), and \(\fe{k}{t}=\fe{f}{\fe{g}{t}}\)\label{figure-composite-function}}
+\end{figure}
+\par
+Note that \(\fe{\fd{k}}{0}=\fe{\fd{g}}{0}\fe{\fd{f}}{\fe{g}{0}}\).  This last equation is an example of what we call the \emph{chain rule for differentiation}. Loosely, the chain rule tells us that when finding the rate of change for a composite function (at \(0\)), we need to multiply the rate of change of the outside function, \(\fe{\fd{f}}{\fe{g}{0}}\), with the rate of change of the inside function, \(\fe{\fd{g}}{0}\).  This is symbolized for general values of \(x\) in \hyperref[equation-chain-rule]{[me]
+~\ref*{equation-chain-rule}} where \(u\) represents a function of \(x\) (e.g.\@ \(u=\fe{g}{x}\)). \[\lzoo{x}{\fe{f}{u}}=\fe{\fd{f}}{u}\lzoo{x}{u}\]This rule is used to find derivative formulas in \hyperref[example-chain-rule]{Examples~\ref*{example-chain-rule}} and \hyperref[example-second-chain-rule]{6.1.4}.%
+\begin{example}\label{example-chain-rule}
+\begin{align*}
+\text{Problem}&&&\text{Solution}\\
+\text{Find }\lz{y}{x}\text{ if }y&=\fe{\sin}{x^2}\text{.}&\lz{y}{x}&=\fe{\cos}{x^2}\cdot\lzoo{x}{x^2}\\
+&&&=\fe{\cos}{x^2}\cdot2x\\
+&&&=2x\fe{\cos}{x^2}
+\end{align*}The factor of \(\lzoo{z}{x^2}\) is called a \terminology{chain rule factor}.%
+\end{example}
+\begin{example}\label{example-second-chain-rule}
+\begin{align*}
+\text{Problem}&&&\text{Solution}\\
+\text{Find }\fe{\fd{f}}{t}\text{ if }\fe{f}{t}&=\fe{\sec^9}{t}\text{.}&\fe{f}{t}&=\left[\fe{\sec}{t}\right]^9\\
+&&\fe{\fd{f}}{t}&=9\left[\fe{\sec}{t}\right]^8\cdot\lzoo{t}{\fe{\sec}{t}}\\
+&&&=9\fe{\sec^8}{t}\cdot\fe{\sec}{t}\fe{\tan}{t}\\
+&&&=9\fe{\sec^9}{t}\fe{\tan}{t}
+\end{align*}The factor of \(\lzoo{t}{\fe{\sec}{t}}\) is called a \terminology{chain rule factor}.%
+\end{example}
+\begin{example}\label{example-third-chain-rule}
+\begin{align*}
+\text{Problem}&&&\text{Solution}\\
+\text{Find }\lz{y}{x}\text{ if }y&=4^x\text{.}&\lz{y}{x}&=\fe{\ln}{4}\cdot4^x
+\end{align*}Please note that \emph{the chain rule was not applied} here because the function being differentiated was not a composite function. Here we just applied the formula for the derivative of an exponential function with base \(4\).%
+\end{example}
+\begin{example}\label{example-fourth-chain-rule}
+\begin{align*}
+\text{Problem}&&&\text{Solution}\\
+\text{Find }\lz{y}{x}\text{ if }y&=4^x\text{.}&y&=e^{\fe{\ln}{4}x}\\
+&&\lz{y}{x}&=e^{\fe{\ln}{4}x}\cdot\lzoo{x}{\fe{\ln}{4}x}\\
+&&&=e^{\fe{\ln}{4}x}\cdot\fe{\ln}{4}\\
+&&&=\fe{\ln}{4}\cdot4^{x}
+\end{align*}While this is the same task as in \hyperref[example-third-chain-rule]{Example~\ref*{example-third-chain-rule}}, here we view the function as a composite function, and apply the chain rule.%
+\end{example}
+\par
+While you ultimately want to perform the chain rule step in your head, your instructor may want you to illustrate the step while you are first practicing the rule.  For this reason, the step will be explicitly shown in every example given in this lab.%
+\typeout{************************************************}
+\typeout{Exercises}
+\typeout{************************************************}
+\section*{Exercises}\label{exercises-38}
+
+\begin{exercisegroup}%
+Find the first derivative formula for each function.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative (e.g.\@ \(\fe{\fd{h}}{t}\)).%
+\begin{exercisegroupbycol}{3}%
+\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-280}{\null}
+\(\fe{h}{t}=\fe{\cos}{\sqrt{t}}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-281}{\null}
+\(P=\fe{\sin}{\theta^4}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-282}{\null}
+\(\fe{w}{\alpha}=\fe{\cot}{\sqrt[3]{\alpha}}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-283}{\null}
+\(z=7\left[\fe{\ln}{t}\right]^3\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-284}{\null}
+\(\fe{z}{\theta}=\fe{\sin^4}{\theta}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-285}{\null}
+\(\fe{P}{\beta}=\fe{\tan^{-1}}{\beta}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{7. }\phantomsection\hypertarget{exercise-286}{\null}
+\(y=\left[\fe{\sin^{-1}}{t}\right]^{17}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{8. }\phantomsection\hypertarget{exercise-287}{\null}
+\(T=2^{\fe{\ln}{x}}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{9. }\phantomsection\hypertarget{exercise-288}{\null}
+\(\fe{y}{x}=\fe{\sec^{-1}}{e^x}\)%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\begin{exercisegroup}%
+A function, \(f\), is shown in \hyperref[figure-chain-rule-exercise]{Figure~\ref*{figure-chain-rule-exercise}}. Answer the following questions in reference to this function.%
+\begin{figure}
+\centering
+{
+\begin{tikzpicture}
+\begin{axis}[
+    xmin=-1.75,
+    xtick={-1,0,1},
+    minor xtick={-1.75,-1.5,...,1.75},
+    xmax=1.75,
+    ymin=-3.5,
+    ytick={-3,-2,...,3},
+    ymax=3.5,
+    xlabel={$t$},
+    domain=-1.34:1.64,
+    smooth]
+    \addplot+[]{x*exp(x)-exp(x^2)+3};
+\end{axis}
+\end{tikzpicture}
+}
+\caption{\(f\)\label{figure-chain-rule-exercise}}
+\end{figure}
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{10. }\phantomsection\hypertarget{exerice-chain-rule-graph}{\null}
+Use the graph to rank the following in decreasing order: \(\fe{f}{1}\), \(\fe{\fd{f}}{1}\), \(\fe{\sd{f}}{1}\), \(\fe{\fd{f}}{0}\), and \(\fe{\fd{f}}{-1}\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{11. }\phantomsection\hypertarget{exercise-290}{\null}
+The formula for \(f\) is \(\fe{f}{t}=t\,e^t-e^{t^2}+3\). Find the formulas for \(\fd{f}\) and \(\sd{f}\) and use the formulas to verify your answer to \hyperref[exerice-chain-rule-graph]{Exercise~10}.%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{12. }\phantomsection\hypertarget{exercise-291}{\null}
+Find the equation to the tangent line to \(f\) at \(0\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{13. }\phantomsection\hypertarget{exercise-292}{\null}
+Find the equation to the tangent line to \(\fd{f}\) at \(0\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{14. }\phantomsection\hypertarget{exercise-293}{\null}
+There is an antiderivative of \(f\) that passes through the point \(\point{0}{7}\). Find the equation of the tangent line to this antiderivative at \(0\).%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\typeout{************************************************}
+\typeout{Section 6.2 Order to Apply Rules}
+\typeout{************************************************}
+\section[Order to Apply Rules]{Order to Apply Rules}\label{section-order-to-apply-rules}
+When finding derivatives of complex formulas you need to apply the rules for differentiation in the reverse of order of operations.  For example, when finding \(\lzoo{x}{\fe{\sin}{x\,e^x}}\) the first rule you need to apply is the derivative formula for \(\fe{\sin}{u}\) but when finding \(\lzoo{x}{x\fe{\sin}{e^x}}\) the first rule that needs to be applied is the product rule.%
+\typeout{************************************************}
+\typeout{Exercises}
+\typeout{************************************************}
+\section*{Exercises}\label{exercises-39}
+
+\begin{exercisegroup}%
+Find the first derivative formula for each function.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative (e.g.\@ \(\fe{\fd{f}}{x}\)).%
+\begin{exercisegroupbycol}{2}%
+\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-294}{\null}
+\(\fe{f}{x}=\fe{\sin}{x\,e^x}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-295}{\null}
+\(\fe{g}{x}=x\fe{\sin}{e^x}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-296}{\null}
+\(y=\frac{\fe{\tan}{\fe{\ln}{x}}}{x}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-297}{\null}
+\(z=5t+\frac{\fe{\cos^2}{t^2}}{3}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-298}{\null}
+\(\fe{f}{y}=\fe{\sin}{\frac{\fe{\ln}{y}}{y}}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-299}{\null}
+\(G=x\fe{\sin^{-1}}{x\fe{\ln}{x}}\)%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\typeout{************************************************}
+\typeout{Section 6.3 Not Simplifying First}
+\typeout{************************************************}
+\section[Not Simplifying First]{Not Simplifying First}\label{section-not-simplifying-first}
+As always, you want to simplify an expression before jumping in to take its derivative.  Nevertheless, it can build confidence to see that the rules work even if you don't simplify first.%
+\typeout{************************************************}
+\typeout{Exercises}
+\typeout{************************************************}
+\section*{Exercises}\label{exercises-40}
+
+\begin{exercisegroup}%
+Consider the functions \(\fe{f}{x}=\sqrt{x^2}\) and \(\fe{g}{x}=\left(\sqrt{x}\right)^2\).%
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-300}{\null}
+Assuming that \(x\) is not negative, how does each of these formulas simplify?  Use the simplified formula to find the formulas for \(\fe{\fd{f}}{x}\) and \(\fe{\fd{g}}{x}\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-301}{\null}
+Use the chain rule (without first simplifying) to find the formulas for \(\fe{\fd{f}}{x}\) and \(\fe{\fd{g}}{x}\); simplify each result (assuming that \(x\) is positive).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-302}{\null}
+Are \(f\) and \(g\) the same function? Explain why or why not.%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\begin{exerciselist}
+\item[4.]\phantomsection\hypertarget{exercise-303}{\null}So long as \(x\) falls on the interval \(\ointerval{-\frac{\pi}{2}}{\frac{\pi}{2}}\), \(\fe{\tan^{-1}}{\fe{\tan}{x}}=x\). Use the chain rule to find \(\lzoo{x}{\fe{\tan^{-1}}{\fe{\tan}{x}}}\) and show that it simplifies as it should.%
+\par\smallskip
+\item[5.]\phantomsection\hypertarget{exercise-304}{\null}How does the formula \(\fe{g}{t}=\fe{\ln}{e^{5t}}\) simplify and what does this tell you about the formula for \(\fe{\fd{g}}{t}\)?  After answering those questions use the chain rule to find the formula for \(\fe{\fd{g}}{t}\) and show that it simplifies as it should.%
+\par\smallskip
+\end{exerciselist}
+\begin{exercisegroup}%
+Consider the function \(\fe{g}{t}=\fe{\ln}{\frac{5}{t^3\fe{\sec}{t}}}\).%
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-305}{\null}
+Find the formula for \(\fe{\fd{g}}{t}\) without first simplifying the formula for \(\fe{g}{t}\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{7. }\phantomsection\hypertarget{exercise-306}{\null}
+Use the quotient, product, and power rules \emph{of logarithms} to expand the formula for \(\fe{g}{t}\) into three logarithmic terms.  Then find \(\fe{\fd{g}}{t}\) by taking the derivative of the expanded version of \(g\). %
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{8. }\phantomsection\hypertarget{exercise-307}{\null}
+Show the two resultant fomulas are in fact the same. Also, reflect upon which process of differentiation was less work and easier to ``clean up''.%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\typeout{************************************************}
+\typeout{Section 6.4 Chain Rule with Leibniz Notation}
+\typeout{************************************************}
+\section[Chain Rule with Leibniz Notation]{Chain Rule with Leibniz Notation}\label{section-chain-rule-and-leibniz}
+So far we have worked with the chain rule as expressed using function notation.  In some applications it is easier to think of the chain rule using Leibniz notation. Consider the following example.%
+\begin{example}\label{example-17}
+During the 1990s, the amount of electricity used per day in Etown increased as a function of population at the rate of \SI{18}{\kilo\watt}/person.  On July 1, 1997, the population of Etown was \(100{,}000\) and the population was decreasing at a rate of 6 people/day.  In \hyperref[equation-leibniz-chain-example]{[men]
+~\ref*{equation-leibniz-chain-example}} we use these values to determine the rate at which electrical usage was changing (with respect to time) in Etown on 7/1/1997.  Please note that in this extremely simplified example we are ignoring all factors that contribute to citywide electrical usage other than population (such as temperature).%
+\begin{equation}\left(18\frac{\text{kW}}{\text{person}}\right)\left(-6\frac{\text{people}}{\text{day}}\right)=-108\frac{\text{kW}}{\text{day}}\label{equation-leibniz-chain-example}\end{equation}\par
+Let's define \(\fe{g}{t}\)  as the population of Etown \(t\) years after January 1, 1990 and \(\fe{f}{u}\) as the daily amount of electricity used in Etown when the population was \(u\).  From the given information, \(\fe{g}{7.5}=100{,}000\), \(\fe{\fd{g}}{7.5}=-6\), and \(\fe{\fd{f}}{u}=18\) for all values of \(u\).  If we let \(y=\fe{f}{u}\) where \(u=\fe{g}{t}\), then we have (from \hyperref[equation-leibniz-chain-example]{[men]
+~\ref*{equation-leibniz-chain-example}}):%
+\begin{equation}\left(\lzoa{y}{u}{u=100{,}000}\right)\left(\lzoa{u}{t}{t=7.5}\right)=\lzoa{y}{t}{t=7.5}\label{equation-second-leibniz-chain-example}\end{equation}\par
+You should note that \hyperref[equation-second-leibniz-chain-example]{[men]
+~\ref*{equation-second-leibniz-chain-example}} is an application of the chain rule expressed in Leibniz notation; specifically, the expression on the left side of the equal sign represents \(\fe{\fd{f}}{\fe{g}{7.5}}\fe{\fd{g}}{7.5}\).%
+\end{example}
+\par
+In general, we could express the chain rule as shown in \hyperref[equation-leibniz-chain-rule]{[men]
+~\ref*{equation-leibniz-chain-rule}}%
+\begin{equation}\lz{y}{x}=\lz{y}{u}\cdot\lz{u}{x}\label{equation-leibniz-chain-rule}\end{equation}\typeout{************************************************}
+\typeout{Exercises}
+\typeout{************************************************}
+\section*{Exercises}\label{exercises-41}
+
+\begin{exercisegroup}%
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-308}{\null}
+What is the meaning of \(\fe{f}{0.75}=7\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-309}{\null}
+What is the meaning of \(\fe{h}{7}=125\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-310}{\null}
+What is the meaning of \(\fe{\left(h\circ f\right)}{0.75}=125\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-311}{\null}
+What is the meaning of \(\lzoa{r}{t}{t=0.75}=-0.00003\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-312}{\null}
+What is the meaning of \(\lzoa{y}{r}{r=7}=8\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-313}{\null}
+Assuming that all of the previous values are for real, what is the value of \(\lzoa{y}{t}{t=0.75}\) and what does this value tell you about Carla?%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\begin{exercisegroup}%
+Portions of SW 35th Avenue are extremely hilly.  Suppose that you are riding your bike along SW 35th Ave from Vermont Street to Capitol Highway.  Let \(u=\fe{d}{t}\) be the distance you have traveled (\si{\foot}) where \(t\) is the number of seconds that have passed since you began your journey.  Suppose that \(y=\fe{e}{u}\) is the elevation (\si{\meter}) of SW 35th Ave where \(u\) is the distance (\si{\foot}) from Vermont St headed towards Capital Highway.%
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{7. }\phantomsection\hypertarget{exercise-314}{\null}
+What, including units, would be the meanings of \(\fe{d}{25}=300\), \(\fe{e}{300}=140\), and \(\fe{\left(e\circ d\right)}{25}=140\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{8. }\phantomsection\hypertarget{exercise-leibniz-chain-rule}{\null}
+What, including units, would be the meanings of \(\lzoa{u}{t}{t=25}=14\) and \(\lzoa{y}{u}{u=300}=-0.1\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{9. }\phantomsection\hypertarget{exercise-316}{\null}
+Suppose that the values stated in \hyperref[exercise-leibniz-chain-rule]{Exercise~8} are accurate. What, including unit, is the value of \(\lzoa{y}{t}{t=25}\)? What does this value tell you in the context of this problem?%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\begin{exercisegroup}%
+According to Hooke's Law, the force (\si{\pound}), \(F\), required to hold a spring in place when its displacement from the natural length of the spring is \(x\) (\si{\foot}), is given by the formula \(F=kx\) where \(k\) is called the \terminology{spring constant}.  The value of \(k\) varies from spring to spring.%
+\par
+Suppose that it requires \SI{120}{\pound} of force to hold a given spring \SI{1.5}{\foot} beyond its natural length.%
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{10. }\phantomsection\hypertarget{exercise-317}{\null}
+Find the spring constant for this spring. Include units when substituting the values for \(F\) and \(x\) into Hooke's Law so that you know the unit on \(k\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{11. }\phantomsection\hypertarget{exercise-318}{\null}
+What, including unit, is the constant value of \(\lz{F}{x}\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{12. }\phantomsection\hypertarget{exercise-319}{\null}
+Suppose that the spring is stretched at a constant rate of \SI{0.032}{\foot\per\second}.  If we define \(t\) to be the amount of time (\si{\second}) that passes since the stretching begins, what, including unit, is the constant value of \(\lz{x}{t}\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{13. }\phantomsection\hypertarget{exercise-320}{\null}
+Use the chain rule to find the constant value (including unit) of \(\lz{F}{t}\).  What is the contextual significance of this value?%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
 \typeout{************************************************}
 \typeout{Chapter 7 Implicit Differentiation}
 \typeout{************************************************}

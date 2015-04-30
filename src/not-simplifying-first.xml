@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-not-simplifying-first">
+    <title>Not Simplifying First</title>
+
+    <p>As always, you want to simplify an expression before jumping in to take its derivative.  Nevertheless, it can build confidence to see that the rules work even if you don't simplify first.</p>
+
+    <exercises> 
+        <exercisegroup> 
+            <introduction> 
+                <p>Consider the functions <m>\fe{f}{x}=\sqrt{x^2}</m> and <m>\fe{g}{x}=\left(\sqrt{x}\right)^2</m>.</p> 
+            </introduction> 
+            <exercise> 
+                <statement> 
+                    <p>Assuming that <m>x</m> is not negative, how does each of these formulas simplify?  Use the simplified formula to find the formulas for <m>\fe{\fd{f}}{x}</m> and <m>\fe{\fd{g}}{x}</m>.</p>
+                </statement> 
+            </exercise> 
+            <exercise> 
+                <statement> 
+                    <p>Use the chain rule (without first simplifying) to find the formulas for <m>\fe{\fd{f}}{x}</m> and <m>\fe{\fd{g}}{x}</m>; simplify each result (assuming that <m>x</m> is positive).</p>
+                </statement> 
+            </exercise> 
+            <exercise> 
+                <statement> 
+                    <p>Are <m>f</m> and <m>g</m> the same function? Explain why or why not.</p>
+                </statement> 
+            </exercise> 
+        </exercisegroup> 
+        <exercise>
+            <statement>
+                <p>So long as <m>x</m> falls on the interval <m>\ointerval{-\frac{\pi}{2}}{\frac{\pi}{2}}</m>, <m>\fe{\tan^{-1}}{\fe{\tan}{x}}=x</m>. Use the chain rule to find <m>\lzoo{x}{\fe{\tan^{-1}}{\fe{\tan}{x}}}</m> and show that it simplifies as it should.</p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>How does the formula <m>\fe{g}{t}=\fe{\ln}{e^{5t}}</m> simplify and what does this tell you about the formula for <m>\fe{\fd{g}}{t}</m>?  After answering those questions use the chain rule to find the formula for <m>\fe{\fd{g}}{t}</m> and show that it simplifies as it should.</p>
+            </statement>
+        </exercise>
+        <exercisegroup> 
+            <introduction> 
+                <p>Consider the function <m>\fe{g}{t}=\fe{\ln}{\frac{5}{t^3\fe{\sec}{t}}}</m>.</p>
+            </introduction> 
+            <exercise>
+                <statement>
+                    <p>Find the formula for <m>\fe{\fd{g}}{t}</m> without first simplifying the formula for <m>\fe{g}{t}</m>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Use the quotient, product, and power rules <em>of logarithms</em> to expand the formula for <m>\fe{g}{t}</m> into three logarithmic terms.  Then find <m>\fe{\fd{g}}{t}</m> by taking the derivative of the expanded version of <m>g</m>. </p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Show the two resultant fomulas are in fact the same. Also, reflect upon which process of differentiation was less work and easier to <q>clean up</q>.</p>
+                </statement>
+            </exercise>
+        </exercisegroup> 
+
+    </exercises> 
+
+</section>

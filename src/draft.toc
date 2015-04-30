@@ -40,9 +40,13 @@
 \contentsline {section}{\numberline {5.7}Product Rule}{61}{section.5.7}
 \contentsline {section}{\numberline {5.8}Quotient Rule}{63}{section.5.8}
 \contentsline {section}{\numberline {5.9}Simplification}{64}{section.5.9}
-\contentsline {section}{\numberline {5.10}Product and Quotient Rules Together}{65}{section.5.10}
+\contentsline {section}{\numberline {5.10}Product and Quotient Rules Together}{66}{section.5.10}
 \contentsline {section}{\numberline {5.11}Derivative Formulas and Function Behavior}{66}{section.5.11}
-\contentsline {chapter}{\numberline {6}The Chain Rule}{67}{chapter.6}
-\contentsline {chapter}{\numberline {7}Implicit Differentiation}{69}{chapter.7}
-\contentsline {chapter}{\numberline {8}Related Rates}{71}{chapter.8}
-\contentsline {chapter}{\numberline {9}Critical Numbers and Graphing from Formulas}{73}{chapter.9}
+\contentsline {chapter}{\numberline {6}The Chain Rule}{69}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction to the Chain Rule}{69}{section.6.1}
+\contentsline {section}{\numberline {6.2}Order to Apply Rules}{72}{section.6.2}
+\contentsline {section}{\numberline {6.3}Not Simplifying First}{72}{section.6.3}
+\contentsline {section}{\numberline {6.4}Chain Rule with Leibniz Notation}{73}{section.6.4}
+\contentsline {chapter}{\numberline {7}Implicit Differentiation}{77}{chapter.7}
+\contentsline {chapter}{\numberline {8}Related Rates}{79}{chapter.8}
+\contentsline {chapter}{\numberline {9}Critical Numbers and Graphing from Formulas}{81}{chapter.9}

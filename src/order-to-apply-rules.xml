@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-order-to-apply-rules">
+    <title>Order to Apply Rules</title>
+
+    <p>When finding derivatives of complex formulas you need to apply the rules for differentiation in the reverse of order of operations.  For example, when finding <m>\lzoo{x}{\fe{\sin}{x\,e^x}}</m> the first rule you need to apply is the derivative formula for <m>\fe{\sin}{u}</m> but when finding <m>\lzoo{x}{x\fe{\sin}{e^x}}</m> the first rule that needs to be applied is the product rule.</p> 
+
+    <exercises>
+        <exercisegroup cols="2">
+            <introduction>
+                <p>Find the first derivative formula for each function.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative (<eg/> <m>\fe{\fd{f}}{x}</m>).</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>\fe{f}{x}=\fe{\sin}{x\,e^x}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{g}{x}=x\fe{\sin}{e^x}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=\frac{\fe{\tan}{\fe{\ln}{x}}}{x}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>z=5t+\frac{\fe{\cos^2}{t^2}}{3}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{f}{y}=\fe{\sin}{\frac{\fe{\ln}{y}}{y}}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>G=x\fe{\sin^{-1}}{x\fe{\ln}{x}}</m></p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+
+    </exercises>
+</section>

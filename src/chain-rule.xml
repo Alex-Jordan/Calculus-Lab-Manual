@@ -10,13 +10,9 @@
 <chapter xml:id="chapter-chain-rule" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>The Chain Rule</title>
     
-<!--    <xi:include href="./introduction.xml" />
-    <xi:include href="./direct-sums.xml" />
-    <xi:include href="./orthogonal-complements.xml" />
-    <xi:include href="./invariant-subspaces.xml" />
-    <xi:include href="./reflectors.xml" />
-    <xi:include href="./projectors.xml" />
-    <xi:include href="./normal-matrices.xml" />
-    <xi:include href="./positive-semidefinite.xml" />-->
+    <xi:include href="./introduction-to-the-chain-rule.xml" />
+    <xi:include href="./order-to-apply-rules.xml" />
+    <xi:include href="./not-simplifying-first.xml" />
+    <xi:include href="./chain-rule-and-leibniz.xml" />
     
 </chapter>

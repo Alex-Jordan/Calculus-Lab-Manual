@@ -7,6 +7,84 @@
 <!-- Common thin layer                                                      -->
 <xsl:import href="clm-common.xsl" />
 
+<!-- GeoGebra HTML5-->
+<xsl:template match="geogebra-html5">
+    <xsl:element name="iframe">
+        <xsl:attribute name="scrolling">
+            <xsl:text>no</xsl:text>
+        </xsl:attribute>
+        <xsl:attribute name="style">
+            <xsl:text>border:0px;</xsl:text>
+        </xsl:attribute>
+        <xsl:attribute name="src">
+            <xsl:value-of select="@src"/>
+        </xsl:attribute>
+        <xsl:attribute name="width">
+            <xsl:value-of select="@width"/>
+        </xsl:attribute>
+        <xsl:attribute name="height">
+            <xsl:value-of select="@height"/>
+        </xsl:attribute>
+    </xsl:element>
+</xsl:template>
+
+
+<!-- webwork -->
+<xsl:template match="webwork">
+<!--    <xsl:element name="script">
+        <xsl:attribute name="src">
+            <xsl:text>http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js</xsl:text>
+        </xsl:attribute>
+    </xsl:element>
+    <xsl:element name="script">
+        <xsl:text>$(document).ready(function(){&#xa;</xsl:text>
+        <xsl:text>$( ".clickme" ).click(function() {&#xa;</xsl:text>
+        <xsl:text>  $( this).next().slideToggle( "slow", function() {&#xa;</xsl:text>
+        <xsl:text>        // Animation complete.&#xa;</xsl:text>
+        <xsl:text>      });&#xa;</xsl:text>
+        <xsl:text>    });&#xa;</xsl:text>
+        <xsl:text>});</xsl:text>
+    </xsl:element>
+    <xsl:element name="style">
+        <xsl:text>.clickme {background-color: #ccccFF ;}</xsl:text>
+    </xsl:element>
+    <xsl:element name="div">
+        <xsl:attribute name="class">
+            <xsl:text>clickme</xsl:text>
+        </xsl:attribute>
+        <xsl:text>Click here to reveal problem</xsl:text>
+    </xsl:element>
+-->    <xsl:element name="br"/>
+    <xsl:element name="div">
+        <xsl:attribute name="class">
+            <xsl:text>wwproblem</xsl:text>
+        </xsl:attribute>
+<!--        <xsl:attribute name="style">
+            <xsl:text>display: none;</xsl:text>
+        </xsl:attribute>
+-->    <xsl:element name="iframe">
+        <xsl:attribute name="style">
+            <xsl:text>height:360px; width:100%;</xsl:text>
+        </xsl:attribute>
+        <xsl:attribute name="name">
+            <xsl:text>Stack</xsl:text>
+        </xsl:attribute>
+        <xsl:attribute name="src">
+            <xsl:text>https://hosted2.webwork.rochester.edu/webwork2/html2xml?</xsl:text>
+            <xsl:text>&amp;answersSubmitted=0</xsl:text>
+            <xsl:text>&amp;sourceFilePath=</xsl:text>
+            <xsl:value-of select="@src"/>
+            <xsl:text>&amp;problemSeed=112358</xsl:text>
+            <xsl:text>&amp;courseID=2014_07_UR_demo</xsl:text>
+            <xsl:text>&amp;userID=daemon</xsl:text>
+            <xsl:text>&amp;password=daemon</xsl:text>
+            <xsl:text>&amp;outputformat=simple</xsl:text>
+        </xsl:attribute>
+    </xsl:element>
+    </xsl:element>
+</xsl:template>
+
+        
 
 <!-- description lists -->
 <xsl:template match="dl">

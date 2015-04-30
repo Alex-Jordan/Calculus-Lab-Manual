@@ -72,5 +72,16 @@
                 </statement>
             </exercise>
         </exercisegroup>
+        <exercise><title>This is just a prototype test of an embedded WeBWorK problem. It still has issues.</title>
+            <statement><webwork src="Library/ASU-topics/setCalculus/stef/stef3_7p1_mo.pg"/></statement>
+        </exercise>
+        <exercise><title>This is just a prototype of an embedded GeoGebra HTML5 worksheet.</title>
+             <statement>
+                 <p>Move the green <q>x</q> on the left <m>x</m>-axis back and forth (keeping <m>c=2</m>), and explain how this reveals that <m>\lzoo{x}{x^2}=2x</m>. Then explore the applet with other values of <m>c</m>.</p>
+                 <geogebra-html5 src="https://tube.geogebra.org/material/iframe/id/57821/width/656/height/329/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/auto" width="656px" height="329px"/>
+             </statement>
+
+        </exercise>
+
     </exercises>
 </section>
