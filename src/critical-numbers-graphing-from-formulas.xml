@@ -10,13 +10,12 @@
 <chapter xml:id="chapter-critical-numbers-graphing-from-formulas" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Critical Numbers and Graphing from Formulas</title>
     
-<!--    <xi:include href="./introduction.xml" />
-    <xi:include href="./direct-sums.xml" />
-    <xi:include href="./orthogonal-complements.xml" />
-    <xi:include href="./invariant-subspaces.xml" />
-    <xi:include href="./reflectors.xml" />
-    <xi:include href="./projectors.xml" />
-    <xi:include href="./normal-matrices.xml" />
-    <xi:include href="./positive-semidefinite.xml" />-->
+    <xi:include href="./motivation-for-critical-numbers.xml" />
+    <xi:include href="./local-extrema.xml" />
+    <xi:include href="./formal-identification-of-critical-numbers.xml" />
+    <xi:include href="./sign-tables-for-the-first-derivative.xml" />
+    <xi:include href="./inflection-points.xml" />
+    <xi:include href="./end-behavior.xml" />
+    <xi:include href="./making-graphs.xml" />
     
 </chapter>

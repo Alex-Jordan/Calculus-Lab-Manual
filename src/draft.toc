@@ -1,52 +1,66 @@
-\contentsline {chapter}{To the Student}{v}{chapter*.2}
-\contentsline {chapter}{To the Instructor}{vii}{chapter*.3}
+\contentsline {chapter}{Acknowledgements}{v}{chapter*.1}
+\contentsline {chapter}{To the Student}{vii}{chapter*.2}
+\contentsline {chapter}{To the Instructor}{ix}{chapter*.3}
 \contentsline {chapter}{\numberline {1}Rates Of Change}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Velocity}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Secant Line to a Curve}{2}{section.1.2}
+\contentsline {section}{\numberline {1.2}Secant Line to a Curve}{3}{section.1.2}
 \contentsline {section}{\numberline {1.3}The Difference Quotient}{4}{section.1.3}
-\contentsline {chapter}{\numberline {2}Limits and Continuity}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}Limits}{9}{section.2.1}
-\contentsline {section}{\numberline {2.2}Limits Laws}{12}{section.2.2}
-\contentsline {section}{\numberline {2.3}Indeterminate Limits}{13}{section.2.3}
-\contentsline {section}{\numberline {2.4}Limits at Infinity}{15}{section.2.4}
-\contentsline {section}{\numberline {2.5}Limits at Infinity Tending to Zero}{17}{section.2.5}
-\contentsline {section}{\numberline {2.6}Ratios of Infinities}{17}{section.2.6}
-\contentsline {section}{\numberline {2.7}Non-existent Limits}{18}{section.2.7}
-\contentsline {section}{\numberline {2.8}Vertical Asymptotes}{19}{section.2.8}
-\contentsline {section}{\numberline {2.9}Continuity}{22}{section.2.9}
-\contentsline {section}{\numberline {2.10}Discontinuities}{23}{section.2.10}
+\contentsline {section}{\numberline {1.4}Supplement}{8}{section.1.4}
+\contentsline {chapter}{\numberline {2}Limits and Continuity}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Limits}{11}{section.2.1}
+\contentsline {section}{\numberline {2.2}Limits Laws}{13}{section.2.2}
+\contentsline {section}{\numberline {2.3}Indeterminate Limits}{14}{section.2.3}
+\contentsline {section}{\numberline {2.4}Limits at Infinity}{16}{section.2.4}
+\contentsline {section}{\numberline {2.5}Limits at Infinity Tending to Zero}{18}{section.2.5}
+\contentsline {section}{\numberline {2.6}Ratios of Infinities}{19}{section.2.6}
+\contentsline {section}{\numberline {2.7}Non-existent Limits}{19}{section.2.7}
+\contentsline {section}{\numberline {2.8}Vertical Asymptotes}{21}{section.2.8}
+\contentsline {section}{\numberline {2.9}Continuity}{23}{section.2.9}
+\contentsline {section}{\numberline {2.10}Discontinuities}{24}{section.2.10}
 \contentsline {section}{\numberline {2.11}Continuity on an Interval}{24}{section.2.11}
 \contentsline {section}{\numberline {2.12}Discontinuous Formulas}{26}{section.2.12}
 \contentsline {section}{\numberline {2.13}Piecewise-Defined Functions}{26}{section.2.13}
-\contentsline {chapter}{\numberline {3}Introduction to the First Derivative}{29}{chapter.3}
-\contentsline {section}{\numberline {3.1}Instantaneous Velocity}{29}{section.3.1}
-\contentsline {section}{\numberline {3.2}Tangent Lines}{30}{section.3.2}
-\contentsline {section}{\numberline {3.3}The First Derivative}{32}{section.3.3}
-\contentsline {section}{\numberline {3.4}Derivative Units}{34}{section.3.4}
-\contentsline {chapter}{\numberline {4}Functions, Derivatives, and Antiderivatives}{37}{chapter.4}
-\contentsline {section}{\numberline {4.1}Graph Features}{37}{section.4.1}
-\contentsline {section}{\numberline {4.2}Graphical Derivatives}{38}{section.4.2}
-\contentsline {section}{\numberline {4.3}Nondifferentiability}{44}{section.4.3}
-\contentsline {section}{\numberline {4.4}Higher Order Derivatives}{46}{section.4.4}
-\contentsline {section}{\numberline {4.5}Antiderivatives}{47}{section.4.5}
-\contentsline {section}{\numberline {4.6}Graphical Features from Derivatives}{51}{section.4.6}
-\contentsline {chapter}{\numberline {5}Derivative Formulas}{57}{chapter.5}
-\contentsline {section}{\numberline {5.1}Leibniz Notation}{57}{section.5.1}
-\contentsline {section}{\numberline {5.2}The Derivative Operator}{57}{section.5.2}
-\contentsline {section}{\numberline {5.3}The Power Rule}{58}{section.5.3}
-\contentsline {section}{\numberline {5.4}The Constant Factor Rule}{59}{section.5.4}
-\contentsline {section}{\numberline {5.5}The Constant Divisor Rule}{60}{section.5.5}
-\contentsline {section}{\numberline {5.6}The Sum and Difference Rules}{60}{section.5.6}
-\contentsline {section}{\numberline {5.7}Product Rule}{61}{section.5.7}
-\contentsline {section}{\numberline {5.8}Quotient Rule}{63}{section.5.8}
-\contentsline {section}{\numberline {5.9}Simplification}{64}{section.5.9}
-\contentsline {section}{\numberline {5.10}Product and Quotient Rules Together}{66}{section.5.10}
-\contentsline {section}{\numberline {5.11}Derivative Formulas and Function Behavior}{66}{section.5.11}
-\contentsline {chapter}{\numberline {6}The Chain Rule}{69}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction to the Chain Rule}{69}{section.6.1}
-\contentsline {section}{\numberline {6.2}Order to Apply Rules}{72}{section.6.2}
-\contentsline {section}{\numberline {6.3}Not Simplifying First}{72}{section.6.3}
-\contentsline {section}{\numberline {6.4}Chain Rule with Leibniz Notation}{73}{section.6.4}
-\contentsline {chapter}{\numberline {7}Implicit Differentiation}{77}{chapter.7}
-\contentsline {chapter}{\numberline {8}Related Rates}{79}{chapter.8}
-\contentsline {chapter}{\numberline {9}Critical Numbers and Graphing from Formulas}{81}{chapter.9}
+\contentsline {section}{\numberline {2.14}Supplement}{28}{section.2.14}
+\contentsline {chapter}{\numberline {3}Introduction to the First Derivative}{33}{chapter.3}
+\contentsline {section}{\numberline {3.1}Instantaneous Velocity}{33}{section.3.1}
+\contentsline {section}{\numberline {3.2}Tangent Lines}{34}{section.3.2}
+\contentsline {section}{\numberline {3.3}The First Derivative}{36}{section.3.3}
+\contentsline {section}{\numberline {3.4}Derivative Units}{38}{section.3.4}
+\contentsline {chapter}{\numberline {4}Functions, Derivatives, and Antiderivatives}{41}{chapter.4}
+\contentsline {section}{\numberline {4.1}Graph Features}{41}{section.4.1}
+\contentsline {section}{\numberline {4.2}Graphical Derivatives}{42}{section.4.2}
+\contentsline {section}{\numberline {4.3}Nondifferentiability}{48}{section.4.3}
+\contentsline {section}{\numberline {4.4}Higher Order Derivatives}{50}{section.4.4}
+\contentsline {section}{\numberline {4.5}Antiderivatives}{51}{section.4.5}
+\contentsline {section}{\numberline {4.6}Graphical Features from Derivatives}{55}{section.4.6}
+\contentsline {chapter}{\numberline {5}Derivative Formulas}{61}{chapter.5}
+\contentsline {section}{\numberline {5.1}Leibniz Notation}{61}{section.5.1}
+\contentsline {section}{\numberline {5.2}The Derivative Operator}{61}{section.5.2}
+\contentsline {section}{\numberline {5.3}The Power Rule}{62}{section.5.3}
+\contentsline {section}{\numberline {5.4}The Constant Factor Rule}{63}{section.5.4}
+\contentsline {section}{\numberline {5.5}The Constant Divisor Rule}{64}{section.5.5}
+\contentsline {section}{\numberline {5.6}The Sum and Difference Rules}{65}{section.5.6}
+\contentsline {section}{\numberline {5.7}Product Rule}{66}{section.5.7}
+\contentsline {section}{\numberline {5.8}Quotient Rule}{67}{section.5.8}
+\contentsline {section}{\numberline {5.9}Simplification}{68}{section.5.9}
+\contentsline {section}{\numberline {5.10}Product and Quotient Rules Together}{70}{section.5.10}
+\contentsline {section}{\numberline {5.11}Derivative Formulas and Function Behavior}{70}{section.5.11}
+\contentsline {chapter}{\numberline {6}The Chain Rule}{73}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction to the Chain Rule}{73}{section.6.1}
+\contentsline {section}{\numberline {6.2}Order to Apply Rules}{76}{section.6.2}
+\contentsline {section}{\numberline {6.3}Not Simplifying First}{76}{section.6.3}
+\contentsline {section}{\numberline {6.4}Chain Rule with Leibniz Notation}{77}{section.6.4}
+\contentsline {chapter}{\numberline {7}Implicit Differentiation}{81}{chapter.7}
+\contentsline {section}{\numberline {7.1}General Implicit Differentiation}{81}{section.7.1}
+\contentsline {section}{\numberline {7.2}Derivatives of Inverse Functions}{84}{section.7.2}
+\contentsline {chapter}{\numberline {8}Related Rates}{87}{chapter.8}
+\contentsline {chapter}{\numberline {9}Critical Numbers and Graphing from Formulas}{89}{chapter.9}
+\contentsline {section}{\numberline {9.1}Motivation}{89}{section.9.1}
+\contentsline {section}{\numberline {9.2}Local Extrema}{90}{section.9.2}
+\contentsline {section}{\numberline {9.3}Formal Identification of Critical Numbers}{92}{section.9.3}
+\contentsline {section}{\numberline {9.4}Sign Tables for the First Derivative}{93}{section.9.4}
+\contentsline {section}{\numberline {9.5}Inflection Points}{96}{section.9.5}
+\contentsline {section}{\numberline {9.6}End Behavior}{97}{section.9.6}
+\contentsline {section}{\numberline {9.7}Making Graphs}{100}{section.9.7}
+\contentsline {chapter}{Solutions to Supplementary Exercises}{103}{chapter*.546}
+\contentsline {chapter}{Short Answers to Supplementary Exercises}{115}{chapter*.549}

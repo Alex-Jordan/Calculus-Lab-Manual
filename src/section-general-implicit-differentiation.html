@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<!--*                                    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2015-05-22T00:09:17-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CLM General Implicit Differentiation</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    TeX: {
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js"],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    
+    /* support for the sfrac command in MathJax (Beveled fraction)
+        see: https://github.com/mathjax/MathJax-docs/wiki/Beveled-fraction-like-sfrac,-nicefrac-bfrac */
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  var MML = MathJax.ElementJax.mml,
+      TEX = MathJax.InputJax.TeX;
+
+  TEX.Definitions.macros.sfrac = "myBevelFraction";
+
+  TEX.Parse.Augment({
+    myBevelFraction: function (name) {
+      var num = this.ParseArg(name),
+          den = this.ParseArg(name);
+      this.Push(MML.mfrac(num,den).With({bevelled: true}));
+    }
+  });
+});
+    </script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="http://sagecell.sagemath.org/static/jquery.min.js"></script><script src="http://sagecell.sagemath.org/embedded_sagecell.js"></script><script>
+$(function () {
+    // Make *any* div with class 'sage-compute' an executable Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.sage-compute',
+                           linked: true,
+                           evalButtonText: 'Evaluate'});
+});
+$(function () {
+    // Make *any* div with class 'sage-display' a visible, uneditable Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.sage-display',
+                           editor: 'codemirror-readonly',
+                           hide: ['evalButton', 'editorToggle', 'language']});
+});
+    </script><script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script><link href="http://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://aimath.org/knowl.js"></script><script src="http://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="http://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="http://aimath.org/mathbook/js/Mathbook.js"></script><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic%7CSource+Code+Pro:400" rel="stylesheet" type="text/css">
+<link href="http://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="http://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="../style/css/clm.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(
+% These macros are automatically generated from the "macros"
+% XML element.  Make permanent edits there.
+%
+%%%%%%%%%%%%%%%%%%%%%
+%
+%     Conveniences
+%
+%%%%%%%%%%%%%%%%%%%%%
+%
+%  Integers
+%  Usage:  \Z
+\newcommand{\Z}{\mathbb{Z}}
+%
+%  Real numbers, as set of scalars
+%  Usage:  \reals
+\newcommand{\reals}{\mathbb{R}}
+%
+%  n-space over real field
+%  Usage: \complex{integer-dimension}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+%
+%  evaluate a function
+%  Usage: \fe{function-name}{input}
+\newcommand{\fe}[2]{\mathop{{#1}{\left(#2\right)}}}
+%
+%  closed interval
+%  Usage: \cinterval{left-endpoint}{right-endpoint}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+%
+%  open interval
+%  Usage: \ointerval{left-endpoint}{right-endpoint}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+%
+%  closed-open interval
+%  Usage: \cointerval{left-endpoint}{right-endpoint}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+%
+%  open-closed interval
+%  Usage: \ocinterval{left-endpoint}{right-endpoint}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+%
+%  point
+%  Usage: \point{x}{y}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+%
+%  first derivative
+%  Usage: \fd{f}
+\newcommand{\fd}[1]{#1'}
+%
+%  second derivative
+%  Usage: \sd{f}
+\newcommand{\sd}[1]{#1''}
+%
+%  third derivative
+%  Usage: \td{f}
+\newcommand{\td}[1]{#1'''}
+%
+%  Leibniz notation
+%  Usage: \lz{y}{x}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+%
+%  higher Leibniz notation
+%  Usage: \lzn{n}{y}{x}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+%
+%  Leibniz operator
+%  Usage: \lzo{x}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+%
+%  Leibniz operator on ....
+%  Usage: \lzoo{x}{y}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+%
+%  higher Leibniz operator
+%  Usage: \lzon{x}{y}{n}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+%
+%  Leibniz operator at ....
+%  Usage: \lzoa{y}{x}{a}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+%
+%  Absolute Value
+%  Usage: \abs{x}
+\newcommand{\abs}[1]{\left|#1\right|}
+%
+
+
+
+    \newcommand{\tikzmark}[1]{}\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><span class="title">Portland Community College MTH 251 Lab Manual</span></h1>
+<p class="byline">Steve Simonds, Alex Jordan (Editor)</p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="chapter-implicit-differentiation.html">Previous</a><a class="up-button button toolbar-item" href="chapter-implicit-differentiation.html">Up</a><a class="next-button button toolbar-item" href="section-derivatives-of-inverse-functions.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter-implicit-differentiation.html">Previous</a><a class="up-button button toolbar-item" href="chapter-implicit-differentiation.html">Up</a><a class="next-button button toolbar-item" href="section-derivatives-of-inverse-functions.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html">Colophon</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="to-the-student.html">To the Student</a></li>
+<li><a href="to-the-instructor.html">To the Instructor</a></li>
+</ul>
+<h2 class="link"><a href="chapter-rates-of-change.html"><span class="codenumber">1</span><span class="title">Rates Of Change</span></a></h2>
+<ul>
+<li><a href="section-velocity.html">Velocity</a></li>
+<li><a href="section-secant.html">Secant Line to a Curve</a></li>
+<li><a href="section-difference-quotient.html">The Difference Quotient</a></li>
+<li><a href="rates-of-change-supplementary-exercises.html">Supplement</a></li>
+</ul>
+<h2 class="link"><a href="chapter-limits.html"><span class="codenumber">2</span><span class="title">Limits and Continuity</span></a></h2>
+<ul>
+<li><a href="section-limits.html">Limits</a></li>
+<li><a href="section-limit-laws.html">Limits Laws</a></li>
+<li><a href="section-indeterminate-limits.html">Indeterminate Limits</a></li>
+<li><a href="section-limits-at-infinity.html">Limits at Infinity</a></li>
+<li><a href="section-limits-at-infinity-tending-to-zero.html">Limits at Infinity Tending to Zero</a></li>
+<li><a href="section-ratios-of-infinities.html">Ratios of Infinities</a></li>
+<li><a href="section-nonexistent-limits.html">Non-existent Limits</a></li>
+<li><a href="section-vertical-asymptotes.html">Vertical Asymptotes</a></li>
+<li><a href="section-continuity.html">Continuity</a></li>
+<li><a href="section-discontinuities.html">Discontinuities</a></li>
+<li><a href="section-continuity-on-an-interval.html">Continuity on an Interval</a></li>
+<li><a href="section-discontinuous-formulas.html">Discontinuous Formulas</a></li>
+<li><a href="section-piecewise-defined-functions.html">Piecewise-Defined Functions</a></li>
+<li><a href="limits-and-continuity-supplementary-exercises.html">Supplement</a></li>
+</ul>
+<h2 class="link"><a href="chapter-introduction-first-derivative.html"><span class="codenumber">3</span><span class="title">Introduction to the First Derivative</span></a></h2>
+<ul>
+<li><a href="section-instantaneous-velocity.html">Instantaneous Velocity</a></li>
+<li><a href="section-tangent-lines.html">Tangent Lines</a></li>
+<li><a href="section-first-derivative.html">The First Derivative</a></li>
+<li><a href="section-derivative-units.html">Derivative Units</a></li>
+</ul>
+<h2 class="link"><a href="chapter-functions-derivatives-antiderivatives.html"><span class="codenumber">4</span><span class="title">Functions, Derivatives, and Antiderivatives</span></a></h2>
+<ul>
+<li><a href="section-graph-features.html">Graph Features</a></li>
+<li><a href="section-graphical-derivatives.html">Graphical Derivatives</a></li>
+<li><a href="section-nondifferentiability.html">Nondifferentiability</a></li>
+<li><a href="section-higher-order-derivatives.html">Higher Order Derivatives</a></li>
+<li><a href="section-antiderivatives.html">Antiderivatives</a></li>
+<li><a href="section-graphical-features-from-derivatives.html">Graphical Features from Derivatives</a></li>
+</ul>
+<h2 class="link"><a href="chapter-derivative-formulas.html"><span class="codenumber">5</span><span class="title">Derivative Formulas</span></a></h2>
+<ul>
+<li><a href="section-leibniz-notation.html">Leibniz Notation</a></li>
+<li><a href="section-derivative-operator.html">The Derivative Operator</a></li>
+<li><a href="section-power-rule.html">The Power Rule</a></li>
+<li><a href="section-constant-factor-rule.html">The Constant Factor Rule</a></li>
+<li><a href="section-constant-divisor-rule.html">The Constant Divisor Rule</a></li>
+<li><a href="section-sum-and-difference-rules.html">The Sum and Difference Rules</a></li>
+<li><a href="section-product-rule.html">Product Rule</a></li>
+<li><a href="section-quotient-rule.html">Quotient Rule</a></li>
+<li><a href="section-simplification.html">Simplification</a></li>
+<li><a href="section-product-and-quotient-together.html">Product and Quotient Rules Together</a></li>
+<li><a href="section-derivative-formulas-and-function-behavior.html">Derivative Formulas and Function Behavior</a></li>
+</ul>
+<h2 class="link"><a href="chapter-chain-rule.html"><span class="codenumber">6</span><span class="title">The Chain Rule</span></a></h2>
+<ul>
+<li><a href="section-introduction-to-the-chain-rule.html">Introduction to the Chain Rule</a></li>
+<li><a href="section-order-to-apply-rules.html">Order to Apply Rules</a></li>
+<li><a href="section-not-simplifying-first.html">Not Simplifying First</a></li>
+<li><a href="section-chain-rule-and-leibniz.html">Chain Rule with Leibniz Notation</a></li>
+</ul>
+<h2 class="link active"><a href="chapter-implicit-differentiation.html"><span class="codenumber">7</span><span class="title">Implicit Differentiation</span></a></h2>
+<ul>
+<li><a href="section-general-implicit-differentiation.html" class="active">General Implicit Differentiation</a></li>
+<li><a href="section-derivatives-of-inverse-functions.html">Derivatives of Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chapter-related-rates.html"><span class="codenumber">8</span><span class="title">Related Rates</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="chapter-critical-numbers-graphing-from-formulas.html"><span class="codenumber">9</span><span class="title">Critical Numbers and Graphing from Formulas</span></a></h2>
+<ul>
+<li><a href="section-motivation-for-critical-numbers.html">Motivation</a></li>
+<li><a href="section-local-extrema.html">Local Extrema</a></li>
+<li><a href="section-formal-identification-of-critical-numbers.html">Formal Identification of Critical Numbers</a></li>
+<li><a href="section-sign-tables-for-the-first-derivative.html">Sign Tables for the First Derivative</a></li>
+<li><a href="section-inflection-points.html">Inflection Points</a></li>
+<li><a href="section-end-behavior.html">End Behavior</a></li>
+<li><a href="section-making-graphs.html">Making Graphs</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html"><span class="title">Appendices</span></a></h2>
+<ul>
+<li><a href="appendix-1.html">Solutions to Supplementary Exercises</a></li>
+<li><a href="appendix-2.html">Short Answers to Supplementary Exercises</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="http://mathbook.pugetsound.edu">Authored in MathBook XML</a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-general-implicit-differentiation"><header><h1 class="heading">
+<span class="type">Activity</span><span class="codenumber">7.1</span><span class="title">General Implicit Differentiation</span>
+</h1></header><p>Some points that satisfy the equation \(y^3-4y=x^2-1\) are graphed in <a href="section-general-implicit-differentiation.html#figure-elliptic-curve">Figure&nbsp;7.1.1</a>.  Clearly this set of points does not constitute a function where \(y\) is a function of \(x\); for example, there are three points that have an \(x\)-coordinate of \(1\).</p>
+<figure id="figure-elliptic-curve" style="width:50%;"><object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-65.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object><figcaption style="text-align:center;"><span class="heading">Figure</span><span class="codenumber">7.1.1</span>\(y^3-4y=x^2-1\)</figcaption></figure><p>Nevertheless, there is a unique tangent line to the curve at each point on the curve and so long as the tangent line is not vertical it has a unique slope.  We still identify the value of this slope using the symbol \(\lz{y}{x}\), so it would be helpful if we had a formula for \(\lz{y}{x}\).  If we could solve \(y^3-4y=x^2-1\) for \(y\), finding the formula for \(\lz{y}{x}\) would be a snap.  Hopefully you quickly see that such an approach is just not possible.</p>
+<p>To get around this problem we are going to employ a technique called <em class="terminology">implicit differentiation</em>.  We use this technique to find the formula for \(\lz{y}{x}\) whenever the equation relating \(x\) and \(y\) is not explicitly solved for \(y\).  What we are going to do is treat \(y\) <em>as if it were</em> a function of \(x\) and set the derivatives of the two sides of the equation equal to one another.  This is actually a reasonable thing to do because so long as we are at a point on the curve where the tangent line is not vertical, we could make \(y\) a function of \(x\) using appropriate restrictions on the domain and range.</p>
+<p>Since we are treating \(y\) as a function of \(x\), we need to make sure that we use the chain rule when differentiating terms like \(y^3\).  When \(u\) is a function of \(x\), we know that \(\lzoo{x}{u^3}=3u^2\lzoo{x}{u}\). Since the name we give \(\lzoo{x}{y}\) is \(\lz{y}{x}\), it follows that when \(y\) is a function of \(x\), \(\lzoo{x}{y^3}=3y^2\lz{y}{x}\). The derivation of \(\lz{y}{x}\) for the equation \(y^3-4y=x^2-1\) is shown in <a knowl="./knowl/example-implicit-differentiation.html" knowl-id="xref-example-implicit-differentiation" title="">Example&nbsp;7.1.2</a></p>
+<article class="example-like" id="example-implicit-differentiation"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">7.1.2</span>
+</h5>
+<p>\begin{align*}
+y^3-4y&amp;=x^2-1\\
+\lzoo{x}{y^3-4y}&amp;=\lzoo{x}{x^2-1}&amp;&amp;\text{Differentiate both sides with respect to $x$.}\\
+3y^2\lz{y}{x}-4\lz{y}{x}&amp;=2x&amp;&amp;\text{Respect the chain rule with the $y$-terms.}\\
+\left(3y^2-4\right)\lz{y}{x}&amp;=2x&amp;&amp;\text{Begin to isolate $\lz{y}{x}$}\\
+\lz{y}{x}&amp;=\frac{2x}{3y^2-4}.
+\end{align*}</p></article><p>At first it might be unsettling that the formula for \(\lz{y}{x}\) contains both the variables \(x\) and \(y\). However, if you think it through you should conclude that the formula <em>must</em> include the variable \(y\); otherwise, how could the formula generate three different slopes at the points \(\point{1}{2}\), \(\point{1}{0}\), and \(\point{1}{-2}\)?  These slopes are given below.  The reader should verify their values by drawing lines onto <a href="section-general-implicit-differentiation.html#figure-elliptic-curve">Figure&nbsp;7.1.1</a> with the indicated slopes at the indicated points.\begin{align*}
+\lzoa{y}{x}{\point{1}{2}}&amp;=\frac{2(1)}{3(2)^2-4}&amp;\lzoa{y}{x}{\point{1}{0}}&amp;=\frac{2(1)}{3(0)^2-4}&amp;\lzoa{y}{x}{\point{1}{-2}}&amp;=\frac{2(1)}{3(-2)^2-4}\\
+&amp;=\frac{1}{4}&amp;&amp;=-\frac{1}{2}&amp;&amp;=\frac{1}{4}
+\end{align*}</p>
+<section class="exercises" id="exercises-44"><header><h1 class="heading">
+<span class="type">Exercises</span><span class="codenumber">7.1.1</span><span class="title">Exercises</span>
+</h1></header><div class="exercisegroup">
+<article class="introduction" id="introduction-79"><p>Use the process of implicit differentiation to find a formula for \(\lz{y}{x}\) for the curves generated by each of the following equations. Do not simplify the equations before taking the derivatives. You will need to use the product rule for differentiation in <a href="section-general-implicit-differentiation.html#exercise-implicit-middle">Exercises&nbsp;7.1.1.4</a>–<a href="section-general-implicit-differentiation.html#exercise-implicit-last">7.1.1.6</a>.</p></article><article class="exercise-like" id="exercise-378"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1</span>
+</h5>
+<p>\(3x^4=-6y^5\)</p></article><article class="exercise-like" id="exercise-379"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">2</span>
+</h5>
+<p>\(\fe{\sin}{x}=\fe{\sin}{y}\)</p></article><article class="exercise-like" id="exercise-380"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">3</span>
+</h5>
+<p>\(4y^2-2y=4x^2-2x\)</p></article><article class="exercise-like" id="exercise-implicit-middle"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">4</span>
+</h5>
+<p>\(x=y\,e^y\)</p></article><article class="exercise-like" id="exercise-implicit-lambert"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">5</span>
+</h5>
+<p>\(y=x\,e^x\)</p></article><article class="exercise-like" id="exercise-implicit-last"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">6</span>
+</h5>
+<p>\(xy=e^{xy-1}\)</p></article>
+</div>
+<article class="exercise-like" id="exercise-384"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">7</span>
+</h5>
+<p>Several points that satisfy the equation \(y=x\,e^y\) are graphed in <a href="section-general-implicit-differentiation.html#figure-lambert">Figure&nbsp;7.1.10</a>.  Find the slope and equation of the tangent line to this curve at the origin.  (Please note that you already found the formula for \(\lz{y}{x}\) in <a href="section-general-implicit-differentiation.html#exercise-implicit-lambert">Exercise&nbsp;7.1.1.5</a>.</p>
+<figure id="figure-lambert" style="width:50%;"><object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-66.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object><figcaption style="text-align:center;"><span class="heading">Figure</span><span class="codenumber">7.1.10</span>\(y=x\,e^y\)</figcaption></figure></article><div class="exercisegroup">
+<article class="introduction" id="introduction-80"><p>Consider the set of points that satisfy the equation \(x\,y=4\).</p></article><article class="exercise-like" id="exercise-385"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">8</span>
+</h5>
+<p>Use implicit differentiation to find a formula for \(\lz{y}{x}\).</p></article><article class="exercise-like" id="exercise-386"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">9</span>
+</h5>
+<p>Find a formula for \(\lz{y}{x}\) after first solving the equation \(\lz{y}{x}\) for \(y\).</p></article><article class="exercise-like" id="exercise-387"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">10</span>
+</h5>
+<p>Show that the two formulas are equivalent so long as \(x\,y=4\).</p></article>
+</div>
+<article class="exercise-like" id="exercise-388"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">11</span>
+</h5>
+<p>A set of points that satisfy the equation \(x\fe{\cos}{xy}=4-y\) is graphed in <a href="section-general-implicit-differentiation.html#figure-crazy-implicit">Figure&nbsp;7.1.15</a>.  Find the slope and equation of the tangent line to this curve at the point \(\point{0}{4}\).</p>
+<figure id="figure-crazy-implicit" style="width:50%;"><object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-67.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object><figcaption style="text-align:center;"><span class="heading">Figure</span><span class="codenumber">7.1.15</span>\(x\fe{\cos}{xy}=4-y\)</figcaption></figure></article></section></section></div></main>
+</div>
+</body>
+</html>

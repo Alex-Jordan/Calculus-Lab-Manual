@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<!--*                                    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2015-05-22T00:09:18-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CLM Solutions to Supplementary Exercises</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    TeX: {
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js"],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    
+    /* support for the sfrac command in MathJax (Beveled fraction)
+        see: https://github.com/mathjax/MathJax-docs/wiki/Beveled-fraction-like-sfrac,-nicefrac-bfrac */
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  var MML = MathJax.ElementJax.mml,
+      TEX = MathJax.InputJax.TeX;
+
+  TEX.Definitions.macros.sfrac = "myBevelFraction";
+
+  TEX.Parse.Augment({
+    myBevelFraction: function (name) {
+      var num = this.ParseArg(name),
+          den = this.ParseArg(name);
+      this.Push(MML.mfrac(num,den).With({bevelled: true}));
+    }
+  });
+});
+    </script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="http://sagecell.sagemath.org/static/jquery.min.js"></script><script src="http://sagecell.sagemath.org/embedded_sagecell.js"></script><script>
+$(function () {
+    // Make *any* div with class 'sage-compute' an executable Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.sage-compute',
+                           linked: true,
+                           evalButtonText: 'Evaluate'});
+});
+$(function () {
+    // Make *any* div with class 'sage-display' a visible, uneditable Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.sage-display',
+                           editor: 'codemirror-readonly',
+                           hide: ['evalButton', 'editorToggle', 'language']});
+});
+    </script><script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script><link href="http://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://aimath.org/knowl.js"></script><script src="http://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="http://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="http://aimath.org/mathbook/js/Mathbook.js"></script><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic%7CSource+Code+Pro:400" rel="stylesheet" type="text/css">
+<link href="http://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="http://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="../style/css/clm.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(
+% These macros are automatically generated from the "macros"
+% XML element.  Make permanent edits there.
+%
+%%%%%%%%%%%%%%%%%%%%%
+%
+%     Conveniences
+%
+%%%%%%%%%%%%%%%%%%%%%
+%
+%  Integers
+%  Usage:  \Z
+\newcommand{\Z}{\mathbb{Z}}
+%
+%  Real numbers, as set of scalars
+%  Usage:  \reals
+\newcommand{\reals}{\mathbb{R}}
+%
+%  n-space over real field
+%  Usage: \complex{integer-dimension}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+%
+%  evaluate a function
+%  Usage: \fe{function-name}{input}
+\newcommand{\fe}[2]{\mathop{{#1}{\left(#2\right)}}}
+%
+%  closed interval
+%  Usage: \cinterval{left-endpoint}{right-endpoint}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+%
+%  open interval
+%  Usage: \ointerval{left-endpoint}{right-endpoint}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+%
+%  closed-open interval
+%  Usage: \cointerval{left-endpoint}{right-endpoint}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+%
+%  open-closed interval
+%  Usage: \ocinterval{left-endpoint}{right-endpoint}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+%
+%  point
+%  Usage: \point{x}{y}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+%
+%  first derivative
+%  Usage: \fd{f}
+\newcommand{\fd}[1]{#1'}
+%
+%  second derivative
+%  Usage: \sd{f}
+\newcommand{\sd}[1]{#1''}
+%
+%  third derivative
+%  Usage: \td{f}
+\newcommand{\td}[1]{#1'''}
+%
+%  Leibniz notation
+%  Usage: \lz{y}{x}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+%
+%  higher Leibniz notation
+%  Usage: \lzn{n}{y}{x}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+%
+%  Leibniz operator
+%  Usage: \lzo{x}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+%
+%  Leibniz operator on ....
+%  Usage: \lzoo{x}{y}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+%
+%  higher Leibniz operator
+%  Usage: \lzon{x}{y}{n}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+%
+%  Leibniz operator at ....
+%  Usage: \lzoa{y}{x}{a}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+%
+%  Absolute Value
+%  Usage: \abs{x}
+\newcommand{\abs}[1]{\left|#1\right|}
+%
+
+
+
+    \newcommand{\tikzmark}[1]{}\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><span class="title">Portland Community College MTH 251 Lab Manual</span></h1>
+<p class="byline">Steve Simonds, Alex Jordan (Editor)</p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="backmatter-1.html">Previous</a><a class="up-button button toolbar-item" href="backmatter-1.html">Up</a><a class="next-button button toolbar-item" href="appendix-2.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="backmatter-1.html">Previous</a><a class="up-button button toolbar-item" href="backmatter-1.html">Up</a><a class="next-button button toolbar-item" href="appendix-2.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html">Colophon</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="to-the-student.html">To the Student</a></li>
+<li><a href="to-the-instructor.html">To the Instructor</a></li>
+</ul>
+<h2 class="link"><a href="chapter-rates-of-change.html"><span class="codenumber">1</span><span class="title">Rates Of Change</span></a></h2>
+<ul>
+<li><a href="section-velocity.html">Velocity</a></li>
+<li><a href="section-secant.html">Secant Line to a Curve</a></li>
+<li><a href="section-difference-quotient.html">The Difference Quotient</a></li>
+<li><a href="rates-of-change-supplementary-exercises.html">Supplement</a></li>
+</ul>
+<h2 class="link"><a href="chapter-limits.html"><span class="codenumber">2</span><span class="title">Limits and Continuity</span></a></h2>
+<ul>
+<li><a href="section-limits.html">Limits</a></li>
+<li><a href="section-limit-laws.html">Limits Laws</a></li>
+<li><a href="section-indeterminate-limits.html">Indeterminate Limits</a></li>
+<li><a href="section-limits-at-infinity.html">Limits at Infinity</a></li>
+<li><a href="section-limits-at-infinity-tending-to-zero.html">Limits at Infinity Tending to Zero</a></li>
+<li><a href="section-ratios-of-infinities.html">Ratios of Infinities</a></li>
+<li><a href="section-nonexistent-limits.html">Non-existent Limits</a></li>
+<li><a href="section-vertical-asymptotes.html">Vertical Asymptotes</a></li>
+<li><a href="section-continuity.html">Continuity</a></li>
+<li><a href="section-discontinuities.html">Discontinuities</a></li>
+<li><a href="section-continuity-on-an-interval.html">Continuity on an Interval</a></li>
+<li><a href="section-discontinuous-formulas.html">Discontinuous Formulas</a></li>
+<li><a href="section-piecewise-defined-functions.html">Piecewise-Defined Functions</a></li>
+<li><a href="limits-and-continuity-supplementary-exercises.html">Supplement</a></li>
+</ul>
+<h2 class="link"><a href="chapter-introduction-first-derivative.html"><span class="codenumber">3</span><span class="title">Introduction to the First Derivative</span></a></h2>
+<ul>
+<li><a href="section-instantaneous-velocity.html">Instantaneous Velocity</a></li>
+<li><a href="section-tangent-lines.html">Tangent Lines</a></li>
+<li><a href="section-first-derivative.html">The First Derivative</a></li>
+<li><a href="section-derivative-units.html">Derivative Units</a></li>
+</ul>
+<h2 class="link"><a href="chapter-functions-derivatives-antiderivatives.html"><span class="codenumber">4</span><span class="title">Functions, Derivatives, and Antiderivatives</span></a></h2>
+<ul>
+<li><a href="section-graph-features.html">Graph Features</a></li>
+<li><a href="section-graphical-derivatives.html">Graphical Derivatives</a></li>
+<li><a href="section-nondifferentiability.html">Nondifferentiability</a></li>
+<li><a href="section-higher-order-derivatives.html">Higher Order Derivatives</a></li>
+<li><a href="section-antiderivatives.html">Antiderivatives</a></li>
+<li><a href="section-graphical-features-from-derivatives.html">Graphical Features from Derivatives</a></li>
+</ul>
+<h2 class="link"><a href="chapter-derivative-formulas.html"><span class="codenumber">5</span><span class="title">Derivative Formulas</span></a></h2>
+<ul>
+<li><a href="section-leibniz-notation.html">Leibniz Notation</a></li>
+<li><a href="section-derivative-operator.html">The Derivative Operator</a></li>
+<li><a href="section-power-rule.html">The Power Rule</a></li>
+<li><a href="section-constant-factor-rule.html">The Constant Factor Rule</a></li>
+<li><a href="section-constant-divisor-rule.html">The Constant Divisor Rule</a></li>
+<li><a href="section-sum-and-difference-rules.html">The Sum and Difference Rules</a></li>
+<li><a href="section-product-rule.html">Product Rule</a></li>
+<li><a href="section-quotient-rule.html">Quotient Rule</a></li>
+<li><a href="section-simplification.html">Simplification</a></li>
+<li><a href="section-product-and-quotient-together.html">Product and Quotient Rules Together</a></li>
+<li><a href="section-derivative-formulas-and-function-behavior.html">Derivative Formulas and Function Behavior</a></li>
+</ul>
+<h2 class="link"><a href="chapter-chain-rule.html"><span class="codenumber">6</span><span class="title">The Chain Rule</span></a></h2>
+<ul>
+<li><a href="section-introduction-to-the-chain-rule.html">Introduction to the Chain Rule</a></li>
+<li><a href="section-order-to-apply-rules.html">Order to Apply Rules</a></li>
+<li><a href="section-not-simplifying-first.html">Not Simplifying First</a></li>
+<li><a href="section-chain-rule-and-leibniz.html">Chain Rule with Leibniz Notation</a></li>
+</ul>
+<h2 class="link"><a href="chapter-implicit-differentiation.html"><span class="codenumber">7</span><span class="title">Implicit Differentiation</span></a></h2>
+<ul>
+<li><a href="section-general-implicit-differentiation.html">General Implicit Differentiation</a></li>
+<li><a href="section-derivatives-of-inverse-functions.html">Derivatives of Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chapter-related-rates.html"><span class="codenumber">8</span><span class="title">Related Rates</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="chapter-critical-numbers-graphing-from-formulas.html"><span class="codenumber">9</span><span class="title">Critical Numbers and Graphing from Formulas</span></a></h2>
+<ul>
+<li><a href="section-motivation-for-critical-numbers.html">Motivation</a></li>
+<li><a href="section-local-extrema.html">Local Extrema</a></li>
+<li><a href="section-formal-identification-of-critical-numbers.html">Formal Identification of Critical Numbers</a></li>
+<li><a href="section-sign-tables-for-the-first-derivative.html">Sign Tables for the First Derivative</a></li>
+<li><a href="section-inflection-points.html">Inflection Points</a></li>
+<li><a href="section-end-behavior.html">End Behavior</a></li>
+<li><a href="section-making-graphs.html">Making Graphs</a></li>
+</ul>
+<h2 class="link active"><a href="backmatter-1.html"><span class="title">Appendices</span></a></h2>
+<ul>
+<li><a href="appendix-1.html" class="active">Solutions to Supplementary Exercises</a></li>
+<li><a href="appendix-2.html">Short Answers to Supplementary Exercises</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="http://mathbook.pugetsound.edu">Authored in MathBook XML</a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="appendix" id="appendix-1"><header><h1 class="heading">
+<span class="type">Appendix</span><span class="codenumber">1</span><span class="title">Solutions to Supplementary Exercises</span>
+</h1></header><section class="exercises" id=""><h1 class="heading">
+<span class="type">Exercises</span><span class="codenumber">1.4.1</span><span class="title"></span>
+</h1>
+<article class="exercise-like" id="exercise-30"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">1.4.1.1</span><span class="title"></span>
+</h5>
+<p>The difference quotient for \(z\) is \begin{align*}
+\frac{\fe{z}{x+h}-\fe{z}{x}}{h}&amp;=\frac{\left[2+4(x+h)-(x+h)^2\right]-\left[2+4x-x^2\right]}{h}\\
+&amp;=\frac{2+4x+4h-x^2-2xh-h^2-2-4x+x^2}{h}\\
+&amp;=\frac{4h-2xh-h^2}{h}\\
+&amp;=\frac{h(4-2x-h)}{h}\\
+&amp;=4-2x-h\quad\text{for $h\neq0$}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-31"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">1.4.1.2</span><span class="title"></span>
+</h5>
+<p>The rise between the two points is \(9\) and the run is \(3\), so the slope between the two points is given by \(\frac{9}{3}=3\).</p>
+<p>Using the difference quotient, if we let \(x=-1\) and \(h=3\) we get\begin{align*}
+4-2x-h&amp;=4-2(-1)-3\\
+&amp;=3\quad\checkmark
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-32"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">1.4.1.3</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+\frac{\fe{z}{4+h}-\fe{z}{4}}{h}&amp;=4-2(4)-h\\
+&amp;=-4-h
+\end{align*}</p>
+<figure id="table-5"><figcaption style="text-align:center;"><span class="heading">Table</span><span class="codenumber">1.4.6</span>\(\frac{\fe{z}{4+h}-\fe{z}{4}}{h}\)</figcaption><table class="center"><table>
+<tr>
+<td class="l b2 r0 l0 t3">\(h\)</td>
+<td class="l b2 r0 l0 t3">\(\frac{\fe{z}{4+h}-\fe{z}{4}}{h}\)</td>
+</tr>
+<tr>
+<td class="l b0 r0 l0 t0">\(-0.1\)</td>
+<td class="l b0 r0 l0 t0">\(-3.9\)</td>
+</tr>
+<tr>
+<td class="l b0 r0 l0 t0">\(-0.01\)</td>
+<td class="l b0 r0 l0 t0">\(-3.99\)</td>
+</tr>
+<tr>
+<td class="l b0 r0 l0 t0">\(-0.001\)</td>
+<td class="l b0 r0 l0 t0">\(-3.999\)</td>
+</tr>
+<tr>
+<td class="l b0 r0 l0 t0">\(\phantom{-}0.001\)</td>
+<td class="l b0 r0 l0 t0">\(\phantom{-}3.999\)</td>
+</tr>
+<tr>
+<td class="l b0 r0 l0 t0">\(\phantom{-}0.01\)</td>
+<td class="l b0 r0 l0 t0">\(\phantom{-}3.99\)</td>
+</tr>
+<tr>
+<td class="l b3 r0 l0 t0">\(\phantom{-}0.1\)</td>
+<td class="l b3 r0 l0 t0">\(\phantom{-}3.9\)</td>
+</tr>
+</table></table></figure></article></article><article class="exercise-like" id="exercise-upside-down-parabola-slope"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">1.4.1.4</span><span class="title"></span>
+</h5>
+<p>The values are converging on \(-4\).</p></article></article><article class="exercise-like" id="exercise-34"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">1.4.1.5</span><span class="title"></span>
+</h5>
+<figure id="figure-4" style="width:50%;"><object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-4.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object><figcaption style="text-align:center;"><span class="heading">Figure</span><span class="codenumber">1.4.9</span>\(y=2+4x-x^2\)</figcaption></figure></article></article><article class="exercise-like" id="exercise-35"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">1.4.1.6</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+\frac{\fe{f}{x+h}-\fe{f}{x}}{h}&amp;=\frac{\left[3-7(x+h)\right]-\left[3-7x\right]}{h}\\
+&amp;=\frac{3-7x-7h-3+7x}{h}\\
+&amp;=\frac{-7h}{h}\\
+&amp;=-7\quad\text{for $h\neq0$}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-36"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">1.4.1.7</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+\frac{\fe{g}{x+h}-\fe{g}{x}}{h}&amp;=\frac{\frac{7}{x+h+4}-\frac{7}{x+4}}{h}\\
+&amp;=\frac{\frac{7}{x+h+4}-\frac{7}{x+4}}{h}\frac{(x+h+4)(x+4)}{(x+h+4)(x+4)}\\
+&amp;=\frac{7(x+4)-7(x+h+4)}{h(x+h+4)(x+4)}\\
+&amp;=\frac{7x+28-7x-7h-28}{h(x+h+4)(x+4)}\\
+&amp;=\frac{-7h}{h(x+h+4)(x+4)}\\
+&amp;=\frac{-7}{(x+h+4)(x+4)}\quad\text{for $h\neq0$}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-37"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">1.4.1.8</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+\frac{\fe{z}{x+h}-\fe{z}{x}}{h}&amp;=\frac{\pi-\pi}{h}\\
+&amp;=\frac{0}{h}\\
+&amp;=0\quad\text{for $h\neq0$}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-38"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">1.4.1.9</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+\frac{\fe{s}{t+h}-\fe{s}{t}}{h}&amp;=\frac{\left[(t+h)^3-(t+h)-9\right]-\left[t^3-t-9\right]}{h}\\
+&amp;=\frac{t^3+3t^2h+3th^2+h^3-t-h-9-t^3+t+9}{h}\\
+&amp;=\frac{3t^2h+3th^2+h^3-h}{h}\\
+&amp;=\frac{h(3t^2+3th+h^2-1)}{h}\\
+&amp;=3t^2+3th+h^2-1\quad\text{for $h\neq0$}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-39"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">1.4.1.10</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+&amp;\phantom{={}}\frac{\fe{k}{t+h}-\fe{k}{t}}{h}\\
+&amp;=\frac{\frac{(t+h-8)^2}{t+h}-\frac{(t-8)^2}{t}}{h}\\
+&amp;=\frac{\frac{t^2+th-8t+th+h^2-8h-8t-8h+64}{t+h}-\frac{t^2-8t-8t+64}{t}}{h}\\
+&amp;=\frac{\frac{t^2+2th-16t+h^2-16h+64}{t+h}-\frac{t^2-16t+64}{t}}{h}\frac{t(t+h)}{t(t+h)}\\
+&amp;=\frac{(t^2+2th-16t+h^2-16h+64)t-(t^2-16t+64)(t+h)}{ht(t+h)}\\
+&amp;=\frac{t^3+2t^2h-16t^2+th^2-16th+64t-t^3-t^2h+16t^2+16th-64t-64h}{ht(t+h)}\\
+&amp;=\frac{t^2h+th^2-64h}{ht(t+h)}\\
+&amp;=\frac{h(t^2+th-64)}{ht(t+h)}\\
+&amp;=\frac{t^2+th-64}{t(t+h)}\quad\text{for $h\neq0$}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-40"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">1.4.1.11</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+&amp;\phantom{={}}\frac{\fe{s}{t+h}-\fe{s}{t}}{h}i\\
+&amp;=\frac{\left[150+60(t+h)-16(t+h)^2\right]-\left[150+60t-16t^2\right]}{h}\\
+&amp;=\frac{150+60t+60h-16t^2-32th-16h^2-150-60t+16t^2}{h}\\
+&amp;=\frac{60h-32th-16h^2}{h}\\
+&amp;=\frac{(60-32t-16h)}{h}\\
+&amp;=60-32t-16h\quad\text{for $h\neq0$}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-41"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">1.4.1.12</span><span class="title"></span>
+</h5>
+<p>Letting \(t=4\) and \(h=0.2\) we have (from the difference quotient):\begin{align*}
+60-32t-16h&amp;=60-32(4)-16(0.2)\\
+&amp;=-71.2
+\end{align*}So the average velocity is -71.2 <sup>ft</sup>⁄<sub>s</sub></p>
+<p>Checking:\begin{align*}
+\frac{\fe{s}{4.2}-\fe{s}{4}}{4.2-4}&amp;=\frac{119.76-134}{0.2}\\
+&amp;=-7.12\quad\text{(Phew!)}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-42"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">1.4.1.13</span><span class="title"></span>
+</h5>
+<p>\(\frac{\fe{v}{7.5}-\fe{v}{0}}{7.5-0}=-13\frac{1}{3}\). This value tells us that during the first 7.5 s of descent, the average rate of change in the coaster's velocity is \(-13\frac{1}{3}\,\frac{\text{ft/s}}{\text{s}}\).  In other words, <em>on average</em>, with each passing second the velocity is \(13\frac{1}{3}\,\text{ft}{s}\) less than it was the preceding second.  We could also say that the average acceleration experienced by the coaster over the first 7.5 s of descent is \(-13\frac{1}{3}\,\frac{\text{ft/s}}{\text{s}}\).</p></article></article><article class="exercise-like" id="exercise-43"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">1.4.1.14</span><span class="title"></span>
+</h5>
+<p>\(\frac{\fe{h}{3}-\fe{h}{1.5}}{3-1.5}=0\). This value tells us that the average velocity experienced by the ball between the 1.5th second of play and the third second of play is 0 <sup>m</sup>⁄<sub>s</sub>.  Please note that this does not imply that the ball doesn’t move; it simply means that the ball is at the same elevation at the two times.</p></article></article><article class="exercise-like" id="exercise-44"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">1.4.1.15</span><span class="title"></span>
+</h5>
+<p>\(\frac{\fe{P}{29}-\fe{P}{1}}{29-1}=-0.1\). This value tells us that between the first swing and the 29th swing the average rate of change in the pendulum's period is \(-0.1\frac{\text{s}}{\text{swing}}\).  In other words, <em>on average</em>, with each passing swing the period decreases by a tenth of a second.</p></article></article><article class="exercise-like" id="exercise-45"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">1.4.1.16</span><span class="title"></span>
+</h5>
+<p>\(\frac{\fe{h}{120}-\fe{h}{60}}{120-60}=0.13\). This value tells us that during the second minute of flight, the average rate of change in the rocket's acceleration is 0.13 <sup>mph</sup>⁄<sub>s s</sub>.  In other words, <em>on average</em>, with each passing second the acceleration  is 0.13 <sup>mph</sup>⁄<sub>s</sub> more than it was the preceding second.  You might have noticed that since the acceleration function is linear, the rate of change in the acceleration is constant.  That is, with each passing second the acceleration <em>actually is</em> 0.13 <sup>mph</sup>⁄<sub>s</sub> more than it was the preceding second.</p></article></article></section><section class="exercises" id=""><h1 class="heading">
+<span class="type">Exercises</span><span class="codenumber">2.14.1</span><span class="title"></span>
+</h1>
+<article class="exercise-like" id="exercise-limits-supplement-first"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.1</span><span class="title"></span>
+</h5>
+<p>The relevant pattern in the \(y\) column is that \(y\) appears to be positive and growing by a little more than a factor of \(10\) every time \(t\) is negative and grows by a factor of \(10\). It's not guaranteed, but this suggest that \(\lim\limits_{t\to-\infty}\fe{g}{t}=\infty\). In this circumstance, we say that \(\lim\limits_{t\to-\infty}\fe{g}{t}\) does not exist.</p></article></article><article class="exercise-like" id="exercise-139"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.2</span><span class="title"></span>
+</h5>
+<p>The relevant pattern in the \(y\) column is the powers of \(10\).  The first nonzero digit is moving farther and farther to the right of the decimal point. So the \(y\)-values are approaching zero. This suggest that \(\lim\limits_{x\to\infty}\fe{f}{x}=0\). So \(\lim\limits_{x\to\infty}\fe{f}{x}\) exists.</p></article></article><article class="exercise-like" id="exercise-140"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.3</span><span class="title"></span>
+</h5>
+<p>You should definitely recognize decimals approaching common fractions.  Good catch if you noted the \(t\) was approaching \(\frac{1}{3}\) only from the left. The suggested limit is \(\lim\limits_{t\to\frac{1}{3}^{-}}\fe{z}{t}=\frac{2}{3}\), and this (one-sided) limit exists.</p></article></article><article class="exercise-like" id="exercise-141"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.4</span><span class="title"></span>
+</h5>
+<p>Stay focused when determining “from the left” or “from the right”; that can get tricky…especially when the numbers are negative.  The limit suggested here is \(\lim\limits_{\theta\to-1^{+}}\fe{g}{\theta}=3{,}000{,}000\). So this limit exists.</p></article></article><article class="exercise-like" id="exercise-limits-supplement-last"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.5</span><span class="title"></span>
+</h5>
+<p>The last entry in the output column is the same in the previous exercise.  Hopefully you recognized that you need to look at the pattern in the output, not just the last entry.  Recognizing that \(t\) approaches \(\frac{7}{9}\) might requires some guessing and checking. The limit suggested here is \(\lim\limits_{t\to\frac{7}{9}^{+}}\fe{T}{t}=\infty\). So we say that this limit does not exist.</p></article></article><article class="exercise-like" id="exercise-143"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.6</span><span class="title"></span>
+</h5>
+<object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-16.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object></article></article><article class="exercise-like" id="exercise-144"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.7</span><span class="title"></span>
+</h5>
+<object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-19.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object></article></article><article class="exercise-like" id="exercise-145"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.8</span><span class="title"></span>
+</h5>
+<p>\(f\) is discontinuous from both directions at \(0\) and the discontinuity is not removable. \(f\) is discontinuous at \(3\) although it is continuous from the left at \(3\).  The discontinuity is not removable.  (The problem is that the limits are different from the left and right of \(3\).) \(f\) is discontinuous from both directions at \(4\) but the discontinuity is removable (\(\lim\limits_{x\to4}\fe{f}{x}=1\)). \(f\) is discontinuous from both directions at \(2\pi\) but the discontinuity is removable (\(\lim\limits_{x\to2\pi}\fe{f}{x}=1\)).</p></article></article><article class="exercise-like" id="exercise-146"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.9</span><span class="title"></span>
+</h5>
+<p>Because the two formulas are polynomials, the only number where continuity is at issue is \(3\).  The top formula is used at \(3\), so \(\fe{g}{3}\) is defined regardless of the value of \(k\).  Basically all we need to do is ensure that the limits from the left and the right of \(3\) are both equal to \(\fe{g}{3}\).  We have: \begin{align*}
+\fe{g}{3}&amp;=9+2k&amp;\lim_{t\to3^{+}}\fe{g}{t}&amp;=9+2k&amp;\lim_{t\to3^{-}}\fe{g}{t}7&amp;=9-4k
+\end{align*}So \(g\) will be continuous at \(3\) (and, consequently, over \(\ointerval{-\infty}{\infty}\)) if and only if \(9+2k=9-4k\).  This gives us \(k=0\).  Doh!  Turns out the \(g\) isn't piecewise at all, it's simply the parabolic function \(\fe{g}{t}=t^2\).</p></article></article><article class="exercise-like" id="exercise-147"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.10</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to4^{-}}\left(5-\frac{1}{x-4}\right)=\infty\). This limit does not exist.</p></article></article><article class="exercise-like" id="exercise-148"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.11</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+\lim\limits_{x\to\infty}\frac{e^{\sfrac{2}{x}}}{e^{\sfrac{1}{x}}}&amp;=\lim\limits_{x\to\infty}e^{\sfrac{1}{x}}\\
+&amp;=e^{\lim_{x\to\infty}\frac{1}{x}}&amp;&amp;\text{LL A6}\\
+&amp;=e^{0}&amp;&amp;\text{LL R3}\\
+&amp;=1&amp;&amp;\text{This limit does exist.}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-149"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.12</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+\lim\limits_{x\to2^{+}}\frac{x^2-4}{x^2+4}&amp;=\frac{\lim\limits_{x\to2^{+}}\left(x^2-4\right)}{\lim\limits_{x\to2^{+}}\left(x^2+4\right)}&amp;&amp;\text{LL A5}\\
+&amp;=\frac{\lim\limits_{x\to2^{+}}x^2-\lim\limits_{x\to2^{+}}4}{\lim\limits_{x\to2^{+}}x^2+\lim\limits_{x\to2^{+}}4}&amp;&amp;\text{LL A1 and A2}\\
+&amp;=\frac{\left(\lim\limits_{x\to2^{+}}x\right)^2-\lim\limits_{x\to2^{+}}4}{\left(\lim\limits_{x\to2^{+}}x\right)^2+\lim\limits_{x\to2^{+}}4}&amp;&amp;\text{LL A6}\\
+&amp;=\frac{2^2-4}{2^2+4}&amp;&amp;\text{LL R1 and R2}\\
+&amp;=0&amp;&amp;\text{This limit does exist.}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-150"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.13</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+&amp;\phantom{={}}\lim\limits_{x\to2^{+}}\frac{x^2-4}{x^2-4x+4}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{0}{0}$}\\
+&amp;=\lim\limits_{x\to2^{+}}\frac{(x-2)(x+2)}{(x-2)^2}\\
+&amp;=\lim\limits_{x\to2^{+}}\frac{x+2}{x-2}&amp;&amp;\text{LL A7}\\
+&amp;=\infty&amp;&amp;\text{This limit does not exist.}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-151"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.14</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+&amp;\phantom{={}}\lim\limits_{x\to\infty}\frac{\fe{\ln}{x}+\fe{\ln}{x^6}}{7\fe{\ln}{x^2}}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{\infty}{\infty}$}\\
+&amp;=\lim\limits_{x\to\infty}\frac{\fe{\ln}{x}+6\fe{\ln}{x}}{14\fe{\ln}{x}}\\
+&amp;=\lim\limits_{x\to\infty}\frac{7\fe{\ln}{x}}{14\fe{\ln}{x}}\\
+&amp;=\lim\limits_{x\to\infty}\frac{1}{2}&amp;&amp;\text{LL A7}\\
+&amp;=\frac{1}{2}&amp;&amp;\text{LL R2}
+\end{align*}So this limit does exist.</p></article></article><article class="exercise-like" id="exercise-152"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.15</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+&amp;\phantom{={}}\lim\limits_{x\to-\infty}\frac{3x^3+2x}{3x-2x^3}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{\infty}{\infty}$}\\
+&amp;=\lim\limits_{x\to-\infty}\frac{3x^3+2x}{3x-2x^3}\\
+&amp;=\lim\limits_{x\to-\infty}\frac{3x^3+2x}{3x-2x^3}\frac{\sfrac{1}{x^3}}{\sfrac{1}{x^3}}\\
+&amp;=\lim\limits_{x\to-\infty}\frac{3+\frac{2}{x^2}}{\frac{3}{x^2}-2}\\
+&amp;=\frac{\lim\limits_{x\to-\infty}\left(3+\frac{2}{x^2}\right)}{\lim\limits_{x\to-\infty}\left(\frac{3}{x^2}-2\right)}&amp;&amp;\text{LL A5}\\
+&amp;=\frac{\lim\limits_{x\to-\infty}3+\lim\limits_{x\to-\infty}\frac{2}{x^2}}{\lim\limits_{x\to-\infty}\frac{3}{x^2}-\lim\limits_{x\to-\infty}2}&amp;&amp;\text{LL A1 and A2}\\
+&amp;=\frac{3+0}{0-2}&amp;&amp;\text{LL R2 and R3}\\
+&amp;=-\frac{3}{2}&amp;&amp;\text{This limit exists.}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-153"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.16</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+&amp;\phantom{={}}\lim\limits_{x\to\infty}\fe{\sin}{\frac{\pi e^{3x}}{2e^x+4e^{3x}}}\\
+&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi e^{3x}}{2e^x+4e^{3x}}}&amp;&amp;\text{LL A6}\\
+&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi e^{3x}}{2e^x+4e^{3x}}}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{\infty}{\infty}$}\\
+&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi e^{3x}}{2e^x+4e^{3x}}\frac{\sfrac{1}{e^{3x}}}{\sfrac{1}{e^{3x}}}}\\
+&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi}{\frac{2}{e^{2x}}+4}}\\
+&amp;=\fe{\sin}{\frac{\lim\limits_{x\to\infty}\pi}{\lim\limits_{x\to\infty}\left(\frac{2}{e^{2x}}+4\right)}}&amp;&amp;\text{LL A5}\\
+&amp;=\fe{\sin}{\frac{\lim\limits_{x\to\infty}\pi}{\lim\limits_{x\to\infty}\frac{2}{e^{2x}}+\lim\limits_{x\to\infty}4}}&amp;&amp;\text{LL A1}\\
+&amp;=\fe{\sin}{\frac{\pi}{0+4}}&amp;&amp;\text{LL R2 and R3}\\
+&amp;=\frac{1}{\sqrt{2}}&amp;&amp;\text{This limit does exist.}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-154"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.17</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to\infty}\frac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}\) does not exist because the domain of the function \(\frac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}\) is \(\emptyset\) (the empty set). There are no \(x\)-values where \(\frac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}\) is defined.</p></article></article><article class="exercise-like" id="exercise-155"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.18</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+&amp;\phantom{={}}\lim\limits_{x\to5}\sqrt{\frac{x^2-12x+35}{5-x}}\\
+&amp;=\sqrt{\lim\limits_{x\to5}\frac{(x-5)(x-7)}{5-x}}&amp;&amp;\text{LL A6}\\
+&amp;=\sqrt{\lim\limits_{x\to5}\frac{(x-5)(x-7)}{5-x}}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{0}{0}$}\\
+&amp;=\sqrt{\lim\limits_{x\to5}(x-7)\cdot-1}&amp;&amp;\text{LL A7}\\
+&amp;=\sqrt{\lim\limits_{x\to5}(7-x)}\\
+&amp;=\sqrt{\lim\limits_{x\to5}7-\lim\limits_{x\to5}x}&amp;&amp;\text{LL A2}\\
+&amp;=\sqrt{7-5}&amp;&amp;\text{LL R1 and R2}\\
+&amp;=\sqrt{2}&amp;&amp;\text{This limit does exist.}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-156"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.19</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+&amp;\phantom{={}}\lim\limits_{h\to0}\frac{4(3+h)^2-5(3+h)-21}{h}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{0}{0}$}\\
+&amp;=\lim\limits_{h\to0}\frac{4(9+6h+h^2)-15-5h-21}{h}\\
+&amp;=\lim\limits_{h\to0}\frac{36+24h+4h^2-15-5h-21}{h}\\
+&amp;=\lim\limits_{h\to0}\frac{19h+4h^2}{h}\\
+&amp;=\lim\limits_{h\to0}\frac{h(19+4h)}{h}\\
+&amp;=\lim\limits_{h\to0}\left(19+4h\right)&amp;&amp;\text{LL A7}\\
+&amp;=\lim\limits_{h\to0}19+\lim\limits_{h\to0}4h&amp;&amp;\text{LL A1}\\
+&amp;=\lim\limits_{h\to0}19+4\lim\limits_{h\to0}h&amp;&amp;\text{LL A3}\\
+&amp;=19+4\cdot0&amp;&amp;\text{LL R1 and R2}\\
+&amp;=19&amp;&amp;\text{This limit does exist.}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-157"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.20</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+\lim\limits_{h\to0}\frac{5h^2+3}{2-3h^2}&amp;=\frac{\lim\limits_{h\to0}\left(5h^2+3\right)}{\lim\limits_{h\to0}\left(2-3h^2\right)}&amp;&amp;\text{LL A5}\\
+&amp;=\frac{\lim\limits_{h\to0}\left(5h^2\right)+\lim\limits_{h\to0}3}{\lim\limits_{h\to0}2-\lim\limits_{h\to0}\left(3h^2\right)}&amp;&amp;\text{LL A1 and A2}\\
+&amp;=\frac{5\lim\limits_{h\to0}h^2+\lim\limits_{h\to0}3}{\lim\limits_{h\to0}2-3\lim\limits_{h\to0}h^2}&amp;&amp;\text{LL A3}\\
+&amp;=\frac{5\left(\lim\limits_{h\to0}h\right)^2+\lim\limits_{h\to0}3}{\lim\limits_{h\to0}2-3\left(\lim\limits_{h\to0}h\right)^2}&amp;&amp;\text{LL A6}\\
+&amp;=\frac{5\cdot0^2+3}{2-3\cdot0^2}&amp;&amp;\text{LL R1 and R2}\\
+&amp;=\frac{3}{2}&amp;&amp;\text{This limit does exist.}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-158"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.21</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+&amp;\phantom{={}}\lim\limits_{h\to0}\frac{\sqrt{9-h}-3}{h}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{0}{0}$}\\
+&amp;=\lim\limits_{h\to0}\left(\frac{\sqrt{9-h}-3}{h}\cdot\frac{\sqrt{9-h}+3}{\sqrt{9-h}+3}\right)\\
+&amp;=\lim\limits_{h\to0}\left(\frac{(9-h)-9}{h\left(\sqrt{9-h}+3\right)}\right)\\
+&amp;=\lim\limits_{h\to0}\left(\frac{-h}{h\left(\sqrt{9-h}+3\right)}\right)\\
+&amp;=\lim\limits_{h\to0}\left(\frac{-1}{\sqrt{9-h}+3}\right)&amp;&amp;\text{LL A7}\\
+&amp;=\frac{\lim\limits_{h\to0}(-1)}{\lim\limits_{h\to0}\left(\sqrt{9-h}+3\right)}&amp;&amp;\text{LL A5}\\
+&amp;=\frac{\lim\limits_{h\to0}(-1)}{\lim\limits_{h\to0}\sqrt{9-h}+\lim\limits_{h\to0}3}&amp;&amp;\text{LL A1}\\
+&amp;=\frac{\lim\limits_{h\to0}(-1)}{\sqrt{\lim\limits_{h\to0}(9-h)}+\lim\limits_{h\to0}3}&amp;&amp;\text{LL A6}\\
+&amp;=\frac{\lim\limits_{h\to0}(-1)}{\sqrt{\lim\limits_{h\to0}9-\lim\limits_{h\to0}h}+\lim\limits_{h\to0}3}&amp;&amp;\text{LL A2}\\
+&amp;=\frac{-1}{\sqrt{9-0}+3}&amp;&amp;\text{LL R1 and R2}\\
+&amp;=-\frac{1}{6}&amp;&amp;\text{This limit does exist.}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-159"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.22</span><span class="title"></span>
+</h5>
+<p>\begin{align*}
+&amp;\phantom{={}}\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\sin}{\theta+\frac{\pi}{2}}}{\fe{\sin}{2\theta+\pi}}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{0}{0}$}\\
+&amp;=\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\cos}{\theta}}{-\fe{\sin}{2\theta}}&amp;&amp;\text{Trig identities}\\
+&amp;=\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\cos}{\theta}}{-2\fe{\sin}{\theta}\fe{\cos}{\theta}}&amp;&amp;\text{Double angle identity}\\
+&amp;=\lim\limits_{\theta\to\frac{\pi}{2}}\frac{1}{-2\fe{\sin}{\theta}}&amp;&amp;\text{LL A7}\\
+&amp;=\frac{\lim\limits_{\theta\to\frac{\pi}{2}}1}{\lim\limits_{\theta\to\frac{\pi}{2}}\left(-2\fe{\sin}{\theta}\right)}&amp;&amp;\text{LL A5}\\
+&amp;=\frac{\lim\limits_{\theta\to\frac{\pi}{2}}1}{-2\lim\limits_{\theta\to\frac{\pi}{2}}\fe{\sin}{\theta}}&amp;&amp;\text{LL A3}\\
+&amp;=\frac{\lim\limits_{\theta\to\frac{\pi}{2}}1}{-2\fe{\sin}{\lim\limits_{\theta\to\frac{\pi}{2}}\theta}}&amp;&amp;\text{LL A6}\\
+&amp;=\frac{1}{-2\fe{\sin}{\frac{\pi}{2}}}&amp;&amp;\text{LL R1 and R2}\\
+&amp;=-\frac{1}{2}&amp;&amp;\text{This limit does exist.}
+\end{align*}</p></article></article><article class="exercise-like" id="exercise-160"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.23</span><span class="title"></span>
+</h5>
+<p>The numerator approaches \(-\infty\) and the denominator approaches \(0\) from the positive side. So the ratio becomes large and negative without bound. We say \(\lim\limits_{x\to0^{+}}\frac{\fe{\ln}{x^e}}{\fe{\ln}{e^x}}=-\infty\) and the limit does not exist.</p></article></article><article class="exercise-like" id="exercise-161"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.24</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to\infty}e^x=\infty\). This limit does not exist.</p></article></article><article class="exercise-like" id="exercise-162"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.25</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to-\infty}e^x=0\). This limit exists.</p></article></article><article class="exercise-like" id="exercise-163"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.26</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to0}e^x=1\). This limit exists.</p></article></article><article class="exercise-like" id="exercise-164"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.27</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to\infty}e^{-x}=0\). This limit exists.</p></article></article><article class="exercise-like" id="exercise-165"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.28</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to-\infty}e^{-x}=\infty\). This limit does not exist.</p></article></article><article class="exercise-like" id="exercise-166"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.29</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to0}e^{-x}=1\). This limit exists.</p></article></article><article class="exercise-like" id="exercise-167"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.30</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to\infty}\fe{\ln}{x}=\infty\). This limit does not exist.</p></article></article><article class="exercise-like" id="exercise-168"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.31</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to1}\fe{\ln}{x}=0\). This limit exists.</p></article></article><article class="exercise-like" id="exercise-169"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.32</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to0^{+}}\fe{\ln}{x}=-\infty\). This limit does not exist.</p></article></article><article class="exercise-like" id="exercise-170"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.33</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to\infty}\frac{1}{x}=0\). This limit exists.</p></article></article><article class="exercise-like" id="exercise-171"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.34</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to-\infty}\frac{1}{x}=0\). This limit exists.</p></article></article><article class="exercise-like" id="exercise-172"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.35</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to0^{+}}\frac{1}{x}=\infty\). This limit does not exist.</p></article></article><article class="exercise-like" id="exercise-173"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.36</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to0^{-}}\frac{1}{x}=-\infty\). This limit does not exist.</p></article></article><article class="exercise-like" id="exercise-174"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.37</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to\infty}e^{\sfrac{1}{x}}=1\). This limit exists.</p></article></article><article class="exercise-like" id="exercise-175"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.38</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to\infty}\frac{1}{e^x}=0\). This limit exists.</p></article></article><article class="exercise-like" id="exercise-176"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.39</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to-\infty}\frac{1}{e^x}=\infty\). This limit does not exist.</p></article></article><article class="exercise-like" id="exercise-177"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.40</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to\infty}\frac{1}{e^{-x}}=\infty\). This limit does not exist.</p></article></article><article class="exercise-like" id="exercise-178"><article class="example-like"><h5 class="heading">
+<span class="type">Solution</span><span class="codenumber">2.14.1.41</span><span class="title"></span>
+</h5>
+<p>\(\lim\limits_{x\to-\infty}\frac{1}{e^{-x}}=0\). This limit exists.</p></article></article></section></section></div></main>
+</div>
+</body>
+</html>

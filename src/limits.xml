@@ -21,104 +21,63 @@
     <p>Most of the time the value of a function at the number <m>a</m> and the limit of the function as <m>x</m> approaches <m>a</m> are in fact the same number. When this occurs we say that the function is <term>continuous</term> at <m>a</m>. However, to help you better understand the concept of limit we need to have you confront situations where the function value and limit value are not equal to one another. Graphs can be useful for helping distinguish function values from limit values, so that is the perspective you are going to use in the first couple of problems in this lab.</p>
 
     <exercises>
-
         <exercise>
             <statement>
-                <p>Several function values and limit values for the function in <xref ref="figure-first-limit"/> are given below. You and your group mates should take turns reading the equations aloud. Make sure that you read the symbols correctly, that's part of what you are learning! Also, discuss why the values are what they are and make sure that you get help from your instructor to clear up any confusion.</p>
-                <todo>sidebyside</todo>
-                <todo>aside about one-sided limit notation</todo>
-
-                <p><md>
-                <mrow>\fe{f}{-2}&amp;=6&amp;\text{but}&amp;&amp;\lim_{x\to-2}\fe{f}{x}&amp;=3</mrow>
-                <mrow>\fe{f}{-4}&amp;\text{ is undefined}&amp;\text{but}&amp;&amp;\lim_{x\to-4}\fe{f}{x}&amp;=2</mrow>
+                <p>Several function values and limit values for the function in <xref ref="figure-first-limit"/> are given below.</p>
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>You and your group mates should take turns reading the equations aloud. Make sure that you read the symbols correctly, that's part of what you are learning! Also, discuss why the values are what they are and make sure that you get help from your instructor to clear up any confusion.<md>
+                        <mrow>\fe{f}{-2}&amp;=6&amp;\text{but}&amp;&amp;\lim_{x\to-2}\fe{f}{x}&amp;=3</mrow>
+                        <mrow>\fe{f}{-4}&amp;\text{ is undefined}&amp;\text{but}&amp;&amp;\lim_{x\to-4}\fe{f}{x}&amp;=2</mrow>
                 <mrow>\fe{f}{1}&amp;=-1&amp;\text{but}&amp;&amp;\lim_{x\to1}\fe{f}{x}&amp;\text{ does not exist}</mrow>
-                <mrow>\underbrace{\lim_{x\to1^{-}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the left}\end{array}}&amp;=-3&amp;\text{but}&amp;&amp;\underbrace{\lim_{x\to1^{+}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the right}\end{array}}&amp;=-1</mrow>
-                </md></p>
+                        </md></p>
+                    </paragraphs>
 
-                <figure xml:id="figure-first-limit">
-                    <caption><m>f</m></caption>
-                    <image xml:id="image-first-limit">
-                        <description>The graph of a discontinuous function.</description>
-                        <latex-image-code>
-                        <![CDATA[\begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot[
-                               pccplot,
-                                ->
-                                ]coordinates{
-                                    (1,-3)
-                                    (-3,5)
-                                    (-6.9,-6.7)};
-                            \addplot[
-                                pccplot,
-                                ->
-                                ]coordinates{
-                                    (1,-1)
-                                    (6.9,4.9)};
-                            \addplot[
-                                soldot,
-                                ]coordinates{
-                                    (-2,6)
-                                    (1,-1)};
-                            \addplot[
-                                holdot,
-                                ]coordinates{
-                                    (-4,2)
-                                    (-2,3)
-                                    (1,-3)};
-                        \end{axis}
-                        \end{tikzpicture}]]>
-                        </latex-image-code>
-                    </image>
-                </figure>
+                    <figure width="40%" valign="top" xml:id="figure-first-limit">
+                        <caption><m>f</m></caption>
+                        <image xml:id="image-first-limit">
+                            <description>The graph of a discontinuous function.</description>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot[
+                                   pccplot,
+                                    ->
+                                    ]coordinates{
+                                        (1,-3)
+                                        (-3,5)
+                                        (-6.9,-6.7)};
+                                \addplot[
+                                    pccplot,
+                                    ->
+                                    ]coordinates{
+                                        (1,-1)
+                                        (6.9,4.9)};
+                                \addplot[
+                                    soldot,
+                                    ]coordinates{
+                                        (-2,6)
+                                        (1,-1)};
+                                \addplot[
+                                    holdot,
+                                    ]coordinates{
+                                        (-4,2)
+                                        (-2,3)
+                                        (1,-3)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+                <p><m>\begin{aligned}\underbrace{\lim_{x\to1^{-}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the left}\end{array}}&amp;=-3&amp;\text{but}&amp;&amp;\underbrace{\lim_{x\to1^{+}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the right}\end{array}}=-1\end{aligned}</m></p>
             </statement>
         </exercise>
 
-        <todo>exercisegroup could have cols</todo>
-        <exercisegroup cols="4">
+        <beginmulticols/>
+        <exercisegroup cols="2" by="row">
             <introduction>
                 <p>Copy each of the following expressions onto your paper and either state the value or state that the value is undefined or doesn't exist. Make sure that when discussing the values you use proper terminology. All expressions are in reference to the function <m>g</m> shown in <xref ref="figure-second-limit"/>.</p>
-
-                <figure xml:id="figure-second-limit">
-                    <caption><m>g</m></caption>
-                    <image xml:id="image-second-limit">
-                        <description>A graph of a doscontinuous function.</description>
-                        <latex-image-code>
-                        <![CDATA[\begin{tikzpicture}
-                        \begin{axis}[xlabel = {$t$},]
-                            \addplot[
-                                pccplot,
-                                ->,
-                                ]coordinates{
-                                    (-2,5)
-                                    (-6.9,-2.35)};
-                            \addplot[
-                                pccplot,
-                                -,
-                                ]coordinates{
-                                    (-2,-3.5)
-                                    (3,-1)};
-                            \addplot[
-                                pccplot,
-                                ->,
-                                domain=3:6.9,
-                                ]{(x-4)^2-2};
-                            \addplot[
-                                soldot,
-                                ]coordinates{
-                                    (-2,5)
-                                    (5,1)};
-                            \addplot[
-                                holdot,
-                                ]coordinates{
-                                    (-2,-3.5)
-                                    (2,-1.5)
-                                    (5,-1)};
-                        \end{axis}
-                        \end{tikzpicture}]]>
-                        </latex-image-code>
-                    </image>
-                </figure>
 
             </introduction> 
 
@@ -196,11 +155,70 @@
 
         </exercisegroup>
 
+                    <figure xml:id="figure-second-limit">
+                        <caption><m>g</m></caption>
+                        <image xml:id="image-second-limit">
+                            <description>A graph of a doscontinuous function.</description>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xlabel = {$t$},]
+                                \addplot[
+                                    pccplot,
+                                    ->,
+                                    ]coordinates{
+                                        (-2,5)
+                                        (-6.9,-2.35)};
+                                \addplot[
+                                    pccplot,
+                                    -,
+                                    ]coordinates{
+                                        (-2,-3.5)
+                                        (3,-1)};
+                                \addplot[
+                                    pccplot,
+                                    ->,
+                                    domain=3:6.9,
+                                    ]{(x-4)^2-2};
+                                \addplot[
+                                    soldot,
+                                    ]coordinates{
+                                        (-2,5)
+                                        (5,1)};
+                                \addplot[
+                                    holdot,
+                                    ]coordinates{
+                                        (-2,-3.5)
+                                        (2,-1.5)
+                                        (5,-1)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
 
+        <endmulticols/>
+
+        <beginmulticols/>
         <exercisegroup>
             <introduction>
                 <p>Values of the function <m>f</m>, where <m>\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}</m> are shown in <xref ref="table-rational-function-values"/>. Both of the questions below are in reference to this function.</p>
 
+            </introduction>
+
+            <exercise>
+                <statement>
+                    <p>What is the value of <m>\fe{f}{5}</m>?</p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>What is the value of <m>\lim\limits_{x\to5}\frac{3x^2-16x+5}{2x^2-13x+15}</m>?</p>
+                </statement>
+            </exercise>
+
+        </exercisegroup>
+        <columnbreak/>
                 <table xml:id="table-rational-function-values">
                     <caption><m>\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}</m></caption>
                     <tabular top="major">
@@ -237,26 +255,27 @@
                         </row>
                     </tabular>
                 </table>
+        <endmulticols/>
+
+        <beginmulticols/>
+        <exercisegroup>
+            <introduction>
+                <p>Values of the function <m>p</m> where <m>\fe{p}{t}=\sqrt{t-12}</m> are shown in <xref ref="table-square-root-values"/>. Both of the questions below are in reference to this function.</p>
             </introduction>
 
             <exercise>
                 <statement>
-                    <p>What is the value of <m>\fe{f}{5}</m>?</p>
+                    <p>What is the value of <m>\fe{p}{21}</m>?</p>
                 </statement>
             </exercise>
 
             <exercise>
                 <statement>
-                    <p>What is the value of <m>\lim\limits_{x\to5}\frac{3x^2-16x+5}{2x^2-13x+15}</m>?</p>
+                    <p>What is the value of <m>\lim\limits_{t\to21}\sqrt{t-12}</m>?</p>
                 </statement>
             </exercise>
-
         </exercisegroup>
-
-        <exercisegroup>
-            <introduction>
-                <p>Values of the function <m>p</m> where <m>\fe{p}{t}=\sqrt{t-12}</m> are shown in <xref ref="table-square-root-values"/>. Both of the questions below are in reference to this function.</p>
-
+        <columnbreak/>
                 <table xml:id="table-square-root-values">
                     <caption><m>\fe{p}{t}=\sqrt{t-12}</m></caption>
                     <tabular top="major">
@@ -293,21 +312,7 @@
                         </row>
                     </tabular>
                 </table>
-            </introduction>
-
-            <exercise>
-                <statement>
-                    <p>What is the value of <m>\fe{p}{21}</m>?</p>
-                </statement>
-            </exercise>
-
-            <exercise>
-                <statement>
-                    <p>What is the value of <m>\lim\limits_{t\to21}\sqrt{t-12}</m>?</p>
-                </statement>
-            </exercise>
-
-        </exercisegroup>
+        <endmulticols/>
 
         <exercisegroup cols="3">
             <introduction>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-local-extrema">
+    <title>Local Extrema</title>
+
+    <p>The vertex of the parabola in <xref ref="exercise-parabola-vertex"/> is called a <term>local maximum point</term> and the points <m>\point{2}{C_3}</m> and <m>\point{2}{C_4}</m> in <xref ref="exercise-distinguish-graphs-by-critical-nature"/> are called <term>local minimum points</term>.  Collectively, these points are called <term>local extreme points</term>.</p>
+
+    <p>While working <xref ref="section-motivation-for-critical-numbers"/> you hopefully came to the conclusion that the local extreme points had certain characteristics in common.  In the first place, they must occur at a number in the domain of the function (which eliminated <m>f_1</m> and <m>f_2</m> from contention in <xref ref="exercise-distinguish-graphs-by-critical-nature"/>).  Secondly, one of two things must be true about the first derivative when a function has a local extreme point; it either has a value of zero or it does not exist.  This leads us to the definition of a <term>critical number</term> of a function.</p>
+
+    <definition xml:id="definition-critical-numbers">
+        <title>Critical Numbers</title>
+        <statement>
+            <p>If <m>f</m> is a function, then we define the <term>critical numbers</term> of <m>f</m> as the numbers in the domain of <m>f</m> where the value of <m>f</m> is either zero or does not exist.</p>
+        </statement> 
+    </definition>
+
+    <exercises>
+        <exercise>
+            <statement>
+                <p>The function <m>g</m> shown in <xref ref="figure-vertical-moment"/> has a vertical tangent line at <m>-3</m>.  Veronica says that <m>-3</m> is a critical number of <m>g</m> but Tito disagrees. Tito contends that <m>-3</m> is not a critical number because <m>g</m> does not have a local extreme point at <m>-3</m>.  Who is right?</p>
+
+                <figure xml:id="figure-vertical-moment">
+                    <caption><m>y=\fe{g}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[
+                                xmin=-8,
+                                xmax=2,
+                                xtick={-8,-6,...,2},
+                                minor xtick={-8,-7,...,2},
+                                ytick={-5,-4,...,5},
+                                minor ytick={-5,-4,...,5},
+                                ymin=-5,
+                                ymax=5,
+                                samples=100,
+                                ]
+                                \addplot[pccplot,domain=-8:2]{-(x+3)/abs(x+3)*abs((x+3))^(1/3)-1};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                </figure>
+            </statement>
+        </exercise>
+        <exercisegroup>
+            <introduction>
+                <p>Answer each of the following questions (using complete sentences) in reference to the function <m>f</m> shown in <xref ref="figure-lots-of-critical-points"/>.</p> 
+
+                <figure xml:id="figure-lots-of-critical-points">
+                    <caption><m>y=\fe{f}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[
+                                ]
+                                \addplot[pccplot,domain=-6.9:-5.35]{-1/(x+5)^2+2};
+                                \addplot[pccplot,domain=-4.65:-3,<-]{-1/(x+5)^2+2};
+                                \addplot[pccplot,domain=-3:2,-]{x^2-5};
+                                \addplot[pccplot,domain=2:5,-,samples=80]{(abs(x-4))^(1/3)*(x-4)/(abs(x-4))+3};
+                                \addplot[pccplot,domain=5:6.9,->]{4-(x-5)^(0.9)};
+                                \addplot[holdot] coordinates {
+                                    (-3,1.75)
+                                    (-3,4)
+                                    (2,-1)
+                                };
+                                \addplot[soldot] coordinates {(2,1.74)};
+                                \addplot[asymptote] coordinates {(-5,-7) (-5,7)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                </figure>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>What are the critical numbers of <m>f</m>?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>What are the local extreme points on <m>f</m>?  Classify the points as local minimums or local maximums and remember that points on the plane are represented by ordered pairs.</p> 
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>What is the absolute maximum value of <m>f</m> over the interval <m>\ointerval{-7}{7}</m>.  Please note that the function value is the value of the <m>y</m>-coordinate at the point on the curve and as such is a number.</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <p>Decide whether each of the following statements is true or false.</p> 
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>True or False? A function always has a local extreme point at each of its critical numbers.</p> 
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>True or False? If the point <m>\point{t_1}{\fe{h}{t_1}}</m> is a local minimum point on <m>h</m>, then <m>t_1</m> must be a critical number of <m>h</m>.</p> 
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>True or False? If <m>\fe{\fd{g}}{2.7}=0</m>, then <m>g</m> must have a local extreme point at <m>2.7</m>.</p> 
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>True or False? If <m>\fe{\fd{g}}{2.7}=0</m>, then <m>2.7</m> must be a critical number of <m>g</m>.</p> 
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>True or False? If <m>\fe{\fd{g}}{9}</m> does not exist, then <m>9</m> must be a critical number of <m>g</m>.</p> 
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</section>

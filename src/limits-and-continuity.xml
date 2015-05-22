@@ -23,6 +23,6 @@
     <xi:include href="./continuity-on-an-interval.xml" />
     <xi:include href="./discontinuous-formulas.xml" />
     <xi:include href="./piecewise-defined-functions.xml" />
-
+    <xi:include href="./limits-and-continuity-supplement.xml" />
 
 </chapter>

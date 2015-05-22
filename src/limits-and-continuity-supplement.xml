@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+   
+<section xml:id="limits-and-continuity-supplementary-exercises">
+    <title>Supplement</title>
+    <exercises>
+        <exercisegroup>
+            <introduction>
+                <p>For each of <xref autoname="plural" ref="exercise-limits-supplement-first"/><ndash/><xref autoname="plural" ref="exercise-limits-supplement-last"/>, state the limit suggested by the values in the table and state whether or not the limit exists.  The correct answer for <xref ref="exercise-limits-supplement-first"/> has been given to help you understand the directions to the question.</p> 
+            </introduction>
+            <exercise xml:id="exercise-limits-supplement-first">
+                <statement>
+                    <sidebyside>
+                        <tabular valign="top" top="major">
+                                <col halign="right"/>
+                                <col halign="center"/>
+                                <row bottom="medium">
+                                    <cell><m>t</m></cell>
+                                    <cell><m>\fe{g}{t}</m></cell>
+                                </row>
+                                <row>
+                                    <cell><m>-10{,}000</m></cell>
+                                    <cell><m>99.97</m></cell>
+                                </row>
+                                <row>
+                                    <cell><m>-100{,}000</m></cell>
+                                    <cell><m>999.997</m></cell>
+                                </row>
+                                <row bottom="major">
+                                    <cell><m>-1{,}000{,}000</m></cell>
+                                    <cell><m>9999.9997</m></cell>
+                                </row>
+                        </tabular>
+                        <paragraphs valign="top" halign="center">
+                            <p>Limit</p>
+                            <p><m>\lim_{t\to-\infty}\fe{g}{t}=\infty</m></p>
+                        </paragraphs>
+                        <paragraphs valign="top" halign="center">
+                            <p>Limit exists?</p>
+                            <p>No</p>
+                        </paragraphs>
+                    </sidebyside>
+                </statement>
+                <solution>
+                    <p>The relevant pattern in the <m>y</m> column is that <m>y</m> appears to be positive and growing by a little more than a factor of <m>10</m> every time <m>t</m> is negative and grows by a factor of <m>10</m>. It's not guaranteed, but this suggest that <m>\lim\limits_{t\to-\infty}\fe{g}{t}=\infty</m>. In this circumstance, we say that <m>\lim\limits_{t\to-\infty}\fe{g}{t}</m> does not exist.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{t\to-\infty}\fe{g}{t}=\infty</m>; <m>\lim\limits_{t\to-\infty}\fe{g}{t}</m> does not exist.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <sidebyside>
+                        <tabular top="major" valign="top">
+                                <col halign="right"/>
+                                <col halign="right"/>
+                                <row bottom="medium">
+                                    <cell><m>x</m></cell>
+                                    <cell><m>\fe{f}{x}</m></cell>
+                                </row>
+                                <row>
+                                    <cell><m>51{,}000</m></cell>
+                                    <cell><m>-3.2\times10^{-5}</m></cell>
+                                </row>
+                                <row>
+                                    <cell><m>510{,}000</m></cell>
+                                    <cell><m>-3.02\times10^{-7}</m></cell>
+                                </row>
+                                <row bottom="major">
+                                    <cell><m>5{,}100{,}000</m></cell>
+                                    <cell><m>-3.002\times10^{-9}</m></cell>
+                                </row>
+                        </tabular>
+                        <paragraphs valign="top" halign="center">
+                            <p>Limit</p>
+                        </paragraphs>
+                        <paragraphs valign="top" halign="center">
+                            <p>Limit exists?</p>
+                        </paragraphs>
+                    </sidebyside>
+                </statement>
+                <solution>
+                    <p>The relevant pattern in the <m>y</m> column is the powers of <m>10</m>.  The first nonzero digit is moving farther and farther to the right of the decimal point. So the <m>y</m>-values are approaching zero. This suggest that <m>\lim\limits_{x\to\infty}\fe{f}{x}=0</m>. So <m>\lim\limits_{x\to\infty}\fe{f}{x}</m> exists.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to\infty}\fe{f}{x}=0</m>; <m>\lim\limits_{x\to0}\fe{f}{x}</m> exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <sidebyside>
+                        <tabular top="major" valign="top">
+                                <col halign="left"/>
+                                <col halign="left"/>
+                                <row bottom="medium">
+                                    <cell><m>t</m></cell>
+                                    <cell><m>\fe{z}{t}</m></cell>
+                                </row>
+                                <row>
+                                    <cell><m>0.33</m></cell>
+                                    <cell><m>0.66</m></cell>
+                                </row>
+                                <row>
+                                    <cell><m>0.333</m></cell>
+                                    <cell><m>0.666</m></cell>
+                                </row>
+                                <row bottom="major">
+                                    <cell><m>0.3333</m></cell>
+                                    <cell><m>0.6666</m></cell>
+                                </row>
+                        </tabular>
+                        <paragraphs valign="top" halign="center">
+                            <p>Limit</p>
+                        </paragraphs>
+                        <paragraphs valign="top" halign="center">
+                            <p>Limit exists?</p>
+                        </paragraphs>
+                    </sidebyside>
+                </statement>
+                <solution>
+                    <p>You should definitely recognize decimals approaching common fractions.  Good catch if you noted the <m>t</m> was approaching <m>\frac{1}{3}</m> only from the left. The suggested limit is <m>\lim\limits_{t\to\frac{1}{3}^{-}}\fe{z}{t}=\frac{2}{3}</m>, and this (one-sided) limit exists.</p> 
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{t\to\frac{1}{3}^{-}}\fe{z}{t}=\frac{2}{3}</m>; <m>\lim\limits_{t\to\frac{1}{3}^{-}}\fe{z}{t}</m> exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <sidebyside>
+                        <tabular top="major" valign="top">
+                                <col halign="left"/>
+                                <col halign="center"/>
+                                <row bottom="medium">
+                                    <cell><m>\theta</m></cell>
+                                    <cell><m>\fe{g}{\theta}</m></cell>
+                                </row>
+                                <row>
+                                    <cell><m>-0.9</m></cell>
+                                    <cell><m>2{,}999{,}990</m></cell>
+                                </row>
+                                <row>
+                                    <cell><m>-0.99</m></cell>
+                                    <cell><m>2{,}999{,}999</m></cell>
+                                </row>
+                                <row bottom="major">
+                                    <cell><m>-0.999</m></cell>
+                                    <cell><m>2{,}999{,}999.9</m></cell>
+                                </row>
+                        </tabular>
+                        <paragraphs valign="top" halign="center">
+                            <p>Limit</p>
+                        </paragraphs>
+                        <paragraphs valign="top" halign="center">
+                            <p>Limit exists?</p>
+                        </paragraphs>
+                    </sidebyside>
+                </statement>
+                <solution>
+                    <p>Stay focused when determining <q>from the left</q> or <q>from the right</q>; that can get tricky<ellipsis/>especially when the numbers are negative.  The limit suggested here is <m>\lim\limits_{\theta\to-1^{+}}\fe{g}{\theta}=3{,}000{,}000</m>. So this limit exists.</p> 
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{\theta\to-1^{+}}\fe{g}{\theta}=3{,}000{,}000</m>; <m>\lim\limits_{\theta\to-1^{+}}\fe{g}{\theta}</m> exists.</p>
+                </answer>
+            </exercise>
+            <exercise xml:id="exercise-limits-supplement-last">
+                <statement>
+                    <sidebyside>
+                        <tabular top="major" valign="top">
+                                <col halign="left"/>
+                                <col halign="center"/>
+                                <row bottom="medium">
+                                    <cell><m>t</m></cell>
+                                    <cell><m>\fe{T}{t}</m></cell>
+                                </row>
+                                <row>
+                                    <cell><m>0.778</m></cell>
+                                    <cell><m>29{,}990</m></cell>
+                                </row>
+                                <row>
+                                    <cell><m>0.7778</m></cell>
+                                    <cell><m>299{,}999</m></cell>
+                                </row>
+                                <row bottom="major">
+                                    <cell><m>0.77778</m></cell>
+                                    <cell><m>2{,}999{,}999.9</m></cell>
+                                </row>
+                        </tabular>
+                        <paragraphs valign="top" halign="center">
+                            <p>Limit</p>
+                        </paragraphs>
+                        <paragraphs valign="top" halign="center">
+                            <p>Limit exists?</p>
+                        </paragraphs>
+                    </sidebyside>
+                </statement>
+                <solution>
+                    <p>The last entry in the output column is the same in the previous exercise.  Hopefully you recognized that you need to look at the pattern in the output, not just the last entry.  Recognizing that <m>t</m> approaches <m>\frac{7}{9}</m> might requires some guessing and checking. The limit suggested here is <m>\lim\limits_{t\to\frac{7}{9}^{+}}\fe{T}{t}=\infty</m>. So we say that this limit does not exist.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{t\to\frac{7}{9}^{+}}\fe{T}{t}=\infty</m>; <m>\lim\limits_{t\to\frac{7}{9}^{+}}\fe{T}{t}</m> does not exist.</p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercise>
+            <statement>
+                <p>Sketch onto <xref ref="figure-sketch-properties-supplement"/> a function, <m>f</m>, with each of the following properties. Make sure that your graph includes all of the relevant features addressed in lab.</p>
+                <sidebyside>  
+                    <paragraphs width="59%">  
+                        <ul>  
+                            <li>The only discontinuities on <m>f</m> are at <m>-4</m> and <m>3</m>.</li>
+                            <li><m>f</m> has no <m>x</m>-intercepts.</li>
+                            <li><m>f</m> is continuous from the right at <m>-4</m>.</li>
+                            <li><m>\lim\limits_{x\to-4^{-}}\fe{f}{x}=1</m> and <m>\lim\limits_{x\to-4^{+}}\fe{f}{x}=-2</m>.</li>
+                            <li><m>\lim\limits_{x\to3}\fe{f}{x}=-\infty</m> and <m>\lim\limits_{x\to\infty}\fe{f}{x}=-\infty</m>.</li>
+                            <li><m>f</m> has constant slope <m>-2</m> over <m>\ointerval{-\infty}{-4}</m>.</li>
+                        </ul>  
+                    </paragraphs>  
+                    <figure width="40%" xml:id="figure-sketch-properties-supplement">
+                        <caption><m>f</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>                        
+                    </figure>
+                </sidebyside>  
+            </statement>
+            <solution>
+                <image>
+                    <latex-image-code>
+                    <![CDATA[\begin{tikzpicture}
+                    \begin{axis}
+                        \addplot[pccplot,domain=-6.8:-4,<-] {-2*(x+4)+1};
+                        \addplot[pccplot,domain=-4:2.8,->] {1/(x-3)-13/7};
+                        \addplot[pccplot,domain=3.5:6.8,<->] {-exp(x-3)/(x-3)^2};
+                        \addplot[holdot] coordinates {(-4,1)};
+                        \addplot[soldot] coordinates {(-4,-2)};
+                    \end{axis}
+                    \end{tikzpicture}]]>
+                    </latex-image-code>
+                </image>
+            </solution>
+            <answer>
+                <image>
+                    <latex-image-code>
+                    <![CDATA[\begin{tikzpicture}
+                    \begin{axis}
+                        \addplot[pccplot,domain=-6.8:-4,<-] {-2*(x+4)+1};
+                        \addplot[pccplot,domain=-4:2.8,->] {1/(x-3)-13/7};
+                        \addplot[pccplot,domain=3.5:6.8,<->] {-exp(x-3)/(x-3)^2};
+                        \addplot[holdot] coordinates {(-4,1)};
+                        \addplot[soldot] coordinates {(-4,-2)};
+                    \end{axis}
+                    \end{tikzpicture}]]>
+                    </latex-image-code>
+                </image>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Sketch onto <xref ref="figure-second-sketch-properties-supplement"/> a function, <m>f</m>, with each of the following properties. Make sure that your graph includes all of the relevant features addressed in lab.</p>
+                <sidebyside>
+                    <paragraphs width="59%">
+                        <ul>
+                            <li><m>\lim\limits_{x\to-\infty}\fe{f}{x}=\lim\limits_{x\to\infty}\fe{f}{x}=3</m>.</li>
+                            <li><m>\lim\limits_{x\to-4^{+}}\fe{f}{x}=-2</m> and <m>\lim\limits_{x\to-4^{-}}\fe{f}{x}=5</m>.</li>
+                            <li><m>\lim\limits_{x\to3{-}}\fe{f}{x}=-\infty</m> and <m>\lim\limits_{x\to3^{+}}\fe{f}{x}=\infty</m>.</li>
+                            <li><m>\fe{f}{-2}=0</m>, <m>\fe{f}{0}=-1</m>, and <m>\fe{f}{-4}=5</m>.</li>
+                        </ul>
+                    </paragraphs>
+                    <figure width="40%" xml:id="figure-second-sketch-properties-supplement">
+                        <caption><m>f</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </statement>
+            <solution>
+                <image>
+                    <latex-image-code>
+                    <![CDATA[\begin{tikzpicture}
+                    \begin{axis}
+                        \addplot[pccplot,domain=-6.8:-4,<-] {2*exp(x+4)+3};
+                        \addplot[pccplot,domain=-4:2.7,->] {-(x+2)^2/(sqrt(3-x)*(x+5))*(sqrt(7)/-4)*-2};
+                        \addplot[pccplot,domain=3.08:6.8,<->] {1/sqrt(x-3)+3};
+                        \addplot[holdot] coordinates {(-4,-2)};
+                        \addplot[soldot] coordinates {(-4,5)};
+                    \end{axis}
+                    \end{tikzpicture}]]>
+                    </latex-image-code>
+                </image>
+            </solution>
+            <answer>
+                <image>
+                    <latex-image-code>
+                    <![CDATA[\begin{tikzpicture}
+                    \begin{axis}
+                        \addplot[pccplot,domain=-6.8:-4,<-] {2*exp(x+4)+3};
+                        \addplot[pccplot,domain=-4:2.7,->] {-(x+2)^2/(sqrt(3-x)*(x+5))*(sqrt(7)/-4)*-2};
+                        \addplot[pccplot,domain=3.08:6.8,<->] {1/sqrt(x-3)+3};
+                        \addplot[holdot] coordinates {(-4,-2)};
+                        \addplot[soldot] coordinates {(-4,5)};
+                    \end{axis}
+                    \end{tikzpicture}]]>
+                    </latex-image-code>
+                </image>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Determine all of the values of <m>x</m> where the function <m>f</m> (given below) has discontinuities.  At each value where <m>f</m> has a discontinuity, determine if <m>f</m> is continuous from either the right or left at <m>x</m> and also state whether or not the discontinuity is removable.</p>
+                <me>\fe{f}{x}=\begin{cases}\frac{2\pi}{x}&amp;x\leq3\\\fe{\sin}{\frac{2\pi}{x}}&amp;3\lt x\lt 4\\\frac{\fe{\sin}{x}}{\fe{\sin}{x}}&amp;4\lt x\leq7\\3-\frac{2x-8}{x-4}&amp;x\gt7\end{cases}</me>
+            </statement>
+            <solution>
+                <p><m>f</m> is discontinuous from both directions at <m>0</m> and the discontinuity is not removable. <m>f</m> is discontinuous at <m>3</m> although it is continuous from the left at <m>3</m>.  The discontinuity is not removable.  (The problem is that the limits are different from the left and right of <m>3</m>.) <m>f</m> is discontinuous from both directions at <m>4</m> but the discontinuity is removable (<m>\lim\limits_{x\to4}\fe{f}{x}=1</m>). <m>f</m> is discontinuous from both directions at <m>2\pi</m> but the discontinuity is removable (<m>\lim\limits_{x\to2\pi}\fe{f}{x}=1</m>).</p>
+            </solution>
+            <answer>
+                <p>Discontinuitues at <m>0,3,4</m>, and <m>2\pi</m>. Continuous from the left at <m>3</m>. Removable discontinuities at <m>4</m> and <m>2\pi</m>.</p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Determine the value(s) of <m>k</m> that make(s) the function <m>\fe{g}{t}=\begin{cases}t^2+kt-k&amp;t\geq3\\t^2-4k&amp;t\lt 3\end{cases}</m> continuous over <m>\ointerval{-\infty}{\infty}</m>.</p>
+            </statement>
+            <solution>
+                <p>Because the two formulas are polynomials, the only number where continuity is at issue is <m>3</m>.  The top formula is used at <m>3</m>, so <m>\fe{g}{3}</m> is defined regardless of the value of <m>k</m>.  Basically all we need to do is ensure that the limits from the left and the right of <m>3</m> are both equal to <m>\fe{g}{3}</m>.  We have: <md>
+                <mrow>\fe{g}{3}&amp;=9+2k&amp;\lim_{t\to3^{+}}\fe{g}{t}&amp;=9+2k&amp;\lim_{t\to3^{-}}\fe{g}{t}7&amp;=9-4k</mrow>
+                </md>So <m>g</m> will be continuous at <m>3</m> (and, consequently, over <m>\ointerval{-\infty}{\infty}</m>) if and only if <m>9+2k=9-4k</m>.  This gives us <m>k=0</m>.  Doh!  Turns out the <m>g</m> isn't piecewise at all, it's simply the parabolic function <m>\fe{g}{t}=t^2</m>.</p>
+            </solution>
+            <answer>
+                <p><m>k=0</m></p>
+            </answer>
+        </exercise>
+        <exercisegroup cols="2">
+            <introduction>
+                <p>Determine the appropriate symbol to write after an equal sign following each of the given limits.  In each case, the appropriate symbol is either a real number, <m>\infty</m>, or <m>-\infty</m>.  Also, state whether or not each limit exists and if the limit exists prove its existence (and value) by applying the appropriate limit laws.  The Rational Limit Form table in <xref provisional="Appendix C (Pages C3 and C4)"/> summarizes strategies to be employed based upon the initial form of the limit.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to4^{-}}\left(5-\frac{1}{x-4}\right)</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to4^{-}}\left(5-\frac{1}{x-4}\right)=\infty</m>. This limit does not exist.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to4^{-}}\left(5-\frac{1}{x-4}\right)=\infty</m>. This limit does not exist.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to\infty}\frac{e^{\sfrac{2}{x}}}{e^{\sfrac{1}{x}}}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\lim\limits_{x\to\infty}\frac{e^{\sfrac{2}{x}}}{e^{\sfrac{1}{x}}}&amp;=\lim\limits_{x\to\infty}e^{\sfrac{1}{x}}</mrow>
+                    <mrow>&amp;=e^{\lim_{x\to\infty}\frac{1}{x}}&amp;&amp;\text{LL A6}</mrow>
+                    <mrow>&amp;=e^{0}&amp;&amp;\text{LL R3}</mrow>
+                    <mrow>&amp;=1&amp;&amp;\text{This limit does exist.}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to\infty}\frac{e^{\sfrac{2}{x}}}{e^{\sfrac{1}{x}}}=1</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to2^{+}}\frac{x^2-4}{x^2+4}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\lim\limits_{x\to2^{+}}\frac{x^2-4}{x^2+4}&amp;=\frac{\lim\limits_{x\to2^{+}}\left(x^2-4\right)}{\lim\limits_{x\to2^{+}}\left(x^2+4\right)}&amp;&amp;\text{LL A5}</mrow>
+                    <mrow>&amp;=\frac{\lim\limits_{x\to2^{+}}x^2-\lim\limits_{x\to2^{+}}4}{\lim\limits_{x\to2^{+}}x^2+\lim\limits_{x\to2^{+}}4}&amp;&amp;\text{LL A1 and A2}</mrow>
+                    <mrow>&amp;=\frac{\left(\lim\limits_{x\to2^{+}}x\right)^2-\lim\limits_{x\to2^{+}}4}{\left(\lim\limits_{x\to2^{+}}x\right)^2+\lim\limits_{x\to2^{+}}4}&amp;&amp;\text{LL A6}</mrow>
+                    <mrow>&amp;=\frac{2^2-4}{2^2+4}&amp;&amp;\text{LL R1 and R2}</mrow>
+                    <mrow>&amp;=0&amp;&amp;\text{This limit does exist.}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to2^{+}}\frac{x^2-4}{x^2+4}=0</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to2^{+}}\frac{x^2-4}{x^2-4x+4}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>&amp;\phantom{={}}\lim\limits_{x\to2^{+}}\frac{x^2-4}{x^2-4x+4}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{0}{0}$}</mrow>
+                    <mrow>&amp;=\lim\limits_{x\to2^{+}}\frac{(x-2)(x+2)}{(x-2)^2}</mrow>
+                    <mrow>&amp;=\lim\limits_{x\to2^{+}}\frac{x+2}{x-2}&amp;&amp;\text{LL A7}</mrow>
+                    <mrow>&amp;=\infty&amp;&amp;\text{This limit does not exist.}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to2^{+}}\frac{x^2-4}{x^2-4x+4}=\infty</m>. This limit does not exist.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to\infty}\frac{\fe{\ln}{x}+\fe{\ln}{x^6}}{7\fe{\ln}{x^2}}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>&amp;\phantom{={}}\lim\limits_{x\to\infty}\frac{\fe{\ln}{x}+\fe{\ln}{x^6}}{7\fe{\ln}{x^2}}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{\infty}{\infty}$}</mrow>
+                    <mrow>&amp;=\lim\limits_{x\to\infty}\frac{\fe{\ln}{x}+6\fe{\ln}{x}}{14\fe{\ln}{x}}</mrow>
+                    <mrow>&amp;=\lim\limits_{x\to\infty}\frac{7\fe{\ln}{x}}{14\fe{\ln}{x}}</mrow>
+                    <mrow>&amp;=\lim\limits_{x\to\infty}\frac{1}{2}&amp;&amp;\text{LL A7}</mrow>
+                    <mrow>&amp;=\frac{1}{2}&amp;&amp;\text{LL R2}</mrow>
+                    </md>So this limit does exist.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to\infty}\frac{\fe{\ln}{x}+\fe{\ln}{x^6}}{7\fe{\ln}{x^2}}=\frac{1}{2}</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to-\infty}\frac{3x^3+2x}{3x-2x^3}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>&amp;\phantom{={}}\lim\limits_{x\to-\infty}\frac{3x^3+2x}{3x-2x^3}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{\infty}{\infty}$}</mrow>
+                    <mrow>&amp;=\lim\limits_{x\to-\infty}\frac{3x^3+2x}{3x-2x^3}</mrow>
+                    <mrow>&amp;=\lim\limits_{x\to-\infty}\frac{3x^3+2x}{3x-2x^3}\frac{\sfrac{1}{x^3}}{\sfrac{1}{x^3}}</mrow>
+                    <mrow>&amp;=\lim\limits_{x\to-\infty}\frac{3+\frac{2}{x^2}}{\frac{3}{x^2}-2}</mrow>
+                    <mrow>&amp;=\frac{\lim\limits_{x\to-\infty}\left(3+\frac{2}{x^2}\right)}{\lim\limits_{x\to-\infty}\left(\frac{3}{x^2}-2\right)}&amp;&amp;\text{LL A5}</mrow>
+                    <mrow>&amp;=\frac{\lim\limits_{x\to-\infty}3+\lim\limits_{x\to-\infty}\frac{2}{x^2}}{\lim\limits_{x\to-\infty}\frac{3}{x^2}-\lim\limits_{x\to-\infty}2}&amp;&amp;\text{LL A1 and A2}</mrow>
+                    <mrow>&amp;=\frac{3+0}{0-2}&amp;&amp;\text{LL R2 and R3}</mrow>
+                    <mrow>&amp;=-\frac{3}{2}&amp;&amp;\text{This limit exists.}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to-\infty}\frac{3+\frac{2}{x^2}}{\frac{3}{x^2}-2}=-\frac{3}{2}</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to\infty}\fe{\sin}{\frac{\pi e^{3x}}{2e^x+4e^{3x}}}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>&amp;\phantom{={}}\lim\limits_{x\to\infty}\fe{\sin}{\frac{\pi e^{3x}}{2e^x+4e^{3x}}}</mrow>
+                    <mrow>&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi e^{3x}}{2e^x+4e^{3x}}}&amp;&amp;\text{LL A6}</mrow>
+                    <mrow>&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi e^{3x}}{2e^x+4e^{3x}}}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{\infty}{\infty}$}</mrow>
+                    <mrow>&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi e^{3x}}{2e^x+4e^{3x}}\frac{\sfrac{1}{e^{3x}}}{\sfrac{1}{e^{3x}}}}</mrow>
+                    <mrow>&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi}{\frac{2}{e^{2x}}+4}}</mrow>
+                    <mrow>&amp;=\fe{\sin}{\frac{\lim\limits_{x\to\infty}\pi}{\lim\limits_{x\to\infty}\left(\frac{2}{e^{2x}}+4\right)}}&amp;&amp;\text{LL A5}</mrow>
+                    <mrow>&amp;=\fe{\sin}{\frac{\lim\limits_{x\to\infty}\pi}{\lim\limits_{x\to\infty}\frac{2}{e^{2x}}+\lim\limits_{x\to\infty}4}}&amp;&amp;\text{LL A1}</mrow>
+                    <mrow>&amp;=\fe{\sin}{\frac{\pi}{0+4}}&amp;&amp;\text{LL R2 and R3}</mrow>
+                    <mrow>&amp;=\frac{1}{\sqrt{2}}&amp;&amp;\text{This limit does exist.}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to\infty}\fe{\sin}{\frac{\pi e^{3x}}{2e^x+4e^{3x}}}=\frac{1}{\sqrt{2}}</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to\infty}\frac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to\infty}\frac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}</m> does not exist because the domain of the function <m>\frac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}</m> is <m>\emptyset</m> (the empty set). There are no <m>x</m>-values where <m>\frac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}</m> is defined.</p>
+                </solution>
+                <answer>
+                    <p><m>\frac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}</m> does not exist.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to5}\sqrt{\frac{x^2-12x+35}{5-x}}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>&amp;\phantom{={}}\lim\limits_{x\to5}\sqrt{\frac{x^2-12x+35}{5-x}}</mrow>
+                    <mrow>&amp;=\sqrt{\lim\limits_{x\to5}\frac{(x-5)(x-7)}{5-x}}&amp;&amp;\text{LL A6}</mrow>
+                    <mrow>&amp;=\sqrt{\lim\limits_{x\to5}\frac{(x-5)(x-7)}{5-x}}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{0}{0}$}</mrow>
+                    <mrow>&amp;=\sqrt{\lim\limits_{x\to5}(x-7)\cdot-1}&amp;&amp;\text{LL A7}</mrow>
+                    <mrow>&amp;=\sqrt{\lim\limits_{x\to5}(7-x)}</mrow>
+                    <mrow>&amp;=\sqrt{\lim\limits_{x\to5}7-\lim\limits_{x\to5}x}&amp;&amp;\text{LL A2}</mrow>
+                    <mrow>&amp;=\sqrt{7-5}&amp;&amp;\text{LL R1 and R2}</mrow>
+                    <mrow>&amp;=\sqrt{2}&amp;&amp;\text{This limit does exist.}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to5}\sqrt{\frac{x^2-12x+35}{5-x}}=\sqrt{2}</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{h\to0}\frac{4(3+h)^2-5(3+h)-21}{h}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>&amp;\phantom{={}}\lim\limits_{h\to0}\frac{4(3+h)^2-5(3+h)-21}{h}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{0}{0}$}</mrow>
+                    <mrow>&amp;=\lim\limits_{h\to0}\frac{4(9+6h+h^2)-15-5h-21}{h}</mrow>
+                    <mrow>&amp;=\lim\limits_{h\to0}\frac{36+24h+4h^2-15-5h-21}{h}</mrow>
+                    <mrow>&amp;=\lim\limits_{h\to0}\frac{19h+4h^2}{h}</mrow>
+                    <mrow>&amp;=\lim\limits_{h\to0}\frac{h(19+4h)}{h}</mrow>
+                    <mrow>&amp;=\lim\limits_{h\to0}\left(19+4h\right)&amp;&amp;\text{LL A7}</mrow>
+                    <mrow>&amp;=\lim\limits_{h\to0}19+\lim\limits_{h\to0}4h&amp;&amp;\text{LL A1}</mrow>
+                    <mrow>&amp;=\lim\limits_{h\to0}19+4\lim\limits_{h\to0}h&amp;&amp;\text{LL A3}</mrow>
+                    <mrow>&amp;=19+4\cdot0&amp;&amp;\text{LL R1 and R2}</mrow>
+                    <mrow>&amp;=19&amp;&amp;\text{This limit does exist.}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{h\to0}\frac{4(3+h)^2-5(3+h)-21}{h}=19</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{h\to0}\frac{5h^2+3}{2-3h^2}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\lim\limits_{h\to0}\frac{5h^2+3}{2-3h^2}&amp;=\frac{\lim\limits_{h\to0}\left(5h^2+3\right)}{\lim\limits_{h\to0}\left(2-3h^2\right)}&amp;&amp;\text{LL A5}</mrow>
+                    <mrow>&amp;=\frac{\lim\limits_{h\to0}\left(5h^2\right)+\lim\limits_{h\to0}3}{\lim\limits_{h\to0}2-\lim\limits_{h\to0}\left(3h^2\right)}&amp;&amp;\text{LL A1 and A2}</mrow>
+                    <mrow>&amp;=\frac{5\lim\limits_{h\to0}h^2+\lim\limits_{h\to0}3}{\lim\limits_{h\to0}2-3\lim\limits_{h\to0}h^2}&amp;&amp;\text{LL A3}</mrow>
+                    <mrow>&amp;=\frac{5\left(\lim\limits_{h\to0}h\right)^2+\lim\limits_{h\to0}3}{\lim\limits_{h\to0}2-3\left(\lim\limits_{h\to0}h\right)^2}&amp;&amp;\text{LL A6}</mrow>
+                    <mrow>&amp;=\frac{5\cdot0^2+3}{2-3\cdot0^2}&amp;&amp;\text{LL R1 and R2}</mrow>
+                    <mrow>&amp;=\frac{3}{2}&amp;&amp;\text{This limit does exist.}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{h\to0}\frac{5h^2+3}{2-3h^2}=\frac{3}{2}</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{h\to0}\frac{\sqrt{9-h}-3}{h}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>&amp;\phantom{={}}\lim\limits_{h\to0}\frac{\sqrt{9-h}-3}{h}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{0}{0}$}</mrow>
+                    <mrow>&amp;=\lim\limits_{h\to0}\left(\frac{\sqrt{9-h}-3}{h}\cdot\frac{\sqrt{9-h}+3}{\sqrt{9-h}+3}\right)</mrow>
+                    <mrow>&amp;=\lim\limits_{h\to0}\left(\frac{(9-h)-9}{h\left(\sqrt{9-h}+3\right)}\right)</mrow>
+                    <mrow>&amp;=\lim\limits_{h\to0}\left(\frac{-h}{h\left(\sqrt{9-h}+3\right)}\right)</mrow>
+                    <mrow>&amp;=\lim\limits_{h\to0}\left(\frac{-1}{\sqrt{9-h}+3}\right)&amp;&amp;\text{LL A7}</mrow>
+                    <mrow>&amp;=\frac{\lim\limits_{h\to0}(-1)}{\lim\limits_{h\to0}\left(\sqrt{9-h}+3\right)}&amp;&amp;\text{LL A5}</mrow>
+                    <mrow>&amp;=\frac{\lim\limits_{h\to0}(-1)}{\lim\limits_{h\to0}\sqrt{9-h}+\lim\limits_{h\to0}3}&amp;&amp;\text{LL A1}</mrow>
+                    <mrow>&amp;=\frac{\lim\limits_{h\to0}(-1)}{\sqrt{\lim\limits_{h\to0}(9-h)}+\lim\limits_{h\to0}3}&amp;&amp;\text{LL A6}</mrow>
+                    <mrow>&amp;=\frac{\lim\limits_{h\to0}(-1)}{\sqrt{\lim\limits_{h\to0}9-\lim\limits_{h\to0}h}+\lim\limits_{h\to0}3}&amp;&amp;\text{LL A2}</mrow>
+                    <mrow>&amp;=\frac{-1}{\sqrt{9-0}+3}&amp;&amp;\text{LL R1 and R2}</mrow>
+                    <mrow>&amp;=-\frac{1}{6}&amp;&amp;\text{This limit does exist.}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{h\to0}\frac{\sqrt{9-h}-3}{h}=-\frac{1}{6}</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\sin}{\theta+\frac{\pi}{2}}}{\fe{\sin}{2\theta+\pi}}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>&amp;\phantom{={}}\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\sin}{\theta+\frac{\pi}{2}}}{\fe{\sin}{2\theta+\pi}}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{0}{0}$}</mrow>
+                    <mrow>&amp;=\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\cos}{\theta}}{-\fe{\sin}{2\theta}}&amp;&amp;\text{Trig identities}</mrow>
+                    <mrow>&amp;=\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\cos}{\theta}}{-2\fe{\sin}{\theta}\fe{\cos}{\theta}}&amp;&amp;\text{Double angle identity}</mrow>
+                    <mrow>&amp;=\lim\limits_{\theta\to\frac{\pi}{2}}\frac{1}{-2\fe{\sin}{\theta}}&amp;&amp;\text{LL A7}</mrow>
+                    <mrow>&amp;=\frac{\lim\limits_{\theta\to\frac{\pi}{2}}1}{\lim\limits_{\theta\to\frac{\pi}{2}}\left(-2\fe{\sin}{\theta}\right)}&amp;&amp;\text{LL A5}</mrow>
+                    <mrow>&amp;=\frac{\lim\limits_{\theta\to\frac{\pi}{2}}1}{-2\lim\limits_{\theta\to\frac{\pi}{2}}\fe{\sin}{\theta}}&amp;&amp;\text{LL A3}</mrow>
+                    <mrow>&amp;=\frac{\lim\limits_{\theta\to\frac{\pi}{2}}1}{-2\fe{\sin}{\lim\limits_{\theta\to\frac{\pi}{2}}\theta}}&amp;&amp;\text{LL A6}</mrow>
+                    <mrow>&amp;=\frac{1}{-2\fe{\sin}{\frac{\pi}{2}}}&amp;&amp;\text{LL R1 and R2}</mrow>
+                    <mrow>&amp;=-\frac{1}{2}&amp;&amp;\text{This limit does exist.}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\sin}{\theta+\frac{\pi}{2}}}{\fe{\sin}{2\theta+\pi}}=-\frac{1}{2}</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to0^{+}}\frac{\fe{\ln}{x^e}}{\fe{\ln}{e^x}}</m></p>
+                </statement>
+                <solution>
+                    <p>The numerator approaches <m>-\infty</m> and the denominator approaches <m>0</m> from the positive side. So the ratio becomes large and negative without bound. We say <m>\lim\limits_{x\to0^{+}}\frac{\fe{\ln}{x^e}}{\fe{\ln}{e^x}}=-\infty</m> and the limit does not exist.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to0^{+}}\frac{\fe{\ln}{x^e}}{\fe{\ln}{e^x}}=-\infty</m>. This limit does not exist.</p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup cols="2">
+            <introduction>
+                <p>Draw sketches of the curves <m>y=e^x</m>, <m>y=e^{-x}</m>, <m>y=\fe{\ln}{x}</m>, and <m>y=\frac{1}{x}</m>.  Note the coordinates of any and all intercepts.  This is something you should be able to do from memory/intuition.  If you cannot already do so, spend some time reviewing whatever you need to review so that you can do so. Once you have the graphs drawn, fill in each of the blanks below and decide whether or not each limit exists.  The appropriate symbol for some of the blanks is either <m>\infty</m> or <m>-\infty</m>.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to\infty}e^x=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to\infty}e^x=\infty</m>. This limit does not exist.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to\infty}e^x=\infty</m>. This limit does not exist.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to-\infty}e^x=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to-\infty}e^x=0</m>. This limit exists.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to-\infty}e^x=0</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to0}e^x=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to0}e^x=1</m>. This limit exists.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to0}e^x=1</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to\infty}e^{-x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to\infty}e^{-x}=0</m>. This limit exists.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to\infty}e^{-x}=0</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to-\infty}e^{-x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to-\infty}e^{-x}=\infty</m>. This limit does not exist.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to-\infty}e^{-x}=\infty</m>. This limit does not exist.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to0}e^{-x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to0}e^{-x}=1</m>. This limit exists.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to0}e^{-x}=1</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to\infty}\fe{\ln}{x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to\infty}\fe{\ln}{x}=\infty</m>. This limit does not exist.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to\infty}\fe{\ln}{x}=\infty</m>. This limit does not exist.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to1}\fe{\ln}{x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to1}\fe{\ln}{x}=0</m>. This limit exists.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to1}\fe{\ln}{x}=0</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to0^{+}}\fe{\ln}{x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to0^{+}}\fe{\ln}{x}=-\infty</m>. This limit does not exist.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to0^{+}}\fe{\ln}{x}=-\infty</m>. This limit does not exist.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to\infty}\frac{1}{x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to\infty}\frac{1}{x}=0</m>. This limit exists.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to\infty}\frac{1}{x}=0</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{x}=0</m>. This limit exists.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{x}=0</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to0^{+}}\frac{1}{x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to0^{+}}\frac{1}{x}=\infty</m>. This limit does not exist.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to0^{+}}\frac{1}{x}=\infty</m>. This limit does not exist.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to0^{-}}\frac{1}{x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to0^{-}}\frac{1}{x}=-\infty</m>. This limit does not exist.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to0^{-}}\frac{1}{x}=-\infty</m>. This limit does not exist.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to\infty}e^{\sfrac{1}{x}}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to\infty}e^{\sfrac{1}{x}}=1</m>. This limit exists.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to\infty}e^{\sfrac{1}{x}}=1</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to\infty}\frac{1}{e^x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to\infty}\frac{1}{e^x}=0</m>. This limit exists.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to\infty}\frac{1}{e^x}=0</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{e^x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{e^x}=\infty</m>. This limit does not exist.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{e^x}=\infty</m>. This limit does not exist.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to\infty}\frac{1}{e^{-x}}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to\infty}\frac{1}{e^{-x}}=\infty</m>. This limit does not exist.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to\infty}\frac{1}{e^{-x}}=\infty</m>. This limit does not exist.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{e^{-x}}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                </statement>
+                <solution>
+                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{e^{-x}}=0</m>. This limit exists.</p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{e^{-x}}=0</m>. This limit exists.</p>
+                </answer>
+            </exercise>
+
+        </exercisegroup>
+    </exercises>
+</section>
+
+

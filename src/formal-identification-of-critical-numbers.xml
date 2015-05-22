@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-formal-identification-of-critical-numbers">
+    <title>Formal Identification of Critical Numbers</title>
+
+    <p>When finding critical numbers based upon a function formula, there are three issues that need to be considered; the domain of the function, the zeros of the first derivative, and the numbers in the domain of the function where the first derivative is undefined.  When writing a formal analysis of this process each of these questions must be explicitly addressed.  The following outline shows the work you need to show when you are asked to write a formal determination of critical numbers based upon a function formula.</p>
+
+    <algorithm xml:id="algorithm-find-critical-numbers">
+        <title>A process for formal determination of critical numbers</title>
+        <statement>
+            <p>Please note that you should present your work in narrative form using complete sentences that establish the significance of all stated intervals and values.  For example, for the function <m>\fe{g}{t}=\sqrt{t-7}</m> the first sentence you should write is <q>The domain of <m>g</m> is <m>\cointerval{7}{\infty}</m></q>.</p>
+            <ol>
+                <li>Using interval notation, state the domain of the function.</li>
+                <li>Differentiate the function and completely simplify the resultant formula.  Simplification includes:
+                    <ol>
+                        <li>Manipulating all negative exponents into positive exponents.</li>
+                        <li>If any rational expression occurs in the formula, all terms must be written in rational form and a common denominator must be established for the terms.  The final expression should be a single rational expression.</li>
+                        <li>The final expression must be completely factored.</li>
+                    </ol>
+                </li>
+                <li>State the values where the first derivative is equal to zero; show any non-trivial work necessary in making this determination.  Make sure that you write a sentence addressing this issue even if the first derivative has no zeros.</li>
+                <li>State the values <em>in the domain of the function</em> where the first derivative does not exist; show any non-trivial work necessary in making this determination.    Make sure that you write a sentence addressing this issue even if no such numbers exist.</li>
+                <li>State the critical numbers of the function.  Make sure that you write this conclusion even if the function has no critical numbers.</li>
+            </ol> 
+            <p>Because the domain of a function is such an important issue when determining critical numbers, there are some things you should keep in mind when determining domains.</p>
+            <ul> 
+                <li>Division by zero is never a good thing.</li> 
+                <li>Over the real numbers, you <em>cannot</em> take <em>even</em> roots of negative numbers.</li> 
+                <li>Over the real numbers, you <em>can</em> take <em>odd</em> roots of negative numbers.</li> 
+                <li><m>\sqrt[n]{0}=0</m> for any positive integer <m>n</m>.</li> 
+                <li>Over the real numbers, you can only take logarithms of positive numbers.</li> 
+                <li>The sine and cosine function are defined at all real numbers.  You should check with your lecture instructor to see if you are expected to know the domains of the other four trigonometric functions and/or the inverse trigonometric functions.</li> 
+            </ul> 
+        </statement>
+    </algorithm>
+
+    <exercises>
+        <exercisegroup cols="2">
+            <introduction>
+                <p>Formally establish the critical numbers for each of the following functions following <algorihtm ref="algorithm-find-critical-numbers"/>.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>\fe{f}{x}=x^2-9x+4</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{g}{t}=7t^3+39t^2-24t+4</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{p}{t}=(t+8)^{\sfrac{2}{3}}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{z}{x}=x\fe{\ln}{x}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{y}{\theta}=e^{\fe{\cos}{\theta}}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{T}{t}=\sqrt{t-4}\sqrt{16-t}</m></p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <p>The first derivative of the function <m>\fe{m}{x}=\frac{\sqrt{x-5}}{x-7}</m> is <m>\fe{\fd{m}}{x}=\frac{3-x}{2\sqrt{x-5}(x-7)^2}</m>.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Roland says that <m>5</m> is a critical number of <m>m</m> but Yuna disagrees.  Who is correct and why?</p> 
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Roland says that <m>7</m> is a critical number of <m>m</m> but Yuna disagrees.  Who is correct and why?</p> 
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Roland says that <m>3</m> is a critical number of <m>m</m> but Yuna disagrees.  Who is correct and why?</p> 
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</section>

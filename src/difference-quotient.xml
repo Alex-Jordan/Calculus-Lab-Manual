@@ -44,7 +44,7 @@
 
     <exercises>
 
-        <exercisegroup cols="3">
+        <exercisegroup cols="3" by="row">
             <introduction>
                 <p>Completely simplify the difference quotient for each of the following functions. Please note that the template for the difference quotient needs to be adapted to the function name and independent variable in each given equation. For example, the difference quotient for the function in <xref ref="exercise-first-difference-quotient"/> is <m>\frac{\fe{v}{t+h}-\fe{v}{t}}{h}</m>.</p>
 
@@ -201,50 +201,51 @@
 
             <exercise>
                 <statement>
-                    <p>Ignoring the unit, write down the formula you get for the difference quotient of <m>V</m> when <m>t=4</m>. Copy <xref ref="table-vat"/> onto your paper and fill in the missing values. <em>Look for a pattern in the output and write down enough digits for each entry so that the pattern is clearly illustrated;</em> the first two entries in the output column have been given to help you understand what is meant by this direction.</p>
+                    <p>Ignoring the unit, write down the formula you get for the difference quotient of <m>V</m> when <m>t=4</m>.</p>
 
-                    <todo>table headers</todo>
-                    <todo>units and num</todo>
-                    <todo>decimal alignment</todo>
-                    <todo>rule at bottom of table</todo>
-                    <todo>check hyperlinks to tables are working</todo>
-                    <table xml:id="table-vat">
-                        <caption><m>y=\frac{\fe{V}{4+h}-\fe{V}{4}}{h}</m></caption>
-                        <tabular top="major">
-                        <col halign="left" />
-                        <col halign="left"/>
+                    <sidebyside>
+                        <paragraphs>
+                            <p>Copy <xref ref="table-vat"/> onto your paper and fill in the missing values. <em>Look for a pattern in the output and write down enough digits for each entry so that the pattern is clearly illustrated;</em> the first two entries in the output column have been given to help you understand what is meant by this direction.</p>
+                        </paragraphs>
 
-                        <row bottom="medium">
-                            <cell halign="center"><m>h</m></cell>
-                            <cell halign="center"><m>y</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>-0.1</m></cell>
-                            <cell><m>-5.962\ldots</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>-0.01</m></cell>
-                            <cell><m>-5.9962\ldots</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>-0.001</m></cell>
-                            <cell></cell>
-                        </row>
-                        <row>
-                            <cell><m>\phantom{-}0.001</m></cell>
-                            <cell></cell>
-                        </row>
-                        <row>
-                            <cell><m>\phantom{-}0.01</m></cell>
-                            <cell></cell>
-                        </row>
-                        <row>
-                            <cell><m>\phantom{-}0.1</m></cell>
-                            <cell></cell>
-                        </row>
+                        <table xml:id="table-vat">
+                            <caption><m>y=\frac{\fe{V}{4+h}-\fe{V}{4}}{h}</m></caption>
+                            <tabular top="major">
+                            <col halign="left" />
+                            <col halign="left"/>
 
-                        </tabular>
-                    </table>
+                            <row bottom="medium">
+                                <cell halign="center"><m>h</m></cell>
+                                <cell halign="center"><m>y</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>-0.1</m></cell>
+                                <cell><m>-5.962\ldots</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>-0.01</m></cell>
+                                <cell><m>-5.9962\ldots</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>-0.001</m></cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell><m>\phantom{-}0.001</m></cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell><m>\phantom{-}0.01</m></cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell><m>\phantom{-}0.1</m></cell>
+                                <cell></cell>
+                            </row>
+
+                            </tabular>
+                        </table>
+                    </sidebyside>
                 </statement>
             </exercise>
     

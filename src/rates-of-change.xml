@@ -13,5 +13,6 @@
     <xi:include href="./velocity.xml" />
     <xi:include href="./secant.xml" />
     <xi:include href="./difference-quotient.xml" />
+    <xi:include href="./rates-of-change-supplement.xml" />
     
 </chapter>

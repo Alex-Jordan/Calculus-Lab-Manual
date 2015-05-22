@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-end-behavior">
+    <title>End Behavior</title>
+
+    <p>We are frequently interested in a function's <q>end behavior</q>.  That is, what is the behavior of the function as the input variable increases without bound or decreases without bound.</p>
+
+    <p>Many times a function will approach a horizontal asymptote as its end behavior.  Assuming that the horizontal asymptotei <m>y=L</m> represents the end behavior of the function <m>f</m> both as <m>x</m> increases without bound and as <m>x</m> decreases without bound, we write <m>\lim\limits_{x\to\infty}\fe{f}{x}=L</m> and <m>\lim\limits_{x\to-\infty}\fe{f}{x}=L</m>.</p>
+
+    <p>While working <xref autoname="title" ref="chapter-limits"/> you investigated strategies for formally establishing limit values as <m>x\to\infty</m> or <m>x\to-\infty</m>.  In this activity you are going to investigate a more informal strategy for determining these type limits.</p>
+
+    <p>Consider <m>\lim\limits_{x\to\infty}\frac{4x-2}{3+20x}</m>. When the value of <m>x</m> is really large, we say that the term <m>4x</m> dominates the numerator of the expression and the term <m>20x</m> dominates the denominator. We actually call those terms <term>the dominant terms</term> of the numerator and denominator.  The dominant terms are significant because when the value of <m>x</m> is really large, the other terms in the expression contribute almost nothing to the value of the expression.   That is, for really large values of <m>x</m>:<md>
+    <mrow>\frac{4x-2}{3+20x}&amp;\approx\frac{4x}{20x}</mrow>
+    <mrow>&amp;=\frac{1}{5}</mrow>
+    </md>For example, even if <m>x</m> has the paltry value of <m>1000</m>, <md>
+    <mrow>\frac{4(1000)-2}{3+20(1000)}&amp;=\frac{3998}{20003}</mrow>
+    <mrow>&amp;\approx0.19987\ldots</mrow>
+    <mrow>&amp;\approx0.2</mrow>
+    <mrow>&amp;=\frac{1}{5}</mrow>
+    </md>This tells us that <m>\lim\limits_{x\to\infty}\frac{4x-2}{3+20x}=\frac{1}{5}</m> and that <m>y=\frac{1}{5}</m> is a horizontal asymptote for the graph of <m>y=\frac{4x-2}{3+20x}</m>.</p>
+
+    <exercises>
+        <exercisegroup cols="3">
+            <introduction>
+                <p>The formulas used to graph <xref autoname="plural" ref="figure-match-rationals-1"/><ndash/><xref autoname="no" ref="figure-match-rationals-5"/> are given below.  Focusing first on the dominant terms of the expressions, match the formulas with the functions (<m>f_1</m> through <m>f_5</m>).</p>
+                <sidebyside>
+                    <figure width ="40%" xml:id="figure-match-rationals-1">
+                        <caption><m>f_1</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[
+                                xmin=-20,
+                                xmax=20,
+                                xtick={-20,-16,...,20},
+                                minor xtick={-20,-19,...,20},
+                                ymin=-20,
+                                ymax=20,
+                                ytick={-20,-16,...,20},
+                                minor ytick={-20,-19,...,20},
+                                ]
+                                \addplot[pccplot,samples=50,
+                                    domain=-19.8:-75.2/17.8,
+                                ]{(6*x^2-6*x-36)/(36-3*x-3*x^2)};
+                                \addplot[pccplot,samples=50,
+                                    domain=-83.2/21.8:19.8,
+                                ]{(6*x^2-6*x-36)/(36-3*x-3*x^2)};
+                                \addplot[asymptote] coordinates {(-20,-2) (20,-2)};
+                                \addplot[asymptote] coordinates {(-4,-20) (-4,20)};
+                                \addplot[holdot] coordinates {(3,-10/7)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <figure width ="40%" xml:id="figure-match-rationals-2">
+                        <caption><m>f_2</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[
+                                xmin=-20,
+                                xmax=20,
+                                xtick={-20,-16,...,20},
+                                minor xtick={-20,-19,...,20},
+                                ymin=-20,
+                                ymax=20,
+                                ytick={-20,-16,...,20},
+                                minor ytick={-20,-19,...,20},
+                                ]
+                                \addplot[pccplot,samples=50,
+                                    domain=-19.8:-102.8/15.8,
+                                ]{(16+4*x)/(6+x)};
+                                \addplot[pccplot,samples=50,
+                                    domain=-134.8/23.8:19.8,
+                                ]{(16+4*x)/(6+x)};
+                                \addplot[asymptote] coordinates {(-20,4) (20,4)};
+                                \addplot[asymptote] coordinates {(-6,-20) (-6,20)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+                <sidebyside>
+                    <figure width ="40%" xml:id="figure-match-rationals-3">
+                        <caption><m>f_3</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[
+                                xmin=-20,
+                                xmax=20,
+                                xtick={-20,-16,...,20},
+                                minor xtick={-20,-19,...,20},
+                                ymin=-20,
+                                ymax=20,
+                                ytick={-20,-16,...,20},
+                                minor ytick={-20,-19,...,20},
+                                ]
+                                \addplot[pccplot,samples=50,
+                                    domain=-19.8:-10.07,
+                                ]{(-2*x+8)/(x^2-100)};
+                                \addplot[pccplot,samples=50,
+                                    domain=-9.9294:9.9698,
+                                ]{(-2*x+8)/(x^2-100)};
+                                \addplot[pccplot,samples=50,
+                                    domain=10.03:19.8,
+                                ]{(-2*x+8)/(x^2-100)};
+                                \addplot[asymptote] coordinates {(-20,0) (20,0)};
+                                \addplot[asymptote] coordinates {(-10,-20) (-10,20)};
+                                \addplot[asymptote] coordinates {(10,-20) (10,20)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <figure width ="40%" xml:id="figure-match-rationals-4">
+                        <caption><m>f_4</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[
+                                xmin=-20,
+                                xmax=20,
+                                xtick={-20,-16,...,20},
+                                minor xtick={-20,-19,...,20},
+                                ymin=-20,
+                                ymax=20,
+                                ytick={-20,-16,...,20},
+                                minor ytick={-20,-19,...,20},
+                                ]
+                                \addplot[pccplot,samples=50,
+                                    domain=-19.8:33.6/22.8,
+                                ]{(3*x+6)/(x-2)};
+                                \addplot[pccplot,samples=50,
+                                    domain=45.6/16.8:19.8,
+                                ]{(3*x+6)/(x-2)};
+                                \addplot[asymptote] coordinates {(-20,3) (20,3)};
+                                \addplot[asymptote] coordinates {(2,-20) (2,20)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+                <figure width ="40%" xml:id="figure-match-rationals-5">
+                    <caption><m>f_5</m></caption>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[
+                            xmin=-20,
+                            xmax=20,
+                            xtick={-20,-16,...,20},
+                            minor xtick={-20,-19,...,20},
+                            ymin=-20,
+                            ymax=20,
+                            ytick={-20,-16,...,20},
+                            minor ytick={-20,-19,...,20},
+                            ]
+                            \addplot[pccplot,samples=50,
+                                domain=-19.8:84/19.8,
+                            ]{(15)/(x-5)};
+                            \addplot[pccplot,samples=50,
+                                domain=114/19.8:19.8,
+                            ]{(15)/(x-5)};
+                            \addplot[asymptote] coordinates {(-20,0) (20,0)};
+                            \addplot[asymptote] coordinates {(5,-20) (5,20)};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>y=\frac{3x+6}{x-2}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=\frac{16+4x}{6+x}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=\frac{6x^2-6x-36}{36-3x-3x^2}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=\frac{-2x+8}{x^2-100}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=\frac{15}{x-5}</m></p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup cols="2">
+            <introduction>
+                <p>Use the concept of dominant terms to informally determine the value of each of the following limits.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to-\infty}\frac{4+x-7x^3}{14x^3+x^2+2}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{t\to-\infty}\frac{4t^2+1}{4t^3-1}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{\gamma\to\infty}\frac{8}{2\gamma^3}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{x\to\infty}\frac{(3x+1)(6x-2)}{(4+x)(1-2x)}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{t\to\infty}\frac{4e^t-8e^{-t}}{e^t+e^{-t}}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\lim\limits_{t\to-\infty}\frac{4e^t-8e^{-t}}{e^t+e^{-t}}</m></p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</section>

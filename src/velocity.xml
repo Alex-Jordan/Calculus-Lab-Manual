@@ -20,97 +20,104 @@
     </definition>
 
     <exercises>
+        <exercisegroup>
+            <introduction>
+                <p>According to simplified Newtonian physics, if an object is dropped from an elevation of <quantity><mag>200</mag><unit base="meter"/></quantity> and allowed to free fall to the ground, then the elevation of the object (measured in <quantity><unit base="meter"/></quantity>) is given by the position function <m>\fe{p}{t}=200-4.9t^2</m> where <m>t</m> is the amount of time that has passed since the object was dropped (measured in <quantity><unit base="second"/></quantity>).</p>
+            </introduction>
 
-        <introduction>
-            <p>According to simplified Newtonian physics, if an object is dropped from an elevation of <quantity><mag>200</mag><unit base="meter"/></quantity> and allowed to free fall to the ground, then the elevation of the object (measured in <quantity><unit base="meter"/></quantity>) is given by the position function <m>\fe{p}{t}=200-4.9t^2</m> where <m>t</m> is the amount of time that has passed since the object was dropped (measured in <quantity><unit base="second"/></quantity>).</p>
-        </introduction>
+            <exercise>
+                <statement>
+                    <p>What, <em>including unit</em>, are the values of <m>\fe{p}{t}</m> three seconds and five seconds into the object's fall? Use these values when working <xref ref="exercise-average-velocity"/>.</p>
+                </statement>
+            </exercise>
 
-        <exercise>
-            <statement>
-                <p>What, <em>including unit</em>, are the values of <m>\fe{p}{t}</m> three seconds and five seconds into the object's fall? Use these values when working <xref ref="exercise-average-velocity"/>.</p>
-            </statement>
-        </exercise>
+            <exercise xml:id="exercise-average-velocity">
+                <statement>
+                    <p>Calculate <todo>quantity</todo><m>\frac{\fe{p}{5\,\text{s}}-\fe{p}{3\,\text{s}}}{{5\,\text{s}}-{3\,\text{s}}}</m>; <em>include units while making the calculation</em>. What does the result tell you in the context of this problem?</p>
+                </statement>
+            </exercise>
 
-        <exercise xml:id="exercise-average-velocity">
-            <statement>
-                <p>Calculate <todo>quantity</todo><m>\frac{\fe{p}{5\,\text{s}}-\fe{p}{3\,\text{s}}}{{5\,\text{s}}-{3\,\text{s}}}</m>; <em>include units while making the calculation</em>. What does the result tell you in the context of this problem?</p>
-            </statement>
-        </exercise>
+            <exercise xml:id="exercise-average-velocity-formula">
+                <statement>
+                    <p>Use <xref ref="definition-average-velocity"/> to find a formula for the average velocity of this object over the general time interval <m>\cinterval{t_0}{t_1}</m>. The first couple of lines of this process are shown below. Copy these lines onto your paper and continue the simplification process.</p>
+                    <sidebyside>
+                        <paragraphs valign="bottom">
+                            <p><md>
+                            <mrow>\frac{\fe{p}{t_1}-\fe{p}{t_0}}{t_1-t_0}&amp;=\frac{\left[200-4.9t_1^2\right]-\left[200-4.9t_0^2\right]}{t_1-t_0}</mrow>
+                            <mrow>&amp;=\frac{200-4.9t_1^2-200+4.9t_0^2}{t_1-t_0}</mrow>
+                            <mrow>&amp;=\frac{-4.9t_1^2+4.9t_0^2}{t_1-t_0}</mrow>
+                            <mrow>&amp;=\cdots</mrow>
+                            </md></p>
+                        </paragraphs>
+                        <paragraphs valign="bottom">
+                            <p>Hint: In the next step you should factor <m>-4.9</m> from the numerator; the remaining factor will factor further.</p>
+                        </paragraphs>
+                    </sidebyside>
+                </statement>
+            </exercise>
 
-        <exercise xml:id="exercise-average-velocity-formula">
-            <statement>
-                <p>Use <xref ref="definition-average-velocity"/> to find a formula for the average velocity of this object over the general time interval <m>\cinterval{t_0}{t_1}</m>. The first couple of lines of this process are shown below. Copy these lines onto your paper and continue the simplification process.<md>
-                <mrow>\frac{\fe{p}{t_1}-\fe{p}{t_0}}{t_1-t_0}&amp;=\frac{\left[200-4.9t_1^2\right]-\left[200-4.9t_0^2\right]}{t_1-t_0}</mrow>
-                <mrow>&amp;=\frac{200-4.9t_1^2-200+4.9t_0^2}{t_1-t_0}</mrow>
-                <mrow>&amp;=\frac{-4.9t_1^2+4.9t_0^2}{t_1-t_0}</mrow>
-                <mrow>&amp;=\cdots</mrow>
-                </md>
-                Hint: In the next step you should factor <m>-4.9</m> from the numerator; the remaining factor will factor further.</p>
-            </statement>
-        </exercise>
+            <exercise>
+                <statement>
+                    <p>Check the formula you derived in <xref ref="exercise-average-velocity-formula"/> using <m>t_0=3</m> and <m>t_1=5</m>; that is, compare the value generated by the formula to that you found in <xref ref="exercise-average-velocity"/>.</p>
+                </statement>
+            </exercise>
 
-        <exercise>
-            <statement>
-                <p>Check the formula you derived in <xref ref="exercise-average-velocity-formula"/> using <m>t_0=3</m> and <m>t_1=5</m>; that is, compare the value generated by the formula to that you found in <xref ref="exercise-average-velocity"/>.</p>
-            </statement>
-        </exercise>
+            <exercise>
+                <statement>
+                    <p>Using the formula found in <xref ref="exercise-average-velocity-formula"/>, replace <m>t_0</m> with <m>3</m> but leave <m>t_1</m> as a variable; simplify the result. Then copy <xref ref="table-velocity"/> onto your paper and fill in the missing entries.</p>
 
-        <exercise>
-            <statement>
-                <p>Using the formula found in <xref ref="exercise-average-velocity-formula"/>, replace <m>t_0</m> with <m>3</m> but leave <m>t_1</m> as a variable; simplify the result. Then copy <xref ref="table-velocity"/> onto your paper and fill in the missing entries.</p>
+                    <todo>table headers</todo>
+                    <todo>units</todo>
+                    <todo>deciaml alignment</todo>
+                    <todo>rule at bottom of table</todo>
+                    <todo>check hyperlinks to tables are working</todo>
+                    <table xml:id="table-velocity">
+                        <caption><m>y=\frac{\fe{p}{t_1}-\fe{p}{3}}{t_1-3}</m></caption>
+                        <tabular top="major">
+                        <col halign="left" />
+                        <col halign="center"/>
 
-                <todo>table headers</todo>
-                <todo>units</todo>
-                <todo>deciaml alignment</todo>
-                <todo>rule at bottom of table</todo>
-                <todo>check hyperlinks to tables are working</todo>
-                <table xml:id="table-velocity">
-                    <caption><m>y=\frac{\fe{p}{t_1}-\fe{p}{3}}{t_1-3}</m></caption>
-                    <tabular top="major">
-                    <col halign="left" />
-                    <col halign="center"/>
-
-                    <row bottom="medium">
-                        <cell><m>t_1\,\text{(s)}</m></cell>
-                        <cell><m>y\,\left(\sfrac{\text{m}}{\text{s}}\right)</m></cell>
-                    </row>
-                    <row>
-                        <cell>2.9</cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell>2.99</cell>
-                        <cell></cell>
-                    </row>
+                        <row bottom="medium">
+                            <cell><m>t_1\,\text{(s)}</m></cell>
+                            <cell><m>y\,\left(\sfrac{\text{m}}{\text{s}}\right)</m></cell>
+                        </row>
                         <row>
-                        <cell>2.999</cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell>3.001</cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell>3.01</cell>
-                        <cell></cell>
-                    </row>
-                    <row bottom="major">
-                        <cell>3.1</cell>
-                        <cell></cell>
-                    </row>
-                    </tabular>
-                </table>
+                            <cell>2.9</cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell>2.99</cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell>2.999</cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell>3.001</cell>
+                            <cell></cell>
+                        </row>
+                        <row>
+                            <cell>3.01</cell>
+                            <cell></cell>
+                        </row>
+                        <row bottom="major">
+                            <cell>3.1</cell>
+                            <cell></cell>
+                        </row>
+                        </tabular>
+                    </table>
 
-            </statement>
-        </exercise>
+                </statement>
+            </exercise>
 
-        <exercise>
-            <statement>
-                <p>As the value of <m>t_1</m> gets closer to <m>3</m>, the values in the <m>y</m>-column of <xref ref="table-velocity"/> appear to be converging on a single number; what is this number and what do you think it tells you in the context of this problem?</p>
-            </statement>
-        </exercise>
-
-</exercises>
+            <exercise>
+                <statement>
+                    <p>As the value of <m>t_1</m> gets closer to <m>3</m>, the values in the <m>y</m>-column of <xref ref="table-velocity"/> appear to be converging on a single number; what is this number and what do you think it tells you in the context of this problem?</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
         
 
 </section>

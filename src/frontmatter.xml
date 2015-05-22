@@ -33,8 +33,7 @@
 
         <copyright>
             <year>2012<ndash />2015</year>
-            <holder>Alex Jordan</holder>
-            <holder>Steve Simonds</holder>
+            <holder>Steve Simonds, Alex Jordan</holder>
             <minilicense>Creative Commons BY-SA</minilicense>
 			<shortlicense>Permission is granted to copy, distribute and/or modify this document under the terms of the Creative Commons BY-SA License, Version 3.0 or any later version.</shortlicense>
         </copyright>
@@ -86,218 +85,58 @@
                 <tabular top="major" halign="center">
                     <col />
                     <col halign="left"/>
-                    <col />
+                    <col halign="left"/>
                     <row valign="top" bottom="medium">
                         <cell>Week</cell>
                         <cell>Labs (Lab Activities)</cell>
                         <cell>Supplementary Exercises</cell>
                     </row>
-                    <row>
+                    <row bottom="medium">
                         <cell>1</cell>
-                        <cell><xref autoname="title" ref="section-velocity"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-secant"/></cell> 
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-difference-quotient"/></cell>
-                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-velocity"/><ndash/><xref autoname="title" ref="section-limits"/></cell>
+                        <cell><xref autoname="title" ref="rates-of-change-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="medium">
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-limits"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
                         <cell>2</cell>
-                        <cell><xref autoname="title" ref="section-limit-laws"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-indeterminate-limits"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-limits-at-infinity"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-limits-at-infinity-tending-to-zero"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-ratios-of-infinities"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-nonexistent-limits"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-vertical-asymptotes"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-continuity"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-discontinuities"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-continuity-on-an-interval"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-discontinuous-formulas"/></cell>
-                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-limit-laws"/><ndash/><xref autoname="title" ref="section-piecewise-defined-functions"/></cell>
+                        <cell><xref autoname="title" ref="limits-and-continuity-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="medium">
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-piecewise-defined-functions"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
                         <cell>3</cell>
-                        <cell><xref autoname="title" ref="section-instantaneous-velocity"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-tangent-lines"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-first-derivative"/></cell>
+                        <cell><xref autoname="title" ref="section-instantaneous-velocity"/><ndash/><xref autoname="title" ref="section-derivative-units"/></cell>
                         <cell></cell>
                     </row>
                     <row bottom="medium">
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-derivative-units"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
                         <cell>4</cell>
-                        <cell><xref autoname="title" ref="section-graph-features"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-graphical-derivatives"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-nondifferentiability"/></cell>
+                        <cell><xref autoname="title" ref="section-graph-features"/><ndash/><xref autoname="title" ref="section-higher-order-derivatives"/></cell>
                         <cell></cell>
                     </row>
                     <row bottom="medium">
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-higher-order-derivatives"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
                         <cell>5</cell>
-                        <cell><xref autoname="title" ref="section-antiderivatives"/></cell>
+                        <cell><xref autoname="title" ref="section-antiderivatives"/><ndash/><xref autoname="title" ref="section-graphical-features-from-derivatives"/></cell>
                         <cell></cell>
                     </row>
                     <row bottom="medium">
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-graphical-features-from-derivatives"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
                         <cell>6</cell>
-                        <cell><xref autoname="title" ref="section-leibniz-notation"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-derivative-operator"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-power-rule"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-constant-factor-rule"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-constant-divisor-rule"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-sum-and-difference-rules"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-product-rule"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-quotient-rule"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-simplification"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-product-and-quotient-together"/></cell>
+                        <cell><xref autoname="title" ref="section-leibniz-notation"/><ndash/><xref autoname="title" ref="section-derivative-formulas-and-function-behavior"/></cell>
                         <cell></cell>
                     </row>
                     <row bottom="medium">
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-derivative-formulas-and-function-behavior"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
                         <cell>7</cell>
-                        <cell><xref autoname="title" ref="section-introduction-to-the-chain-rule"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-order-to-apply-rules"/></cell>
-                        <cell></cell>
-                    </row>
-                    <row>
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-not-simplifying-first"/></cell>
+                        <cell><xref autoname="title" ref="section-introduction-to-the-chain-rule"/><ndash/><xref autoname="title" ref="section-chain-rule-and-leibniz"/></cell>
                         <cell></cell>
                     </row>
                     <row bottom="medium">
-                        <cell></cell>
-                        <cell><xref autoname="title" ref="section-chain-rule-and-leibniz"/></cell>
+                        <cell>8</cell>
+                        <cell><xref autoname="title" ref="section-general-implicit-differentiation"/><ndash/><xref autoname="title" ref="section-derivatives-of-inverse-functions"/></cell>
                         <cell></cell>
                     </row>
-                </tabular> 
+                    <row bottom="major">
+                        <cell>9 and 10</cell>
+                        <cell><xref autoname="title" ref="section-motivation-for-critical-numbers"/><ndahs/><xref autoname="title" ref="section-making-graphs"/></cell>
+                        <cell></cell>
+                    </row>
+                    </tabular> 
             </table>
         </preface>
 

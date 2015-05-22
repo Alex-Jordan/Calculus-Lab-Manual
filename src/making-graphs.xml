@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-making-graphs">
+    <title>Making Graphs</title>
+
+    <p>Let's put it all together and produce some graphs.</p>
+
+    <exercises>
+        <exercisegroup>
+            <introduction>
+                <p>Consider the function <m>\fe{f}{x}=\frac{8x^2-8}{(2x-4)^2}</m>.</p>
+            </introduction>
+            <exercise xml:id="exercise-sketch-first-asymptotes">
+                <statement>
+                    <p>Evaluate each of the following limits: <m>\lim\limits_{x\to\infty}\fe{f}{x}</m>, <m>\lim\limits_{x\to-\infty}\fe{f}{x}</m>, <m>\lim\limits_{x\to2^{-}}\fe{f}{x}</m>, and <m>\lim\limits_{x\to2^{+}}\fe{f}{x}</m>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>What are the horizontal and vertical asymptotes for a graph of <m>f</m>?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>What are the horizontal and vertical intercepts for a graph of <m>f</m>?</p>
+                </statement>
+            </exercise>
+            <exercise xml:id="exercise-sketch-first-critical-numbers">
+                <statement>
+                    <p>Use the formulas <m>\fe{\fd{f}}{x}=\frac{4(1-2x)}{(x-2)^3}</m> and <m>\fe{\sd{f}}{x}=\frac{4(4x+1)}{(x-2)^4}</m> to help you accomplish each of the following.</p>
+                    <ul>
+                        <li>State the critical numbers of <m>f</m>.</li>
+                        <li>Create well-documented increasing/decreasing and concavity tables for <m>f</m>.</li> 
+                        <li>State the local minimum, local maximum, and inflection points on <m>f</m>.  Make sure that you explicitly address all three types of points whether they exist or not.</li> 
+                    </ul>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Graph <m>y=\fe{f}{x}</m> onto <xref ref="figure-blank-for-graphing-1"/>. Make sure that you choose a scale that allows you to clearly illustrate each of the features found in <xref autoname="plural" ref="exercise-sketch-first-asymptotes"/><ndash/><xref autoname="no" ref="exercise-sketch-first-critical-numbers"/>.  Make sure that all axes and asymptotes are well labeled and also write the coordinates of each local extreme point and inflection point next to the point on the graph.</p>
+                    <sidebyside>
+                    <paragraphs/>
+                    <figure width="80%" xml:id="figure-blank-for-graphing-1">
+                        <caption><m>f</m></caption>
+                        <image width="80%">
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[blankgraph]
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    </sidebyside>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Check your graph using a graphing calculator.</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <p>Consider the function <m>\fe{g}{t}=\frac{1}{(e^t+4)^2}</m>.</p>
+            </introduction>
+            <exercise xml:id="exercise-sketch-second-asymptotes">
+                <statement>
+                    <p>Evaluate each of the following limits: <m>\lim\limits_{t\to\infty}\fe{g}{t}</m> and <m>\lim\limits_{t\to-\infty}\fe{g}{t}</m>.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>What are the horizontal and vertical asymptotes for a graph of <m>g</m>?</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>What are the horizontal and vertical intercepts for a graph of <m>g</m>?</p>
+                </statement>
+            </exercise>
+            <exercise xml:id="exercise-sketch-second-critical-numbers">
+                <statement>
+                    <p>Use the formulas <m>\fe{\fd{g}}{t}=\frac{-2e^t}{(e^t+4)^3}</m> and <m>\fe{\sd{g}}{t}=\frac{4e^t(e^t-2)}{(e^t+4)^4}</m> to help you accomplish each of the following.</p>
+                    <ul>
+                        <li>State the critical numbers of <m>g</m>.</li>
+                        <li>Create well-documented increasing/decreasing and concavity tables for <m>g</m>.</li>
+                        <li>State the local minimum, local maximum, and inflection points on <m>g</m>.  Make sure that you explicitly address all three types of points whether they exist or not.</li>
+                    </ul>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Graph <m>y=\fe{g}{t}</m> onto <xref ref="figure-blank-for-graphing-2"/>. Make sure that you choose a scale that allows you to clearly illustrate each of the features found in <xref autoname="plural" ref="exercise-sketch-second-asymptotes"/><ndash/><xref autoname="no" ref="exercise-sketch-second-critical-numbers"/>.  Make sure that all axes and asymptotes are well labeled and also write the coordinates of each local extreme point and inflection point next to the point on the graph.</p>
+                    <sidebyside>
+                    <paragraphs/>
+                    <figure width="80%" xml:id="figure-blank-for-graphing-2">
+                        <caption><m>f</m></caption>
+                        <image width="80%">
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[blankgraph]
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    </sidebyside>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Check your graph using a graphing calculator.</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</section>

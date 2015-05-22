@@ -74,47 +74,51 @@
             <statement>
                 <p>Consider the function <m>f</m> defined by <m>\fe{f}{x}=\frac{x+7}{x-8}</m>. Complete <xref ref="table-vertical-asymptote"/> without the use of your calculator.</p>
 
-                <p>Use this as an opportunity to discuss why limits of form <q>not-zero over zero</q> are <q>infinite limits</q>. What limit equation is being illustrated in the table?</p>
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>Use this as an opportunity to discuss why limits of form <q>not-zero over zero</q> are <q>infinite limits</q>. What limit equation is being illustrated in the table?</p>
+                    </paragraphs>
 
-                <table xml:id="table-vertical-asymptote">
-                    <caption><m>\fe{f}{x}=\frac{x+7}{x-8}</m></caption>
-                    <tabular top="major">
-                       <col halign="left"/>
-                       <col halign="left"/>
-                       <col halign="left"/>
-                       <col halign="left"/>
-                       <row bottom="medium">
-                           <cell halign="center"><m>x</m></cell>
-                           <cell halign="center"><m>x+7</m></cell>
-                           <cell halign="center"><m>x-8</m></cell>
-                           <cell halign="center"><m>\fe{f}{x}</m></cell>
-                       </row>
-                       <row>
-                           <cell><m>8.1</m></cell>
-                           <cell><m>15.1</m></cell>
-                           <cell><m>0.1</m></cell>
-                           <cell></cell>
-                       </row>
-                       <row>
-                           <cell><m>8.01</m></cell>
-                           <cell><m>15.01</m></cell>
-                           <cell><m>0.01</m></cell>
-                           <cell></cell>
-                       </row>
-                       <row>
-                           <cell><m>8.001</m></cell>
-                           <cell><m>15.001</m></cell>
-                           <cell><m>0.001</m></cell>
-                           <cell></cell>
-                       </row>
-                       <row>
-                           <cell><m>8.0001</m></cell>
-                           <cell><m>15.0001</m></cell>
-                           <cell><m>0.0001</m></cell>
-                           <cell></cell>
-                       </row>
-                    </tabular>
-                </table>
+                    <table valign="top" xml:id="table-vertical-asymptote">
+                        <caption><m>\fe{f}{x}=\frac{x+7}{x-8}</m></caption>
+                        <tabular top="major">
+                           <col halign="left"/>
+                           <col halign="left"/>
+                           <col halign="left"/>
+                           <col halign="left"/>
+                           <row bottom="medium">
+                               <cell halign="center"><m>x</m></cell>
+                               <cell halign="center"><m>x+7</m></cell>
+                               <cell halign="center"><m>x-8</m></cell>
+                               <cell halign="center"><m>\fe{f}{x}</m></cell>
+                           </row>
+                           <row>
+                               <cell><m>8.1</m></cell>
+                               <cell><m>15.1</m></cell>
+                               <cell><m>0.1</m></cell>
+                               <cell></cell>
+                           </row>
+                           <row>
+                               <cell><m>8.01</m></cell>
+                               <cell><m>15.01</m></cell>
+                               <cell><m>0.01</m></cell>
+                               <cell></cell>
+                           </row>
+                           <row>
+                               <cell><m>8.001</m></cell>
+                               <cell><m>15.001</m></cell>
+                               <cell><m>0.001</m></cell>
+                               <cell></cell>
+                           </row>
+                           <row>
+                               <cell><m>8.0001</m></cell>
+                               <cell><m>15.0001</m></cell>
+                               <cell><m>0.0001</m></cell>
+                               <cell></cell>
+                           </row>
+                        </tabular>
+                    </table>
+                </sidebyside>
             </statement>
         </exercise>
 

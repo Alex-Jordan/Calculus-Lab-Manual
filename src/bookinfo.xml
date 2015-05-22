@@ -62,6 +62,7 @@
     \pgfplotsset{asymptote/.style={color=gray,mark=none,line width=1pt,<->,dashed}}
     \pgfplotsset{soldot/.style={color=red,only marks,mark=*}}
     \pgfplotsset{holdot/.style={color=red,fill=white,only marks,mark=*}}
+    \pgfplotsset{blankgraph/.style={xmin=-10,xmax=10,ymin=-10,ymax=10,axis line style= {-, draw opacity=0 },axis lines=box,major tick length=0mm,xtick={-10,-9,...,10},ytick={-10,-9,...,10},grid=major,yticklabels={,,},xticklabels={,,},minor xtick=,minor ytick=,xlabel={},ylabel={}}}
 
 
     % arrow style
@@ -188,6 +189,10 @@
 %  Leibniz operator at ....
 %  Usage: \lzoa{y}{x}{a}
 \newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+%
+%  Absolute Value
+%  Usage: \abs{x}
+\newcommand{\abs}[1]{\left|#1\right|}
 %
 
 

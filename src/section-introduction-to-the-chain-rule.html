@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<!--*                                    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2015-05-22T00:09:17-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>CLM Introduction to the Chain Rule</title>
+<meta name="Keywords" content="Authored in MathBook XML">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    TeX: {
+        extensions: ["AMSmath.js", "AMSsymbols.js", "extpfeil.js", "autobold.js"],
+        equationNumbers: { autoNumber: "none",
+                           useLabelIds: true,
+                           formatID: function (n) {return String(n).replace(/[:'"<>&]/g,"")},
+                         },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    "HTML-CSS": {
+        scale: 88,
+    },
+});
+    
+    /* support for the sfrac command in MathJax (Beveled fraction)
+        see: https://github.com/mathjax/MathJax-docs/wiki/Beveled-fraction-like-sfrac,-nicefrac-bfrac */
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  var MML = MathJax.ElementJax.mml,
+      TEX = MathJax.InputJax.TeX;
+
+  TEX.Definitions.macros.sfrac = "myBevelFraction";
+
+  TEX.Parse.Augment({
+    myBevelFraction: function (name) {
+      var num = this.ParseArg(name),
+          den = this.ParseArg(name);
+      this.Push(MML.mfrac(num,den).With({bevelled: true}));
+    }
+  });
+});
+    </script><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML-full"></script><script src="http://sagecell.sagemath.org/static/jquery.min.js"></script><script src="http://sagecell.sagemath.org/embedded_sagecell.js"></script><script>
+$(function () {
+    // Make *any* div with class 'sage-compute' an executable Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.sage-compute',
+                           linked: true,
+                           evalButtonText: 'Evaluate'});
+});
+$(function () {
+    // Make *any* div with class 'sage-display' a visible, uneditable Sage cell
+    sagecell.makeSagecell({inputLocation: 'div.sage-display',
+                           editor: 'codemirror-readonly',
+                           hide: ['evalButton', 'editorToggle', 'language']});
+});
+    </script><script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script><link href="http://aimath.org/knowlstyle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="http://aimath.org/knowl.js"></script><script src="http://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="http://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="http://aimath.org/mathbook/js/Mathbook.js"></script><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic%7CSource+Code+Pro:400" rel="stylesheet" type="text/css">
+<link href="http://aimath.org/mathbook/stylesheets/mathbook-3.css" rel="stylesheet" type="text/css">
+<link href="http://aimath.org/mathbook/mathbook-add-on.css" rel="stylesheet" type="text/css">
+<link href="../style/css/clm.css" rel="stylesheet" type="text/css">
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<div style="display:none;">\(
+% These macros are automatically generated from the "macros"
+% XML element.  Make permanent edits there.
+%
+%%%%%%%%%%%%%%%%%%%%%
+%
+%     Conveniences
+%
+%%%%%%%%%%%%%%%%%%%%%
+%
+%  Integers
+%  Usage:  \Z
+\newcommand{\Z}{\mathbb{Z}}
+%
+%  Real numbers, as set of scalars
+%  Usage:  \reals
+\newcommand{\reals}{\mathbb{R}}
+%
+%  n-space over real field
+%  Usage: \complex{integer-dimension}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+%
+%  evaluate a function
+%  Usage: \fe{function-name}{input}
+\newcommand{\fe}[2]{\mathop{{#1}{\left(#2\right)}}}
+%
+%  closed interval
+%  Usage: \cinterval{left-endpoint}{right-endpoint}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+%
+%  open interval
+%  Usage: \ointerval{left-endpoint}{right-endpoint}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+%
+%  closed-open interval
+%  Usage: \cointerval{left-endpoint}{right-endpoint}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+%
+%  open-closed interval
+%  Usage: \ocinterval{left-endpoint}{right-endpoint}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+%
+%  point
+%  Usage: \point{x}{y}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+%
+%  first derivative
+%  Usage: \fd{f}
+\newcommand{\fd}[1]{#1'}
+%
+%  second derivative
+%  Usage: \sd{f}
+\newcommand{\sd}[1]{#1''}
+%
+%  third derivative
+%  Usage: \td{f}
+\newcommand{\td}[1]{#1'''}
+%
+%  Leibniz notation
+%  Usage: \lz{y}{x}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+%
+%  higher Leibniz notation
+%  Usage: \lzn{n}{y}{x}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+%
+%  Leibniz operator
+%  Usage: \lzo{x}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+%
+%  Leibniz operator on ....
+%  Usage: \lzoo{x}{y}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+%
+%  higher Leibniz operator
+%  Usage: \lzon{x}{y}{n}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+%
+%  Leibniz operator at ....
+%  Usage: \lzoa{y}{x}{a}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+%
+%  Absolute Value
+%  Usage: \abs{x}
+\newcommand{\abs}[1]{\left|#1\right|}
+%
+
+
+
+    \newcommand{\tikzmark}[1]{}\)</div>
+<header id="masthead"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><span class="title">Portland Community College MTH 251 Lab Manual</span></h1>
+<p class="byline">Steve Simonds, Alex Jordan (Editor)</p>
+</div>
+</div></div>
+<nav id="primary-navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="previous-button toolbar-item button" href="chapter-chain-rule.html">Previous</a><a class="up-button button toolbar-item" href="chapter-chain-rule.html">Up</a><a class="next-button button toolbar-item" href="section-order-to-apply-rules.html">Next</a>
+</div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter-chain-rule.html">Previous</a><a class="up-button button toolbar-item" href="chapter-chain-rule.html">Up</a><a class="next-button button toolbar-item" href="section-order-to-apply-rules.html">Next</a>
+</div>
+</div></nav></header><div class="page">
+<aside id="sidebar-left" class="sidebar"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="index.html"><span class="title">Front Matter</span></a></h2>
+<ul>
+<li><a href="colophon-1.html">Colophon</a></li>
+<li><a href="acknowledgement-1.html">Acknowledgements</a></li>
+<li><a href="to-the-student.html">To the Student</a></li>
+<li><a href="to-the-instructor.html">To the Instructor</a></li>
+</ul>
+<h2 class="link"><a href="chapter-rates-of-change.html"><span class="codenumber">1</span><span class="title">Rates Of Change</span></a></h2>
+<ul>
+<li><a href="section-velocity.html">Velocity</a></li>
+<li><a href="section-secant.html">Secant Line to a Curve</a></li>
+<li><a href="section-difference-quotient.html">The Difference Quotient</a></li>
+<li><a href="rates-of-change-supplementary-exercises.html">Supplement</a></li>
+</ul>
+<h2 class="link"><a href="chapter-limits.html"><span class="codenumber">2</span><span class="title">Limits and Continuity</span></a></h2>
+<ul>
+<li><a href="section-limits.html">Limits</a></li>
+<li><a href="section-limit-laws.html">Limits Laws</a></li>
+<li><a href="section-indeterminate-limits.html">Indeterminate Limits</a></li>
+<li><a href="section-limits-at-infinity.html">Limits at Infinity</a></li>
+<li><a href="section-limits-at-infinity-tending-to-zero.html">Limits at Infinity Tending to Zero</a></li>
+<li><a href="section-ratios-of-infinities.html">Ratios of Infinities</a></li>
+<li><a href="section-nonexistent-limits.html">Non-existent Limits</a></li>
+<li><a href="section-vertical-asymptotes.html">Vertical Asymptotes</a></li>
+<li><a href="section-continuity.html">Continuity</a></li>
+<li><a href="section-discontinuities.html">Discontinuities</a></li>
+<li><a href="section-continuity-on-an-interval.html">Continuity on an Interval</a></li>
+<li><a href="section-discontinuous-formulas.html">Discontinuous Formulas</a></li>
+<li><a href="section-piecewise-defined-functions.html">Piecewise-Defined Functions</a></li>
+<li><a href="limits-and-continuity-supplementary-exercises.html">Supplement</a></li>
+</ul>
+<h2 class="link"><a href="chapter-introduction-first-derivative.html"><span class="codenumber">3</span><span class="title">Introduction to the First Derivative</span></a></h2>
+<ul>
+<li><a href="section-instantaneous-velocity.html">Instantaneous Velocity</a></li>
+<li><a href="section-tangent-lines.html">Tangent Lines</a></li>
+<li><a href="section-first-derivative.html">The First Derivative</a></li>
+<li><a href="section-derivative-units.html">Derivative Units</a></li>
+</ul>
+<h2 class="link"><a href="chapter-functions-derivatives-antiderivatives.html"><span class="codenumber">4</span><span class="title">Functions, Derivatives, and Antiderivatives</span></a></h2>
+<ul>
+<li><a href="section-graph-features.html">Graph Features</a></li>
+<li><a href="section-graphical-derivatives.html">Graphical Derivatives</a></li>
+<li><a href="section-nondifferentiability.html">Nondifferentiability</a></li>
+<li><a href="section-higher-order-derivatives.html">Higher Order Derivatives</a></li>
+<li><a href="section-antiderivatives.html">Antiderivatives</a></li>
+<li><a href="section-graphical-features-from-derivatives.html">Graphical Features from Derivatives</a></li>
+</ul>
+<h2 class="link"><a href="chapter-derivative-formulas.html"><span class="codenumber">5</span><span class="title">Derivative Formulas</span></a></h2>
+<ul>
+<li><a href="section-leibniz-notation.html">Leibniz Notation</a></li>
+<li><a href="section-derivative-operator.html">The Derivative Operator</a></li>
+<li><a href="section-power-rule.html">The Power Rule</a></li>
+<li><a href="section-constant-factor-rule.html">The Constant Factor Rule</a></li>
+<li><a href="section-constant-divisor-rule.html">The Constant Divisor Rule</a></li>
+<li><a href="section-sum-and-difference-rules.html">The Sum and Difference Rules</a></li>
+<li><a href="section-product-rule.html">Product Rule</a></li>
+<li><a href="section-quotient-rule.html">Quotient Rule</a></li>
+<li><a href="section-simplification.html">Simplification</a></li>
+<li><a href="section-product-and-quotient-together.html">Product and Quotient Rules Together</a></li>
+<li><a href="section-derivative-formulas-and-function-behavior.html">Derivative Formulas and Function Behavior</a></li>
+</ul>
+<h2 class="link active"><a href="chapter-chain-rule.html"><span class="codenumber">6</span><span class="title">The Chain Rule</span></a></h2>
+<ul>
+<li><a href="section-introduction-to-the-chain-rule.html" class="active">Introduction to the Chain Rule</a></li>
+<li><a href="section-order-to-apply-rules.html">Order to Apply Rules</a></li>
+<li><a href="section-not-simplifying-first.html">Not Simplifying First</a></li>
+<li><a href="section-chain-rule-and-leibniz.html">Chain Rule with Leibniz Notation</a></li>
+</ul>
+<h2 class="link"><a href="chapter-implicit-differentiation.html"><span class="codenumber">7</span><span class="title">Implicit Differentiation</span></a></h2>
+<ul>
+<li><a href="section-general-implicit-differentiation.html">General Implicit Differentiation</a></li>
+<li><a href="section-derivatives-of-inverse-functions.html">Derivatives of Inverse Functions</a></li>
+</ul>
+<h2 class="link"><a href="chapter-related-rates.html"><span class="codenumber">8</span><span class="title">Related Rates</span></a></h2>
+<ul></ul>
+<h2 class="link"><a href="chapter-critical-numbers-graphing-from-formulas.html"><span class="codenumber">9</span><span class="title">Critical Numbers and Graphing from Formulas</span></a></h2>
+<ul>
+<li><a href="section-motivation-for-critical-numbers.html">Motivation</a></li>
+<li><a href="section-local-extrema.html">Local Extrema</a></li>
+<li><a href="section-formal-identification-of-critical-numbers.html">Formal Identification of Critical Numbers</a></li>
+<li><a href="section-sign-tables-for-the-first-derivative.html">Sign Tables for the First Derivative</a></li>
+<li><a href="section-inflection-points.html">Inflection Points</a></li>
+<li><a href="section-end-behavior.html">End Behavior</a></li>
+<li><a href="section-making-graphs.html">Making Graphs</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html"><span class="title">Appendices</span></a></h2>
+<ul>
+<li><a href="appendix-1.html">Solutions to Supplementary Exercises</a></li>
+<li><a href="appendix-2.html">Short Answers to Supplementary Exercises</a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="http://mathbook.pugetsound.edu">Authored in MathBook XML</a></nav></div>
+</div></aside><main class="main"><div id="content" class="mathbook-content"><section class="section" id="section-introduction-to-the-chain-rule"><header><h1 class="heading">
+<span class="type">Activity</span><span class="codenumber">6.1</span><span class="title">Introduction to the Chain Rule</span>
+</h1></header><p>The functions \(\fe{f}{t}=\fe{\sin}{t}\) and \(\fe{k}{t}=\fe{\sin}{3t}\) are shown in <a href="section-introduction-to-the-chain-rule.html#figure-sine-waves">Figure&nbsp;6.1.1</a>. Since \(\fe{\fd{f}}{t}=\fe{\cos}{t}\), it is reasonable to speculate that \(\fe{\fd{k}}{t}=\fe{\cos}{3t}\).  But this would imply that \(\fe{\fd{k}}{0}=\fe{\fd{f}}{0}=1\), and a quick glance of the two functions at \(0\) should convince you that this is not true; clearly \(\fe{\fd{k}}{0}&gt;\fe{\fd{f}}{0}\).</p>
+<figure id="figure-sine-waves" style="width:50%;"><object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-63.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object><figcaption style="text-align:center;"><span class="heading">Figure</span><span class="codenumber">6.1.1</span></figcaption></figure><p>The function \(k\) moves through three periods for every one period generated by the function \(f\).  Since the amplitudes of the two functions are the same, the only way \(k\) can generate periods at a rate of \(3:1\) (compared to \(f\)) is if its rate of change is three times that of \(f\).  In fact, \(\fe{\fd{k}}{t}=3\fe{\cos}{3t}\); please note that \(3\) is the first derivative of \(3t\).  This means that the formula for \(\fe{\fd{k}}{t}\) is the product of the rates of change of the outside function (\(\lzoo{u}{\fe{\sin}{u}}=\fe{\cos}{u}\)) and the inside function (\(\lzoo{t}{3t}=3\)).</p>
+<p>\(k\) is an example of a composite function (as illustrated in <a href="section-introduction-to-the-chain-rule.html#figure-composite-function">Figure&nbsp;6.1.2</a>).  If we define \(g\) by the rule \(\fe{g}{t}=3t\), then \(\fe{k}{t}=\fe{f}{\fe{g}{t}}\).</p>
+<figure id="figure-composite-function" style="width:50%;">\[t\xrightarrow{g}3t\xrightarrow{f}\fe{\sin}{3t}\]<p>Taking the output from \(g\) and processing it through a second function, \(f\), is the action that characterizes \(k\) as a composite function.</p>
+<figcaption style="text-align:center;"><span class="heading">Figure</span><span class="codenumber">6.1.2</span>\(\fe{g}{t}=3t\), \(\fe{f}{u}=\fe{\sin}{u}\), and \(\fe{k}{t}=\fe{f}{\fe{g}{t}}\)</figcaption></figure><p>Note that \(\fe{\fd{k}}{0}=\fe{\fd{g}}{0}\fe{\fd{f}}{\fe{g}{0}}\).  This last equation is an example of what we call the <em>chain rule for differentiation</em>. Loosely, the chain rule tells us that when finding the rate of change for a composite function (at \(0\)), we need to multiply the rate of change of the outside function, \(\fe{\fd{f}}{\fe{g}{0}}\), with the rate of change of the inside function, \(\fe{\fd{g}}{0}\).  This is symbolized for general values of \(x\) in <a href="section-introduction-to-the-chain-rule.html#equation-chain-rule">[me]
+&nbsp;[NUMBER]</a> where \(u\) represents a function of \(x\) (e.g. \(u=\fe{g}{x}\)). \[\lzoo{x}{\fe{f}{u}}=\fe{\fd{f}}{u}\lzoo{x}{u}\]This rule is used to find derivative formulas in <a knowl="./knowl/example-chain-rule.html" knowl-id="xref-example-chain-rule" title="">Examples&nbsp;6.1.3</a> and <a knowl="./knowl/example-second-chain-rule.html" knowl-id="xref-example-second-chain-rule" title="">6.1.4</a>.</p>
+<article class="example-like" id="example-chain-rule"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">6.1.3</span>
+</h5>
+<p>\begin{align*}
+\text{Problem}&amp;&amp;&amp;\text{Solution}\\
+\text{Find }\lz{y}{x}\text{ if }y&amp;=\fe{\sin}{x^2}\text{.}&amp;\lz{y}{x}&amp;=\fe{\cos}{x^2}\cdot\lzoo{x}{x^2}\\
+&amp;&amp;&amp;=\fe{\cos}{x^2}\cdot2x\\
+&amp;&amp;&amp;=2x\fe{\cos}{x^2}
+\end{align*}The factor of \(\lzoo{z}{x^2}\) is called a <em class="terminology">chain rule factor</em>.</p></article><article class="example-like" id="example-second-chain-rule"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">6.1.4</span>
+</h5>
+<p>\begin{align*}
+\text{Problem}&amp;&amp;&amp;\text{Solution}\\
+\text{Find }\fe{\fd{f}}{t}\text{ if }\fe{f}{t}&amp;=\fe{\sec^9}{t}\text{.}&amp;\fe{f}{t}&amp;=\left[\fe{\sec}{t}\right]^9\\
+&amp;&amp;\fe{\fd{f}}{t}&amp;=9\left[\fe{\sec}{t}\right]^8\cdot\lzoo{t}{\fe{\sec}{t}}\\
+&amp;&amp;&amp;=9\fe{\sec^8}{t}\cdot\fe{\sec}{t}\fe{\tan}{t}\\
+&amp;&amp;&amp;=9\fe{\sec^9}{t}\fe{\tan}{t}
+\end{align*}The factor of \(\lzoo{t}{\fe{\sec}{t}}\) is called a <em class="terminology">chain rule factor</em>.</p></article><article class="example-like" id="example-third-chain-rule"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">6.1.5</span>
+</h5>
+<p>\begin{align*}
+\text{Problem}&amp;&amp;&amp;\text{Solution}\\
+\text{Find }\lz{y}{x}\text{ if }y&amp;=4^x\text{.}&amp;\lz{y}{x}&amp;=\fe{\ln}{4}\cdot4^x
+\end{align*}Please note that <em>the chain rule was not applied</em> here because the function being differentiated was not a composite function. Here we just applied the formula for the derivative of an exponential function with base \(4\).</p></article><article class="example-like" id="example-fourth-chain-rule"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">6.1.6</span>
+</h5>
+<p>\begin{align*}
+\text{Problem}&amp;&amp;&amp;\text{Solution}\\
+\text{Find }\lz{y}{x}\text{ if }y&amp;=4^x\text{.}&amp;y&amp;=e^{\fe{\ln}{4}x}\\
+&amp;&amp;\lz{y}{x}&amp;=e^{\fe{\ln}{4}x}\cdot\lzoo{x}{\fe{\ln}{4}x}\\
+&amp;&amp;&amp;=e^{\fe{\ln}{4}x}\cdot\fe{\ln}{4}\\
+&amp;&amp;&amp;=\fe{\ln}{4}\cdot4^{x}
+\end{align*}While this is the same task as in <a knowl="./knowl/example-third-chain-rule.html" knowl-id="xref-example-third-chain-rule" title="">Example&nbsp;6.1.5</a>, here we view the function as a composite function, and apply the chain rule.</p></article><p>While you ultimately want to perform the chain rule step in your head, your instructor may want you to illustrate the step while you are first practicing the rule.  For this reason, the step will be explicitly shown in every example given in this lab.</p>
+<section class="exercises" id="exercises-40"><header><h1 class="heading">
+<span class="type">Exercises</span><span class="codenumber">6.1.1</span><span class="title">Exercises</span>
+</h1></header><div class="exercisegroup">
+<article class="introduction" id="introduction-72"><p>Find the first derivative formula for each function.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative (e.g. \(\fe{\fd{h}}{t}\)).</p></article><article class="exercise-like" id="exercise-337"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">1</span>
+</h5>
+<p>\(\fe{h}{t}=\fe{\cos}{\sqrt{t}}\)</p></article><article class="exercise-like" id="exercise-338"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">2</span>
+</h5>
+<p>\(P=\fe{\sin}{\theta^4}\)</p></article><article class="exercise-like" id="exercise-339"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">3</span>
+</h5>
+<p>\(\fe{w}{\alpha}=\fe{\cot}{\sqrt[3]{\alpha}}\)</p></article><article class="exercise-like" id="exercise-340"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">4</span>
+</h5>
+<p>\(z=7\left[\fe{\ln}{t}\right]^3\)</p></article><article class="exercise-like" id="exercise-341"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">5</span>
+</h5>
+<p>\(\fe{z}{\theta}=\fe{\sin^4}{\theta}\)</p></article><article class="exercise-like" id="exercise-342"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">6</span>
+</h5>
+<p>\(\fe{P}{\beta}=\fe{\tan^{-1}}{\beta}\)</p></article><article class="exercise-like" id="exercise-343"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">7</span>
+</h5>
+<p>\(y=\left[\fe{\sin^{-1}}{t}\right]^{17}\)</p></article><article class="exercise-like" id="exercise-344"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">8</span>
+</h5>
+<p>\(T=2^{\fe{\ln}{x}}\)</p></article><article class="exercise-like" id="exercise-345"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">9</span>
+</h5>
+<p>\(\fe{y}{x}=\fe{\sec^{-1}}{e^x}\)</p></article>
+</div>
+<div class="exercisegroup">
+<article class="introduction" id="introduction-73"><p>A function, \(f\), is shown in <a href="section-introduction-to-the-chain-rule.html#figure-chain-rule-exercise">Figure&nbsp;6.1.16</a>. Answer the following questions in reference to this function.</p>
+<figure id="figure-chain-rule-exercise" style="width:50%;"><object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-64.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object><figcaption style="text-align:center;"><span class="heading">Figure</span><span class="codenumber">6.1.16</span>\(f\)</figcaption></figure></article><article class="exercise-like" id="exerice-chain-rule-graph"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">10</span>
+</h5>
+<p>Use the graph to rank the following in decreasing order: \(\fe{f}{1}\), \(\fe{\fd{f}}{1}\), \(\fe{\sd{f}}{1}\), \(\fe{\fd{f}}{0}\), and \(\fe{\fd{f}}{-1}\).</p></article><article class="exercise-like" id="exercise-347"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">11</span>
+</h5>
+<p>The formula for \(f\) is \(\fe{f}{t}=t\,e^t-e^{t^2}+3\). Find the formulas for \(\fd{f}\) and \(\sd{f}\) and use the formulas to verify your answer to <a href="section-introduction-to-the-chain-rule.html#exerice-chain-rule-graph">Exercise&nbsp;6.1.1.10</a>.</p></article><article class="exercise-like" id="exercise-348"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">12</span>
+</h5>
+<p>Find the equation to the tangent line to \(f\) at \(0\).</p></article><article class="exercise-like" id="exercise-349"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">13</span>
+</h5>
+<p>Find the equation to the tangent line to \(\fd{f}\) at \(0\).</p></article><article class="exercise-like" id="exercise-350"><h5 class="heading">
+<span class="type">Exercise</span> <span class="codenumber">14</span>
+</h5>
+<p>There is an antiderivative of \(f\) that passes through the point \(\point{0}{7}\). Find the equation of the tangent line to this antiderivative at \(0\).</p></article>
+</div></section></section></div></main>
+</div>
+</body>
+</html>
