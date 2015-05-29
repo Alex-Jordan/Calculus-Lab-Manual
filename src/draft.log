@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.13)  22 MAY 2015 00:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.13)  29 MAY 2015 13:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -811,7 +811,7 @@ Package: changepage 2009/10/20 v1.0c check page and change page layout
 .................................................
 . LaTeX info: "xparse/redefine-environment"
 . 
-. Redefining environment 'multicols' with sig. 'mO{}' on line 250.
+. Redefining environment 'multicols' with sig. 'mO{}' on line 242.
 .................................................
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -923,7 +923,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip92
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 271.
+Package hyperref Info: Option `colorlinks' set `true' on input line 263.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/pgfplots/pgfplots.sty
 (/usr/local/texlive/2014/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
@@ -1324,7 +1324,7 @@ File: pgflibraryplotmarks.code.tex 2013/07/20 v3.0.0 (rcs-revision 1.13)
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \Annotate with sig. 'O{} O{} m m m m m m' on line 353.
+. Defining command \Annotate with sig. 'O{} O{} m m m m m m' on line 345.
 .................................................
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/extpfeil/extpfeil.sty
@@ -1359,27 +1359,27 @@ LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
 (./draft.aux)
 \openout1 = `draft.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 483.
-LaTeX Font Info:    ... okay on input line 483.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 483.
-LaTeX Font Info:    ... okay on input line 483.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 483.
-LaTeX Font Info:    ... okay on input line 483.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 483.
-LaTeX Font Info:    ... okay on input line 483.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 483.
-LaTeX Font Info:    ... okay on input line 483.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 483.
-LaTeX Font Info:    ... okay on input line 483.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 483.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 483.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 466.
+LaTeX Font Info:    ... okay on input line 466.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 466.
+LaTeX Font Info:    ... okay on input line 466.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 466.
+LaTeX Font Info:    ... okay on input line 466.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 466.
+LaTeX Font Info:    ... okay on input line 466.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 466.
+LaTeX Font Info:    ... okay on input line 466.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 466.
+LaTeX Font Info:    ... okay on input line 466.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 466.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 466.
 
  (/usr/local/texlive/2014/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 483.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 483.
-LaTeX Font Info:    ... okay on input line 483.
+LaTeX Font Info:    ... okay on input line 466.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 466.
+LaTeX Font Info:    ... okay on input line 466.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1454,7 +1454,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box103
-Package hyperref Info: Link coloring ON on input line 483.
+Package hyperref Info: Link coloring ON on input line 466.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -1463,9 +1463,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count302
 )
-LaTeX Info: Redefining \ref on input line 483.
-LaTeX Info: Redefining \pageref on input line 483.
-LaTeX Info: Redefining \nameref on input line 483.
+LaTeX Info: Redefining \ref on input line 466.
+LaTeX Info: Redefining \pageref on input line 466.
+LaTeX Info: Redefining \nameref on input line 466.
 
 (./draft.out) (./draft.out)
 \@outlinefile=\write4
@@ -1476,19 +1476,19 @@ LaTeX Info: Redefining \nameref on input line 483.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.12} into 
 your preamble.
- on input line 483.
+ on input line 466.
 
 \c__siunitx_mathsf_int=\count303
-LaTeX Font Info:    Try loading font information for U+msa on input line 483.
+LaTeX Font Info:    Try loading font information for U+msa on input line 466.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 483.
+LaTeX Font Info:    Try loading font information for U+msb on input line 466.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 483.
+LaTeX Font Info:    Try loading font information for U+stmry on input line 466.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
@@ -1504,1037 +1504,100 @@ x.map}]
 
 ] [4
 
-] [5
+] (./draft.toc)
+\tf@toc=\write5
+\openout5 = `draft.toc'.
+
+ [5
 
 
 ] [6
 
-] [7] [8
-
 ]
-
-LaTeX Warning: Hyper reference `table-suggested-schedule' on page ix undefined 
-on input line 552.
-
-
-Overfull \hbox (136.99707pt too wide) in alignment at lines 553--565
- [] [] [] 
- []
-
-[9] [10
-
-] (./draft.toc [11])
-\tf@toc=\write5
-\openout5 = `draft.toc'.
-
- [12]
 ************************************************
-Chapter 1 Rates Of Change
+Chapter 1 Functions, Derivatives, and Antiderivatives
 ************************************************
 Lab 1.
 ************************************************
-Section 1.1 Velocity
+Section 1.1 Graphical Features from Derivatives
 ************************************************
 ************************************************
 Exercises
 ************************************************
-
-LaTeX Warning: Hyper reference `exercise-average-velocity' on page 1 undefined 
-on input line 595.
-
-
-Overfull \hbox (8.22134pt too wide) in paragraph at lines 619--619
-[] 
- []
-
-
-Overfull \hbox (8.22134pt too wide) in paragraph at lines 619--619
-[]$[]$ 
- []
-
-
-Overfull \hbox (8.22134pt too wide) in paragraph at lines 629--629
-[] 
- []
-
-
-Overfull \hbox (8.22134pt too wide) in paragraph at lines 629--629
-[] 
- []
-
-
-Overfull \hbox (8.22134pt too wide) in paragraph at lines 629--629
-[] 
- []
-
-
-Overfull \hbox (8.22134pt too wide) in paragraph at lines 629--629
-[] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
-
+[1
 
 ]
 
-LaTeX Warning: Hyper reference `exercise-average-velocity-formula' on page 2 un
-defined on input line 634.
+LaTeX Warning: Hyper reference `exercise-based-on-derivatives' on page 2 undefi
+ned on input line 557.
 
 
-LaTeX Warning: Hyper reference `exercise-average-velocity' on page 2 undefined 
-on input line 634.
+LaTeX Warning: Hyper reference `exercise-based-on-derivatives-two' on page 2 un
+defined on input line 606.
 
-
-LaTeX Warning: Hyper reference `exercise-average-velocity-formula' on page 2 un
-defined on input line 638.
-
-LaTeX Font Info:    Calculating math sizes for size <8.39996> on input line 643
+[2]
+LaTeX Font Info:    Calculating math sizes for size <8.39996> on input line 665
 .
 
+
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.19998> not available
-(Font)              size <5> substituted on input line 643.
+(Font)              size <5> substituted on input line 665.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.19998> not available
-(Font)              size <5> substituted on input line 643.
+(Font)              size <5> substituted on input line 665.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.19998> not available
-(Font)              size <5> substituted on input line 643.
+(Font)              size <5> substituted on input line 665.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4.19998> not available
-(Font)              size <5> substituted on input line 643.
+(Font)              size <5> substituted on input line 665.
 
 
 LaTeX Font Warning: Font shape `OT1/cmtt/m/n' in size <4.19998> not available
-(Font)              size <5> substituted on input line 643.
+(Font)              size <5> substituted on input line 665.
 
 
 LaTeX Font Warning: Font shape `U/stmry/m/n' in size <4.19998> not available
-(Font)              size <5> substituted on input line 643.
+(Font)              size <5> substituted on input line 665.
 
-************************************************
-Section 1.2 Secant Line to a Curve
-************************************************
+
+LaTeX Warning: Hyper reference `exercise-ice-cube' on page 3 undefined on input
+ line 669.
+
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2]
-Underfull \hbox (badness 2644) in paragraph at lines 704--704
-[]\OT1/cmr/m/n/12 This fac-tor-ing tech-
- []
-
-************************************************
-Exercises
-************************************************
-[3]
-Overfull \hbox (219.09387pt too wide) in paragraph at lines 731--757
-[][] 
- []
-
-************************************************
-Section 1.3 The Difference Quotient
-************************************************
+ [3]
 [4]
 ************************************************
+Section 1.2 Supplement
+************************************************
+************************************************
 Exercises
 ************************************************
 
-LaTeX Warning: Hyper reference `exercise-first-difference-quotient' on page 5 u
-ndefined on input line 790.
+LaTeX Warning: Hyper reference `exercise-sketch-first-supplement' on page 5 und
+efined on input line 789.
 
 
-LaTeX Warning: Hyper reference `exercise-difference-quotient-verify' on page 5 
-undefined on input line 817.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[5]
-
-LaTeX Warning: Hyper reference `exercise-difference-quotient-average-velocity' 
-on page 6 undefined on input line 821.
-
+ [5]
 [6]
-************************************************
-Section 1.4 Supplement
-************************************************
-************************************************
-Exercises
-************************************************
 
-Underfull \vbox (badness 1533) has occurred while \output is active []
-
- [7]
-
-LaTeX Warning: Hyper reference `exercise-upside-down-parabola-slope' on page 8 
-undefined on input line 1000.
-
-[8]
-************************************************
-Chapter 2 Limits and Continuity
-************************************************
-[9] [10
-
-]
-Lab 2.
-************************************************
-Section 2.1 Limits
-************************************************
-
-LaTeX Warning: Hyper reference `exercise-vat-first' on page 11 undefined on inp
-ut line 1075.
-
-
-LaTeX Warning: Hyper reference `exercise-vat-last' on page 11 undefined on inpu
-t line 1075.
-
-************************************************
-Exercises
-************************************************
-
-Underfull \vbox (badness 1762) has occurred while \output is active []
-
- [11]
-[12]
-Underfull \hbox (badness 6157) in paragraph at lines 1245--1247
-[]\OT1/cmr/bx/n/12 15. [][][][] \OT1/cmr/m/n/12 What is the value of
- []
-
-************************************************
-Section 2.2 Limits Laws
-************************************************
-************************************************
-Exercises
-************************************************
-[13]
-
-LaTeX Warning: Hyper reference `exercise-first-apply-limit-laws' on page 14 und
-efined on input line 1356.
-
-************************************************
-Section 2.3 Indeterminate Limits
-************************************************
-[14]
-
-LaTeX Warning: Hyper reference `exercise-identities-review' on page 15 undefine
-d on input line 1405.
-
-************************************************
-Exercises
-************************************************
-[15]
-************************************************
-Section 2.4 Limits at Infinity
-************************************************
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
-************************************************
-Exercises
-************************************************
-[16] [17]
-************************************************
-Section 2.5 Limits at Infinity Tending to Zero
-************************************************
-
-LaTeX Warning: Hyper reference `exercise-hear-me-first' on page 18 undefined on
- input line 1566.
-
-
-LaTeX Warning: Hyper reference `exercise-hear-me-last' on page 18 undefined on 
-input line 1566.
-
-************************************************
-Exercises
-************************************************
-************************************************
-Section 2.6 Ratios of Infinities
-************************************************
-[18]
-************************************************
-Exercises
-************************************************
-************************************************
-Section 2.7 Non-existent Limits
-************************************************
-[19]
-Overfull \hbox (2.03517pt too wide) in paragraph at lines 1661--1661
- [][] 
- []
-
-
-Overfull \hbox (2.03517pt too wide) in paragraph at lines 1688--1688
- [][] 
- []
-
-
-Overfull \hbox (2.03517pt too wide) in paragraph at lines 1714--1714
- [][] 
- []
-
-************************************************
-Exercises
-************************************************
-[20]
-************************************************
-Section 2.8 Vertical Asymptotes
-************************************************
-************************************************
-Exercises
-************************************************
-[21]
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
- [22]
-Underfull \hbox (badness 2245) in paragraph at lines 1887--1887
-\OT1/cmr/m/n/12 rect! Do not em-u-late
- []
-
-************************************************
-Section 2.9 Continuity
-************************************************
-************************************************
-Exercises
-************************************************
-Missing character: There is no ] in font nullfont!
-Missing character: There is no ] in font nullfont!
-
-Overfull \vbox (52.55458pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (42.55458pt too high) has occurred while \output is active []
-
-
-Overfull \vbox (42.55458pt too high) has occurred while \output is active []
-
-
-[23]
-************************************************
-Section 2.10 Discontinuities
-************************************************
-************************************************
-Exercises
-************************************************
-************************************************
-Section 2.11 Continuity on an Interval
-************************************************
-************************************************
-Exercises
-************************************************
-[24]
-Overfull \hbox (1.00455pt too wide) in paragraph at lines 2076--2076
- [][] 
- []
-
-
-Overfull \hbox (1.00455pt too wide) in paragraph at lines 2109--2109
- [][] 
- []
-
-
-Overfull \hbox (1.00455pt too wide) in paragraph at lines 2140--2140
- [][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [25]
-************************************************
-Section 2.12 Discontinuous Formulas
-************************************************
-************************************************
-Exercises
-************************************************
-************************************************
-Section 2.13 Piecewise-Defined Functions
-************************************************
-************************************************
-Exercises
-************************************************
-[26]
-
-LaTeX Warning: Hyper reference `exercise-first-piecewise' on page 27 undefined 
-on input line 2182.
-
-
-LaTeX Warning: Hyper reference `exercise-first-piecewise' on page 27 undefined 
-on input line 2182.
-
-
-LaTeX Warning: Hyper reference `exercise-second-piecewise' on page 27 undefined
- on input line 2182.
-
-
-LaTeX Warning: Hyper reference `exercise-last-piecewise' on page 27 undefined o
-n input line 2182.
-
-
-LaTeX Warning: Hyper reference `exercise-second-piecewise' on page 27 undefined
- on input line 2182.
-
-
-LaTeX Warning: Hyper reference `exercise-last-piecewise' on page 27 undefined o
-n input line 2182.
-
-
-LaTeX Warning: Hyper reference `exercise-first-piecewise' on page 27 undefined 
-on input line 2182.
-
-[27]
-************************************************
-Section 2.14 Supplement
-************************************************
-************************************************
-Exercises
-************************************************
-
-LaTeX Warning: Hyper reference `exercise-limits-supplement-first' on page 28 un
-defined on input line 2253.
-
-
-LaTeX Warning: Hyper reference `exercise-limits-supplement-last' on page 28 und
-efined on input line 2253.
-
-
-LaTeX Warning: Hyper reference `exercise-limits-supplement-first' on page 28 un
-defined on input line 2253.
-
-
-Overfull \hbox (2.79994pt too wide) in paragraph at lines 2309--2309
- [][] 
- []
-
-[28]
-Underfull \vbox (badness 4181) has occurred while \output is active []
-
- [29]
-[30]
-************************************************
-Chapter 3 Introduction to the First Derivative
-************************************************
-[31] [32
-
-]
-Lab 3.
-************************************************
-Section 3.1 Instantaneous Velocity
-************************************************
-[33]
-************************************************
-Exercises
-************************************************
-
-LaTeX Warning: Hyper reference `exercise-instantaneous-velocity' on page 34 und
-efined on input line 2685.
-
-
-LaTeX Warning: Hyper reference `exercise-instantaneous-velocity-second' on page
- 34 undefined on input line 2689.
-
-************************************************
-Section 3.2 Tangent Lines
-************************************************
-[34]
-Overfull \hbox (11.72025pt too wide) in paragraph at lines 2768--2768
- [][] 
- []
-
-************************************************
-Exercises
-************************************************
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [35]
-
-LaTeX Warning: Hyper reference `exercise-tangent-line' on page 36 undefined on 
-input line 2819.
-
-************************************************
-Section 3.3 The First Derivative
-************************************************
-[36]
-************************************************
-Exercises
-************************************************
-[37]
-************************************************
-Section 3.4 Derivative Units
-************************************************
-[38]
-************************************************
-Exercises
-************************************************
-
-LaTeX Warning: Hyper reference `exercise-bathtub' on page 39 undefined on input
- line 2998.
-
-
-LaTeX Warning: Hyper reference `exercise-bathtub-rate' on page 39 undefined on 
-input line 3004.
-
-************************************************
-Chapter 4 Functions, Derivatives, and Antiderivatives
-************************************************
-[39] [40
-
-]
-Lab 4.
-************************************************
-Section 4.1 Graph Features
-************************************************
-
-Underfull \hbox (badness 10000) in paragraph at lines 3032--3032
-[]\OT1/cmr/m/n/12 This means
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3032--3032
-[]\OT1/cmr/m/n/12 A func-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3032--3032
-[]\OT1/cmr/m/n/12 This means
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3032--3032
-[]\OT1/cmr/m/n/12 This
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3032--3032
-[]\OT1/cmr/m/n/12 A
- []
-
-[41]
-************************************************
-Exercises
-************************************************
-************************************************
-Section 4.2 Graphical Derivatives
-************************************************
-************************************************
-Exercises
-************************************************
-[42] [43]
-Underfull \vbox (badness 3471) has occurred while \output is active []
-
- [44]
-
-LaTeX Warning: Hyper reference `exercise-derivative-of-one-over-x' on page 45 u
-ndefined on input line 3397.
-
-
-LaTeX Warning: Hyper reference `exercise-asymptotes-one-over-x' on page 45 unde
-fined on input line 3405.
-
-
-LaTeX Warning: Hyper reference `exercise-negative-derivative-of-one-over-x' on 
-page 45 undefined on input line 3405.
-
-[45]
-Overfull \hbox (21.31108pt too wide) in paragraph at lines 3472--3472
- [][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [46]
-Overfull \hbox (21.31143pt too wide) in paragraph at lines 3526--3526
- [][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [47]
-************************************************
-Section 4.3 Nondifferentiability
-************************************************
-************************************************
-Exercises
-************************************************
-[48]
-************************************************
-Section 4.4 Higher Order Derivatives
-************************************************
-[49]
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
-
-************************************************
-Exercises
-************************************************
-
-Overfull \hbox (14.02847pt too wide) in paragraph at lines 3721--3721
- [][] 
- []
-
-
-Overfull \hbox (14.02847pt too wide) in paragraph at lines 3737--3737
- [][] 
- []
-
-
-Overfull \hbox (14.02847pt too wide) in paragraph at lines 3753--3753
- [][] 
- []
-
-
-Overfull \hbox (14.02847pt too wide) in paragraph at lines 3769--3769
- [][] 
- []
-
-[50]
-************************************************
-Section 4.5 Antiderivatives
-************************************************
-[51]
-************************************************
-Exercises
-************************************************
-[52] [53] [54]
-************************************************
-Section 4.6 Graphical Features from Derivatives
-************************************************
-************************************************
-Exercises
-************************************************
-[55]
-
-LaTeX Warning: Hyper reference `exercise-based-on-derivatives' on page 56 undef
-ined on input line 4159.
-
-[56]
-
-LaTeX Warning: Hyper reference `exercise-based-on-derivatives-two' on page 57 u
-ndefined on input line 4208.
-
-[57]
-
-LaTeX Warning: Hyper reference `exercise-ice-cube' on page 58 undefined on inpu
-t line 4271.
-
-[58]
-************************************************
-Chapter 5 Derivative Formulas
-************************************************
-[59] [60
-
-]
-Lab 5.
-************************************************
-Section 5.1 Leibniz Notation
-************************************************
-************************************************
-Exercises
-************************************************
-************************************************
-Section 5.2 The Derivative Operator
-************************************************
-[61]
-************************************************
-Exercises
-************************************************
-************************************************
-Section 5.3 The Power Rule
-************************************************
-
-Underfull \vbox (badness 1314) has occurred while \output is active []
-
- [62]
-************************************************
-Exercises
-************************************************
-************************************************
-Section 5.4 The Constant Factor Rule
-************************************************
-************************************************
-Exercises
-************************************************
-[63]
-************************************************
-Section 5.5 The Constant Divisor Rule
-************************************************
-************************************************
-Exercises
-************************************************
-************************************************
-Section 5.6 The Sum and Difference Rules
-************************************************
-[64]
-************************************************
-Exercises
-************************************************
-************************************************
-Section 5.7 Product Rule
-************************************************
-[65]
-************************************************
-Exercises
-************************************************
-[66]
-************************************************
-Section 5.8 Quotient Rule
-************************************************
-************************************************
-Exercises
-************************************************
-
-Underfull \vbox (badness 5637) has occurred while \output is active []
-
- [67]
-************************************************
-Section 5.9 Simplification
-************************************************
-
-LaTeX Warning: Hyper reference `unsimplified-product-first' on page 68 undefine
-d on input line 4792.
-
-
-LaTeX Warning: Hyper reference `unsimplified-product-last' on page 68 undefined
- on input line 4792.
-
-
-LaTeX Warning: Hyper reference `unsimplified-quotient-first' on page 68 undefin
-ed on input line 4792.
-
-
-LaTeX Warning: Hyper reference `unsimplified-quotient-last' on page 68 undefine
-d on input line 4792.
-
-
-LaTeX Warning: Hyper reference `unsimplified-quotient-last' on page 68 undefine
-d on input line 4792.
-
-[68]
-************************************************
-Exercises
-************************************************
-[69]
-************************************************
-Section 5.10 Product and Quotient Rules Together
-************************************************
-************************************************
-Exercises
-************************************************
-************************************************
-Section 5.11 Derivative Formulas and Function Behavior
-************************************************
-************************************************
-Exercises
-************************************************
-[70]
-
-LaTeX Warning: Hyper reference `exercise-evaluate-gravity' on page 71 undefined
- on input line 4926.
-
-************************************************
-Chapter 6 The Chain Rule
-************************************************
-[71] [72
-
-]
-Lab 6.
-************************************************
-Section 6.1 Introduction to the Chain Rule
-************************************************
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [73]
-
-LaTeX Warning: Hyper reference `equation-chain-rule' on page 74 undefined on in
-put line 4974.
-
-
-LaTeX Warning: Reference `equation-chain-rule' on page 74 undefined on input li
-ne 4974.
-
-[74]
-************************************************
-Exercises
-************************************************
-[75]
-
-LaTeX Warning: Hyper reference `exerice-chain-rule-graph' on page 76 undefined 
-on input line 5086.
-
-************************************************
-Section 6.2 Order to Apply Rules
-************************************************
-************************************************
-Exercises
-************************************************
-************************************************
-Section 6.3 Not Simplifying First
-************************************************
-************************************************
-Exercises
-************************************************
-[76]
-************************************************
-Section 6.4 Chain Rule with Leibniz Notation
-************************************************
-[77]
-************************************************
-Exercises
-************************************************
-
-LaTeX Warning: Hyper reference `exercise-leibniz-chain-rule' on page 78 undefin
-ed on input line 5255.
-
-[78]
-************************************************
-Chapter 7 Implicit Differentiation
-************************************************
-[79] [80
-
-]
-Lab 7.
-************************************************
-Section 7.1 General Implicit Differentiation
-************************************************
-[81]
-************************************************
-Exercises
-************************************************
-
-LaTeX Warning: Hyper reference `exercise-implicit-middle' on page 82 undefined 
-on input line 5335.
-
-
-LaTeX Warning: Hyper reference `exercise-implicit-last' on page 82 undefined on
- input line 5335.
-
-
-LaTeX Warning: Hyper reference `exercise-implicit-lambert' on page 82 undefined
- on input line 5365.
-
-[82]
-************************************************
-Section 7.2 Derivatives of Inverse Functions
-************************************************
-[83]
-************************************************
-Exercises
-************************************************
-[84]
-************************************************
-Chapter 8 Related Rates
-************************************************
-[85] [86
-
-]
-Lab 8.
-************************************************
-Chapter 9 Critical Numbers and Graphing from Formulas
-************************************************
-[87] [88
-
-]
-Lab 9.
-************************************************
-Section 9.1 Motivation
-************************************************
-************************************************
-Exercises
-************************************************
-
-Overfull \hbox (18.36583pt too wide) in paragraph at lines 5569--5569
- [][] 
- []
-
-
-Overfull \hbox (18.36583pt too wide) in paragraph at lines 5593--5593
- [][] 
- []
-
-
-Underfull \vbox (badness 6396) has occurred while \output is active []
-
- [89]
-************************************************
-Section 9.2 Local Extrema
-************************************************
-
-LaTeX Warning: Hyper reference `exercise-parabola-vertex' on page 90 undefined 
-on input line 5602.
-
-
-LaTeX Warning: Hyper reference `exercise-distinguish-graphs-by-critical-nature'
- on page 90 undefined on input line 5602.
-
-
-LaTeX Warning: Hyper reference `exercise-distinguish-graphs-by-critical-nature'
- on page 90 undefined on input line 5604.
-
-************************************************
-Exercises
-************************************************
-
-Underfull \vbox (badness 3635) has occurred while \output is active []
-
- [90]
-[91]
-************************************************
-Section 9.3 Formal Identification of Critical Numbers
-************************************************
-[92]
-************************************************
-Exercises
-************************************************
-************************************************
-Section 9.4 Sign Tables for the First Derivative
-************************************************
-************************************************
-Exercises
-************************************************
-[93] [94]
-
-LaTeX Warning: Hyper reference `exercise-make-sign-table-first' on page 95 unde
-fined on input line 5869.
-
-
-LaTeX Warning: Hyper reference `exercise-make-sign-table-last' on page 95 undef
-ined on input line 5869.
-
-
-LaTeX Warning: Hyper reference `exercise-what-type-of-critical-point' on page 9
-5 undefined on input line 5905.
-
-[95]
-************************************************
-Section 9.5 Inflection Points
-************************************************
-************************************************
-Exercises
-************************************************
-[96]
-
-LaTeX Warning: Hyper reference `exercise-make-second-derivative-table-first' on
- page 97 undefined on input line 5963.
-
-
-LaTeX Warning: Hyper reference `exercise-make-second-derivative-table-last' on 
-page 97 undefined on input line 5963.
-
-************************************************
-Section 9.6 End Behavior
-************************************************
-[97]
-************************************************
-Exercises
-************************************************
-
-Overfull \hbox (24.24687pt too wide) in paragraph at lines 6042--6042
- [][] 
- []
-
-
-Overfull \hbox (24.24687pt too wide) in paragraph at lines 6071--6071
- [][] 
- []
-
-
-Overfull \hbox (24.24687pt too wide) in paragraph at lines 6108--6108
- [][] 
- []
-
-
-Overfull \hbox (24.24687pt too wide) in paragraph at lines 6137--6137
- [][] 
- []
-
-[98] [99]
-************************************************
-Section 9.7 Making Graphs
-************************************************
-************************************************
-Exercises
-************************************************
-
-LaTeX Warning: Hyper reference `exercise-sketch-first-asymptotes' on page 100 u
-ndefined on input line 6254.
-
-
-LaTeX Warning: Hyper reference `exercise-sketch-first-critical-numbers' on page
- 100 undefined on input line 6254.
-
-
-Overfull \hbox (11.94775pt too wide) in paragraph at lines 6276--6276
- [][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [100]
-Underfull \vbox (badness 6658) has occurred while \output is active []
-
- [101]
-
-LaTeX Warning: Hyper reference `exercise-sketch-second-asymptotes' on page 102 
-undefined on input line 6310.
-
-
-LaTeX Warning: Hyper reference `exercise-sketch-second-critical-numbers' on pag
-e 102 undefined on input line 6310.
-
-
-Overfull \hbox (11.94775pt too wide) in paragraph at lines 6332--6332
- [][] 
- []
-
-[102]
-************************************************
-Appendix 1 Solutions to Supplementary Exercises
-************************************************
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [103
-
-
-]
-[104] [105]
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
- [106]
-Overfull \hbox (9.57932pt too wide) in paragraph at lines 6479--6480
-\OT1/cmr/m/n/12 tricky...especially when the num-bers are neg-a-tive. The limit
- sug-gested here is $[] [] =
- []
-
-[107] [108] [109] [110] [111] [112]
-************************************************
-Appendix 2 Short Answers to Supplementary Exercises
-************************************************
-[113] [114
-
-] [115] [116]
-
-Package caption Warning: Unused \captionsetup[subtable] on input line 137.
+Package caption Warning: Unused \captionsetup[subtable] on input line 129.
 See the caption package documentation for explanation.
 
-[117]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 6917.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 6917.
- (./draft.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 6917.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 6917.
-
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 831.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 831.
+(./draft.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 831.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 831.
 Package rerunfilecheck Info: File `draft.out' has not changed.
-(rerunfilecheck)             Checksum: 6CF16BB9D3556C838988F3C0BF778EFF;4379.
+(rerunfilecheck)             Checksum: A26BABD96648A5302B73FDBAB6F96735;215.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2545,39 +1608,29 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 43403 strings out of 493109
- 983767 string characters out of 6135003
- 1505919 words of memory out of 5000000
- 45031 multiletter control sequences out of 15000+600000
- 21538 words of font info for 86 fonts, out of 8000000 for 9000
+ 38830 strings out of 493109
+ 895562 string characters out of 6135003
+ 1062763 words of memory out of 5000000
+ 41657 multiletter control sequences out of 15000+600000
+ 19598 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 83i,29n,127p,10457b,2595s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texl
-ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on draft.pdf (129 pages, 712497 bytes).
+ 82i,18n,126p,10455b,2481s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
+/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
+l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on draft.pdf (12 pages, 146138 bytes).
 PDF statistics:
- 2541 PDF objects out of 2984 (max. 8388607)
- 2352 compressed objects within 24 object streams
- 1265 named destinations out of 1440 (max. 500000)
- 547 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 209 PDF objects out of 1000 (max. 8388607)
+ 181 compressed objects within 2 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 37 words of extra memory for PDF output out of 10000 (max. 10000000)
 

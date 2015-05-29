@@ -35,25 +35,10 @@
     <exercises>
         <exercisegroup>
             <introduction>
-                <p>Suppose that an object is tossed into the air so that its elevation (measured in <quantity><unit base="meter"/></quantity>) is given by the function <m>p</m> defined by <m>\fe{p}{t}=300+10t-4.9t^2</m> where <m>t</m> is the amount of time that has passed since the object was tossed (measured in <quantity><unit base="second"/></quantity>).</p>
-            </introduction>
-
-            <exercise xml:id="exercise-instantaneous-velocity">
-                <statement>
-                    <p>Evaluate <m>\lim\limits_{h\to0}\frac{\fe{p}{4+h}-\fe{p}{4}}{h}</m> showing each step in the simplification process (as illustrated in <xref ref="example-instantaneous-velocity"/>).</p>
-                </statement>
-            </exercise>
-
-            <exercise xml:id="exercise-instantaneous-velocity-second">
-                <statement>
-                    <p>What is the unit for the value calculated in <xref ref="exercise-instantaneous-velocity"/> and what does the value (including unit) tell you abou the motion of the object?</p>
-                </statement>
-            </exercise>
-
-            <exercise>
-                <statement>
-                    <p>Copy <xref ref="table-instantaneous-velocity"/> onto your paper and compute and record the missing values. Do these values support your answer to <xref ref="exercise-instantaneous-velocity-second"/>?</p>
-
+                <sidebyside>
+                    <paragraphs width="60%" valign="top">
+                        <p>Suppose that an object is tossed into the air so that its elevation (measured in <quantity><unit base="meter"/></quantity>) is given by the function <m>p</m> defined by <m>\fe{p}{t}=300+10t-4.9t^2</m> where <m>t</m> is the amount of time that has passed since the object was tossed (measured in <quantity><unit base="second"/></quantity>).</p>
+                    </paragraphs>
                     <table xml:id="table-instantaneous-velocity">
                         <caption>Average Velocities</caption>
                         <tabular top="major">
@@ -89,6 +74,24 @@
                             </row>
                         </tabular>
                     </table>
+                </sidebyside>
+            </introduction>
+
+            <exercise xml:id="exercise-instantaneous-velocity">
+                <statement>
+                    <p>Evaluate <m>\lim\limits_{h\to0}\frac{\fe{p}{4+h}-\fe{p}{4}}{h}</m> showing each step in the simplification process (as illustrated in <xref ref="example-instantaneous-velocity"/>).</p>
+                </statement>
+            </exercise>
+
+            <exercise xml:id="exercise-instantaneous-velocity-second">
+                <statement>
+                    <p>What is the unit for the value calculated in <xref ref="exercise-instantaneous-velocity"/> and what does the value (including unit) tell you abou the motion of the object?</p>
+                </statement>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>Copy <xref ref="table-instantaneous-velocity"/> onto your paper and compute and record the missing values. Do these values support your answer to <xref ref="exercise-instantaneous-velocity-second"/>?</p>
                 </statement>
             </exercise>
         </exercisegroup>

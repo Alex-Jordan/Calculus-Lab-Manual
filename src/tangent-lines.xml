@@ -25,8 +25,7 @@
                 <mrow>&amp;=\lim_{h\to0}\frac{4+h-4}{h\left(\sqrt{4+h}+2\right)}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{h}{h\left(\sqrt{4+h}+2\right)}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{1}{1\left(\sqrt{4+h}+2\right)}</mrow>
-                <mrow>&amp;=\frac{1}{1\left(\sqrt{4+0}+2\right)}</mrow>
-                <mrow>&amp;=\frac{1}{4}</mrow>
+                <mrow>&amp;=\frac{1}{\sqrt{4+0}+2}=\frac{1}{4}</mrow>
                 </md></p>
             </paragraphs>
             <figure xml:id="figure-tangent-line" valign="bottom">

@@ -33,7 +33,7 @@
 
         <copyright>
             <year>2012<ndash />2015</year>
-            <holder>Steve Simonds, Alex Jordan</holder>
+            <holder>Portand Community College</holder>
             <minilicense>Creative Commons BY-SA</minilicense>
 			<shortlicense>Permission is granted to copy, distribute and/or modify this document under the terms of the Creative Commons BY-SA License, Version 3.0 or any later version.</shortlicense>
         </copyright>
@@ -104,7 +104,7 @@
                     <row bottom="medium">
                         <cell>3</cell>
                         <cell><xref autoname="title" ref="section-instantaneous-velocity"/><ndash/><xref autoname="title" ref="section-derivative-units"/></cell>
-                        <cell></cell>
+                        <cell><xref autoname="title" ref="introduction-first-derivative-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="medium">
                         <cell>4</cell>

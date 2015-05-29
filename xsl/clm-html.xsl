@@ -7,6 +7,11 @@
 <!-- Common thin layer                                                      -->
 <xsl:import href="clm-common.xsl" />
 
+<xsl:param name="exercise.backmatter.answer" select="'no'" />
+<xsl:param name="exercise.backmatter.solution" select="'yes'" />
+<xsl:param name="html.css.extra"  select="'../style/css/clm.css'" />
+
+
 <!-- GeoGebra HTML5-->
 <xsl:template match="geogebra-html5">
     <xsl:element name="iframe">
@@ -207,7 +212,7 @@
     <span class="type">
         <xsl:apply-templates select="." mode="type-name" />
     </span>
-    <xsl:if test="not(*[parent::preface])">
+    <xsl:if test="not(*[parent::preface]) and not(*[parent::acknowledgement]) and not(*[parent::colophon])">
         <span class="codenumber">
             <xsl:apply-templates select="." mode="number" />
         </span>
@@ -259,6 +264,66 @@
        <xsl:text>&#xa;&#xa;</xsl:text>
     </xsl:if>
 </xsl:template>
+
+<xsl:template match="exercise" mode="backmatter">
+    <xsl:if test="hint or answer or solution">
+        <!-- Lead with the problem number and some space -->
+        <xsl:variable name="xref">
+            <xsl:apply-templates select="." mode="internal-id" />
+        </xsl:variable>
+        <article class="exercise-like" id="{$xref}">
+            <xsl:if test="$exercise.backmatter.statement='yes'">
+                <!-- TODO: not a "backmatter" template - make one possibly? Or not necessary -->
+                <xsl:apply-templates select="statement" />
+            </xsl:if>
+            <xsl:if test="hint and $exercise.backmatter.hint='yes'">
+                <xsl:apply-templates select="hint" mode="backmatter" />
+            </xsl:if>
+            <xsl:if test="answer and $exercise.backmatter.answer='yes'">
+                <xsl:apply-templates select="answer" mode="backmatter" />
+            </xsl:if>
+            <xsl:if test="solution and $exercise.backmatter.solution='yes'">
+                <xsl:apply-templates select="solution" mode="backmatter" />
+            </xsl:if>
+        </article>
+    </xsl:if>
+</xsl:template>
+
+<!-- an answer-only list -->
+<xsl:template match="answer-list">
+    <xsl:apply-templates select="//exercises" mode="answerlist" />
+</xsl:template>
+<xsl:template match="exercises" mode="answerlist">
+    <xsl:variable name="nonempty" select="(.//hint and $exercise.backmatter.hint='yes') or
+                                          (.//answer and $exercise.backmatter.answer='yes') or
+                                          (.//solution and $exercise.backmatter.solution='yes')" />
+    <xsl:if test="$nonempty='true'">
+        <section class="exercises" id="">
+            <h1 class="heading">
+                <span class="type">Exercises</span>
+                <span class="codenumber"><xsl:apply-templates select="." mode="number" /></span>
+                <span class="title"><xsl:apply-templates select="title-full" /></span>
+            </h1>
+            <xsl:apply-templates select="*[not(self::title)]" mode="answerlist" />
+        </section>
+    </xsl:if>
+</xsl:template>
+<xsl:template match="exercises//introduction|exercises//conclusion" mode="answerlist" />
+<xsl:template match="exercise" mode="answerlist">
+    <xsl:if test="hint or answer or solution">
+        <!-- Lead with the problem number and some space -->
+        <xsl:variable name="xref">
+            <xsl:apply-templates select="." mode="internal-id" />
+        </xsl:variable>
+        <article class="exercise-like" id="{$xref}">
+            <xsl:if test="answer">
+                <xsl:apply-templates select="answer" mode="backmatter" />
+            </xsl:if>
+        </article>
+    </xsl:if>
+</xsl:template>
+
+
 
 
 </xsl:stylesheet>

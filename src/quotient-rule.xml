@@ -8,7 +8,7 @@
 <!-- Alex Jordan (editor)          -->
 
 <section xml:id="section-quotient-rule">
-    <title>Quotient Rule</title>
+    <title>The Quotient Rule</title>
 
     <p>The next rule we are going to explore is called the <term>quotient rule</term> of differentiation.  We never use this rule unless there is a variable factor in the denominator of the expression we are differentiating.  (Remember, we already have the constant factor/divisor rule to deal with constant factors in the denominator.)<men xml:id="equation-quotient-rule">\lzoo{x}{\frac{\fe{f}{x}}{\fe{g}{x}}}=\frac{\lzoo{x}{\fe{f}{x}}\cdot\fe{g}{x}-\fe{f}{x}\cdot\lzoo{x}{\fe{g}{x}}}{\left[\fe{g}{x}\right]^2}</men></p>
 

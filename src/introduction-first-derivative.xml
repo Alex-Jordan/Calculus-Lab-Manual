@@ -14,5 +14,6 @@
     <xi:include href="./tangent-lines.xml" />
     <xi:include href="./first-derivative.xml" />
     <xi:include href="./derivative-units.xml" />
+    <xi:include href="./introduction-first-derivative-supplement.xml" />
     
 </chapter>

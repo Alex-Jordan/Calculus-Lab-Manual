@@ -10,6 +10,9 @@
 <!-- LaTeX-specific parameters                                              -->
 <xsl:param name="latex.geometry" select="'letterpaper,total={6.25in,9.0in}'" />
 <xsl:param name="latex.font.size" select="'12pt'" />
+<xsl:param name="exercise.backmatter.answer" select="'no'" />
+<xsl:param name="exercise.backmatter.hint" select="'no'" />
+<xsl:param name="exercise.backmatter.solution" select="'yes'" />
 <xsl:param name="latex.preamble.early" select="document('latex.preamble.xml')//latex-preamble-early" />
 <xsl:param name="latex.preamble.late" select="document('latex.preamble.xml')//latex-preamble-late" />
 
@@ -440,5 +443,111 @@
     
 </xsl:template>
 
+
+<!-- A list of short answers -->
+<xsl:template match="answer-list">
+    <xsl:apply-templates select="//exercises" mode="answerlist" />
+</xsl:template>
+<xsl:template match="exercises" mode="answerlist">
+    <xsl:variable name="nonempty" select="(.//hint and $exercise.backmatter.hint='yes') or (.//answer and $exercise.backmatter.answer='yes') or (.//solution and $exercise.backmatter.solution='yes')" />
+    <xsl:if test="$nonempty='true'">
+        <xsl:text>\</xsl:text>
+        <xsl:apply-templates select="." mode="subdivision-name" />
+        <xsl:text>*{</xsl:text>
+        <xsl:apply-templates select="." mode="number" />
+        <xsl:text> </xsl:text>
+        <xsl:apply-templates select="title" />
+        <xsl:text>}&#xa;</xsl:text>
+        <xsl:apply-templates select="*[not(self::title)]" mode="answerlist" />
+    </xsl:if>
+</xsl:template>
+<xsl:template match="exercises//introduction|exercises//conclusion" mode="answerlist" />
+<xsl:template match="exercise" mode="answerlist">
+    <xsl:if test="answer">
+        <!-- Lead with the problem number and some space -->
+        <xsl:text>\noindent\textbf{</xsl:text>
+        <xsl:apply-templates select="." mode="origin-id" />
+        <xsl:text>.}\quad{}</xsl:text>
+        <xsl:if test="answer">
+            <xsl:apply-templates select="answer" mode="backmatter" />
+        </xsl:if>
+    </xsl:if>
+</xsl:template>
+
+
+<!--Hack to introduce multicols at opportune moments to reduce print size-->
+<xsl:template match="beginmulticols">
+    <xsl:text>\begin{multicols}{</xsl:text>
+    <xsl:choose>
+       <xsl:when test="@cols">
+           <xsl:value-of select="@cols"/>
+       </xsl:when>
+       <xsl:otherwise>
+           <xsl:text>2</xsl:text>
+       </xsl:otherwise>
+    </xsl:choose>
+    <xsl:text>}&#xa;</xsl:text>
+</xsl:template>
+<xsl:template match="endmulticols">
+    <xsl:text>\end{multicols}%&#xa;</xsl:text>
+</xsl:template>
+<xsl:template match="columnbreak">
+    <xsl:text>\vfill&#xa;</xsl:text>
+    <xsl:text>\columnbreak&#xa;</xsl:text>
+</xsl:template>
+<xsl:template match="exercises/exercisegroup">
+    <xsl:variable name="cols">
+        <xsl:choose>
+            <xsl:when test="@cols">
+                <xsl:value-of select="@cols"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="'1'"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="by">
+        <xsl:choose>
+            <xsl:when test="@by">
+                <xsl:value-of select="@by"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$exercisegroup.progression"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+
+    <xsl:text>\begin{exercisegroup}%&#xa;</xsl:text>
+    <xsl:apply-templates select="introduction" />
+    <xsl:choose>
+        <xsl:when test="$by='row'">
+            <xsl:text>\begin{exercisegroupbyrow}{</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:text>\begin{exercisegroupbycol}{</xsl:text>
+        </xsl:otherwise>
+    </xsl:choose>
+    <xsl:value-of select="$cols"/>
+    <xsl:text>}%&#xa;</xsl:text>
+    <xsl:apply-templates select="exercise|beginmulticols|endmulticols|columnbreak"/>
+    <xsl:choose>
+        <xsl:when test="$by='row'">
+            <xsl:text>\end{exercisegroupbyrow}%&#xa;</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:text>\end{exercisegroupbycol}%&#xa;</xsl:text>
+        </xsl:otherwise>
+    </xsl:choose>
+    <xsl:apply-templates select="conclusion" />
+    <xsl:text>\end{exercisegroup}%&#xa;</xsl:text>
+</xsl:template>
+
+
+
+<!-- Introductions and conclusions get a \par at the end because otherwise there is occasional crowding-->
+<xsl:template match="introduction|conclusion">
+    <xsl:apply-templates />
+    <xsl:text>\par&#xa;</xsl:text>
+</xsl:template>
 
 </xsl:stylesheet>

@@ -8,7 +8,7 @@
 <!-- Alex Jordan (editor)          -->
 
 <section xml:id="section-product-rule">
-    <title>Product Rule</title>
+    <title>The Product Rule</title>
 
     <p>The next rule we are going to explore is called the <term>product rule</term> of differentiation.  We use this rule when there are two or more variable factors in the expression we are differentiating. (Remember, we already have the constant factor rule to deal with two factors when one of the two factors is a constant.)<men xml:id="equation-product-rule">\lzoo{x}{\fe{f}{x}\fe{g}{x}}=\lzoo{x}{\fe{f}{x}}\cdot\fe{g}{x}+\fe{f}{x}\cdot\lzoo{x}{\fe{g}{x}}</men></p>
 
