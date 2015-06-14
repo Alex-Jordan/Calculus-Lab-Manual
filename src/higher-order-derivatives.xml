@@ -10,53 +10,55 @@
 <section xml:id="section-higher-order-derivatives">
     <title>Higher Order Derivatives</title>
 
-    <p>Seeing as the first derivative of <m>f</m> is a function in its own right, <m>\fd{f}</m> must have its own first derivative.  The first derivative of <m>\fd{f}</m> is the <term>second derivative</term> of <m>f</m> and is symbolized as <m>\sd{f}</m> (<m>f</m> double-prime).  Likewise, <m>\td{f}</m> (<m>f</m> triple-prime) is the first derivative of <m>\sd{f}</m>, the second derivative of <m>\fd{f}</m>, and the <term>third derivative</term> of <m>f</m>.</p>
+    <sidebyside>
+        <paragraphs valign="top">
+            <p>Seeing as the first derivative of <m>f</m> is a function in its own right, <m>\fd{f}</m> must have its own first derivative.  The first derivative of <m>\fd{f}</m> is the <term>second derivative</term> of <m>f</m> and is symbolized as <m>\sd{f}</m> (<m>f</m> double-prime).  Likewise, <m>\td{f}</m> (<m>f</m> triple-prime) is the first derivative of <m>\sd{f}</m>, the second derivative of <m>\fd{f}</m>, and the <term>third derivative</term> of <m>f</m>. All of the graphical relationships you’ve established between <m>f</m> and <m>\fd{f}</m> work their way down the derivative chain; this is illustrated in <xref ref="table-f-prime-and-f"/>.</p>
+        </paragraphs>
 
-    <p>All of the graphical relationships you’ve established between <m>f</m> and <m>\fd{f}</m> work their way down the derivative chain; this is illustrated in <xref ref="table-f-prime-and-f"/>.</p>
-
-    <table xml:id="table-f-prime-and-f">
-    <caption><m>\fd{f}</m> and <m>f</m>, <m>\sd{f}</m> and <m>\fd{f}</m>, <m>\td{f}</m> and <m>\sd{f}</m></caption>
-        <tabular top="major">
-            <col halign="left"/>
-            <col halign="left"/>
-            <row>
-                <cell>When <m>\fd{f}</m> is <ellipsis/></cell>
-                <cell><m>f</m> is <ellipsis/></cell>
-            </row>
-            <row>
-                <cell>When <m>\sd{f}</m> is <ellipsis/></cell>
-                <cell><m>\fd{f}</m> is <ellipsis/></cell>
-            </row>
-            <row bottom="medium">
-                <cell>When <m>\td{f}</m> is <ellipsis/></cell>
-                <cell><m>\sd{f}</m> is <ellipsis/></cell>
-            </row>
-            <row>
-                <cell>Positive</cell>
-                <cell>Increasing</cell>
-            </row>
-            <row>
-                <cell>Negative</cell>
-                <cell>Decreasing</cell>
-            </row>
-            <row>
-                <cell>Constantly Zero</cell>
-                <cell>Constant</cell>
-            </row>
-            <row>
-                <cell>Increasing</cell>
-                <cell>Concave Up</cell>
-            </row>
-            <row>
-                <cell>Decreasing</cell>
-                <cell>Concave Down</cell>
-            </row>
-            <row>
-                <cell>Constant Nonzero</cell>
-                <cell>Linear</cell>
-            </row>
-        </tabular> 
-    </table>
+        <table xml:id="table-f-prime-and-f" valign="top">
+        <caption><m>\fd{f}</m> and <m>f</m>, <m>\sd{f}</m> and <m>\fd{f}</m>, <m>\td{f}</m> and <m>\sd{f}</m></caption>
+            <tabular top="major">
+                <col halign="left"/>
+                <col halign="left"/>
+                <row>
+                    <cell>When <m>\fd{f}</m> is <ellipsis/></cell>
+                    <cell><m>f</m> is <ellipsis/></cell>
+                </row>
+                <row>
+                    <cell>When <m>\sd{f}</m> is <ellipsis/></cell>
+                    <cell><m>\fd{f}</m> is <ellipsis/></cell>
+                </row>
+                <row bottom="medium">
+                    <cell>When <m>\td{f}</m> is <ellipsis/></cell>
+                    <cell><m>\sd{f}</m> is <ellipsis/></cell>
+                </row>
+                <row>
+                    <cell>Positive</cell>
+                    <cell>Increasing</cell>
+                </row>
+                <row>
+                    <cell>Negative</cell>
+                    <cell>Decreasing</cell>
+                </row>
+                <row>
+                    <cell>Constantly Zero</cell>
+                    <cell>Constant</cell>
+                </row>
+                <row>
+                    <cell>Increasing</cell>
+                    <cell>Concave Up</cell>
+                </row>
+                <row>
+                    <cell>Decreasing</cell>
+                    <cell>Concave Down</cell>
+                </row>
+                <row>
+                    <cell>Constant Nonzero</cell>
+                    <cell>Linear</cell>
+                </row>
+            </tabular> 
+        </table>
+    </sidebyside>
 
     <exercises>
         <exercise>

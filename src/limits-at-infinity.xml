@@ -20,7 +20,7 @@
 
         <exercise>
             <statement>
-                 <p>For the function in <xref provisional="Figure 7.1 (Appendix B, page B1)"/> we could (correctly) write <m>\lim\limits_{x\to\infty}\fe{f_1}{x}=-2</m> and <m>\lim\limits_{x\to-\infty}\fe{f_1}{x}=-2</m>. Go ahead and write (and say aloud) the analogous limits for the functions in <xref provisional="Figures 7.2-7.5 (pages B1 and B2)"/>.</p> 
+                 <p>For the function in <xref ref="figure-match-rationals-1"/>, we could (correctly) write <m>\lim\limits_{x\to\infty}\fe{f_1}{x}=-2</m> and <m>\lim\limits_{x\to-\infty}\fe{f_1}{x}=-2</m>.  Go ahead and write (and say aloud) the analogous limits for the functions in <xref autoname="plural" ref="figure-match-rationals-2"/><ndash/><xref autoname="no" ref="figure-match-rationals-5"/>.</p> 
             </statement>
         </exercise>
 

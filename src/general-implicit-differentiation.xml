@@ -12,25 +12,29 @@
 
     <p>Some points that satisfy the equation <m>y^3-4y=x^2-1</m> are graphed in <xref ref="figure-elliptic-curve"/>.  Clearly this set of points does not constitute a function where <m>y</m> is a function of <m>x</m>; for example, there are three points that have an <m>x</m>-coordinate of <m>1</m>.</p>
 
-    <figure xml:id="figure-elliptic-curve">
-        <caption><m>y^3-4y=x^2-1</m></caption>
-        <image>
-            <latex-image-code>
-            <![CDATA[\begin{tikzpicture}
-            \begin{axis}[
-                smooth,
-                variable=t,]
-                \addplot[pccplot,domain=1.861:4,->]({sqrt(t^3-4*t+1)},{t});
-                \addplot[pccplot,domain=1.861:4,->]({-sqrt(t^3-4*t+1)},{t});
-                \addplot[pccplot,domain=-2.1149:0.2541,-]({sqrt(t^3-4*t+1)},{t});
-                \addplot[pccplot,domain=-2.1149:0.2541,-]({-sqrt(t^3-4*t+1)},{t});
-            \end{axis}
-            \end{tikzpicture}]]>
-            </latex-image-code>
-        </image>
-    </figure>
+    <sidebyside>
+        <paragraphs valign="top">
+            <p>Nevertheless, there is a unique tangent line to the curve at each point on the curve and so long as the tangent line is not vertical it has a unique slope.  We still identify the value of this slope using the symbol <m>\lz{y}{x}</m>, so it would be helpful if we had a formula for <m>\lz{y}{x}</m>.  If we could solve <m>y^3-4y=x^2-1</m> for <m>y</m>, finding the formula for <m>\lz{y}{x}</m> would be a snap.  Hopefully you quickly see that such an approach is just not possible.</p>
+        </paragraphs>
+        <figure xml:id="figure-elliptic-curve" valign="top" width="40%">
+            <caption><m>y^3-4y=x^2-1</m></caption>
+            <image>
+                <latex-image-code>
+                <![CDATA[\begin{tikzpicture}
+                \begin{axis}[
+                    smooth,
+                    variable=t,]
+                    \addplot[pccplot,domain=1.861:4,->]({sqrt(t^3-4*t+1)},{t});
+                    \addplot[pccplot,domain=1.861:4,->]({-sqrt(t^3-4*t+1)},{t});
+                    \addplot[pccplot,domain=-2.1149:0.2541,-]({sqrt(t^3-4*t+1)},{t});
+                    \addplot[pccplot,domain=-2.1149:0.2541,-]({-sqrt(t^3-4*t+1)},{t});
+                \end{axis}
+                \end{tikzpicture}]]>
+                </latex-image-code>
+            </image>
+        </figure>
+    </sidebyside>
 
-    <p>Nevertheless, there is a unique tangent line to the curve at each point on the curve and so long as the tangent line is not vertical it has a unique slope.  We still identify the value of this slope using the symbol <m>\lz{y}{x}</m>, so it would be helpful if we had a formula for <m>\lz{y}{x}</m>.  If we could solve <m>y^3-4y=x^2-1</m> for <m>y</m>, finding the formula for <m>\lz{y}{x}</m> would be a snap.  Hopefully you quickly see that such an approach is just not possible.</p>
 
     <p>To get around this problem we are going to employ a technique called <term>implicit differentiation</term>.  We use this technique to find the formula for <m>\lz{y}{x}</m> whenever the equation relating <m>x</m> and <m>y</m> is not explicitly solved for <m>y</m>.  What we are going to do is treat <m>y</m> <em>as if it were</em> a function of <m>x</m> and set the derivatives of the two sides of the equation equal to one another.  This is actually a reasonable thing to do because so long as we are at a point on the curve where the tangent line is not vertical, we could make <m>y</m> a function of <m>x</m> using appropriate restrictions on the domain and range.</p>
 
@@ -89,7 +93,10 @@
         </exercisegroup>
         <exercise>
             <statement>
-                <p>Several points that satisfy the equation <m>y=x\,e^y</m> are graphed in <xref ref="figure-lambert"/>.  Find the slope and equation of the tangent line to this curve at the origin.  (Please note that you already found the formula for <m>\lz{y}{x}</m> in <xref ref="exercise-implicit-lambert"/>.</p>
+                <p>Several points that satisfy the equation <m>y=x\,e^y</m> are graphed in <xref ref="figure-lambert"/>.</p>
+                <beginmulticols/>
+                <p>Find the slope and equation of the tangent line to this curve at the origin.  (Please note that you already found the formula for <m>\lz{y}{x}</m> in <xref ref="exercise-implicit-lambert"/>.</p>
+                <columnbreak/>
                 <figure xml:id="figure-lambert">
                     <caption><m>y=x\,e^y</m></caption>
                     <image>
@@ -107,6 +114,7 @@
                         </latex-image-code>
                     </image>
                 </figure> 
+                <endmulticols/>
             </statement>
         </exercise>
 	<exercisegroup>

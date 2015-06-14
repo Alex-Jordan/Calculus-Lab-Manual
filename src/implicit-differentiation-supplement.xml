@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+   
+<section xml:id="implicit-differentiation-supplementary-exercises">
+    <title>Supplement</title>
+    <exercises>
+        <exercise>
+            <statement>
+                <p>The curve <m>x\fe{\sin}{xy}=y</m> is shown in <xref ref="figure-crazy-implicit-supplement"/>.</p>
+
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>Find a formula for <m>\lz{y}{x}</m> and use that formula to determine the <m>x</m>-coordinate at each of the two points the curve crosses the <m>x</m>-axis.  (Note: The tangent line to the curve is vertical at each of these points.)  Scales have deliberately been omitted in <xref ref="figure-crazy-implicit-supplement"/>.</p> 
+                    </paragraphs>
+                    <figure xml:id="figure-crazy-implicit-supplement" width="40%" valign="top">
+                        <caption><m>x\fe{\sin}{xy}=y</m></caption>
+                        <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}[
+                                     declare function={
+                                         s(\x)= sqrt(sin(\x^2*180/3.14159265359));
+                                         f(\x)= \x/s(\x);
+                                         g(\x)= \x*s(\x);
+                                     }]
+                                     \begin{axis}[
+                                         xtick={100},
+                                         ytick={100},
+                                         minor xtick={100},
+                                         minor ytick={100},
+                                         variable=v,
+                                     ]
+                                     \addplot[pccplot,domain=-7:7,] {0};
+                                     \addplot[pccplot,domain=0.01:1.7546,->,] ({f(v)},{g(v)});
+                                     \addplot[pccplot,domain=2.53268:3.03894,] ({f(v)},{g(v)});
+                                     \addplot[pccplot,domain=3.58208:3.92281,] ({f(v)},{g(v)});
+                                     \addplot[pccplot,domain=4.38786:4.64069,] ({f(v)},{g(v)});
+                                     \addplot[pccplot,domain=5.06798:5.26062,] ({f(v)},{g(v)});
+                                     \addplot[pccplot,domain=5.66842:5.81346,] ({f(v)},{g(v)});
+                                     \addplot[pccplot,domain=6.21341:6.31581,] ({f(v)},{g(v)});
+                                     \addplot[pccplot,domain=6.71969:6.77570,] ({f(v)},{g(v)});
+%
+                                     \addplot[pccplot,domain=0.01:1.7546,->,] ({f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=2.53268:3.03894,] ({f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=3.58208:3.92281,] ({f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=4.38786:4.64069,] ({f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=5.06798:5.26062,] ({f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=5.66842:5.81346,] ({f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=6.21341:6.31581,] ({f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=6.71969:6.77570,] ({f(v)},{-g(v)});
+%
+                                     \addplot[pccplot,domain=0.01:1.7546,->,] ({-f(v)},{g(v)});
+                                     \addplot[pccplot,domain=2.53268:3.03894,] ({-f(v)},{g(v)});
+                                     \addplot[pccplot,domain=3.58208:3.92281,] ({-f(v)},{g(v)});
+                                     \addplot[pccplot,domain=4.38786:4.64069,] ({-f(v)},{g(v)});
+                                     \addplot[pccplot,domain=5.06798:5.26062,] ({-f(v)},{g(v)});
+                                     \addplot[pccplot,domain=5.66842:5.81346,] ({-f(v)},{g(v)});
+                                     \addplot[pccplot,domain=6.21341:6.31581,] ({-f(v)},{g(v)});
+                                     \addplot[pccplot,domain=6.71969:6.77570,] ({-f(v)},{g(v)});
+%
+                                     \addplot[pccplot,domain=0.01:1.7546,->,] ({-f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=2.53268:3.03894,] ({-f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=3.58208:3.92281,] ({-f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=4.38786:4.64069,] ({-f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=5.06798:5.26062,] ({-f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=5.66842:5.81346,] ({-f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=6.21341:6.31581,] ({-f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=6.71969:6.77570,] ({-f(v)},{-g(v)});
+                                 \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </statement>
+            <solution>
+                <p><md>
+                <mrow>x\fe{\sin}{xy}&amp;=y</mrow>
+                <mrow>\lzoo{x}{x\fe{\sin}{xy}}&amp;=\lzoo{x}{y}</mrow>
+                <mrow>\lzoo{x}{x}\cdot\fe{\sin}{xy}+x\cdot\lzoo{x}{\fe{\sin}{xy}}&amp;=\lz{y}{x}</mrow>
+                <mrow>1\cdot\fe{\sin}{xy}+x\cdot\fe{\cos}{xy}\cdot\lzoo{x}{xy}&amp;=\lz{y}{x}</mrow>
+                <mrow>\fe{\sin}{xy}+x\fe{\cos}{xy}\cdot\left(\lzoo{x}{x}\cdot y+x\cdot\lzoo{x}{y}\right)&amp;=\lz{y}{x}</mrow>
+                <mrow>\fe{\sin}{xy}+x\fe{\cos}{xy}\cdot\left(1\cdot y+x\cdot\lz{y}{x}\right)&amp;=\lz{y}{x}</mrow>
+                <mrow>\fe{\sin}{xy}+xy\fe{\cos}{xy}+x^2\fe{\cos}{xy}\lz{y}{x}&amp;=\lz{y}{x}</mrow>
+                <mrow>x^2\fe{\cos}{xy}\lz{y}{x}-\lz{y}{x}&amp;=-\fe{\sin}{xy}-xy\fe{\cos}{xy}</mrow>
+                <mrow>\left(x^2\fe{\cos}{xy}-1\right)\lz{y}{x}&amp;=-\fe{\sin}{xy}-xy\fe{\cos}{xy}</mrow>
+                <mrow>\lz{y}{x}&amp;=\frac{-\fe{\sin}{xy}-xy\fe{\cos}{xy}}{x^2\fe{\cos}{xy}-1}</mrow>
+                <mrow>\lz{y}{x}&amp;=\frac{\fe{\sin}{xy}+xy\fe{\cos}{xy}}{1-x^2\fe{\cos}{xy}}</mrow>
+                </md>Since we're looking for points on the <m>x</m>-axis, we know that the <m>y</m>-coordinates are zero.  A necessary element for the tangent line to be vertical is that the denominator of the derivative formula evaluates to zero (otherwise the tangent line would have a value for its slope).  Putting this together gives us:<md>
+                <mrow>1-x^2\fe{\cos}{x\cdot0}&amp;=0</mrow> 
+                <mrow>1-x^2&amp;=0</mrow> 
+                <mrow>x^2&amp;=1</mrow> 
+                <mrow>x&amp;=\pm1</mrow> 
+                </md>So the <m>x</m>-coordinates are <m>-1</m> and <m>1</m>.</p>
+            </solution>
+            <answer>
+                <p><m>-1</m> and <m>1</m></p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Solutions to the equation <m>\fe{\ln}{x^2y^2}=x+y</m> are graphed in <xref ref="figure-ln-implicit-supplement"/>.</p>
+
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>Determine the equation of the tangent line to this curve at the point <m>\point{1}{-1}</m>.</p>
+                    </paragraphs>
+                    <figure xml:id="figure-ln-implicit-supplement" width="40%" valign="top">
+                        <caption><m>\fe{\ln}{x^2y^2}=x+y</m></caption>
+                        <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                                \begin{axis}[variable=v]
+                                \addplot[pccplot,domain=0.173587:0.70346,<-] ({ln(v^2)+sqrt((ln(v^2))^2-v^2)}, {v^2/(ln(v^2)+sqrt((ln(v^2))^2-v^2))});
+                                \addplot[pccplot,domain=0.173587:0.70346,<-] ({v^2/(ln(v^2)+sqrt((ln(v^2))^2-v^2))},{ln(v^2)+sqrt((ln(v^2))^2-v^2)});
+                                \addplot[pccplot,domain=0.173587:3.6116] ({ln(v^2)+sqrt((ln(v^2))^2+v^2)}, {-v^2/(ln(v^2)+sqrt((ln(v^2))^2+v^2))});
+                                \addplot[pccplot,domain=0.173587:3.6116] ({-v^2/(ln(v^2)+sqrt((ln(v^2))^2+v^2))}, {ln(v^2)+sqrt((ln(v^2))^2+v^2)});
+                                \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </statement>
+            <hint>
+                <p>It is easier to differentiate if you first use rules of logarithms to completely expand the logarithmic expression.</p>
+            </hint>
+            <solution>
+                <p>Note that we will be investigating this curve near <m>\point{1}{-1}</m>, where <m>x</m> is positive and <m>y</m> is negative. Therefore in that region, <m>\fe{\ln}{x^2}=2\fe{\ln}{x}</m> and <m>\fe{\ln}{y^2}=2\fe{\ln}{-y}</m>.<md>
+                <mrow>\fe{\ln}{x^2y^2}&amp;=x+y</mrow>
+                <mrow>\fe{\ln}{x^2}+\fe{\ln}{y^2}&amp;=x+y</mrow>
+                <mrow>2\fe{\ln}{x}+2\fe{\ln}{-y}&amp;=x+y</mrow>
+                <mrow>\lzoo{x}{2\fe{\ln}{x}+2\fe{\ln}{-y}}&amp;=\lzoo{x}{x+y}</mrow>
+                <mrow>\frac{2}{x}+\frac{2}{-y}\cdot\lzoo{x}{-y}&amp;=1+\lz{y}{x}</mrow>
+                <mrow>\frac{2}{x}+\frac{2}{-y}\cdot-\lz{y}{x}&amp;=1+\lz{y}{x}</mrow>
+                <mrow>\frac{2}{x}+\frac{2}{y}\lz{y}{x}&amp;=1+\lz{y}{x}</mrow>
+                <mrow>\frac{2}{y}\lz{y}{x}-\lz{y}{x}&amp;=1-\frac{2}{x}</mrow>
+                <mrow>\left(\frac{2}{y}-1\right)\lz{y}{x}&amp;=1-\frac{2}{x}</mrow>
+                <mrow>\lz{y}{x}&amp;=\frac{1-\frac{2}{x}}{\frac{2}{y}-1}</mrow>
+                <mrow>\lz{y}{x}&amp;=\frac{xy-2y}{2x-xy}</mrow>
+                <mrow>\lzoa{y}{x}{\point{1}{-1}}&amp;=\frac{1(-1)-2(-1)}{2(1)-(1)(-1)}</mrow>
+                <mrow>\lzoa{y}{x}{\point{1}{-1}}&amp;=\frac{1}{3}</mrow>
+                </md>The slope of the tangent line is <m>\frac{1}{3}</m> and the line passes through the point <m>\point{1}{-1}</m>, so the equation of the tangent line is <m>y=\frac{1}{3}(x-1)-1</m>.</p>
+            </solution>
+            <answer>
+               <p><m>y=\frac{1}{3}(x-1)-1</m></p>
+            </answer>
+        </exercise>
+        <exercisegroup cols="3">
+            <introduction>
+                <p>Use the process of logarithmic differentiation to find a first derivative formula for each of the following functions.</p> 
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>y=\frac{x\fe{\sin}{x}}{\sqrt{x-1}}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>y&amp;=\frac{x\fe{\sin}{x}}{\sqrt{x-1}}</mrow>
+                    <mrow>\fe{\ln}{y}&amp;=\fe{\ln}{\frac{x\fe{\sin}{x}}{\sqrt{x-1}}}</mrow>
+                    <mrow>\fe{\ln}{y}&amp;=\fe{\ln}{x}+\fe{\ln}{\fe{\sin}{x}}-\frac{1}{2}\fe{\ln}{x-1}</mrow>
+                    <mrow>\lzoo{x}{\fe{\ln}{y}}&amp;=\lzoo{x}{\fe{\ln}{x}+\fe{\ln}{\fe{\sin}{x}}-\frac{1}{2}\fe{\ln}{x-1}}</mrow>
+                    <mrow>\frac{1}{y}\lz{y}{x}&amp;=\frac{1}{x}+\frac{1}{\fe{\sin}{x}}\cdot\lzoo{x}{\fe{\sin}{x}}-\frac{1}{2}\cdot\frac{1}{x-1}\cdot\lzoo{x}{x-1}</mrow>
+                    <mrow>\frac{1}{y}\lz{y}{x}&amp;=\frac{1}{x}+\frac{1}{\fe{\sin}{x}}\cdot\fe{\cos}{x}-\frac{1}{2}\cdot\frac{1}{x-1}\cdot1</mrow>
+                    <mrow>\frac{1}{y}\lz{y}{x}&amp;=\frac{1}{x}+\fe{\cot}{x}-\frac{1}{2x-2}</mrow>
+                    <mrow>\lz{y}{x}&amp;=y\left(\frac{1}{x}+\fe{\cot}{x}-\frac{1}{2x-2}\right)</mrow>
+                    <mrow>\lz{y}{x}&amp;=\frac{x\fe{\sin}{x}}{\sqrt{x-1}}\left(\frac{1}{x}+\fe{\cot}{x}-\frac{1}{2x-2}\right)</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\frac{x\fe{\sin}{x}}{\sqrt{x-1}}\left(\frac{1}{x}+\fe{\cot}{x}-\frac{1}{2x-2}\right)</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=\frac{e^{2x}}{\fe{\sin^4}{x}\sqrt[4]{x^5}}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>y&amp;=\frac{e^{2x}}{\fe{\sin^4}{x}\sqrt[4]{x^5}}</mrow>
+                    <mrow>\fe{\ln}{y}&amp;=\fe{\ln}{\frac{e^{2x}}{\fe{\sin^4}{x}\sqrt[4]{x^5}}}</mrow>
+                    <mrow>\fe{\ln}{y}&amp;=\fe{\ln}{e^{2x}}-\fe{\ln}{\fe{\sin^4}{x}}-\fe{\ln}{\sqrt[4]{x^5}}</mrow>
+                    <mrow>\fe{\ln}{y}&amp;=2x-4\fe{\ln}{\fe{\sin}{x}}-\frac{5}{4}\fe{\ln}{x}</mrow>
+                    <mrow>\lzoo{x}{\fe{\ln}{y}}&amp;=\lzoo{x}{2x-4\fe{\ln}{\fe{\sin}{x}}-\frac{5}{4}\fe{\ln}{x}}</mrow>
+                    <mrow>\frac{1}{y}\lz{y}{x}&amp;=2-4\frac{1}{\fe{\sin}{x}}\cdot\lzoo{x}{\fe{\sin}{x}}-\frac{5}{4}\cdot\frac{1}{x}</mrow>
+                    <mrow>\frac{1}{y}\lz{y}{x}&amp;=2-4\frac{1}{\fe{\sin}{x}}\cdot\fe{\cos}{x}-\frac{5}{4x}</mrow>
+                    <mrow>\frac{1}{y}\lz{y}{x}&amp;=2-4\fe{\cot}{x}-\frac{5}{4x}</mrow>
+                    <mrow>\lz{y}{x}&amp;=y\left(2-4\fe{\cot}{x}-\frac{5}{4x}\right)</mrow>
+                    <mrow>\lz{y}{x}&amp;=\frac{e^{2x}}{\fe{\sin^4}{x}\sqrt[4]{x^5}}\left(2-4\fe{\cot}{x}-\frac{5}{4x}\right)</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\frac{e^{2x}}{\fe{\sin^4}{x}\sqrt[4]{x^5}}\left(2-4\fe{\cot}{x}-\frac{5}{4x}\right)</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=\frac{\fe{\ln}{4x^3}}{x^5\fe{\ln}{x}}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>y&amp;=\frac{\fe{\ln}{4x^3}}{x^5\fe{\ln}{x}}</mrow>
+                    <mrow>\fe{\ln}{y}&amp;=\fe{\ln}{\frac{\fe{\ln}{4x^3}}{x^5\fe{\ln}{x}}}</mrow>
+                    <mrow>\fe{\ln}{y}&amp;=\fe{\ln}{\fe{\ln}{4x^3}}-\fe{\ln}{x^5}-\fe{\ln}{\fe{\ln}{x}}</mrow>
+                    <mrow>\fe{\ln}{y}&amp;=\fe{\ln}{\fe{\ln}{4x^3}}-5\fe{\ln}{x}-\fe{\ln}{\fe{\ln}{x}}</mrow>
+                    <mrow>\lzoo{x}{\fe{\ln}{y}}&amp;=\lzoo{x}{\fe{\ln}{\fe{\ln}{4x^3}}-5\fe{\ln}{x}-\fe{\ln}{\fe{\ln}{x}}}</mrow>
+                    <mrow>\frac{1}{y}\lz{y}{x}&amp;=\frac{1}{\fe{\ln}{4x^3}}\lzoo{x}{\fe{\ln}{4x^3}}-5\frac{1}{x}-\frac{1}{\fe{\ln}{x}}\lzoo{x}{\fe{\ln}{x}}</mrow>
+                    <mrow>\frac{1}{y}\lz{y}{x}&amp;=\frac{1}{\fe{\ln}{4x^3}}\cdot\frac{1}{4x^3}\lzoo{x}{4x^3}-\frac{5}{x}-\frac{1}{\fe{\ln}{x}}\cdot\frac{1}{x}</mrow>
+                    <mrow>\frac{1}{y}\lz{y}{x}&amp;=\frac{1}{4x^3\fe{\ln}{4x^3}}\cdot12x^2-\frac{5}{x}-\frac{1}{x\fe{\ln}{x}}</mrow>
+                    <mrow>\frac{1}{y}\lz{y}{x}&amp;=\frac{3}{x\fe{\ln}{4x^3}}-\frac{5}{x}-\frac{1}{x\fe{\ln}{x}}</mrow>
+                    <mrow>\lz{y}{x}&amp;=y\left(\frac{3}{x\fe{\ln}{4x^3}}-\frac{5}{x}-\frac{1}{x\fe{\ln}{x}}\right)</mrow>
+                    <mrow>\lz{y}{x}&amp;=\frac{\fe{\ln}{4x^3}}{x^5\fe{\ln}{x}}\left(\frac{3}{x\fe{\ln}{4x^3}}-\frac{5}{x}-\frac{1}{x\fe{\ln}{x}}\right)</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\frac{\fe{\ln}{4x^3}}{x^5\fe{\ln}{x}}\left(\frac{3}{x\fe{\ln}{4x^3}}-\frac{5}{x}-\frac{1}{x\fe{\ln}{x}}\right)</m></p>
+                </answer>
+            </exercise>
+
+        </exercisegroup>
+    </exercises>
+</section>
+
+

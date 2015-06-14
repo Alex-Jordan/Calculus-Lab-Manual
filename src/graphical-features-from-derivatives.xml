@@ -15,9 +15,11 @@
     <exercises> 
         <exercisegroup>
             <introduction>
-                <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
                 <sidebyside>
-                    <table xml:id="table-based-on-derivatives">
+                    <paragraphs valign="top" width="23%">
+                        <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
+                    </paragraphs>
+                    <table xml:id="table-based-on-derivatives" width="42%" valign="top">
                         <caption>Signs on <m>\fd{f}</m> and <m>\sd{f}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -40,7 +42,7 @@
                             </row>
                         </tabular>
                     </table>
-                    <figure xml:id="figure-based-on-derivatives" width="40%">
+                    <figure xml:id="figure-based-on-derivatives" width="35%" valign="top">
                         <caption><m>y=\fe{f}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -76,9 +78,11 @@
         </exercisegroup>
         <exercisegroup>
             <introduction>
-                <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
                 <sidebyside>
-                    <table xml:id="table-based-on-derivatives-two">
+                    <paragraphs valign="top" width="23%">
+                        <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
+                    </paragraphs>
+                    <table xml:id="table-based-on-derivatives-two" valign="top" width="42%">
                         <caption>Signs on <m>\fd{g}</m> and <m>\sd{g}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -101,7 +105,7 @@
                             </row>
                         </tabular>
                     </table>
-                    <figure xml:id="figure-based-on-derivatives-two" width="40%">
+                    <figure xml:id="figure-based-on-derivatives-two" width="35%" valign="top">
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -137,9 +141,11 @@
         </exercisegroup>
         <exercisegroup>
             <introduction>
-                <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
                 <sidebyside>
-                    <table xml:id="table-based-on-derivatives-three">
+                    <paragraphs valign="top" width="23%">
+                        <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
+                    </paragraphs>
+                    <table xml:id="table-based-on-derivatives-three" valign="top" width="42%">
                         <caption>Signs on <m>\fd{k}</m> and <m>\sd{k}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -162,7 +168,7 @@
                             </row>
                         </tabular>
                     </table>
-                    <figure xml:id="figure-based-on-derivatives-three" width="40%">
+                    <figure xml:id="figure-based-on-derivatives-three" width="35%" valign="top">
                         <caption><m>y=\fe{k}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -295,7 +301,7 @@
             <exercise>
                 <statement>
                     <p>Which of the following propositions is true? If a given proposition is not true, draw a graph that illustrates its untruth.</p>
-                    <ol>
+                    <ol cols="2">
                         <li>If the graph of <m>f</m> has a vertical asymptote, then the graph of <m>\fd{f}</m> must also have a vertical asymptote.</li>
                         <li>If the graph of <m>\fd{f}</m> has a vertical asymptote, then the graph of <m>f</m> must also have a vertical asymptote.</li> 
                     </ol>
@@ -304,7 +310,7 @@
             <exercise>
                 <statement>
                     <p>Suppose that the function <m>f</m> is everywhere continuous and concave down.  Suppose further that <m>\fe{f}{7}=5</m> and <m>\fe{\fd{f}}{7}=3</m>.  Which of the following is true?</p>
-                    <ol>
+                    <ol cols="2">
                         <li><m>\fe{f}{9}\lt11</m></li>
                         <li><m>\fe{f}{9}=11</m></li>
                         <li><m>\fe{f}{9}\gt11</m></li>

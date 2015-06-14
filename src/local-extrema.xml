@@ -22,10 +22,11 @@
     </definition>
 
     <exercises>
+        <beginmulticols/>
         <exercise>
             <statement>
                 <p>The function <m>g</m> shown in <xref ref="figure-vertical-moment"/> has a vertical tangent line at <m>-3</m>.  Veronica says that <m>-3</m> is a critical number of <m>g</m> but Tito disagrees. Tito contends that <m>-3</m> is not a critical number because <m>g</m> does not have a local extreme point at <m>-3</m>.  Who is right?</p>
-
+                <columnbreak/>
                 <figure xml:id="figure-vertical-moment">
                     <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
@@ -43,6 +44,7 @@
                                 samples=100,
                                 ]
                                 \addplot[pccplot,domain=-8:2]{-(x+3)/abs(x+3)*abs((x+3))^(1/3)-1};
+                                \addplot[asymptote]coordinates{(-3,1) (-3,-3)};
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>
@@ -50,6 +52,7 @@
                 </figure>
             </statement>
         </exercise>
+        <endmulticols/>
         <exercisegroup>
             <introduction>
                 <p>Answer each of the following questions (using complete sentences) in reference to the function <m>f</m> shown in <xref ref="figure-lots-of-critical-points"/>.</p> 

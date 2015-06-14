@@ -10,7 +10,7 @@
 <section xml:id="section-limit-laws">
     <title>Limits Laws</title>
 
-    <p>When proving the value of a limit we frequently rely upon laws that are easy to prove using the technical definitions of limit. These laws can be found in <xref provisional="Appendix C"/>. The first of these type laws are called replacement laws. Replacement laws allow us to replace limit expressions with the actual values of the limits.</p>
+    <p>When proving the value of a limit we frequently rely upon laws that are easy to prove using the technical definitions of limit. These laws can be found in <xref ref="appendix-limit-laws"/>. The first of these type laws are called replacement laws. Replacement laws allow us to replace limit expressions with the actual values of the limits.</p>
 
     <exercises>
         <exercisegroup cols="3">

@@ -10,12 +10,12 @@
 <chapter xml:id="chapter-functions-derivatives-antiderivatives" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Functions, Derivatives, and Antiderivatives</title>
     
-<!--    <xi:include href="./graph-features.xml" />
+    <xi:include href="./graph-features.xml" />
     <xi:include href="./graphical-derivative.xml" />
     <xi:include href="./nondifferentiability.xml" />
     <xi:include href="./higher-order-derivatives.xml" />
     <xi:include href="./antiderivatives.xml" />
--->    <xi:include href="./graphical-features-from-derivatives.xml" />
+    <xi:include href="./graphical-features-from-derivatives.xml" />
     <xi:include href="./functions-derivatives-antiderivatives-supplement.xml" />
-    
+   
 </chapter>

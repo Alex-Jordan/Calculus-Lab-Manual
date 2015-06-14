@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-logarithmic-differentiation">
+    <title>Logarithmic Differentiation</title>
+
+    <p>You have formulas that allow you to differentiate <m>x^2</m>, <m>2^x</m>, and <m>2^2</m>.  You don't, however, have a formula to differentiate <m>x^x</m>.  In this section you are going to use a process called <term>logarithmic differentiation</term> to determine the derivative formula for the function <m>y=x^x</m>.  <xref ref="example-logarithmic-differentitation"/> shows this process for a different function.</p>
+
+    <p>With logarithmic differentiation, when <m>y</m> is written as a function of <m>x</m>, especially one involving only products, quotients, and powers, begin by taking the logarithm of both sides of the equation relating <m>y</m> to <m>x</m>. This technique will usually only be helpful if the logarithm rules allow you to break up the right side some. Proceed to differentiate each side with respect to <m>x</m>. On the left side, respect the rules for implicit differentiation. Once this is done, algebraically solve for <m>\lz{y}{x}</m>. If there are any instance of <m>y</m> left, replace them with th original expression in <m>x</m>.</p>
+
+    <example xml:id="example-logarithmic-differentitation">
+        <title>Logarithmic Differentiation</title>
+
+        <p><md>
+        <mrow>y&amp;=\frac{x^{e^x}}{4x+1}</mrow>
+        <mrow>\fe{\ln}{y}&amp;=\fe{\ln}{\frac{x^{e^x}}{4x+1}}</mrow>
+        <mrow>\fe{\ln}{y}&amp;=\fe{\ln}{x^{e^x}}-\fe{\ln}{4x+1}</mrow>
+        <mrow>\fe{\ln}{y}&amp;=e^x\fe{\ln}{x}-\fe{\ln}{4x+1}</mrow>
+        <mrow>\lzoo{x}{\fe{\ln}{y}}&amp;=\lzoo{x}{e^x\fe{\ln}{x}-\fe{\ln}{4x+1}}</mrow>
+        <mrow>\frac{1}{y}\lz{y}{x}&amp;=\lzoo{x}{e^x}\cdot\fe{\ln}{x}+e^x\cdot\lzoo{x}{\fe{\ln}{x}}-\frac{1}{4x+1}\cdot\lzoo{x}{4x+1}</mrow>
+        <mrow>\frac{1}{y}\lz{y}{x}&amp;=e^x\cdot\fe{\ln}{x}+e^x\cdot\frac{1}{x}-\frac{1}{4x+1}\cdot4</mrow>
+        <mrow>\frac{1}{y}\lz{y}{x}&amp;=e^x\fe{\ln}{x}+\frac{e^x}{x}-\frac{4}{4x+1}</mrow>
+        <mrow>\lz{y}{x}&amp;=y\left(e^x\fe{\ln}{x}+\frac{e^x}{x}-\frac{4}{4x+1}\right)</mrow>
+        <mrow>\lz{y}{x}&amp;=\frac{x^{e^x}}{4x+1}\left(e^x\fe{\ln}{x}+\frac{e^x}{x}-\frac{4}{4x+1}\right)</mrow>
+        </md></p>
+    </example>
+
+    <p>In the olden days (pre-symbolic calculators) we would use the process of logarithmic differentiation to find derivative formulas for complicated functions.  The reason this process is <q>simpler</q> than straight forward differentiation is that we can obviate the need for the product and quotient rules if we completely expand the logarithmic expression before taking the derivative.</p> 
+
+    <exercises>
+        <exercise>
+            <statement>
+                <p>The function <m>y=x^x</m> is only defined for positive values of <m>x</m> (which in turn means <m>y</m> is also positive), so we can say that <m>\fe{\ln}{y}=\fe{\ln}{x^x}</m>.  Use implicit differentiation to find a formula for <m>\lz{y}{x}</m> <em>after first applying the power rule of logarithms to the logarithmic expression on the right side of the equal sign</em>.  Once you have your formula for <m>\lz{y}{x}</m>, substitute <m>x^x</m> for <m>y</m>. Voila!  You will have the derivative formula for <m>x^x</m>.  So go ahead and do it.</p>
+            </statement>
+        </exercise>
+    </exercises>
+
+</section>

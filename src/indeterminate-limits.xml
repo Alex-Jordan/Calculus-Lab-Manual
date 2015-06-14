@@ -15,11 +15,11 @@
     <example xml:id="example-first-indeterminate">
         <p><md>
         <mrow>\lim_{x\to3}\frac{x^2-8x+15}{x-3}&amp;=\lim_{x\to3}\frac{(x-5)(x-3)}{x-3}</mrow>
-        <mrow>&amp;=\tikzmark{not indeterminate}\lim_{x\to3}(x-5)&amp;&amp;\text{Limit Law A7}</mrow>
+        <mrow>&amp;=\lim_{x\to3}(x-5)\tikzmark{not indeterminate}&amp;&amp;\text{Limit Law A7}</mrow>
         <mrow>&amp;=\lim_{x\to3}x-\lim_{x\to3}5&amp;&amp;\text{Limit Law A2}</mrow>
         <mrow>&amp;=3-5&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
         <mrow>&amp;=-2</mrow>
-        </md><annotate>\Annotate[][anchor=north east]{0ex}{0}{-1}{-0.5}{not indeterminate}{\parbox{0.3\linewidth}{This limit does not have indeterminate form, so we may apply the remaining limit laws.}}</annotate></p>
+        </md><annotate>\Annotate[][anchor=south west]{0ex}{0}{4}{1}{not indeterminate}{\parbox{0.3\linewidth}{This limit does not have indeterminate form, so we may apply the remaining limit laws.}}</annotate></p>
     </example>
 
 
@@ -28,13 +28,13 @@
         <mrow>\lim_{\theta\to0}\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}&amp;=\lim_{\theta\to0}\left(\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}\cdot\frac{1+\fe{\cos}{\theta}}{1+\fe{\cos}{\theta}}\right)</mrow>
         <mrow>&amp;=\lim_{\theta\to0}\frac{1-\fe{\cos^2}{\theta}}{\fe{\sin^2}{\theta}\cdot\left(1+\fe{\cos}{\theta}\right)}</mrow>
         <mrow>&amp;=\lim_{\theta\to0}\frac{\fe{\sin^2}{\theta}}{\fe{\sin^2}{\theta}\cdot\left(1+\fe{\cos}{\theta}\right)}</mrow>
-        <mrow>&amp;=\tikzmark{second not indeterminate}\lim_{\theta\to0}\frac{1}{1+\fe{\cos}{\theta}}&amp;&amp;\text{Limit Law A7}</mrow>
+        <mrow>&amp;=\lim_{\theta\to0}\frac{1}{1+\fe{\cos}{\theta}}\tikzmark{second not indeterminate}&amp;&amp;\text{Limit Law A7}</mrow>
         <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}\left(1+\fe{\cos}{\theta}\right)}&amp;&amp;\text{Limit Law A5}</mrow>
         <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}1+\lim_{\theta\to0}\fe{\cos}{\theta}}&amp;&amp;\text{Limit Law A1}</mrow>
         <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}1+\fe{\cos}{\lim_{\theta\to0}\theta}}&amp;&amp;\text{Limit Law A6}</mrow>
         <mrow>&amp;=\frac{1}{1+\fe{\cos}{0}}&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
         <mrow>&amp;=\frac{1}{2}</mrow>
-        </md><annotate>\Annotate[][anchor=north east]{0ex}{0}{-1}{-0.5}{second not indeterminate}{\parbox{0.3\linewidth}{This limit does not have indeterminate form, so we may apply the remaining limit laws.}}</annotate></p>
+        </md><annotate>\Annotate[][anchor=south west]{0ex}{0}{5}{1}{second not indeterminate}{\parbox{0.3\linewidth}{This limit does not have indeterminate form, so we may apply the remaining limit laws.}}</annotate></p>
     </example>
 
     <p>As seen in <xref ref="example-second-indeterminate"/>, trigonometric identities can come into play while trying to eliminate the form <m>\frac{0}{0}</m>. Elementary rules of logarithms can also play a role in this process. Before you begin evaluating limits whose initial form is <m>\frac{0}{0}</m>, you need to make sure that you recall some of these basic rules. That is the purpose of <xref ref="exercise-identities-review"/>.</p>

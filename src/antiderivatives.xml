@@ -207,26 +207,28 @@
         </exercisegroup>
         <exercisegroup>
             <introduction>
-                <p>Answer the following question in reference to a continuous function <m>g</m> whose first derivative is shown in <xref ref="figure-discontinuous-derivative"/>.  You do not need to state how you made your determination; just state the interval(s) or values of <m>x</m> that satisfy the stated property.</p>
-                <p>Note: the correct answer to one or more of these questions may be <q>There is no way of knowing.</q></p> 
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>Answer the following question in reference to a continuous function <m>g</m> whose first derivative is shown in <xref ref="figure-discontinuous-derivative"/>.  You do not need to state how you made your determination; just state the interval(s) or values of <m>x</m> that satisfy the stated property. Note: the correct answer to one or more of these questions may be <q>There is no way of knowing.</q></p> 
+                    </paragraphs>
 
-                <figure xml:id="figure-discontinuous-derivative">
-                    <caption><m>y=\fe{g}{x}</m></caption>
-                    <image>
-                        <latex-image-code>
-                        <![CDATA[\begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot[pccplot,domain=-6.8:-3,<-]{(x+5)^2+1};
-                            \addplot[pccplot,domain=-3:2,-]{-3/5*(x+3)+5};
-                            \addplot[pccplot,domain=2:4,-]{-3};
-                            \addplot[pccplot,domain=4:6.8,->]{1/3*(x-4)^3-2};
-                            \addplot[holdot] coordinates {(2,2) (2,-3) (4,-3) (4,-2)};
-                        \end{axis}
-                        \end{tikzpicture}]]>
-                        </latex-image-code>
-                    </image>
-                </figure>
-
+                    <figure xml:id="figure-discontinuous-derivative" valign="top" width="40%">
+                        <caption><m>y=\fe{g}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot[pccplot,domain=-6.8:-3,<-]{(x+5)^2+1};
+                                \addplot[pccplot,domain=-3:2,-]{-3/5*(x+3)+5};
+                                \addplot[pccplot,domain=2:4,-]{-3};
+                                \addplot[pccplot,domain=4:6.8,->]{1/3*(x-4)^3-2};
+                                \addplot[holdot] coordinates {(2,2) (2,-3) (4,-3) (4,-2)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
             </introduction>
             <exercise>
                 <statement>

@@ -69,7 +69,7 @@
         </xsl:attribute>
 -->    <xsl:element name="iframe">
         <xsl:attribute name="style">
-            <xsl:text>height:360px; width:100%;</xsl:text>
+            <xsl:text>height:600px; width:100%;</xsl:text>
         </xsl:attribute>
         <xsl:attribute name="name">
             <xsl:text>Stack</xsl:text>

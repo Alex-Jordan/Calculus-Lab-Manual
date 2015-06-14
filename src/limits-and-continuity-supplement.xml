@@ -348,7 +348,7 @@
         </exercise>
         <exercisegroup cols="2">
             <introduction>
-                <p>Determine the appropriate symbol to write after an equal sign following each of the given limits.  In each case, the appropriate symbol is either a real number, <m>\infty</m>, or <m>-\infty</m>.  Also, state whether or not each limit exists and if the limit exists prove its existence (and value) by applying the appropriate limit laws.  The Rational Limit Form table in <xref provisional="Appendix C (Pages C3 and C4)"/> summarizes strategies to be employed based upon the initial form of the limit.</p>
+                <p>Determine the appropriate symbol to write after an equal sign following each of the given limits.  In each case, the appropriate symbol is either a real number, <m>\infty</m>, or <m>-\infty</m>.  Also, state whether or not each limit exists and if the limit exists prove its existence (and value) by applying the appropriate limit laws.  The Rational Limit Forms table in <xref ref="appendix-limit-laws"/> summarizes strategies to be employed based upon the initial form of the limit.</p>
             </introduction>
             <exercise>
                 <statement>

@@ -45,6 +45,7 @@
 
 		<p>In 2012, Steve Simonds revised an earlier version of this document in Word/PDF form with some support from PCC's curriculum development grants.</p>
 		<p>In 2015, Alex Jordan converted the Word/PDF to MathBook XML (enabling the HTML output alongside a PDF) with some support from PCC's professional development grants.</p>
+                <p>Phil Thurber and Scot Leavitt created the cover composition using </p>
 
 	</acknowledgement>
 
@@ -109,22 +110,22 @@
                     <row bottom="medium">
                         <cell>4</cell>
                         <cell><xref autoname="title" ref="section-graph-features"/><ndash/><xref autoname="title" ref="section-higher-order-derivatives"/></cell>
-                        <cell></cell>
+                        <cell><xref autoname="title" ref="functions-derivatives-antiderivatives-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="medium">
                         <cell>5</cell>
                         <cell><xref autoname="title" ref="section-antiderivatives"/><ndash/><xref autoname="title" ref="section-graphical-features-from-derivatives"/></cell>
-                        <cell></cell>
+                        <cell><xref autoname="title" ref="functions-derivatives-antiderivatives-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="medium">
                         <cell>6</cell>
                         <cell><xref autoname="title" ref="section-leibniz-notation"/><ndash/><xref autoname="title" ref="section-derivative-formulas-and-function-behavior"/></cell>
-                        <cell></cell>
+                        <cell><xref autoname="title" ref="derivative-formulas-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="medium">
                         <cell>7</cell>
                         <cell><xref autoname="title" ref="section-introduction-to-the-chain-rule"/><ndash/><xref autoname="title" ref="section-chain-rule-and-leibniz"/></cell>
-                        <cell></cell>
+                        <cell><xref autoname="title" ref="chain-rule-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="medium">
                         <cell>8</cell>
@@ -133,7 +134,7 @@
                     </row>
                     <row bottom="major">
                         <cell>9 and 10</cell>
-                        <cell><xref autoname="title" ref="section-motivation-for-critical-numbers"/><ndahs/><xref autoname="title" ref="section-making-graphs"/></cell>
+                        <cell><xref autoname="title" ref="section-motivation-for-critical-numbers"/><ndash/><xref autoname="title" ref="section-making-graphs"/></cell>
                         <cell></cell>
                     </row>
                     </tabular> 

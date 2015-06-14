@@ -1,6 +1,6 @@
 %%                                    %%
 %% Generated from MathBook XML source %%
-%%    on 2015-05-29T13:44:02-07:00    %%
+%%    on 2015-06-13T23:11:04-07:00    %%
 %%                                    %%
 %%   http://mathbook.pugetsound.edu   %%
 %%                                    %%
@@ -40,18 +40,8 @@
 %% Semantic Macros
 %% To preserve meaning in a LaTeX file
 %% Only defined here if required in this document
-%% Used for units and number formatting
-\usepackage[per-mode=fraction]{siunitx}
-\ifxetex\sisetup{math-micro=\text{µ},text-micro=µ}\fi%% Common non-SI units
-\DeclareSIUnit\degreeFahrenheit{\SIUnitSymbolDegree{F}}
-\DeclareSIUnit\fahrenheit{\degreeFahrenheit}
-\DeclareSIUnit\pound{lb}
-\DeclareSIUnit\foot{ft}
-\DeclareSIUnit\inch{in}
-\DeclareSIUnit\yard{yd}
-\DeclareSIUnit\mile{mi}
-\DeclareSIUnit\mileperhour{mph}
-\DeclareSIUnit\gallon{gal}
+%% Used for inline definitions of terms
+\newcommand{\terminology}[1]{\textbf{#1}}
 %% Subdivision Numbering, Chapters, Sections, Subsections, etc
 %% Subdivision numbers may be turned off at some level ("depth")
 %% A section *always* has depth 1, contrary to us counting from the document root
@@ -71,11 +61,16 @@
 \renewcommand*{\proofname}{Proof}%% Only variants actually used in document appear here
 %% Numbering: all theorem-like numbered consecutively
 %% i.e. Corollary 4.3 follows Theorem 4.2
+\newtheorem{algorithm}[theorem]{Algorithm}
 %% Definition-like environments, normal text
 %% Numbering for definition, examples is in sync with theorems, etc
 %% also for free-form exercises, not in exercise sections
 \theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
 \newtheorem{exercise}[theorem]{Exercise}
+%% Equation Numbering
+%% Controlled by  numbering.equations.level  processing parameter
+\numberwithin{equation}{section}
 %% For improved tables
 \usepackage{array}
 %% Some extra height on each row is desirable, especially with horizontal rules
@@ -124,14 +119,6 @@
 \usepackage{float}
 \usepackage[bf]{caption} % http://tex.stackexchange.com/questions/95631/defining-a-new-type-of-floating-environment 
 \usepackage{newfloat}
-\usepackage{subcaption}
-\captionsetup[subfigure]{labelformat=simple}
-\captionsetup[subtable]{labelformat=simple}
-\renewcommand\thesubfigure{(\alph{subfigure})}
-\makeatletter
-% we plan to use subtables within figure environments, so they need to reset accordingly
-\@addtoreset{subtable}{figure}
-\makeatother
 % Side-by-side elements need careful treatement for aligning captions, see: 
 % http://tex.stackexchange.com/questions/230335/vertically-aligning-minipages-subfigures-and-subtables-not-with-baseline 
 \usepackage{stackengine,ifthen}
@@ -267,6 +254,8 @@ figcap\romannumeral\value{figstack}\endcsname{#5}%
 %% Graphics Preamble Entries
 \usepackage{pgfplots}
 \usepackage{xparse}
+\usepgfplotslibrary{patchplots}
+
 
 % cycle list- truly awesome; see section 4.6.7, pg 129 of pgfplots
 \pgfplotscreateplotcyclelist{pccstylelist}{%
@@ -448,7 +437,7 @@ figcap\romannumeral\value{figstack}\endcsname{#5}%
 \newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
 %
 %  higher Leibniz operator
-%  Usage: \lzon{x}{y}{n}
+%  Usage: \lzon{n}{x}{y}
 \newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
 %
 %  Leibniz operator at ....
@@ -458,6 +447,14 @@ figcap\romannumeral\value{figstack}\endcsname{#5}%
 %  Absolute Value
 %  Usage: \abs{x}
 \newcommand{\abs}[1]{\left|#1\right|}
+%
+%  sech
+%  Usage: \sech
+\newcommand{\sech}{\operatorname{sech}}
+%
+%  csch
+%  Usage: \csch
+\newcommand{\csch}{\operatorname{csch}}
 %
 %% Title page information for book
 \title{Portland Community College MTH 251 Lab Manual}
@@ -505,291 +502,522 @@ figcap\romannumeral\value{figstack}\endcsname{#5}%
 %% end:   table of contents
 \mainmatter
 \typeout{************************************************}
-\typeout{Chapter 1 Functions, Derivatives, and Antiderivatives}
+\typeout{Chapter 1 Critical Numbers and Graphing from Formulas}
 \typeout{************************************************}
-\chapter[Functions, Derivatives, and Antiderivatives]{Functions, Derivatives, and Antiderivatives}\label{chapter-functions-derivatives-antiderivatives}
+\chapter[Critical Numbers and Graphing from Formulas]{Critical Numbers and Graphing from Formulas}\label{chapter-critical-numbers-graphing-from-formulas}
 \typeout{************************************************}
-\typeout{Section 1.1 Graphical Features from Derivatives}
+\typeout{Section 1.1 Motivation}
 \typeout{************************************************}
-\section[Graphical Features from Derivatives]{Graphical Features from Derivatives}\label{section-graphical-features-from-derivatives}
-When given a function formula, we  often find the first and second derivative formulas to determine behaviors of the given function.  In a later lab we will use the first and second derivative formulas to help us graph a function given the formula for the function.  One thing we do with the derivative formulas is determine where they are positive, negative, zero, and undefined. This helps us determine where the given function is increasing, decreasing, concave up, concave down, and linear.%
+\section[Motivation]{Motivation}\label{section-motivation-for-critical-numbers}
+In the first activity of this lab you are going to discuss a few questions with your group mates that will hopefully motivate you for one of the topics covered in the lab.%
 \typeout{************************************************}
 \typeout{Exercises}
 \typeout{************************************************}
 \section*{Exercises}\label{exercises-1}
 
-\begin{exercisegroup}%
-In the next few exercises, you will construct a function and then answer questions about it.%
+\begin{exerciselist}
+\item[1.]\phantomsection\hypertarget{exercise-parabola-vertex}{\null}Discuss how you could use the first derivative formula to help you determine the vertex of the parabola \(y=-2x^2+18x-7\) and then determine the vertex.  Remember that the vertex is a point in the \(xy\)-plane and as such is identified using an ordered pair.%
+\par\smallskip
+\item[2.]\phantomsection\hypertarget{exercise-distinguish-graphs-by-critical-nature}{\null}The curves in \hyperref[figure-bow]{Figures~\ref*{figure-bow}} and \hyperref[figure-pointy]{1.1.4} were generated by two of the four functions given below.  Use the given functions along with their first derivatives to determine which functions generated the curves.  Please note that the \(y\)-scales have deliberately been omitted from the graphs and that different scales were used to generate the two graphs.  Resist any temptation to use your calculator; use of your calculator totally obviates the point of the exercise. The potential functions are \begin{align*}
+\fe{f_1}{x}&=\frac{1}{(x-2)^{\sfrac{10}{7}}}+C_1&\fe{f_2}{x}&=\frac{1}{(x-2)^{\sfrac{2}{7}}}+C_2\\
+\fe{f_3}{x}&=(x-2)^{\sfrac{2}{7}}+C_3&\fe{f_4}{x}&=(x-2)^{\sfrac{10}{7}}+C_4
+\end{align*} where \(C_1,C_2,C_3,C_4\) are unknown constants.%
 \begin{figure}
 \centering
-\pushValignCaptionBottom[b]{minipage}{.60\textwidth}{%
+\pushValignCaptionBottom[b]{minipage}{.40\textwidth}{%
 \pgfplotsset{every axis/.append style={width=\linewidth}}%
 \centering% horizontal alignment 
-\begin{tabular}{ccc}\hrulethick
-Interval&\(\fd{f}\)&\(\sd{f}\)\\\hrulemedium
-\(\ointerval{-\infty}{-1}\)&Positive&Negative\\
-\(\ointerval{-1}{\infty}\)&Positive&Positive
-\end{tabular}
+{
+\begin{tikzpicture}
+\begin{axis}[
+    xmin=-3,
+    xmax=7,
+    xtick={-3,-2,...,7},
+    ytick={40},
+    minor ytick={40},
+    ymin=-10,
+    ymax=30,
+    grid=none,
+    samples=100,
+    ]
+    \addplot[pccplot,domain=-3:7]{(abs(x-2))^(10/7)+10};
+\end{axis}
+\end{tikzpicture}
+}
 }% end body 
-{\captionof{table}{Signs on \(\fd{f}\) and \(\sd{f}\)\label{table-based-on-derivatives}}
+{\captionof{figure}{mystery curve 1\label{figure-bow}}
 }% caption 
 \pushValignCaptionBottom[b]{minipage}{.40\textwidth}{%
 \pgfplotsset{every axis/.append style={width=\linewidth}}%
 \centering% horizontal alignment 
 {
 \begin{tikzpicture}
-\begin{axis}[]
+\begin{axis}[
+    xmin=-3,
+    xmax=7,
+    xtick={-3,-2,...,7},
+    ytick={40},
+    minor ytick={40},
+    ymin=-1.6,
+    ymax=4.8,
+    grid=none,
+    samples=100,
+    ]
+    \addplot[pccplot,domain=-3:2,<-]{(abs(x-2))^(2/7)+1.6};
+    \addplot[pccplot,domain=2:7,->]{(abs(x-2))^(2/7)+1.6};
 \end{axis}
 \end{tikzpicture}
 }
 }% end body 
-{\captionof{figure}{\(y=\fe{f}{x}\)\label{figure-based-on-derivatives}}
+{\captionof{figure}{mystery curve 2\label{figure-pointy}}
 }% caption 
 \popValignCaptionBottom
 \end{figure}
-\par
-\begin{exercisegroupbycol}{1}%
-\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-based-on-derivatives}{\null}
-Draw onto \hyperref[figure-based-on-derivatives]{Figure~\ref*{figure-based-on-derivatives}} a \emph{continuous} function \(f\) that has a horizontal tangent line at the point \(\point{1}{2}\) along with the properties stated in \hyperref[table-based-on-derivatives]{Table~\ref*{table-based-on-derivatives}}.%
-\end{exercisegroupitem}%
-\par%
-\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-2}{\null}
-Given the conditions stated in \hyperref[exercise-based-on-derivatives]{Exercise~1}, does it have to be the case that \(\fe{\sd{f}}{-1}=0\)?%
-\end{exercisegroupitem}%
-\par%
-\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-3}{\null}
-Is \(f\) increasing at \(-1\)?  How do you know?%
-\end{exercisegroupitem}%
-\par%
-\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-4}{\null}
-Can a continuous, everywhere differentiable function satisfy the properties stated in \hyperref[table-based-on-derivatives]{Table~\ref*{table-based-on-derivatives}} and not have a slope of zero at \(1\)?  Draw a picture that supports your answer.%
-\end{exercisegroupitem}%
-\par%
-\end{exercisegroupbycol}%
-\end{exercisegroup}%
-\begin{exercisegroup}%
-In the next few exercises, you will construct a function and then answer questions about it.%
-\begin{figure}
-\centering
-\pushValignCaptionBottom[b]{minipage}{.60\textwidth}{%
-\pgfplotsset{every axis/.append style={width=\linewidth}}%
-\centering% horizontal alignment 
-\begin{tabular}{ccc}\hrulethick
-Interval&\(\fd{g}\)&\(\sd{g}\)\\\hrulemedium
-\(\ointerval{-\infty}{-1}\)&Positive&Positive\\
-\(\ointerval{-1}{\infty}\)&Positive&Negative
-\end{tabular}
-}% end body 
-{\captionof{table}{Signs on \(\fd{g}\) and \(\sd{g}\)\label{table-based-on-derivatives-two}}
-}% caption 
-\pushValignCaptionBottom[b]{minipage}{.40\textwidth}{%
-\pgfplotsset{every axis/.append style={width=\linewidth}}%
-\centering% horizontal alignment 
-{
-\begin{tikzpicture}
-\begin{axis}[]
-\end{axis} 
-\end{tikzpicture}
-}
-}% end body 
-{\captionof{figure}{\(y=\fe{g}{x}\)\label{figure-based-on-derivatives-two}}
-}% caption 
-\popValignCaptionBottom
-\end{figure}
-\par
-\begin{exercisegroupbycol}{1}%
-\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-based-on-derivatives-two}{\null}
-Draw onto \hyperref[figure-based-on-derivatives-two]{Figure~\ref*{figure-based-on-derivatives-two}} a continuous function \(g\) that has a vertical tangent line at the point \(\point{-1}{2}\) along with the properties stated in \hyperref[table-based-on-derivatives-two]{Table~\ref*{table-based-on-derivatives-two}}.%
-\end{exercisegroupitem}%
-\par%
-\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-6}{\null}
-Given the conditions stated in \hyperref[exercise-based-on-derivatives-two]{Exercise~5}, does it have to be the case that isundefined?%
-\end{exercisegroupitem}%
-\par%
-\begin{exercisegroupitem}{7. }\phantomsection\hypertarget{exercise-7}{\null}
-Is \(g\) increasing at \(-1\)?  How do you know?%
-\end{exercisegroupitem}%
-\par%
-\begin{exercisegroupitem}{8. }\phantomsection\hypertarget{exercise-8}{\null}
-Can a continuous, everywhere differentiable function satisfy the properties stated in \hyperref[table-based-on-derivatives-two]{Table~\ref*{table-based-on-derivatives-two}} and not have a vertical tangent line at \(1\)?  Draw a picture that supports your answer.%
-\end{exercisegroupitem}%
-\par%
-\end{exercisegroupbycol}%
-\end{exercisegroup}%
-\begin{exercisegroup}%
-In the next few exercises, you will construct a function and then answer questions about it.%
-\begin{figure}
-\centering
-\pushValignCaptionBottom[b]{minipage}{.60\textwidth}{%
-\pgfplotsset{every axis/.append style={width=\linewidth}}%
-\centering% horizontal alignment 
-\begin{tabular}{ccc}\hrulethick
-Interval&\(\fd{k}\)&\(\sd{k}\)\\\hrulemedium
-\(\ointerval{-\infty}{-1}\)&Negative&Positive\\
-\(\ointerval{-1}{\infty}\)&Positive&Negative
-\end{tabular}
-}% end body 
-{\captionof{table}{Signs on \(\fd{k}\) and \(\sd{k}\)\label{table-based-on-derivatives-three}}
-}% caption 
-\pushValignCaptionBottom[b]{minipage}{.40\textwidth}{%
-\pgfplotsset{every axis/.append style={width=\linewidth}}%
-\centering% horizontal alignment 
-{
-\begin{tikzpicture}
-\begin{axis}[]
-\end{axis} 
-\end{tikzpicture}
-}
-}% end body 
-{\captionof{figure}{\(y=\fe{k}{x}\)\label{figure-based-on-derivatives-three}}
-}% caption 
-\popValignCaptionBottom
-\end{figure}
-\par
-\begin{exercisegroupbycol}{1}%
-\begin{exercisegroupitem}{9. }\phantomsection\hypertarget{exercise-based-on-derivatives-three}{\null}
-Draw onto \hyperref[figure-based-on-derivatives-three]{Figure~\ref*{figure-based-on-derivatives-three}} a continuous function \(k\) that passes through the point \(\point{-1}{2}\) and also satisfies the properties stated in \hyperref[table-based-on-derivatives-three]{Table~\ref*{table-based-on-derivatives-three}}.%
-\end{exercisegroupitem}%
-\par%
-\begin{exercisegroupitem}{10. }\phantomsection\hypertarget{exercise-10}{\null}
-At what values of \(x\) is \(k\) nondifferentiable?%
-\end{exercisegroupitem}%
-\par%
-\end{exercisegroupbycol}%
-\end{exercisegroup}%
-\begin{exercisegroup}%
-You should know by now that the first derivative  continually increases over intervals where the second derivative is constantly positive and that the first derivative continually decreases over intervals where the second derivative is constantly negative.  A person might infer from this that a function changes more and more quickly over intervals where the second derivative is constantly positive and that a function changes more and more slowly over intervals where the second derivative is constantly negative.   We are going to explore that idea in this problem.%
-\par
-\begin{exercisegroupbycol}{1}%
-\begin{exercisegroupitem}{11. }\phantomsection\hypertarget{exercise-ice-cube}{\null}
-Suppose that \(\fe{V}{t}\) is the volume of water in an ice cube (\si{\milli\liter}) where \(t\) is the amount of time that has passed since noon (measure in minutes).  Suppose that \(\fe{\fd{V}}{6}=0\,\frac{\text{ml}}{\text{min}}\) and that \(\fe{\sd{V}}{t}\) has a constant value of \(-0.3\,\frac{\sfrac{\text{ml}}{\text{min}}}{\text{min}}\) over the interval \(\cinterval{6}{11}\).  What is the value of \(\fe{\fd{V}}{11}\)?  When is \(V\) changing more quickly, at 12:06 pm or at 12:11 pm?%
-\end{exercisegroupitem}%
-\par%
-\begin{exercisegroupitem}{12. }\phantomsection\hypertarget{exercise-12}{\null}
-Referring to the function \(V\) in \hyperref[exercise-ice-cube]{Exercise~11}, what would the shape of \(V\) be over the interval \(\cinterval{6}{11}\)?  (Choose from options \hyperref[figure-curve-one]{(a)}\textendash{}\hyperref[figure-curve-four]{(d)}.)%
-\begin{figure}
-\centering
-\pushValignCaptionBottom[b]{subfigure}{.12\textwidth}{%
-\pgfplotsset{every axis/.append style={width=\linewidth}}%
-\centering% horizontal alignment 
-{
-\begin{tikzpicture}
-\begin{axis}[axis x line=none, axis y line=none,xmin=0,xmax=1,ymin=,ymax=]
-    \addplot[domain=0:1,-]{sqrt((1-((x-1)/1.1)^2))};
-\end{axis}
-\end{tikzpicture}
-}
-}% end body 
-{\caption{\label{figure-curve-one}}
-}% caption 
-\pushValignCaptionBottom[b]{subfigure}{.12\textwidth}{%
-\pgfplotsset{every axis/.append style={width=\linewidth}}%
-\centering% horizontal alignment 
-{
-\begin{tikzpicture}
-\begin{axis}[axis x line=none, axis y line=none,xmin=0,xmax=1,ymin=,ymax=]
-    \addplot[domain=0:1,-]{(x/1.1)^2};
-\end{axis}
-\end{tikzpicture}
-}
-}% end body 
-{\caption{\label{figure-curve-two}}
-}% caption 
-\pushValignCaptionBottom[b]{subfigure}{.12\textwidth}{%
-\pgfplotsset{every axis/.append style={width=\linewidth}}%
-\centering% horizontal alignment 
-{
-\begin{tikzpicture}
-\begin{axis}[axis x line=none, axis y line=none,xmin=0,xmax=1,ymin=,ymax=]
-    \addplot[domain=0:1,-]{((x-1)/1.1)^2};
-\end{axis}
-\end{tikzpicture}
-}
-}% end body 
-{\caption{\label{figure-curve-three}}
-}% caption 
-\pushValignCaptionBottom[b]{subfigure}{.12\textwidth}{%
-\pgfplotsset{every axis/.append style={width=\linewidth}}%
-\centering% horizontal alignment 
-{
-\begin{tikzpicture}
-\begin{axis}[axis x line=none, axis y line=none,xmin=0,xmax=1,ymin=,ymax=]
-    \addplot[domain=0:1,-]{1-(x/1.1)^2};
-\end{axis}
-\end{tikzpicture}
-}
-}% end body 
-{\caption{\label{figure-curve-four}}
-}% caption 
-\popValignCaptionBottom
-\caption{\label{sidebyside-curves}}
-\end{figure}
-\end{exercisegroupitem}%
-\par%
-\begin{exercisegroupitem}{13. }\phantomsection\hypertarget{exercise-13}{\null}
-Again referring to options \hyperref[figure-curve-one]{(a)}\textendash{}\hyperref[figure-curve-four]{(d)}, which functions are changing more and more rapidly from left to right and which functions are changing more and more slowly from left to right? Which functions have positive second derivatives and which functions have negative second derivatives?  Do the functions with positive second derivative values both change more and more quickly from left to right?%
-\end{exercisegroupitem}%
-\par%
-\begin{exercisegroupitem}{14. }\phantomsection\hypertarget{exercise-14}{\null}
-Consider the signs on both the first and second derivatives in options \hyperref[figure-curve-one]{(a)}\textendash{}\hyperref[figure-curve-four]{(d)}.  Is there something that the two functions that change more and more quickly have in common that is different in the functions that change more and more slowly?%
-\end{exercisegroupitem}%
-\par%
-\end{exercisegroupbycol}%
-\end{exercisegroup}%
-\begin{exercisegroup}%
-Resolve each of the following disputes.%
-\par
-\begin{exercisegroupbycol}{1}%
-\begin{exercisegroupitem}{15. }\phantomsection\hypertarget{exercise-15}{\null}
-One day Sara and Jermaine were working on an assignment.  One question asked them to draw a function over the domain \(\ointerval{-2}{\infty}\) with the properties that the function is always increasing and always concave down.  Sara insisted that the curve must have a vertical asymptote at \(-2\) and Jermaine insisted that the function must have a horizontal asymptote somewhere.  Were either of these students correct?%
-\end{exercisegroupitem}%
-\par%
-\begin{exercisegroupitem}{16. }\phantomsection\hypertarget{exercise-16}{\null}
-The next question Sara and Jermaine encountered described the same function with the added condition that the function is never positive.  Sara and Jermaine made the same contentions about asymptotes.  Is one of them now correct?%
-\end{exercisegroupitem}%
-\par%
-\begin{exercisegroupitem}{17. }\phantomsection\hypertarget{exercise-17}{\null}
-At another table Pedro and Yoshi were asked to draw a continuous curve that, among other properties, was never concave up.  Pedro said ``OK, so the curve is always concave down'' to which Yoshi replied ``Pedro, you need to open your  mind to other possibilities.''  Who's right?%
-\end{exercisegroupitem}%
-\par%
-\begin{exercisegroupitem}{18. }\phantomsection\hypertarget{exercise-18}{\null}
-In the next problem Pedro and Yoshi were asked to draw a function that is everywhere continuous and that is concave down at every value of \(x\) \emph{except} \(3\).  Yoshi declared ``impossible'' and Pedro responded ``have some faith, Yosh-man.''  Pedro then began to draw. Is it possible that Pedro came up with such a function?%
-\end{exercisegroupitem}%
-\par%
-\end{exercisegroupbycol}%
-\end{exercisegroup}%
-\begin{exercisegroup}%
-Determine the correct answer to each of the following questions.  Pictures of the situation may help you determine the correct answers.%
-\par
-\begin{exercisegroupbycol}{1}%
-\begin{exercisegroupitem}{19. }\phantomsection\hypertarget{exercise-19}{\null}
-Which of the following propositions is true? If a given proposition is not true, draw a graph that illustrates its untruth.%
-\begin{enumerate}[label=(\alph*)]
-\item{}If the graph of \(f\) has a vertical asymptote, then the graph of \(\fd{f}\) must also have a vertical asymptote.\item{}If the graph of \(\fd{f}\) has a vertical asymptote, then the graph of \(f\) must also have a vertical asymptote.\end{enumerate}
-\end{exercisegroupitem}%
-\par%
-\begin{exercisegroupitem}{20. }\phantomsection\hypertarget{exercise-20}{\null}
-Suppose that the function \(f\) is everywhere continuous and concave down.  Suppose further that \(\fe{f}{7}=5\) and \(\fe{\fd{f}}{7}=3\).  Which of the following is true?%
-\begin{enumerate}[label=(\alph*)]
-\item{}\(\fe{f}{9}\lt11\)\item{}\(\fe{f}{9}=11\)\item{}\(\fe{f}{9}\gt11\)\item{}There is not enough information to determine the relationship between \(\fe{f}{9}\) and \(11\).\end{enumerate}
-\end{exercisegroupitem}%
-\par%
-\end{exercisegroupbycol}%
-\end{exercisegroup}%
+\par\smallskip
+\end{exerciselist}
 \typeout{************************************************}
-\typeout{Section 1.2 Supplement}
+\typeout{Section 1.2 Local Extrema}
 \typeout{************************************************}
-\section[Supplement]{Supplement}\label{functions-derivatives-antiderivatives-supplementary-exercises}
+\section[Local Extrema]{Local Extrema}\label{section-local-extrema}
+The vertex of the parabola in \hyperref[exercise-parabola-vertex]{Exercise~1} is called a \terminology{local maximum point} and the points \(\point{2}{C_3}\) and \(\point{2}{C_4}\) in \hyperref[exercise-distinguish-graphs-by-critical-nature]{Exercise~2} are called \terminology{local minimum points}.  Collectively, these points are called \terminology{local extreme points}.%
+\par
+While working \hyperref[section-motivation-for-critical-numbers]{Section~\ref*{section-motivation-for-critical-numbers}} you hopefully came to the conclusion that the local extreme points had certain characteristics in common.  In the first place, they must occur at a number in the domain of the function (which eliminated \(f_1\) and \(f_2\) from contention in \hyperref[exercise-distinguish-graphs-by-critical-nature]{Exercise~2}).  Secondly, one of two things must be true about the first derivative when a function has a local extreme point; it either has a value of zero or it does not exist.  This leads us to the definition of a \terminology{critical number} of a function.%
+\begin{definition}[Critical Numbers]\label{definition-critical-numbers}
+If \(f\) is a function, then we define the \terminology{critical numbers} of \(f\) as the numbers in the domain of \(f\) where the value of \(f\) is either zero or does not exist.%
+\end{definition}
 \typeout{************************************************}
 \typeout{Exercises}
 \typeout{************************************************}
 \section*{Exercises}\label{exercises-2}
 
+\begin{multicols}{2}
+\begin{exerciselist}
+\item[1.]\phantomsection\hypertarget{exercise-3}{\null}The function \(g\) shown in \hyperref[figure-vertical-moment]{Figure~\ref*{figure-vertical-moment}} has a vertical tangent line at \(-3\).  Veronica says that \(-3\) is a critical number of \(g\) but Tito disagrees. Tito contends that \(-3\) is not a critical number because \(g\) does not have a local extreme point at \(-3\).  Who is right?%
+\vfill
+\columnbreak
+\begin{figure}
+\centering
+{
+\begin{tikzpicture}
+\begin{axis}[
+    xmin=-8,
+    xmax=2,
+    xtick={-8,-6,...,2},
+    minor xtick={-8,-7,...,2},
+    ytick={-5,-4,...,5},
+    minor ytick={-5,-4,...,5},
+    ymin=-5,
+    ymax=5,
+    samples=100,
+    ]
+    \addplot[pccplot,domain=-8:2]{-(x+3)/abs(x+3)*abs((x+3))^(1/3)-1};
+    \addplot[asymptote]coordinates{(-3,1) (-3,-3)};
+\end{axis}
+\end{tikzpicture}
+}
+\caption{\(y=\fe{g}{x}\)\label{figure-vertical-moment}}
+\end{figure}
+\par\smallskip
+\end{exerciselist}
+\end{multicols}%
 \begin{exercisegroup}%
-Sketch the first derivatives of the functions shown in \hyperref[exercise-sketch-first-supplement]{Exercises~1}\textendash{}{$\langle\langle$Unresolved xref, ref="exercise-sketch-last-supplement"; check spelling or use "provisional" attribute$\rangle\rangle$} onto the blank graphs provided.%
+Answer each of the following questions (using complete sentences) in reference to the function \(f\) shown in \hyperref[figure-lots-of-critical-points]{Figure~\ref*{figure-lots-of-critical-points}}.%
+\begin{figure}
+\centering
+{
+\begin{tikzpicture}
+\begin{axis}[
+    ]
+    \addplot[pccplot,domain=-6.9:-5.35]{-1/(x+5)^2+2};
+    \addplot[pccplot,domain=-4.65:-3,<-]{-1/(x+5)^2+2};
+    \addplot[pccplot,domain=-3:2,-]{x^2-5};
+    \addplot[pccplot,domain=2:5,-,samples=80]{(abs(x-4))^(1/3)*(x-4)/(abs(x-4))+3};
+    \addplot[pccplot,domain=5:6.9,->]{4-(x-5)^(0.9)};
+    \addplot[holdot] coordinates {
+        (-3,1.75)
+        (-3,4)
+        (2,-1)
+    };
+    \addplot[soldot] coordinates {(2,1.74)};
+    \addplot[asymptote] coordinates {(-5,-7) (-5,7)};
+\end{axis}
+\end{tikzpicture}
+}
+\caption{\(y=\fe{f}{x}\)\label{figure-lots-of-critical-points}}
+\end{figure}
 \par
 \begin{exercisegroupbycol}{1}%
-\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-sketch-first-supplement}{\null}
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-4}{\null}
+What are the critical numbers of \(f\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-5}{\null}
+What are the local extreme points on \(f\)?  Classify the points as local minimums or local maximums and remember that points on the plane are represented by ordered pairs.%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-6}{\null}
+What is the absolute maximum value of \(f\) over the interval \(\ointerval{-7}{7}\).  Please note that the function value is the value of the \(y\)-coordinate at the point on the curve and as such is a number.%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\begin{exercisegroup}%
+Decide whether each of the following statements is true or false.%
+\par
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-7}{\null}
+True or False? A function always has a local extreme point at each of its critical numbers.%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-8}{\null}
+True or False? If the point \(\point{t_1}{\fe{h}{t_1}}\) is a local minimum point on \(h\), then \(t_1\) must be a critical number of \(h\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{7. }\phantomsection\hypertarget{exercise-9}{\null}
+True or False? If \(\fe{\fd{g}}{2.7}=0\), then \(g\) must have a local extreme point at \(2.7\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{8. }\phantomsection\hypertarget{exercise-10}{\null}
+True or False? If \(\fe{\fd{g}}{2.7}=0\), then \(2.7\) must be a critical number of \(g\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{9. }\phantomsection\hypertarget{exercise-11}{\null}
+True or False? If \(\fe{\fd{g}}{9}\) does not exist, then \(9\) must be a critical number of \(g\).%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\typeout{************************************************}
+\typeout{Section 1.3 Formal Identification of Critical Numbers}
+\typeout{************************************************}
+\section[Formal Identification of Critical Numbers]{Formal Identification of Critical Numbers}\label{section-formal-identification-of-critical-numbers}
+When finding critical numbers based upon a function formula, there are three issues that need to be considered; the domain of the function, the zeros of the first derivative, and the numbers in the domain of the function where the first derivative is undefined.  When writing a formal analysis of this process each of these questions must be explicitly addressed.  The following outline shows the work you need to show when you are asked to write a formal determination of critical numbers based upon a function formula.%
+\begin{algorithm}[A process for formal determination of critical numbers]\label{algorithm-find-critical-numbers}
+Please note that you should present your work in narrative form using complete sentences that establish the significance of all stated intervals and values.  For example, for the function \(\fe{g}{t}=\sqrt{t-7}\) the first sentence you should write is ``The domain of \(g\) is \(\cointerval{7}{\infty}\)''.%
+\begin{enumerate}
+\item{}Using interval notation, state the domain of the function.\item{}Differentiate the function and completely simplify the resultant formula.  Simplification includes:
+                    \begin{enumerate}
+\item{}Manipulating all negative exponents into positive exponents.\item{}If any rational expression occurs in the formula, all terms must be written in rational form and a common denominator must be established for the terms.  The final expression should be a single rational expression.\item{}The final expression must be completely factored.\end{enumerate}
+
+                \item{}State the values where the first derivative is equal to zero; show any non-trivial work necessary in making this determination.  Make sure that you write a sentence addressing this issue even if the first derivative has no zeros.\item{}State the values \emph{in the domain of the function} where the first derivative does not exist; show any non-trivial work necessary in making this determination.    Make sure that you write a sentence addressing this issue even if no such numbers exist.\item{}State the critical numbers of the function.  Make sure that you write this conclusion even if the function has no critical numbers.\end{enumerate}
+\par
+Because the domain of a function is such an important issue when determining critical numbers, there are some things you should keep in mind when determining domains.%
+\begin{itemize}[label=\textbullet]
+\item{}Division by zero is never a good thing.\item{}Over the real numbers, you \emph{cannot} take \emph{even} roots of negative numbers.\item{}Over the real numbers, you \emph{can} take \emph{odd} roots of negative numbers.\item{}\(\sqrt[n]{0}=0\) for any positive integer \(n\).\item{}Over the real numbers, you can only take logarithms of positive numbers.\item{}The sine and cosine function are defined at all real numbers.  You should check with your lecture instructor to see if you are expected to know the domains of the other four trigonometric functions and/or the inverse trigonometric functions.\end{itemize}
+\end{algorithm}
+\typeout{************************************************}
+\typeout{Exercises}
+\typeout{************************************************}
+\section*{Exercises}\label{exercises-3}
+
+\begin{exercisegroup}%
+Formally establish the critical numbers for each of the following functions following .%
+\par
+\begin{exercisegroupbycol}{2}%
+\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-12}{\null}
+\(\fe{f}{x}=x^2-9x+4\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-13}{\null}
+\(\fe{g}{t}=7t^3+39t^2-24t+4\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-14}{\null}
+\(\fe{p}{t}=(t+8)^{\sfrac{2}{3}}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-15}{\null}
+\(\fe{z}{x}=x\fe{\ln}{x}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-16}{\null}
+\(\fe{y}{\theta}=e^{\fe{\cos}{\theta}}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-17}{\null}
+\(\fe{T}{t}=\sqrt{t-4}\sqrt{16-t}\)%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\begin{exercisegroup}%
+The first derivative of the function \(\fe{m}{x}=\frac{\sqrt{x-5}}{x-7}\) is \(\fe{\fd{m}}{x}=\frac{3-x}{2\sqrt{x-5}(x-7)^2}\).%
+\par
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{7. }\phantomsection\hypertarget{exercise-18}{\null}
+Roland says that \(5\) is a critical number of \(m\) but Yuna disagrees.  Who is correct and why?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{8. }\phantomsection\hypertarget{exercise-19}{\null}
+Roland says that \(7\) is a critical number of \(m\) but Yuna disagrees.  Who is correct and why?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{9. }\phantomsection\hypertarget{exercise-20}{\null}
+Roland says that \(3\) is a critical number of \(m\) but Yuna disagrees.  Who is correct and why?%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\typeout{************************************************}
+\typeout{Section 1.4 Sign Tables for the First Derivative}
+\typeout{************************************************}
+\section[Sign Tables for the First Derivative]{Sign Tables for the First Derivative}\label{section-sign-tables-for-the-first-derivative}
+Once you have determined the critical numbers of a function, the next thing you might want to determine is the behavior of the function at each of its critical numbers.  One way you could do that involves a sign table for the first derivative of the function.%
+\typeout{************************************************}
+\typeout{Exercises}
+\typeout{************************************************}
+\section*{Exercises}\label{exercises-4}
+
+\begin{multicols}{2}
+\begin{exerciselist}
+\item[1.]\phantomsection\hypertarget{exercise-21}{\null}The first derivative of the function \(\fe{f}{x}=x^3-21x^2+135x-24\) is \(\fe{\fd{f}}{x}=3(x-5)(x-9)\). The critical numbers of \(f\) are trivially shown to be \(5\) and \(9\). Copy \hyperref[table-polynomial-sign-table]{Table~\ref*{table-polynomial-sign-table}} onto your paper and fill in the missing information.  Then state the local minimum and maximum points on \(f\).  Specifically address both minimum and maximum points even if one and/or the other does not exist.  Remember that points on the plane are represented by ordered pairs. \emph{Make sure that you state points on \(f\) and not \(\fd{f}\)!}%
+\vfill
+\columnbreak
+\begin{table}
+\centering
+\caption{\(\fe{\fd{f}}{x}=3(x-5)(x-9)\)\label{table-polynomial-sign-table}}
+\begin{tabular}{ccc}\hrulethick
+Interval&Sign of \(\fd{f}\)&Behavior of \(f\)\\\hrulemedium
+\(\ointerval{-\infty}{5}\)&\(\phantom{\text{negative}}\)&\(\phantom{\text{decreasing}}\)\\\hrulethin
+\(\ointerval{5}{9}\)&&\\\hrulethin
+\(\ointerval{9}{\infty}\)&&\\\hrulethick
+\end{tabular}
+\end{table}
+\par\smallskip
+\end{exerciselist}
+\end{multicols}%
+\begin{exercisegroup}%
+The first derivative of the function \(\fe{g}{t}=\frac{\sqrt{t-4}}{(t-1)^2}\) is \(\fe{\fd{g}}{t}=\frac{-3(t-5)}{2(t-1)^3\sqrt{t-4}}\).%
+\par
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-22}{\null}
+State the critical numbers of \(g\); you \emph{do not} need to show a formal determination of the critical numbers.  You \emph{do} need to write a complete sentence.%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-23}{\null}
+Copy \hyperref[table-semi-rational-sign-table]{Table~\ref*{table-semi-rational-sign-table}} onto your paper and fill in the missing information.%
+\begin{table}
+\centering
+\caption{\(\fe{\fd{g}}{t}=\frac{-3(t-5)}{2(t-1)^3\sqrt{t-4}}\)\label{table-semi-rational-sign-table}}
+\begin{tabular}{ccc}\hrulethick
+Interval&Sign of \(\fd{g}\)&Behavior of \(g\)\\\hrulemedium
+\(\ointerval{4}{5}\)&&\\\hrulethin
+\(\ointerval{5}{\infty}\)&&\\\hrulethick
+\end{tabular}
+\end{table}
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-24}{\null}
+Why did we not include any part of the interval \(\ointerval{-\infty}{4}\) in \hyperref[table-semi-rational-sign-table]{Table~\ref*{table-semi-rational-sign-table}}?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-25}{\null}
+Formally, we say that \(\fe{g}{t_0}\) is a local minimum value of \(g\) if there exists an open interval centered at \(t_0\) over which \(\fe{g}{t_0}\lt\fe{g}{t}\) for every value of \(t\) on that interval (other than \(t_0\), of course).  Since \(g\) is not defined to the left of \(4\), it is impossible for this definition to be satisfied at \(4\); hence \(g\) does not have a local minimum value at \(4\).%
+\par
+State the local minimum and maximum points on \(g\).  Specifically address both minimum and maximum points even if one and/or the other does not exist.%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-26}{\null}
+Write a formal definition for a local maximum point on \(g\).%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\begin{exercisegroup}%
+The first derivative of the function \(\fe{k}{x}=\frac{\sqrt[3]{(x-2)^2}}{x-1}\) is \(\fe{\fd{k}}{t}=\frac{4-x}{3(x-1)^2\sqrt[3]{x-2}}\).%
+\par
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{7. }\phantomsection\hypertarget{exercise-27}{\null}
+State the critical numbers of \(k\); you \emph{do not} need to show a formal determination of the critical numbers.  You \emph{do} need to write a complete sentence.%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{8. }\phantomsection\hypertarget{exercise-28}{\null}
+Copy \hyperref[table-trient-rational-sign-table]{Table~\ref*{table-trient-rational-sign-table}} onto your paper and fill in the missing information.%
+\begin{table}
+\centering
+\caption{\(\fe{\fd{k}}{t}=\frac{4-x}{3(x-1)^2\sqrt[3]{x-2}}\)\label{table-trient-rational-sign-table}}
+\begin{tabular}{ccc}\hrulethick
+Interval&Sign of \(\fd{k}\)&Behavior of \(k\)\\\hrulemedium
+\(\ointerval{-\infty}{1}\)&&\\\hrulethin
+\(\ointerval{1}{2}\)&&\\\hrulethin
+\(\ointerval{2}{4}\)&&\\\hrulethin
+\(\ointerval{4}{\infty}\)&&\\\hrulethick
+\end{tabular}
+\end{table}
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{9. }\phantomsection\hypertarget{exercise-29}{\null}
+The number \(1\) was included as an endpoint in \hyperref[table-trient-rational-sign-table]{Table~\ref*{table-trient-rational-sign-table}} even though \(1\) is not a critical number of \(k\).  Why did we have to include the intervals \(\ointerval{-\infty}{1}\) and \(\ointerval{1}{2}\) in the table as opposed to just using the single interval \(\ointerval{-\infty}{2}\)?%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\begin{exercisegroup}%
+Perform each of the following for the functions in \hyperref[exercise-make-sign-table-first]{Exercises~10}\textendash{}\hyperref[exercise-make-sign-table-last]{12}.%
+\begin{itemize}[label=\textbullet]
+\item{}Formally establish the critical numbers of the function.\item{}Create a table similar to \hyperref[table-polynomial-sign-table]{Tables~\ref*{table-polynomial-sign-table}}\textendash{}\hyperref[table-trient-rational-sign-table]{1.4.11}. Number the tables.  Don't forget to include table headings and column headings.\item{}State the local minimum points and local maximum points on the function.  Make sure that you explicitly address both types of points even if there are none of one type and/or the other.\end{itemize}
+\par
+\begin{exercisegroupbycol}{2}%
+\begin{exercisegroupitem}{10. }\phantomsection\hypertarget{exercise-make-sign-table-first}{\null}
+\(\fe{k}{x}=x^3+9x^2-10\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{11. }\phantomsection\hypertarget{exercise-31}{\null}
+\(\fe{g}{t}=(t+2)^3(t-6)\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{12. }\phantomsection\hypertarget{exercise-make-sign-table-last}{\null}
+\(\fe{F}{x}=\frac{x^2}{\fe{\ln}{x}}\)%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\begin{exercisegroup}%
+Consider a function \(f\) whose first derivative is \(\fe{\fd{f}}{x}=(x-9)^4\).%
+\par
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{13. }\phantomsection\hypertarget{exercise-33}{\null}
+Is \(9\) definitely a critical number of \(f\)? Explain why or why not.%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{14. }\phantomsection\hypertarget{exercise-34}{\null}
+Other than at \(9\), what is always the sign of \(\fe{\fd{f}}{x}\)? What does this sign tell you about the function \(f\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{15. }\phantomsection\hypertarget{exercise-what-type-of-critical-point}{\null}
+What type of point does \(f\) have at \(9\)? (Hint, draw a freehand sketch of the curve.)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{16. }\phantomsection\hypertarget{exercise-36}{\null}
+How could the second derivative of \(f\) be used to confirm your conclusion in \hyperref[exercise-what-type-of-critical-point]{Exercise~15}?  Go ahead and do it.%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\typeout{************************************************}
+\typeout{Section 1.5 Inflection Points}
+\typeout{************************************************}
+\section[Inflection Points]{Inflection Points}\label{section-inflection-points}
+When searching for inflection points on a function, you can narrow your search by identifying numbers where the function is continuous (from both directions) and the second derivative is either zero or undefined.  (By definition an inflection point cannot occur at a number where the function is not continuous from both directions.)  You can then build a sign table for the second derivative that implies the concavity of the given function.%
+\par
+When performing this analysis, you need to simplify the second derivative formula in the same way you simplify the first derivative formula when looking for critical numbers and local extreme points.%
+\typeout{************************************************}
+\typeout{Exercises}
+\typeout{************************************************}
+\section*{Exercises}\label{exercises-5}
+
+\begin{exerciselist}
+\item[1.]\phantomsection\hypertarget{exercise-37}{\null}Identify the inflection points for the function shown in \hyperref[figure-lots-of-critical-points]{Figure~\ref*{figure-lots-of-critical-points}}.%
+\par\smallskip
+\begin{exercisegroup}%
+The first two derivatives of the function \(\fe{y}{x}=\frac{(x+2)^2}{(x+3)^2}\) are \(\fe{\fd{y}}{x}=\frac{-x(x+2)}{(x+3)^4}\) and \(\fe{\sd{y}}{x}=\frac{2(x+\sqrt{3})(x-\sqrt{3})}{(x+3)^5}\). The first derivative of the function \(\fe{g}{t}=\frac{\sqrt{t-4}}{(t-1)^2}\) is \(\fe{\fd{g}}{t}=\frac{-3(t-5)}{2(t-1)^3\sqrt{t-4}}\).%
+\par
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-38}{\null}
+Yolanda was given this information and asked to find the inflection points on \(y\).  The first thing Yolanda wrote was ``The critical numbers of \(y\) are \(\sqrt{3}\) and \(-\sqrt{3}\)''.  Explain to Yolanda why this is not true.%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-39}{\null}
+What are the critical numbers of \(y\) and in what way are they important when asked to identify the inflection points on \(y\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-40}{\null}
+Copy \hyperref[table-second-derivative-signs]{Table~\ref*{table-second-derivative-signs}} onto your paper and fill in the missing information.%
+\begin{table}
+\centering
+\caption{\(\fe{\sd{y}}{x}=\frac{2\left(x+\sqrt{3}\right)\left(x-\sqrt{3}\right)}{(x+3)^5}\)\label{table-second-derivative-signs}}
+\begin{tabular}{ccc}\hrulethick
+Interval&Sign of \(\sd{y}\)&Behavior of \(y\)\\\hrulemedium
+\(\ointerval{-\infty}{-3}\)&&\\\hrulethin
+\(\ointerval{-3}{-\sqrt{3}}\)&&\\\hrulethin
+\(\ointerval{-\sqrt{3}}{\sqrt{3}}\)&&\\\hrulethin
+\(\ointerval{\sqrt{3}}{\infty}\)&&\\\hrulethick
+\end{tabular}
+\end{table}
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-41}{\null}
+State the inflection points on \(y\); you may round the dependent coordinate of each point to the nearest hundredth.%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-42}{\null}
+The function \(y\) has a vertical asymptote at \(-3\).  Given that fact, it was impossible that \(y\)would have an inflection point at \(-3\).  Why, then, did we never-the-less break the interval \(\ointerval{-\infty}{-\sqrt{3}}\) at \(-3\) when creating our concavity table?%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\begin{exercisegroup}%
+Perform each of the following for the functions in \hyperref[exercise-make-second-derivative-table-first]{Exercises~7}\textendash{}\hyperref[exercise-make-second-derivative-table-last]{9}.%
+\begin{itemize}[label=\textbullet]
+\item{}State the domain of the function.\item{}Find, and completely simplify, the formula for the second derivative of the function. It is \emph{not} necessary to simplify the formula for the first derivative of the function.\item{}State the values in the domain of the function where the second derivative is either zero or does not exist.\item{}Create a table similar to \hyperref[table-second-derivative-signs]{Tables~\ref*{table-second-derivative-signs}}.  Number the table.  Don't forget to include table headings and column headings.\item{}State the inflection points on the function.  Make sure that you explicitly address this question even if there are no inflection points.\end{itemize}
+\par
+\begin{exercisegroupbycol}{2}%
+\begin{exercisegroupitem}{7. }\phantomsection\hypertarget{exercise-make-second-derivative-table-first}{\null}
+\(\fe{f}{x}=x^4-12x^3+54x^2-10x+6\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{8. }\phantomsection\hypertarget{exercise-44}{\null}
+\(\fe{g}{x}=(x-2)^2e^x\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{9. }\phantomsection\hypertarget{exercise-make-second-derivative-table-last}{\null}
+\(\fe{G}{x}=\sqrt{x^3}+6\sqrt{x}\)%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\item[10.]\phantomsection\hypertarget{exercise-46}{\null}The second derivative of the function \(\fe{w}{t}=t^{1.5}-9t^{0.5}\) is \(\fe{\sd{w}}{t}=\frac{3(t+3)}{4t^{1.5}}\) yet \(w\) has no inflection points. Why is that?%
+\par\smallskip
+\end{exerciselist}
+\typeout{************************************************}
+\typeout{Section 1.6 End Behavior}
+\typeout{************************************************}
+\section[End Behavior]{End Behavior}\label{section-end-behavior}
+We are frequently interested in a function's ``end behavior''.  That is, what is the behavior of the function as the input variable increases without bound or decreases without bound.%
+\par
+Many times a function will approach a horizontal asymptote as its end behavior.  Assuming that the horizontal asymptotei \(y=L\) represents the end behavior of the function \(f\) both as \(x\) increases without bound and as \(x\) decreases without bound, we write \(\lim\limits_{x\to\infty}\fe{f}{x}=L\) and \(\lim\limits_{x\to-\infty}\fe{f}{x}=L\).%
+\par
+While working {$\langle\langle$Unresolved xref, ref="chapter-limits"; check spelling or use "provisional" attribute$\rangle\rangle$} you investigated strategies for formally establishing limit values as \(x\to\infty\) or \(x\to-\infty\).  In this activity you are going to investigate a more informal strategy for determining these type limits.%
+\par
+Consider \(\lim\limits_{x\to\infty}\frac{4x-2}{3+20x}\). When the value of \(x\) is really large, we say that the term \(4x\) dominates the numerator of the expression and the term \(20x\) dominates the denominator. We actually call those terms \terminology{the dominant terms} of the numerator and denominator.  The dominant terms are significant because when the value of \(x\) is really large, the other terms in the expression contribute almost nothing to the value of the expression.   That is, for really large values of \(x\):\begin{align*}
+\frac{4x-2}{3+20x}&\approx\frac{4x}{20x}\\
+&=\frac{1}{5}
+\end{align*}For example, even if \(x\) has the paltry value of \(1000\), \begin{align*}
+\frac{4(1000)-2}{3+20(1000)}&=\frac{3998}{20003}\\
+&\approx0.19987\ldots\\
+&\approx0.2\\
+&=\frac{1}{5}
+\end{align*}This tells us that \(\lim\limits_{x\to\infty}\frac{4x-2}{3+20x}=\frac{1}{5}\) and that \(y=\frac{1}{5}\) is a horizontal asymptote for the graph of \(y=\frac{4x-2}{3+20x}\).%
+\typeout{************************************************}
+\typeout{Exercises}
+\typeout{************************************************}
+\section*{Exercises}\label{exercises-6}
+
+\begin{exercisegroup}%
+The formulas used to graph \hyperref[figure-match-rationals-1]{Figures~\ref*{figure-match-rationals-1}}\textendash{}\hyperref[figure-match-rationals-5]{1.6.5} are given below.  Focusing first on the dominant terms of the expressions, match the formulas with the functions (\(f_1\) through \(f_5\)).%
+\par
+\begin{exercisegroupbycol}{3}%
+\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-47}{\null}
+\(y=\frac{3x+6}{x-2}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-48}{\null}
+\(y=\frac{16+4x}{6+x}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-49}{\null}
+\(y=\frac{6x^2-6x-36}{36-3x-3x^2}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-50}{\null}
+\(y=\frac{-2x+8}{x^2-100}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-51}{\null}
+\(y=\frac{15}{x-5}\)%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
 \begin{figure}
 \centering
 \pushValignCaptionBottom[b]{minipage}{.40\textwidth}{%
@@ -797,30 +1025,463 @@ Sketch the first derivatives of the functions shown in \hyperref[exercise-sketch
 \centering% horizontal alignment 
 {
 \begin{tikzpicture}
-\begin{axis}[]
-    \addplot+[samples=50,
-        domain=-6.8:6.8,
-    ]{atan((x-2)*2)/30-1};
-    \addplot[asymptote,domain=-7:7]{2};
-    \addplot[asymptote,domain=-7:7]{-4};
+\begin{axis}[
+    xmin=-20,
+    xmax=20,
+    xtick={-20,-16,...,20},
+    minor xtick={-20,-19,...,20},
+    ymin=-20,
+    ymax=20,
+    ytick={-20,-16,...,20},
+    minor ytick={-20,-19,...,20},
+    ]
+    \addplot[pccplot,samples=50,
+        domain=-19.8:-75.2/17.8,
+    ]{(6*x^2-6*x-36)/(36-3*x-3*x^2)};
+    \addplot[pccplot,samples=50,
+        domain=-83.2/21.8:19.8,
+    ]{(6*x^2-6*x-36)/(36-3*x-3*x^2)};
+    \addplot[asymptote] coordinates {(-20,-2) (20,-2)};
+    \addplot[asymptote] coordinates {(-4,-20) (-4,20)};
+    \addplot[holdot] coordinates {(3,-10/7)};
 \end{axis}
 \end{tikzpicture}
 }
 }% end body 
-{}% caption 
+{\captionof{figure}{\(f_1\)\label{figure-match-rationals-1}}
+}% caption 
 \pushValignCaptionBottom[b]{minipage}{.40\textwidth}{%
 \pgfplotsset{every axis/.append style={width=\linewidth}}%
 \centering% horizontal alignment 
 {
 \begin{tikzpicture}
-\begin{axis}[]
+\begin{axis}[
+    xmin=-20,
+    xmax=20,
+    xtick={-20,-16,...,20},
+    minor xtick={-20,-19,...,20},
+    ymin=-20,
+    ymax=20,
+    ytick={-20,-16,...,20},
+    minor ytick={-20,-19,...,20},
+    ]
+    \addplot[pccplot,samples=50,
+        domain=-19.8:-102.8/15.8,
+    ]{(16+4*x)/(6+x)};
+    \addplot[pccplot,samples=50,
+        domain=-134.8/23.8:19.8,
+    ]{(16+4*x)/(6+x)};
+    \addplot[asymptote] coordinates {(-20,4) (20,4)};
+    \addplot[asymptote] coordinates {(-6,-20) (-6,20)};
 \end{axis}
 \end{tikzpicture}
 }
 }% end body 
-{}% caption 
+{\captionof{figure}{\(f_2\)\label{figure-match-rationals-2}}
+}% caption 
 \popValignCaptionBottom
 \end{figure}
+\begin{figure}
+\centering
+\pushValignCaptionBottom[b]{minipage}{.40\textwidth}{%
+\pgfplotsset{every axis/.append style={width=\linewidth}}%
+\centering% horizontal alignment 
+{
+\begin{tikzpicture}
+\begin{axis}[
+    xmin=-20,
+    xmax=20,
+    xtick={-20,-16,...,20},
+    minor xtick={-20,-19,...,20},
+    ymin=-20,
+    ymax=20,
+    ytick={-20,-16,...,20},
+    minor ytick={-20,-19,...,20},
+    ]
+    \addplot[pccplot,samples=50,
+        domain=-19.8:-10.07,
+    ]{(-2*x+8)/(x^2-100)};
+    \addplot[pccplot,samples=50,
+        domain=-9.9294:9.9698,
+    ]{(-2*x+8)/(x^2-100)};
+    \addplot[pccplot,samples=50,
+        domain=10.03:19.8,
+    ]{(-2*x+8)/(x^2-100)};
+    \addplot[asymptote] coordinates {(-20,0) (20,0)};
+    \addplot[asymptote] coordinates {(-10,-20) (-10,20)};
+    \addplot[asymptote] coordinates {(10,-20) (10,20)};
+\end{axis}
+\end{tikzpicture}
+}
+}% end body 
+{\captionof{figure}{\(f_3\)\label{figure-match-rationals-3}}
+}% caption 
+\pushValignCaptionBottom[b]{minipage}{.40\textwidth}{%
+\pgfplotsset{every axis/.append style={width=\linewidth}}%
+\centering% horizontal alignment 
+{
+\begin{tikzpicture}
+\begin{axis}[
+    xmin=-20,
+    xmax=20,
+    xtick={-20,-16,...,20},
+    minor xtick={-20,-19,...,20},
+    ymin=-20,
+    ymax=20,
+    ytick={-20,-16,...,20},
+    minor ytick={-20,-19,...,20},
+    ]
+    \addplot[pccplot,samples=50,
+        domain=-19.8:33.6/22.8,
+    ]{(3*x+6)/(x-2)};
+    \addplot[pccplot,samples=50,
+        domain=45.6/16.8:19.8,
+    ]{(3*x+6)/(x-2)};
+    \addplot[asymptote] coordinates {(-20,3) (20,3)};
+    \addplot[asymptote] coordinates {(2,-20) (2,20)};
+\end{axis}
+\end{tikzpicture}
+}
+}% end body 
+{\captionof{figure}{\(f_4\)\label{figure-match-rationals-4}}
+}% caption 
+\popValignCaptionBottom
+\end{figure}
+\begin{figure}
+\centering
+{
+\begin{tikzpicture}
+\begin{axis}[
+    xmin=-20,
+    xmax=20,
+    xtick={-20,-16,...,20},
+    minor xtick={-20,-19,...,20},
+    ymin=-20,
+    ymax=20,
+    ytick={-20,-16,...,20},
+    minor ytick={-20,-19,...,20},
+    ]
+    \addplot[pccplot,samples=50,
+        domain=-19.8:84/19.8,
+    ]{(15)/(x-5)};
+    \addplot[pccplot,samples=50,
+        domain=114/19.8:19.8,
+    ]{(15)/(x-5)};
+    \addplot[asymptote] coordinates {(-20,0) (20,0)};
+    \addplot[asymptote] coordinates {(5,-20) (5,20)};
+\end{axis}
+\end{tikzpicture}
+}
+\caption{\(f_5\)\label{figure-match-rationals-5}}
+\end{figure}
+\par
+\end{exercisegroup}%
+\begin{exercisegroup}%
+Use the concept of dominant terms to informally determine the value of each of the following limits.%
+\par
+\begin{exercisegroupbycol}{3}%
+\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-52}{\null}
+\(\lim\limits_{x\to-\infty}\frac{4+x-7x^3}{14x^3+x^2+2}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{7. }\phantomsection\hypertarget{exercise-53}{\null}
+\(\lim\limits_{t\to-\infty}\frac{4t^2+1}{4t^3-1}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{8. }\phantomsection\hypertarget{exercise-54}{\null}
+\(\lim\limits_{\gamma\to\infty}\frac{8}{2\gamma^3}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{9. }\phantomsection\hypertarget{exercise-55}{\null}
+\(\lim\limits_{x\to\infty}\frac{(3x+1)(6x-2)}{(4+x)(1-2x)}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{10. }\phantomsection\hypertarget{exercise-56}{\null}
+\(\lim\limits_{t\to\infty}\frac{4e^t-8e^{-t}}{e^t+e^{-t}}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{11. }\phantomsection\hypertarget{exercise-57}{\null}
+\(\lim\limits_{t\to-\infty}\frac{4e^t-8e^{-t}}{e^t+e^{-t}}\)%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\typeout{************************************************}
+\typeout{Section 1.7 Making Graphs}
+\typeout{************************************************}
+\section[Making Graphs]{Making Graphs}\label{section-making-graphs}
+Let's put it all together and produce some graphs.%
+\typeout{************************************************}
+\typeout{Exercises}
+\typeout{************************************************}
+\section*{Exercises}\label{exercises-7}
+
+\begin{exercisegroup}%
+Consider the function \(\fe{f}{x}=\frac{8x^2-8}{(2x-4)^2}\).%
+\par
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-sketch-first-asymptotes}{\null}
+Evaluate each of the following limits: \(\lim\limits_{x\to\infty}\fe{f}{x}\), \(\lim\limits_{x\to-\infty}\fe{f}{x}\), \(\lim\limits_{x\to2^{-}}\fe{f}{x}\), and \(\lim\limits_{x\to2^{+}}\fe{f}{x}\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-59}{\null}
+What are the horizontal and vertical asymptotes for a graph of \(f\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-60}{\null}
+What are the horizontal and vertical intercepts for a graph of \(f\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-sketch-first-critical-numbers}{\null}
+Use the formulas \(\fe{\fd{f}}{x}=\frac{4(1-2x)}{(x-2)^3}\) and \(\fe{\sd{f}}{x}=\frac{4(4x+1)}{(x-2)^4}\) to help you accomplish each of the following.%
+\begin{itemize}[label=\textbullet]
+\item{}State the critical numbers of \(f\).\item{}Create well-documented increasing/decreasing and concavity tables for \(f\).\item{}State the local minimum, local maximum, and inflection points on \(f\).  Make sure that you explicitly address all three types of points whether they exist or not.\end{itemize}
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-62}{\null}
+Graph \(y=\fe{f}{x}\) onto \hyperref[figure-blank-for-graphing-1]{Figure~\ref*{figure-blank-for-graphing-1}}. Make sure that you choose a scale that allows you to clearly illustrate each of the features found in \hyperref[exercise-sketch-first-asymptotes]{Exercises~1}\textendash{}\hyperref[exercise-sketch-first-critical-numbers]{4}.  Make sure that all axes and asymptotes are well labeled and also write the coordinates of each local extreme point and inflection point next to the point on the graph.%
+\begin{figure}
+\centering
+\pushValignCaptionBottom[b]{minipage}{.20\textwidth}{%
+\pgfplotsset{every axis/.append style={width=\linewidth}}%
+% horizontal alignment 
+\parbox{\textwidth}{%
+% horizontal alignment 
+}
+}% end body 
+{}% caption 
+\pushValignCaptionBottom[b]{minipage}{.80\textwidth}{%
+\pgfplotsset{every axis/.append style={width=\linewidth}}%
+\centering% horizontal alignment 
+{
+\begin{tikzpicture}
+\begin{axis}[blankgraph]
+\end{axis}
+\end{tikzpicture}
+}
+}% end body 
+{\captionof{figure}{\(f\)\label{figure-blank-for-graphing-1}}
+}% caption 
+\popValignCaptionBottom
+\end{figure}
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-63}{\null}
+Check your graph using a graphing calculator.%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\begin{exercisegroup}%
+Consider the function \(\fe{g}{t}=\frac{1}{(e^t+4)^2}\).%
+\par
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{7. }\phantomsection\hypertarget{exercise-sketch-second-asymptotes}{\null}
+Evaluate each of the following limits: \(\lim\limits_{t\to\infty}\fe{g}{t}\) and \(\lim\limits_{t\to-\infty}\fe{g}{t}\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{8. }\phantomsection\hypertarget{exercise-65}{\null}
+What are the horizontal and vertical asymptotes for a graph of \(g\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{9. }\phantomsection\hypertarget{exercise-66}{\null}
+What are the horizontal and vertical intercepts for a graph of \(g\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{10. }\phantomsection\hypertarget{exercise-sketch-second-critical-numbers}{\null}
+Use the formulas \(\fe{\fd{g}}{t}=\frac{-2e^t}{(e^t+4)^3}\) and \(\fe{\sd{g}}{t}=\frac{4e^t(e^t-2)}{(e^t+4)^4}\) to help you accomplish each of the following.%
+\begin{itemize}[label=\textbullet]
+\item{}State the critical numbers of \(g\).\item{}Create well-documented increasing/decreasing and concavity tables for \(g\).\item{}State the local minimum, local maximum, and inflection points on \(g\).  Make sure that you explicitly address all three types of points whether they exist or not.\end{itemize}
+\par
+%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{11. }\phantomsection\hypertarget{exercise-68}{\null}
+Graph \(y=\fe{g}{t}\) onto \hyperref[figure-blank-for-graphing-2]{Figure~\ref*{figure-blank-for-graphing-2}}. Make sure that you choose a scale that allows you to clearly illustrate each of the features found in \hyperref[exercise-sketch-second-asymptotes]{Exercises~7}\textendash{}\hyperref[exercise-sketch-second-critical-numbers]{10}.  Make sure that all axes and asymptotes are well labeled and also write the coordinates of each local extreme point and inflection point next to the point on the graph.%
+\begin{figure}
+\centering
+\pushValignCaptionBottom[b]{minipage}{.20\textwidth}{%
+\pgfplotsset{every axis/.append style={width=\linewidth}}%
+% horizontal alignment 
+\parbox{\textwidth}{%
+% horizontal alignment 
+}
+}% end body 
+{}% caption 
+\pushValignCaptionBottom[b]{minipage}{.80\textwidth}{%
+\pgfplotsset{every axis/.append style={width=\linewidth}}%
+\centering% horizontal alignment 
+{
+\begin{tikzpicture}
+\begin{axis}[blankgraph]
+\end{axis}
+\end{tikzpicture}
+}
+}% end body 
+{\captionof{figure}{\(f\)\label{figure-blank-for-graphing-2}}
+}% caption 
+\popValignCaptionBottom
+\end{figure}
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{12. }\phantomsection\hypertarget{exercise-69}{\null}
+Check your graph using a graphing calculator.%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\typeout{************************************************}
+\typeout{Section 1.8 Supplement}
+\typeout{************************************************}
+\section[Supplement]{Supplement}\label{critical-numbers-graphing-from-formulas-supplementary-exercises}
+\typeout{************************************************}
+\typeout{Exercises}
+\typeout{************************************************}
+\section*{Exercises}\label{exercises-8}
+
+\begin{exercisegroup}%
+The sine and cosine function are called \terminology{circular trigonometric functions} because for any given value of \(t\) the point \(\point{\fe{\cos}{t}}{\fe{\sin}{t}}\) lies on the circle with equation \(x^2+y^2=1\). And the origin, \(\point{\fe{\cos}{t}}{\fe{\sin}{t}}\), and either \(\point{\fe{\cos}{t}}{0}\) or \(\point{0}{\fe{\sin}{t}}\) define a right triangle.%
+\begin{figure}
+\centering
+\pushValignCaptionBottom[b]{minipage}{.40\textwidth}{%
+\pgfplotsset{every axis/.append style={width=\linewidth}}%
+\centering% horizontal alignment 
+{
+\begin{tikzpicture}
+\begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={-3,-2,...,3},ytick={-3,-2,...,3},unit vector ratio*=1 1 1, clip=false]
+    \addplot[domain=0:360,-,variable=t]({cos(t)},{sin(t)});
+    \addplot[-] coordinates {(0,0) (0.8,0) (0.8,0.6) (0,0)};
+    \addplot[mark=*] coordinates {(0.8,0.6)} node[pin=80:{$(\fe{\cos}{t},\fe{\sin}{t})$}]{} ;
+\end{axis}
+\end{tikzpicture}
+}
+}% end body 
+{\captionof{figure}{\(\point{\fe{\cos}{t}}{\fe{\sin}{t}}\) on the circle \(x^2+y^2=1\)\label{figure-12}}
+}% caption 
+\pushValignCaptionBottom[b]{minipage}{.40\textwidth}{%
+\pgfplotsset{every axis/.append style={width=\linewidth}}%
+\centering% horizontal alignment 
+{
+\begin{tikzpicture}
+\begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={-3,-2,...,3},ytick={-3,-2,...,3},unit vector ratio*=1 1 1, clip=false]
+    \addplot[domain=-1.76275:1.76275,-,variable=t]({(exp(t)+exp(-t))/2},{(exp(t)-exp(-t))/2});
+    \addplot[domain=-1.76275:1.76275,-,variable=t]({-(exp(t)+exp(-t))/2},{-(exp(t)-exp(-t))/2});
+    \addplot[-] coordinates {(0,0) (2,0) (2,1.73205) (0,0)};
+    \addplot[mark=*] coordinates {(2,1.73205)} node[pin=-60:{$(\fe{\cosh}{t},\fe{\sinh}{t})$}]{} ;
+\end{axis}
+\end{tikzpicture}
+}
+}% end body 
+{\captionof{figure}{\(\point{\fe{\cosh}{t}}{\fe{\sinh}{t}}\) on the circle \(x^2-y^2=1\)\label{figure-13}}
+}% caption 
+\popValignCaptionBottom
+\end{figure}
+\par
+There are analogous functions called \terminology{hyperbolic sine} and \terminology{hyperbolic cosine}.  As you might suspect, these functions generate points that lie on a hyperbola; specifically, for all values of \(t\) the point \(\point{\fe{\cosh}{t}}{\fe{\sinh}{t}}\) lies on the hyperbola \(x^2-y^2=1\).  It turns out that there are formulas for these hyperbolic trigonometric functions in terms of functions we already know.  Specifically:\begin{align*}
+\fe{\cosh}{t}&=\frac{e^{t}+e^{-t}}{2}&\fe{\sinh}{t}&=\frac{e^{t}-e^{-t}}{2}
+\end{align*}%
+\par
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{1. }\phantomsection\hypertarget{exercise-70}{\null}
+Use the exponential formulas to verify the identity \(\fe{\cosh^2}{t}-\fe{\sinh^2}{t}=1\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{2. }\phantomsection\hypertarget{exercise-71}{\null}
+Use the exponential formulas to determine the first derivatives (with respect to \(t\)) of \(\fe{\cosh}{t}\) and \(\fe{\sinh}{t}\).  Determine, by inference, the second derivative formulas for each of these functions.%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{3. }\phantomsection\hypertarget{exercise-critical-hyperbolic}{\null}
+Determine the critical numbers of \(\cosh\) and \(\sinh\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{4. }\phantomsection\hypertarget{exercise-73}{\null}
+Determine the intervals over which \(\cosh\) and \(\sinh\) are increasing/decreasing and over which they are concave up/concave down.%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{5. }\phantomsection\hypertarget{exercise-hyperbolic-limits}{\null}
+Use the exponential formulas to determine each of the following limits: \(\lim\limits_{t\to-\infty}\fe{\cosh}{t}\), \(\lim\limits_{t\to\infty}\fe{\cosh}{t}\), \(\lim\limits_{t\to-\infty}\fe{\sinh}{t}\), and \(\lim\limits_{t\to\infty}\fe{\sinh}{t}\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{6. }\phantomsection\hypertarget{exercise-75}{\null}
+Use the information you determined in \hyperref[exercise-critical-hyperbolic]{Exercises~3}\textendash{}\hyperref[exercise-hyperbolic-limits]{5} to help you draw freehand sketches of \(y=\fe{\cosh}{t}\) and \(y=\fe{\sinh}{t}\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{7. }\phantomsection\hypertarget{exercise-76}{\null}
+There are four more hyperbolic functions that correspond to the four additional circular functions; e.g.\@ \(\fe{\tanh}{t}=\frac{\fe{\sinh}{t}}{\fe{\cosh}{t}}\).  Find the exponential formulas for these four functions.%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{8. }\phantomsection\hypertarget{exercise-77}{\null}
+What would you guess to be the first derivative of \(\fe{\tanh}{t}\)?  Take the derivative of the formula for \(\fe{\tanh}{t}\) to verify your suspicion.%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{9. }\phantomsection\hypertarget{exercise-tanh-behavior}{\null}
+Let \(\fe{f}{t}=\fe{\tanh}{t}\). What is the sign on \(\fe{\fd{f}}{t}\) at all values of \(t\)?  What does this tell you about the function \(f\)?  What are the values of \(\fe{f}{0}\) and \(\fe{\fd{f}}{0}\)?%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{10. }\phantomsection\hypertarget{exercise-tanh-limits}{\null}
+Use the exponential formula for \(\tanh\) to determine \(\lim\limits_{t\to-\infty}\fe{\tanh}{t}\) and \(\lim\limits_{t\to\infty}\fe{\tanh}{t}\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{11. }\phantomsection\hypertarget{exercise-80}{\null}
+Use the information you determined in \hyperref[exercise-tanh-behavior]{Exercises~9}\textendash{}\hyperref[exercise-tanh-limits]{10} to help you draw a freehand sketch of \(y=\fe{\tanh}{t}\).%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\begin{exercisegroup}%
+Consider the function \(k\) defined by \(\fe{k}{t}=\sqrt[3]{t^8}-256\sqrt[3]{t^2}\).%
+\par
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{12. }\phantomsection\hypertarget{exercise-81}{\null}
+What are the critical numbers of \(k\)?  Remember to show all relevant work!  Remember that your formula for \(\fe{\fd{k}}{t}\) needs to be a single, completely factored, fraction!%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{13. }\phantomsection\hypertarget{exercise-82}{\null}
+Create an increasing/decreasing table for \(k\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{14. }\phantomsection\hypertarget{exercise-83}{\null}
+State each local minimum point and local maximum point on \(k\).%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\begin{exercisegroup}%
+Consider the function \(f\) defined by \(\fe{f}{x}=\fe{\cos^2}{x}+\fe{\sin}{x}\) over the restricted domain \(\cinterval{0}{2\pi}\).%
+\par
+\begin{exercisegroupbycol}{1}%
+\begin{exercisegroupitem}{15. }\phantomsection\hypertarget{exercise-84}{\null}
+What are the critical numbers of \(f\)?  Remember to show all relevant work!  Remember that your formula for \(\fe{\fd{f}}{t}\) needs to be a single, completely factored, fraction!%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{16. }\phantomsection\hypertarget{exercise-85}{\null}
+Create an increasing/decreasing table for \(f\).%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{17. }\phantomsection\hypertarget{exercise-86}{\null}
+State each local minimum point and local maximum point on \(f\).%
+\end{exercisegroupitem}%
+\par%
+\end{exercisegroupbycol}%
+\end{exercisegroup}%
+\begin{exerciselist}
+\item[18.]\phantomsection\hypertarget{exercise-87}{\null}Consider \(\fe{g}{t}=\frac{t+9}{t^3}\).  Find (and completely simplify) \(\fe{\sd{g}}{t}\) and state all numbers where \(\fe{\sd{g}}{t}\) is zero or undefined.  Then construct a concavity table for \(g\) and state all of the inflection points on \(g\).%
+\par\smallskip
+\end{exerciselist}
+\begin{exercisegroup}%
+For each of the following functions build increasing/decreasing tables and concavity tables and then state all local minimum points, local maximum points, and inflection points on the function.  Also determine and state all horizontal asymptotes and vertical asymptotes for the function.   Finally, draw a detailed sketch of the function.%
+\par
+\begin{exercisegroupbycol}{3}%
+\begin{exercisegroupitem}{19. }\phantomsection\hypertarget{exercise-88}{\null}
+\(\fe{f}{x}=\frac{x-3}{(x+2)^2}\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{20. }\phantomsection\hypertarget{exercise-89}{\null}
+\(\fe{g}{x}=\sqrt[3]{x^2}(x+5)\)%
+\end{exercisegroupitem}%
+\par%
+\begin{exercisegroupitem}{21. }\phantomsection\hypertarget{exercise-90}{\null}
+\(\fe{k}{x}=\frac{(x-4)^2}{x+3}\)%
 \end{exercisegroupitem}%
 \par%
 \end{exercisegroupbycol}%
@@ -828,4 +1489,411 @@ Sketch the first derivatives of the functions shown in \hyperref[exercise-sketch
 %
 \backmatter
 %
+\typeout{************************************************}
+\typeout{Appendix 1 Solutions to Supplementary Exercises}
+\typeout{************************************************}
+\chapter[Solutions to Supplementary Exercises]{Solutions to Supplementary Exercises}\label{appendix-1}
+\begin{multicols}{2}
+{\tiny
+\subsection*{1.8.1 }
+\noindent\textbf{1.}\quad{}\begin{align*}
+\fe{\cosh^2}{t}-\fe{\sinh^2}{t}&=\left(\frac{e^{t}+e^{-t}}{2}\right)^2-\left(\frac{e^{t}-e^{-t}}{2}\right)^2\\
+&=\frac{e^{2t}+2+e^{-2t}}{4}-\frac{e^{2t}-2+e^{-2t}}{4}\\
+&=\frac{4}{4}\\
+&=1
+\end{align*}%
+\par\smallskip
+\noindent\textbf{2.}\quad{}\begin{align*}
+\lzoo{t}{\fe{\cosh}{t}}&=\lzoo{t}{\frac{e^{t}+e^{-t}}{2}}&\lzoo{t}{\fe{\sinh}{t}}&=\lzoo{t}{\frac{e^{t}-e^{-t}}{2}}\\
+&=\frac{e^{t}-e^{-t}}{2}&&=\frac{e^{t}+e^{-t}}{2}\\
+&=\fe{\sinh}{t}&&=\fe{\cosh}{t}
+\end{align*}It follows that \(\lzon{2}{t}{\fe{\cosh}{t}}=\fe{\cosh}{t}\) and \(\lzon{2}{t}{\fe{\sinh}{t}}=\fe{\sinh}{t}\).%
+\par\smallskip
+\noindent\textbf{3.}\quad{}The domains of both \(\cosh\) and \(\sinh\) are \(\ointerval{-\infty}{\infty}\). Both functions' derivatives are always defined, so the only issue is when the derivatives equal \(0\).\begin{align*}
+\lzoo{t}{\fe{\cosh}{t}}&=0&\lzoo{t}{\fe{\sinh}{t}}&=0\\
+\fe{\sinh}{t}&=0&\fe{\cosh}{t}&=0\\
+\frac{e^{t}-e^{-t}}{2}&=0&\frac{e^{t}+e^{-t}}{2}&=0\\
+e^{t}&=e^{-t}&&\\
+e^{2t}&=1&&\\
+t&=0&&
+\end{align*}The only critical number for \(\cosh\) is \(0\). The function \(\sinh\) has no critical numbers, since \(\frac{e^{t}+e^{-t}}{2}\) is always positive.%
+\par\smallskip
+\noindent\textbf{4.}\quad{}\(\fe{\sinh}{t}\) is positive on \(\ointerval{0}{\infty}\) and negative on \(\ointerval{-\infty}{0}\). Since \(\lzoo{t}{\fe{\cosh}{t}}=\fe{\sinh}{t}\) and \(\lzon{2}{t}{\fe{\sinh}{t}}=\fe{\sinh}{t}\), it follows that \(\cosh\) is increasing on \(\ointerval{0}{\infty}\) and decreasing on \(\ointerval{-\infty}{0}\), while \(\sinh\) is concave up on \(\ointerval{0}{\infty}\) and concave down on \(\ointerval{-\infty}{0}\).%
+\par
+\(\fe{\cosh}{t}\) is positive on all of \(\ointerval{-\infty}{\infty}\). Since \(\lzoo{t}{\fe{\sinh}{t}}=\fe{\cosh}{t}\) and \(\lzon{2}{t}{\fe{\cosh}{t}}=\fe{\cosh}{t}\), it follows that \(\sinh\) is increasing on \(\ointerval{-\infty}{\infty}\) and \(\cosh\) is concave up on \(\ointerval{-\infty}{\infty}\).%
+\par\smallskip
+\noindent\textbf{5.}\quad{}Each of the hyperbolic limits can be found quickly using these four basic limits: \(\lim\limits_{t\to-\infty}e^t=0\), \(\lim\limits_{t\to\infty}e^t=\infty\), \(\lim\limits_{t\to-\infty}e^{-t}=\infty\), \(\lim\limits_{t\to-\infty}e^{-t}=0\).\begin{align*}
+\lim_{t\to-\infty}\fe{\cosh}{t}&=\lim_{t\to-\infty}\frac{e^{t}+e^{-t}}{2}&\lim_{t\to\infty}\fe{\cosh}{t}&\lim_{t\to\infty}\frac{e^{t}+e^{-t}}{2}\\
+&=\infty&&=\infty\\
+\lim_{t\to-\infty}\fe{\sinh}{t}&=\lim_{t\to-\infty}\frac{e^{t}-e^{-t}}{2}&\lim_{t\to\infty}\fe{\sinh}{t}&\lim_{t\to\infty}\frac{e^{t}-e^{-t}}{2}\\
+&=-\infty&&=\infty
+\end{align*}%
+\par\smallskip
+\noindent\textbf{6.}\quad{}\begin{figure}
+\centering
+\pushValignCaptionBottom[b]{minipage}{.40\textwidth}{%
+\pgfplotsset{every axis/.append style={width=\linewidth}}%
+\centering% horizontal alignment 
+{
+\begin{tikzpicture}
+\begin{axis}[xtick={100},ytick={100},minor xtick={100}, minor ytick={100},title={$y=\fe{\cosh}{t}$},xlabel={$t$}]
+    \addplot[pccplot,domain=-2.5:2.5]{(exp(x)+exp(-x))/2};
+\end{axis}
+\end{tikzpicture}
+}
+}% end body 
+{}% caption 
+\pushValignCaptionBottom[b]{minipage}{.40\textwidth}{%
+\pgfplotsset{every axis/.append style={width=\linewidth}}%
+\centering% horizontal alignment 
+{
+\begin{tikzpicture}
+\begin{axis}[xtick={100},ytick={100},minor xtick={100}, minor ytick={100},title={$y=\fe{\sinh}{t}$},xlabel={$t$}]
+    \addplot[pccplot,domain=-2.5:2.5]{(exp(x)-exp(-x))/2};
+\end{axis}
+\end{tikzpicture}
+}
+}% end body 
+{}% caption 
+\popValignCaptionBottom
+\end{figure}
+\par\smallskip
+\noindent\textbf{7.}\quad{}\begin{align*}
+\fe{\tanh}{t}&=\frac{\fe{\sinh}{t}}{\fe{\cosh}{t}}&\fe{\sech}{t}&=\frac{1}{\fe{\cosh}{t}}\\
+&=\frac{\frac{e^t-e^{-t}}{2}}{\frac{e^t+e^{-t}}{2}}&\fe{\sech}{t}&=\frac{1}{\frac{e^t+e^{-t}}{2}}\\
+&=\frac{e^t-e^{-t}}{e^t+e^{-t}}&\fe{\sech}{t}&=\frac{2}{e^t+e^{-t}}\\
+\fe{\csch}{t}&=\frac{1}{\fe{\sinh}{t}}&\fe{\coth}{t}&=\frac{1}{\fe{\tanh}{t}}\\
+&=\frac{1}{\frac{e^t-e^{-t}}{2}}&\fe{\tanh}{t}&=\frac{1}{\frac{e^t-e^{-t}}{e^t+e^{-t}}}\\
+&=\frac{2}{e^t-e^{-t}}&\fe{\tanh}{t}&=\frac{e^t+e^{-t}}{e^t-e^{-t}}
+\end{align*}%
+\par\smallskip
+\noindent\textbf{8.}\quad{}If the hyperbolic trig funcitons behave similarly to the sircular trig functions, we would expect \(\lzoo{t}{\fe{\tanh}{t}}=\fe{\sech^2}{t}\). Let's see:\begin{align*}
+\lzoo{t}{\fe{\tanh}{t}}&=\lzoo{t}{\frac{\fe{\sinh}{t}}{\fe{\cosh}{t}}}\\
+&=\frac{\lzoo{t}{\fe{\sinh}{t}}\cdot\fe{\cosh}{t}-\fe{\sinh}{t}\cdot\lzoo{t}{\fe{\cosh}{t}}}{\fe{\cosh^2}{t}}\\
+&=\frac{\fe{\cosh}{t}\cdot\fe{\cosh}{t}-\fe{\sinh}{t}\cdot\fe{\sinh}{t}}{\fe{\cosh^2}{t}}\\
+&=\frac{\fe{\cosh^2}{t}-\fe{\sinh^2}{t}}{\fe{\cosh^2}{t}}\\
+&=\frac{1}{\fe{\cosh^2}{t}}\\
+&=\fe{\sech^2}{t}
+\end{align*}%
+\par\smallskip
+\noindent\textbf{9.}\quad{}Since \(\fe{\fd{f}}{t}=\fe{\sech^2}{t}\), \(\fe{\fd{f}}{t}\) is positive for all values of \(t\). So \(f\) is always increasing. And we can calculate\begin{align*}
+\fe{f}{0}&=\fe{\tanh}{0}&\fe{\fd{f}}{0}&=\fe{\sech^2}{0}\\
+&=\frac{e^0-e^{-0}}{e^0+e^{-0}}&&=\frac{2}{e^0+e^{-0}}\\
+&=\frac{0}{2}&&=\frac{2}{2}\\
+&=0&&=1
+\end{align*}%
+\par\smallskip
+\noindent\textbf{10.}\quad{}\begin{align*}
+\lim_{t\to-\infty}\fe{\tanh}{t}&=\lim_{t\to-\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}&\lim_{t\to\infty}\fe{\tanh}{t}&=\lim_{t\to\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}\\
+&=\lim_{t\to-\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}\cdot\frac{e^t}{e^t}&&=\lim_{t\to\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}\cdot\frac{e^{-t}}{e^{-t}}\\
+&=\lim_{t\to-\infty}\frac{e^{2t}-1}{e^{2t}+1}&&=\lim_{t\to\infty}\frac{1-e^{-2t}}{1+e^{-2t}}\\
+&=\frac{\lim_{t\to-\infty}\left(e^{2t}-1\right)}{\lim_{t\to-\infty}\left(e^{2t}+1\right)}&&=\frac{\lim_{t\to\infty}\left(1-e^{-2t}\right)}{\lim_{t\to\infty}\left(1+e^{-2t}\right)}\\
+&=\frac{\lim_{t\to-\infty}e^{2t}-\lim_{t\to-\infty}1}{\lim_{t\to-\infty}e^{2t}+\lim_{t\to-\infty}1}&&=\frac{\lim_{t\to\infty}1-\lim_{t\to\infty}e^{-2t}}{\lim_{t\to\infty}1+\lim_{t\to\infty}e^{-2t}}\\
+&=\frac{\left(\lim_{t\to-\infty}e^{t}\right)^2-1}{\left(\lim_{t\to-\infty}e^{t}\right)^2+1}&&=\frac{1-\left(\lim_{t\to\infty}e^{-t}\right)^2}{1+\left(\lim_{t\to\infty}e^{-t}\right)^2}\\
+&=\frac{0^2-1}{0^2+1}&&=\frac{1-0^2}{1+0^2}\\
+&=-1&&=1
+\end{align*}%
+\par\smallskip
+\noindent\textbf{11.}\quad{}{
+\begin{tikzpicture}
+\begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={-3,-2,...,3},ytick={-3,-2,...,3},minor xtick={-3,-2,...,3}, minor ytick={-3,-2,...,3},title={$y=\fe{\tanh}{t}$},xlabel={$t$}]
+    \addplot[pccplot,domain=-2.9:2.9]{(exp(x)-exp(-x))/(exp(x)+exp(-x))};
+    \addplot[asymptote,<-,domain=-3:0]{-1};
+    \addplot[asymptote,->,domain=0:3]{1};
+\end{axis}
+\end{tikzpicture}
+}
+\par\smallskip
+\noindent\textbf{12.}\quad{}\begin{align*}
+\fe{\fd{k}}{t}&=\lzoo{t}{t^{\sfrac{8}{3}}-256t^{\sfrac{2}{3}}}\\
+&=\frac{8}{3}t^{\sfrac{5}{3}}-\frac{512}{3}t^{\sfrac{-1}{3}}\\
+&=\frac{8}{3}t^{-\sfrac{1}{3}}\left(t^2-64\right)\\
+&=\frac{8\left(t^2-64\right)}{3\sqrt[3]{t}}
+\end{align*}The domain of \(k\) is \(\ointerval{-\infty}{\infty}\). \(\fe{\fd{k}}{t}=0\) at \(8\) and \(-8\).  Over the domain of \(k\), \(\fd{k}\) is undefined at \(0\).  So the critical numbers of \(k\) are \(8\), \(-8\), and \(0\).%
+\par\smallskip
+\noindent\textbf{13.}\quad{}\begin{tabular}{lll}\hrulethick
+Interval&\(\fd{k}\)&\(k\)\\\hrulemedium
+\(\ointerval{-\infty}{-8}\)&negative&decreasing\\\hrulethin
+\(\ointerval{-8}{0}\)&positive&increasing\\\hrulethin
+\(\ointerval{0}{8}\)&negative&decreasing\\\hrulethin
+\(\ointerval{8}{\infty}\)&negative&decreasing\\\hrulethick
+\end{tabular}
+\par\smallskip
+\noindent\textbf{14.}\quad{}The local minimum points on \(k\) are \(\point{-8}{-878}\) and \(\point{8}{878}\).  The only local maximum point on \(k\) is \(\point{0}{0}\).%
+\par\smallskip
+\noindent\textbf{15.}\quad{}\begin{align*}
+\fe{\fd{f}}{x}&=\lzoo{x}{\fe{\cos^2}{x}+\fe{\sin}{x}}\\
+&=2\fe{\cos}{x}\cdot-\fe{\sin}{x}+\fe{\cos}{x}\\
+&=\fe{\cos}{x}\left(-2\fe{\sin}{x}+1\right)
+\end{align*}The domain of \(f\) has been restricted to \(\cinterval{0}{2\pi}\).  Over \(\cinterval{0}{2\pi}\), \(\fe{\cos}{x}=0\) at \(\frac{\pi}{2}\) and \(\frac{3\pi}{2}\) and \(\fe{\sin}{x}=\frac{1}{2}\) at \(\frac{\pi}{6}\) and \(\frac{5\pi}{6}\).  So over the restricted domain, \(\fe{\fd{f}}{x}=0\) at \(\frac{\pi}{2}\), \(\frac{3\pi}{2}\), \(\frac{\pi}{6}\), and \(\frac{5\pi}{6}\). \(\fd{f}\) is never undefined.  So the critical numbers of \(f\) are \(\frac{\pi}{6}\), \(\frac{\pi}{2}\), \(\frac{5\pi}{6}\), and \(\frac{3\pi}{2}\).%
+\par\smallskip
+\noindent\textbf{16.}\quad{}\begin{tabular}{lll}\hrulethick
+Interval&\(\fd{f}\)&\(f\)\\\hrulemedium
+\(\ointerval{0}{\frac{\pi}{6}}\)&positive&increasing\\\hrulethin
+\(\ointerval{\frac{\pi}{6}}{\frac{\pi}{2}}\)&negative&decreasing\\\hrulethin
+\(\ointerval{\frac{\pi}{2}}{\frac{5\pi}{6}}\)&positive&increasing\\\hrulethin
+\(\ointerval{\frac{5\pi}{6}}{\frac{3\pi}{2}}\)&negative&decreasing\\\hrulethin
+\(\ointerval{\frac{3\pi}{2}}{2\pi}\)&positive&increasing\\\hrulethin
+\end{tabular}
+\par\smallskip
+\noindent\textbf{17.}\quad{}The local minimum points on \(f\) are \(\point{0}{1}\), \(\point{\frac{\pi}{2}}{1}\), and \(\point{\frac{3\pi}{2}}{-1}\).  The local maximum points on \(f\) are \(\point{\frac{\pi}{6}}{\frac{5}{4}}\), \(\point{\frac{5\pi}{6}}{\frac{5}{4}}\), and \(\point{2\pi}{0}\).%
+\par\smallskip
+\noindent\textbf{18.}\quad{}\begin{align*}
+\fe{\fd{g}}{t}&=\lzoo{t}{\frac{t+9}{t^3}}\\
+&=\frac{1\cdot t^3-(t+9)\cdot3t^2}{t^6}\\
+&=\frac{t^3-3t^3-27t^2}{t^6}\\
+&=\frac{-2t^3-27t^2}{t^6}\\
+&=\frac{-2t-27}{t^4}\\
+\fe{\sd{g}}{t}&=\frac{-2\cdot t^4-(-2t-27)\cdot4t^3}{t^8}\\
+&=\frac{-2t^4+8t^4+108t^3}{t^8}\\
+&=\frac{6t^4+108t^3}{t^8}\\
+&=\frac{6t+108}{t^5}\\
+&=\frac{6(t+18)}{t^5}
+\end{align*}\(\fe{\sd{g}}{t}=0\) at \(-18\) and \(\fe{\sd{g}}{t}\) is undefined at \(0\).%
+\begin{tabular}{ccc}\hrulethick
+Interval&\(\sd{g}\)&\(g\)\\\hrulemedium
+\(\ointerval{-\infty}{-18}\)&positive&concave up\\\hrulethin
+\(\ointerval{-18}{0}\)&negative&concave down\\\hrulethin
+\(\ointerval{0}{\infty}\)&positive&concave up\\\hrulethick
+\end{tabular}
+\par
+The only inflection point on \(g\) is \(\point{-18}{\frac{1}{648}}\). \(g\) has a vertical asymptote at \(0\).%
+\par\smallskip
+\noindent\textbf{19.}\quad{}\begin{align*}
+\fe{\fd{f}}{x}&=\frac{1\cdot(x+2)^2-(x-3)\cdot2(x+2)}{(x+2)^4}\\
+&=\frac{(x+2)-(x-3)\cdot2}{(x+2)^3}\\
+&=\frac{-x+8}{(x+2)^3}\\
+\fe{\sd{f}}{x}&=\frac{-1\cdot(x+2)^3-(-x+8)\cdot3(x+2)^2}{(x+2)^6}\\
+&=\frac{-(x+2)-(-x+8)\cdot3}{(x+2)^4}\\
+&=\frac{2x-26}{(x+2)^4}\\
+&=\frac{2(x-13)}{(x+2)^4}
+\end{align*}%
+\begin{tabular}{cccc}\hrulethick
+Interval&\(\fd{f}\)&\(\sd{f}\)&\(f\)\\\hrulemedium
+\(\ointerval{-\infty}{-2}\)&negative&negative&decreasing, concave down\\\hrulethin
+\(\ointerval{-2}{8}\)&positive&negative&increasing, concave down\\\hrulethin
+\(\ointerval{8}{13}\)&negative&negative&decreasing, concave down\\\hrulethin
+\(\ointerval{13}{\infty}\)&negative&positive&decreasing, concave up\\\hrulethin
+\end{tabular}
+\par
+\(f\) is defined everywhere except \(-2\), where it has a vertical asymptote. \(f\) has no local minimum points, and has a local maximum point at \(\point{8}{\frac{1}{20}}\). There is a horizontal tangent line to \(f\) at \(8\). There is an inflection point at \(\point{13}{\frac{2}{45}}\), where the curve changes from concave down to concave up. \begin{align*}
+\lim_{x\to\infty}\fe{f}{x}&=\lim_{x\to\infty}\frac{x-3}{(x+2)^2}\\
+&=\lim_{x\to\infty}\frac{x-3}{x^2+4x+4}\\
+&=\lim_{x\to\infty}\frac{x-3}{x^2+4x+4}\cdot\frac{\sfrac{1}{x^2}}{\sfrac{1}{x^2}}\\
+&=\lim_{x\to\infty}\frac{\frac{1}{x}-\frac{3}{x^2}}{1+\frac{4}{x}+\frac{4}{x^2}}\\
+&=\frac{0-0}{1+0+0}\\
+&=0
+\end{align*}Similarly, \(\lim\limits_{x\to-\infty}\fe{f}{x}=0\), so there is a horizontal asymptote in both directions at \(y=0\). Note that the \(y\)-intercept is at \(\point{0}{-\frac{3}{4}}\) with tangent slope \(\fe{\fd{f}}{0}=1\), and there is an \(x\)-intercept at \(\point{3}{0}\) with tangent slope \(\fe{\fd{f}}{3}=\frac{1}{25}\). Lastly, we can compute the slope at the inflection point to be \(\fe{\fd{f}}{13}=-1/675\).%
+{
+\begin{tikzpicture}
+\begin{axis}[xmin=-20,xmax=20,ymin=-1.5,ymax=0.25,xtick={-16,-12,...,16},minor xtick={-20,-19,...,20},ytick={-1.25,-1,...,0},minor ytick={-1.5,-1.45,...,0.25},title={$y=\frac{x-3}{(x+2)^2}$}]
+    \addplot[pccplot,domain=-19.8:-4.25]{(x-3)/(x+2)^2};
+    \addplot[pccplot,domain=-0.45:19.8]{(x-3)/(x+2)^2};
+    \addplot[asymptote,domain=-19.8:19.8]{0};
+    \addplot[asymptote,domain=-0.5:0.5]{x-3/4};
+    \addplot[asymptote,domain=-2:8]{(x-3)/25};
+    \addplot[asymptote,domain=-20:20]{-1/675*(x-13)+2/45};
+    \addplot[asymptote] coordinates {(-2,-1.5) (-2,0.25)};
+    \addplot[soldot] coordinates {(0,-3/4) (3,0) (8,1/20) (13,2/45)};
+\end{axis}
+\end{tikzpicture}
+}
+\par\smallskip
+\noindent\textbf{20.}\quad{}\begin{align*}
+\fe{g}{x}&=x^{\sfrac{5}{3}}+5x^{\sfrac{2}{3}}\\
+\fe{\fd{g}}{x}&=\frac{5}{3}x^{\sfrac{2}{3}}+\frac{10}{3}x^{-\sfrac{1}{3}}\\
+&=\frac{5}{3}x^{-\sfrac{1}{3}}(x+2)\\
+&=\frac{5(x+2)}{3\sqrt[3]{x}}\\
+\fe{\sd{g}}{x}&=\frac{10}{9}x^{-\sfrac{1}{3}}-\frac{10}{9}x^{-\sfrac{4}{3}}\\
+&=\frac{10}{9}x^{-\sfrac{4}{3}}(x-1)\\
+&=\frac{10(x-1)}{9\sqrt[3]{x^4}}
+\end{align*}%
+\begin{tabular}{cccc}\hrulethick
+Interval&\(\fd{g}\)&\(\sd{g}\)&\(g\)\\\hrulemedium
+\(\ointerval{-\infty}{-2}\)&positive&negative&increasing, concave down\\\hrulethin
+\(\ointerval{-2}{0}\)&negative&negative&decreasing, concave down\\\hrulethin
+\(\ointerval{0}{1}\)&positive&negative&increasing, concave down\\\hrulethin
+\(\ointerval{1}{\infty}\)&positive&positive&increasing, concave up\\\hrulethin
+\end{tabular}
+\par
+\(g\) is defined everywhere. \(g\) has a local minimum at \(0\). The derivative is not defined at \(0\), and in fact as \(x\) approaches \(0\) from the left, \(\fe{\fd{g}}{x}\) approaches \(-\infty\), while as \(x\) approaches \(0\) from the right, \(\fe{\fd{g}}{x}\) approaches \(\infty\). Since \(\fe{g}{0}=0\), \(g\) has a cusp point at \(\point{0}{0}\). \(g\) has a local maximum at \(\point{-2}{3\sqrt[3]{4}}\), where \(\fe{\fd{g}}{-2}=0\), so there is a horizontal tangent there. \(g\) has an infelction point at \(\point{1}{6}\), where the curve transitions from concave down to concave up. The slope at this inflection point is \(\fe{\fd{g}}{1}=5\). Aside from the \(x\)-intercept at \(\point{0}{0}\) (which is also the \(y\)-intercept) \(g\) also has an \(x\)-intercept at \(\point{-5}{0}\). The slope at this intercept is \(\fe{\fd{g}}{-5}=5^{\cfrac{2}{3}}\).%
+{
+\begin{tikzpicture}
+\begin{axis}[ymin=-10,ymax=20,ytick={-8,-4,...,20},minor ytick={-10,-9,...,20},title={$y=\sqrt[3]{x^2}(x+5)$}]
+    \addplot[pccplot,domain=-6.8:0,<-]{(-x)^(2/3)*(x+5)};
+    \addplot[pccplot,domain=0:3.5,->]{x^(2/3)*(x+5)};
+    \addplot[asymptote,->] coordinates {(0,0) (0,7)};
+    \addplot[asymptote,domain=-5:1]{3*4^(1/3)};
+    \addplot[asymptote,domain=-1:3]{5*(x-1)+6};
+    \addplot[asymptote,domain=-6.5:-3.5]{5^(2/3)*(x+5)};
+    \addplot[soldot] coordinates {(-2,4.7622) (1,6) (-5,0)};
+\end{axis}
+\end{tikzpicture}
+}
+\par\smallskip
+\noindent\textbf{21.}\quad{}\begin{align*}
+\fe{\fd{k}}{x}&=\frac{2(x-4)\cdot(x+3)-(x-4)^2\cdot1}{(x+3)^2}\\
+&=\frac{2x^2-2x-24-(x^2-8x+16)}{(x+3)^2}\\
+&=\frac{x^2+6x-40}{(x+3)^2}\\
+&=\frac{(x+10)(x-4)}{(x+3)^2}\\
+\fe{\sd{k}}{x}&=\frac{(2x+6)\cdot(x+3)^2-\left(x^2+6x-40\right)\cdot2(x+3)}{(x+3)^4}\\
+&=\frac{(2x+6)\cdot(x+3)-\left(x^2+6x-40\right)\cdot2}{(x+3)^3}\\
+&=\frac{2x^2+12x+18-\left(2x^2+12x-80\right)}{(x+3)^3}\\
+&=\frac{98}{(x+3)^3}
+\end{align*}%
+\begin{tabular}{cccc}\hrulethick
+Interval&\(\fd{k}\)&\(\sd{k}\)&\(k\)\\\hrulemedium
+\(\ointerval{-\infty}{-10}\)&positive&negative&increasing, concave down\\\hrulethin
+\(\ointerval{-10}{-3}\)&negative&negative&decreasing, concave down\\\hrulethin
+\(\ointerval{-3}{4}\)&negative&positive&decreasing, concave up\\\hrulethin
+\(\ointerval{4}{\infty}\)&positive&positive&increasing, concave up\\\hrulethin
+\end{tabular}
+\par
+\(g\) is defined everwhere except at \(-3\), where there is a vertical asymptote. \(\fe{g}{x}\) approaches \(-\infty\) from the left of \(-3\), and \(\infty\) from the right of \(-3\). There is a local minumum point at \(\point{4}{0}\), where there is a horizontal tangent. There is a local maximum point at \(\point{-10}{-28}\), where there is also a horizontal tangent. There is only a change in concavity at \(-3\), where the function is not defined. So there are no inflection points. The only \(x\)-intercept is at \(4\), which has already been discussed. The \(y\)-intercept is at \(\point{0}{\frac{16}{3}}\), where the slope is \(\fe{\fd{k}}{0}=-\frac{40}{9}\).%
+{
+\begin{tikzpicture}
+\begin{axis}[xmin=-30,xmax=30, xtick={-28,-24,...,28}, minor xtick={-30,-28,...,30},ymin=-40,ymax=20,ytick={-40,-36,...,20},minor ytick={-40,-38,...,20},title={$y=\frac{(x-4)^2}{x+3}$}]
+    \addplot[pccplot,domain=-26:-5]{(x-4)^2/(x+3)};
+    \addplot[pccplot,domain=-2:29]{(x-4)^2/(x+3)};
+    \addplot[asymptote] coordinates {(-3,-40) (-3,20)};
+    \addplot[asymptote,domain=-15:-5]{-28};
+    \addplot[asymptote,domain=-1:9]{0};
+    \addplot[asymptote,domain=-5:5]{-40/9*x+16/3};
+    \addplot[soldot] coordinates {(-10,-28) (4,0) (0,5.33333)};
+\end{axis}
+\end{tikzpicture}
+}
+\par\smallskip
+}\end{multicols}
+\typeout{************************************************}
+\typeout{Appendix 2 Short Answers to Supplementary Exercises}
+\typeout{************************************************}
+\chapter[Short Answers to Supplementary Exercises]{Short Answers to Supplementary Exercises}\label{appendix-2}
+\begin{multicols}{2}
+\subsection*{1.8.1 }
+\noindent\textbf{1.}\quad{}
+                    See the solutions section.%
+
+                \par\smallskip
+\noindent\textbf{2.}\quad{}
+                    \(\lzoo{t}{\fe{\cosh}{t}}=\fe{\sinh}{t}\), \(\lzoo{t}{\fe{\sinh}{t}}=\fe{\cosh}{t}\), \(\lzon{2}{t}{\fe{\cosh}{t}}=\fe{\cosh}{t}\) and \(\lzon{2}{t}{\fe{\sinh}{t}}=\fe{\sinh}{t}\)%
+
+                \par\smallskip
+\noindent\textbf{3.}\quad{}
+                    The only critical number for \(\cosh\) is \(0\). The function \(\sinh\) has no critical numbers.%
+
+                \par\smallskip
+\noindent\textbf{4.}\quad{}
+                    \(\cosh\) is increasing on \(\ointerval{0}{\infty}\), decreasing on \(\ointerval{-\infty}{0}\), and concave up on \(\ointerval{-\infty}{\infty}\); \(\sinh\) is increasing on \(\ointerval{-\infty}{\infty}\), convace up on \(\ointerval{0}{\infty}\), and concave down on \(\ointerval{-\infty}{0}\)%
+
+                \par\smallskip
+\noindent\textbf{5.}\quad{}
+                    \(\lim\limits_{t\to-\infty}\fe{\cosh}{t}=\lim\limits_{t\to\infty}\fe{\cosh}{t}=\lim\limits_{t\to\infty}\fe{\sinh}{t}=\infty\), and \(\lim\limits_{t\to-\infty}\fe{\sinh}{t}=-\infty\)%
+
+                \par\smallskip
+\noindent\textbf{6.}\quad{}
+                    \begin{figure}
+\centering
+\pushValignCaptionBottom[b]{minipage}{.40\textwidth}{%
+\pgfplotsset{every axis/.append style={width=\linewidth}}%
+\centering% horizontal alignment 
+{
+\begin{tikzpicture}
+\begin{axis}[xtick={100},ytick={100},minor xtick={100}, minor ytick={100},title={$y=\fe{\cosh}{t}$},xlabel={$t$}]
+    \addplot[pccplot,domain=-2.5:2.5]{(exp(x)+exp(-x))/2};
+\end{axis}
+\end{tikzpicture}
+}
+}% end body 
+{}% caption 
+\pushValignCaptionBottom[b]{minipage}{.40\textwidth}{%
+\pgfplotsset{every axis/.append style={width=\linewidth}}%
+\centering% horizontal alignment 
+{
+\begin{tikzpicture}
+\begin{axis}[xtick={100},ytick={100},minor xtick={100}, minor ytick={100},title={$y=\fe{\sinh}{t}$},xlabel={$t$}]
+    \addplot[pccplot,domain=-2.5:2.5]{(exp(x)-exp(-x))/2};
+\end{axis}
+\end{tikzpicture}
+}
+}% end body 
+{}% caption 
+\popValignCaptionBottom
+\end{figure}
+
+                \par\smallskip
+\noindent\textbf{7.}\quad{}
+                    \(\fe{\tanh}{t}=\frac{e^t-e^{-t}}{e^t+e^{-t}}\), \(\fe{\sech}{t}=\frac{2}{e^t+e^{-t}}\), \(\fe{\csch}{t}=\frac{2}{e^t-e^{-t}}\), and \(\fe{\coth}{t}=\frac{e^t+e^{-t}}{e^t-e^{-t}}\)%
+
+                \par\smallskip
+\noindent\textbf{8.}\quad{}
+                    \(\fe{\sech^2}{t}\)%
+
+                \par\smallskip
+\noindent\textbf{9.}\quad{}
+                    positive; \(f\) is always increasing; \(\fe{f}{0}=0\); \(\fe{\fd{f}}{0}=1\)%
+
+                \par\smallskip
+\noindent\textbf{10.}\quad{}
+                    \(\lim\limits_{t\to-\infty}\fe{\tanh}{t}=-1\) and \(\lim\limits_{t\to\infty}\fe{\tanh}{t}=1\)
+                \par\smallskip
+\noindent\textbf{11.}\quad{}
+                    {
+\begin{tikzpicture}
+\begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={-3,-2,...,3},ytick={-3,-2,...,3},minor xtick={-3,-2,...,3}, minor ytick={-3,-2,...,3},title={$y=\fe{\tanh}{t}$},xlabel={$t$}]
+    \addplot[pccplot,domain=-2.9:2.9]{(exp(x)-exp(-x))/(exp(x)+exp(-x))};
+    \addplot[asymptote,<-,domain=-3:0]{-1};
+    \addplot[asymptote,->,domain=0:3]{1};
+\end{axis}
+\end{tikzpicture}
+}
+
+                \par\smallskip
+\noindent\textbf{12.}\quad{}
+                    \(8\), \(-8\), and \(0\)%
+
+                \par\smallskip
+\noindent\textbf{13.}\quad{}
+                    See the solutions section.%
+
+                \par\smallskip
+\noindent\textbf{14.}\quad{}
+                    local minimum points at \(\point{-8}{-878}\) and \(\point{8}{878}\); local maximum point at \(\point{0}{0}\)%
+
+                \par\smallskip
+\noindent\textbf{15.}\quad{}
+                    \(\frac{\pi}{6}\), \(\frac{\pi}{2}\), \(\frac{5\pi}{6}\), and \(\frac{3\pi}{2}\)%
+
+                \par\smallskip
+\noindent\textbf{16.}\quad{}
+                    See the solutions section.%
+
+                \par\smallskip
+\noindent\textbf{17.}\quad{}
+                    local minimum points at \(\point{0}{1}\), \(\point{\frac{\pi}{2}}{1}\), and \(\point{\frac{3\pi}{2}}{-1}\); local maximum points at \(\point{\frac{\pi}{6}}{\frac{5}{4}}\), \(\point{\frac{5\pi}{6}}{\frac{5}{4}}\), and \(\point{2\pi}{0}\)%
+
+                \par\smallskip
+\noindent\textbf{18.}\quad{}
+                \(\fe{\fd{g}}{t}=\frac{6(t+18)}{t^5}\); \(\fe{\sd{g}}{t}=0\) at \(-18\) and \(\fe{\sd{g}}{t}\) is undefined at \(0\);%
+
+                \begin{tabular}{ccc}\hrulethick
+Interval&\(\sd{g}\)&\(g\)\\\hrulemedium
+\(\ointerval{-\infty}{-18}\)&positive&concave up\\\hrulethin
+\(\ointerval{-18}{0}\)&negative&concave down\\\hrulethin
+\(\ointerval{0}{\infty}\)&positive&concave up\\\hrulethick
+\end{tabular}
+
+                \par
+inflection point at \(\point{-18}{\frac{1}{648}}\)%
+
+            \par\smallskip
+\noindent\textbf{19.}\quad{}
+                    See the solutions section.%
+
+                \par\smallskip
+\noindent\textbf{20.}\quad{}
+                    See the solutions section.%
+
+                \par\smallskip
+\end{multicols}
 \end{document}

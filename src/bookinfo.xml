@@ -20,6 +20,8 @@
     <![CDATA[
     \usepackage{pgfplots}
     \usepackage{xparse}
+    \usepgfplotslibrary{patchplots}
+
     
     % cycle list- truly awesome; see section 4.6.7, pg 129 of pgfplots
     \pgfplotscreateplotcyclelist{pccstylelist}{%
@@ -183,7 +185,7 @@
 \newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
 %
 %  higher Leibniz operator
-%  Usage: \lzon{x}{y}{n}
+%  Usage: \lzon{n}{x}{y}
 \newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
 %
 %  Leibniz operator at ....
@@ -193,6 +195,14 @@
 %  Absolute Value
 %  Usage: \abs{x}
 \newcommand{\abs}[1]{\left|#1\right|}
+%
+%  sech
+%  Usage: \sech
+\newcommand{\sech}{\operatorname{sech}}
+%
+%  csch
+%  Usage: \csch
+\newcommand{\csch}{\operatorname{csch}}
 %
 
 

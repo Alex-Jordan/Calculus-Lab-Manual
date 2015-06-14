@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<appendix xml:id="appendix-derivative-formulas">
+    <title>Derivative Formulas</title>
+
+    <p><m>k</m>, <m>a</m>, and <m>n</m> represent constants; <m>u</m> and <m>y</m> represent funcitons of <m>x</m>.</p>
+
+    <table>
+        <tabular top="major" left="minor">
+            <col right="minor" halign="center"/>
+            <col right="minor" halign="center"/>
+            <col right="minor" halign="center"/>
+            <row bottom="medium">
+                <cell>Basic Formulas</cell>
+                <cell>Chain Rule Format</cell>
+                <cell>Implicit Derivative Format</cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lzoo{x}{k}=0</m></cell>
+                <cell/>
+                <cell/>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lzoo{x}{x^n}=nx^{n-1}</m></cell>
+                <cell><m>\lzoo{x}{u^n}=nu^{n-1}\lzoo{x}{u}</m></cell>
+                <cell><m>\lzoo{x}{y^n}=ny^{n-1}\lz{y}{x}</m></cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lzoo{x}{\sqrt{x}}=\frac{1}{2\sqrt{x}}</m></cell>
+                <cell><m>\lzoo{x}{\sqrt{u}}=\frac{1}{2\sqrt{u}}\lzoo{x}{u}</m></cell>
+                <cell><m>\lzoo{x}{\sqrt{y}}=\frac{1}{2\sqrt{y}}\lz{y}{x}</m></cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lzoo{x}{\fe{\sin}{x}}=\fe{\cos}{x}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\sin}{u}}=\fe{\cos}{u}\lzoo{x}{u}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\sin}{y}}=\fe{\cos}{y}\lz{y}{x}</m></cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lzoo{x}{\fe{\cos}{x}}=-\fe{\sin}{x}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\cos}{u}}=-\fe{\sin}{u}\lzoo{x}{u}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\cos}{y}}=-\fe{\sin}{y}\lz{y}{x}</m></cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lzoo{x}{\fe{\tan}{x}}=\fe{\sec^2}{x}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\tan}{u}}=\fe{\sec^2}{u}\lzoo{x}{u}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\tan}{y}}=\fe{\sec^2}{y}\lz{y}{x}</m></cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lzoo{x}{\fe{\sec}{x}}=\fe{\sec}{x}\fe{\tan}{x}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\sec}{u}}=\fe{\sec}{u}\fe{\tan}{u}\lzoo{x}{u}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\sec}{y}}=\fe{\sec}{y}\fe{\tan}{y}\lz{y}{x}</m></cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lzoo{x}{\fe{\cot}{x}}=-\fe{\csc^2}{x}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\cot}{u}}=-\fe{\csc^2}{u}\lzoo{x}{u}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\cot}{y}}=-\fe{\csc^2}{y}\lz{y}{x}</m></cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lzoo{x}{\fe{\csc}{x}}=-\fe{\csc}{x}\fe{\cot}{x}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\csc}{u}}=-\fe{\csc}{u}\fe{\cot}{u}\lzoo{x}{u}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\csc}{y}}=-\fe{\csc}{y}\fe{\cot}{y}\lz{y}{x}</m></cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lzoo{x}{\fe{\tan^{-1}}{x}}=\frac{1}{1+x^2}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\tan^{-1}}{u}}=\frac{1}{1+u^2}\lzoo{x}{u}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\tan^{-1}}{y}}=\frac{1}{1+y^2}\lz{y}{x}</m></cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lzoo{x}{\fe{\sin^{-1}}{x}}=\frac{1}{\sqrt{1-x^2}}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\sin^{-1}}{u}}=\frac{1}{\sqrt{1-u^2}}\lzoo{x}{u}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\sin^{-1}}{y}}=\frac{1}{\sqrt{1-y^2}}\lz{y}{x}</m></cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lzoo{x}{\fe{\sec^{-1}}{x}}=\frac{1}{\abs{x}\sqrt{x^2-1}}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\sec^{-1}}{u}}=\frac{1}{\abs{u}\sqrt{u^2-1}}\lzoo{x}{u}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\sec^{-1}}{y}}=\frac{1}{\abs{y}\sqrt{y^2-1}}\lz{y}{x}</m></cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lzoo{x}{e^x}=e^x</m></cell>
+                <cell><m>\lzoo{x}{e^u}=e^u\lzoo{x}{u}</m></cell>
+                <cell><m>\lzoo{x}{e^y}=e^y\lz{y}{x}</m></cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lzoo{x}{a^x}=\fe{\ln}{a}a^x</m></cell>
+                <cell><m>\lzoo{x}{a^u}=\fe{\ln}{a}a^u\lzoo{x}{u}</m></cell>
+                <cell><m>\lzoo{x}{a^y}=\fe{\ln}{a}a^y\lz{y}{x}</m></cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lzoo{x}{\fe{\ln}{x}}=\frac{1}{x}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\ln}{u}}=\frac{1}{u}\lzoo{x}{u}</m></cell>
+                <cell><m>\lzoo{x}{\fe{\ln}{y}}=\frac{1}{y}\lz{y}{x}</m></cell>
+            </row>
+            <row bottom="major">
+                <cell><m>\lzoo{x}{\abs{x}}=\frac{\abs{x}}{x}</m></cell>
+                <cell><m>\lzoo{x}{\abs{u}}=\frac{\abs{u}}{u}\lzoo{x}{u}</m></cell>
+                <cell><m>\lzoo{x}{\abs{y}}=\frac{\abs{y}}{y}\lz{y}{x}</m></cell>
+            </row>
+        </tabular>
+    </table>
+
+    <theorem number="no">
+        <title>Constant Factor Rule of Differentiation</title>
+        <statement>
+            <p><me>\lzoo{x}{k\fe{f}{x}}=k\lzoo{x}{\fe{f}{x}}</me></p>
+            <p>Alternatively, if <m>y=\fe{f}{x}</m>, then <m>\lzoo{x}{ky}=k\lz{y}{x}</m>.</p>
+        </statement>
+    </theorem>
+    <theorem number="no">
+        <title>Sum/Difference Rule of Differentiation</title>
+        <statement>
+            <p><me>\lzoo{x}{\fe{f}{x}\pm\fe{g}{x}}=\lzoo{x}{\fe{f}{x}}\pm\lzoo{x}{\fe{g}{x}}</me></p>
+        </statement>
+    </theorem>
+    <theorem number="no">
+        <title>Product Rule of Differentiation</title>
+        <statement>
+            <p><me>\lzoo{x}{\fe{f}{x}\cdot\fe{g}{x}}=\lzoo{x}{\fe{f}{x}}\cdot\fe{g}{x}+\fe{f}{x}\cdot\lzoo{x}{\fe{g}{x}}</me></p>
+        </statement>
+    </theorem>
+    <theorem number="no">
+        <title>Quotient Rule of Differentiation</title>
+        <statement>
+            <p><me>\lzoo{x}{\frac{\fe{f}{x}}{\fe{g}{x}}}=\frac{\lzoo{x}{\fe{f}{x}}\cdot\fe{g}{x}-\fe{f}{x}\cdot\lzoo{x}{\fe{g}{x}}}{\left[\fe{g}{x}\right]^2}</me></p>
+        </statement>
+    </theorem>
+    <theorem number="no">
+        <title>Chain Rule of Differentiation</title>
+        <statement>
+            <p><me>\lzoo{x}{\fe{f}{\fe{g}{x}}}=\fe{\fd{f}}{\fe{g}{x}}\cdot\fe{\fd{g}}{x}</me></p>
+            <p>Alternatively, if <m>u=\fe{g}{x}</m>, then <m>\lzoo{x}{\fe{f}{u}}=\fe{\fd{f}}{u}\cdot\lzoo{x}{u}</m>.</p>
+            <p>Alternatively, if <m>y=\fe{f}{u}</m>, where <m>u=\fe{g}{x}</m>, then <m>\lz{y}{x}=\lz{y}{u}\cdot\lz{u}{x}</m>.</p>
+        </statement>
+    </theorem>
+
+</appendix>

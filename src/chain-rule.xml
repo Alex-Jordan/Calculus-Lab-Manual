@@ -14,5 +14,6 @@
     <xi:include href="./order-to-apply-rules.xml" />
     <xi:include href="./not-simplifying-first.xml" />
     <xi:include href="./chain-rule-and-leibniz.xml" />
+    <xi:include href="./chain-rule-supplement.xml" />
     
 </chapter>

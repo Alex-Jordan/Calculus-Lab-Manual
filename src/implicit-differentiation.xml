@@ -12,5 +12,7 @@
     
     <xi:include href="./general-implicit-differentiation.xml" />
     <xi:include href="./derivatives-of-inverse-functions.xml" />
+    <xi:include href="./logarithmic-differentiation.xml" />
+    <xi:include href="./implicit-differentiation-supplement.xml" />
     
 </chapter>

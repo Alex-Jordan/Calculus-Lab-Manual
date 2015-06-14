@@ -17,5 +17,6 @@
     <xi:include href="./inflection-points.xml" />
     <xi:include href="./end-behavior.xml" />
     <xi:include href="./making-graphs.xml" />
+    <xi:include href="./critical-numbers-graphing-from-formulas-supplement.xml" />
     
 </chapter>

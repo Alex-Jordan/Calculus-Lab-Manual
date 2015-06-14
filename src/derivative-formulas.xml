@@ -21,5 +21,6 @@
     <xi:include href="./simplification.xml" />
     <xi:include href="./product-and-quotient-together.xml" />
     <xi:include href="./derivative-formulas-and-function-behavior.xml" />
+    <xi:include href="./derivative-formulas-supplement.xml" />
     
 </chapter>

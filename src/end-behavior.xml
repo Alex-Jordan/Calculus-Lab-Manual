@@ -30,6 +30,8 @@
         <exercisegroup cols="3">
             <introduction>
                 <p>The formulas used to graph <xref autoname="plural" ref="figure-match-rationals-1"/><ndash/><xref autoname="no" ref="figure-match-rationals-5"/> are given below.  Focusing first on the dominant terms of the expressions, match the formulas with the functions (<m>f_1</m> through <m>f_5</m>).</p>
+            </introduction>
+            <conclusion>
                 <sidebyside>
                     <figure width ="40%" xml:id="figure-match-rationals-1">
                         <caption><m>f_1</m></caption>
@@ -179,7 +181,7 @@
                         </latex-image-code>
                     </image>
                 </figure>
-            </introduction>
+            </conclusion>
             <exercise>
                 <statement>
                     <p><m>y=\frac{3x+6}{x-2}</m></p>
@@ -206,7 +208,7 @@
                 </statement>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="2">
+        <exercisegroup cols="3">
             <introduction>
                 <p>Use the concept of dominant terms to informally determine the value of each of the following limits.</p>
             </introduction>

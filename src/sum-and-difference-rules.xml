@@ -25,7 +25,7 @@
                 <cell>You should <q>see</q></cell>
                 <cell>You should write</cell>
             </row>
-            <row>
+            <row bottom="minor">
                 <cell><m>y=4\sqrt[5]{t^6}-\frac{1}{6\sqrt{t}}+8t</m></cell>
                 <cell><m>y=4t^{\sfrac{6}{5}}-\frac{1}{6}t^{-\sfrac{1}{2}}+8t</m></cell>
                 <cell><m>\begin{aligned}\lz{y}{t}&amp;=\frac{24}{5}t^{\sfrac{1}{5}}+\frac{1}{12}t^{-\sfrac{3}{2}}+8\\&amp;=\frac{24\sqrt[5]{t}}{5}+\frac{1}{12\sqrt{t^3}}+8\end{aligned}</m></cell>

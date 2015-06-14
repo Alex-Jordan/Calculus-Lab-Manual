@@ -101,12 +101,12 @@
             </introduction> 
             <exercise> 
                 <statement> 
-                    <p>Several values of the function <m>\fd{g}</m> are given in <xref ref="table-graphical-derivative"/>. For each given value draw a nice long line segment at the corresponding point on <m>g</m> whose slope is equal to the value of <m>g</m>. If we think of these line segments as actual lines, what do we call the lines?</p> 
+                    <p>Several values of <m>\fd{g}</m> are given in <xref ref="table-graphical-derivative"/>. For each given value draw a nice long line segment at the corresponding point on <m>g</m> whose slope is equal to the value of <m>\fd{g}</m>. If we think of these line segments as actual lines, what do we call the lines?</p> 
                 </statement> 
             </exercise> 
             <exercise> 
                 <statement> 
-                    <p>What is the value of <m>\fd{g}</m> at <m>1</m>? How do you know? Go ahead and enter that value into <xref ref="table-graphical-derivative"/>.</p>
+                    <p>What is the value of <m>\fd{g}</m> at <m>1</m>? How do you know? Enter that value into <xref ref="table-graphical-derivative"/>.</p>
                 </statement>
             </exercise>
             <exercise>
@@ -134,7 +134,7 @@
             <introduction> 
                 <p>A function <m>f</m> is shown in <xref ref="figure-cubic"/> and the corresponding first derivative function <m>\fd{f}</m> is shown in <xref ref="figure-cubic-derivative"/>. Answer each of the following questions referencing these two functions.</p>
                 <sidebyside>
-                    <figure xml:id="figure-cubic" width="40%">
+                    <figure xml:id="figure-cubic" width="40%" valign="top">
                         <caption><m>y=\fe{f}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -155,7 +155,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure xml:id="figure-cubic-derivative" width="40%">
+                    <figure xml:id="figure-cubic-derivative" width="40%" valign="top">
                         <caption><m>y=\fe{\fd{f}}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -191,7 +191,7 @@
             <exercise>
                 <statement>
                     <p>Copy each of the following sentences onto your paper and supply the words or phrases that correctly complete each sentence.</p>
-                    <ul>
+                    <ul cols="2">
                         <li>Over the interval where <m>\fd{f}</m> is negative, <m>f</m> is <ellipsis/></li> 
                         <li>Over the interval where <m>\fd{f}</m> is positive, <m>f</m> is <ellipsis/></li> 
                         <li>Over the interval where <m>\fd{f}</m> is increasing, <m>f</m> is <ellipsis/></li> 
@@ -205,11 +205,11 @@
                 <p>In each of <xref autoname="plural" ref="figure-sine"/> and <xref autoname="no" ref="figure-rational"/> a function (the solid curve) is given; both of these functions are symmetric about the <m>y</m>-axis. The first derivative of each function (the dash-dotted curves) have been drawn over the interval <m>\ointerval{0}{7}</m>. Use the given portion of the first derivative together with the symmetry of the function to help you draw each first derivative over the interval <m>\ointerval{-7}{0}</m>.</p>
                 <sidebyside>
                     <figure xml:id="figure-sine" width="40%">
-                        <caption><m>y=\fe{g}{x}</m> and <m>y=\fe{\fd{g}}{x}</m></caption>
+                        <caption></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[legend style={at={(1,1)},anchor=south east},legend entries={$y=\fe{g}{x}$,$y=\fe{\fd{g}}{x}$},samples=50,]
+                            \begin{axis}[legend style={at={(0,0)},anchor=south west},legend entries={$y=\fe{g}{x}$,$y=\fe{\fd{g}}{x}$},samples=50,]
                                 \addplot+[
                                     domain=-6.8:6.8,
                                     <->,
@@ -224,11 +224,11 @@
                         </image>
                     </figure>
                     <figure xml:id="figure-rational" width="40%">
-                        <caption><m>y=\fe{k}{x}</m> and <m>y=\fe{\fd{k}}{x}</m></caption>
+                        <caption></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[legend style={at={(1,1)},anchor=south east},legend entries={$y=\fe{g}{x}$,$y=\fe{\fd{g}}{x}$,$y=\frac{1}{2}$}]
+                            \begin{axis}[legend style={at={(0,0)},anchor=south west},legend entries={$y=\fe{g}{x}$,$y=\fe{\fd{g}}{x}$,$y=\frac{1}{2}$}]
                                 \addplot+[
                                     variable=t,
                                     domain=0:32.75,
@@ -364,9 +364,11 @@
 
         <exercisegroup>
             <introduction>
-                <p>A function, <m>w</m>, is shown in <xref ref="figure-inflection-points"/>. A larger version of <xref ref="figure-inflection-points"/> is available in <xref provisional="Appendix B (page B3)"/>. Answer each of the following questions in reference to this function.</p>
                 <sidebyside>
-                    <figure xml:id="figure-inflection-points" width="40%">
+                    <paragraphs valign="top" width="25%">
+                        <p>Answer the following questions in reference to the function <m>w</m>, shown in <xref ref="figure-inflection-points"/>.</p>
+                    </paragraphs>
+                    <figure xml:id="figure-inflection-points" width="42%" valign="top">
                         <caption><m>y=\fe{w}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -381,7 +383,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <table xml:id="table-inflection-points" width="40%">
+                    <table xml:id="table-inflection-points" width="30%">
                         <caption>Properties of <m>\fd{w}</m> (positive, negative, increasing, or decreasing)</caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -390,27 +392,27 @@
                                 <cell>Interval</cell>
                                 <cell>Properties</cell>
                             </row>
-                            <row>
+                            <row bottom="minor">
                                 <cell><m>\ointerval{-\infty}{2}</m></cell>
-                                <cell />
+                                <cell><m>\phantom{\text{decreasing}}</m></cell>
                             </row>
-                            <row>
+                            <row bottom="minor">
                                 <cell><m>\ointerval{2}{3.25}</m></cell>
                                 <cell />
                             </row>
-                            <row>
+                            <row bottom="minor">
                                 <cell><m>\ointerval{3.25}{4}</m></cell>
                                 <cell />
                             </row>
-                            <row>
+                            <row bottom="minor">
                                 <cell><m>\ointerval{4}{6}</m></cell>
                                 <cell />
                             </row>
-                            <row>
+                            <row bottom="minor">
                                 <cell><m>\ointerval{6}{7}</m></cell>
                                 <cell />
                             </row>
-                            <row>
+                            <row bottom="minor">
                                 <cell><m>\ointerval{7}{\infty}</m></cell>
                                 <cell />
                             </row>
@@ -427,7 +429,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>In <xref ref="table-values-for-w-prime"/>, three possible values are given for <m>\fd{w}</m> at several values of <m>x</m>. In each case, one of the values is correct. Use tangent lines to <m>w</m> to determine each of the correct values. (This is where you probably want to use the graph on <xref provisional="page B3"/>.)</p>
+                    <p>In <xref ref="table-values-for-w-prime"/>, three possible values are given for <m>\fd{w}</m> at several values of <m>x</m>. In each case, one of the values is correct. Use tangent lines to <m>w</m> to determine each of the correct values.</p>
                     <sidebyside>
                         <table xml:id="table-values-for-w-prime" width="40%">
                             <caption>Choose the correct values for <m>\fd{w}</m></caption>
@@ -469,7 +471,7 @@
                             <image>
                                 <latex-image-code>
                                 <![CDATA[\begin{tikzpicture}
-                                \begin{axis}[xmin=-1,xmax=10,ymin=-5,ymax=5,xtick={-1,0,...,10}, minor xtick={-1,-0.5,...,10},ytick={-5,-4,...,5}, minor ytick={-5,-5.5,...,5},]
+                                \begin{axis}[xmin=-1,xmax=10,ymin=-5,ymax=5,xtick={0,1,...,10}, minor xtick={-1,-0.5,...,10},ytick={-5,-4,...,5}, minor ytick={-5,-5.5,...,5},]
                                 \end{axis}
                                 \end{tikzpicture}]]>
                                 </latex-image-code>

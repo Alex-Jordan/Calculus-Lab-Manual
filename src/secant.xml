@@ -17,7 +17,7 @@
         <p>The formula for <m>f</m> is <m>\fe{f}{x}=3+2x-x^2</m>. We can use this formula to come up with a generalized formula for the slope of secant lines to this curve. Specifically, the slope of the line connecting the point <m>\point{x_0}{\fe{f}{x_0}}</m> to the point <m>\point{x_1}{\fe{f}{x_1}}</m> is derived in <xref ref="example-secant"/>.</p> 
         <figure xml:id="figure-secant">
             <caption><m>f</m></caption>
-            <image xml:id="image-secant">
+            <image>
                 <description>An upside down parabola with a downward slanting line intersecting it in two points.</description>
                 <latex-image-code>
                 <![CDATA[\begin{tikzpicture}

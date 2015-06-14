@@ -446,7 +446,9 @@
 
 <!-- A list of short answers -->
 <xsl:template match="answer-list">
+    <xsl:text>\begin{multicols}{2}&#xa;</xsl:text>
     <xsl:apply-templates select="//exercises" mode="answerlist" />
+    <xsl:text>\end{multicols}&#xa;</xsl:text>
 </xsl:template>
 <xsl:template match="exercises" mode="answerlist">
     <xsl:variable name="nonempty" select="(.//hint and $exercise.backmatter.hint='yes') or (.//answer and $exercise.backmatter.answer='yes') or (.//solution and $exercise.backmatter.solution='yes')" />
@@ -548,6 +550,15 @@
 <xsl:template match="introduction|conclusion">
     <xsl:apply-templates />
     <xsl:text>\par&#xa;</xsl:text>
+</xsl:template>
+
+<!-- Make solution list smaller -->
+<xsl:template match="solution-list">
+    <!-- TODO: check here once for backmatter switches set to "knowl", which is unrealizable -->
+    <xsl:text>\begin{multicols}{2}&#xa;</xsl:text>
+    <xsl:text>{\tiny&#xa;</xsl:text>
+    <xsl:apply-templates select="//exercises" mode="backmatter" />
+    <xsl:text>}\end{multicols}&#xa;</xsl:text>
 </xsl:template>
 
 </xsl:stylesheet>

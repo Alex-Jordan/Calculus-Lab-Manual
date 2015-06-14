@@ -1,3 +1,0 @@
-\contentsline {chapter}{\numberline {1}Functions, Derivatives, and Antiderivatives}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Graphical Features from Derivatives}{1}{section.1.1}
-\contentsline {section}{\numberline {1.2}Supplement}{5}{section.1.2}

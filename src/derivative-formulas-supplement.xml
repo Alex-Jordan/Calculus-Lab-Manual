@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+   
+<section xml:id="derivative-formulas-supplementary-exercises">
+    <title>Supplement</title>
+    <exercises>
+        <exercisegroup cols="3">
+            <introduction>
+                <p>Apply the constant factor and power rules of differentiation to find the first derivative of each of the following functions.  In each case take the derivative with respect to the independent variable suggested by the expression on the right side of the equal sign.  Make sure that you assign the proper name to the derivative function.  Please note that there is no need to employ either the quotient rule or the product rule to find any of these derivative formulas.</p>
+            </introduction> 
+            <exercise>
+                <statement>
+                    <p><m>\fe{f}{x}=\frac{\sqrt[11]{x^6}}{6}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{f}{x}&amp;=\frac{1}{6}x^{\sfrac{6}{11}}</mrow>
+                    <mrow>\fe{\fd{f}}{x}&amp;=\frac{1}{6}\cdot\frac{6}{11}x^{\sfrac{-5}{11}}</mrow>
+                    <mrow>&amp;=\frac{1}{11\sqrt[11]{x^{5}}}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\frac{1}{11\sqrt[11]{x^{5}}}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=-\frac{5}{t^7}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>y&amp;=-5t^{-7}</mrow>
+                    <mrow>\lz{y}{t}&amp;=-5(-7)t^{-8}</mrow>
+                    <mrow>&amp;=\frac{35}{t^8}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\frac{35}{t^8}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{y}{u}=12\sqrt[3]{u}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{y}{u}&amp;=12u^{\sfrac{1}{3}}</mrow>
+                    <mrow>\fe{\fd{y}}{u}&amp;=12\cdot\frac{1}{3}u^{-\sfrac{2}{3}}</mrow>
+                    <mrow>&amp;=\frac{4}{\sqrt[3]{u^2}}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\frac{4}{\sqrt[3]{u^2}}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{z}{\alpha}=e\alpha^{\pi}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{z}{\alpha}&amp;=e\alpha^{\pi}</mrow>
+                    <mrow>\fe{\fd{z}}{\alpha}&amp;=e\pi\alpha^{\pi-1}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>e\pi\alpha^{\pi-1}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>z=\frac{8}{\sqrt{t^7}}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>z&amp;=8t^{-\sfrac{7}{2}}</mrow>
+                    <mrow>\lz{z}{t}&amp;=8\cdot-\frac{7}{2}t^{-\sfrac{9}{2}}</mrow>
+                    <mrow>&amp;=-\frac{28}{\sqrt{t^{9}}}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>-\frac{28}{\sqrt{t^{9}}}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>T=\frac{4\sqrt[3]{t^7}}{t^2}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>T&amp;=\frac{4t^{\sfrac{7}{3}}}{t^2}</mrow>
+                    <mrow>&amp;=4t^{\sfrac{1}{3}}</mrow>
+                    <mrow>\lz{T}{t}&amp;=4\cdot\frac{1}{3}t^{-\sfrac{2}{3}}</mrow>
+                    <mrow>&amp;=\frac{4}{3\sqrt[3]{t^{2}}}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\frac{4}{3\sqrt[3]{t^{2}}}</m></p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup cols="2">
+            <introduction>
+                <p>Apply the constant factor and product rules of differentiation to find the first derivative of each of the following functions.   Write out the Leibniz notation for the product rule as applied to the given function. In each case take the derivative with respect to the independent variable suggested by the expression on the right side of the equal sign.  Make sure that you assign the proper name to the derivative function.</p> 
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>y=5\fe{\sin}{x}\fe{\cos}{x}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>y&amp;=5\fe{\sin}{x}\fe{\cos}{x}</mrow>
+                    <mrow>\lz{y}{x}&amp;=5\lzoo{x}{\fe{\sin}{x}\fe{\cos}{x}}</mrow>
+                    <mrow>&amp;=5\left[\lzoo{x}{\fe{\sin}{x}}\cdot\fe{\cos}{x}+\fe{\sin}{x}\cdot\lzoo{x}{\fe{\cos}{x}}\right]</mrow>
+                    <mrow>&amp;=5\left[\fe{\cos}{x}\cdot\fe{\cos}{x}+\fe{\sin}{x}\cdot-\fe{\sin}{x}\right]</mrow>
+                    <mrow>&amp;=5\left[\fe{\cos^2}{x}-\fe{\sin^2}{x}\right]</mrow>
+                    <mrow>&amp;=5\fe{\cos}{2x}&amp;\text{(optional simplification)}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>5\left[\fe{\cos^2}{x}-\fe{\sin^2}{x}\right]</m> or <m>5\fe{\cos}{2x}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=\frac{5t^2e^t}{7}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>y&amp;=\frac{5}{7}t^2e^t</mrow>
+                    <mrow>\lz{y}{t}&amp;=\frac{5}{7}\lzoo{t}{t^2e^t}</mrow>
+                    <mrow>&amp;=\frac{5}{7}\left[\lzoo{t}{t^2}\cdot e^t+t^2\cdot\lzoo{t}{e^t}\right]</mrow>
+                    <mrow>&amp;=\frac{5}{7}\left[2t\cdot e^t+t^2\cdot e^t\right]</mrow>
+                    <mrow>&amp;=\frac{5}{7}te^t(2+t)</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\frac{5}{7}te^t(2+t)</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{F}{x}=4x\fe{\ln}{x}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{\fd{F}}{x}&amp;=4\lz{x}{x\fe{\ln}{x}}</mrow>
+                    <mrow>&amp;=4\left[\lz{x}{x}\cdot\fe{\ln}{x}+x\cdot\lzoo{x}{\fe{\ln}{x}}\right]</mrow>
+                    <mrow>&amp;=4\left[1\cdot\fe{\ln}{x}+x\cdot\frac{1}{x}\right]</mrow>
+                    <mrow>&amp;=4(\fe{\ln}{x}+1)</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>4(\fe{\ln}{x}+1)</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>z=x^2\fe{\sin^{-1}}{x}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>z&amp;=x^2\fe{\sin^{-1}}{x}</mrow>
+                    <mrow>\lz{z}{x}&amp;=\lzoo{x}{x^2\fe{\sin^{-1}}{x}}</mrow>
+                    <mrow>&amp;=\lzoo{x}{x^2}\cdot\fe{\sin^{-1}}{x}+x^2\cdot\lzoo{x}{\fe{\sin^{-1}}{x}}</mrow>
+                    <mrow>&amp;=2x\cdot\fe{\sin^{-1}}{x}+x^2\cdot\frac{1}{\sqrt{1-x^2}}</mrow>
+                    <mrow>&amp;=2x\fe{\sin^{-1}}{x}+\frac{x^2}{\sqrt{1-x^2}}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>2x\fe{\sin^{-1}}{x}+\frac{x^2}{\sqrt{1-x^2}}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{T}{t}=(t^2+1)\fe{\tan^{-1}}{t}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{T}{t}&amp;=(t^2+1)\fe{\tan^{-1}}{t}</mrow>
+                    <mrow>\fe{\fd{T}}{t}&amp;=\lzoo{t}{(t^2+1)\fe{\tan^{-1}}{t}}</mrow>
+                    <mrow>&amp;=\lzoo{t}{t^2+1}\cdot\fe{\tan^{-1}}{t}+(t^2+1)\cdot\lzoo{t}{\fe{\tan^{-1}}{t}}</mrow>
+                    <mrow>&amp;=2t\cdot\fe{\tan^{-1}}{t}+(t^2+1)\cdot\frac{1}{1+t^2}</mrow>
+                    <mrow>&amp;=2t\fe{\tan^{-1}}{t}+1</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>2t\fe{\tan^{-1}}{t}+1</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>T=\frac{x^77^x}{3}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>T&amp;=\frac{1}{3}x^77^x</mrow>
+                    <mrow>\lz{T}{x}&amp;=\frac{1}{3}\lzoo{x}{x^77^x}</mrow>
+                    <mrow>&amp;=\frac{1}{3}\left[\lzoo{x}{x^7}\cdot7^x+x^7\cdot\lzoo{x}{7^x}\right]</mrow>
+                    <mrow>&amp;=\frac{1}{3}\left[7x^6\cdot7^x+x^7\cdot7^x\fe{\ln}{7}\right]</mrow>
+                    <mrow>&amp;=\frac{x^67^x}{3}(7+x\fe{\ln}{7})</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\frac{x^67^x}{3}(7+x\fe{\ln}{7})</m></p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup cols="2">
+            <introduction>
+                <p>Apply the constant factor and quotient rules of differentiation to find the first derivative of each of the following functions.   Write out the Leibniz notation for the quotient rule as applied to the given function. In each case take the derivative with respect to the independent variable suggested by the expression on the right side of the equal sign.  Make sure that you assign the proper name to the derivative function.</p> 
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>\fe{q}{\theta}=\frac{4e^{\theta}}{e^\theta+1}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{q}{\theta}&amp;=4\frac{e^{\theta}}{e^\theta+1}</mrow>
+                    <mrow>\fe{\fd{q}}{\theta}&amp;=4\frac{\lzoo{\theta}{e^{\theta}}\cdot\left(e^\theta+1\right)-e^{\theta}\cdot\lzoo{\theta}{e^\theta+1}}{\left(e^\theta+1\right)^2}</mrow>
+                    <mrow>&amp;=4\frac{e^{\theta}\cdot\left(e^\theta+1\right)-e^{\theta}\cdot e^\theta}{\left(e^\theta+1\right)^2}</mrow>
+                    <mrow>&amp;=4\frac{e^{\theta}}{\left(e^\theta+1\right)^2}</mrow>
+                    <mrow>&amp;=\frac{4e^{\theta}}{\left(e^\theta+1\right)^2}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\frac{4e^{\theta}}{\left(e^\theta+1\right)^2}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{u}{x}=2\frac{\fe{\ln}{x}}{x^4}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{u}{x}&amp;=2\frac{\fe{\ln}{x}}{x^4}</mrow>
+                    <mrow>\fe{\fd{u}}{x}&amp;=2\frac{\lzoo{x}{\fe{\ln}{x}}\cdot x^4-\fe{\ln}{x}\cdot\lzoo{x}{x^4}}{x^8}</mrow>
+                    <mrow>&amp;=2\frac{\frac{1}{x}\cdot x^4-\fe{\ln}{x}\cdot4x^3}{x^8}</mrow>
+                    <mrow>&amp;=2\frac{x^3-4\fe{\ln}{x}\cdot x^3}{x^8}</mrow>
+                    <mrow>&amp;=2\frac{1-4\fe{\ln}{x}}{x^5}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>2\frac{1-4\fe{\ln}{x}}{x^5}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>F=\frac{\sqrt{t}}{3t^2-5\sqrt{t^3}}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>F&amp;=\frac{\sqrt{t}}{3t^2-5\sqrt{t^3}}</mrow>
+                    <mrow>&amp;=\frac{t^{\sfrac{1}{2}}}{3t^2-5t^{\sfrac{3}{2}}}</mrow>
+                    <mrow>&amp;=\frac{1}{3t^{\sfrac{3}{2}}-5t}</mrow>
+                    <mrow>\lz{F}{t}&amp;=\frac{\lzoo{t}{1}\cdot \left(3t^{\sfrac{3}{2}}-5t\right)-1\cdot\lzoo{t}{3t^{\sfrac{3}{2}}-5t}}{\left(3t^{\sfrac{3}{2}}-5t\right)^2}</mrow>
+                    <mrow>&amp;=\frac{0\cdot \left(3t^{\sfrac{3}{2}}-5t\right)-1\cdot\left(3\cdot\frac{3}{2}t^{\sfrac{1}{2}}-5\right)}{\left(3t^{\sfrac{3}{2}}-5t\right)^2}</mrow>
+                    <mrow>&amp;=\frac{-\frac{9}{2}t^{\sfrac{1}{2}}+5}{\left(3t^{\sfrac{3}{2}}-5t\right)^2}</mrow>
+                    <mrow>&amp;=\frac{-9\sqrt{t}+10}{2\left(3\sqrt{t^3}-5t\right)^2}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\frac{-9\sqrt{t}+10}{2\left(3\sqrt{t^3}-5t\right)^2}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{F}{x}=\frac{\fe{\tan}{x}}{\fe{\tan^{-1}}{x}}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{F}{x}&amp;=\frac{\fe{\tan}{x}}{\fe{\tan^{-1}}{x}}</mrow>
+                    <mrow>\fe{\fd{F}}{x}&amp;=\frac{\lzoo{x}{\fe{\tan}{x}}\cdot \fe{\tan^{-1}}{x}-\fe{\tan}{x}\cdot\lzoo{x}{\fe{\tan^{-1}}{x}}}{\left(\fe{\tan^{-1}}{x}\right)^2}</mrow>
+                    <mrow>&amp;=\frac{\fe{\sec^2}{x}\cdot \fe{\tan^{-1}}{x}-\fe{\tan}{x}\cdot\frac{1}{1+x^2}}{\left(\fe{\tan^{-1}}{x}\right)^2}</mrow>
+                    <mrow>&amp;=\frac{\fe{\sec^2}{x}\fe{\tan^{-1}}{x}-\frac{\fe{\tan}{x}}{1+x^2}}{\left(\fe{\tan^{-1}}{x}\right)^2}\frac{1+x^2}{1+x^2}</mrow>
+                    <mrow>&amp;=\frac{\fe{\sec^2}{x}\fe{\tan^{-1}}{x}\left(1+x^2\right)-\fe{\tan}{x}}{\left(\fe{\tan^{-1}}{x}\right)^2\left(1+x^2\right)}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\frac{\fe{\sec^2}{x}\fe{\tan^{-1}}{x}\left(1+x^2\right)-\fe{\tan}{x}}{\left(\fe{\tan^{-1}}{x}\right)^2\left(1+x^2\right)}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>p=\frac{\fe{\tan^{-1}}{t}}{1+t^2}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>p&amp;=\frac{\fe{\tan^{-1}}{t}}{1+t^2}</mrow>
+                    <mrow>\lz{p}{t}&amp;=\frac{\lzoo{t}{\fe{\tan^{-1}}{x}}\cdot\left(1+t^2\right)-\fe{\tan^{-1}}{t}\cdot\lzoo{t}{1+t^2}}{\left(1+t^2\right)^2}</mrow>
+                    <mrow>&amp;=\frac{\frac{1}{1+t^2}\cdot\left(1+t^2\right)-\fe{\tan^{-1}}{t}\cdot2t}{\left(1+t^2\right)^2}</mrow>
+                    <mrow>&amp;=\frac{1-2t\fe{\tan^{-1}}{t}}{\left(1+t^2\right)^2}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\frac{1-2t\fe{\tan^{-1}}{t}}{\left(1+t^2\right)^2}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=\frac{4}{\fe{\sin}{\beta}-2\fe{\cos}{\beta}}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>y&amp;=\frac{4}{\fe{\sin}{\beta}-2\fe{\cos}{\beta}}</mrow>
+                    <mrow>\lz{y}{\beta}&amp;=\frac{\lzoo{\beta}{4}\cdot\left(\fe{\sin}{\beta}-2\fe{\cos}{\beta}\right)-4\cdot\lzoo{\beta}{\fe{\sin}{\beta}-2\fe{\cos}{\beta}}}{\left(\fe{\sin}{\beta}-2\fe{\cos}{\beta}\right)^2}</mrow>
+                    <mrow>&amp;=\frac{0\cdot\left(\fe{\sin}{\beta}-2\fe{\cos}{\beta}\right)-4\cdot\left(\fe{\cos}{\beta}+2\fe{\sin}{\beta}\right)}{\left(\fe{\sin}{\beta}-2\fe{\cos}{\beta}\right)^2}</mrow>
+                    <mrow>&amp;=\frac{-4\left(\fe{\cos}{\beta}+2\fe{\sin}{\beta}\right)}{\left(\fe{\sin}{\beta}-2\fe{\cos}{\beta}\right)^2}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\frac{-4\left(\fe{\cos}{\beta}+2\fe{\sin}{\beta}\right)}{\left(\fe{\sin}{\beta}-2\fe{\cos}{\beta}\right)^2}</m></p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <p>Multiple applications of the product rule are required when finding the derivative formula of the product of three of more functions.  After simplification, however, the predictable pattern shown below emerges.<md>
+                <mrow>\lzoo{x}{fg}&amp;=\lzoo{x}{f}g+f\lzoo{x}{g}</mrow> 
+                <mrow>\lzoo{x}{fgh}&amp;=\lzoo{x}{f}gh+f\lzoo{x}{g}h+fg\lzoo{x}{h}</mrow> 
+                <mrow>\lzoo{x}{fghk}&amp;=\lzoo{x}{f}ghk+f\lzoo{x}{g}hk+fg\lzoo{x}{h}k+fgh\lzoo{x}{k}</mrow> 
+                </md></p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Apply the product rule twice to the expression <m>\lzoo{x}{\fe{f}{x}\fe{g}{x}\fe{h}{x}}</m>  to verify the 
+formula stated above for the product of three functions.  The first application of the product rule is shown below to help you get you started.<md>
+                    <mrow>\lzoo{x}{\fe{f}{x}\fe{g}{x}\fe{h}{x}}&amp;=\lzoo{x}{\left(\fe{f}{x}\right)\cdot\left[\fe{g}{x}\fe{h}{x}\right]}</mrow> 
+                    </md></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\lzoo{x}{\fe{f}{x}\fe{g}{x}\fe{h}{x}}&amp;=\lzoo{x}{\fe{f}{x}\cdot\left[\fe{g}{x}\fe{h}{x}\right]}</mrow>
+                    <mrow>&amp;=\lzo{x}{\fe{f}{x}}\cdot\left[\fe{g}{x}\fe{h}{x}\right]+\fe{f}{x}\cdot\lzoo{x}{\fe{g}{x}\fe{h}{x}}</mrow>
+                    <mrow>&amp;=\lzo{x}{\fe{f}{x}}\cdot\left[\fe{g}{x}\fe{h}{x}\right]+\fe{f}{x}\cdot\left[\lzo{x}{\fe{g}{x}}\cdot\fe{h}{x}+\fe{g}{x}\cdot\lzo{x}{\fe{h}{x}}\right]</mrow>
+                    <mrow>&amp;=\lzo{x}{\fe{f}{x}}\fe{g}{x}\fe{h}{x}+\fe{f}{x}\lzo{x}{\fe{g}{x}}\fe{h}{x}+\fe{f}{x}\fe{g}{x}\lzo{x}{\fe{h}{x}}</mrow>
+                    <mrow>&amp;=\fe{\fd{f}}{x}\fe{g}{x}\fe{h}{x}+\fe{f}{x}\fe{\fd{g}}{x}\fe{h}{x}+\fe{f}{x}\fe{g}{x}\fe{\fd{h}}{x}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p>See the solutions section.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                     <p>Apply the formula shown for the product of four functions to determine the derivative with respect to <m>x</m> of the function <m>x^2e^x\fe{\sin}{x}\fe{\cos}{x}</m>.</p>
+                </statement>
+                <solution>
+                     <p><md>
+                     <mrow>\fe{f}{x}&amp;=x^2e^x\fe{\sin}{x}\fe{\cos}{x}</mrow>
+                     <mrow>\fe{\fd{f}}{x}&amp;=\lzoo{x}{x^2}e^x\fe{\sin}{x}\fe{\cos}{x}+x^2\lzoo{x}{e^x}\fe{\sin}{x}\fe{\cos}{x}+x^2e^x\lzoo{x}{\fe{\sin}{x}}\fe{\cos}{x}+x^2e^x\fe{\sin}{x}\lzoo{x}{\fe{\cos}{x}}</mrow>
+                     <mrow>&amp;=2xe^x\fe{\sin}{x}\fe{\cos}{x}+x^2e^x\fe{\sin}{x}\fe{\cos}{x}+x^2e^x\fe{\cos}{x}\fe{\cos}{x}+x^2e^x\fe{\sin}{x}\cdot-\fe{\sin}{x}</mrow>
+                     <mrow>&amp;=xe^x\left(2\fe{\sin}{x}\fe{\cos}{x}+x\fe{\sin}{x}\fe{\cos}{x}+x\fe{\cos^2}{x}-x\fe{\sin^2}{x}\right)</mrow>
+                     </md></p>
+                </solution>
+                <answer>
+                     <p><m>xe^x\left(2\fe{\sin}{x}\fe{\cos}{x}+x\fe{\sin}{x}\fe{\cos}{x}+x\fe{\cos^2}{x}-x\fe{\sin^2}{x}\right)</m></p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup cols="2">
+            <introduction>
+                <p>Find the first derivative with respect to <m>x</m> for each of the following functions and for each function find the equation of the tangent line at the stated value of <m>x</m>.  Make sure that you use appropriate techniques of differentiation.</p> 
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>\fe{f}{x}=\frac{x^3+x^2}{x}</m>; tangent line at <m>5</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{f}{x}&amp;=\frac{x^3+x^2}{x}</mrow>
+                    <mrow>&amp;=x^2+x&amp; x\neq0</mrow>
+                    <mrow>\fe{\fd{f}}{x}&amp;=2x+1&amp; x\neq0</mrow>
+                    </md><m>\fe{f}{5}=30</m> and <m>\fe{\fd{f}}{5}=11</m>, so the tangent line to <m>f</m> at <m>5</m> passes through the point <m>\point{5}{30}</m> and has a slope of <m>11</m>.  The equation of this line is <m>y=11(x-5)+30</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>y=11(x-5)+30</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{h}{x}=\frac{x}{1+x}</m>; tangent line at <m>-2</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{f}{x}&amp;=\frac{x}{1+x}</mrow>
+                    <mrow>\fe{\fd{h}}{x}&amp;=\frac{1\cdot(1+x)-x\cdot1}{(1+x)^2}</mrow>
+                    <mrow>&amp;=\frac{1}{(1+x)^2}</mrow>
+                    </md><m>\fe{f}{-2}=2</m> and <m>\fe{\fd{f}}{-2}=1</m>, so the tangent line to <m>f</m> at <m>-2</m> passes through the point <m>\point{-2}{2}</m> and has a slope of <m>1</m>.  The equation of this line is <m>y=1(x-(-2))+2</m>, or just <m>y=x+4</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>y=x+4</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{K}{x}=\frac{1+x}{2x+2}</m>; tangent line at <m>8</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{K}{x}&amp;=\frac{1+x}{2x+2}</mrow>
+                    <mrow>&amp;=\frac{1+x}{2(x+1)}</mrow>
+                    <mrow>&amp;=\frac{1}{2}&amp;x\neq-1</mrow>
+                    <mrow>\fe{\fd{K}}{x}&amp;=0&amp;x\neq-1</mrow>
+                    </md><m>\fe{K}{8}=\frac{1}{2}</m> and <m>\fe{\fd{K}}{8}=0</m>, so the tangent line to <m>K</m> at <m>8</m> passes through the point <m>\point{8}{\frac{1}{2}}</m> and has a slope of <m>0</m>.  The equation of this line is <m>y=\frac{1}{2}</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>y=\frac{1}{2}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{r}{x}=3\sqrt[3]{x}e^x</m>; tangent line at <m>0</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{r}{x}&amp;=3\sqrt[3]{x}e^x</mrow>
+                    <mrow>&amp;=3x^{\sfrac{1}{3}}e^x</mrow>
+                    <mrow>\fe{\fd{r}}{x}&amp;=3\left(\frac{1}{3}x^{-\sfrac{2}{3}}e^x+x^{\sfrac{1}{3}}e^x\right)</mrow>
+                    <mrow>\fe{\fd{r}}{x}&amp;=x^{-\sfrac{2}{3}}e^x+3x^{\sfrac{1}{3}}e^x</mrow>
+                    <mrow>\fe{\fd{r}}{x}&amp;=\frac{e^x}{\sqrt[3]{x^2}}+3\sqrt[3]{x}e^x</mrow>
+                    </md><m>\fe{r}{0}=0</m> and <m>\fe{\fd{r}}{0}</m> is undefined. But <m>\lim_{x\to0^{-}}\fe{\fd{r}}{x}=\infty</m> and <m>\lim_{x\to0^{+}}\fe{\fd{r}}{x}=\infty</m>, so there is a tangent line to <m>f</m> at <m>0</m> that is vertical. The equation of this line is <m>x=0</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>x=0</m></p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercise>
+            <statement>
+                <p>Find the second derivative of <m>y</m> with respect to <m>t</m> if <m>y=4\sqrt{t}\,t^5</m>.  Make sure that you use appropriate techniques of differentiation and that you use proper notation on both sides of the equal sign.</p>
+            </statement>
+            <solution>
+                <p><md>
+                <mrow>y&amp;=4\sqrt{t}\,t^5</mrow>
+                <mrow>&amp;=4t^{\sfrac{11}{2}}</mrow>
+                <mrow>\lz{y}{t}&amp;=4\cdot\frac{11}{2}t^{\sfrac{9}{2}}</mrow>
+                <mrow>&amp;=22t^{\sfrac{9}{2}}</mrow>
+                <mrow>\lzn{2}{y}{t}&amp;=22\cdot\frac{9}{2}t^{\sfrac{7}{2}}</mrow>
+                <mrow>&amp;=99t^{\sfrac{7}{2}}</mrow>
+                <mrow>&amp;=99\sqrt{t^7}</mrow>
+                </md></p>
+            </solution>
+            <answer>
+                <p><m>\lzn{2}{y}{t}=99\sqrt{t^7}</m></p>
+            </answer>
+        </exercise>
+        <exercisegroup>
+            <introduction>
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>A function <m>f</m> is shown in <xref ref="figure-analyze-intervals-supplement"/>. Each question below is in reference to this function.  Please note that the numeric endpoints of each interval answer are all integers.</p> 
+                    </paragraphs>
+                    <figure valign="top" width="40%" xml:id="figure-analyze-intervals-supplement">
+                        <caption><m>f</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xmin=-10,xmax=10,ymin=-30,ymax=170,
+                                     xtick={-8,-6,...,8}, minor xtick={-10,-9,...,10},
+                                     ytick={-20,0,...,160}, minor ytick={-30,-20,...,170}]
+                                \addplot+[samples=100,
+                                    domain=-9.8:7.2,
+                                ]{x^3/3+3*x^2-16*x};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </introduction>
+            <exercise xml:id="exercise-analyze-intervals-from-graph-first">
+                <statement>
+                    <p>Over what intervals is <m>\fd{f}</m> positive and over what intervals is <m>\fd{f}</m> negative?</p> 
+                </statement>
+                <solution>
+                    <p><m>\fd{f}</m> is positive over <m>\ointerval{-\infty}{-8}</m> and <m>\ointerval{2}{\infty}</m>. <m>\fd{f}</m> is negative over <m>\ointerval{-8}{2}</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>\fd{f}</m> positive over <m>\ointerval{-\infty}{-8}</m> and <m>\ointerval{2}{\infty}</m>; negative over <m>\ointerval{-8}{2}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Over what intervals is <m>\fd{f}</m> increasing and over what intervals is <m>\fd{f}</m> decreasing?</p> 
+                </statement>
+                <solution>
+                    <p><m>\fd{f}</m> is increasing over <m>\ointerval{-3}{\infty}</m>. <m>\fd{f}</m> is decreasing over <m>\ointerval{-\infty}{-3}</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>\fd{f}</m> increasing over <m>\ointerval{-3}{\infty}</m>; decreasing over <m>\ointerval{-\infty}{-3}</m></p>
+                </answer>
+            </exercise>
+            <exercise xml:id="exercise-analyze-intervals-from-graph-third">
+                <statement>
+                    <p>Over what intervals is <m>\sd{f}</m> positive and over what intervals is <m>\sd{f}</m> negative?</p> 
+                </statement>
+                <solution>
+                    <p>This is essentially the same exercise as the previous exercise. <m>\sd{f}</m> is positive over <m>\ointerval{-\infty}{-8}</m> and <m>\ointerval{2}{\infty}</m>. <m>\sd{f}</m> is negative over <m>\ointerval{-8}{2}</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>\sd{f}</m> positive over <m>\ointerval{-\infty}{-8}</m> and <m>\ointerval{2}{\infty}</m>; negative over <m>\ointerval{-8}{2}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The formula for <m>f</m> is <m>\fe{f}{x}=\frac{x^3}{3}+3x^2-16x</m>.  Find the formulas for <m>\fd{f}</m> and <m>\sd{f}</m>, and then graph the derivatives and verify your answers to <xref autoname="plural" ref="exercise-analyze-intervals-from-graph-first"/><ndash/><xref autoname="no" ref="exercise-analyze-intervals-from-graph-third"/>.</p> 
+                </statement>
+                <solution>
+                    <sidebyside>
+                        <paragraphs valign="top" width="30%">
+                            <p><md>
+                            <mrow>\fe{f}{x}&amp;=\frac{x^3}{3}+3x^2-16x</mrow>
+                            <mrow>\fe{\fd{f}}{x}&amp;=x^2+6x-16</mrow>
+                            <mrow>\fe{\sd{f}}{x}&amp;=2x+6</mrow>
+                            </md></p>
+                        </paragraphs>
+                        <figure valign="top" width="30%" xml:id="figure-analyze-intervals-supplement-derivative">
+                            <caption><m>\fd{f}</m></caption>
+                            <image>
+                                <latex-image-code>
+                                <![CDATA[\begin{tikzpicture}
+                                \begin{axis}[xmin=-10,xmax=10,ymin=-30,ymax=170,
+                                         xtick={-8,-6,...,8}, minor xtick={-10,-9,...,10},
+                                         ytick={-20,0,...,160}, minor ytick={-30,-20,...,170}]
+                                    \addplot+[samples=100,
+                                        domain=-9.8:9.8,
+                                    ]{x^2+6*x-16};
+                                \end{axis}
+                                \end{tikzpicture}]]>
+                                </latex-image-code>
+                            </image>
+                        </figure>
+                        <figure valign="top" width="30%" xml:id="figure-analyze-intervals-supplement-2nd-derivative">
+                            <caption><m>\sd{f}</m></caption>
+                            <image>
+                                <latex-image-code>
+                                <![CDATA[\begin{tikzpicture}
+                                \begin{axis}[xmin=-10,xmax=10,ymin=-30,ymax=170,
+                                         xtick={-8,-6,...,8}, minor xtick={-10,-9,...,10},
+                                         ytick={-20,0,...,160}, minor ytick={-30,-20,...,170}]
+                                    \addplot+[samples=100,
+                                        domain=-9.8:9.8,
+                                    ]{2*x+6};
+                                \end{axis}
+                                \end{tikzpicture}]]>
+                                </latex-image-code>
+                            </image>
+                        </figure>
+                    </sidebyside>
+                </solution>
+                <answer>
+                    <p><m>\fe{\fd{f}}{x}=x^2+6x-16</m>, <m>\fe{\sd{f}}{x}=2x+6</m></p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>A function <m>g</m> is shown in <xref ref="figure-second-analyze-intervals-supplement"/>. Each question below is in reference to this function.</p> 
+                    </paragraphs>
+                    <figure valign="top" width="40%" xml:id="figure-second-analyze-intervals-supplement">
+                        <caption><m>g</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xmin=-1.047197551,xmax=7.068583471,xlabel={$t$},
+                                     xtick={0.7854, 1.5708, 2.3562, 3.14159, 3.927, 4.7123889, 5.4978, 6.28318},
+                                     minor xtick={-1.047197551,-0.785398163,...,7.068583471},
+                                     xticklabels={$\frac{\pi}{4}$,$\frac{\pi}{2}$,$\frac{3\pi}{4}$,$\pi$,$\frac{5\pi}{4}$,$\frac{3\pi}{2}$,$\frac{7\pi}{4}$,$2\pi$}]
+                                \addplot+[samples=100,
+                                    domain=-1:7,
+                                ]{3*sin(x*360/6.283185311)+3*(sin(x*360/6.283185311))^2-5};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+            </introduction>
+            <exercise xml:id="exercise-second-analyze-intervals-supplement-first">
+                <statement>
+                    <p>Where over the interval <m>\cinterval{0}{2\pi}</m> does <m>\fe{\fd{g}}{t}=0</m>?  Please note that the <m>t</m>-scale in <xref ref="figure-second-analyze-intervals-supplement"/> is <m>\frac{\pi}{12}</m>.</p> 
+                </statement>
+                <solution>
+                    <p>Over the interval <m>\cinterval{0}{2\pi}</m>, <m>\fe{\fd{g}}{t}=0</m> at <m>\frac{\pi}{2},\frac{7\pi}{6},\frac{3\pi}{2}</m>, and <m>\frac{11\pi}{6}</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>\frac{\pi}{2},\frac{7\pi}{6},\frac{3\pi}{2}</m>, and <m>\frac{11\pi}{6}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The formula for <m>g</m> is <m>\fe{g}{t}=3\fe{\sin}{t}+3\fe{\sin^2}{t}-5</m>.  Find the formula for <m>\fd{g}</m> and use that formula to solve the equation <m>\fe{\fd{g}}{t}=0</m> over the interval <m>\cinterval{0}{2\pi}</m>.  Compare your answers to those found in <xref ref="exercise-second-analyze-intervals-supplement-first"/>.</p> 
+                </statement>
+                <hint>
+                    <p><m>\fe{\sin^2}{t}=\fe{\sin}{t}\cdot\fe{\sin}{t}</m></p>
+                </hint>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{g}{t}&amp;=3\fe{\sin}{t}+3\fe{\sin^2}{t}-5</mrow>
+                    <mrow>\fe{g}{t}&amp;=3\fe{\sin}{t}+3\fe{\sin}{t}\cdot\fe{\sin}{t}-5</mrow>
+                    <mrow>\fe{\fd{g}}{t}&amp;=3\fe{\cos}{t}+3\left(\lzoo{t}{\fe{\sin}{t}}\cdot\fe{\sin}{t}+\fe{\sin}{t}\cdot\lzoo{t}{\fe{\sin}{t}}\right)</mrow>
+                    <mrow>\fe{\fd{g}}{t}&amp;=3\fe{\cos}{t}+3\left(\fe{\cos}{t}\cdot\fe{\sin}{t}+\fe{\sin}{t}\cdot\fe{\cos}{t}\right)</mrow>
+                    <mrow>\fe{\fd{g}}{t}&amp;=3\fe{\cos}{t}+6\fe{\cos}{t}\fe{\sin}{t}</mrow>
+                    <mrow>\fe{\fd{g}}{t}&amp;=3\fe{\cos}{t}\left(1+2\fe{\sin}{t}\right)</mrow>
+                    </md>So <m>\fe{\fd{g}}{t}=0</m> where <m>\fe{\cos}{t}=0</m> and where <m>\fe{\sin}{t}=-\frac{1}{2}</m>. Over <m>\cinterval{0}{2\pi}</m>, <m>\fe{\cos}{t}=0</m> at <m>t=\frac{\pi}{2}</m> and <m>t=\frac{3\pi}{2}</m>. Over <m>\cinterval{0}{2\pi}</m>, <m>\fe{\sin}{t}=-\frac{1}{2}</m> at <m>t=\frac{7\pi}{6}</m> and <m>t=\frac{11\pi}{6}</m>. This agrees with the answer to <xref ref="exercise-second-analyze-intervals-supplement-first"/>.</p>
+                </solution>
+                <answer>
+                    <p><m>\fe{\fd{g}}{t}=3\fe{\cos}{t}\left(1+2\fe{\sin}{t}\right)</m>, with zeros at <m>\frac{\pi}{2},\frac{7\pi}{6},\frac{3\pi}{2}</m>, and <m>\frac{11\pi}{6}</m></p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercise>
+            <statement>
+                <p>Find the equation of the tangent line to <m>\fd{f}</m> at <m>\pi</m> if <m>\fe{f}{x}=\fe{\sin}{2x}</m>.</p>
+            </statement>
+            <hint>
+                <p>Begin by applying a double angle identity.  Also, make sure that you read the question carefully.</p>
+            </hint>
+            <solution>
+                <p><md>
+                <mrow>\fe{f}{x}&amp;=\fe{\sin}{2x}</mrow>
+                <mrow>&amp;=2\fe{\sin}{x}\fe{\cos}{x}</mrow>
+                <mrow>\fe{\fd{f}}{x}&amp;=2\left(\lzoo{x}{\fe{\sin}{x}}\cdot\fe{\cos}{x}+\fe{\sin}{x}\cdot\lzoo{x}{\fe{\cos}{x}}\right)</mrow>
+                <mrow>&amp;=2\left(\fe{\cos}{x}\cdot\fe{\cos}{x}+\fe{\sin}{x}\cdot-\fe{\sin}{x}\right)</mrow>
+                <mrow>&amp;=2\left(\fe{\cos}{x}\cdot\fe{\cos}{x}-\fe{\sin}{x}\cdot\fe{\sin}{x}\right)</mrow>
+                <mrow>\fe{\sd{f}}{x}&amp;=2\left(\lzoo{x}{\fe{\cos}{x}}\cdot\fe{\cos}{x}+\fe{\cos}{x}\cdot\lzoo{x}{\fe{\cos}{x}}-\lzoo{x}{\fe{\sin}{x}}\cdot\fe{\sin}{x}-\fe{\sin}{x}\cdot\lzoo{x}{\fe{\sin}{x}}\right)</mrow>
+                <mrow>&amp;=2\left(-\fe{\sin}{x}\cdot\fe{\cos}{x}+\fe{\cos}{x}\cdot-\fe{\sin}{x}-\fe{\cos}{x}\cdot\fe{\sin}{x}-\fe{\sin}{x}\cdot\fe{\cos}{x}\right)</mrow>
+                <mrow>&amp;=2\left(-4\fe{\sin}{x}\fe{\cos}{x}\right)</mrow>
+                <mrow>&amp;=-8\fe{\sin}{x}\fe{\cos}{x}</mrow>
+                </md><m>\fe{\fd{f}}{\pi}=2</m>, and <m>\fe{\sd{f}}{\pi}=0</m>, so the tangent line to <m>\fd{f}</m> at <m>\pi</m> passes through <m>\point{\pi}{2}</m> and has a slope of <m>0</m>. The equation of this line is <m>y=2</m>.</p>
+            </solution>
+            <answer>
+                <p><m>y=2</m></p>
+            </answer>
+        </exercise>
+        <exercisegroup>
+            <introduction>
+                <sidebyside>
+                <paragraphs valign="top">
+                    <p>In <xref ref="table-functions-for-derivative-rules"/> several function and derivative values are given for the functions <m>f</m> and <m>g</m>.  The exercises that follow are based upon these two functions.</p>
+                </paragraphs>
+                <table xml:id="table-functions-for-derivative-rules" valign="top" width="65%">
+                    <tabular top="major">
+                        <col halign="right"/>
+                        <col halign="right"/>
+                        <col halign="right"/>
+                        <col halign="right"/>
+                        <col halign="right"/>
+                        <col halign="right"/>
+                        <col halign="right"/>
+                        <row bottom="medium">
+                            <cell><m>x</m></cell>
+                            <cell><m>\fe{f}{x}</m></cell>
+                            <cell><m>\fe{\fd{f}}{x}</m></cell>
+                            <cell><m>\fe{\sd{f}}{x}</m></cell>
+                            <cell><m>\fe{g}{x}</m></cell>
+                            <cell><m>\fe{\fd{f}}{x}</m></cell>
+                            <cell><m>\fe{\sd{f}}{x}</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>0</m></cell>
+                            <cell><m>2</m></cell>
+                            <cell><m>-1</m></cell>
+                            <cell><m>-2</m></cell>
+                            <cell><m>-3</m></cell>
+                            <cell><m>-3</m></cell>
+                            <cell><m>-2</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>1</m></cell>
+                            <cell><m>1</m></cell>
+                            <cell><m>0</m></cell>
+                            <cell><m>4</m></cell>
+                            <cell><m>-5</m></cell>
+                            <cell><m>2</m></cell>
+                            <cell><m>16</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>2</m></cell>
+                            <cell><m>4</m></cell>
+                            <cell><m>7</m></cell>
+                            <cell><m>10</m></cell>
+                            <cell><m>11</m></cell>
+                            <cell><m>37</m></cell>
+                            <cell><m>58</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>3</m></cell>
+                            <cell><m>15</m></cell>
+                            <cell><m>20</m></cell>
+                            <cell><m>16</m></cell>
+                            <cell><m>87</m></cell>
+                            <cell><m>126</m></cell>
+                            <cell><m>124</m></cell>
+                        </row>
+                        <row bottom="major">
+                            <cell><m>4</m></cell>
+                            <cell><m>46</m></cell>
+                            <cell><m>39</m></cell>
+                            <cell><m>22</m></cell>
+                            <cell><m>289</m></cell>
+                            <cell><m>293</m></cell>
+                            <cell><m>214</m></cell>
+                        </row>
+                    </tabular>
+                    <caption/>
+                </table>
+                </sidebyside>
+                <p>Suppose that you were asked to find the value of <m>\fe{\fd{h}}{2}</m> where <m>\fe{h}{x}=\fe{f}{x}\fe{g}{x}</m>.  The first thing you would need to do is find a formula for <m>\fe{\fd{h}}{x}</m>.  You would then replace <m>x</m> with <m>2</m>, substitute the appropriate function and derivative values, and simplify.  This is illustrated below:<md>
+                <mrow>\fe{\fd{h}}{x}&amp;=\lzoo{x}{\fe{f}{x}}\fe{g}{x}+\fe{f}{x}\lzoo{x}{\fe{g}{x}}</mrow> 
+                <mrow>&amp;=\fe{\fd{f}}{x}\fe{g}{x}+\fe{f}{x}\fe{\fd{g}}{x}</mrow> 
+                <mrow>\fe{\fd{h}}{2}&amp;=\fe{\fd{f}}{2}\fe{g}{2}+\fe{f}{2}\fe{\fd{g}}{2}</mrow> 
+                <mrow>&amp;=7(11)+4(37)</mrow> 
+                <mrow>&amp;=225</mrow> 
+                </md>Following the process outlined in this example, find each of the following.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Find <m>\fe{\fd{h}}{4}</m>, where <m>\fe{h}{x}=\fe{f}{x}\fe{g}{x}</m>.</p>
+                </statement>
+                <solution>
+                    <p><md>            
+                    <mrow>\fe{\fd{h}}{x}&amp;=\lzoo{x}{\fe{f}{x}}\fe{g}{x}+\fe{f}{x}\lzoo{x}{\fe{g}{x}}</mrow>
+                    <mrow>&amp;=\fe{\fd{f}}{x}\fe{g}{x}+\fe{f}{x}\fe{\fd{g}}{x}</mrow>           
+                    <mrow>\fe{\fd{h}}{4}&amp;=\fe{\fd{f}}{4}\fe{g}{4}+\fe{f}{4}\fe{\fd{g}}{4}</mrow> 
+                    <mrow>&amp;=39(289)+46(293)</mrow> 
+                    <mrow>&amp;=24{,}749</mrow> 
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>24{,}749</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Find <m>\fe{\sd{h}}{2}</m>, where <m>\fe{h}{x}=\fe{f}{x}\fe{g}{x}</m>.</p>
+                </statement>
+                <solution>
+                    <p><md> 
+                    <mrow>\fe{\fd{h}}{x}&amp;=\lzoo{x}{\fe{f}{x}}\fe{g}{x}+\fe{f}{x}\lzoo{x}{\fe{g}{x}}</mrow>
+                    <mrow>&amp;=\fe{\fd{f}}{x}\fe{g}{x}+\fe{f}{x}\fe{\fd{g}}{x}</mrow>
+                    <mrow>\fe{\sd{h}}{x}&amp;=\lzoo{x}{\fe{\fd{f}}{x}}\fe{g}{x}+\fe{\fd{f}}{x}\lzoo{x}{\fe{g}{x}}+\lzoo{x}{\fe{f}{x}}\fe{\fd{g}}{x}+\fe{f}{x}\lzoo{x}{\fe{\fd{g}}{x}}</mrow>
+                    <mrow>&amp;=\fe{\sd{f}}{x}\fe{g}{x}+2\fe{\fd{f}}{x}\fe{\fd{g}}{x}+\fe{f}{x}\fe{\sd{g}}{x}</mrow>
+                    <mrow>\fe{\sd{h}}{2}&amp;=\fe{\sd{f}}{2}\fe{g}{2}+2\fe{\fd{f}}{2}\fe{\fd{g}}{2}+\fe{f}{2}\fe{\sd{g}}{2}</mrow> 
+                    <mrow>&amp;=10(11)+2(7)(37)+4(58)</mrow> 
+                    <mrow>&amp;=860</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>860</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Find <m>\fe{\fd{k}}{3}</m>, where <m>\fe{k}{x}=\frac{\fe{g}{x}}{\fe{f}{x}}</m>.</p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{\fd{k}}{x}&amp;=\frac{\lzoo{x}{\fe{g}{x}}\fe{f}{x}-\fe{g}{x}\lzoo{x}{\fe{f}{x}}}{(\fe{f}{x})^2}</mrow>
+                    <mrow>&amp;=\frac{\fe{\fd{g}}{x}\fe{f}{x}-\fe{g}{x}\fe{\fd{f}}{x}}{(\fe{f}{x})^2}</mrow>
+                    <mrow>\fe{\fd{k}}{3}&amp;=\frac{\fe{\fd{g}}{3}\fe{f}{3}-\fe{g}{3}\fe{\fd{f}}{3}}{(\fe{f}{3})^2}</mrow>
+                    <mrow>&amp;=\frac{126(15)-87(20)}{15^2}</mrow>
+                    <mrow>&amp;=\frac{2}{3}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\frac{2}{3}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Find <m>\fe{\fd{p}}{4}</m>, where <m>\fe{p}{x}=6\sqrt{x}\fe{f}{x}</m>.</p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{\fd{p}}{x}&amp;=6\left(\lzoo{x}{\sqrt{x}}\fe{f}{x}+\sqrt{x}\lzoo{x}{\fe{f}{x}}\right)</mrow>
+                    <mrow>&amp;=6\left(\frac{1}{2\sqrt{x}}\fe{f}{x}+\sqrt{x}\fe{\fd{f}}{x}\right)</mrow>
+                    <mrow>\fe{\fd{p}}{4}&amp;=6\left(\frac{1}{2\sqrt{4}}\fe{f}{4}+\sqrt{4}\fe{\fd{f}}{4}\right)</mrow>
+                    <mrow>&amp;=6\left(\frac{1}{4}(46)+2(39)\right)</mrow>
+                    <mrow>&amp;=537</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>537</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Find <m>\fe{\fd{r}}{1}</m>, where <m>\fe{r}{x}=\left(\fe{g}{x}\right)^2</m>.</p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{r}{x}&amp;=\fe{g}{x}\fe{g}{x}</mrow>
+                    <mrow>\fe{\fd{r}}{x}&amp;=\lzoo{x}{\fe{g}{x}}\fe{g}{x}+\fe{g}{x}\lzoo{x}{\fe{g}{x}}</mrow>
+                    <mrow>&amp;=\fe{\fd{g}}{x}\fe{g}{x}+\fe{g}{x}\fe{\fd{g}}{x}</mrow>
+                    <mrow>&amp;=2\fe{\fd{g}}{x}\fe{g}{x}</mrow>
+                    <mrow>\fe{\fd{r}}{1}&amp;=2\fe{\fd{g}}{1}\fe{g}{1}</mrow>
+                    <mrow>&amp;=2(2)(-5)</mrow>
+                    <mrow>&amp;=-20</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>-20</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Find <m>\fe{\fd{s}}{2}</m>, where <m>\fe{s}{x}=x\fe{g}{x}\fe{g}{x}</m>.</p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{\fd{s}}{x}&amp;=\lzoo{x}{x}\fe{f}{x}\fe{g}{x}+x\lzoo{x}{\fe{f}{x}}\fe{g}{x}+x\fe{f}{x}\lzoo{x}{\fe{g}{x}}</mrow>
+                    <mrow>&amp;=\fe{f}{x}\fe{g}{x}+x\fe{\fd{f}}{x}\fe{g}{x}+x\fe{f}{x}\fe{\fd{g}}{x}</mrow>
+                    <mrow>\fe{\fd{s}}{2}&amp;=\fe{f}{2}\fe{g}{2}+2\fe{\fd{f}}{2}\fe{g}{2}+2\fe{f}{2}\fe{\fd{g}}{2}</mrow>
+                    <mrow>&amp;=4(11)+2(7)(11)+2(4)(37)</mrow>
+                    <mrow>&amp;=494</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>494</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Find <m>\fe{\fd{F}}{4}</m>, where <m>\fe{F}{x}=\sqrt{x}\fe{g}{4}</m>.</p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{F}{x}&amp;=289\sqrt{x}</mrow>
+                    <mrow>\fe{\fd{F}}{x}&amp;=289\lzoo{x}{\sqrt{x}}</mrow>
+                    <mrow>&amp;=289\frac{1}{2\sqrt{x}}</mrow>
+                    <mrow>\fe{\fd{F}}{4}&amp;=289\frac{1}{2\sqrt{4}}</mrow>
+                    <mrow>&amp;=\frac{289}{4}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\frac{289}{4}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Find <m>\fe{\sd{T}}{0}</m>, where <m>\fe{T}{x}=\frac{\fe{f}{x}}{e^x}</m>.</p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{\fd{T}}{x}&amp;=\frac{\lzoo{x}{\fe{f}{x}}e^x-\fe{f}{x}\lzoo{x}{e^x}}{e^{2x}}</mrow>
+                    <mrow>&amp;=\frac{\fe{\fd{f}}{x}e^x-\fe{f}{x}e^x}{e^{2x}}</mrow>
+                    <mrow>&amp;=\frac{\fe{\fd{f}}{x}-\fe{f}{x}}{e^x}</mrow>
+                    <mrow>\fe{\sd{T}}{x}&amp;=\frac{\lzoo{x}{\fe{\fd{f}}{x}-\fe{f}{x}}e^x-\left(\fe{\fd{f}}{x}-\fe{f}{x}\right)\lzoo{x}{e^x}}{e^{2x}}</mrow>
+                    <mrow>&amp;=\frac{\left(\fe{\sd{f}}{x}-\fe{\fd{f}}{x}\right)e^x-\left(\fe{\fd{f}}{x}-\fe{f}{x}\right)e^x}{e^{2x}}</mrow>
+                    <mrow>&amp;=\frac{\fe{\sd{f}}{x}-\fe{\fd{f}}{x}-\fe{\fd{f}}{x}+\fe{f}{x}}{e^x}</mrow>
+                    <mrow>&amp;=\frac{\fe{\sd{f}}{x}-2\fe{\fd{f}}{x}+\fe{f}{x}}{e^x}</mrow>
+                    <mrow>\fe{\sd{T}}{0}&amp;=\frac{\fe{\sd{f}}{0}-2\fe{\fd{f}}{0}+\fe{f}{0}}{e^0}</mrow>
+                    <mrow>&amp;=\frac{-2-2(-1)+2}{1}</mrow>
+                    <mrow>&amp;=2</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>2</m></p>
+                </answer>
+            </exercise>
+
+        </exercisegroup>
+    </exercises>
+</section>
+
+

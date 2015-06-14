@@ -31,51 +31,54 @@
     </definition>
 
     <exercises>
-        <exercisegroup>
+        <exercisegroup cols="2">
             <introduction>
-                <p>Answer each of the following questions in reference to the function shown in <xref ref="figure-graph-features"/>. Each answer is an interval (or intervals) along the <m>x</m>-axis. Use interval notation when expressing your answers. Make each interval as wide as possible; that is, do not break an interval into pieces if the interval does not need to be broken up. Assume that the slope of the function is constant on <m>\ointerval{-\infty}{-5}</m>, <m>\ointerval{3}{4}</m>, and <m>\ointerval{4}{\infty}</m>.</p> 
-
-                <figure xml:id="figure-graph-features">
-                    <caption><m>y=\fe{f}{x}</m></caption>
-                    <image> 
-                        <latex-image-code>
-                        <![CDATA[\begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot[pccplot,
-                                domain=-6.7:-5,
-                                <-,
-                            ]{3};
-                            \addplot[pccplot,
-                                domain=-5:-1,
-                                -,
-                            ]{(x+3)^2-1};
-                            \addplot[pccplot,
-                                domain=-1:3,
-                                -,
-                            ]{3-cos(90*x)};
-                            \addplot[pccplot,
-                                domain=3:4,
-                                -,
-                            ]{-2*(x-3)-2};
-                            \addplot[pccplot,
-                                domain=4:6.7,
-                                ->,
-                            ]{-2/3*(x-4)+6};
-                            \addplot[
-                                soldot
-                            ]coordinates{
-                                (3,3)
-                                (4,6)};
-                            \addplot[
-                                holdot
-                            ]coordinates{
-                                (3,-2)
-                                (4,-4)};
-                        \end{axis}
-                        \end{tikzpicture}]]>
-                        </latex-image-code>
-                    </image> 
-                </figure> 
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>Answer each of the following questions in reference to the function shown in <xref ref="figure-graph-features"/>. Each answer is an interval (or intervals) along the <m>x</m>-axis. Use interval notation when expressing your answers. Make each interval as wide as possible; that is, do not break an interval into pieces if the interval does not need to be broken up. Assume that the slope of the function is constant on <m>\ointerval{-\infty}{-5}</m>, <m>\ointerval{3}{4}</m>, and <m>\ointerval{4}{\infty}</m>.</p> 
+                    </paragraphs>
+                    <figure xml:id="figure-graph-features" valign="top" width="40%">
+                        <caption><m>y=\fe{f}{x}</m></caption>
+                        <image> 
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot[pccplot,
+                                    domain=-6.7:-5,
+                                    <-,
+                                ]{3};
+                                \addplot[pccplot,
+                                    domain=-5:-1,
+                                    -,
+                                ]{(x+3)^2-1};
+                                \addplot[pccplot,
+                                    domain=-1:3,
+                                    -,
+                                ]{3-cos(90*x)};
+                                \addplot[pccplot,
+                                    domain=3:4,
+                                    -,
+                                ]{-2*(x-3)-2};
+                                \addplot[pccplot,
+                                    domain=4:6.7,
+                                    ->,
+                                ]{-2/3*(x-4)+6};
+                                \addplot[
+                                    soldot
+                                ]coordinates{
+                                    (3,3)
+                                    (4,6)};
+                                \addplot[
+                                    holdot
+                                ]coordinates{
+                                    (3,-2)
+                                    (4,-4)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image> 
+                    </figure> 
+                </sidebyside>
             </introduction>
             <exercise>
                 <statement>

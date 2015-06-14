@@ -12,12 +12,12 @@
     <exercises>
         <exercisegroup>
             <introduction>
-                <p>Sketch the first derivatives of the functions shown in <xref autoname="plural" ref="exercise-sketch-first-supplement"/><ndash/><xref autoname="mo" ref="exercise-sketch-last-supplement"/> onto the blank graphs provided.</p>
+                <p>Sketch the first derivatives of the functions shown in <xref autoname="plural" ref="exercise-sketch-first-supplement"/><ndash/><xref autoname="mo" ref="exercise-sketch-last-supplement"/>.</p>
             </introduction>
             <exercise xml:id="exercise-sketch-first-supplement">
                 <statement>
                     <sidebyside>
-                        <image width="40%">
+                        <image width="36%">
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[]
@@ -30,7 +30,7 @@
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                        <image width="40%">
+                        <image width="36%">
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[]
@@ -40,8 +40,1056 @@
                         </image>
                     </sidebyside>
                 </statement>
+                <solution>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot[pccplot,samples=50,-,
+                                domain=1:3,
+                            ]{2/(1+((x-2)*2)^2)*180/3.1415926*1/30};
+                            \addplot[pccplot,domain=-6.8:1,<-,
+                            ]{2/(1+((x-2)*2)^2)*180/3.1415926*1/30};
+                            \addplot[pccplot,domain=3:6.8,->,
+                            ]{2/(1+((x-2)*2)^2)*180/3.1415926*1/30};
+                            \addplot[asymptote,domain=-7:7]{0};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </solution>
+                <answer>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot[pccplot,samples=50,-,
+                                domain=1:3,
+                            ]{2/(1+((x-2)*2)^2)*180/3.1415926*1/30};
+                            \addplot[pccplot,domain=-6.8:1,<-,
+                            ]{2/(1+((x-2)*2)^2)*180/3.1415926*1/30};
+                            \addplot[pccplot,domain=3:6.8,->,
+                            ]{2/(1+((x-2)*2)^2)*180/3.1415926*1/30};
+                            \addplot[asymptote,domain=-7:7]{0};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </answer>
+
+            </exercise>
+            <exercise>
+                <statement>
+                    <sidebyside>
+                        <image width="36%">
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot[pccplot,-,
+                                    domain=-5:-1,
+                                ]{-ln(sec((x+3)/6*3.1415926*180/3.1415926))*4/ln(sec(3.1415926/3*180/3.1415926))+1};
+                                \addplot[pccplot,-,
+                                    domain=-1:3,
+                                ]{-ln(sec((x-1)/6*3.1415926*180/3.1415926))*4/ln(sec(3.1415926/3*180/3.1415926))-2};
+                                \addplot[pccplot,->,
+                                    domain=3:6.8,
+                                ]{-2*(x-3)+4};
+                                \addplot[soldot] coordinates {(-5, -3) (-1, -3) (3, 4)};
+                                \addplot[holdot] coordinates {(-1, -6) (3, -6)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                        <image width="36%">
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </sidebyside>
+                </statement>
+                <solution>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot[pccplot,-,
+                                domain=-5:-1,
+                            ]{-tan((x+3)*30)/6*3.1415926*4/ln(2)};
+                            \addplot[pccplot,-,
+                                domain=-1:3,
+                            ]{-tan((x-1)*30)/6*3.1415926*4/ln(2)};
+                            \addplot[pccplot,->,
+                                domain=3:6.8,
+                            ]{-2};
+                            \addplot[holdot] coordinates {(-5, 5.2335186959) (-1, -5.2335186959) (3, -2)};
+                            \addplot[holdot] coordinates {(-1, 5.2335186959) (3, -5.2335186959)};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </solution>
+                <answer>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot[pccplot,-,
+                                domain=-5:-1,
+                            ]{-tan((x+3)*30)/6*3.1415926*4/ln(2)};
+                            \addplot[pccplot,-,
+                                domain=-1:3,
+                            ]{-tan((x-1)*30)/6*3.1415926*4/ln(2)};
+                            \addplot[pccplot,->,
+                                domain=3:6.8,
+                            ]{-2};
+                            \addplot[holdot] coordinates {(-5, 5.2335186959) (-1, -5.2335186959) (3, -2)};
+                            \addplot[holdot] coordinates {(-1, 5.2335186959) (3, -5.2335186959)};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </answer>
+            </exercise>
+            <exercise xml:id="exercise-sketch-last-supplement">
+                <statement>
+                    <sidebyside>
+                        <image width="36%">
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot[pccplot,<-,
+                                    variable=t, domain=-4.8:2,
+                                ]({-((2-t)/3)^(5/3)-3},{t});
+                                \addplot[pccplot,-,
+                                    variable=t, domain=2:-2.5471496995,
+                                ]({((2-t)/3)^(5/3)-3},{t});
+                                \addplot[pccplot,-,
+                                    variable=t, domain=-2.5471496995:3.459456236,
+                                ]({((t-1)/2.459456236)^3+2},{t});
+                                \addplot[pccplot,->,
+                                    domain=3:6.8,
+                                ]{0.364864059*(x-5)^2+2};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                        <image width="36%">
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </sidebyside>
+                </statement>
+                <solution>
+                    <image width="40%">
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot[pccplot,<-,
+                                domain=-6.8:-4,
+                            ]{1.8*(-(x+3))^(-0.4)};
+                            \addplot[pccplot,->,
+                                variable=t, domain=1.8:6.8,
+                            ]({-(1.8/t)^2.5-3},{t});
+                            \addplot[pccplot,<-,
+                                variable=t, domain=-6.8:-1.3641449099,
+                            ]({(-1.8/t)^2.5-3},{t});
+                            \addplot[asymptote,
+                            ] coordinates {(-3,-7) (-3,7)};
+                            \addplot[pccplot,->,
+                                variable=t, domain=0.3941277444:6.8,
+                            ]({-(3*t/2.459456236)^-1.5+2},{t});
+                            \addplot[pccplot,<-,
+                                variable=t, domain=6.8:0.8198187453,
+                            ]({(3*t/2.459456236)^-1.5+2},{t});
+                            \addplot[asymptote,
+                            ] coordinates {(2,-7) (2,7)};
+                            \addplot[pccplot,->,domain=3:6.8]{0.364864059*(x-5)*2};
+                            \addplot[holdot] coordinates {(-1,-1.3641449099) (-1,0.3941277444) (3,0.8198187453) (3,-4*0.364864059)};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </solution>
+                <answer>
+                    <image width="40%">
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot[pccplot,<-,
+                                domain=-6.8:-4,
+                            ]{1.8*(-(x+3))^(-0.4)};
+                            \addplot[pccplot,->,
+                                variable=t, domain=1.8:6.8,
+                            ]({-(1.8/t)^2.5-3},{t});
+                            \addplot[pccplot,<-,
+                                variable=t, domain=-6.8:-1.3641449099,
+                            ]({(-1.8/t)^2.5-3},{t});
+                            \addplot[asymptote,
+                            ] coordinates {(-3,-7) (-3,7)};
+                            \addplot[pccplot,->,
+                                variable=t, domain=0.3941277444:6.8,
+                            ]({-(3*t/2.459456236)^-1.5+2},{t});
+                            \addplot[pccplot,<-,
+                                variable=t, domain=6.8:0.8198187453,
+                            ]({(3*t/2.459456236)^-1.5+2},{t});
+                            \addplot[asymptote,
+                            ] coordinates {(2,-7) (2,7)};
+                            \addplot[pccplot,->,domain=3:6.8]{0.364864059*(x-5)*2};
+                            \addplot[holdot] coordinates {(-1,-1.3641449099) (-1,0.3941277444) (3,0.8198187453) (3,-4*0.364864059)};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </answer>
             </exercise>
         </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <p><xref ref="figure-seven-curves"/> gives seven curves.  For each statement below, identify the figure letters that go along with the given statement. Assume each statement is being made only in reference to the portion of the curves shown in each of the figures.  Assume in all cases that the axes have the traditional positive/negative orientation.  The first question has been answered for you to help you get started.</p> 
+                <sidebyside xml:id="figure-seven-curves">
+                    <figure width="12%" xml:id="figure-decreasing-down">
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[grid=none, xtick={10}, ytick={10}, minor xtick={10}, minor ytick={10}, xmin=-1,xmax=5,ymin=-1,ymax=5,xlabel={},ylabel={}]
+                                \addplot[patch, patch type=quadratic spline,pccplot] coordinates {(1,4) (4,1) (3,3)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                        <caption/>
+                    </figure>
+                    <figure width="12%" xml:id="figure-decreasing-up">
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[grid=none, xtick={10}, ytick={10}, minor xtick={10}, minor ytick={10}, xmin=-1,xmax=5,ymin=-1,ymax=5,xlabel={},ylabel={}]
+                                \addplot[patch, patch type=quadratic spline,pccplot] coordinates {(1,4) (4,1) (2,2)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                        <caption/>
+                    </figure>
+                    <figure width="12%" xml:id="figure-increasing-down">
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[grid=none, xtick={10}, ytick={10}, minor xtick={10}, minor ytick={10}, xmin=-1,xmax=5,ymin=-1,ymax=5,xlabel={},ylabel={}]
+                                \addplot[patch, patch type=quadratic spline,pccplot] coordinates {(1,1) (4,4) (2,3)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                        <caption/>
+                    </figure>
+                    <figure width="12%" xml:id="figure-increasing-up">
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[grid=none, xtick={10}, ytick={10}, minor xtick={10}, minor ytick={10}, xmin=-1,xmax=5,ymin=-1,ymax=5,xlabel={},ylabel={}]
+                                \addplot[patch, patch type=quadratic spline,pccplot] coordinates {(1,1) (4,4) (3,2)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                        <caption/>
+                    </figure>
+                    <figure width="12%" xml:id="figure-increasing-zero">
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[grid=none, xtick={10}, ytick={10}, minor xtick={10}, minor ytick={10}, xmin=-1,xmax=5,ymin=-1,ymax=5,xlabel={},ylabel={}]
+                                \addplot[patch, patch type=quadratic spline,pccplot] coordinates {(1,1) (4,4) (3,3)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                        <caption/>
+                    </figure>
+                    <figure width="12%" xml:id="figure-decreasing-zero">
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[grid=none, xtick={10}, ytick={10}, minor xtick={10}, minor ytick={10}, xmin=-1,xmax=5,ymin=-1,ymax=5,xlabel={},ylabel={}]
+                                \addplot[patch, patch type=quadratic spline,pccplot] coordinates {(1,4) (4,1) (3,2)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                        <caption/>
+                    </figure>
+                    <figure width="12%" xml:id="figure-flat">
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[grid=none, xtick={10}, ytick={10}, minor xtick={10}, minor ytick={10}, xmin=-1,xmax=5,ymin=-1,ymax=5,xlabel={},ylabel={}]
+                                \addplot[patch, patch type=quadratic spline,pccplot] coordinates {(1,2.5) (4,2.5) (2,2.5)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                        <caption/>
+                    </figure>
+                    <caption>Seven curves</caption>
+                </sidebyside>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Each of these functions is always increasing: <xref autoname="no" ref="figure-increasing-down"/>, <xref autoname="no" ref="figure-increasing-up"/>, <xref autoname="no" ref="figure-increasing-zero"/></p>
+                </statement>
+                <solution>
+                    <p><xref autoname="no" ref="figure-increasing-down"/>, <xref autoname="no" ref="figure-increasing-up"/>, <xref autoname="no" ref="figure-increasing-zero"/></p>
+                </solution>
+                <answer>
+                    <p><xref autoname="no" ref="figure-increasing-down"/>, <xref autoname="no" ref="figure-increasing-up"/>, <xref autoname="no" ref="figure-increasing-zero"/></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The first derivative of each of these functions is always increasing.</p>
+                </statement>
+                <solution>
+                    <p><xref autoname="no" ref="figure-decreasing-up"/>, <xref autoname="no" ref="figure-increasing-up"/></p>
+                </solution>
+                <answer>
+                    <p><xref autoname="no" ref="figure-decreasing-up"/>, <xref autoname="no" ref="figure-increasing-up"/></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The second derivative of each of these functions is always negative.</p>
+                </statement>
+                <solution>
+                    <p><xref autoname="no" ref="figure-decreasing-down"/>, <xref autoname="no" ref="figure-increasing-down"/></p>
+                </solution>
+                <answer>
+                    <p><xref autoname="no" ref="figure-decreasing-down"/>, <xref autoname="no" ref="figure-increasing-down"/></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The first derivative of each of these functions is always positive.</p>
+                </statement>
+                <solution>
+                    <p><xref autoname="no" ref="figure-increasing-down"/>, <xref autoname="no" ref="figure-increasing-up"/>, <xref autoname="no" ref="figure-increasing-zero"/></p>
+                </solution>
+                <answer>
+                    <p><xref autoname="no" ref="figure-increasing-down"/>, <xref autoname="no" ref="figure-increasing-up"/>, <xref autoname="no" ref="figure-increasing-zero"/></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Any antiderivative of each of these functions is always concave up.</p>
+                </statement>
+                <solution>
+                    <p><xref autoname="no" ref="figure-increasing-down"/>, <xref autoname="no" ref="figure-increasing-up"/>, <xref autoname="no" ref="figure-increasing-zero"/></p>
+                </solution>
+                <answer>
+                    <p><xref autoname="no" ref="figure-increasing-down"/>, <xref autoname="no" ref="figure-increasing-up"/>, <xref autoname="no" ref="figure-increasing-zero"/></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The second derivative of each of these functions is always equal to zero.</p>
+                </statement>
+                <solution>
+                    <p><xref autoname="no" ref="figure-increasing-zero"/>, <xref autoname="no" ref="figure-decreasing-zero"/>, <xref autoname="no" ref="figure-flat"/></p>
+                </solution>
+                <answer>
+                    <p><xref autoname="no" ref="figure-increasing-zero"/>, <xref autoname="no" ref="figure-decreasing-zero"/>, <xref autoname="no" ref="figure-flat"/></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Any antiderivative of each of these functions graphs to a line.</p>
+                </statement>
+                <solution>
+                    <p><xref autoname="no" ref="figure-flat"/></p>
+                </solution>
+                <answer>
+                    <p><xref autoname="no" ref="figure-flat"/></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The first derivative of each of these functions is a constant function.</p>
+                </statement>
+                <solution>
+                    <p><xref autoname="no" ref="figure-increasing-zero"/>, <xref autoname="no" ref="figure-decreasing-zero"/>, <xref autoname="no" ref="figure-flat"/></p>
+                </solution>
+                <answer>
+                    <p><xref autoname="no" ref="figure-increasing-zero"/>, <xref autoname="no" ref="figure-decreasing-zero"/>, <xref autoname="no" ref="figure-flat"/></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The second derivative of each of these functions is never positive.</p>
+                </statement>
+                <solution>
+                    <p><xref autoname="no" ref="figure-decreasing-down"/>, <xref autoname="no" ref="figure-increasing-down"/>, <xref autoname="no" ref="figure-increasing-zero"/>, <xref autoname="no" ref="figure-decreasing-zero"/>, <xref autoname="no" ref="figure-flat"/></p>
+                </solution>
+                <answer>
+                    <p><xref autoname="no" ref="figure-decreasing-down"/>, <xref autoname="no" ref="figure-increasing-down"/>, <xref autoname="no" ref="figure-increasing-zero"/>, <xref autoname="no" ref="figure-decreasing-zero"/>, <xref autoname="no" ref="figure-flat"/></p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <p>As water drains from a tank the drainage rate continually decreases over time.  Suppose that a tank 
+that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of water drains in exactly <m>6</m> minutes.  Answer each of the following questions about this problem situation.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Suppose that <m>\fe{V}{t}</m> is the amount of water (<quantity><unit base="gallon"/></quantity>) left in the tank where <m>t</m> is the amount of time that has elapsed (<quantity><unit base="second"/></quantity>) since the drainage began.  What are the units on <m>\fe{\fd{V}}{45}</m> and <m>\fe{\sd{V}}{45}</m>? Which of the following is the most realistic value for <m>\fe{\fd{V}}{45}</m>?</p>
+                    <ol cols="4"> 
+                        <li><m>0.8</m></li>
+                        <li><m>1.2</m></li>
+                        <li><m>-0.8</m></li>
+                        <li><m>-1.2</m></li>
+                    </ol>
+                </statement>
+                <solution>
+                    <p>The unit for <m>\fe{\fd{V}}{45}</m> is <quantity><unit base="gallon"/><per base="second"/></quantity> and the unit for <m>\fe{\sd{V}}{45}</m> is <m>\frac{\sfrac{\text{gal}}{\text{s}}}{\text{s}}</m>. Since the amount of water left in the tank is decreasing, the value of <m>\fe{\fd{V}}{45}</m> cannot be positive. The <em>average</em> drainage rate is <quantity><mag>60</mag><unit base="gallon"/><per base="minute"/></quantity> which is equivalent to <quantity><mag>1</mag><unit base="gallon"/><per base="second"/></quantity>. Initially the tank drains faster than this average rate, and towards the end of the drainage the tank is draining slower than this average rate.  Since <m>45</m> seconds is early in the drainage process the drainage rate is almost certainly greater than the average rate of <quantity><mag>1</mag><unit base="gallon"/><per base="second"/></quantity>.  Hence the most realistic value for <m>\fe{\fd{V}}{45}</m> is <quantity><mag>-1.2</mag><unit base="gallon"/><per base="second"/></quantity>.</p> 
+                </solution>
+                <answer>
+                    <p>The unit for <m>\fe{\fd{V}}{45}</m> is <quantity><unit base="gallon"/><per base="second"/></quantity> and the unit for <m>\fe{\sd{V}}{45}</m> is <m>\frac{\sfrac{\text{gal}}{\text{s}}}{\text{s}}</m>. The most realistic value for <m>\fe{\fd{V}}{45}</m> is <quantity><mag>-1.2</mag><unit base="gallon"/><per base="second"/></quantity>.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Suppose that <m>\fe{R}{t}</m> is the water's flow rate (<quantity><unit base="gallon"/><per base="second"/></quantity>) where <m>t</m> is the amount of time that has elapsed (<quantity><unit base="second"/></quantity>) since the drainage began.  What are the units on <m>\fe{\fd{R}}{45}</m> and <m>\fe{\sd{R}}{45}</m>?  Which of the following is the most realistic value for <m>\fe{\fd{R}}{45}</m>?</p>
+                    <ol cols="4">
+                        <li><m>1.0</m></li>
+                        <li><m>0.001</m></li>
+                        <li><m>-1.0</m></li>
+                        <li><m>-0.001</m></li>
+                    </ol>
+                </statement>
+                <solution>
+                    <p>The unit for <m>\fe{\fd{R}}{45}</m> is <m>\frac{\sfrac{\text{gal}}{\text{s}}}{\text{s}}</m>, and the unit for <m>\fe{\sd{R}}{45}</m> is <m>\sfrac{\frac{\sfrac{\text{gal}}{\text{s}}}{\text{s}}}{\text{s}}</m>. The <em>average</em> drainage rate is <quantity><mag>60</mag><unit base="gallon"/><per base="minute"/></quantity> which is equivalent to <quantity><mag>1</mag><unit base="gallon"/><per base="second"/></quantity>. Initially the tank drains faster than this average rate, and towards the end of the drainage the tank is draining slower than this average rate.  Since the flow rate ecreases over time, the value of <m>\fe{\fd{R}}{45}</m> cannot be positive. Since the average flow rate over the <m>360</m> seconds is <quantity><mag>1</mag><unit base="gallon"/><per base="second"/></quantity>, it is not believable that <m>45</m> seconds into the process the flow rate was decreasing at a rate of <m>1\,\frac{\sfrac{\text{gal}}{\text{s}}}{\text{s}}</m>.   Hence the most realistic value for <m>\fe{\fd{R}}{45}</m> is <m>-0.001</m>.</p>
+                </solution>
+                <answer>
+                    <p>The unit for <m>\fe{\fd{R}}{45}</m> is <m>\frac{\sfrac{\text{gal}}{\text{s}}}{\text{s}}</m>, and the unit for <m>\fe{\sd{R}}{45}</m> is <m>\sfrac{\frac{\sfrac{\text{gal}}{\text{s}}}{\text{s}}}{\text{s}}</m>. The most realistic value for <m>\fe{\fd{R}}{45}</m> is <m>-0.001</m>.</p> 
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Suppose that <m>\fe{V}{t}</m> is the amount of water (<quantity><unit base="gallon"/></quantity>)left in the tank where <m>t</m> is the amount of time that has elapsed (<quantity><unit base="second"/></quantity>) since the drainage began.  Which of the following is the most realistic value for <m>\fe{\sd{V}}{45}</m>?</p>
+                    <ol cols="4">
+                        <li><m>1.0</m></li>
+                        <li><m>0.001</m></li>
+                        <li><m>-1.0</m></li>
+                        <li><m>-0.001</m></li>
+                    </ol>
+                </statement> 
+                <solution>
+                    <p>Because <m>V</m> is defined as the amount of water <em>left</em> in the tank, <m>\fd{V}=-R</m>. So <m>\sd{V}=-\fd{R}</m>, and then the answer here is just the negative of the previous answer, using the same reasoning.The most realistic value for <m>\fe{\sd{V}}{45}</m> is <m>0.001</m>.</p>
+                </solution>
+                <answer>
+                    <p>The most realistic value for <m>\fe{\sd{V}}{45}</m> is <m>0.001</m>.</p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <p>For each statement in <xref autoname="plural" ref="exercise-function-statement-first"/><ndash/><xref ref="exercise-function-statement-last"/>, decide which of the following is true. </p>
+                <ol>
+                   <li>The statement is true regardless of the specific function <m>f</m>.</li>
+                   <li>The statement is true for some functions and false for other functions. </li>
+                   <li>The statement is false regardless of the specific function <m>f</m>.</li>
+                </ol>
+            </introduction>
+            <exercise xml:id="exercise-function-statement-first">
+                <statement>
+                    <p>If a function <m>f</m> is increasing over the entire interval <m>\ointerval{-3}{7}</m> and <m>\fe{\fd{f}}{0}</m> exists, then <m>\fe{\fd{f}}{0}\gt0</m>.</p>
+                </statement>
+                <solution>
+                    <p>For some functions, <m>\fe{\fd{f}}{0}</m> may be <m>0</m>. For say a linear increasing function, the statement would be true. So the statement is true for some functions and false for other functions.</p>
+                </solution>
+                <answer>
+                    <p>The statement is true for some functions and false for other functions.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>If a function <m>f</m> is increasing over the entire interval <m>\ointerval{-3}{7}</m> and <m>\fe{\fd{f}}{4}</m> exists, then <m>\fe{\fd{f}}{4}=0</m>.</p>
+                </statement>
+                <solution>
+                    <p>Imagine a function like <m>(x-4)^3</m>, where the statement is true. For a linear increasing function, the statement would be false. So the statement is true for some functions and false for other functions.</p>
+                </solution>
+                <answer>
+                    <p>The statement is true for some functions and false for other functions.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>If a function <m>f</m> is concave down over the entire interval <m>\ointerval{-3}{7}</m> and <m>\fe{\fd{f}}{-2}</m> exists, then <m>\fe{\fd{f}}{-2}\lt0</m>.</p>
+                </statement>
+                <solution>
+                    <p>It's easy to imagine functions where this would be true, but there are also functions where <m>\fe{\fd{f}}{-2}</m> is <m>0</m>. So the statement is true for some functions and false for other functions.</p>
+                </solution>
+                <answer>
+                    <p>The statement is true for some functions and false for other functions.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>If the slope of <m>f</m> is increasing over the entire interval <m>\ointerval{-3}{7}</m> and <m>\fe{\fd{f}}{0}</m> exists, then <m>\fe{\fd{f}}{0}\gt0</m>.</p>
+                </statement>
+                <solution>
+                    <p>This tells us that <m>f</m> is concave up, so <m>\fe{\sd{f}}{x}\geq0</m>, but <m>\fe{\fd{f}}{x}</m> could still be anything. So the statement is true for some functions and false for other functions.</p>
+                </solution>
+                <answer>
+                    <p>The statement is true for some functions and false for other functions.</p>
+                </answer>
+            </exercise>
+            <exercise xml:id="exercise-function-statement-last">
+                <statement>
+                    <p>If a function <m>f</m> has a local maximum at <m>3</m>, then <m>\fe{\fd{f}}{3}=0</m>.</p>
+                </statement>
+                <solution>
+                    <p>It's easy to imagine functions where this would be true, like <m>-(x-3)^2</m>. But there are also functions where there is a maximum at <m>3</m> and <m>\fe{\fd{f}}{3}</m> doesn't even exist, like <m>-|x-3|</m>. So the statement is true for some functions and false for other functions.</p>
+                </solution>
+                <answer>
+                    <p>The statement is true for some functions and false for other functions.</p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <p>For a certain function <m>g</m>, <m>\fe{\fd{g}}{t}=-8</m> at all values of <m>t</m> on <m>\ointerval{-\infty}{-3}</m> and <m>\fe{\fd{g}}{t}=2</m> at all values of <m>t</m> on <m>\ointerval{-3}{\infty}</m>.</p> 
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Janice thinks that <m>g</m> must be discontinuous at <m>-3</m> but Lisa disagrees.  Who's right?</p>
+                </statement>
+                <solution>
+                    <p>Lisa is right.  Maybe <m>g</m> is discontinuous at <m>-3</m>, but maybe it simply is <q>pointy</q> at <m>-3</m>.</p>
+                </solution>
+                <answer>
+                    <p>Lisa is right.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Lisa thinks that the graph of <m>\sd{g}</m> is the line <m>y=0</m> but Janice disagrees.  Who's right?</p>
+                </statement>
+                <solution>
+                    <p>Janice is right although Lisa is pretty darn close to being right. The graph of <m>\sd{g}</m> is <em>basically</em> the line <m>y=0</m>, but because <m>\fd{g}</m> is nondifferentiable at <m>-3</m>, <m>\sd{g}</m> has a hole at <m>-3</m>.</p>
+                </solution>
+                <answer>
+                    <p>Janice is right.</p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>Each statement below is in reference to the function shown in <xref ref="figure-periodic-dips"/>.  Decide whether each statement is true or false.  A caption has been omitted from <xref ref="figure-periodic-dips"/> because the identity of the curve changes from question to question.</p> 
+                    </paragraphs>
+                    <figure valign="top" width="40%" xml:id="figure-periodic-dips">
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xmin=-1,
+                                xmax=10,xlabel={$t$},
+                                xtick={1,3,...,9},
+                                minor xtick={-1,0,...,10},
+                                ymin=-6,
+                                ymax=6]
+                                \addplot[pccplot,->,domain=0:9.8,samples=99] {6*abs(sin(45))-6*abs(sin(x*45))};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    <caption/>
+                    </figure>
+                </sidebyside>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>True or False? If the given function is <m>\fd{f}</m>, then <m>\fe{f}{3}\gt\fe{f}{2}</m>.</p> 
+                </statement>
+                <solution>
+                    <p><m>\fe{\fd{f}}{t}</m> is negative on <m>\ointerval{2}{3}</m>, so <m>f</m> is decreasing on <m>\ointerval{2}{3}</m>, and therefore <m>\fe{f}{3}\lt\fe{f}{2}</m>. So the statement is false.</p> 
+                </solution>
+                <answer>
+                    <p>False</p> 
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>True or False? If the given function is <m>f</m>, then <m>\fe{\fd{f}}{3}\gt\fe{\fd{f}}{2}</m>.</p> 
+                </statement>
+                <solution>
+                    <p>We can see that <m>\fe{\fd{f}}{2}</m> is <m>0</m>, while <m>\fe{\fd{f}}{3}</m> is positive. So the statement is true.</p> 
+                </solution>
+                <answer>
+                    <p>True</p> 
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>True or False? If the given function is <m>f</m>, then <m>\fe{\fd{f}}{1}\gt\fe{\sd{f}}{1}</m>.</p> 
+                </statement>
+                <solution>
+                    <p>We can see that <m>\fe{\fd{f}}{1}</m> is negative because the function is decreasing there. And we can see that <m>\fe{\sd{f}}{1}</m> is positive because the function is concave up there. So the statement is false.</p> 
+                </solution>
+                <answer>
+                    <p>False</p> 
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>True or False? If the given function is <m>\fd{f}</m>, then the tangent line to <m>f</m> at <m>6</m> is horizontal.</p> 
+                </statement>
+                <solution>
+                    <p><m>\fe{\fd{f}}{6}</m> is negative, so the tangent line to <m>f</m> at <m>6</m> has negative slope. So the statement is false.</p> 
+                </solution>
+                <answer>
+                    <p>False</p> 
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>True or False? If the given function is <m>\fd{f}</m>, then <m>\sd{f}</m> is always increasing.</p> 
+                </statement>
+                <solution>
+                    <p>At points immediately to the left of <m>4</m>, <m>\sd{f}</m> would be positive, and at points immediately to the right of <m>4</m>, <m>\sd{f}</m> would be negative. So the statement is false.</p> 
+                </solution>
+                <answer>
+                    <p>False</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>True or False? If the given function is <m>\fd{f}</m>, then <m>f</m> is not differentiable at <m>4</m>.</p>
+                </statement>
+                <solution>
+                    <p>It appears that <m>\fe{\fd{f}}{4}</m> is defined, with a value of about <m>4.25</m>. So <m>f</m> is differentiable at <m>4</m>. So the statement is false.</p>
+                </solution>
+                <answer>
+                    <p>False</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>True or False? If the given function is <m>\fd{f}</m>, then <m>\fd{f}</m> is not differentiable at <m>4</m>.</p>
+                </statement>
+                <solution>
+                    <p>It appears that <m>\fe{\fd{f}}{4}</m> is undefined because the limit of secant slopes from the left is positive, while the limit from the right is negative. So the statement is true.</p>
+                </solution>
+                <answer>
+                    <p>True</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>True or False?  The first derivative of the given function is periodic (starting at <m>0</m>).</p>
+                </statement>
+                <solution>
+                    <p>Since the tangent slope anywhere (except multiples of <m>4</m>, where the tangent slope is undefined) is equal to the tangent slope <m>4</m> units forward, the derivative is periodic with period <m>4</m>. So the statement is true.</p>
+                </solution>
+                <answer>
+                    <p>True</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>True or False?  Antiderivatives of the given function are periodic (starting at <m>0</m>).</p>
+                </statement>
+                <solution>
+                    <p>An antiderivative would be increasing over half of each period, and decreasing over the other half. But it would be increasing more steeply in general while it is increasing compared to where it is decreasing. So over each period, there will be a net rise. So the statement is false.</p>
+                </solution>
+                <answer>
+                    <p>False</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>True or False? If the given function was measuring the rate at which the volume of air in your lungs was changing <m>t</m> seconds after you were frightened, then there was the same amount of air in your lungs <m>9</m> seconds after the fright as was there <m>7</m> seconds after the fright.</p>
+                </statement>
+                <solution>
+                    <p>The amount of air in your lungs was increasing the entire two seconds. So the statement is false.</p>
+                </solution>
+                <answer>
+                    <p>False</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>True or False? If the given function is measuring the position of a weight attached to a spring relative to a table edge (with positive and negative positions corresponding, respectively, to the weight being above and below the edge of the table), then the weight is in the same position <m>9</m> seconds after it begins to bob as it is <m>7</m> seconds after the bobbing commenced (assuming that <m>t</m> represents the number of seconds that pass after the weight begins to bob).</p>
+                </statement>
+                <solution>
+                    <p>At both of these times, the weight is level with the table. So the statement is true.</p>
+                </solution>
+                <answer>
+                    <p>True</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>True or False? If the given function is measuring the velocity of a weight attached to a spring relative to a table edge (with positive and negative positions corresponding, respectively, to the weight being above and below the edge of the table), then the spring was moving downward over the interval <m>\ointerval{1}{3}</m> (assuming that <m>t</m> represents the number of seconds that pass after the weight begins to bob).</p>
+                </statement>
+                <solution>
+                    <p>Negative velocity corresponds to downward motion (because the <q>position</q> is decreasing when the velocity is negative). So the statement is true.</p>
+                </solution>
+                <answer>
+                    <p>True</p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercise>
+            <statement>
+                <p>Complete as many cells in <xref ref="table-derivative-relations"/> as possible so that when read left to right the relationships between the derivatives, function, and antiderivative are always true. Please note that several cells will remain blank.</p>
+                <table xml:id="table-derivative-relations">
+                    <tabular top="major">
+                        <col halign="center" right="medium"/>
+                        <col halign="center" right="medium"/>
+                        <col halign="center" right="medium"/>
+                        <col halign="center"/>
+                        <row bottom="medium">
+                            <cell><m>\sd{f}</m></cell>
+                            <cell><m>\fd{f}</m></cell>
+                            <cell><m>f</m></cell>
+                            <cell><m>F</m></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\phantom{\text{Constantly Zero}}</m></cell><cell><m>\phantom{\text{Constantly Zero}}</m></cell><cell>Positive</cell><cell><m>\phantom{\text{Constantly Zero}}</m></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell/><cell/><cell>Negative</cell><cell/>
+                        </row>
+                        <row bottom="minor">
+                            <cell/><cell/><cell>Constantly Zero</cell><cell/>
+                        </row>
+                        <row bottom="minor">
+                            <cell/><cell/><cell>Increasing</cell><cell/>
+                        </row>
+                        <row bottom="minor">
+                            <cell/><cell/><cell>Decreasing</cell><cell/>
+                        </row>
+                        <row bottom="minor">
+                            <cell/><cell/><cell>Constant</cell><cell/>
+                        </row>
+                        <row bottom="minor">
+                            <cell/><cell/><cell>Concave Up</cell><cell/>
+                        </row>
+                        <row bottom="minor">
+                            <cell/><cell/><cell>Concave Down</cell><cell/>
+                        </row>
+                        <row bottom="major">
+                            <cell/><cell/><cell>Linear</cell><cell/>
+                        </row>
+                    </tabular>
+                </table>
+            </statement>
+            <solution>
+                <table xml:id="table-derivative-relations-solution">
+                    <tabular top="major">
+                        <col halign="center" right="medium"/>
+                        <col halign="center" right="medium"/>
+                        <col halign="center" right="medium"/>
+                        <col halign="center"/>
+                        <row bottom="medium">
+                            <cell><m>\sd{f}</m></cell>
+                            <cell><m>\fd{f}</m></cell>
+                            <cell><m>f</m></cell>
+                            <cell><m>F</m></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell/><cell/><cell>Positive</cell><cell>Increasing</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell/><cell/><cell>Negative</cell><cell>Decreasing</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell/><cell/><cell>Constantly Zero</cell><cell>Constant</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell/><cell>Positive</cell><cell>Increasing</cell><cell>Concave Up</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell/><cell>Negative</cell><cell>Decreasing</cell><cell>Concave Down</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell/><cell>Constantly Zero</cell><cell>Constant</cell><cell>Linear</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell>Positive</cell><cell>Increasing</cell><cell>Concave Up</cell><cell/>
+                        </row>
+                        <row bottom="minor">
+                            <cell>Negative</cell><cell>Decreasing</cell><cell>Concave Down</cell><cell/>
+                        </row>
+                        <row bottom="major">
+                            <cell>Constantly Zero</cell><cell>Constant</cell><cell>Linear</cell><cell/>
+                        </row>
+                    </tabular>
+                </table>
+            </solution>
+            <answer>
+                <p>See <xref ref="table-derivative-relations-solution"/> in the solutions section.</p>
+            </answer>
+        </exercise>
+        <exercisegroup>
+            <introduction>
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>Answer each question about the function <m>f</m> whose first derivative is shown in <xref ref="figure-first-derivative-of-f-supplement"/>.  The correct answer to one or more of the questions may be <q>there's no way of knowing</q>.</p> 
+                    </paragraphs>
+                    <figure xml:id="figure-first-derivative-of-f-supplement" valign="top" width="40%">
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot[pccplot,<-,domain=-6.2:-1] {(x+3)^2-4};
+                                \addplot[pccplot,-,domain=-1:1] {-3*(x+1)};
+                                \addplot[pccplot,->,variable=t,domain=-6:-2.1] ({3/8*(t+4)^3+4},{t});
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                        <caption><m>\fd{f}</m></caption>
+                    </figure>
+                </sidebyside>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Where, over <m>\ointerval{-6}{6}</m>, is <m>\fd{f}</m> nondifferentiable?</p> 
+                </statement>
+                <solution>
+                    <p><m>\fd{f}</m> is nondifferentiable at <m>-1</m>, <m>1</m>, and <m>4</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>-1,1,4</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Where, over <m>\ointerval{-6}{6}</m>, are antiderivatives of <m>f</m> nondifferentiable?</p> 
+                </statement>
+                <solution>
+                    <p>Antiderivatives of <m>f</m> are differntiable everywhere.</p>
+                </solution>
+                <answer>
+                    <p>nowhere</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Where, over <m>\ointerval{-6}{6}</m>, is <m>f</m> decreasing?</p> 
+                </statement>
+                <solution>
+                    <p><m>f</m> is decreasing on <m>\ointerval{-5}{6}</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>\ointerval{-5}{6}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Where, over <m>\ointerval{-6}{6}</m>, is <m>f</m> concave down?</p> 
+                </statement>
+                <solution>
+                    <p><m>f</m> is concave down on <m>\ointerval{-6}{-3}</m> and <m>\ointerval{-1}{1}</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>\ointerval{-6}{-3}</m> and <m>\ointerval{-1}{1}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Where, over <m>\ointerval{-6}{6}</m>, is <m>\sd{f}</m> decreasing?</p> 
+                </statement>
+                <solution>
+                    <p><m>\sd{f}</m> is decreasing on <m>\ointerval{4}{6}</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>\ointerval{4}{6}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Where, over <m>\ointerval{-6}{6}</m>, is <m>\sd{f}</m> positive?</p> 
+                </statement>
+                <solution>
+                    <p><m>\sd{f}</m> is positive on <m>\ointerval{-3}{-1}</m>, <m>\ointerval{1}{4}</m>, and <m>\ointerval{4}{6}</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>\ointerval{-3}{-1}</m>, <m>\ointerval{1}{4}</m>, and <m>\ointerval{4}{6}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Where, over <m>\ointerval{-6}{6}</m>, are antiderivatives of <m>f</m> concave up?</p> 
+                </statement>
+                <solution>
+                    <p>Antiderivatives of <m>f</m> are concave up on <m>\ointerval{-6}{-5}</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>\ointerval{-6}{-5}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Where, over <m>\ointerval{-6}{6}</m>, are antiderivatives of <m>f</m> concave up?</p> 
+                </statement>
+                <solution>
+                    <p>There is no way to tell.</p>
+                </solution>
+                <answer>
+                    <p>There is no way to tell.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Where, over <m>\ointerval{-6}{6}</m>, does <m>f</m> have its maximum value?</p> 
+                </statement>
+                <solution>
+                    <p><m>f</m> has its maximum value at <m>-5</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>-5</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Suppose <m>\fe{f}{-3}=14</m>. What is the equation of the tangent line to <m>f</m> at <m>-3</m>?</p> 
+                </statement>
+                <solution>
+                    <p>Since the slope of <m>f</m> at <m>-3</m> is <m>\fe{\fd{f}}{-3}=-4</m>, the equation of the tangent line to <m>f</m> at <m>-3</m> is <m>y=-4(x+3)+14</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>y=-4(x+3)+14</m></p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercise>
+            <statement>
+                <p>A certain antiderivative, <m>F</m>, of the function <m>f</m> shown in <xref ref="figure-sketch-antiderivative-supplement"/> passes through the points <m>\point{3}{-2}</m> and about <m>\point{-3}{5.6}</m>.  Draw this antiderivative (over the interval <m>\ointerval{-6}{6}</m>) onto the provided graph.</p> 
+                <sidebyside>
+                    <figure xml:id="figure-sketch-antiderivative-supplement" width="39%">
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot[pccplot,-,domain=-6:3] {-2*cos(30*x)};
+                                \addplot[pccplot,-,domain=3:6] {2*cos(30*x)};
+                                \addplot[holdot] coordinates {(-6,2) (6,-2)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                        <caption><m>f</m></caption>
+                    </figure>
+                    <figure width="39%">
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                        <caption><m>F</m></caption>
+                    </figure>
+                </sidebyside>
+            </statement>
+            <solution>
+                <image>
+                    <latex-image-code>
+                    <![CDATA[\begin{tikzpicture}
+                    \begin{axis}[]
+                        \addplot[pccplot,-,domain=-6:3] {-12/3.1415926*sin(30*x)-2+12/3.1415926};
+                        \addplot[pccplot,-,domain=3:6] {12/3.1415926*sin(30*x)-2-12/3.1415926};
+                        \addplot[holdot] coordinates {(-6,-2+12/3.1415926) (6,-2-12/3.1415926)};
+                    \end{axis}
+                    \end{tikzpicture}]]>
+                    </latex-image-code>
+                </image>
+            </solution>
+            <answer>
+                <image>
+                    <latex-image-code>
+                    <![CDATA[\begin{tikzpicture}
+                    \begin{axis}[]
+                        \addplot[pccplot,-,domain=-6:3] {-12/3.1415926*sin(30*x)-2+12/3.1415926};
+                        \addplot[pccplot,-,domain=3:6] {12/3.1415926*sin(30*x)-2-12/3.1415926};
+                        \addplot[holdot] coordinates {(-6,-2+12/3.1415926) (6,-2-12/3.1415926)};
+                    \end{axis}
+                    \end{tikzpicture}]]>
+                    </latex-image-code>
+                </image>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Draw onto <xref ref="figure-sketch-function-supplement"/> the function <m>f</m> given the following properties of <m>f</m>.</p>
+                <beginmulticols/>
+                <ul>
+                    <li>The only discontinuity on <m>f</m> occurs at the vertical asymptote <m>x=2</m>.</li>
+                    <li><m>\fe{f}{0}=\fe{f}{4}=3</m>, and <m>\fe{\fd{f}}{-1}=0</m></li>
+                    <li><m>\fe{\fd{f}}{x}\gt0</m> on <m>\ointerval{-\infty}{-1}</m>, <m>\ointerval{-1}{2}</m>, and <m>\ointerval{4}{\infty}</m></li>
+                    <li><m>\fe{\fd{f}}{x}\lt0</m> on <m>\ointerval{2}{4}</m></li>
+                    <li><m>\fe{\sd{f}}{x}\gt0</m> on <m>\ointerval{-1}{2}</m> and <m>\ointerval{2}{4}</m></li>
+                    <li><m>\fe{\sd{f}}{x}\lt0</m> on <m>\ointerval{-\infty}{-1}</m></li>
+                    <li><m>\fe{\sd{f}}{x}=0</m> on <m>\ointerval{4}{\infty}</m></li>
+                    <li><m>\lim\limits_{x\to4^{-}}\fe{f}{x}=-1</m> and <m>\lim\limits_{x\to4^{+}}\fe{f}{x}=1</m></li>
+                </ul>
+                <columnbreak/>
+                <figure xml:id="figure-sketch-function-supplement">
+                    <caption><m>f</m></caption>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
+                <endmulticols/>
+            </statement>
+            <solution>
+                <image>
+                    <latex-image-code>
+                    <![CDATA[\begin{tikzpicture}
+                    \begin{axis}[]
+                        \addplot[asymptote] coordinates {(2,-7) (2,7)};
+                        \addplot[pccplot,<-,domain=-6.8:-1] {-(x+1)^2/36+2.5};
+                        \addplot[pccplot,->,domain=-1:1.6] {(x+1)^(ln(9)/ln(2.6))/2+2.5};
+                        \addplot[pccplot,<-,domain=2.4:4] {2/(x-2)+2};
+                        \addplot[pccplot,->,domain=4:6.8] {x-1};
+                    \end{axis}
+                    \end{tikzpicture}]]>
+                    </latex-image-code>
+                </image>
+            </solution>
+            <answer>
+                <image>
+                    <latex-image-code>
+                    <![CDATA[\begin{tikzpicture}
+                    \begin{axis}[]
+                        \addplot[asymptote] coordinates {(2,-7) (2,7)};
+                        \addplot[pccplot,<-,domain=-6.8:-1] {-(x+1)^2/36+2.5};
+                        \addplot[pccplot,->,domain=-1:1.6] {(x+1)^(ln(9)/ln(2.6))/2+2.5};
+                        \addplot[pccplot,<-,domain=2.4:4] {2/(x-2)+2};
+                        \addplot[pccplot,->,domain=4:6.8] {x-1};
+                    \end{axis}
+                    \end{tikzpicture}]]>
+                    </latex-image-code>
+                </image>
+            </answer>
+        </exercise>
     </exercises>
 </section>
 

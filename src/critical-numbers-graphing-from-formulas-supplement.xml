@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+   
+<section xml:id="critical-numbers-graphing-from-formulas-supplementary-exercises">
+    <title>Supplement</title>
+    <exercises>
+        <exercisegroup>
+            <introduction>
+                <p>The sine and cosine function are called <term>circular trigonometric functions</term> because for any given value of <m>t</m> the point <m>\point{\fe{\cos}{t}}{\fe{\sin}{t}}</m> lies on the circle with equation <m>x^2+y^2=1</m>. And the origin, <m>\point{\fe{\cos}{t}}{\fe{\sin}{t}}</m>, and either <m>\point{\fe{\cos}{t}}{0}</m> or <m>\point{0}{\fe{\sin}{t}}</m> define a right triangle.</p>
+                <sidebyside>
+                    <figure width="40%">
+                        <caption><m>\point{\fe{\cos}{t}}{\fe{\sin}{t}}</m> on the circle <m>x^2+y^2=1</m></caption>
+                            <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={-3,-2,...,3},ytick={-3,-2,...,3},unit vector ratio*=1 1 1, clip=false]
+                                \addplot[domain=0:360,-,variable=t]({cos(t)},{sin(t)});
+                                \addplot[-] coordinates {(0,0) (0.8,0) (0.8,0.6) (0,0)};
+                                \addplot[mark=*] coordinates {(0.8,0.6)} node[pin=80:{$(\fe{\cos}{t},\fe{\sin}{t})$}]{} ;
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                    <figure width="40%">
+                        <caption><m>\point{\fe{\cosh}{t}}{\fe{\sinh}{t}}</m> on the circle <m>x^2-y^2=1</m></caption>
+                            <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={-3,-2,...,3},ytick={-3,-2,...,3},unit vector ratio*=1 1 1, clip=false]
+                                \addplot[domain=-1.76275:1.76275,-,variable=t]({(exp(t)+exp(-t))/2},{(exp(t)-exp(-t))/2});
+                                \addplot[domain=-1.76275:1.76275,-,variable=t]({-(exp(t)+exp(-t))/2},{-(exp(t)-exp(-t))/2});
+                                \addplot[-] coordinates {(0,0) (2,0) (2,1.73205) (0,0)};
+                                \addplot[mark=*] coordinates {(2,1.73205)} node[pin=-60:{$(\fe{\cosh}{t},\fe{\sinh}{t})$}]{} ;
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+                <p>There are analogous functions called <term>hyperbolic sine</term> and <term>hyperbolic cosine</term>.  As you might suspect, these functions generate points that lie on a hyperbola; specifically, for all values of <m>t</m> the point <m>\point{\fe{\cosh}{t}}{\fe{\sinh}{t}}</m> lies on the hyperbola <m>x^2-y^2=1</m>.  It turns out that there are formulas for these hyperbolic trigonometric functions in terms of functions we already know.  Specifically:<md><mrow>\fe{\cosh}{t}&amp;=\frac{e^{t}+e^{-t}}{2}&amp;\fe{\sinh}{t}&amp;=\frac{e^{t}-e^{-t}}{2}</mrow></md></p> 
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Use the exponential formulas to verify the identity <m>\fe{\cosh^2}{t}-\fe{\sinh^2}{t}=1</m>.</p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{\cosh^2}{t}-\fe{\sinh^2}{t}&amp;=\left(\frac{e^{t}+e^{-t}}{2}\right)^2-\left(\frac{e^{t}-e^{-t}}{2}\right)^2</mrow>
+                    <mrow>&amp;=\frac{e^{2t}+2+e^{-2t}}{4}-\frac{e^{2t}-2+e^{-2t}}{4}</mrow>
+                    <mrow>&amp;=\frac{4}{4}</mrow>
+                    <mrow>&amp;=1</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p>See the solutions section.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Use the exponential formulas to determine the first derivatives (with respect to <m>t</m>) of <m>\fe{\cosh}{t}</m> and <m>\fe{\sinh}{t}</m>.  Determine, by inference, the second derivative formulas for each of these functions.</p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\lzoo{t}{\fe{\cosh}{t}}&amp;=\lzoo{t}{\frac{e^{t}+e^{-t}}{2}}&amp;\lzoo{t}{\fe{\sinh}{t}}&amp;=\lzoo{t}{\frac{e^{t}-e^{-t}}{2}}</mrow>
+                    <mrow>&amp;=\frac{e^{t}-e^{-t}}{2}&amp;&amp;=\frac{e^{t}+e^{-t}}{2}</mrow>
+                    <mrow>&amp;=\fe{\sinh}{t}&amp;&amp;=\fe{\cosh}{t}</mrow>
+                    </md>It follows that <m>\lzon{2}{t}{\fe{\cosh}{t}}=\fe{\cosh}{t}</m> and <m>\lzon{2}{t}{\fe{\sinh}{t}}=\fe{\sinh}{t}</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>\lzoo{t}{\fe{\cosh}{t}}=\fe{\sinh}{t}</m>, <m>\lzoo{t}{\fe{\sinh}{t}}=\fe{\cosh}{t}</m>, <m>\lzon{2}{t}{\fe{\cosh}{t}}=\fe{\cosh}{t}</m> and <m>\lzon{2}{t}{\fe{\sinh}{t}}=\fe{\sinh}{t}</m></p>
+                </answer>
+            </exercise>
+            <exercise xml:id="exercise-critical-hyperbolic">
+                <statement>
+                    <p>Determine the critical numbers of <m>\cosh</m> and <m>\sinh</m>.</p>
+                </statement>
+                <solution>
+                    <p>The domains of both <m>\cosh</m> and <m>\sinh</m> are <m>\ointerval{-\infty}{\infty}</m>. Both functions' derivatives are always defined, so the only issue is when the derivatives equal <m>0</m>.<md>
+                    <mrow>\lzoo{t}{\fe{\cosh}{t}}&amp;=0&amp;\lzoo{t}{\fe{\sinh}{t}}&amp;=0</mrow>
+                    <mrow>\fe{\sinh}{t}&amp;=0&amp;\fe{\cosh}{t}&amp;=0</mrow>
+                    <mrow>\frac{e^{t}-e^{-t}}{2}&amp;=0&amp;\frac{e^{t}+e^{-t}}{2}&amp;=0</mrow>
+                    <mrow>e^{t}&amp;=e^{-t}&amp;&amp;</mrow>
+                    <mrow>e^{2t}&amp;=1&amp;&amp;</mrow>
+                    <mrow>t&amp;=0&amp;&amp;</mrow>
+                    </md>The only critical number for <m>\cosh</m> is <m>0</m>. The function <m>\sinh</m> has no critical numbers, since <m>\frac{e^{t}+e^{-t}}{2}</m> is always positive.</p>
+                </solution>
+                <answer>
+                    <p>The only critical number for <m>\cosh</m> is <m>0</m>. The function <m>\sinh</m> has no critical numbers.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Determine the intervals over which <m>\cosh</m> and <m>\sinh</m> are increasing/decreasing and over which they are concave up/concave down.</p> 
+                </statement>
+                <solution>
+                    <p><m>\fe{\sinh}{t}</m> is positive on <m>\ointerval{0}{\infty}</m> and negative on <m>\ointerval{-\infty}{0}</m>. Since <m>\lzoo{t}{\fe{\cosh}{t}}=\fe{\sinh}{t}</m> and <m>\lzon{2}{t}{\fe{\sinh}{t}}=\fe{\sinh}{t}</m>, it follows that <m>\cosh</m> is increasing on <m>\ointerval{0}{\infty}</m> and decreasing on <m>\ointerval{-\infty}{0}</m>, while <m>\sinh</m> is concave up on <m>\ointerval{0}{\infty}</m> and concave down on <m>\ointerval{-\infty}{0}</m>.</p>
+                    <p><m>\fe{\cosh}{t}</m> is positive on all of <m>\ointerval{-\infty}{\infty}</m>. Since <m>\lzoo{t}{\fe{\sinh}{t}}=\fe{\cosh}{t}</m> and <m>\lzon{2}{t}{\fe{\cosh}{t}}=\fe{\cosh}{t}</m>, it follows that <m>\sinh</m> is increasing on <m>\ointerval{-\infty}{\infty}</m> and <m>\cosh</m> is concave up on <m>\ointerval{-\infty}{\infty}</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>\cosh</m> is increasing on <m>\ointerval{0}{\infty}</m>, decreasing on <m>\ointerval{-\infty}{0}</m>, and concave up on <m>\ointerval{-\infty}{\infty}</m>; <m>\sinh</m> is increasing on <m>\ointerval{-\infty}{\infty}</m>, convace up on <m>\ointerval{0}{\infty}</m>, and concave down on <m>\ointerval{-\infty}{0}</m></p>
+                </answer>
+            </exercise>
+            <exercise xml:id="exercise-hyperbolic-limits">
+                <statement>
+                    <p>Use the exponential formulas to determine each of the following limits: <m>\lim\limits_{t\to-\infty}\fe{\cosh}{t}</m>, <m>\lim\limits_{t\to\infty}\fe{\cosh}{t}</m>, <m>\lim\limits_{t\to-\infty}\fe{\sinh}{t}</m>, and <m>\lim\limits_{t\to\infty}\fe{\sinh}{t}</m>.</p>
+                </statement>
+                <solution>
+                    <p>Each of the hyperbolic limits can be found quickly using these four basic limits: <m>\lim\limits_{t\to-\infty}e^t=0</m>, <m>\lim\limits_{t\to\infty}e^t=\infty</m>, <m>\lim\limits_{t\to-\infty}e^{-t}=\infty</m>, <m>\lim\limits_{t\to-\infty}e^{-t}=0</m>.<md>
+                    <mrow>\lim_{t\to-\infty}\fe{\cosh}{t}&amp;=\lim_{t\to-\infty}\frac{e^{t}+e^{-t}}{2}&amp;\lim_{t\to\infty}\fe{\cosh}{t}&amp;\lim_{t\to\infty}\frac{e^{t}+e^{-t}}{2}</mrow>
+                    <mrow>&amp;=\infty&amp;&amp;=\infty</mrow>
+                    <mrow>\lim_{t\to-\infty}\fe{\sinh}{t}&amp;=\lim_{t\to-\infty}\frac{e^{t}-e^{-t}}{2}&amp;\lim_{t\to\infty}\fe{\sinh}{t}&amp;\lim_{t\to\infty}\frac{e^{t}-e^{-t}}{2}</mrow>
+                    <mrow>&amp;=-\infty&amp;&amp;=\infty</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\lim\limits_{t\to-\infty}\fe{\cosh}{t}=\lim\limits_{t\to\infty}\fe{\cosh}{t}=\lim\limits_{t\to\infty}\fe{\sinh}{t}=\infty</m>, and <m>\lim\limits_{t\to-\infty}\fe{\sinh}{t}=-\infty</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Use the information you determined in <xref autoname="plural" ref="exercise-critical-hyperbolic"/><ndash/><xref autoname="no" ref="exercise-hyperbolic-limits"/> to help you draw freehand sketches of <m>y=\fe{\cosh}{t}</m> and <m>y=\fe{\sinh}{t}</m>.</p>
+                </statement>
+                <solution>
+                    <sidebyside>
+                        <image width="40%">
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xtick={100},ytick={100},minor xtick={100}, minor ytick={100},title={$y=\fe{\cosh}{t}$},xlabel={$t$}]
+                                \addplot[pccplot,domain=-2.5:2.5]{(exp(x)+exp(-x))/2};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                        <image width="40%">
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xtick={100},ytick={100},minor xtick={100}, minor ytick={100},title={$y=\fe{\sinh}{t}$},xlabel={$t$}]
+                                \addplot[pccplot,domain=-2.5:2.5]{(exp(x)-exp(-x))/2};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </sidebyside>
+                </solution>
+                <answer>
+                    <sidebyside>
+                        <image width="40%">
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xtick={100},ytick={100},minor xtick={100}, minor ytick={100},title={$y=\fe{\cosh}{t}$},xlabel={$t$}]
+                                \addplot[pccplot,domain=-2.5:2.5]{(exp(x)+exp(-x))/2};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                        <image width="40%">
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xtick={100},ytick={100},minor xtick={100}, minor ytick={100},title={$y=\fe{\sinh}{t}$},xlabel={$t$}]
+                                \addplot[pccplot,domain=-2.5:2.5]{(exp(x)-exp(-x))/2};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </sidebyside>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>There are four more hyperbolic functions that correspond to the four additional circular functions; <eg/> <m>\fe{\tanh}{t}=\frac{\fe{\sinh}{t}}{\fe{\cosh}{t}}</m>.  Find the exponential formulas for these four functions.</p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{\tanh}{t}&amp;=\frac{\fe{\sinh}{t}}{\fe{\cosh}{t}}&amp;\fe{\sech}{t}&amp;=\frac{1}{\fe{\cosh}{t}}</mrow>
+                    <mrow>&amp;=\frac{\frac{e^t-e^{-t}}{2}}{\frac{e^t+e^{-t}}{2}}&amp;\fe{\sech}{t}&amp;=\frac{1}{\frac{e^t+e^{-t}}{2}}</mrow>
+                    <mrow>&amp;=\frac{e^t-e^{-t}}{e^t+e^{-t}}&amp;\fe{\sech}{t}&amp;=\frac{2}{e^t+e^{-t}}</mrow>
+                    <mrow>\fe{\csch}{t}&amp;=\frac{1}{\fe{\sinh}{t}}&amp;\fe{\coth}{t}&amp;=\frac{1}{\fe{\tanh}{t}}</mrow>
+                    <mrow>&amp;=\frac{1}{\frac{e^t-e^{-t}}{2}}&amp;\fe{\tanh}{t}&amp;=\frac{1}{\frac{e^t-e^{-t}}{e^t+e^{-t}}}</mrow>
+                    <mrow>&amp;=\frac{2}{e^t-e^{-t}}&amp;\fe{\tanh}{t}&amp;=\frac{e^t+e^{-t}}{e^t-e^{-t}}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\fe{\tanh}{t}=\frac{e^t-e^{-t}}{e^t+e^{-t}}</m>, <m>\fe{\sech}{t}=\frac{2}{e^t+e^{-t}}</m>, <m>\fe{\csch}{t}=\frac{2}{e^t-e^{-t}}</m>, and <m>\fe{\coth}{t}=\frac{e^t+e^{-t}}{e^t-e^{-t}}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>What would you guess to be the first derivative of <m>\fe{\tanh}{t}</m>?  Take the derivative of the formula for <m>\fe{\tanh}{t}</m> to verify your suspicion.</p>
+                </statement>
+                <solution>
+                    <p>If the hyperbolic trig funcitons behave similarly to the sircular trig functions, we would expect <m>\lzoo{t}{\fe{\tanh}{t}}=\fe{\sech^2}{t}</m>. Let's see:<md>
+                    <mrow>\lzoo{t}{\fe{\tanh}{t}}&amp;=\lzoo{t}{\frac{\fe{\sinh}{t}}{\fe{\cosh}{t}}}</mrow>
+                    <mrow>&amp;=\frac{\lzoo{t}{\fe{\sinh}{t}}\cdot\fe{\cosh}{t}-\fe{\sinh}{t}\cdot\lzoo{t}{\fe{\cosh}{t}}}{\fe{\cosh^2}{t}}</mrow>
+                    <mrow>&amp;=\frac{\fe{\cosh}{t}\cdot\fe{\cosh}{t}-\fe{\sinh}{t}\cdot\fe{\sinh}{t}}{\fe{\cosh^2}{t}}</mrow>
+                    <mrow>&amp;=\frac{\fe{\cosh^2}{t}-\fe{\sinh^2}{t}}{\fe{\cosh^2}{t}}</mrow>
+                    <mrow>&amp;=\frac{1}{\fe{\cosh^2}{t}}</mrow>
+                    <mrow>&amp;=\fe{\sech^2}{t}</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p><m>\fe{\sech^2}{t}</m></p>
+                </answer>
+            </exercise>
+            <exercise xml:id="exercise-tanh-behavior">
+                <statement>
+                    <p>Let <m>\fe{f}{t}=\fe{\tanh}{t}</m>. What is the sign on <m>\fe{\fd{f}}{t}</m> at all values of <m>t</m>?  What does this tell you about the function <m>f</m>?  What are the values of <m>\fe{f}{0}</m> and <m>\fe{\fd{f}}{0}</m>?</p>
+                </statement>
+                <solution>
+                    <p>Since <m>\fe{\fd{f}}{t}=\fe{\sech^2}{t}</m>, <m>\fe{\fd{f}}{t}</m> is positive for all values of <m>t</m>. So <m>f</m> is always increasing. And we can calculate<md>
+                    <mrow>\fe{f}{0}&amp;=\fe{\tanh}{0}&amp;\fe{\fd{f}}{0}&amp;=\fe{\sech^2}{0}</mrow>
+                    <mrow>&amp;=\frac{e^0-e^{-0}}{e^0+e^{-0}}&amp;&amp;=\frac{2}{e^0+e^{-0}}</mrow>
+                    <mrow>&amp;=\frac{0}{2}&amp;&amp;=\frac{2}{2}</mrow>
+                    <mrow>&amp;=0&amp;&amp;=1</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <p>positive; <m>f</m> is always increasing; <m>\fe{f}{0}=0</m>; <m>\fe{\fd{f}}{0}=1</m></p>
+                </answer>
+            </exercise>
+            <exercise xml:id="exercise-tanh-limits">
+                <statement>
+                    <p>Use the exponential formula for <m>\tanh</m> to determine <m>\lim\limits_{t\to-\infty}\fe{\tanh}{t}</m> and <m>\lim\limits_{t\to\infty}\fe{\tanh}{t}</m>.</p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\lim_{t\to-\infty}\fe{\tanh}{t}&amp;=\lim_{t\to-\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}&amp;\lim_{t\to\infty}\fe{\tanh}{t}&amp;=\lim_{t\to\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}</mrow>
+                    <mrow>&amp;=\lim_{t\to-\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}\cdot\frac{e^t}{e^t}&amp;&amp;=\lim_{t\to\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}\cdot\frac{e^{-t}}{e^{-t}}</mrow>
+                    <mrow>&amp;=\lim_{t\to-\infty}\frac{e^{2t}-1}{e^{2t}+1}&amp;&amp;=\lim_{t\to\infty}\frac{1-e^{-2t}}{1+e^{-2t}}</mrow>
+                    <mrow>&amp;=\frac{\lim_{t\to-\infty}\left(e^{2t}-1\right)}{\lim_{t\to-\infty}\left(e^{2t}+1\right)}&amp;&amp;=\frac{\lim_{t\to\infty}\left(1-e^{-2t}\right)}{\lim_{t\to\infty}\left(1+e^{-2t}\right)}</mrow>
+                    <mrow>&amp;=\frac{\lim_{t\to-\infty}e^{2t}-\lim_{t\to-\infty}1}{\lim_{t\to-\infty}e^{2t}+\lim_{t\to-\infty}1}&amp;&amp;=\frac{\lim_{t\to\infty}1-\lim_{t\to\infty}e^{-2t}}{\lim_{t\to\infty}1+\lim_{t\to\infty}e^{-2t}}</mrow>
+                    <mrow>&amp;=\frac{\left(\lim_{t\to-\infty}e^{t}\right)^2-1}{\left(\lim_{t\to-\infty}e^{t}\right)^2+1}&amp;&amp;=\frac{1-\left(\lim_{t\to\infty}e^{-t}\right)^2}{1+\left(\lim_{t\to\infty}e^{-t}\right)^2}</mrow>
+                    <mrow>&amp;=\frac{0^2-1}{0^2+1}&amp;&amp;=\frac{1-0^2}{1+0^2}</mrow>
+                    <mrow>&amp;=-1&amp;&amp;=1</mrow>
+                    </md></p>
+                </solution>
+                <answer>
+                    <m>\lim\limits_{t\to-\infty}\fe{\tanh}{t}=-1</m> and <m>\lim\limits_{t\to\infty}\fe{\tanh}{t}=1</m>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Use the information you determined in <xref autoname="plural" ref="exercise-tanh-behavior"/><ndash/><xref autoname="no" ref="exercise-tanh-limits"/> to help you draw a freehand sketch of <m>y=\fe{\tanh}{t}</m>.</p>
+                </statement>
+                <solution>
+                    <image width="40%">
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={-3,-2,...,3},ytick={-3,-2,...,3},minor xtick={-3,-2,...,3}, minor ytick={-3,-2,...,3},title={$y=\fe{\tanh}{t}$},xlabel={$t$}]
+                            \addplot[pccplot,domain=-2.9:2.9]{(exp(x)-exp(-x))/(exp(x)+exp(-x))};
+                            \addplot[asymptote,<-,domain=-3:0]{-1};
+                            \addplot[asymptote,->,domain=0:3]{1};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </solution>
+                <answer>
+                    <image width="40%">
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={-3,-2,...,3},ytick={-3,-2,...,3},minor xtick={-3,-2,...,3}, minor ytick={-3,-2,...,3},title={$y=\fe{\tanh}{t}$},xlabel={$t$}]
+                            \addplot[pccplot,domain=-2.9:2.9]{(exp(x)-exp(-x))/(exp(x)+exp(-x))};
+                            \addplot[asymptote,<-,domain=-3:0]{-1};
+                            \addplot[asymptote,->,domain=0:3]{1};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <p>Consider the function <m>k</m> defined by <m>\fe{k}{t}=\sqrt[3]{t^8}-256\sqrt[3]{t^2}</m>.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>What are the critical numbers of <m>k</m>?  Remember to show all relevant work!  Remember that your formula for <m>\fe{\fd{k}}{t}</m> needs to be a single, completely factored, fraction!</p> 
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{\fd{k}}{t}&amp;=\lzoo{t}{t^{\sfrac{8}{3}}-256t^{\sfrac{2}{3}}}</mrow>
+                    <mrow>&amp;=\frac{8}{3}t^{\sfrac{5}{3}}-\frac{512}{3}t^{\sfrac{-1}{3}}</mrow>
+                    <mrow>&amp;=\frac{8}{3}t^{-\sfrac{1}{3}}\left(t^2-64\right)</mrow>
+                    <mrow>&amp;=\frac{8\left(t^2-64\right)}{3\sqrt[3]{t}}</mrow>
+                    </md>The domain of <m>k</m> is <m>\ointerval{-\infty}{\infty}</m>. <m>\fe{\fd{k}}{t}=0</m> at <m>8</m> and <m>-8</m>.  Over the domain of <m>k</m>, <m>\fd{k}</m> is undefined at <m>0</m>.  So the critical numbers of <m>k</m> are <m>8</m>, <m>-8</m>, and <m>0</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>8</m>, <m>-8</m>, and <m>0</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Create an increasing/decreasing table for <m>k</m>.</p>
+                </statement>
+                <solution>
+                    <tabular top="major">
+                        <col valign="center"/>
+                        <col valign="center"/>
+                        <col valign="center"/>
+                        <row bottom="medium">
+                            <cell>Interval</cell>
+                            <cell><m>\fd{k}</m></cell>
+                            <cell><m>k</m></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{-\infty}{-8}</m></cell>
+                            <cell>negative</cell>
+                            <cell>decreasing</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{-8}{0}</m></cell>
+                            <cell>positive</cell>
+                            <cell>increasing</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{0}{8}</m></cell>
+                            <cell>negative</cell>
+                            <cell>decreasing</cell>
+                        </row>
+                        <row bottom="major">
+                            <cell><m>\ointerval{8}{\infty}</m></cell>
+                            <cell>negative</cell>
+                            <cell>decreasing</cell>
+                        </row>
+                    </tabular>
+                </solution>
+                <answer>
+                    <p>See the solutions section.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>State each local minimum point and local maximum point on <m>k</m>.</p>
+                </statement>
+                <solution>
+                    <p>The local minimum points on <m>k</m> are <m>\point{-8}{-878}</m> and <m>\point{8}{878}</m>.  The only local maximum point on <m>k</m> is <m>\point{0}{0}</m>.</p>
+                </solution>
+                <answer>
+                    <p>local minimum points at <m>\point{-8}{-878}</m> and <m>\point{8}{878}</m>; local maximum point at <m>\point{0}{0}</m></p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercisegroup>
+            <introduction>
+                <p>Consider the function <m>f</m> defined by <m>\fe{f}{x}=\fe{\cos^2}{x}+\fe{\sin}{x}</m> over the restricted domain <m>\cinterval{0}{2\pi}</m>.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>What are the critical numbers of <m>f</m>?  Remember to show all relevant work!  Remember that your formula for <m>\fe{\fd{f}}{t}</m> needs to be a single, completely factored, fraction!</p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{\fd{f}}{x}&amp;=\lzoo{x}{\fe{\cos^2}{x}+\fe{\sin}{x}}</mrow>
+                    <mrow>&amp;=2\fe{\cos}{x}\cdot-\fe{\sin}{x}+\fe{\cos}{x}</mrow>
+                    <mrow>&amp;=\fe{\cos}{x}\left(-2\fe{\sin}{x}+1\right)</mrow>
+                    </md>The domain of <m>f</m> has been restricted to <m>\cinterval{0}{2\pi}</m>.  Over <m>\cinterval{0}{2\pi}</m>, <m>\fe{\cos}{x}=0</m> at <m>\frac{\pi}{2}</m> and <m>\frac{3\pi}{2}</m> and <m>\fe{\sin}{x}=\frac{1}{2}</m> at <m>\frac{\pi}{6}</m> and <m>\frac{5\pi}{6}</m>.  So over the restricted domain, <m>\fe{\fd{f}}{x}=0</m> at <m>\frac{\pi}{2}</m>, <m>\frac{3\pi}{2}</m>, <m>\frac{\pi}{6}</m>, and <m>\frac{5\pi}{6}</m>. <m>\fd{f}</m> is never undefined.  So the critical numbers of <m>f</m> are <m>\frac{\pi}{6}</m>, <m>\frac{\pi}{2}</m>, <m>\frac{5\pi}{6}</m>, and <m>\frac{3\pi}{2}</m>.</p>
+                </solution>
+                <answer>
+                    <p><m>\frac{\pi}{6}</m>, <m>\frac{\pi}{2}</m>, <m>\frac{5\pi}{6}</m>, and <m>\frac{3\pi}{2}</m></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Create an increasing/decreasing table for <m>f</m>.</p>
+                </statement>
+                <solution>
+                    <tabular top="major">
+                        <col valign="center"/>
+                        <col valign="center"/>
+                        <col valign="center"/>
+                        <row bottom="medium">
+                            <cell>Interval</cell>
+                            <cell><m>\fd{f}</m></cell>
+                            <cell><m>f</m></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{0}{\frac{\pi}{6}}</m></cell>
+                            <cell>positive</cell>
+                            <cell>increasing</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{\frac{\pi}{6}}{\frac{\pi}{2}}</m></cell>
+                            <cell>negative</cell>
+                            <cell>decreasing</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{\frac{\pi}{2}}{\frac{5\pi}{6}}</m></cell>
+                            <cell>positive</cell>
+                            <cell>increasing</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{\frac{5\pi}{6}}{\frac{3\pi}{2}}</m></cell>
+                            <cell>negative</cell>
+                            <cell>decreasing</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{\frac{3\pi}{2}}{2\pi}</m></cell>
+                            <cell>positive</cell>
+                            <cell>increasing</cell>
+                        </row>
+                    </tabular>
+                </solution>
+                <answer>
+                    <p>See the solutions section.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>State each local minimum point and local maximum point on <m>f</m>.</p>
+                </statement>
+                <solution>
+                    <p>The local minimum points on <m>f</m> are <m>\point{0}{1}</m>, <m>\point{\frac{\pi}{2}}{1}</m>, and <m>\point{\frac{3\pi}{2}}{-1}</m>.  The local maximum points on <m>f</m> are <m>\point{\frac{\pi}{6}}{\frac{5}{4}}</m>, <m>\point{\frac{5\pi}{6}}{\frac{5}{4}}</m>, and <m>\point{2\pi}{0}</m>.</p>
+                </solution>
+                <answer>
+                    <p>local minimum points at <m>\point{0}{1}</m>, <m>\point{\frac{\pi}{2}}{1}</m>, and <m>\point{\frac{3\pi}{2}}{-1}</m>; local maximum points at <m>\point{\frac{\pi}{6}}{\frac{5}{4}}</m>, <m>\point{\frac{5\pi}{6}}{\frac{5}{4}}</m>, and <m>\point{2\pi}{0}</m></p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+        <exercise>
+            <statement>
+                <p>Consider <m>\fe{g}{t}=\frac{t+9}{t^3}</m>.  Find (and completely simplify) <m>\fe{\sd{g}}{t}</m> and state all numbers where <m>\fe{\sd{g}}{t}</m> is zero or undefined.  Then construct a concavity table for <m>g</m> and state all of the inflection points on <m>g</m>.</p>
+            </statement>
+            <solution>
+                <p><md>
+                <mrow>\fe{\fd{g}}{t}&amp;=\lzoo{t}{\frac{t+9}{t^3}}</mrow>
+                <mrow>&amp;=\frac{1\cdot t^3-(t+9)\cdot3t^2}{t^6}</mrow>
+                <mrow>&amp;=\frac{t^3-3t^3-27t^2}{t^6}</mrow>
+                <mrow>&amp;=\frac{-2t^3-27t^2}{t^6}</mrow>
+                <mrow>&amp;=\frac{-2t-27}{t^4}</mrow>
+                <mrow>\fe{\sd{g}}{t}&amp;=\frac{-2\cdot t^4-(-2t-27)\cdot4t^3}{t^8}</mrow>
+                <mrow>&amp;=\frac{-2t^4+8t^4+108t^3}{t^8}</mrow>
+                <mrow>&amp;=\frac{6t^4+108t^3}{t^8}</mrow>
+                <mrow>&amp;=\frac{6t+108}{t^5}</mrow>
+                <mrow>&amp;=\frac{6(t+18)}{t^5}</mrow>
+                </md><m>\fe{\sd{g}}{t}=0</m> at <m>-18</m> and <m>\fe{\sd{g}}{t}</m> is undefined at <m>0</m>.</p>
+                <tabular top="major">
+                    <col halign="center"/>
+                    <col halign="center"/>
+                    <col halign="center"/>
+                    <row bottom="medium">
+                        <cell>Interval</cell>
+                        <cell><m>\sd{g}</m></cell>
+                        <cell><m>g</m></cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>\ointerval{-\infty}{-18}</m></cell>
+                        <cell>positive</cell>
+                        <cell>concave up</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>\ointerval{-18}{0}</m></cell>
+                        <cell>negative</cell>
+                        <cell>concave down</cell>
+                    </row>
+                    <row bottom="major">
+                        <cell><m>\ointerval{0}{\infty}</m></cell>
+                        <cell>positive</cell>
+                        <cell>concave up</cell>
+                    </row>
+                </tabular>
+                <p>The only inflection point on <m>g</m> is <m>\point{-18}{\frac{1}{648}}</m>. <m>g</m> has a vertical asymptote at <m>0</m>.</p>
+            </solution>
+            <answer>
+                <p><m>\fe{\fd{g}}{t}=\frac{6(t+18)}{t^5}</m>; <m>\fe{\sd{g}}{t}=0</m> at <m>-18</m> and <m>\fe{\sd{g}}{t}</m> is undefined at <m>0</m>;</p>
+                <tabular top="major">
+                    <col halign="center"/>
+                    <col halign="center"/>
+                    <col halign="center"/>
+                    <row bottom="medium">
+                        <cell>Interval</cell>
+                        <cell><m>\sd{g}</m></cell>
+                        <cell><m>g</m></cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>\ointerval{-\infty}{-18}</m></cell>
+                        <cell>positive</cell>
+                        <cell>concave up</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>\ointerval{-18}{0}</m></cell>
+                        <cell>negative</cell>
+                        <cell>concave down</cell>
+                    </row>
+                    <row bottom="major">
+                        <cell><m>\ointerval{0}{\infty}</m></cell>
+                        <cell>positive</cell>
+                        <cell>concave up</cell>
+                    </row>
+                </tabular>
+                <p>inflection point at <m>\point{-18}{\frac{1}{648}}</m></p>
+            </answer>
+        </exercise>
+        <exercisegroup cols="3">
+            <introduction>
+                <p>For each of the following functions build increasing/decreasing tables and concavity tables and then state all local minimum points, local maximum points, and inflection points on the function.  Also determine and state all horizontal asymptotes and vertical asymptotes for the function.   Finally, draw a detailed sketch of the function.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p><m>\fe{f}{x}=\frac{x-3}{(x+2)^2}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{\fd{f}}{x}&amp;=\frac{1\cdot(x+2)^2-(x-3)\cdot2(x+2)}{(x+2)^4}</mrow>
+                    <mrow>&amp;=\frac{(x+2)-(x-3)\cdot2}{(x+2)^3}</mrow>
+                    <mrow>&amp;=\frac{-x+8}{(x+2)^3}</mrow>
+                    <mrow>\fe{\sd{f}}{x}&amp;=\frac{-1\cdot(x+2)^3-(-x+8)\cdot3(x+2)^2}{(x+2)^6}</mrow>
+                    <mrow>&amp;=\frac{-(x+2)-(-x+8)\cdot3}{(x+2)^4}</mrow>
+                    <mrow>&amp;=\frac{2x-26}{(x+2)^4}</mrow>
+                    <mrow>&amp;=\frac{2(x-13)}{(x+2)^4}</mrow>
+                    </md></p>
+                    <tabular top="major">
+                        <col halign="center"/>
+                        <col halign="center"/>
+                        <col halign="center"/>
+                        <col halign="center"/>
+                        <row bottom="medium">
+                            <cell>Interval</cell>
+                            <cell><m>\fd{f}</m></cell>
+                            <cell><m>\sd{f}</m></cell>
+                            <cell><m>f</m></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{-\infty}{-2}</m></cell>
+                            <cell>negative</cell>
+                            <cell>negative</cell>
+                            <cell>decreasing, concave down</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{-2}{8}</m></cell>
+                            <cell>positive</cell>
+                            <cell>negative</cell>
+                            <cell>increasing, concave down</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{8}{13}</m></cell>
+                            <cell>negative</cell>
+                            <cell>negative</cell>
+                            <cell>decreasing, concave down</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{13}{\infty}</m></cell>
+                            <cell>negative</cell>
+                            <cell>positive</cell>
+                            <cell>decreasing, concave up</cell>
+                        </row>
+                    </tabular>
+                    <p><m>f</m> is defined everywhere except <m>-2</m>, where it has a vertical asymptote. <m>f</m> has no local minimum points, and has a local maximum point at <m>\point{8}{\frac{1}{20}}</m>. There is a horizontal tangent line to <m>f</m> at <m>8</m>. There is an inflection point at <m>\point{13}{\frac{2}{45}}</m>, where the curve changes from concave down to concave up. <md>
+                    <mrow>\lim_{x\to\infty}\fe{f}{x}&amp;=\lim_{x\to\infty}\frac{x-3}{(x+2)^2}</mrow>
+                    <mrow>&amp;=\lim_{x\to\infty}\frac{x-3}{x^2+4x+4}</mrow>
+                    <mrow>&amp;=\lim_{x\to\infty}\frac{x-3}{x^2+4x+4}\cdot\frac{\sfrac{1}{x^2}}{\sfrac{1}{x^2}}</mrow>
+                    <mrow>&amp;=\lim_{x\to\infty}\frac{\frac{1}{x}-\frac{3}{x^2}}{1+\frac{4}{x}+\frac{4}{x^2}}</mrow>
+                    <mrow>&amp;=\frac{0-0}{1+0+0}</mrow>
+                    <mrow>&amp;=0</mrow>
+                    </md>Similarly, <m>\lim\limits_{x\to-\infty}\fe{f}{x}=0</m>, so there is a horizontal asymptote in both directions at <m>y=0</m>. Note that the <m>y</m>-intercept is at <m>\point{0}{-\frac{3}{4}}</m> with tangent slope <m>\fe{\fd{f}}{0}=1</m>, and there is an <m>x</m>-intercept at <m>\point{3}{0}</m> with tangent slope <m>\fe{\fd{f}}{3}=\frac{1}{25}</m>. Lastly, we can compute the slope at the inflection point to be <m>\fe{\fd{f}}{13}=-1/675</m>.</p>
+                    <image width="40%">
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[xmin=-20,xmax=20,ymin=-1.5,ymax=0.25,xtick={-16,-12,...,16},minor xtick={-20,-19,...,20},ytick={-1.25,-1,...,0},minor ytick={-1.5,-1.45,...,0.25},title={$y=\frac{x-3}{(x+2)^2}$}]
+                            \addplot[pccplot,domain=-19.8:-4.25]{(x-3)/(x+2)^2};
+                            \addplot[pccplot,domain=-0.45:19.8]{(x-3)/(x+2)^2};
+                            \addplot[asymptote,domain=-19.8:19.8]{0};
+                            \addplot[asymptote,domain=-0.5:0.5]{x-3/4};
+                            \addplot[asymptote,domain=-2:8]{(x-3)/25};
+                            \addplot[asymptote,domain=-20:20]{-1/675*(x-13)+2/45};
+                            \addplot[asymptote] coordinates {(-2,-1.5) (-2,0.25)};
+                            \addplot[soldot] coordinates {(0,-3/4) (3,0) (8,1/20) (13,2/45)};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </solution>
+                <answer>
+                    <p>See the solutions section.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{g}{x}=\sqrt[3]{x^2}(x+5)</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{g}{x}&amp;=x^{\sfrac{5}{3}}+5x^{\sfrac{2}{3}}</mrow>
+                    <mrow>\fe{\fd{g}}{x}&amp;=\frac{5}{3}x^{\sfrac{2}{3}}+\frac{10}{3}x^{-\sfrac{1}{3}}</mrow>
+                    <mrow>&amp;=\frac{5}{3}x^{-\sfrac{1}{3}}(x+2)</mrow>
+                    <mrow>&amp;=\frac{5(x+2)}{3\sqrt[3]{x}}</mrow>
+                    <mrow>\fe{\sd{g}}{x}&amp;=\frac{10}{9}x^{-\sfrac{1}{3}}-\frac{10}{9}x^{-\sfrac{4}{3}}</mrow>
+                    <mrow>&amp;=\frac{10}{9}x^{-\sfrac{4}{3}}(x-1)</mrow>
+                    <mrow>&amp;=\frac{10(x-1)}{9\sqrt[3]{x^4}}</mrow>
+                    </md></p>
+                    <tabular top="major">
+                        <col halign="center"/>
+                        <col halign="center"/>
+                        <col halign="center"/>
+                        <col halign="center"/>
+                        <row bottom="medium">
+                            <cell>Interval</cell>
+                            <cell><m>\fd{g}</m></cell>
+                            <cell><m>\sd{g}</m></cell>
+                            <cell><m>g</m></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{-\infty}{-2}</m></cell>
+                            <cell>positive</cell>
+                            <cell>negative</cell>
+                            <cell>increasing, concave down</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{-2}{0}</m></cell>
+                            <cell>negative</cell>
+                            <cell>negative</cell>
+                            <cell>decreasing, concave down</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{0}{1}</m></cell>
+                            <cell>positive</cell>
+                            <cell>negative</cell>
+                            <cell>increasing, concave down</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{1}{\infty}</m></cell>
+                            <cell>positive</cell>
+                            <cell>positive</cell>
+                            <cell>increasing, concave up</cell>
+                        </row>
+                    </tabular>
+                    <p><m>g</m> is defined everywhere. <m>g</m> has a local minimum at <m>0</m>. The derivative is not defined at <m>0</m>, and in fact as <m>x</m> approaches <m>0</m> from the left, <m>\fe{\fd{g}}{x}</m> approaches <m>-\infty</m>, while as <m>x</m> approaches <m>0</m> from the right, <m>\fe{\fd{g}}{x}</m> approaches <m>\infty</m>. Since <m>\fe{g}{0}=0</m>, <m>g</m> has a cusp point at <m>\point{0}{0}</m>. <m>g</m> has a local maximum at <m>\point{-2}{3\sqrt[3]{4}}</m>, where <m>\fe{\fd{g}}{-2}=0</m>, so there is a horizontal tangent there. <m>g</m> has an infelction point at <m>\point{1}{6}</m>, where the curve transitions from concave down to concave up. The slope at this inflection point is <m>\fe{\fd{g}}{1}=5</m>. Aside from the <m>x</m>-intercept at <m>\point{0}{0}</m> (which is also the <m>y</m>-intercept) <m>g</m> also has an <m>x</m>-intercept at <m>\point{-5}{0}</m>. The slope at this intercept is <m>\fe{\fd{g}}{-5}=5^{\cfrac{2}{3}}</m>.</p>
+                    <image width="40%">
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[ymin=-10,ymax=20,ytick={-8,-4,...,20},minor ytick={-10,-9,...,20},title={$y=\sqrt[3]{x^2}(x+5)$}]
+                            \addplot[pccplot,domain=-6.8:0,<-]{(-x)^(2/3)*(x+5)};
+                            \addplot[pccplot,domain=0:3.5,->]{x^(2/3)*(x+5)};
+                            \addplot[asymptote,->] coordinates {(0,0) (0,7)};
+                            \addplot[asymptote,domain=-5:1]{3*4^(1/3)};
+                            \addplot[asymptote,domain=-1:3]{5*(x-1)+6};
+                            \addplot[asymptote,domain=-6.5:-3.5]{5^(2/3)*(x+5)};
+                            \addplot[soldot] coordinates {(-2,4.7622) (1,6) (-5,0)};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </solution>
+                <answer>
+                    <p>See the solutions section.</p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>\fe{k}{x}=\frac{(x-4)^2}{x+3}</m></p>
+                </statement>
+                <solution>
+                    <p><md>
+                    <mrow>\fe{\fd{k}}{x}&amp;=\frac{2(x-4)\cdot(x+3)-(x-4)^2\cdot1}{(x+3)^2}</mrow>
+                    <mrow>&amp;=\frac{2x^2-2x-24-(x^2-8x+16)}{(x+3)^2}</mrow>
+                    <mrow>&amp;=\frac{x^2+6x-40}{(x+3)^2}</mrow>
+                    <mrow>&amp;=\frac{(x+10)(x-4)}{(x+3)^2}</mrow>
+                    <mrow>\fe{\sd{k}}{x}&amp;=\frac{(2x+6)\cdot(x+3)^2-\left(x^2+6x-40\right)\cdot2(x+3)}{(x+3)^4}</mrow>
+                    <mrow>&amp;=\frac{(2x+6)\cdot(x+3)-\left(x^2+6x-40\right)\cdot2}{(x+3)^3}</mrow>
+                    <mrow>&amp;=\frac{2x^2+12x+18-\left(2x^2+12x-80\right)}{(x+3)^3}</mrow>
+                    <mrow>&amp;=\frac{98}{(x+3)^3}</mrow>
+                    </md></p>
+                    <tabular top="major">
+                        <col halign="center"/>
+                        <col halign="center"/>
+                        <col halign="center"/>
+                        <col halign="center"/>
+                        <row bottom="medium">
+                            <cell>Interval</cell>
+                            <cell><m>\fd{k}</m></cell>
+                            <cell><m>\sd{k}</m></cell>
+                            <cell><m>k</m></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{-\infty}{-10}</m></cell>
+                            <cell>positive</cell>
+                            <cell>negative</cell>
+                            <cell>increasing, concave down</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{-10}{-3}</m></cell>
+                            <cell>negative</cell>
+                            <cell>negative</cell>
+                            <cell>decreasing, concave down</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{-3}{4}</m></cell>
+                            <cell>negative</cell>
+                            <cell>positive</cell>
+                            <cell>decreasing, concave up</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{4}{\infty}</m></cell>
+                            <cell>positive</cell>
+                            <cell>positive</cell>
+                            <cell>increasing, concave up</cell>
+                        </row>
+                    </tabular>
+                    <p><m>g</m> is defined everwhere except at <m>-3</m>, where there is a vertical asymptote. <m>\fe{g}{x}</m> approaches <m>-\infty</m> from the left of <m>-3</m>, and <m>\infty</m> from the right of <m>-3</m>. There is a local minumum point at <m>\point{4}{0}</m>, where there is a horizontal tangent. There is a local maximum point at <m>\point{-10}{-28}</m>, where there is also a horizontal tangent. There is only a change in concavity at <m>-3</m>, where the function is not defined. So there are no inflection points. The only <m>x</m>-intercept is at <m>4</m>, which has already been discussed. The <m>y</m>-intercept is at <m>\point{0}{\frac{16}{3}}</m>, where the slope is <m>\fe{\fd{k}}{0}=-\frac{40}{9}</m>.</p> 
+                    <image width="40%">
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[xmin=-30,xmax=30, xtick={-28,-24,...,28}, minor xtick={-30,-28,...,30},ymin=-40,ymax=20,ytick={-40,-36,...,20},minor ytick={-40,-38,...,20},title={$y=\frac{(x-4)^2}{x+3}$}]
+                            \addplot[pccplot,domain=-26:-5]{(x-4)^2/(x+3)};
+                            \addplot[pccplot,domain=-2:29]{(x-4)^2/(x+3)};
+                            \addplot[asymptote] coordinates {(-3,-40) (-3,20)};
+                            \addplot[asymptote,domain=-15:-5]{-28};
+                            \addplot[asymptote,domain=-1:9]{0};
+                            \addplot[asymptote,domain=-5:5]{-40/9*x+16/3};
+                            \addplot[soldot] coordinates {(-10,-28) (4,0) (0,5.33333)};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+
+                </solution>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+</section>
+
+

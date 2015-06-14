@@ -14,7 +14,7 @@
 
     <p>Intuitively, what is happening in this rule is that we are alternately treating one factor as a constant (the one not being differentiated) and the other factor as a variable function (the one that is being differentiated).  We then add these two rates of change together.</p>
 
-    <p>Ultimately, you want to perform this rule in your head just like all of the other rules.  Your instructor, however, may initially want you to show steps; under that presumption, steps are going to be shown in each and every example of this lab when the product rule is applied. Two simple examples of the product rule are shown in <xref ref="table-product-rule"/>i.</p>
+    <p>Ultimately, you want to perform this rule in your head just like all of the other rules.  Your instructor, however, may initially want you to show steps; under that presumption, steps are going to be shown in each and every example of this lab when the product rule is applied. Two simple examples of the product rule are shown in <xref ref="table-product-rule"/>.</p>
  
     <table xml:id="table-product-rule">
         <caption>Examples of the Product Rule</caption>
