@@ -14,27 +14,27 @@
 
     <example xml:id="example-first-indeterminate">
         <p><md>
-        <mrow>\lim_{x\to3}\frac{x^2-8x+15}{x-3}&amp;=\lim_{x\to3}\frac{(x-5)(x-3)}{x-3}</mrow>
-        <mrow>&amp;=\lim_{x\to3}(x-5)\tikzmark{not indeterminate}&amp;&amp;\text{Limit Law A7}</mrow>
+        <mrow>\lim_{x\to3}\frac{x^2-8x+15}{x-3}&amp;=\lim_{x\to3}\frac{(x-5)(x-3)}{x-3}&amp;&amp;\text{Indeterminate $\frac{0}{0}$ form}</mrow>
+        <mrow>&amp;=\lim_{x\to3}(x-5)&amp;&amp;\text{Limit Law A7}</mrow>
         <mrow>&amp;=\lim_{x\to3}x-\lim_{x\to3}5&amp;&amp;\text{Limit Law A2}</mrow>
         <mrow>&amp;=3-5&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
         <mrow>&amp;=-2</mrow>
-        </md><annotate>\Annotate[][anchor=south west]{0ex}{0}{4}{1}{not indeterminate}{\parbox{0.3\linewidth}{This limit does not have indeterminate form, so we may apply the remaining limit laws.}}</annotate></p>
+        </md></p>
     </example>
 
 
     <example xml:id="example-second-indeterminate">
         <p><md>
-        <mrow>\lim_{\theta\to0}\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}&amp;=\lim_{\theta\to0}\left(\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}\cdot\frac{1+\fe{\cos}{\theta}}{1+\fe{\cos}{\theta}}\right)</mrow>
-        <mrow>&amp;=\lim_{\theta\to0}\frac{1-\fe{\cos^2}{\theta}}{\fe{\sin^2}{\theta}\cdot\left(1+\fe{\cos}{\theta}\right)}</mrow>
-        <mrow>&amp;=\lim_{\theta\to0}\frac{\fe{\sin^2}{\theta}}{\fe{\sin^2}{\theta}\cdot\left(1+\fe{\cos}{\theta}\right)}</mrow>
-        <mrow>&amp;=\lim_{\theta\to0}\frac{1}{1+\fe{\cos}{\theta}}\tikzmark{second not indeterminate}&amp;&amp;\text{Limit Law A7}</mrow>
+        <mrow>\lim_{\theta\to0}\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}&amp;=\lim_{\theta\to0}\left(\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}\cdot\frac{1+\fe{\cos}{\theta}}{1+\fe{\cos}{\theta}}\right)&amp;&amp;\text{Indeterminate $\frac{0}{0}$ form}</mrow>
+        <mrow>&amp;=\lim_{\theta\to0}\frac{1-\fe{\cos^2}{\theta}}{\fe{\sin^2}{\theta}\cdot\left(1+\fe{\cos}{\theta}\right)}&amp;&amp;\text{Indeterminate $\frac{0}{0}$ form}</mrow>
+        <mrow>&amp;=\lim_{\theta\to0}\frac{\fe{\sin^2}{\theta}}{\fe{\sin^2}{\theta}\cdot\left(1+\fe{\cos}{\theta}\right)}&amp;&amp;\text{Indeterminate $\frac{0}{0}$ form}</mrow>
+        <mrow>&amp;=\lim_{\theta\to0}\frac{1}{1+\fe{\cos}{\theta}}&amp;&amp;\text{Limit Law A7}</mrow>
         <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}\left(1+\fe{\cos}{\theta}\right)}&amp;&amp;\text{Limit Law A5}</mrow>
         <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}1+\lim_{\theta\to0}\fe{\cos}{\theta}}&amp;&amp;\text{Limit Law A1}</mrow>
         <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}1+\fe{\cos}{\lim_{\theta\to0}\theta}}&amp;&amp;\text{Limit Law A6}</mrow>
         <mrow>&amp;=\frac{1}{1+\fe{\cos}{0}}&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
         <mrow>&amp;=\frac{1}{2}</mrow>
-        </md><annotate>\Annotate[][anchor=south west]{0ex}{0}{5}{1}{second not indeterminate}{\parbox{0.3\linewidth}{This limit does not have indeterminate form, so we may apply the remaining limit laws.}}</annotate></p>
+        </md></p>
     </example>
 
     <p>As seen in <xref ref="example-second-indeterminate"/>, trigonometric identities can come into play while trying to eliminate the form <m>\frac{0}{0}</m>. Elementary rules of logarithms can also play a role in this process. Before you begin evaluating limits whose initial form is <m>\frac{0}{0}</m>, you need to make sure that you recall some of these basic rules. That is the purpose of <xref ref="exercise-identities-review"/>.</p>
@@ -45,19 +45,19 @@
                 <p>Complete each of the following identities (over the real numbers). Make sure that you check with your lecture instructor so that you know which of these identities you are expected to memorize.</p>
 
                 <p>The following identities are valid for all values of <m>x</m> and <m>y</m>.<md>
-                <mrow>1-\fe{\cos^2}{x}&amp;=&amp;\fe{\tan^2}{x}&amp;=</mrow>
-                <mrow>\fe{\sin}{2x}&amp;=&amp;\fe{\tan}{2x}&amp;=</mrow>
-                <mrow>\fe{\sin}{x+y}&amp;=&amp;\fe{\cos}{x+y}&amp;=</mrow>
-                <mrow>\fe{\sin}{\frac{x}{2}}&amp;=&amp;\fe{\cos}{\frac{x}{2}}&amp;=</mrow>
+                <mrow>1-\fe{\cos^2}{x}&amp;=\phantom{\fe{\sin^2}{x}}&amp;\fe{\tan^2}{x}&amp;=\phantom{\fe{\sec^2}{x}-1}</mrow>
+                <mrow>\fe{\sin}{2x}&amp;=\phantom{2\fe{\sin}{x}\fe{\cos}{x}}&amp;\fe{\tan}{2x}&amp;=\phantom{\frac{2\fe{\tan}{x}}{1-\fe{\tan^2}{x}}}</mrow>
+                <mrow>\fe{\sin}{x+y}&amp;=\phantom{\fe{\sin}{x}\fe{\cos}{y}+\fe{\cos}{x}\fe{\sin}{y}}&amp;\fe{\cos}{x+y}&amp;=\phantom{\fe{\cos}{x}\fe{\cos}{y}-\fe{\sin}{x}\fe{\sin}{y}}</mrow>
+                <mrow>\fe{\sin}{\frac{x}{2}}&amp;=\phantom{\sqrt{\frac{1-\fe{\cos}{x}}{2}}}&amp;\fe{\cos}{\frac{x}{2}}&amp;=\phantom{\sqrt{\frac{1+\fe{\cos}{x}}{2}}}</mrow>
                 </md></p>
 
                 <p>There are three versions of the following identity; write them all.<md>
-                <mrow>\fe{\cos}{2x}&amp;=&amp;\fe{\cos}{2x}&amp;=&amp;\fe{\cos}{2x}&amp;=</mrow>
+                <mrow>\fe{\cos}{2x}&amp;=\phantom{\fe{\cos^2}{x}-\fe{\sin^2}{x}}&amp;\fe{\cos}{2x}&amp;=\phantom{2\fe{\cos^2}{x}-1}&amp;\fe{\cos}{2x}&amp;=\phantom{1-2\fe{\sin^2}{x}}</mrow>
                 </md></p>
 
                 <p>The following identities are valid for all positive values of <m>x</m> and <m>y</m> and all values of <m>n</m>.<md>
-                <mrow>\fe{\ln}{xy}&amp;=&amp;\fe{\ln}{\frac{x}{y}}&amp;=</mrow>
-                <mrow>\fe{\ln}{x^n}&amp;=&amp;\fe{\ln}{e^n}&amp;=</mrow>
+                <mrow>\fe{\ln}{xy}&amp;=\phantom{\fe{\ln}{x}+\fe{\ln}{y}}&amp;\fe{\ln}{\frac{x}{y}}&amp;=\phantom{\fe{\ln}{x}-\fe{\ln}{y}}</mrow>
+                <mrow>\fe{\ln}{x^n}&amp;=\phantom{n\fe{\ln}{x}}&amp;\fe{\ln}{e^n}&amp;=\phantom{n}</mrow>
                 </md></p>
             </statement>
        </exercise>

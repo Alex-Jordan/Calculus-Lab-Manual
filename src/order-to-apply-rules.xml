@@ -13,7 +13,7 @@
     <p>When finding derivatives of complex formulas you need to apply the rules for differentiation in the reverse of order of operations.  For example, when finding <m>\lzoo{x}{\fe{\sin}{x\,e^x}}</m> the first rule you need to apply is the derivative formula for <m>\fe{\sin}{u}</m> but when finding <m>\lzoo{x}{x\fe{\sin}{e^x}}</m> the first rule that needs to be applied is the product rule.</p> 
 
     <exercises>
-        <exercisegroup cols="3">
+        <exercisegroup cols="3" by="row">
             <introduction>
                 <p>Find the first derivative formula for each function.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative (<eg/> <m>\fe{\fd{f}}{x}</m>).</p>
             </introduction>

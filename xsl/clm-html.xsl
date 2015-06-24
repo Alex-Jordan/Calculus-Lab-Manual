@@ -14,6 +14,7 @@
 
 <!-- GeoGebra HTML5-->
 <xsl:template match="geogebra-html5">
+    <xsl:text>This GeoGebra applet requires an internet connection.</xsl:text>
     <xsl:element name="iframe">
         <xsl:attribute name="scrolling">
             <xsl:text>no</xsl:text>
@@ -224,23 +225,6 @@
 
 
 
-<!-- Give (null) meaning to \tikzmark in math mode, used in PDF -->
-<!-- LaTeX Macros -->
-<!-- In a hidden div, for near the top of the page -->
-<xsl:template name="latex-macros">
-    <xsl:if test="/mathbook/docinfo/macros">
-        <div style="display:none;">
-        <xsl:text>\(</xsl:text>
-        <xsl:value-of select="/mathbook/docinfo/macros" />
-        <xsl:text>\newcommand{\tikzmark}[1]{}</xsl:text>
-        <xsl:text>\)</xsl:text>
-        </div>
-    </xsl:if>
-</xsl:template>
-
-<!-- annotate, only defined for latex, not html; to be used after a math mode with \tikzmark in it -->
-<!-- contents should use the \Annotate command, defined in image macros                            -->
-<xsl:template match="annotate" />
 
 <!-- change default size of figures -->
 <!-- Figures and their captions -->
@@ -324,6 +308,11 @@
 </xsl:template>
 
 
+<xsl:template match="alert">
+    <span class="alert">
+    <xsl:apply-templates />
+    </span>
+</xsl:template>
 
 
 </xsl:stylesheet>

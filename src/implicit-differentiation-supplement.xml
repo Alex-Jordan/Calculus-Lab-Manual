@@ -18,7 +18,7 @@
                     <paragraphs valign="top">
                         <p>Find a formula for <m>\lz{y}{x}</m> and use that formula to determine the <m>x</m>-coordinate at each of the two points the curve crosses the <m>x</m>-axis.  (Note: The tangent line to the curve is vertical at each of these points.)  Scales have deliberately been omitted in <xref ref="figure-crazy-implicit-supplement"/>.</p> 
                     </paragraphs>
-                    <figure xml:id="figure-crazy-implicit-supplement" width="40%" valign="top">
+                    <figure xml:id="figure-crazy-implicit-supplement" valign="top">
                         <caption><m>x\fe{\sin}{xy}=y</m></caption>
                         <image>
                         <latex-image-code>
@@ -110,7 +110,7 @@
                     <paragraphs valign="top">
                         <p>Determine the equation of the tangent line to this curve at the point <m>\point{1}{-1}</m>.</p>
                     </paragraphs>
-                    <figure xml:id="figure-ln-implicit-supplement" width="40%" valign="top">
+                    <figure xml:id="figure-ln-implicit-supplement" valign="top">
                         <caption><m>\fe{\ln}{x^2y^2}=x+y</m></caption>
                         <image>
                         <latex-image-code>

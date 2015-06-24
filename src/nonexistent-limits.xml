@@ -19,7 +19,7 @@
     </ul>
 
     <sidebyside>
-        <figure width="30%" xml:id="figure-first-nonexistent-limit">
+        <figure xml:id="figure-first-nonexistent-limit">
             <image>
                 <latex-image-code>
                 <![CDATA[\begin{tikzpicture}
@@ -44,7 +44,7 @@
             </image>
             <caption><m>y=\fe{k}{x}</m></caption>
         </figure>
-        <figure width="30%" xml:id="figure-middle-nonexistent-limit">
+        <figure xml:id="figure-middle-nonexistent-limit">
             <image>
                 <latex-image-code>
                 <![CDATA[\begin{tikzpicture}
@@ -70,7 +70,7 @@
             </image>
             <caption><m>y=\fe{w}{t}</m></caption>
         </figure>
-        <figure width="30%" xml:id="figure-last-nonexistent-limit">
+        <figure xml:id="figure-last-nonexistent-limit">
             <image>
                 <latex-image-code>
                 <![CDATA[\begin{tikzpicture}
@@ -104,13 +104,13 @@
                 <p>In the plane provided, draw the graph of a single function, <m>f</m>, that satisfies each of the following limit statements. Make sure that you draw the necessary asymptotes and that you label each asymptote with its equation.</p>
 
                 <sidebyside>
-                    <paragraphs width="60%" valign="top">
+                    <paragraphs valign="top">
                         <p><md>
                         <mrow>\lim\limits_{x\to3^{-}}\fe{f}{x}&amp;=-\infty&amp;\lim\limits_{x\to\infty}\fe{f}{x}&amp;=0</mrow>
                         <mrow>\lim\limits_{x\to3^{+}}\fe{f}{x}&amp;=\infty&amp;\lim\limits_{x\to-\infty}\fe{f}{x}&amp;-2</mrow>
                         </md></p>
                     </paragraphs>
-                    <image width="35%" valign="top">
+                    <image valign="top">
                         <latex-image-code>
                         <![CDATA[\begin{tikzpicture}
                         \begin{axis}[]

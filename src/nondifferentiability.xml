@@ -23,7 +23,7 @@
             <introduction>
                 <p>Consider the function <m>k</m> shown in <xref ref="figure-nondifferentiable"/>.</p>
                 <sidebyside>
-                    <figure xml:id="figure-nondifferentiable" width="40%">
+                    <figure xml:id="figure-nondifferentiable">
                         <caption><m>y=\fe{k}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -58,7 +58,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure xml:id="figure-nondifferentiable-derivative" width="40%">
+                    <figure xml:id="figure-nondifferentiable-derivative" >
                         <caption><m>y=\fe{\fd{k}}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -86,7 +86,7 @@
             <introduction> 
                 <p>Consider the function <m>g</m> shown in <xref ref="figure-bounce"/>.</p>  
                 <sidebyside>
-                    <figure xml:id="figure-bounce" width="40%">
+                    <figure xml:id="figure-bounce" >
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -100,7 +100,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure xml:id="figure-bounce-derivative" width="40%">
+                    <figure xml:id="figure-bounce-derivative" >
                         <caption><m>y=\fe{\fd{g}}{x}</m></caption>
                         <image>
                             <latex-image-code>

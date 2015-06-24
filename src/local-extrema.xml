@@ -22,13 +22,15 @@
     </definition>
 
     <exercises>
-        <beginmulticols/>
         <exercise>
             <statement>
-                <p>The function <m>g</m> shown in <xref ref="figure-vertical-moment"/> has a vertical tangent line at <m>-3</m>.  Veronica says that <m>-3</m> is a critical number of <m>g</m> but Tito disagrees. Tito contends that <m>-3</m> is not a critical number because <m>g</m> does not have a local extreme point at <m>-3</m>.  Who is right?</p>
-                <columnbreak/>
-                <figure xml:id="figure-vertical-moment">
-                    <caption><m>y=\fe{g}{x}</m></caption>
+                <p>The function <m>g</m> shown in <xref ref="figure-vertical-moment"/> has a vertical tangent line at <m>-3</m>.</p>
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>Veronica says that <m>-3</m> is a critical number of <m>g</m> but Tito disagrees. Tito contends that <m>-3</m> is not a critical number because <m>g</m> does not have a local extreme point at <m>-3</m>.  Who is right?</p>
+                    </paragraphs>
+                    <figure xml:id="figure-vertical-moment" valign="top">
+                        <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -49,16 +51,18 @@
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                </figure>
+                    </figure>
+                </sidebyside>
             </statement>
         </exercise>
-        <endmulticols/>
-        <exercisegroup>
+        <exercisegroup cols="2">
             <introduction>
-                <p>Answer each of the following questions (using complete sentences) in reference to the function <m>f</m> shown in <xref ref="figure-lots-of-critical-points"/>.</p> 
-
-                <figure xml:id="figure-lots-of-critical-points">
-                    <caption><m>y=\fe{f}{x}</m></caption>
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>Answer each of the following questions (using complete sentences) in reference to the function <m>f</m> shown in <xref ref="figure-lots-of-critical-points"/>.</p> 
+                    </paragraphs>
+                    <figure xml:id="figure-lots-of-critical-points">
+                        <caption><m>y=\fe{f}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -80,7 +84,8 @@
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                </figure>
+                    </figure>
+                </sidebyside>
             </introduction>
             <exercise>
                 <statement>
@@ -98,33 +103,33 @@
                 </statement>
             </exercise>
         </exercisegroup>
-        <exercisegroup>
+        <exercisegroup cols="2">
             <introduction>
-                <p>Decide whether each of the following statements is true or false.</p> 
+                <p>Decide whether each of the following statements is <em>True</em> or <em>False</em>.</p> 
             </introduction>
             <exercise>
                 <statement>
-                    <p>True or False? A function always has a local extreme point at each of its critical numbers.</p> 
+                    <p>A function always has a local extreme point at each of its critical numbers.</p> 
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>True or False? If the point <m>\point{t_1}{\fe{h}{t_1}}</m> is a local minimum point on <m>h</m>, then <m>t_1</m> must be a critical number of <m>h</m>.</p> 
+                    <p>If the point <m>\point{t_1}{\fe{h}{t_1}}</m> is a local minimum point on <m>h</m>, then <m>t_1</m> must be a critical number of <m>h</m>.</p> 
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>True or False? If <m>\fe{\fd{g}}{2.7}=0</m>, then <m>g</m> must have a local extreme point at <m>2.7</m>.</p> 
+                    <p>If <m>\fe{\fd{g}}{2.7}=0</m>, then <m>g</m> must have a local extreme point at <m>2.7</m>.</p> 
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>True or False? If <m>\fe{\fd{g}}{2.7}=0</m>, then <m>2.7</m> must be a critical number of <m>g</m>.</p> 
+                    <p>If <m>\fe{\fd{g}}{2.7}=0</m>, then <m>2.7</m> must be a critical number of <m>g</m>.</p> 
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>True or False? If <m>\fe{\fd{g}}{9}</m> does not exist, then <m>9</m> must be a critical number of <m>g</m>.</p> 
+                    <p>If <m>\fe{\fd{g}}{9}</m> does not exist, then <m>9</m> must be a critical number of <m>g</m>.</p> 
                 </statement>
             </exercise>
         </exercisegroup>

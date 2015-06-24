@@ -25,7 +25,7 @@
                 <mrow>\fe{f_3}{x}&amp;=(x-2)^{\sfrac{2}{7}}+C_3&amp;\fe{f_4}{x}&amp;=(x-2)^{\sfrac{10}{7}}+C_4</mrow>
                 </md> where <m>C_1,C_2,C_3,C_4</m> are unknown constants.</p>
                 <sidebyside>
-                    <figure width="40%" xml:id="figure-bow">
+                    <figure xml:id="figure-bow">
                         <caption>mystery curve 1</caption>
                         <image>
                             <latex-image-code>
@@ -40,14 +40,14 @@
                                 ymax=30,
                                 grid=none,
                                 samples=100,
-                                ]
+                                y post scale=0.6,]
                                 \addplot[pccplot,domain=-3:7]{(abs(x-2))^(10/7)+10};
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure width="40%" xml:id="figure-pointy">
+                    <figure xml:id="figure-pointy">
                         <caption>mystery curve 2</caption>
                         <image>
                             <latex-image-code>
@@ -62,7 +62,7 @@
                                 ymax=4.8,
                                 grid=none,
                                 samples=100,
-                                ]
+                                y post scale=0.6,]
                                 \addplot[pccplot,domain=-3:2,<-]{(abs(x-2))^(2/7)+1.6};
                                 \addplot[pccplot,domain=2:7,->]{(abs(x-2))^(2/7)+1.6};
                             \end{axis}

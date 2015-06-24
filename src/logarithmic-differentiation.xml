@@ -31,7 +31,7 @@
         </md></p>
     </example>
 
-    <p>In the olden days (pre-symbolic calculators) we would use the process of logarithmic differentiation to find derivative formulas for complicated functions.  The reason this process is <q>simpler</q> than straight forward differentiation is that we can obviate the need for the product and quotient rules if we completely expand the logarithmic expression before taking the derivative.</p> 
+    <p>In the olden days (before symbolic calculators) we would use the process of logarithmic differentiation to find derivative formulas for complicated functions.  The reason this process is <q>simpler</q> than straight forward differentiation is that we can obviate the need for the product and quotient rules if we completely expand the logarithmic expression before taking the derivative.</p> 
 
     <exercises>
         <exercise>

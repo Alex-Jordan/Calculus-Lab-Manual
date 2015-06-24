@@ -66,7 +66,7 @@
         </exercisegroup>
         <exercisegroup>
             <introduction>
-                <p>Portions of SW 35th Avenue are extremely hilly.  Suppose that you are riding your bike along SW 35th Ave from Vermont Street to Capitol Highway.  Let <m>u=\fe{d}{t}</m> be the distance you have traveled (<quantity><unit base="foot"/></quantity>) where <m>t</m> is the number of seconds that have passed since you began your journey.  Suppose that <m>y=\fe{e}{u}</m> is the elevation (<quantity><unit base="meter"/></quantity>) of SW 35th Ave where <m>u</m> is the distance (<quantity><unit base="foot"/></quantity>) from Vermont St headed towards Capital Highway.</p> 
+                <p>Portions of SW 35th Avenue are extremely hilly.  Suppose that you are riding your bike along SW 35th Ave from Vermont Street to Capitol Highway.  Let <m>u=\fe{d}{t}</m> be the distance you have traveled (<quantity><unit base="foot"/></quantity>) where <m>t</m> is the number of seconds that have passed since you began your journey.  Suppose that <m>y=\fe{e}{u}</m> is the elevation (<quantity><unit base="meter"/></quantity>) of SW 35th Ave where <m>u</m> is the distance (<quantity><unit base="foot"/></quantity>) from Vermont St headed towards Capitol Highway.</p> 
             </introduction>
             <exercise>
                 <statement>

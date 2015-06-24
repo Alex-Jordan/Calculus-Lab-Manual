@@ -10,13 +10,6 @@
 <chapter xml:id="chapter-related-rates" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Related Rates</title>
     
-<!--    <xi:include href="./introduction.xml" />
-    <xi:include href="./direct-sums.xml" />
-    <xi:include href="./orthogonal-complements.xml" />
-    <xi:include href="./invariant-subspaces.xml" />
-    <xi:include href="./reflectors.xml" />
-    <xi:include href="./projectors.xml" />
-    <xi:include href="./normal-matrices.xml" />
-    <xi:include href="./positive-semidefinite.xml" />-->
+    <xi:include href="./introduction-related-rates.xml" />
     
 </chapter>

@@ -16,7 +16,8 @@
             </statement>
             <solution>
                 <p><md>
-                <mrow>\fe{\fd{f}}{x}&amp;=e^{3x}\lzoo{x}{3x}&amp;\fe{\fd{g}}{x}&amp;=3\left(e^x\right)^2\lzoo{x}{e^x}&amp;\fe{\fd{h}}{x}&amp;=\fe{\ln}{e^3}\left(e^3\right)^x</mrow>
+                <mrow>&amp;\phantom{{}={}}\fe{\fd{f}}{x}&amp;&amp;\phantom{{}={}}\fe{\fd{g}}{x}&amp;&amp;\phantom{{}={}}\fe{\fd{h}}{x}</mrow>
+                <mrow>&amp;=e^{3x}\lzoo{x}{3x}&amp;&amp;=3\left(e^x\right)^2\lzoo{x}{e^x}&amp;&amp;=\fe{\ln}{e^3}\left(e^3\right)^x</mrow>
                 <mrow>&amp;=e^{3x}\cdot3&amp;&amp;=3\left(e^x\right)^2\cdot e^x&amp;&amp;=3\left(e^3\right)^x</mrow>
                 <mrow>&amp;=3e^{3x}&amp;&amp;=3e^{2x}\cdot e^x&amp;&amp;=3e^{3x}</mrow>
                 <mrow>&amp;&amp;&amp;=3e^{3x}&amp;&amp;</mrow>
@@ -90,21 +91,25 @@
         </exercisegroup>
         <exercisegroup>
             <introduction>
-                <p>Consider the function <m>f</m> shown in <xref ref="figure-polynomial-for-chain-rule"/>.</p>
-                <figure xml:id="figure-polynomial-for-chain-rule">
-                    <caption><m>f</m></caption>
-                    <image>
-                        <latex-image-code>
-                        <![CDATA[\begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot+[samples=50,
-                                domain=-5:3.9,
-                            ]{(4/297)*(x+3)^3*(3*x-11)+4};
-                        \end{axis}
-                        \end{tikzpicture}]]>
-                        </latex-image-code>
-                    </image>
-                </figure>
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>Consider the function <m>f</m> shown in <xref ref="figure-polynomial-for-chain-rule"/>.</p>
+                    </paragraphs>
+                    <figure xml:id="figure-polynomial-for-chain-rule" valign="top">
+                        <caption><m>f</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot+[samples=50,
+                                    domain=-5:3.9,
+                                ]{(4/297)*(x+3)^3*(3*x-11)+4};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
             </introduction>
             <exercise>
                 <statement>
@@ -169,7 +174,7 @@
                 </answer>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="3">
+        <exercisegroup cols="3" by="row">
             <introduction>
                  <p>Decide whether or not it is necessary to use the chain rule when finding the derivative with respect to <m>x</m> of each of the following functions.</p> 
             </introduction>
@@ -319,8 +324,8 @@
                 </statement>
                 <solution>
                     <p><md>
-                    <mrow>\fe{f}{x}&amp;=\fe{\tan}{x}\fe{\sec}{\fe{\sec}{x}}</mrow>
-                    <mrow>\fe{\fd{f}}{x}&amp;=\lzoo{x}{\fe{\tan}{x}}\cdot\fe{\sec}{\fe{\sec}{x}}+\fe{\tan}{x}\cdot\lzoo{x}{\fe{\sec}{\fe{\sec}{x}}}</mrow>
+                    <mrow>&amp;\phantom{{}={}}\fe{\fd{f}}{x}</mrow>
+                    <mrow>&amp;=\lzoo{x}{\fe{\tan}{x}}\cdot\fe{\sec}{\fe{\sec}{x}}+\fe{\tan}{x}\cdot\lzoo{x}{\fe{\sec}{\fe{\sec}{x}}}</mrow>
                     <mrow>&amp;=\fe{\sec^2}{x}\cdot\fe{\sec}{\fe{\sec}{x}}+\fe{\tan}{x}\cdot\fe{\sec}{\fe{\sec}{x}}\fe{\tan}{\fe{\sec}{x}}\cdot\lzoo{x}{\fe{\sec}{x}}</mrow>
                     <mrow>&amp;=\fe{\sec^2}{x}\fe{\sec}{\fe{\sec}{x}}+\fe{\tan}{x}\fe{\sec}{\fe{\sec}{x}}\fe{\tan}{\fe{\sec}{x}}\cdot\fe{\sec}{x}\fe{\tan}{x}</mrow>
                     <mrow>&amp;=\fe{\sec^2}{x}\fe{\sec}{\fe{\sec}{x}}+\fe{\tan^2}{x}\fe{\sec}{\fe{\sec}{x}}\fe{\tan}{\fe{\sec}{x}}\fe{\sec}{x}</mrow>
@@ -624,9 +629,11 @@
                 </statement>
                 <solution>
                     <p><md>
-                    <mrow>\fe{f}{x}&amp;=4x\fe{\sin}{x}\fe{\cos}{x^2}</mrow>
-                    <mrow>\fe{\fd{f}}{x}&amp;=\lzoo{x}{4x}\fe{\sin}{x}\fe{\cos}{x^2}+4x\lzoo{x}{\fe{\sin}{x}}\fe{\cos}{x^2}+4x\fe{\sin}{x}\lzoo{x}{\fe{\cos}{x^2}}</mrow>
-                    <mrow>&amp;=4\fe{\sin}{x}\fe{\cos}{x^2}+4x\fe{\cos}{x}\fe{\cos}{x^2}+4x\fe{\sin}{x}\cdot-\fe{\sin}{x^2}\lzoo{x}{x^2}</mrow>
+                    <mrow>&amp;\phantom{{}={}}\fe{\fd{f}}{x}</mrow>
+                    <mrow>&amp;=\lzoo{x}{4x}\fe{\sin}{x}\fe{\cos}{x^2}+4x\lzoo{x}{\fe{\sin}{x}}\fe{\cos}{x^2}</mrow>
+                    <mrow>&amp;\phantom{{}={}}{}+4x\fe{\sin}{x}\lzoo{x}{\fe{\cos}{x^2}}</mrow>
+                    <mrow>&amp;=4\fe{\sin}{x}\fe{\cos}{x^2}+4x\fe{\cos}{x}\fe{\cos}{x^2}</mrow>
+                    <mrow>&amp;\phantom{{}={}}{}+4x\fe{\sin}{x}\cdot-\fe{\sin}{x^2}\lzoo{x}{x^2}</mrow>
                     <mrow>&amp;=4\fe{\sin}{x}\fe{\cos}{x^2}+4x\fe{\cos}{x}\fe{\cos}{x^2}-4x\fe{\sin}{x}\cdot\fe{\sin}{x^2}\cdot2x</mrow>
                     <mrow>&amp;=4\left(\fe{\sin}{x}\fe{\cos}{x^2}+x\fe{\cos}{x}\fe{\cos}{x^2}-2x^2\fe{\sin}{x}\cdot\fe{\sin}{x^2}\right)</mrow>
                     </md></p>

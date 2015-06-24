@@ -10,7 +10,7 @@
 <section xml:id="section-power-rule">
     <title>The Power Rule</title>
 
-    <p>The first differentiation rule we are going to explore is called <term>the power rule of differentiation</term>. <men>\lzoo{x}{x^n}=n\,x^{n-1}\quad\text{for }n\neq0</men> When <m>n</m> is a positive integer, it is fairly easy to establish this rule using <xref ref="definition-first-derivative"/>.  The proof of the rule gets a little more complicated when <m>n</m> is negative, fractional, or irrational.  For purposes of this lab, we are going to just accept the rule as valid.</p>
+    <p>The first differentiation rule we are going to explore is called <term>the power rule of differentiation</term>. <men>\lzoo{x}{x^n}=n\,x^{n-1}</men> When <m>n</m> is a positive integer, it is fairly easy to establish this rule using <xref ref="definition-first-derivative"/>.  The proof of the rule gets a little more complicated when <m>n</m> is negative, fractional, or irrational.  For purposes of this lab, we are going to just accept the rule as valid.</p>
 
     <p>This rule is one you just <q>do in your head</q> and then write down the result.  Three examples of what you would be expected to write when differentiating power functions are shown in <xref ref="table-power-rule"/>.</p>
 
@@ -35,7 +35,7 @@
                 <cell><m>\fe{f}{t}=t^{\sfrac{7}{3}}</m></cell>
                 <cell><m>\fe{\fd{f}}{t}=\frac{7}{3}t^{\sfrac{4}{3}}</m></cell>
             </row>
-            <row>
+            <row bottom="major">
                 <cell><m>z=\frac{1}{y^5}</m></cell>
                 <cell><m>z=y^{-5}</m></cell>
                 <cell><m>\lz{z}{y}=-5y^{-6}</m></cell>
@@ -72,7 +72,7 @@
                 </statement>
             </exercise>
         </exercisegroup>
-        <exercise><title>This is just a prototype test of an embedded WeBWorK problem. It still has issues.</title>
+<!--    <exercise><title>This is just a prototype test of an embedded WeBWorK problem. It still has issues.</title>
             <statement><webwork src="Library/ASU-topics/setCalculus/stef/stef3_7p1_mo.pg"/></statement>
         </exercise>
         <exercise><title>This is just a prototype of an embedded GeoGebra HTML5 worksheet.</title>
@@ -82,6 +82,6 @@
              </statement>
 
         </exercise>
-
+-->
     </exercises>
 </section>

@@ -179,8 +179,8 @@ as acceleration <quantity><mag>-32</mag><unit base="foot"/><per base="second" ex
                     <p><m>\frac{\sfrac{\text{mi}}{\text{hr}}}{\text{s}}</m></p>
                 </answer>
             </exercise>
-            <exercise>
-                <statement xml:id="exercise-derivative-units-supplement-last">
+            <exercise xml:id="exercise-derivative-units-supplement-last">
+                <statement>
                     <p><m>\fe{h}{t}</m> is the elevation of the space shuttle (<quantity><unit base="mile"/></quantity>) where <m>t</m> is the amount of time that has passed since lift-off (measured in <quantity><unit base="second"/></quantity>).</p>
                 </statement>
                 <solution>
@@ -191,7 +191,7 @@ as acceleration <quantity><mag>-32</mag><unit base="foot"/><per base="second" ex
                 </answer>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="3">
+        <exercisegroup cols="3" by="row">
             <introduction>
                 <p>Referring to the functions in <xref autoname="plural" ref="exercise-derivative-units-supplement-first"/><ndash/><xref autoname="no" ref="exercise-derivative-units-supplement-last"/>, write sentences that explain the meaning of each of the following function values.</p>
             </introduction>
@@ -301,13 +301,17 @@ as acceleration <quantity><mag>-32</mag><unit base="foot"/><per base="second" ex
             </exercise>
             <exercise>
                 <statement>
-                    <p>A graph of <m>f</m> is shown in <xref ref="figure-long-term-behavior-supplement"/>; axis scales have deliberately been omitted from the graph.  The graph shows that <m>f</m> quickly resembles a line. In a detailed sketch of <m>f</m> we would reflect this apparent linear behavior by adding a skew asymptote.  What is the slope of this skew asymptote?</p> 
-                    <figure xml:id="figure-long-term-behavior-supplement">
-                        <caption><m>y=\fe{f}{x}=\frac{2x^3+2x+1}{3+5x^2}</m></caption>
-                        <image>
-                            <latex-image-code>
-                            <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[xmin=-2,
+                    <p>A graph of <m>f</m> is shown in <xref ref="figure-long-term-behavior-supplement"/>; axis scales have deliberately been omitted from the graph.</p>
+                    <sidebyside>
+                        <paragraphs valign="top">
+                            <p>The graph shows that <m>f</m> quickly resembles a line. In a detailed sketch of <m>f</m> we would reflect this apparent linear behavior by adding a skew asymptote.  What is the slope of this skew asymptote?</p> 
+                        </paragraphs>
+                        <figure xml:id="figure-long-term-behavior-supplement" valign="top">
+                            <caption><m>y=\fe{f}{x}=\frac{2x^3+2x+1}{3+5x^2}</m></caption>
+                            <image>
+                                <latex-image-code>
+                                <![CDATA[\begin{tikzpicture}
+                                \begin{axis}[xmin=-2,
                                          xmax=11,
                                          ymin=-2,
                                          ymax=11,
@@ -316,13 +320,14 @@ as acceleration <quantity><mag>-32</mag><unit base="foot"/><per base="second" ex
                                          minor xtick = {50},
                                          minor ytick = {50},
                                          ]
-                                \addplot+[domain=1/8:10.8,samples=100,
-                                ]{(2*x^3+2*x+1)/(3+5*x^2)};
-                            \end{axis}
-                            \end{tikzpicture}]]>
-                            </latex-image-code>
-                        </image>
-                    </figure>
+                                    \addplot+[domain=1/8:10.8,samples=100,
+                                    ]{(2*x^3+2*x+1)/(3+5*x^2)};
+                                \end{axis}
+                                \end{tikzpicture}]]>
+                                </latex-image-code>
+                            </image>
+                        </figure>
+                    </sidebyside>
                 </statement>
                 <solution>
                     <p>The long term slope of <m>f</m> is given by:<md>

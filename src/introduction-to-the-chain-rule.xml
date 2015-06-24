@@ -14,7 +14,7 @@
         <paragraphs valign="top">
             <p>The functions <m>\fe{f}{t}=\fe{\sin}{t}</m> and <m>\fe{k}{t}=\fe{\sin}{3t}</m> are shown in <xref ref="figure-sine-waves"/>. Since <m>\fe{\fd{f}}{t}=\fe{\cos}{t}</m>, it is reasonable to speculate that <m>\fe{\fd{k}}{t}=\fe{\cos}{3t}</m>.  But this would imply that <m>\fe{\fd{k}}{0}=\fe{\fd{f}}{0}=1</m>, and a quick glance of the two functions at <m>0</m> should convince you that this is not true; clearly <m>\fe{\fd{k}}{0}>\fe{\fd{f}}{0}</m>.</p>
         </paragraphs>
-        <figure xml:id="figure-sine-waves" valign="top" width="40%">
+        <figure xml:id="figure-sine-waves" valign="top" >
             <caption/>
             <image>
                 <latex-image-code>
@@ -90,7 +90,7 @@
     <p>While you ultimately want to perform the chain rule step in your head, your instructor may want you to illustrate the step while you are first practicing the rule.  For this reason, the step will be explicitly shown in every example given in this lab.</p>
 
     <exercises>
-        <exercisegroup cols="3">
+        <exercisegroup cols="3" by="row">
             <introduction>
                 <p>Find the first derivative formula for each function.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative (<eg/> <m>\fe{\fd{h}}{t}</m>).</p>
             </introduction>
@@ -147,7 +147,7 @@
                         <p>A function, <m>f</m>, is shown in <xref ref="figure-chain-rule-exercise"/>. Answer the following questions in reference to this function.</p>
                     </paragraphs>
 
-                    <figure xml:id="figure-chain-rule-exercise" valign="top" width="40%">
+                    <figure xml:id="figure-chain-rule-exercise" valign="top">
                         <caption><m>f</m></caption>
                         <image>
                             <latex-image-code>

@@ -172,16 +172,16 @@
 
         <exercise>
             <statement>
-                <p>Mindy tried to evaluate <m>\lim\limits_{x\to6^{+}}\frac{4x-24}{x^2-12x+36}</m> using the limit laws. Things went horribly wrong for Mindy (her work is shown below). Identify what is wrong in Mindy's work and discuss what a more reasonable approach might have been.</p>
+                <p>Mindy tried to evaluate <m>\lim\limits_{x\to6^{+}}\frac{4x-24}{x^2-12x+36}</m> using the limit laws. Things went horribly wrong for Mindy (her work is shown below). Identify what is wrong in Mindy's work and discuss what a more reasonable approach might have been. <alert>This <q>solution</q> is not correct! Do not emulate Mindy's work!</alert></p>
 
                 <p><md>
                 <mrow>\lim_{x\to6^{+}}\frac{4x-24}{x^2-12x+36}&amp;=\lim_{x\to6^{+}}\frac{4(x-6)}{(x-6)^2}</mrow>
                 <mrow>&amp;=\lim_{x\to6^{+}}\frac{4}{x-6}</mrow>
-                <mrow>&amp;\tikzmark{Mindys work}=\frac{\lim\limits_{x\to6^{+}}4}{\lim\limits_{x\to6^{+}}(x-6)}&amp;&amp;\text{Limit Law A5}</mrow>
+                <mrow>&amp;=\frac{\lim\limits_{x\to6^{+}}4}{\lim\limits_{x\to6^{+}}(x-6)}&amp;&amp;\text{Limit Law A5}</mrow>
                 <mrow>&amp;=\frac{\lim\limits_{x\to6^{+}}4}{\lim\limits_{x\to6^{+}}x-\lim\limits_{x\to6^{+}}6}&amp;&amp;\text{Limit Law A2}</mrow>
                 <mrow>&amp;=\frac{4}{6-6}&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
                 <mrow>&amp;=\frac{4}{0}</mrow>
-                </md><annotate>\Annotate[draw=none][anchor=east]{0ex}{0.5ex}{-1}{0}{Mindys work}{\parbox{0.3\linewidth}{This ``solution'' is not correct! Do not emulate Mindy's work!}}</annotate></p>
+                </md></p>
             </statement>
         </exercise>
 

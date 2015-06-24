@@ -16,7 +16,7 @@
     <book xml:id="clm">
         <title>Portland Community College MTH 251 Lab Manual</title>
 
-<!--        <xi:include href="./frontmatter.xml" />
+        <xi:include href="./frontmatter.xml" />
         <xi:include href="./rates-of-change.xml" />
         <xi:include href="./limits-and-continuity.xml" />
         <xi:include href="./introduction-first-derivative.xml" />
@@ -24,15 +24,15 @@
         <xi:include href="./derivative-formulas.xml" />
         <xi:include href="./chain-rule.xml" />
         <xi:include href="./implicit-differentiation.xml" />
-        <xi:include href="./related-rates.xml" />
+<!--        <xi:include href="./related-rates.xml" />
 -->        <xi:include href="./critical-numbers-graphing-from-formulas.xml" />
 
         <backmatter>
         <title>Appendices</title>
-<!--            <xi:include href="./limit-laws-appendix.xml" />
+            <xi:include href="./limit-laws-appendix.xml" />
             <xi:include href="./derivative-formulas-appendix.xml" />
             <xi:include href="./useful-algebra-appendix.xml" />
--->
+
             <appendix>
                 <title>Solutions to Supplementary Exercises</title>
                 <solution-list/>

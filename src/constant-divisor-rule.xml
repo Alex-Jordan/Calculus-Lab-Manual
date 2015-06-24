@@ -33,7 +33,7 @@
                 <cell><m>y=\frac{3}{2}\fe{\tan}{\alpha}</m></cell>
                 <cell><m>\lz{y}{\alpha}=\frac{3}{2}\fe{\sec^2}{\alpha}</m></cell>
             </row>
-            <row>
+            <row bottom="major">
                 <cell><m>z=\frac{\fe{\ln}{y}}{3}</m></cell>
                 <cell><m>z=\frac{1}{3}\fe{\ln}{y}</m></cell>
                 <cell><m>\lz{z}{y}=\frac{1}{3y}</m></cell>

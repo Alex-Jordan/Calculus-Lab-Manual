@@ -44,7 +44,7 @@
                          </row>
                          <row>
                              <cell><m>1{,}000{,}000</m></cell>
-                             <cell></cell>
+                             <cell><m>\phantom{1{,}000{,}000}</m></cell>
                          </row>
                      </tabular>
                  </table>

@@ -76,7 +76,7 @@
             <introduction>
                 <p>The function <m>f</m> is shown in <xref ref="figure-plot-antiderivative-one"/>. Reference this function in the following questions.</p>
                 <sidebyside>
-                    <figure xml:id="figure-plot-antiderivative-one" width="40%">
+                    <figure xml:id="figure-plot-antiderivative-one" >
                         <caption><m>y=\fe{f}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -91,7 +91,7 @@
                             </latex-image-code>                     
                         </image>
                     </figure>
-                    <figure xml:id="figure-plot-antiderivative-two" width="40%">
+                    <figure xml:id="figure-plot-antiderivative-two" >
                         <caption/>
                         <image>
                             <latex-image-code>
@@ -104,7 +104,7 @@
                     </figure>
                 </sidebyside>
                 <sidebyside>
-                    <figure xml:id="figure-plot-antiderivative-three" width="40%">
+                    <figure xml:id="figure-plot-antiderivative-three" >
                         <caption/>
                         <image>
                             <latex-image-code>
@@ -115,7 +115,7 @@
                             </latex-image-code>                     
                         </image>
                     </figure>
-                    <figure xml:id="figure-plot-antiderivative-four" width="40%">
+                    <figure xml:id="figure-plot-antiderivative-four" >
                         <caption/>
                         <image>
                             <latex-image-code>
@@ -160,7 +160,7 @@
             <introduction>
                 <p>Consider the function <m>g</m> shown in <xref ref="figure-line-segments"/>.</p>
                 <sidebyside>
-                    <figure xml:id="figure-line-segments" width="40%">
+                    <figure xml:id="figure-line-segments" >
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -176,7 +176,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure xml:id="figure-line-segments-antiderivative" width="40%">
+                    <figure xml:id="figure-line-segments-antiderivative" >
                         <caption><m>y=\fe{G}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -205,14 +205,14 @@
                 </statement>                    
             </exercise>
         </exercisegroup>
-        <exercisegroup>
+        <exercisegroup cols="2">
             <introduction>
                 <sidebyside>
                     <paragraphs valign="top">
                         <p>Answer the following question in reference to a continuous function <m>g</m> whose first derivative is shown in <xref ref="figure-discontinuous-derivative"/>.  You do not need to state how you made your determination; just state the interval(s) or values of <m>x</m> that satisfy the stated property. Note: the correct answer to one or more of these questions may be <q>There is no way of knowing.</q></p> 
                     </paragraphs>
 
-                    <figure xml:id="figure-discontinuous-derivative" valign="top" width="40%">
+                    <figure xml:id="figure-discontinuous-derivative" valign="top" >
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
                             <latex-image-code>

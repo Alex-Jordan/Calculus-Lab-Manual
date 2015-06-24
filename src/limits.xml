@@ -23,17 +23,18 @@
     <exercises>
         <exercise>
             <statement>
-                <p>Several function values and limit values for the function in <xref ref="figure-first-limit"/> are given below.</p>
+                <p>Several function values and limit values for the function in <xref ref="figure-first-limit"/> are given below. You and your group mates should take turns reading the equations aloud. Make sure that you read the symbols correctly, that's part of what you are learning! Also, discuss why the values are what they are and make sure that you get help from your instructor to clear up any confusion.</p>
                 <sidebyside>
                     <paragraphs valign="top">
-                        <p>You and your group mates should take turns reading the equations aloud. Make sure that you read the symbols correctly, that's part of what you are learning! Also, discuss why the values are what they are and make sure that you get help from your instructor to clear up any confusion.<md>
-                        <mrow>\fe{f}{-2}&amp;=6&amp;\text{but}&amp;&amp;\lim_{x\to-2}\fe{f}{x}&amp;=3</mrow>
-                        <mrow>\fe{f}{-4}&amp;\text{ is undefined}&amp;\text{but}&amp;&amp;\lim_{x\to-4}\fe{f}{x}&amp;=2</mrow>
-                <mrow>\fe{f}{1}&amp;=-1&amp;\text{but}&amp;&amp;\lim_{x\to1}\fe{f}{x}&amp;\text{ does not exist}</mrow>
-                        </md></p>
+                        <ul>
+                            <li><m>\fe{f}{-2}=6</m>, but <m>\lim\limits_{x\to-2}\fe{f}{x}=3</m></li>
+                            <li><m>\fe{f}{-4}</m> is undefined, but <m>\lim\limits_{x\to-4}\fe{f}{x}=2</m></li>
+                            <li><m>\fe{f}{1}=-1</m>, but <m>\lim\limits_{x\to1}\fe{f}{x}</m> does not exist</li>
+                            <li><p><m>\underbrace{\lim_{x\to1^{-}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the left}\end{array}}=-3</m>,</p> <p>but <m>\underbrace{\lim_{x\to1^{+}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the right}\end{array}}=-1</m></p></li>
+                        </ul>
                     </paragraphs>
 
-                    <figure width="40%" valign="top" xml:id="figure-first-limit">
+                    <figure valign="bottom" xml:id="figure-first-limit">
                         <caption><m>f</m></caption>
                         <image xml:id="image-first-limit">
                             <description>The graph of a discontinuous function.</description>
@@ -70,12 +71,10 @@
                         </image>
                     </figure>
                 </sidebyside>
-                <p><m>\begin{aligned}\underbrace{\lim_{x\to1^{-}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the left}\end{array}}&amp;=-3&amp;\text{but}&amp;&amp;\underbrace{\lim_{x\to1^{+}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the right}\end{array}}=-1\end{aligned}</m></p>
             </statement>
         </exercise>
 
-        <beginmulticols/>
-        <exercisegroup cols="2" by="row">
+        <exercisegroup cols="4" by="row">
             <introduction>
                 <p>Copy each of the following expressions onto your paper and either state the value or state that the value is undefined or doesn't exist. Make sure that when discussing the values you use proper terminology. All expressions are in reference to the function <m>g</m> shown in <xref ref="figure-second-limit"/>.</p>
 
@@ -196,13 +195,84 @@
                         </image>
                     </figure>
 
-        <endmulticols/>
 
-        <beginmulticols/>
-        <exercisegroup>
+        <exercisegroup cols="2">
             <introduction>
-                <p>Values of the function <m>f</m>, where <m>\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}</m> are shown in <xref ref="table-rational-function-values"/>. Both of the questions below are in reference to this function.</p>
+                <p>Values of the function <m>f</m>, where <m>\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}</m> are shown in <xref ref="table-rational-function-values"/>, and values of the function <m>p</m> where <m>\fe{p}{t}=\sqrt{t-12}</m> are shown in <xref ref="table-square-root-values"/>. These questions are in reference to these functions.</p>
+                <sidebyside>
+                    <table xml:id="table-rational-function-values">
+                        <caption><m>\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}</m></caption>
+                        <tabular top="major">
+                            <col halign="left" />
+                            <col halign="left"/>
 
+                            <row bottom="medium">
+                                <cell halign="center"><m>x</m></cell>
+                                <cell halign="center"><m>\fe{f}{x}</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>4.99</m></cell>
+                                <cell><m>2.0014</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>4.999</m></cell>
+                                <cell><m>2.00014</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>4.9999</m></cell>
+                                <cell><m>2.000014</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>5.0001</m></cell>
+                                <cell><m>1.999986</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>5.001</m></cell>
+                                <cell><m>1.99986</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>5.01</m></cell>
+                                <cell><m>1.9986</m></cell>
+                            </row>
+                        </tabular>
+                    </table>
+                    <table xml:id="table-square-root-values">
+                        <caption><m>\fe{p}{t}=\sqrt{t-12}</m></caption>
+                        <tabular top="major">
+                            <col halign="left" />
+                            <col halign="left"/>
+
+                            <row bottom="medium">
+                                <cell halign="center"><m>t</m></cell>
+                                <cell halign="center"><m>\fe{p}{t}</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>20.9</m></cell>
+                                <cell><m>2.98\ldots</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>20.99</m></cell>
+                                <cell><m>2.998\ldots</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>20.999</m></cell>
+                                <cell><m>2.9998\ldots</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>21.001</m></cell>
+                                <cell><m>3.0002\ldots</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>21.01</m></cell>
+                                <cell><m>3.002\ldots</m></cell>
+                            </row>
+                            <row>
+                                <cell><m>21.1</m></cell>
+                                <cell><m>3.02\ldots</m></cell>
+                            </row>
+                        </tabular>
+                    </table>
+                </sidebyside>
             </introduction>
 
             <exercise>
@@ -217,52 +287,6 @@
                 </statement>
             </exercise>
 
-        </exercisegroup>
-        <columnbreak/>
-                <table xml:id="table-rational-function-values">
-                    <caption><m>\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}</m></caption>
-                    <tabular top="major">
-                        <col halign="left" />
-                        <col halign="left"/>
-
-                        <row bottom="medium">
-                            <cell halign="center"><m>x</m></cell>
-                            <cell halign="center"><m>\fe{f}{x}</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>4.99</m></cell>
-                            <cell><m>2.0014</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>4.999</m></cell>
-                            <cell><m>2.00014</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>4.9999</m></cell>
-                            <cell><m>2.000014</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>5.0001</m></cell>
-                            <cell><m>1.999986</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>5.001</m></cell>
-                            <cell><m>1.99986</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>5.01</m></cell>
-                            <cell><m>1.9986</m></cell>
-                        </row>
-                    </tabular>
-                </table>
-        <endmulticols/>
-
-        <beginmulticols/>
-        <exercisegroup>
-            <introduction>
-                <p>Values of the function <m>p</m> where <m>\fe{p}{t}=\sqrt{t-12}</m> are shown in <xref ref="table-square-root-values"/>. Both of the questions below are in reference to this function.</p>
-            </introduction>
-
             <exercise>
                 <statement>
                     <p>What is the value of <m>\fe{p}{21}</m>?</p>
@@ -275,44 +299,6 @@
                 </statement>
             </exercise>
         </exercisegroup>
-        <columnbreak/>
-                <table xml:id="table-square-root-values">
-                    <caption><m>\fe{p}{t}=\sqrt{t-12}</m></caption>
-                    <tabular top="major">
-                        <col halign="left" />
-                        <col halign="left"/>
-
-                        <row bottom="medium">
-                            <cell halign="center"><m>t</m></cell>
-                            <cell halign="center"><m>\fe{p}{t}</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>20.9</m></cell>
-                            <cell><m>2.98\ldots</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>20.99</m></cell>
-                            <cell><m>2.998\ldots</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>20.999</m></cell>
-                            <cell><m>2.9998\ldots</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>21.001</m></cell>
-                            <cell><m>3.0002\ldots</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>21.01</m></cell>
-                            <cell><m>3.002\ldots</m></cell>
-                        </row>
-                        <row>
-                            <cell><m>21.1</m></cell>
-                            <cell><m>3.02\ldots</m></cell>
-                        </row>
-                    </tabular>
-                </table>
-        <endmulticols/>
 
         <exercisegroup cols="3">
             <introduction>

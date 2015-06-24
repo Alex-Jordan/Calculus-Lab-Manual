@@ -81,14 +81,14 @@
                 <statement>
                     <p>Sketch a graph of a function that satisfies all of the following properties</p>
                     <sidebyside>
-                        <paragraphs width="60%" valign="top">
+                        <paragraphs valign="top">
                             <p><md>
                             <mrow>\lim\limits_{x\to4^{-}}\fe{f}{x}&amp;=2&amp;\fe{f}{0}&amp;=4</mrow>
                             <mrow>\lim\limits_{x\to4^{+}}\fe{f}{x}&amp;=5&amp;\fe{f}{4}&amp;=5</mrow>
-                            <mrow>\lim\limits_{x\to-\infty}\fe{f}{x}=\lim\limits_{x\to\infty}\fe{f}{x}&amp;=4</mrow>
+                            <mrow>\lim\limits_{x\to-\infty}\fe{f}{x}&amp;=4&amp;\lim\limits_{x\to\infty}\fe{f}{x}&amp;=4</mrow>
                             </md></p>
                         </paragraphs>
-                        <image width="35%" valign="top">
+                        <image valign="top">
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[]
@@ -103,7 +103,7 @@
                 <statement>
                     <p>Sketch a graph of a function that satisfies all of the following properties</p>
                     <sidebyside>
-                        <paragraphs width="60%" valign="top">
+                        <paragraphs valign="top">
                             <p><md>
                             <mrow>\lim\limits_{x\to-2}\fe{g}{x}&amp;=\infty&amp;\fe{g}{0}&amp;=4</mrow>
                             <mrow>\lim\limits_{x\to-\infty}\fe{g}{x}&amp;=\infty&amp;\fe{g}{3}&amp;=-2</mrow>
@@ -111,7 +111,7 @@
                             </md>
                             <m>g</m> is continuous and has constant slope on <m>\ointerval{0}{\infty}</m>.</p>
                         </paragraphs>
-                        <image width="35%" valign="top">
+                        <image valign="top">
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[]
@@ -126,13 +126,13 @@
                 <statement>
                     <p>Sketch a graph of a function that satisfies all of the following properties</p>
                     <sidebyside>
-                        <paragraphs width="60%" valign="top">
+                        <paragraphs valign="top">
                             <p>The only discontinuities on <m>m</m> occur at <m>-4</m> and <m>3</m>. <m>m</m> has no <m>x</m>-intercepts. <m>m</m> has constant slope of <m>-2</m> over <m>\ointerval{-\infty}{-4}</m>. <m>m</m> is continuous over <m>\cointerval{-4}{3}</m>.<md>
                             <mrow>\fe{m}{-6}&amp;=5&amp;\lim\limits_{x\to3}\fe{m}{x}&amp;=-\infty</mrow>
                             <mrow>\lim\limits_{x\to-4^{+}}\fe{m}{x}&amp;=-2&amp;\lim\limits_{x\to\infty}\fe{m}{x}&amp;=-\infty</mrow>
                             </md></p>
                         </paragraphs>
-                        <image width="35%" valign="top">
+                        <image valign="top">
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[]

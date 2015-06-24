@@ -230,14 +230,22 @@
                 </statement>
                 <solution>
                     <p><md>
-                    <mrow>\lim_{t\to-\infty}\fe{\tanh}{t}&amp;=\lim_{t\to-\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}&amp;\lim_{t\to\infty}\fe{\tanh}{t}&amp;=\lim_{t\to\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}</mrow>
-                    <mrow>&amp;=\lim_{t\to-\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}\cdot\frac{e^t}{e^t}&amp;&amp;=\lim_{t\to\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}\cdot\frac{e^{-t}}{e^{-t}}</mrow>
-                    <mrow>&amp;=\lim_{t\to-\infty}\frac{e^{2t}-1}{e^{2t}+1}&amp;&amp;=\lim_{t\to\infty}\frac{1-e^{-2t}}{1+e^{-2t}}</mrow>
-                    <mrow>&amp;=\frac{\lim_{t\to-\infty}\left(e^{2t}-1\right)}{\lim_{t\to-\infty}\left(e^{2t}+1\right)}&amp;&amp;=\frac{\lim_{t\to\infty}\left(1-e^{-2t}\right)}{\lim_{t\to\infty}\left(1+e^{-2t}\right)}</mrow>
-                    <mrow>&amp;=\frac{\lim_{t\to-\infty}e^{2t}-\lim_{t\to-\infty}1}{\lim_{t\to-\infty}e^{2t}+\lim_{t\to-\infty}1}&amp;&amp;=\frac{\lim_{t\to\infty}1-\lim_{t\to\infty}e^{-2t}}{\lim_{t\to\infty}1+\lim_{t\to\infty}e^{-2t}}</mrow>
-                    <mrow>&amp;=\frac{\left(\lim_{t\to-\infty}e^{t}\right)^2-1}{\left(\lim_{t\to-\infty}e^{t}\right)^2+1}&amp;&amp;=\frac{1-\left(\lim_{t\to\infty}e^{-t}\right)^2}{1+\left(\lim_{t\to\infty}e^{-t}\right)^2}</mrow>
-                    <mrow>&amp;=\frac{0^2-1}{0^2+1}&amp;&amp;=\frac{1-0^2}{1+0^2}</mrow>
-                    <mrow>&amp;=-1&amp;&amp;=1</mrow>
+                    <mrow>\lim_{t\to-\infty}\fe{\tanh}{t}&amp;=\lim_{t\to-\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}</mrow>
+                    <mrow>&amp;=\lim_{t\to-\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}\cdot\frac{e^t}{e^t}</mrow>
+                    <mrow>&amp;=\lim_{t\to-\infty}\frac{e^{2t}-1}{e^{2t}+1}</mrow>
+                    <mrow>&amp;=\frac{\lim_{t\to-\infty}\left(e^{2t}-1\right)}{\lim_{t\to-\infty}\left(e^{2t}+1\right)}</mrow>
+                    <mrow>&amp;=\frac{\lim_{t\to-\infty}e^{2t}-\lim_{t\to-\infty}1}{\lim_{t\to-\infty}e^{2t}+\lim_{t\to-\infty}1}</mrow>
+                    <mrow>&amp;=\frac{\left(\lim_{t\to-\infty}e^{t}\right)^2-1}{\left(\lim_{t\to-\infty}e^{t}\right)^2+1}</mrow>
+                    <mrow>&amp;=\frac{0^2-1}{0^2+1}</mrow>
+                    <mrow>&amp;=-1</mrow>
+                    <mrow>\lim_{t\to\infty}\fe{\tanh}{t}&amp;=\lim_{t\to\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}</mrow>
+                    <mrow>&amp;=\lim_{t\to\infty}\frac{e^t-e^{-t}}{e^t+e^{-t}}\cdot\frac{e^{-t}}{e^{-t}}</mrow>
+                    <mrow>&amp;=\lim_{t\to\infty}\frac{1-e^{-2t}}{1+e^{-2t}}</mrow>
+                    <mrow>&amp;=\frac{\lim_{t\to\infty}\left(1-e^{-2t}\right)}{\lim_{t\to\infty}\left(1+e^{-2t}\right)}</mrow>
+                    <mrow>&amp;=\frac{\lim_{t\to\infty}1-\lim_{t\to\infty}e^{-2t}}{\lim_{t\to\infty}1+\lim_{t\to\infty}e^{-2t}}</mrow>
+                    <mrow>&amp;=\frac{1-\left(\lim_{t\to\infty}e^{-t}\right)^2}{1+\left(\lim_{t\to\infty}e^{-t}\right)^2}</mrow>
+                    <mrow>&amp;=\frac{1-0^2}{1+0^2}</mrow>
+                    <mrow>&amp;=1</mrow>
                     </md></p>
                 </solution>
                 <answer>
@@ -302,9 +310,9 @@
                 </statement>
                 <solution>
                     <tabular top="major">
-                        <col valign="center"/>
-                        <col valign="center"/>
-                        <col valign="center"/>
+                        <col halign="center"/>
+                        <col halign="center"/>
+                        <col halign="center"/>
                         <row bottom="medium">
                             <cell>Interval</cell>
                             <cell><m>\fd{k}</m></cell>
@@ -373,9 +381,9 @@
                 </statement>
                 <solution>
                     <tabular top="major">
-                        <col valign="center"/>
-                        <col valign="center"/>
-                        <col valign="center"/>
+                        <col halign="center"/>
+                        <col halign="center"/>
+                        <col halign="center"/>
                         <row bottom="medium">
                             <cell>Interval</cell>
                             <cell><m>\fd{f}</m></cell>
@@ -719,8 +727,10 @@
                         \end{tikzpicture}]]>
                         </latex-image-code>
                     </image>
-
                 </solution>
+                <answer>
+                    <p>See the solutions section.</p>
+                </answer>
             </exercise>
         </exercisegroup>
     </exercises>

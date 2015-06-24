@@ -43,7 +43,7 @@
                 <mrow>&amp;=\frac{3}{(2-x)^2}</mrow>
                 </md></p>
             </paragraphs>
-            <figure xml:id="figure-first-derivative" valign="bottom" width="40%">
+            <figure xml:id="figure-first-derivative" valign="bottom">
                 <caption><m>y=\fe{f}{x}=\frac{3}{2-x}</m></caption>
                 <image>
                     <latex-image-code>

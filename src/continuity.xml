@@ -31,11 +31,9 @@
     </definition> 
 
     <exercises>
-        <beginmulticols/>
         <exercise>
             <statement>
                     <p>State the values of <m>t</m> at which the function shown in <xref ref="figure-discontinuities"/> is discontinuous. For each instance of discontinuity, state (by number) all of the sub-properties in <xref ref="definition-continuity"/> that fail to be satisfied.</p> 
-                    <columnbreak/>
                     <figure xml:id="figure-discontinuities">
                         <image>
                             <latex-image-code>
@@ -86,7 +84,6 @@
                     </figure>
             </statement>
         </exercise>
-        <endmulticols/>
     </exercises>
 
 </section>

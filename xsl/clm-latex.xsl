@@ -20,12 +20,6 @@
 <!-- Intend output for rendering by pdflatex -->
 <xsl:output method="text" />
 
-<!-- annotate, only defined for latex, not html; to be used after a math mode with \tikzmark in it -->
-<!-- contents should use the \Annotate command, defined in image macros                            -->
-<xsl:template match="annotate">
-    <xsl:apply-templates />
-</xsl:template>
-
 
 <!-- A table is like a figure, centered, captioned  -->
 <!-- The meat of the table is given by a tabular    -->
@@ -249,199 +243,10 @@
         </xsl:otherwise>
     </xsl:choose>
     <xsl:text>\textwidth}{%&#xa;</xsl:text>
-    <xsl:text>\pgfplotsset{every axis/.append style={width=\linewidth}}%&#xa;</xsl:text>
+    <xsl:text>\pgfplotsset{every axis/.append style={width=0.8\linewidth}}%&#xa;</xsl:text>
 </xsl:template>
 
-<!-- For a long table -->
-<!-- A table is like a figure, centered, captioned  -->
-<!-- The meat of the table is given by a tabular    -->
-<!-- element, which may be used outside of a table  -->
-<!-- Standard LaTeX table environment is redefined, -->
-<!-- see preamble comments for details              -->
-<xsl:template match="table[@long='yes']">
-    <xsl:apply-templates select="*[not(self::caption)]" />
-</xsl:template>
 
-<!-- Modify tabular to check for longtable -->
-<!-- A tabular layout -->
-<xsl:template match="tabular" name="tabular">
-    <!-- Determine global, table-wide properties -->
-    <!-- set defaults here if values not given   -->
-    <xsl:variable name="table-top">
-        <xsl:choose>
-            <xsl:when test="@top">
-                <xsl:value-of select="@top" />
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:text>none</xsl:text>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="table-left">
-        <xsl:choose>
-            <xsl:when test="@left">
-                <xsl:value-of select="@left" />
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:text>none</xsl:text>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="table-bottom">
-        <xsl:choose>
-            <xsl:when test="@bottom">
-                <xsl:value-of select="@bottom" />
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:text>none</xsl:text>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="table-right">
-        <xsl:choose>
-            <xsl:when test="@right">
-                <xsl:value-of select="@right" />
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:text>none</xsl:text>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="table-halign">
-        <xsl:choose>
-            <xsl:when test="@halign">
-                <xsl:value-of select="@halign" />
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:text>left</xsl:text>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="table-valign">
-        <xsl:choose>
-            <xsl:when test="@valign">
-                <xsl:value-of select="@valign" />
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:text>middle</xsl:text>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
-    <!-- Build latex column specification                         -->
-    <!--   vertical borders (left side, right side, three widths) -->
-    <!--   horizontal alignment (left, center, right)             -->
-    <xsl:choose>
-        <xsl:when test="*[ancestor::table[@long='yes']]">
-            <xsl:text>\begin{longtable}{</xsl:text>
-        </xsl:when>
-        <xsl:otherwise>
-            <xsl:text>\begin{tabular}{</xsl:text>
-        </xsl:otherwise>
-    </xsl:choose>
-    <!-- start with left vertical border -->
-    <xsl:call-template name="vrule-specification">
-        <xsl:with-param name="width" select="$table-left" />
-    </xsl:call-template>
-    <xsl:choose>
-        <!-- Potential for individual column overrides    -->
-        <!--   Deduce number of columns from col elements -->
-        <!--   Employ individual column overrides,        -->
-        <!--   or use global table-wide values            -->
-        <!--   write alignment (mandatory)                -->
-        <!--   follow with right border (optional)        -->
-        <xsl:when test="col">
-            <xsl:for-each select="col">
-                <xsl:call-template name="halign-specification">
-                    <xsl:with-param name="align">
-                        <xsl:choose>
-                            <xsl:when test="@halign">
-                                <xsl:value-of select="@halign" />
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <xsl:value-of select="$table-halign" />
-                            </xsl:otherwise>
-                        </xsl:choose>
-                    </xsl:with-param>
-                </xsl:call-template>
-                <xsl:call-template name="vrule-specification">
-                    <xsl:with-param name="width">
-                        <xsl:choose>
-                            <xsl:when test="@right">
-                                <xsl:value-of select="@right" />
-                            </xsl:when>
-                            <xsl:otherwise>
-                                <xsl:value-of select="$table-right" />
-                            </xsl:otherwise>
-                        </xsl:choose>
-                    </xsl:with-param>
-                </xsl:call-template>
-            </xsl:for-each>
-        </xsl:when>
-        <!-- All columns specified identically so far   -->
-        <!--   so can repeat global, table-wide values  -->
-        <!--   use first row to determine number        -->
-        <!--   write alignment (mandatory)              -->
-        <!--   follow with right border (optional)      -->
-        <xsl:otherwise>
-            <xsl:for-each select="row[1]/cell">
-                <xsl:call-template name="halign-specification">
-                    <xsl:with-param name="align" select="$table-halign" />
-                </xsl:call-template>
-                <xsl:call-template name="vrule-specification">
-                    <xsl:with-param name="width" select="$table-right" />
-                </xsl:call-template>
-            </xsl:for-each>
-        </xsl:otherwise>
-    </xsl:choose>
-    <xsl:text>}</xsl:text>
-    <!-- column specification done -->
-    <!-- insert caption for longtables -->
-    <xsl:if test="*[ancestor::table[@long='yes']]">
-        <xsl:apply-templates select="ancestor::longtable/caption"/>
-        <xsl:text>\\&#xa;</xsl:text>
-    </xsl:if>
-    <!-- top horizontal rule is specified after column specification -->
-    <xsl:choose>
-        <!-- A col element might indicate top border customizations   -->
-        <!-- so we walk the cols to build a cline-style specification -->
-        <xsl:when test="col/@top">
-            <xsl:call-template name="column-cols">
-                <xsl:with-param name="the-col" select="col[1]" />
-                <xsl:with-param name="col-number" select="1" />
-                <xsl:with-param name="clines" select="''" />
-                <xsl:with-param name="table-top" select="$table-top"/>
-                <xsl:with-param name="prior-top" select="'undefined'" />
-                <xsl:with-param name="start-run" select="1" />
-            </xsl:call-template>
-        </xsl:when>
-        <!-- with no customization, we have one continuous rule (if at all) -->
-        <!-- use global, table-wide value of top specification              -->
-        <xsl:otherwise>
-            <xsl:call-template name="hrule-specification">
-                <xsl:with-param name="width" select="$table-top" />
-            </xsl:call-template>
-        </xsl:otherwise>
-    </xsl:choose>
-    <!-- now ready to build rows -->
-    <xsl:text>&#xa;</xsl:text>
-    <!-- table-wide values are needed to reconstruct/determine overrides -->
-    <xsl:apply-templates select="row">
-        <xsl:with-param name="table-left" select="$table-left" />
-        <xsl:with-param name="table-bottom" select="$table-bottom" />
-        <xsl:with-param name="table-right" select="$table-right" />
-        <xsl:with-param name="table-halign" select="$table-halign" />
-    </xsl:apply-templates>
-    <!-- mandatory finish, exclusive of any final row specifications -->
-    <xsl:choose>
-        <xsl:when test="*[ancestor::table[@long='yes']]">
-            <xsl:text>\end{longtable}&#xa;</xsl:text>
-        </xsl:when>
-        <xsl:otherwise>
-            <xsl:text>\end{tabular}&#xa;</xsl:text>
-        </xsl:otherwise>
-    </xsl:choose>
-    
-</xsl:template>
 
 
 <!-- A list of short answers -->
@@ -477,74 +282,6 @@
 </xsl:template>
 
 
-<!--Hack to introduce multicols at opportune moments to reduce print size-->
-<xsl:template match="beginmulticols">
-    <xsl:text>\begin{multicols}{</xsl:text>
-    <xsl:choose>
-       <xsl:when test="@cols">
-           <xsl:value-of select="@cols"/>
-       </xsl:when>
-       <xsl:otherwise>
-           <xsl:text>2</xsl:text>
-       </xsl:otherwise>
-    </xsl:choose>
-    <xsl:text>}&#xa;</xsl:text>
-</xsl:template>
-<xsl:template match="endmulticols">
-    <xsl:text>\end{multicols}%&#xa;</xsl:text>
-</xsl:template>
-<xsl:template match="columnbreak">
-    <xsl:text>\vfill&#xa;</xsl:text>
-    <xsl:text>\columnbreak&#xa;</xsl:text>
-</xsl:template>
-<xsl:template match="exercises/exercisegroup">
-    <xsl:variable name="cols">
-        <xsl:choose>
-            <xsl:when test="@cols">
-                <xsl:value-of select="@cols"/>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:value-of select="'1'"/>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="by">
-        <xsl:choose>
-            <xsl:when test="@by">
-                <xsl:value-of select="@by"/>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:value-of select="$exercisegroup.progression"/>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
-
-    <xsl:text>\begin{exercisegroup}%&#xa;</xsl:text>
-    <xsl:apply-templates select="introduction" />
-    <xsl:choose>
-        <xsl:when test="$by='row'">
-            <xsl:text>\begin{exercisegroupbyrow}{</xsl:text>
-        </xsl:when>
-        <xsl:otherwise>
-            <xsl:text>\begin{exercisegroupbycol}{</xsl:text>
-        </xsl:otherwise>
-    </xsl:choose>
-    <xsl:value-of select="$cols"/>
-    <xsl:text>}%&#xa;</xsl:text>
-    <xsl:apply-templates select="exercise|beginmulticols|endmulticols|columnbreak"/>
-    <xsl:choose>
-        <xsl:when test="$by='row'">
-            <xsl:text>\end{exercisegroupbyrow}%&#xa;</xsl:text>
-        </xsl:when>
-        <xsl:otherwise>
-            <xsl:text>\end{exercisegroupbycol}%&#xa;</xsl:text>
-        </xsl:otherwise>
-    </xsl:choose>
-    <xsl:apply-templates select="conclusion" />
-    <xsl:text>\end{exercisegroup}%&#xa;</xsl:text>
-</xsl:template>
-
-
 
 <!-- Introductions and conclusions get a \par at the end because otherwise there is occasional crowding-->
 <xsl:template match="introduction|conclusion">
@@ -560,5 +297,107 @@
     <xsl:apply-templates select="//exercises" mode="backmatter" />
     <xsl:text>}\end{multicols}&#xa;</xsl:text>
 </xsl:template>
+
+<!-- GeoGebra HTML5-->
+<xsl:template match="geogebra-html5">
+    <xsl:text>{\textlangle}Use the online edition to explore a GoeGebra applet at \url{</xsl:text>
+    <xsl:value-of select="@src"/>
+    <xsl:text>}.\textrangle&#xa;</xsl:text> 
+</xsl:template>
+
+<!-- Overwrite table parts to use booktabs.              -->
+<xsl:template match="tabular">
+    <xsl:choose>
+        <xsl:when test="*[not(ancestor::sidebyside)]">
+            <xsl:text>\begin{tabular}{</xsl:text>
+            <xsl:apply-templates select="col" mode="booktabs"/>
+            <xsl:text>}&#xa;</xsl:text>
+            <xsl:if test="@top='major' or @top='medium' or @top='minor'">
+                <xsl:text>\toprule&#xa;</xsl:text>
+            </xsl:if>
+            <xsl:apply-templates select="row" mode="booktabs"/>
+            <xsl:text>\end{tabular}&#xa;</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:call-template name="tabular" select="self()" />
+        </xsl:otherwise>
+    </xsl:choose>
+</xsl:template>
+<xsl:template match="tabular/col" mode="booktabs">
+    <xsl:if test="@left='minor' or @left='medium' or @left='major'">
+        <xsl:text>|</xsl:text>
+    </xsl:if>
+    <xsl:choose>
+        <xsl:when test="@halign='center'">
+            <xsl:text>c</xsl:text>
+        </xsl:when>
+        <xsl:when test="@halign='left'">
+            <xsl:text>l</xsl:text>
+        </xsl:when>
+        <xsl:when test="@halign='right'">
+            <xsl:text>r</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:text>p{</xsl:text>
+            <xsl:value-of select="@halign"/>
+            <xsl:text>}</xsl:text>
+        </xsl:otherwise>
+    </xsl:choose>
+    <xsl:if test="@right='minor' or @right='medium' or @right='major'">
+        <xsl:text>|</xsl:text>
+    </xsl:if>
+</xsl:template>
+<xsl:template match="tabular/row" mode="booktabs">
+    <xsl:apply-templates select="cell" mode="booktabs"/>
+    <xsl:choose>
+        <xsl:when test="@bottom">
+            <xsl:text>\\&#xa;</xsl:text>
+            <xsl:choose>
+                <xsl:when test="@bottom='medium' or @bottom='minor'">
+                    <xsl:text>\midrule&#xa;</xsl:text>
+                </xsl:when>
+                <xsl:when test="@bottom='major'">
+                    <xsl:text>\bottomrule&#xa;</xsl:text>
+                </xsl:when>
+            </xsl:choose>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:if test="position()!=last()">
+                <xsl:text>\\&#xa;</xsl:text>
+            </xsl:if>
+        </xsl:otherwise>
+    </xsl:choose>
+</xsl:template>
+<xsl:template match="row/cell" mode="booktabs">
+    <xsl:if test="@halign">
+        <xsl:text>\multicolumn{1}{</xsl:text>
+        <xsl:choose>
+            <xsl:when test="@halign='center'">
+                <xsl:text>c}{</xsl:text>
+            </xsl:when>
+            <xsl:when test="@halign='left'">
+                <xsl:text>l}{</xsl:text>
+            </xsl:when>
+            <xsl:when test="@halign='right'">
+                <xsl:text>r}{</xsl:text>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:if>
+    <xsl:apply-templates />
+    <xsl:if test="@halign">
+        <xsl:text>}</xsl:text>
+    </xsl:if>
+    <xsl:if test="position()!=last()">
+        <xsl:text>&amp;</xsl:text>
+    </xsl:if>
+</xsl:template>
+
+<xsl:template match="alert">
+    <xsl:text>\textbf{</xsl:text>
+    <xsl:apply-templates />
+    <xsl:text>}</xsl:text>
+</xsl:template>
+
+
 
 </xsl:stylesheet>

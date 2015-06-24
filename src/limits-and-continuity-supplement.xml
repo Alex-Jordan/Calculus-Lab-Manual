@@ -211,7 +211,7 @@
             <statement>
                 <p>Sketch onto <xref ref="figure-sketch-properties-supplement"/> a function, <m>f</m>, with each of the following properties. Make sure that your graph includes all of the relevant features addressed in lab.</p>
                 <sidebyside>  
-                    <paragraphs width="59%">  
+                    <paragraphs>  
                         <ul>  
                             <li>The only discontinuities on <m>f</m> are at <m>-4</m> and <m>3</m>.</li>
                             <li><m>f</m> has no <m>x</m>-intercepts.</li>
@@ -221,7 +221,7 @@
                             <li><m>f</m> has constant slope <m>-2</m> over <m>\ointerval{-\infty}{-4}</m>.</li>
                         </ul>  
                     </paragraphs>  
-                    <figure width="40%" xml:id="figure-sketch-properties-supplement">
+                    <figure xml:id="figure-sketch-properties-supplement">
                         <caption><m>f</m></caption>
                         <image>
                             <latex-image-code>
@@ -269,7 +269,7 @@
             <statement>
                 <p>Sketch onto <xref ref="figure-second-sketch-properties-supplement"/> a function, <m>f</m>, with each of the following properties. Make sure that your graph includes all of the relevant features addressed in lab.</p>
                 <sidebyside>
-                    <paragraphs width="59%">
+                    <paragraphs>
                         <ul>
                             <li><m>\lim\limits_{x\to-\infty}\fe{f}{x}=\lim\limits_{x\to\infty}\fe{f}{x}=3</m>.</li>
                             <li><m>\lim\limits_{x\to-4^{+}}\fe{f}{x}=-2</m> and <m>\lim\limits_{x\to-4^{-}}\fe{f}{x}=5</m>.</li>
@@ -277,7 +277,7 @@
                             <li><m>\fe{f}{-2}=0</m>, <m>\fe{f}{0}=-1</m>, and <m>\fe{f}{-4}=5</m>.</li>
                         </ul>
                     </paragraphs>
-                    <figure width="40%" xml:id="figure-second-sketch-properties-supplement">
+                    <figure xml:id="figure-second-sketch-properties-supplement">
                         <caption><m>f</m></caption>
                         <image>
                             <latex-image-code>
@@ -400,7 +400,7 @@
                 </statement>
                 <solution>
                     <p><md>
-                    <mrow>&amp;\phantom{={}}\lim\limits_{x\to2^{+}}\frac{x^2-4}{x^2-4x+4}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{0}{0}$}</mrow>
+                    <mrow>&amp;\phantom{={}}\lim\limits_{x\to2^{+}}\frac{x^2-4}{x^2-4x+4}&amp;&amp;\text{Can't apply LL A1--A6; form is $\tfrac{0}{0}$}</mrow>
                     <mrow>&amp;=\lim\limits_{x\to2^{+}}\frac{(x-2)(x+2)}{(x-2)^2}</mrow>
                     <mrow>&amp;=\lim\limits_{x\to2^{+}}\frac{x+2}{x-2}&amp;&amp;\text{LL A7}</mrow>
                     <mrow>&amp;=\infty&amp;&amp;\text{This limit does not exist.}</mrow>
@@ -416,7 +416,7 @@
                 </statement>
                 <solution>
                     <p><md>
-                    <mrow>&amp;\phantom{={}}\lim\limits_{x\to\infty}\frac{\fe{\ln}{x}+\fe{\ln}{x^6}}{7\fe{\ln}{x^2}}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{\infty}{\infty}$}</mrow>
+                    <mrow>&amp;\phantom{={}}\lim\limits_{x\to\infty}\frac{\fe{\ln}{x}+\fe{\ln}{x^6}}{7\fe{\ln}{x^2}}&amp;&amp;\text{Can't apply LL A1--A6; form is $\tfrac{\infty}{\infty}$}</mrow>
                     <mrow>&amp;=\lim\limits_{x\to\infty}\frac{\fe{\ln}{x}+6\fe{\ln}{x}}{14\fe{\ln}{x}}</mrow>
                     <mrow>&amp;=\lim\limits_{x\to\infty}\frac{7\fe{\ln}{x}}{14\fe{\ln}{x}}</mrow>
                     <mrow>&amp;=\lim\limits_{x\to\infty}\frac{1}{2}&amp;&amp;\text{LL A7}</mrow>
@@ -433,7 +433,7 @@
                 </statement>
                 <solution>
                     <p><md>
-                    <mrow>&amp;\phantom{={}}\lim\limits_{x\to-\infty}\frac{3x^3+2x}{3x-2x^3}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{\infty}{\infty}$}</mrow>
+                    <mrow>&amp;\phantom{={}}\lim\limits_{x\to-\infty}\frac{3x^3+2x}{3x-2x^3}&amp;&amp;\text{Can't apply LL A1--A6; form is $\tfrac{\infty}{\infty}$}</mrow>
                     <mrow>&amp;=\lim\limits_{x\to-\infty}\frac{3x^3+2x}{3x-2x^3}</mrow>
                     <mrow>&amp;=\lim\limits_{x\to-\infty}\frac{3x^3+2x}{3x-2x^3}\frac{\sfrac{1}{x^3}}{\sfrac{1}{x^3}}</mrow>
                     <mrow>&amp;=\lim\limits_{x\to-\infty}\frac{3+\frac{2}{x^2}}{\frac{3}{x^2}-2}</mrow>
@@ -455,7 +455,7 @@
                     <p><md>
                     <mrow>&amp;\phantom{={}}\lim\limits_{x\to\infty}\fe{\sin}{\frac{\pi e^{3x}}{2e^x+4e^{3x}}}</mrow>
                     <mrow>&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi e^{3x}}{2e^x+4e^{3x}}}&amp;&amp;\text{LL A6}</mrow>
-                    <mrow>&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi e^{3x}}{2e^x+4e^{3x}}}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{\infty}{\infty}$}</mrow>
+                    <mrow>&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi e^{3x}}{2e^x+4e^{3x}}}&amp;&amp;\text{Can't apply LL A1--A6; form is $\tfrac{\infty}{\infty}$}</mrow>
                     <mrow>&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi e^{3x}}{2e^x+4e^{3x}}\frac{\sfrac{1}{e^{3x}}}{\sfrac{1}{e^{3x}}}}</mrow>
                     <mrow>&amp;=\fe{\sin}{\lim\limits_{x\to\infty}\frac{\pi}{\frac{2}{e^{2x}}+4}}</mrow>
                     <mrow>&amp;=\fe{\sin}{\frac{\lim\limits_{x\to\infty}\pi}{\lim\limits_{x\to\infty}\left(\frac{2}{e^{2x}}+4\right)}}&amp;&amp;\text{LL A5}</mrow>
@@ -487,7 +487,7 @@
                     <p><md>
                     <mrow>&amp;\phantom{={}}\lim\limits_{x\to5}\sqrt{\frac{x^2-12x+35}{5-x}}</mrow>
                     <mrow>&amp;=\sqrt{\lim\limits_{x\to5}\frac{(x-5)(x-7)}{5-x}}&amp;&amp;\text{LL A6}</mrow>
-                    <mrow>&amp;=\sqrt{\lim\limits_{x\to5}\frac{(x-5)(x-7)}{5-x}}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{0}{0}$}</mrow>
+                    <mrow>&amp;=\sqrt{\lim\limits_{x\to5}\frac{(x-5)(x-7)}{5-x}}&amp;&amp;\text{Can't apply LL A1--A6; form is $\tfrac{0}{0}$}</mrow>
                     <mrow>&amp;=\sqrt{\lim\limits_{x\to5}(x-7)\cdot-1}&amp;&amp;\text{LL A7}</mrow>
                     <mrow>&amp;=\sqrt{\lim\limits_{x\to5}(7-x)}</mrow>
                     <mrow>&amp;=\sqrt{\lim\limits_{x\to5}7-\lim\limits_{x\to5}x}&amp;&amp;\text{LL A2}</mrow>
@@ -505,7 +505,7 @@
                 </statement>
                 <solution>
                     <p><md>
-                    <mrow>&amp;\phantom{={}}\lim\limits_{h\to0}\frac{4(3+h)^2-5(3+h)-21}{h}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{0}{0}$}</mrow>
+                    <mrow>&amp;\phantom{={}}\lim\limits_{h\to0}\frac{4(3+h)^2-5(3+h)-21}{h}&amp;&amp;\text{Can't apply LL A1--A6; form is $\tfrac{0}{0}$}</mrow>
                     <mrow>&amp;=\lim\limits_{h\to0}\frac{4(9+6h+h^2)-15-5h-21}{h}</mrow>
                     <mrow>&amp;=\lim\limits_{h\to0}\frac{36+24h+4h^2-15-5h-21}{h}</mrow>
                     <mrow>&amp;=\lim\limits_{h\to0}\frac{19h+4h^2}{h}</mrow>
@@ -545,7 +545,7 @@
                 </statement>
                 <solution>
                     <p><md>
-                    <mrow>&amp;\phantom{={}}\lim\limits_{h\to0}\frac{\sqrt{9-h}-3}{h}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{0}{0}$}</mrow>
+                    <mrow>&amp;\phantom{={}}\lim\limits_{h\to0}\frac{\sqrt{9-h}-3}{h}&amp;&amp;\text{Can't apply LL A1--A6; form is $\tfrac{0}{0}$}</mrow>
                     <mrow>&amp;=\lim\limits_{h\to0}\left(\frac{\sqrt{9-h}-3}{h}\cdot\frac{\sqrt{9-h}+3}{\sqrt{9-h}+3}\right)</mrow>
                     <mrow>&amp;=\lim\limits_{h\to0}\left(\frac{(9-h)-9}{h\left(\sqrt{9-h}+3\right)}\right)</mrow>
                     <mrow>&amp;=\lim\limits_{h\to0}\left(\frac{-h}{h\left(\sqrt{9-h}+3\right)}\right)</mrow>
@@ -568,7 +568,7 @@
                 </statement>
                 <solution>
                     <p><md>
-                    <mrow>&amp;\phantom{={}}\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\sin}{\theta+\frac{\pi}{2}}}{\fe{\sin}{2\theta+\pi}}&amp;&amp;\text{Can't apply LL A1--A6 because the form is $\tfrac{0}{0}$}</mrow>
+                    <mrow>&amp;\phantom{={}}\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\sin}{\theta+\frac{\pi}{2}}}{\fe{\sin}{2\theta+\pi}}&amp;&amp;\text{Can't apply LL A1--A6; form is $\tfrac{0}{0}$}</mrow>
                     <mrow>&amp;=\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\cos}{\theta}}{-\fe{\sin}{2\theta}}&amp;&amp;\text{Trig identities}</mrow>
                     <mrow>&amp;=\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\cos}{\theta}}{-2\fe{\sin}{\theta}\fe{\cos}{\theta}}&amp;&amp;\text{Double angle identity}</mrow>
                     <mrow>&amp;=\lim\limits_{\theta\to\frac{\pi}{2}}\frac{1}{-2\fe{\sin}{\theta}}&amp;&amp;\text{LL A7}</mrow>

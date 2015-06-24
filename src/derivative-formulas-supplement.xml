@@ -10,7 +10,7 @@
 <section xml:id="derivative-formulas-supplementary-exercises">
     <title>Supplement</title>
     <exercises>
-        <exercisegroup cols="3">
+        <exercisegroup cols="3" by="row">
             <introduction>
                 <p>Apply the constant factor and power rules of differentiation to find the first derivative of each of the following functions.  In each case take the derivative with respect to the independent variable suggested by the expression on the right side of the equal sign.  Make sure that you assign the proper name to the derivative function.  Please note that there is no need to employ either the quotient rule or the product rule to find any of these derivative formulas.</p>
             </introduction> 
@@ -120,7 +120,7 @@
                     <mrow>&amp;=5\left[\lzoo{x}{\fe{\sin}{x}}\cdot\fe{\cos}{x}+\fe{\sin}{x}\cdot\lzoo{x}{\fe{\cos}{x}}\right]</mrow>
                     <mrow>&amp;=5\left[\fe{\cos}{x}\cdot\fe{\cos}{x}+\fe{\sin}{x}\cdot-\fe{\sin}{x}\right]</mrow>
                     <mrow>&amp;=5\left[\fe{\cos^2}{x}-\fe{\sin^2}{x}\right]</mrow>
-                    <mrow>&amp;=5\fe{\cos}{2x}&amp;\text{(optional simplification)}</mrow>
+                    <mrow>&amp;=5\fe{\cos}{2x}\qquad\text{(optional simplification)}</mrow>
                     </md></p>
                 </solution>
                 <answer>
@@ -331,12 +331,13 @@
                 <statement>
                     <p>Apply the product rule twice to the expression <m>\lzoo{x}{\fe{f}{x}\fe{g}{x}\fe{h}{x}}</m>  to verify the 
 formula stated above for the product of three functions.  The first application of the product rule is shown below to help you get you started.<md>
-                    <mrow>\lzoo{x}{\fe{f}{x}\fe{g}{x}\fe{h}{x}}&amp;=\lzoo{x}{\left(\fe{f}{x}\right)\cdot\left[\fe{g}{x}\fe{h}{x}\right]}</mrow> 
+                    <mrow>\lzoo{x}{\fe{f}{x}\fe{g}{x}\fe{h}{x}}&amp;=\lzoo{x}{\fe{f}{x}\cdot\left[\fe{g}{x}\fe{h}{x}\right]}</mrow> 
                     </md></p>
                 </statement>
                 <solution>
                     <p><md>
-                    <mrow>\lzoo{x}{\fe{f}{x}\fe{g}{x}\fe{h}{x}}&amp;=\lzoo{x}{\fe{f}{x}\cdot\left[\fe{g}{x}\fe{h}{x}\right]}</mrow>
+                    <mrow>&amp;\phantom{={}}\lzoo{x}{\fe{f}{x}\fe{g}{x}\fe{h}{x}}</mrow>
+                    <mrow>&amp;=\lzoo{x}{\fe{f}{x}\cdot\left[\fe{g}{x}\fe{h}{x}\right]}</mrow>
                     <mrow>&amp;=\lzo{x}{\fe{f}{x}}\cdot\left[\fe{g}{x}\fe{h}{x}\right]+\fe{f}{x}\cdot\lzoo{x}{\fe{g}{x}\fe{h}{x}}</mrow>
                     <mrow>&amp;=\lzo{x}{\fe{f}{x}}\cdot\left[\fe{g}{x}\fe{h}{x}\right]+\fe{f}{x}\cdot\left[\lzo{x}{\fe{g}{x}}\cdot\fe{h}{x}+\fe{g}{x}\cdot\lzo{x}{\fe{h}{x}}\right]</mrow>
                     <mrow>&amp;=\lzo{x}{\fe{f}{x}}\fe{g}{x}\fe{h}{x}+\fe{f}{x}\lzo{x}{\fe{g}{x}}\fe{h}{x}+\fe{f}{x}\fe{g}{x}\lzo{x}{\fe{h}{x}}</mrow>
@@ -354,8 +355,10 @@ formula stated above for the product of three functions.  The first application 
                 <solution>
                      <p><md>
                      <mrow>\fe{f}{x}&amp;=x^2e^x\fe{\sin}{x}\fe{\cos}{x}</mrow>
-                     <mrow>\fe{\fd{f}}{x}&amp;=\lzoo{x}{x^2}e^x\fe{\sin}{x}\fe{\cos}{x}+x^2\lzoo{x}{e^x}\fe{\sin}{x}\fe{\cos}{x}+x^2e^x\lzoo{x}{\fe{\sin}{x}}\fe{\cos}{x}+x^2e^x\fe{\sin}{x}\lzoo{x}{\fe{\cos}{x}}</mrow>
-                     <mrow>&amp;=2xe^x\fe{\sin}{x}\fe{\cos}{x}+x^2e^x\fe{\sin}{x}\fe{\cos}{x}+x^2e^x\fe{\cos}{x}\fe{\cos}{x}+x^2e^x\fe{\sin}{x}\cdot-\fe{\sin}{x}</mrow>
+                     <mrow>\fe{\fd{f}}{x}&amp;=\lzoo{x}{x^2}e^x\fe{\sin}{x}\fe{\cos}{x}+x^2\lzoo{x}{e^x}\fe{\sin}{x}\fe{\cos}{x}</mrow>
+                     <mrow>&amp;\phantom{{}={}}{}+x^2e^x\lzoo{x}{\fe{\sin}{x}}\fe{\cos}{x}+x^2e^x\fe{\sin}{x}\lzoo{x}{\fe{\cos}{x}}</mrow>
+                     <mrow>&amp;=2xe^x\fe{\sin}{x}\fe{\cos}{x}+x^2e^x\fe{\sin}{x}\fe{\cos}{x}</mrow>
+                     <mrow>&amp;\phantom{{}={}}{}+x^2e^x\fe{\cos}{x}\fe{\cos}{x}+x^2e^x\fe{\sin}{x}\cdot-\fe{\sin}{x}</mrow>
                      <mrow>&amp;=xe^x\left(2\fe{\sin}{x}\fe{\cos}{x}+x\fe{\sin}{x}\fe{\cos}{x}+x\fe{\cos^2}{x}-x\fe{\sin^2}{x}\right)</mrow>
                      </md></p>
                 </solution>
@@ -457,7 +460,7 @@ formula stated above for the product of three functions.  The first application 
                     <paragraphs valign="top">
                         <p>A function <m>f</m> is shown in <xref ref="figure-analyze-intervals-supplement"/>. Each question below is in reference to this function.  Please note that the numeric endpoints of each interval answer are all integers.</p> 
                     </paragraphs>
-                    <figure valign="top" width="40%" xml:id="figure-analyze-intervals-supplement">
+                    <figure valign="top" xml:id="figure-analyze-intervals-supplement">
                         <caption><m>f</m></caption>
                         <image>
                             <latex-image-code>
@@ -514,14 +517,14 @@ formula stated above for the product of three functions.  The first application 
                 </statement>
                 <solution>
                     <sidebyside>
-                        <paragraphs valign="top" width="30%">
+                        <paragraphs valign="top">
                             <p><md>
                             <mrow>\fe{f}{x}&amp;=\frac{x^3}{3}+3x^2-16x</mrow>
                             <mrow>\fe{\fd{f}}{x}&amp;=x^2+6x-16</mrow>
                             <mrow>\fe{\sd{f}}{x}&amp;=2x+6</mrow>
                             </md></p>
                         </paragraphs>
-                        <figure valign="top" width="30%" xml:id="figure-analyze-intervals-supplement-derivative">
+                        <figure valign="top" xml:id="figure-analyze-intervals-supplement-derivative">
                             <caption><m>\fd{f}</m></caption>
                             <image>
                                 <latex-image-code>
@@ -537,7 +540,7 @@ formula stated above for the product of three functions.  The first application 
                                 </latex-image-code>
                             </image>
                         </figure>
-                        <figure valign="top" width="30%" xml:id="figure-analyze-intervals-supplement-2nd-derivative">
+                        <figure valign="top" xml:id="figure-analyze-intervals-supplement-2nd-derivative">
                             <caption><m>\sd{f}</m></caption>
                             <image>
                                 <latex-image-code>
@@ -566,7 +569,7 @@ formula stated above for the product of three functions.  The first application 
                     <paragraphs valign="top">
                         <p>A function <m>g</m> is shown in <xref ref="figure-second-analyze-intervals-supplement"/>. Each question below is in reference to this function.</p> 
                     </paragraphs>
-                    <figure valign="top" width="40%" xml:id="figure-second-analyze-intervals-supplement">
+                    <figure valign="top" xml:id="figure-second-analyze-intervals-supplement">
                         <caption><m>g</m></caption>
                         <image>
                             <latex-image-code>
@@ -632,8 +635,10 @@ formula stated above for the product of three functions.  The first application 
                 <mrow>\fe{\fd{f}}{x}&amp;=2\left(\lzoo{x}{\fe{\sin}{x}}\cdot\fe{\cos}{x}+\fe{\sin}{x}\cdot\lzoo{x}{\fe{\cos}{x}}\right)</mrow>
                 <mrow>&amp;=2\left(\fe{\cos}{x}\cdot\fe{\cos}{x}+\fe{\sin}{x}\cdot-\fe{\sin}{x}\right)</mrow>
                 <mrow>&amp;=2\left(\fe{\cos}{x}\cdot\fe{\cos}{x}-\fe{\sin}{x}\cdot\fe{\sin}{x}\right)</mrow>
-                <mrow>\fe{\sd{f}}{x}&amp;=2\left(\lzoo{x}{\fe{\cos}{x}}\cdot\fe{\cos}{x}+\fe{\cos}{x}\cdot\lzoo{x}{\fe{\cos}{x}}-\lzoo{x}{\fe{\sin}{x}}\cdot\fe{\sin}{x}-\fe{\sin}{x}\cdot\lzoo{x}{\fe{\sin}{x}}\right)</mrow>
-                <mrow>&amp;=2\left(-\fe{\sin}{x}\cdot\fe{\cos}{x}+\fe{\cos}{x}\cdot-\fe{\sin}{x}-\fe{\cos}{x}\cdot\fe{\sin}{x}-\fe{\sin}{x}\cdot\fe{\cos}{x}\right)</mrow>
+                <mrow>\fe{\sd{f}}{x}&amp;=2\left(\lzoo{x}{\fe{\cos}{x}}\cdot\fe{\cos}{x}+\fe{\cos}{x}\cdot\lzoo{x}{\fe{\cos}{x}}\right.</mrow>
+                <mrow>&amp;\phantom{{}={}}\left.{}-\lzoo{x}{\fe{\sin}{x}}\cdot\fe{\sin}{x}-\fe{\sin}{x}\cdot\lzoo{x}{\fe{\sin}{x}}\right)</mrow>
+                <mrow>&amp;=2\left(-\fe{\sin}{x}\cdot\fe{\cos}{x}+\fe{\cos}{x}\cdot-\fe{\sin}{x}\right.</mrow>
+                <mrow>&amp;\phantom{{}={}}\left.{}-\fe{\cos}{x}\cdot\fe{\sin}{x}-\fe{\sin}{x}\cdot\fe{\cos}{x}\right)</mrow>
                 <mrow>&amp;=2\left(-4\fe{\sin}{x}\fe{\cos}{x}\right)</mrow>
                 <mrow>&amp;=-8\fe{\sin}{x}\fe{\cos}{x}</mrow>
                 </md><m>\fe{\fd{f}}{\pi}=2</m>, and <m>\fe{\sd{f}}{\pi}=0</m>, so the tangent line to <m>\fd{f}</m> at <m>\pi</m> passes through <m>\point{\pi}{2}</m> and has a slope of <m>0</m>. The equation of this line is <m>y=2</m>.</p>
@@ -748,7 +753,8 @@ formula stated above for the product of three functions.  The first application 
                     <p><md> 
                     <mrow>\fe{\fd{h}}{x}&amp;=\lzoo{x}{\fe{f}{x}}\fe{g}{x}+\fe{f}{x}\lzoo{x}{\fe{g}{x}}</mrow>
                     <mrow>&amp;=\fe{\fd{f}}{x}\fe{g}{x}+\fe{f}{x}\fe{\fd{g}}{x}</mrow>
-                    <mrow>\fe{\sd{h}}{x}&amp;=\lzoo{x}{\fe{\fd{f}}{x}}\fe{g}{x}+\fe{\fd{f}}{x}\lzoo{x}{\fe{g}{x}}+\lzoo{x}{\fe{f}{x}}\fe{\fd{g}}{x}+\fe{f}{x}\lzoo{x}{\fe{\fd{g}}{x}}</mrow>
+                    <mrow>\fe{\sd{h}}{x}&amp;=\lzoo{x}{\fe{\fd{f}}{x}}\fe{g}{x}+\fe{\fd{f}}{x}\lzoo{x}{\fe{g}{x}}</mrow>
+                    <mrow>&amp;\phantom{{}={}}{}+\lzoo{x}{\fe{f}{x}}\fe{\fd{g}}{x}+\fe{f}{x}\lzoo{x}{\fe{\fd{g}}{x}}</mrow>
                     <mrow>&amp;=\fe{\sd{f}}{x}\fe{g}{x}+2\fe{\fd{f}}{x}\fe{\fd{g}}{x}+\fe{f}{x}\fe{\sd{g}}{x}</mrow>
                     <mrow>\fe{\sd{h}}{2}&amp;=\fe{\sd{f}}{2}\fe{g}{2}+2\fe{\fd{f}}{2}\fe{\fd{g}}{2}+\fe{f}{2}\fe{\sd{g}}{2}</mrow> 
                     <mrow>&amp;=10(11)+2(7)(37)+4(58)</mrow> 

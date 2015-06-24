@@ -4,6 +4,8 @@
 \usepackage{titlesec}
 \usepackage{fancyhdr}
 \usepackage{longtable}
+\usepackage{textcomp}
+\usepackage{booktabs}
 </latex-preamble-early>
 
 
@@ -24,6 +26,9 @@
 ]]>
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \allowdisplaybreaks
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{0.5pc}
 
 </latex-preamble-late>
 

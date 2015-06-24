@@ -84,19 +84,22 @@
 
             <exercise xml:id="exercise-difference-quotient-average-velocity">
                 <statement>
-                    <p>Ignoring the unit, use the difference quotient to determine the average velocity over the interval <m>\cinterval{1.6}{2.8}</m>. (<em>Hint:</em> Use <m>t=1.6</m> and <m>h=1.2</m>. Make sure that you understand why!)</p>
+                    <p>Ignoring the unit, use the difference quotient to determine the average velocity over the interval <m>\cinterval{1.6}{2.8}</m>.</p>
                 </statement>
+                <hint>
+                    <p>Use <m>t=1.6</m> and <m>h=1.2</m>. Make sure that you understand why!)</p>
+                </hint>
             </exercise>
 
-            <exercise>
+            <exercise xml:id="exercise-difference-quotient-values">
                 <statement>
-                    <p>What, <em>including unit</em>, are the values of <m>\fe{s}{1.6}</m> and <m>\fe{s}{2.8}</m>? Use these values when working <xref ref="exercise-difference-quotient-verify"/>.</p>
+                    <p>What, <em>including unit</em>, are the values of <m>\fe{s}{1.6}</m> and <m>\fe{s}{2.8}</m>?</p>
                 </statement>
             </exercise>
 
             <exercise xml:id="exercise-difference-quotient-verify">
                 <statement>
-                    <p>Use the expression <m>\frac{\fe{s}{2.8}-\fe{s}{1.6}}{2.8-1.6}</m> to verify the value you found in <xref ref="exercise-difference-quotient-average-velocity"/>. <em>Include the unit while making this calculation.</em></p>
+                    <p>Use the expression <m>\frac{\fe{s}{2.8}-\fe{s}{1.6}}{2.8-1.6}</m> and the answers to <xref ref="exercise-difference-quotient-values"/> to verify the value you found in <xref ref="exercise-difference-quotient-average-velocity"/>. <em>Include the unit while making this calculation.</em></p>
                 </statement>
             </exercise>
 

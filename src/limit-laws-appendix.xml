@@ -8,7 +8,7 @@
 <!-- Alex Jordan (editor)          -->
 
 <appendix xml:id="appendix-limit-laws">
-    <title> Limit Laws</title>
+    <title>Limit Laws</title>
 
     <paragraphs>
         <title>Replacement Limit Laws</title>
@@ -17,7 +17,6 @@
 
     <p>In all cases both <m>a</m> and <m>C</m> represent real numbers.</p>
 
-        <beginmulticols/>
         <theorem xml:id="llr1" number="no"> 
             <title>Limit Law R1</title>
             <statement>
@@ -31,7 +30,6 @@
                 <p><md><mrow>\lim_{x\to a}C=\lim_{x\to a^{-}}C=\lim_{x\to a^{+}}C=\lim_{x\to \infty}C=\lim_{x\to -\infty}C=C</mrow></md></p>
             </statement>
         </theorem> 
-        <endmulticols/>
 
         <theorem xml:id="llr3" number="no"> 
             <title>Limit Law R3</title>
@@ -43,7 +41,7 @@
     </paragraphs>
 
     <paragraphs>
-        <title>Infinite Limit Laws:Limits as the output increases or decreases without bound </title>
+        <title>Infinite Limit Laws: Limits as the output increases or decreases without bound </title>
 
         <p>Many limit values do not exist.  Sometimes the non-existence is caused by the function value either increasing without bound or decreasing without bound.  In these special cases we use the symbols <m>\infty</m> and <m>-\infty</m> to communicate the non-existence of the limits.</p>
         <p>Some examples of these type of non-existent limits follow.</p>
@@ -53,7 +51,6 @@
             <li><m>\lim\limits_{x\to-\infty}x^n=-\infty</m> (if <m>n</m> is an odd positive integer)</li>
             <li><m>\lim\limits_{x\to\infty}e^x=\infty</m>, <m>\lim\limits_{x\to-\infty}e^{-x}=\infty</m>, <m>\lim\limits_{x\to\infty}\fe{\ln}{x}=\infty</m>, <m>\lim\limits_{x\to0^{+}}\fe{\ln}{x}=-\infty</m></li>
         </ul> 
-        <ul cols="1"><li/> </ul>
     </paragraphs>
 
     <paragraphs>

@@ -84,8 +84,8 @@
             <table xml:id="table-suggested-schedule" long="yes">
                 <caption>Possible 10 week schedule for the labs. (Students should consult their syllabus for their schedule.)</caption>
                 <tabular top="major" halign="center">
-                    <col />
-                    <col halign="left"/>
+                    <col halign="right"/>
+                    <col halign="3in"/>
                     <col halign="left"/>
                     <row valign="top" bottom="medium">
                         <cell>Week</cell>
@@ -112,7 +112,7 @@
                         <cell><xref autoname="title" ref="section-graph-features"/><ndash/><xref autoname="title" ref="section-higher-order-derivatives"/></cell>
                         <cell><xref autoname="title" ref="functions-derivatives-antiderivatives-supplementary-exercises"/></cell>
                     </row>
-                    <row bottom="medium">
+<!--                    <row bottom="medium">
                         <cell>5</cell>
                         <cell><xref autoname="title" ref="section-antiderivatives"/><ndash/><xref autoname="title" ref="section-graphical-features-from-derivatives"/></cell>
                         <cell><xref autoname="title" ref="functions-derivatives-antiderivatives-supplementary-exercises"/></cell>
@@ -137,7 +137,7 @@
                         <cell><xref autoname="title" ref="section-motivation-for-critical-numbers"/><ndash/><xref autoname="title" ref="section-making-graphs"/></cell>
                         <cell></cell>
                     </row>
-                    </tabular> 
+-->                    </tabular> 
             </table>
         </preface>
 

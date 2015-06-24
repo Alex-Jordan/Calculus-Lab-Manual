@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-introduction-to-related-rates">
+    <title>Introduction to Related Rates</title>
+
+    <p>Consider the following problem.</p>
+
+    <blockquote>A perfectly spherical snowball melts at a constant rate of <quantity><mag>0.3</mag><unit prefix="centi" base="meter" exp="3"/><per base="minute"/></quantity>. At what rate is the radius decreasing when the radius of the snowball is exactly <quantity><mag>1.4</mag><unit prefix="centi" base="meter"/></quantity>?</blockquote>
+
+    <p>Before we actually solve the problem, let's take a moment to think about the situation. If the snowball were really large, there would be a lot of surface area to account for the loss of water. When the snowball gets small, however, there's less surface area to contribute water and, consequently, the radius will decrease at a faster rate than it does when the snowball is large. Mathematically, this increase in the rate at which the radius changes over time is a result of the manner in which the radius changes with respect to volume.</p>
+
+    <sidebyside>
+        <paragraphs valign="top">
+            <p><xref ref="figure-snowball"/> shows a graph of <m>r=\fe{f}{V}</m> where <m>r</m> is the radius of a sphere of volume <m>V</m>. Note that the tangent lines to the curve have greater slope the closer <m>V</m> gets to zero. This tells us that a small change in volume has a greater effect on the radius the closer <m>V</m> is to zero. Once the value of <m>V</m> gets large, the slope of the tangent lines is almost zero. This tells us that when the volume is large, a small change in volume has almost no effect on the radius.</p>
+        </paragraphs>
+        <figure xml:id="figure-snowball" valign="top">
+            <caption><m>r=\fe{f}{V}</m></caption>
+            <image>
+                <latex-image-code>
+                <![CDATA[\begin{tikzpicture}
+                \begin{axis}[xmin=-2, xmax=13, ymin=-1, ymax=4, xtick = {-2,0,...,12}, ytick = {0,1,...,4}, minor xtick = {-2,-1,...,13}, minor ytick = {-1,0,...,4},
+                             xlabel={$V$}, ylabel={$r$}]
+                    \addplot+[variable=r,domain=0:1.45,->
+                    ]({4/3*3.1415926*r^3},{r});
+                \end{axis}
+                \end{tikzpicture}]]>
+                </latex-image-code>
+            </image>
+        </figure>
+    </sidebyside>
+    <p>Since the volume is decreasing at a constant rate, and a change in volume has a greater and greater effect on the radius as the volume decreases, the rate at which the radius decreases must increase as time goes by. This relationship between the rates at which the volume and radius change is an example of what is called <term>related rates</term>.</p>
+
+    <p>An acronym sometimes associated with the solution process for related rates problems is <acro>DREDS</acro>. The first for letters of the acronym stand for Diagram, Rates, Equation, and Differentiate. The final letter stands for Substitute. The reason the substitution steps comes last is that you need to have a rates equation before you have a place to substitute your values.</p>
+
+    <p>The first thing we need to do is clearly identify our variables. In related rates problems there are three broad types of variables.</p>
+    <ol>
+        <li>Variables that measure physical quantities. These include, among other things, length variables, angle measurement variables, area variables, and volume variables. We will call these <term>quantity-variables</term>.</li>
+        <li>Variables that measure rates (with respect to time). These variables always <em>emerge</em> by taking the derivatives (with respect to time) of the quantity-variables. We will call these <term>rate-variables</term>.</li>
+        <li>A time variable.</li>
+    </ol>
+    <p>The first three letters of <acro>DREDS</acro> (Diagram, Rates, Equation) are all interrelated and are not always to be taken literally. Basically they are meant to suggest that you need to identify the rates in the problem (either a given rate or the unknown rate you seek to find), identify quantity-variables that differentiate to each rate, and find an equation that relates those quantity-variables. A diagram is frequently useful during this part of the problem solving process.</p>
+
+    <p>Let's make a variable table for the snowball problem. Please note that we will need a volume variable. We know this because of the presence of <quantity><unit prefix="centi" base="meter" exp="3"/></quantity> in the given rate unit; cubic-centimeters always measure volume (just as square-centimeters always measure area and centimeters always measure length). We will also need a radius variable (as the rate of change in the radius is stated in the problem).</p>
+
+    <table xml:id="table-snowball">
+        <caption>Variable table for the snowball problem</caption>
+        <tabular top="major">
+            <col halign="center"/>
+            <col halign="left"/>
+            <col halign="center"/>
+            <row bottom="medium">
+                <cell>Variable</cell>
+                <cell halign="center">Variable Description</cell>
+                <cell>Unit</cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>V</m></cell>
+                <cell>The volume of the snowball <m>t</m> minutes after the snowball begins to melt.</cell>
+                <cell><quantity><unit prefix="centi" base="meter" exp="3"/></quantity></cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>r</m></cell>
+                <cell>The radius of the snowball <m>t</m> minutes after the snowball begins to melt.</cell>
+                <cell><quantity><unit prefix="centi" base="meter"/></quantity></cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lz{V}{t}</m></cell>
+                <cell>The rate of change in the volume of the snowball <m>t</m> minutes after the snowball begins to melt.</cell>
+                <cell><quantity><unit prefix="centi" base="meter" exp="3"/><per base="minute"/></quantity></cell>
+            </row>
+            <row bottom="minor">
+                <cell><m>\lz{r}{t}</m></cell>
+                <cell>The rate of change in the radius of the snowball <m>t</m> minutes after the snowball begins to melt.</cell>
+                <cell><quantity><unit prefix="centi" base="meter"/><per base="minute"/></quantity></cell>
+            </row>
+            <row bottom="major">
+                <cell><m>t</m></cell>
+                <cell>The amount of time that elapses after the snowball begins to melt.</cell>
+                <cell><quantity><unit base="minute"/></quantity></cell>
+            </row>
+        </tabular>
+    </table>
+    <p>Since we are asked to determine a rate at which the radius changes, we are ultimately going to need to determine a value of <m>\lz{r}{t}</m>. We cannot do that until we have an equation that includes the symbol <m>\lz{r}{t}</m>. There is a two-step process that we follow to find that equation.</p>
+
+    <ol>
+        <li>Find an equation that relates the quantity variables. This step is one of the places where a diagram sometimes comes into play. This step corresponds to <acro>E</acro> in the <acro>DREDS</acro> acronym.</li>
+        <li>Differentiate both sides of the first equation with respect to time and simplify each side. The resultant equation is called the <em>related rates equation</em>. This step corresponds to the second <acro>D</acro> in the <acro>DREDS</acro> acronym.</li>
+    </ol>
+    <p>The quantity variables in the snowball problem are <m>V</m> and <m>r</m>. We don't need a diagram in this problem as it is <q>standard knowledge</q> that the equation that relates the volume and radius of a sphere is <m>V=\frac{4}{3}\pi r^3</m>. Now that we have our (<acro>E</acro>)quation, we need to (<acro>D</acro>)ifferentiate both sides of this equation with respect to <m>t</m>, keeping in mind that both <m>V</m> and <m>r</m> are variables dependent upon <m>t</m>.<md>
+    <mrow>V&amp;=\frac{4}{3}\pi r^3</mrow>
+    <mrow>\lzoo{t}{V}&amp;=\lzoo{t}{\frac{4}{3}\pi r^3}</mrow>
+    <mrow>\lz{V}{t}&amp;=4\pi r^2\lz{r}{t}&amp;\text{This is our related rates equation.}</mrow>
+    </md>Now that we have our related rates equation (and only now), we can finally (<acro>S</acro>)ubstitute the given values into the appropriate variables. Before doing so, we need to alert the reader with an introductory sentence or phrase. We also need to clearly state the values of each of the variables for which we know the value. In most math texts this part of the problem is worked without units. This is because some problems contain constants with <q>hidden</q> units, and it can be confusing when the units do not work out in the end.</p>
+    <p>Getting back to the actual solution<ellipsis/></p>
+    <p>When the radius of the snowball is <quantity><mag>1.4</mag><unit prefix="centi" base="meter"/></quantity> and the snowball is melting at the rate of <quantity><mag>0.3</mag><unit prefix="centi" base="meter" exp="3"/></quantity>:</p>
+    <table xml:id="table-snowball-what-we-know">
+        <caption>What we know about the variables at the described moment</caption>
+        <tabular top="major">
+            <col halign="center"/>
+            <col halign="left"/>
+        <row bottom="medium">
+            <cell>Variable</cell>
+            <cell>What we know</cell>
+        </row>
+        <row bottom="minor">
+            <cell><m>V</m></cell>
+            <cell>This variable is not in the related rates equation so it is no longer relevant in the problem solving process.</cell>
+        </row>
+        <row bottom="minor">
+            <cell><m>r</m></cell>
+            <cell>The value of this variable is <m>1.4</m>.</cell>
+        </row>
+        <row bottom="minor">
+            <cell><m>\lz{V}{t}</m></cell>
+            <cell>The value of this variable is <m>-0.3</m>. The value is negative because the volume decreases over time.</cell>
+        </row>
+        <row bottom="minor">
+            <cell><m>\lz{r}{t}</m></cell>
+            <cell>This is the variable for which we need to solve.</cell>
+        </row>
+        </tabular>
+    </table>
+    <p>From our related rates equation and the values in <xref ref="table-snowball-what-we-know"/>:</p>
+    <sidebyside>
+        <paragraphs valign="top">
+            <p><md>
+            <mrow>\lz{r}{t}&amp;=\frac{\lz{V}{t}}{4\pi r^2}</mrow>
+            <mrow>\lzoa{r}{t}{r=1.4,\lz{V}{t}=-0.3}&amp;=\frac{-0.3}{4\pi (1.4)^2}</mrow>
+            <mrow>&amp;=-0.01218\ldots</mrow>
+            </md></p>
+        </paragraphs>
+        <paragraphs valign="top">
+            <p>To finish up we need to write a conclusion.</p>
+            <blockquote>At the moment the radius of the snowball is <quantity><mag>1.4</mag><unit prefix="centi" base="meter"/></quantity>, the radius is decreasing at the rate of (about) <quantity><mag>0.01218</mag><unit prefix="centi" base="meter"/><per base="minute"/></quantity>.</blockquote>
+        </paragraphs>
+    </sidebyside>
+
+    <exercises>
+        <exercisegroup>
+            <introduction>
+                <p>Consider the following problem.</p>
+                <blockquote>A square is getting larger. The sides are each growing at a constant rate of <quantity><mag>3</mag><unit base="inch"/><per base="minute"/></quantity>. At what rate is the area of the square growing the moment its area is <quantity><mag>25</mag><unit base="inch" exp="2"/></quantity>?</blockquote>
+                <geogebra-html5 src="https://tube.geogebra.org/material/iframe/id/790909/width/1024/height/576/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/auto" width="1024px" height="576px" style="border:0px;"/>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Create your variable table. Use the variable <m>x</m> for the length of each side. (<acro>DR</acro>)</p>
+                    <table>
+                        <caption>Variable table for the square problem</caption>
+                        <tabular top="major">
+                            <col halign="center"/>
+                            <col halign="left"/>
+                            <col halign="center"/>
+                            <row bottom="medium">
+                                <cell>Variable</cell>
+                                <cell halign="center">Variable Description</cell>
+                                <cell>Unit</cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="major">
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                        </tabular>
+                    </table>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Write down an equation that relates the two quantity-variables. (<acro>E</acro>)</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Differentiate both sides of the equation you just wrote with respect to <m>t</m>. Simplify the result. This equation is called the <term>related rates equation</term>. (<acro>D</acro>)</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Write an orientation sentence or phrase and create a summary table for your quantity and rate variables. (preparing for <acro>S</acro>)</p>
+                    <table>
+                        <caption>What we know about the variables at the described moment</caption>
+                        <tabular top="major">
+                            <col halign="center"/>
+                            <col halign="left"/>
+                        <row bottom="medium">
+                            <cell>Variable</cell>
+                            <cell>What we know</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell></cell>
+                            <cell></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell></cell>
+                            <cell></cell>
+                        </row>
+                        </tabular>
+                    </table>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Substitute the known values into the related rates equation and solve for the unknown rate. (<acro>S</acro>)</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Write a conclusion.</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+    </exercises>
+
+</section>

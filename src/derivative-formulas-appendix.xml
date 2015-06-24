@@ -13,8 +13,8 @@
     <p><m>k</m>, <m>a</m>, and <m>n</m> represent constants; <m>u</m> and <m>y</m> represent funcitons of <m>x</m>.</p>
 
     <table>
-        <tabular top="major" left="minor">
-            <col right="minor" halign="center"/>
+        <tabular top="major">
+            <col left="minor" right="minor" halign="center"/>
             <col right="minor" halign="center"/>
             <col right="minor" halign="center"/>
             <row bottom="medium">

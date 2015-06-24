@@ -70,7 +70,7 @@
             <statement>
                 <p>A function, <m>g</m>, and its first three derivatives are shown in <xref autoname="plural" ref="figure-derivatives-one"/><ndash/><xref autoname="no" ref="figure-derivatives-four"/>, although not in that order.  Determine which curve is which function (<m>g,\fd{g},\sd{g},\td{g}</m>).</p>
                 <sidebyside>
-                    <figure xml:id="figure-derivatives-one" width="23%">
+                    <figure xml:id="figure-derivatives-one" >
                         <caption />
                         <image>
                             <latex-image-code>
@@ -85,7 +85,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure xml:id="figure-derivatives-two" width="23%">
+                    <figure xml:id="figure-derivatives-two" >
                         <caption />
                         <image>
                             <latex-image-code>
@@ -100,7 +100,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure xml:id="figure-derivatives-three" width="23%">
+                    <figure xml:id="figure-derivatives-three" >
                         <caption />
                         <image>
                             <latex-image-code>
@@ -115,7 +115,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure xml:id="figure-derivatives-four" width="23%">
+                    <figure xml:id="figure-derivatives-four" >
                         <caption />
                         <image>
                             <latex-image-code>

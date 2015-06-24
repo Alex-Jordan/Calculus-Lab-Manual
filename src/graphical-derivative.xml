@@ -18,7 +18,7 @@
                 <p>A parabolic function is shown in <xref ref="figure-graphical-derivative"/>. The next several questions are in reference to that function.</p>
 
                 <sidebyside> 
-                    <figure xml:id="figure-graphical-derivative" width="30%">
+                    <figure xml:id="figure-graphical-derivative">
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -43,7 +43,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure xml:id="figure-graphical-derivative-plot" width="30%">
+                    <figure xml:id="figure-graphical-derivative-plot">
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -58,7 +58,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <table xml:id="table-graphical-derivative" width="30%">
+                    <table xml:id="table-graphical-derivative">
                         <caption><m>y=\fe{\fd{g}}{x}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -134,7 +134,7 @@
             <introduction> 
                 <p>A function <m>f</m> is shown in <xref ref="figure-cubic"/> and the corresponding first derivative function <m>\fd{f}</m> is shown in <xref ref="figure-cubic-derivative"/>. Answer each of the following questions referencing these two functions.</p>
                 <sidebyside>
-                    <figure xml:id="figure-cubic" width="40%" valign="top">
+                    <figure xml:id="figure-cubic" valign="top">
                         <caption><m>y=\fe{f}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -155,7 +155,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure xml:id="figure-cubic-derivative" width="40%" valign="top">
+                    <figure xml:id="figure-cubic-derivative" valign="top">
                         <caption><m>y=\fe{\fd{f}}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -204,7 +204,7 @@
             <statement>
                 <p>In each of <xref autoname="plural" ref="figure-sine"/> and <xref autoname="no" ref="figure-rational"/> a function (the solid curve) is given; both of these functions are symmetric about the <m>y</m>-axis. The first derivative of each function (the dash-dotted curves) have been drawn over the interval <m>\ointerval{0}{7}</m>. Use the given portion of the first derivative together with the symmetry of the function to help you draw each first derivative over the interval <m>\ointerval{-7}{0}</m>.</p>
                 <sidebyside>
-                    <figure xml:id="figure-sine" width="40%">
+                    <figure xml:id="figure-sine">
                         <caption></caption>
                         <image>
                             <latex-image-code>
@@ -223,7 +223,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure xml:id="figure-rational" width="40%">
+                    <figure xml:id="figure-rational" >
                         <caption></caption>
                         <image>
                             <latex-image-code>
@@ -260,7 +260,7 @@
             <introduction>
                 <p>A graph of the function <m>f</m> given by <m>\fe{f}{x}=\frac{1}{x}</m> is show in <xref ref="figure-one-over-x"/>.</p>
                 <sidebyside>
-                    <figure xml:id="figure-one-over-x" width="40%">
+                    <figure xml:id="figure-one-over-x" >
                         <caption><m>y=\fe{f}{x}=\frac{1}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -281,7 +281,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                     <figure xml:id="figure-derivative-of-one-over-x" width="40%">
+                     <figure xml:id="figure-derivative-of-one-over-x" >
                         <caption><m>y=\fe{\fd{f}}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -324,7 +324,7 @@
             <statement>
                 <p>A graph of the function <m>g</m> is shown in <xref ref="figure-arctangent"/>. The absolute minimum value ever obtained by <m>\fd{g}</m> is <m>3</m>. With that in mind, draw <m>\fd{g}</m> onto <xref ref="figure-derivative-of-arctangent"/>. Make sure that you draw and label any and all necessary asymptotes. Make sure that your graph of <m>\fd{g}</m> adequately reflects the symmetry in the graph of <m>g</m>.</p>
                 <sidebyside>
-                    <figure xml:id="figure-arctangent" width="40%">
+                    <figure xml:id="figure-arctangent" >
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -347,7 +347,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure xml:id="figure-derivative-of-arctangent" width="40%">
+                    <figure xml:id="figure-derivative-of-arctangent" >
                         <caption><m>y=\fe{\fd{g}}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -368,7 +368,7 @@
                     <paragraphs valign="top" width="25%">
                         <p>Answer the following questions in reference to the function <m>w</m>, shown in <xref ref="figure-inflection-points"/>.</p>
                     </paragraphs>
-                    <figure xml:id="figure-inflection-points" width="42%" valign="top">
+                    <figure xml:id="figure-inflection-points" valign="top">
                         <caption><m>y=\fe{w}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -431,7 +431,7 @@
                 <statement>
                     <p>In <xref ref="table-values-for-w-prime"/>, three possible values are given for <m>\fd{w}</m> at several values of <m>x</m>. In each case, one of the values is correct. Use tangent lines to <m>w</m> to determine each of the correct values.</p>
                     <sidebyside>
-                        <table xml:id="table-values-for-w-prime" width="40%">
+                        <table xml:id="table-values-for-w-prime" >
                             <caption>Choose the correct values for <m>\fd{w}</m></caption>
                             <tabular top="major">
                                 <col halign="center"/>
@@ -466,7 +466,7 @@
                                 </row>
                             </tabular>
                         </table>
-                        <figure xml:id="figure-w-prime" width="40%">
+                        <figure xml:id="figure-w-prime" >
                             <caption><m>y=\fe{\fd{w}}{x}</m></caption>
                             <image>
                                 <latex-image-code>

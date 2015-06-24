@@ -33,7 +33,7 @@
             </introduction>
             <conclusion>
                 <sidebyside>
-                    <figure width ="40%" xml:id="figure-match-rationals-1">
+                    <figure xml:id="figure-match-rationals-1">
                         <caption><m>f_1</m></caption>
                         <image>
                             <latex-image-code>
@@ -62,7 +62,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure width ="40%" xml:id="figure-match-rationals-2">
+                    <figure xml:id="figure-match-rationals-2">
                         <caption><m>f_2</m></caption>
                         <image>
                             <latex-image-code>
@@ -92,7 +92,7 @@
                     </figure>
                 </sidebyside>
                 <sidebyside>
-                    <figure width ="40%" xml:id="figure-match-rationals-3">
+                    <figure xml:id="figure-match-rationals-3">
                         <caption><m>f_3</m></caption>
                         <image>
                             <latex-image-code>
@@ -124,7 +124,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure width ="40%" xml:id="figure-match-rationals-4">
+                    <figure xml:id="figure-match-rationals-4">
                         <caption><m>f_4</m></caption>
                         <image>
                             <latex-image-code>
@@ -153,7 +153,7 @@
                         </image>
                     </figure>
                 </sidebyside>
-                <figure width ="40%" xml:id="figure-match-rationals-5">
+                <figure xml:id="figure-match-rationals-5">
                     <caption><m>f_5</m></caption>
                     <image>
                         <latex-image-code>
@@ -208,7 +208,7 @@
                 </statement>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="3">
+        <exercisegroup cols="3" by="row">
             <introduction>
                 <p>Use the concept of dominant terms to informally determine the value of each of the following limits.</p>
             </introduction>
