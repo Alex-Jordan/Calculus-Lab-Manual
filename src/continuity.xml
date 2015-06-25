@@ -31,9 +31,12 @@
     </definition> 
 
     <exercises>
-        <exercise>
-            <statement>
-                    <p>State the values of <m>t</m> at which the function shown in <xref ref="figure-discontinuities"/> is discontinuous. For each instance of discontinuity, state (by number) all of the sub-properties in <xref ref="definition-continuity"/> that fail to be satisfied.</p> 
+        <exercisegroup>
+            <introduction>
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>These questions refer to the function in <xref ref="definition-continuity"/>.</p>
+                    </paragraphs>
                     <figure xml:id="figure-discontinuities">
                         <image>
                             <latex-image-code>
@@ -82,8 +85,71 @@
                         </image>
                         <caption><m>y=\fe{h}{x}</m></caption>
                     </figure>
-            </statement>
-        </exercise>
+                </sidebyside>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Complete <xref ref="table-discontinuities"/>.</p> 
+                    <table xml:id="table-discontinuities">
+                        <caption>Function values and limit values for <m>h</m></caption>
+                        <tabular top="major">
+                            <col halign="left" right="minor"/>
+                            <col halign="center" />
+                            <col halign="center" />
+                            <col halign="center" />
+                            <col halign="center" />
+                            <row bottom="medium">
+                                <cell><m>x=a</m></cell>
+                                <cell><m>\fe{h}{a}</m></cell>
+                                <cell><m>\lim\limits_{x\to a^{-}}\fe{h}{x}</m></cell>
+                                <cell><m>\lim\limits_{x\to a^{+}}\fe{h}{x}</m></cell>
+                                <cell><m>\lim\limits_{x\to a}\fe{h}{x}</m></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell><m>x=-4</m></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell><m>x=-1</m></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell><m>x=2</m></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell><m>x=3</m></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="major">
+                                <cell><m>x=5</m></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                        </tabular>
+                    </table>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>State the values of <m>t</m> at which the function <m>h</m> is discontinuous. For each instance of discontinuity, state (by number) all of the sub-properties in <xref ref="definition-continuity"/> that fail to be satisfied.</p> 
+                </statement>
+            </exercise>
+        </exercisegroup>
     </exercises>
 
 </section>

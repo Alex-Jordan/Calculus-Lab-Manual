@@ -39,20 +39,13 @@
 
             <exercise xml:id="exercise-average-velocity-formula">
                 <statement>
-                    <p>Use <xref ref="definition-average-velocity"/> to find a formula for the average velocity of this object over the general time interval <m>\cinterval{t_0}{t_1}</m>. The first couple of lines of this process are shown below. Copy these lines onto your paper and continue the simplification process.</p>
-                    <sidebyside>
-                        <paragraphs valign="bottom">
-                            <p><md>
-                            <mrow>\frac{\fe{p}{t_1}-\fe{p}{t_0}}{t_1-t_0}&amp;=\frac{\left[200-4.9t_1^2\right]-\left[200-4.9t_0^2\right]}{t_1-t_0}</mrow>
-                            <mrow>&amp;=\frac{200-4.9t_1^2-200+4.9t_0^2}{t_1-t_0}</mrow>
-                            <mrow>&amp;=\frac{-4.9t_1^2+4.9t_0^2}{t_1-t_0}</mrow>
-                            <mrow>&amp;=\cdots</mrow>
-                            </md></p>
-                        </paragraphs>
-                        <paragraphs valign="bottom">
-                            <p>Hint: In the next step you should factor <m>-4.9</m> from the numerator; the remaining factor will factor further.</p>
-                        </paragraphs>
-                    </sidebyside>
+                    <p>Use <xref ref="definition-average-velocity"/> to find a formula for the average velocity of this object over the general time interval <m>\cinterval{t_0}{t_1}</m>. The first couple of lines of this process are shown below. Copy these lines onto your paper and continue the simplification process.<md>
+                    <mrow>&amp;\phantom{{}={}}\frac{\fe{p}{t_1}-\fe{p}{t_0}}{t_1-t_0}</mrow>
+                    <mrow>&amp;=\frac{\left[200-4.9t_1^2\right]-\left[200-4.9t_0^2\right]}{t_1-t_0}</mrow>
+                    <mrow>&amp;=\frac{200-4.9t_1^2-200+4.9t_0^2}{t_1-t_0}</mrow>
+                    <mrow>&amp;=\frac{-4.9t_1^2+4.9t_0^2}{t_1-t_0}</mrow>
+                    <mrow>&amp;=\cdots</mrow>
+                    </md>Hint: Factor <m>-4.9</m> from the numerator; the remaining factor will factor further.</p>
                 </statement>
             </exercise>
 
@@ -64,50 +57,49 @@
 
             <exercise>
                 <statement>
-                    <p>Using the formula found in <xref ref="exercise-average-velocity-formula"/>, replace <m>t_0</m> with <m>3</m> but leave <m>t_1</m> as a variable; simplify the result. Then copy <xref ref="table-velocity"/> onto your paper and fill in the missing entries.</p>
+                    <p>Now explore the difference quotient in tabular form.</p>
+                    <sidebyside>
+                        <paragraphs width="40%" valign="top">
+                            <p>Using the formula found in <xref ref="exercise-average-velocity-formula"/>, replace <m>t_0</m> with <m>3</m> but leave <m>t_1</m> as a variable; simplify the result. Then copy <xref ref="table-velocity"/> onto your paper and fill in the missing entries.</p>
+                        </paragraphs>
 
-                    <todo>table headers</todo>
-                    <todo>units</todo>
-                    <todo>deciaml alignment</todo>
-                    <todo>rule at bottom of table</todo>
-                    <todo>check hyperlinks to tables are working</todo>
-                    <table xml:id="table-velocity">
-                        <caption><m>y=\frac{\fe{p}{t_1}-\fe{p}{3}}{t_1-3}</m></caption>
-                        <tabular top="major">
-                        <col halign="left" />
-                        <col halign="center"/>
+                        <table width="60%" xml:id="table-velocity" valign="top">
+                            <caption><m>\text{diff. quot.}=\frac{\fe{p}{t_1}-\fe{p}{3}}{t_1-3}</m></caption>
+                            <tabular top="major">
+                            <col halign="left" />
+                            <col halign="center"/>
 
-                        <row bottom="medium">
-                            <cell><m>t_1\,\text{(s)}</m></cell>
-                            <cell><m>y\,\left(\sfrac{\text{m}}{\text{s}}\right)</m></cell>
-                        </row>
-                        <row>
-                            <cell>2.9</cell>
-                            <cell></cell>
-                        </row>
-                        <row>
-                            <cell>2.99</cell>
-                            <cell></cell>
-                        </row>
-                        <row>
-                            <cell>2.999</cell>
-                            <cell></cell>
-                        </row>
-                        <row>
-                            <cell>3.001</cell>
-                            <cell></cell>
-                        </row>
-                        <row>
-                            <cell>3.01</cell>
-                            <cell></cell>
-                        </row>
-                        <row bottom="major">
-                            <cell>3.1</cell>
-                            <cell></cell>
-                        </row>
-                        </tabular>
-                    </table>
-
+                            <row bottom="medium">
+                                <cell><m>t_1\,\text{(s)}</m></cell>
+                                <cell><m>\text{diff. quot.}\,\left(\sfrac{\text{m}}{\text{s}}\right)</m></cell>
+                            </row>
+                            <row>
+                                <cell>2.9</cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell>2.99</cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell>2.999</cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell>3.001</cell>
+                                <cell></cell>
+                            </row>
+                            <row>
+                                <cell>3.01</cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="major">
+                                <cell>3.1</cell>
+                                <cell></cell>
+                            </row>
+                            </tabular>
+                        </table>
+                    </sidebyside>
                 </statement>
             </exercise>
 

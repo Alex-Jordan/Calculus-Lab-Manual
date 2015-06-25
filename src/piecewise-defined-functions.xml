@@ -16,48 +16,114 @@
 
         <exercisegroup>
             <introduction>
-                <p>This question is all about the function <m>f</m> defined by <m>\fe{f}{x}=\begin{cases}\frac{4}{5-x}&amp;x\lt1\\\frac{x-3}{x-3}&amp;1\lt x\lt4\\2x+1&amp;4\leq x\leq7\\\frac{15}{8-x}&amp;x\gt7\text{.}\end{cases}</m></p>
-
-                <p>Answer <xref ref="exercise-first-piecewise"/> at each of the values <m>1,3,4,5,7</m>, and <m>8</m>. At the values where the answer to <xref ref="exercise-first-piecewise"/> is yes, go ahead and answer <xref autoname="plural" ref="exercise-second-piecewise"/><ndash/><xref autoname="no" ref="exercise-last-piecewise"/>; skip <xref autoname="plural" ref="exercise-second-piecewise"/><ndash/><xref autoname="no" ref="exercise-last-piecewise"/> at the values where the answer to <xref ref="exercise-first-piecewise"/> is no.</p> 
-            </introduction>
-            <exercise xml:id="exercise-first-piecewise">
-                <statement>
-                    <p>Is <m>f</m> discontinuous at the given value?</p>
-                </statement>
-            </exercise>
-            <exercise xml:id="exercise-second-piecewise">
-                <statement>
-                    <p>Is <m>f</m> continuous only from the left at the given value?</p> 
-                </statement>
-            </exercise>
-            <exercise>
-                <statement>
-                    <p>Is <m>f</m> continuous only from the right at the given value?</p>
-                </statement>
-            </exercise>
-            <exercise xml:id="exercise-last-piecewise">
-                <statement>
-                    <p>Is the discontinuity removable?</p>
-                </statement>
-            </exercise>
-        </exercisegroup>
-
-
-
-        <exercisegroup>
-            <introduction>
-                <p>Consider the function <m>g</m> defined by <m>\fe{g}{x}=\begin{cases}\frac{C}{x-17}&amp;x\lt10\\C+3x&amp;x=10\\2C-4&amp;x\gt10\text{.}\end{cases}</m></p> 
-
-                <p>The symbol <m>C</m> represents the same real number in all three of the piecewise formulas.</p>
+                <p>This question is all about the function <m>f</m> defined by <me>\fe{f}{x}=\begin{cases}\frac{4}{5-x}&amp;x\lt1\\\frac{x-3}{x-3}&amp;1\lt x\lt4\\2x+1&amp;4\leq x\leq7\\\frac{15}{8-x}&amp;x\gt7\text{.}\end{cases}</me></p>
             </introduction>
             <exercise>
                 <statement>
-                    <p>Find the value for <m>C</m> that makes the function continuous on <m>\ocinterval{-\infty}{10}</m>. Make sure that your reasoning is clear.</p>
+                    <p>Complete <xref ref="table-piecewise-discontinuities"/>.</p>
+                    <table xml:id="table-piecewise-discontinuities">
+                        <caption>Function values and limit values for <m>f</m></caption>
+                        <tabular top="major">
+                            <col halign="left" right="minor"/>
+                            <col halign="center" />
+                            <col halign="center" />
+                            <col halign="center" />
+                            <col halign="center" />
+                            <row bottom="medium">
+                                <cell><m>x=a</m></cell>
+                                <cell right="minor"><m>\fe{f}{a}</m></cell>
+                                <cell right="minor"><m>\lim\limits_{x\to a^{-}}\fe{f}{x}</m></cell>
+                                <cell right="minor"><m>\lim\limits_{x\to a^{+}}\fe{f}{x}</m></cell>
+                                <cell right="minor"><m>\lim\limits_{x\to a}\fe{f}{x}</m></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell><m>x=1</m></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell><m>x=3</m></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell><m>x=4</m></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell><m>x=5</m></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell><m>x=7</m></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="major">
+                                <cell><m>x=8</m></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                        </tabular>
+                    </table>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>Is it possible to find a value for <m>C</m> that makes the function continuous over <m>\ointerval{-\infty}{\infty}</m>? Explain.</p>
+                    <p>Complete <xref ref="table-piecewise-discontinuities-analysis"/>.</p>
+                    <table xml:id="table-piecewise-discontinuities-analysis">
+                        <caption>Discontinuity analysis for <m>f</m></caption>
+                        <tabular top="major">
+                            <col halign="0.92in"/>
+                            <col halign="1.6in"/>
+                            <col halign="center"/>
+                            <col halign="0.8in"/>
+                            <row bottom="medium">
+                                <cell right="minor">Location of discontinuity</cell>
+                                <cell right="minor">From <xref ref="definition-continuity"/>, sub-property (1, 2, or 3) that is not met</cell>
+                                <cell right="minor">Removable?</cell>
+                                <cell>Continuous from one side?</cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                        </tabular>
+                    </table>
                 </statement>
             </exercise>
         </exercisegroup>
@@ -87,7 +153,23 @@
                     <p>At what values of <m>x</m> does <m>f</m> have removable discontinuities?</p>
                 </statement>
             </exercise>
+        </exercisegroup>
 
+        <exercisegroup>
+            <introduction>
+                <p>Consider the function <m>g</m> defined by <m>\fe{g}{x}=\begin{cases}\frac{C}{x-17}&amp;x\lt10\\C+3x&amp;x=10\\2C-4&amp;x\gt10\text{.}\end{cases}</m></p> 
+                <p>The symbol <m>C</m> represents the same real number in all three of the piecewise formulas.</p>
+            </introduction>
+            <exercise>
+                <statement>
+                    <p>Find the value for <m>C</m> that makes the function continuous on <m>\ocinterval{-\infty}{10}</m>. Make sure that your reasoning is clear.</p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>Is it possible to find a value for <m>C</m> that makes the function continuous over <m>\ointerval{-\infty}{\infty}</m>? Explain.</p>
+                </statement>
+            </exercise>
         </exercisegroup>
 
     </exercises>

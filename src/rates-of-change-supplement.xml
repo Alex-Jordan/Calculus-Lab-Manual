@@ -204,7 +204,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{g}{x}=\frac{7}{x+4}</m></p>
+                    <p><m>\fe{g}{x}=\dfrac{7}{x+4}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -254,7 +254,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{k}{t}=\frac{(t-8)^2}{t}</m></p>
+                    <p><m>\fe{k}{t}=\dfrac{(t-8)^2}{t}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -314,7 +314,7 @@
                 </answer>
             </exercise>
         </exercisegroup>
-        <exercisegroup>
+        <exercisegroup cols="2" by="row">
             <introduction>
                 <p>Several applied functions are given below.  In each case, find the indicated quantity (including unit) and interpret the value in the context of the application.</p> 
             </introduction>

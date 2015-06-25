@@ -52,7 +52,6 @@
 
         <preface xml:id="to-the-student">
             <title>To the Student</title>
-
             <p>MTH 251 is taught at Portland Community College using a lecture/lab format. The laboratory time is set aside for students to investigate the topic and practice the skills that are covered during their lecture periods.</p>
 
             <p>The lab activities have been written under the presumption that students will be working in groups and will be actively discussing the examples and problems included in each activity. Many of the exercises and problems lend themselves quite naturally to discussion. Some of the more algebraic problems are not so much discussion problems as they are <q>practice and help</q> problems.</p>
@@ -79,10 +78,10 @@
 
             <p>It is strongly recommended that the instructor pick and choose what they consider to be the most vital activities for a given week, and that the instructor have the students work those activities first. For some activities you might also want to have the students only work selected problems in the activity. Students who complete the high priority activities and problems can then go back and work the activities that they initially skipped. There are also fully keyed problems in the supplementary exercises that the students could work on both during lab time and outside of class.</p>
 
-            <p>A suggested schedule for the labs is shown in Table <xref autoname="no" ref="table-suggested-schedule"/>. Again, the instructor should choose what they feel to be the most relevant activities and problems for a given week, and have the students work those activities and problems first.</p>
+            <p>A suggested schedule for the labs is shown in the table below. Again, the instructor should choose what they feel to be the most relevant activities and problems for a given week, and have the students work those activities and problems first.</p>
 
-            <table xml:id="table-suggested-schedule" long="yes">
-                <caption>Possible 10 week schedule for the labs. (Students should consult their syllabus for their schedule.)</caption>
+                <p>Possible 10 week schedule for the labs. (Students should consult their syllabus for their schedule.)</p>
+                <br />
                 <tabular top="major" halign="center">
                     <col halign="right"/>
                     <col halign="3in"/>
@@ -138,7 +137,6 @@
                         <cell></cell>
                     </row>
 -->                    </tabular> 
-            </table>
         </preface>
 
 </frontmatter>

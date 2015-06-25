@@ -8,7 +8,7 @@
 <xsl:import href="clm-common.xsl" />
 
 <!-- LaTeX-specific parameters                                              -->
-<xsl:param name="latex.geometry" select="'letterpaper,total={6.25in,9.0in}'" />
+<!--<xsl:param name="latex.geometry" select="'letterpaper,total={6.3in,9.0in}'" />-->
 <xsl:param name="latex.font.size" select="'12pt'" />
 <xsl:param name="exercise.backmatter.answer" select="'no'" />
 <xsl:param name="exercise.backmatter.hint" select="'no'" />
@@ -243,7 +243,7 @@
         </xsl:otherwise>
     </xsl:choose>
     <xsl:text>\textwidth}{%&#xa;</xsl:text>
-    <xsl:text>\pgfplotsset{every axis/.append style={width=0.8\linewidth}}%&#xa;</xsl:text>
+    <xsl:text>\pgfplotsset{every axis/.append style={width=0.9\linewidth}}%&#xa;</xsl:text>
 </xsl:template>
 
 
@@ -398,6 +398,25 @@
     <xsl:text>}</xsl:text>
 </xsl:template>
 
+<!--Set the parskip in paragraphs manually to 0.5pc, which is what we've set for this document-->
+<xsl:template match="paragraphs" mode="sidebyside">
+    <!-- vertical alignment -->
+    <xsl:apply-templates select="." mode="sidebyside-subitem-valign"/>
+    <!-- horizontal alignment -->
+    <xsl:apply-templates select="." mode="sidebyside-subitem-halign"/>
+    <!-- paragraphs and p elements need wrapping in a parbox -->
+    <xsl:text>\parbox{\textwidth}{%&#xa;</xsl:text>
+    <!-- horizontal alignment (inside the parbox) -->
+    <xsl:apply-templates select="." mode="sidebyside-subitem-halign"/>
+    <xsl:text>\setlength{\parskip}{0.5pc}%&#xa;</xsl:text>
+    <xsl:apply-templates />
+    <!-- \parbox needs closing-->
+    <xsl:text>}&#xa;</xsl:text>
+    <!-- end the body of the paragraph -->
+    <xsl:text>}% end body &#xa;{</xsl:text>
+    <!-- add empty caption -->
+    <xsl:text>}% caption &#xa;</xsl:text>
+</xsl:template>
 
 
 </xsl:stylesheet>

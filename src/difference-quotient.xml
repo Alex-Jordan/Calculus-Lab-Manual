@@ -44,7 +44,7 @@
 
     <exercises>
 
-        <exercisegroup cols="3" by="row">
+        <exercisegroup cols="2">
             <introduction>
                 <p>Completely simplify the difference quotient for each of the following functions. Please note that the template for the difference quotient needs to be adapted to the function name and independent variable in each given equation. For example, the difference quotient for the function in <xref ref="exercise-first-difference-quotient"/> is <m>\frac{\fe{v}{t+h}-\fe{v}{t}}{h}</m>.</p>
 
@@ -65,7 +65,7 @@
 
             <exercise>
                 <statement>
-                    <m>\fe{w}{x}=\frac{3}{x+2}</m>
+                    <m>\fe{w}{x}=\dfrac{3}{x+2}</m>
                 </statement>
             </exercise>
 

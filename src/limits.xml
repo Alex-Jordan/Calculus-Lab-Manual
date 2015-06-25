@@ -24,15 +24,12 @@
         <exercise>
             <statement>
                 <p>Several function values and limit values for the function in <xref ref="figure-first-limit"/> are given below. You and your group mates should take turns reading the equations aloud. Make sure that you read the symbols correctly, that's part of what you are learning! Also, discuss why the values are what they are and make sure that you get help from your instructor to clear up any confusion.</p>
-                <sidebyside>
-                    <paragraphs valign="top">
                         <ul>
                             <li><m>\fe{f}{-2}=6</m>, but <m>\lim\limits_{x\to-2}\fe{f}{x}=3</m></li>
                             <li><m>\fe{f}{-4}</m> is undefined, but <m>\lim\limits_{x\to-4}\fe{f}{x}=2</m></li>
                             <li><m>\fe{f}{1}=-1</m>, but <m>\lim\limits_{x\to1}\fe{f}{x}</m> does not exist</li>
-                            <li><p><m>\underbrace{\lim_{x\to1^{-}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the left}\end{array}}=-3</m>,</p> <p>but <m>\underbrace{\lim_{x\to1^{+}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the right}\end{array}}=-1</m></p></li>
+                            <li><m>\underbrace{\lim_{x\to1^{-}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the left}\end{array}}=-3</m>, but <m>\underbrace{\lim_{x\to1^{+}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the right}\end{array}}=-1</m></li>
                         </ul>
-                    </paragraphs>
 
                     <figure valign="bottom" xml:id="figure-first-limit">
                         <caption><m>f</m></caption>
@@ -70,14 +67,56 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                </sidebyside>
             </statement>
         </exercise>
 
         <exercisegroup cols="4" by="row">
             <introduction>
-                <p>Copy each of the following expressions onto your paper and either state the value or state that the value is undefined or doesn't exist. Make sure that when discussing the values you use proper terminology. All expressions are in reference to the function <m>g</m> shown in <xref ref="figure-second-limit"/>.</p>
-
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>Copy each of the following expressions onto your paper and either state the value or state that the value is undefined or doesn't exist. Make sure that when discussing the values you use proper terminology. All expressions are in reference to the function <m>g</m> shown in <xref ref="figure-second-limit"/>.</p>
+                    </paragraphs>
+                    <figure xml:id="figure-second-limit" valign="top">
+                        <caption><m>g</m></caption>
+                        <image xml:id="image-second-limit">
+                            <description>A graph of a doscontinuous function.</description>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xlabel = {$t$},]
+                                \addplot[
+                                    pccplot,
+                                    ->,
+                                    ]coordinates{
+                                        (-2,5)
+                                        (-6.9,-2.35)};
+                                \addplot[
+                                    pccplot,
+                                    -,
+                                    ]coordinates{
+                                        (-2,-3.5)
+                                        (3,-1)};
+                                \addplot[
+                                    pccplot,
+                                    ->,
+                                    domain=3:6.9,
+                                    ]{(x-4)^2-2};
+                                \addplot[
+                                    soldot,
+                                    ]coordinates{
+                                        (-2,5)
+                                        (5,1)};
+                                \addplot[
+                                    holdot,
+                                    ]coordinates{
+                                        (-2,-3.5)
+                                        (2,-1.5)
+                                        (5,-1)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
             </introduction> 
 
             <exercise>
@@ -153,48 +192,6 @@
             </exercise>
 
         </exercisegroup>
-
-                    <figure xml:id="figure-second-limit">
-                        <caption><m>g</m></caption>
-                        <image xml:id="image-second-limit">
-                            <description>A graph of a doscontinuous function.</description>
-                            <latex-image-code>
-                            <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[xlabel = {$t$},]
-                                \addplot[
-                                    pccplot,
-                                    ->,
-                                    ]coordinates{
-                                        (-2,5)
-                                        (-6.9,-2.35)};
-                                \addplot[
-                                    pccplot,
-                                    -,
-                                    ]coordinates{
-                                        (-2,-3.5)
-                                        (3,-1)};
-                                \addplot[
-                                    pccplot,
-                                    ->,
-                                    domain=3:6.9,
-                                    ]{(x-4)^2-2};
-                                \addplot[
-                                    soldot,
-                                    ]coordinates{
-                                        (-2,5)
-                                        (5,1)};
-                                \addplot[
-                                    holdot,
-                                    ]coordinates{
-                                        (-2,-3.5)
-                                        (2,-1.5)
-                                        (5,-1)};
-                            \end{axis}
-                            \end{tikzpicture}]]>
-                            </latex-image-code>
-                        </image>
-                    </figure>
-
 
         <exercisegroup cols="2">
             <introduction>
