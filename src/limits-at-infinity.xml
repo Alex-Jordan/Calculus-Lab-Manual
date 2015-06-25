@@ -24,7 +24,7 @@
             </statement>
         </exercise>
 
-        <exercisegroup>
+        <exercisegroup cols="2">
             <introduction>
                 <sidebyside>
                     <paragraphs valign="top">
@@ -62,7 +62,7 @@
             </introduction>
             <exercise>
                 <statement>
-                    <p>What is the value of <m>\lim\limits_{x\to-\infty}\fe{f}{x}</m>?</p>
+                    <p>Find <m>\lim\limits_{x\to-\infty}\fe{f}{x}</m>.</p>
                 </statement>
             </exercise>
             <exercise>
@@ -73,7 +73,7 @@
 
         </exercisegroup>
 
-        <exercisegroup>
+        <exercisegroup cols="2">
             <introduction>
                 <sidebyside>
                     <paragraphs valign="top">
@@ -127,7 +127,7 @@
             </introduction>
             <exercise>
                 <statement>
-                    <p>What is the value of <m>\lim\limits_{t\to\infty}\fe{g}{t}</m>?</p>
+                    <p>Find <m>\lim\limits_{t\to\infty}\fe{g}{t}</m>.</p>
                 </statement>
             </exercise>
             <exercise>

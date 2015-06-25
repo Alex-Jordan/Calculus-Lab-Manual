@@ -129,12 +129,12 @@
 
             <exercise xml:id="exercise-hear-me-first">
                 <statement>
-                    <p>True or False? <m>\lim\limits_{x\to0}\left(\frac{e^x}{e^x}\right)=\frac{\lim\limits_{x\to0}e^x}{\lim\limits_{x\to0}e^x}</m></p>
+                    <p>True or False? <m>\lim\limits_{x\to0}\left(\dfrac{e^x}{e^x}\right)=\dfrac{\lim\limits_{x\to0}e^x}{\lim\limits_{x\to0}e^x}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>True or False? <m>\lim\limits_{x\to1}\frac{e^x}{\fe{\ln}{x}}=\frac{\lim\limits_{x\to1}e^x}{\lim\limits_{x\to1}\fe{\ln}{x}}</m></p>
+                    <p>True or False? <m>\lim\limits_{x\to1}\dfrac{e^x}{\fe{\ln}{x}}=\dfrac{\lim\limits_{x\to1}e^x}{\lim\limits_{x\to1}\fe{\ln}{x}}</m></p>
                 </statement>
             </exercise>
             <exercise>
@@ -149,17 +149,17 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>True or False? <m>\lim\limits_{x\to-\infty}\left(\frac{e^{-x}}{e^{-x}}\right)=\frac{\lim\limits_{x\to-\infty}e^{-x}}{\lim\limits_{x\to-\infty}e^{-x}}</m></p>
+                    <p>True or False? <m>\lim\limits_{x\to-\infty}\left(\dfrac{e^{-x}}{e^{-x}}\right)=\dfrac{\lim\limits_{x\to-\infty}e^{-x}}{\lim\limits_{x\to-\infty}e^{-x}}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>True or False? <m>\lim\limits_{x\to1}\left(\frac{\fe{\ln}{x}}{e^x}\right)=\frac{\lim\limits_{x\to1}\fe{\ln}{x}}{\lim\limits_{x\to1}e^x}</m></p>
+                    <p>True or False? <m>\lim\limits_{x\to1}\left(\dfrac{\fe{\ln}{x}}{e^x}\right)=\dfrac{\lim\limits_{x\to1}\fe{\ln}{x}}{\lim\limits_{x\to1}e^x}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>True or False? <m>\lim\limits_{\theta\to\infty}\frac{\fe{\sin}{\theta}}{\fe{\sin}{\theta}}=\frac{\lim\limits_{\theta\to\infty}\fe{\sin}{\theta}}{\lim\limits_{\theta\to\infty}\fe{\sin}{\theta}}</m></p>
+                    <p>True or False? <m>\lim\limits_{\theta\to\infty}\dfrac{\fe{\sin}{\theta}}{\fe{\sin}{\theta}}=\dfrac{\lim\limits_{\theta\to\infty}\fe{\sin}{\theta}}{\lim\limits_{\theta\to\infty}\fe{\sin}{\theta}}</m></p>
                 </statement>
             </exercise>
             <exercise xml:id="exercise-hear-me-last">
@@ -182,6 +182,7 @@
                 <mrow>&amp;=\frac{4}{6-6}&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
                 <mrow>&amp;=\frac{4}{0}</mrow>
                 </md></p>
+                <p><alert>Again, this <q>solution</q> is not correct! Do not emulate Mindy's work!</alert></p>
             </statement>
         </exercise>
 

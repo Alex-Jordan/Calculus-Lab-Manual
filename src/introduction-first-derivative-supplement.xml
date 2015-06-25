@@ -95,13 +95,13 @@
                 <p>If <m>\fe{f}{x}=\fe{\sin}{x}</m>, then <m>\fe{\fd{f}}{x}=\fe{\cos}{x}</m>.</p>
             </answer>
         </exercise>
-        <exercisegroup>
+        <exercisegroup cols="2">
             <introduction>
                 <p>Suppose that an object is tossed into the air in such a way that the elevation of the object (measured in <quantity><unit base="foot"/></quantity>) is given by the function <m>\fe{s}{t}=150+60t-16t^2</m>, where <m>t</m> is the amount of time that has passed since the object was tossed (measure in seconds).</p> 
             </introduction>
             <exercise>
                 <statement>
-                    <p>Find the velocity function for this motion and use that function to determine the velocity of the object <quantity><mag>4.1</mag><unit base="second"/></quantity> into its motion.</p>
+                    <p>Find the velocity function for this motion and use it to determine the velocity of the object <quantity><mag>4.1</mag><unit base="second"/></quantity> into its motion.</p>
                 </statement>
                 <solution>
                     <p>The velocity function is:<md>
@@ -142,7 +142,7 @@ as acceleration <quantity><mag>-32</mag><unit base="foot"/><per base="second" ex
                 </answer>
             </exercise>
         </exercisegroup>
-        <exercisegroup>
+        <exercisegroup cols="2">
             <introduction>
                 <p>Determine the unit on the first derivative function for each of the following functions.  Remember, we do not simplify derivative units in any way, shape, or form.</p> 
             </introduction>
@@ -191,7 +191,7 @@ as acceleration <quantity><mag>-32</mag><unit base="foot"/><per base="second" ex
                 </answer>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="3" by="row">
+        <exercisegroup cols="2" by="row">
             <introduction>
                 <p>Referring to the functions in <xref autoname="plural" ref="exercise-derivative-units-supplement-first"/><ndash/><xref autoname="no" ref="exercise-derivative-units-supplement-last"/>, write sentences that explain the meaning of each of the following function values.</p>
             </introduction>

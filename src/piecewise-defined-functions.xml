@@ -128,7 +128,7 @@
             </exercise>
         </exercisegroup>
 
-        <exercisegroup>
+        <exercisegroup cols="2" by="row">
             <introduction>                
                 <p>Consider the function <m>f</m> defined by <m>\fe{f}{x}=\begin{cases}\frac{5}{x-10}&amp;x\leq5\\\frac{5}{5x-30}&amp;5\lt x\lt7\\\frac{x-2}{12-x}&amp;x>7\text{.}\end{cases}</m></p>
                 <p>State the values of <m>x</m> where each of the following occur. If a stated property doesn't occur, make sure that you state that (as opposed to simply not responding to the question). No explanation necessary.</p>
@@ -158,7 +158,7 @@
         <exercisegroup>
             <introduction>
                 <p>Consider the function <m>g</m> defined by <m>\fe{g}{x}=\begin{cases}\frac{C}{x-17}&amp;x\lt10\\C+3x&amp;x=10\\2C-4&amp;x\gt10\text{.}\end{cases}</m></p> 
-                <p>The symbol <m>C</m> represents the same real number in all three of the piecewise formulas.</p>
+                <p>The symbol <m>C</m> represents the same real number in each of the piecewise formulas.</p>
             </introduction>
             <exercise>
                 <statement>

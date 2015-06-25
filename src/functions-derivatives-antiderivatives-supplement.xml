@@ -590,7 +590,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                 </answer>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="2">
+        <exercisegroup>
             <introduction>
                 <sidebyside>
                     <paragraphs valign="top">
@@ -617,7 +617,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             </introduction>
             <exercise>
                 <statement>
-                    <p>If the given function is <m>\fd{f}</m>, then <m>\fe{f}{3}\gt\fe{f}{2}</m>.</p> 
+                    <p>True or False? If the given function is <m>\fd{f}</m>, then <m>\fe{f}{3}\gt\fe{f}{2}</m>.</p> 
                 </statement>
                 <solution>
                     <p><m>\fe{\fd{f}}{t}</m> is negative on <m>\ointerval{2}{3}</m>, so <m>f</m> is decreasing on <m>\ointerval{2}{3}</m>, and therefore <m>\fe{f}{3}\lt\fe{f}{2}</m>. So the statement is false.</p> 
@@ -628,7 +628,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             </exercise>
             <exercise>
                 <statement>
-                    <p>If the given function is <m>f</m>, then <m>\fe{\fd{f}}{3}\gt\fe{\fd{f}}{2}</m>.</p> 
+                    <p>True or False? If the given function is <m>f</m>, then <m>\fe{\fd{f}}{3}\gt\fe{\fd{f}}{2}</m>.</p> 
                 </statement>
                 <solution>
                     <p>We can see that <m>\fe{\fd{f}}{2}</m> is <m>0</m>, while <m>\fe{\fd{f}}{3}</m> is positive. So the statement is true.</p> 
@@ -639,7 +639,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             </exercise>
             <exercise>
                 <statement>
-                    <p>If the given function is <m>f</m>, then <m>\fe{\fd{f}}{1}\gt\fe{\sd{f}}{1}</m>.</p> 
+                    <p>True or False? If the given function is <m>f</m>, then <m>\fe{\fd{f}}{1}\gt\fe{\sd{f}}{1}</m>.</p> 
                 </statement>
                 <solution>
                     <p>We can see that <m>\fe{\fd{f}}{1}</m> is negative because the function is decreasing there. And we can see that <m>\fe{\sd{f}}{1}</m> is positive because the function is concave up there. So the statement is false.</p> 
@@ -650,7 +650,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             </exercise>
             <exercise>
                 <statement>
-                    <p>If the given function is <m>\fd{f}</m>, then the tangent line to <m>f</m> at <m>6</m> is horizontal.</p> 
+                    <p>True or False? If the given function is <m>\fd{f}</m>, then the tangent line to <m>f</m> at <m>6</m> is horizontal.</p> 
                 </statement>
                 <solution>
                     <p><m>\fe{\fd{f}}{6}</m> is negative, so the tangent line to <m>f</m> at <m>6</m> has negative slope. So the statement is false.</p> 
@@ -661,7 +661,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             </exercise>
             <exercise>
                 <statement>
-                    <p>If the given function is <m>\fd{f}</m>, then <m>\sd{f}</m> is always increasing.</p> 
+                    <p>True or False? If the given function is <m>\fd{f}</m>, then <m>\sd{f}</m> is always increasing.</p> 
                 </statement>
                 <solution>
                     <p>At points immediately to the left of <m>4</m>, <m>\sd{f}</m> would be positive, and at points immediately to the right of <m>4</m>, <m>\sd{f}</m> would be negative. So the statement is false.</p> 
@@ -672,7 +672,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             </exercise>
             <exercise>
                 <statement>
-                    <p>If the given function is <m>\fd{f}</m>, then <m>f</m> is not differentiable at <m>4</m>.</p>
+                    <p>True or False? If the given function is <m>\fd{f}</m>, then <m>f</m> is not differentiable at <m>4</m>.</p>
                 </statement>
                 <solution>
                     <p>It appears that <m>\fe{\fd{f}}{4}</m> is defined, with a value of about <m>4.25</m>. So <m>f</m> is differentiable at <m>4</m>. So the statement is false.</p>
@@ -683,7 +683,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             </exercise>
             <exercise>
                 <statement>
-                    <p>If the given function is <m>\fd{f}</m>, then <m>\fd{f}</m> is not differentiable at <m>4</m>.</p>
+                    <p>True or False? If the given function is <m>\fd{f}</m>, then <m>\fd{f}</m> is not differentiable at <m>4</m>.</p>
                 </statement>
                 <solution>
                     <p>It appears that <m>\fe{\fd{f}}{4}</m> is undefined because the limit of secant slopes from the left is positive, while the limit from the right is negative. So the statement is true.</p>
@@ -694,7 +694,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             </exercise>
             <exercise>
                 <statement>
-                    <p>The first derivative of the given function is periodic (starting at <m>0</m>).</p>
+                    <p>True or False? The first derivative of the given function is periodic (starting at <m>0</m>).</p>
                 </statement>
                 <solution>
                     <p>Since the tangent slope anywhere (except multiples of <m>4</m>, where the tangent slope is undefined) is equal to the tangent slope <m>4</m> units forward, the derivative is periodic with period <m>4</m>. So the statement is true.</p>
@@ -705,7 +705,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             </exercise>
             <exercise>
                 <statement>
-                    <p>Antiderivatives of the given function are periodic (starting at <m>0</m>).</p>
+                    <p>True or False? Antiderivatives of the given function are periodic (starting at <m>0</m>).</p>
                 </statement>
                 <solution>
                     <p>An antiderivative would be increasing over half of each period, and decreasing over the other half. But it would be increasing more steeply in general while it is increasing compared to where it is decreasing. So over each period, there will be a net rise. So the statement is false.</p>
@@ -716,7 +716,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             </exercise>
             <exercise>
                 <statement>
-                    <p>If the given function was measuring the rate at which the volume of air in your lungs was changing <m>t</m> seconds after you were frightened, then there was the same amount of air in your lungs <m>9</m> seconds after the fright as was there <m>7</m> seconds after the fright.</p>
+                    <p>True or False? If the given function was measuring the rate at which the volume of air in your lungs was changing <m>t</m> seconds after you were frightened, then there was the same amount of air in your lungs <m>9</m> seconds after the fright as was there <m>7</m> seconds after the fright.</p>
                 </statement>
                 <solution>
                     <p>The amount of air in your lungs was increasing the entire two seconds. So the statement is false.</p>
@@ -727,7 +727,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             </exercise>
             <exercise>
                 <statement>
-                    <p>If the given function is measuring the position of a weight attached to a spring relative to a table edge (with positive and negative positions corresponding to the weight being above and below the edge of the table), then the weight is in the same position <m>9</m> seconds after it begins to bob as it is <m>7</m> seconds after the bobbing commenced (assuming that <m>t</m> represents the number of seconds that pass after the weight begins to bob).</p>
+                    <p>True or False? If the given function is measuring the position of a weight attached to a spring relative to a table edge (with positive and negative positions corresponding to the weight being above and below the edge of the table), then the weight is in the same position <m>9</m> seconds after it begins to bob as it is <m>7</m> seconds after the bobbing commenced (assuming that <m>t</m> represents the number of seconds that pass after the weight begins to bob).</p>
                 </statement>
                 <solution>
                     <p>At both of these times, the weight is level with the table. So the statement is true.</p>
@@ -738,7 +738,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             </exercise>
             <exercise>
                 <statement>
-                    <p>If the given function is measuring the velocity of a weight attached to a spring relative to a table edge (with positive and negative positions corresponding, respectively, to the weight being above and below the edge of the table), then the spring was moving downward over the interval <m>\ointerval{1}{3}</m> (assuming that <m>t</m> represents the number of seconds that pass after the weight begins to bob).</p>
+                    <p>True or False? If the given function is measuring the velocity of a weight attached to a spring relative to a table edge (with positive and negative positions corresponding, respectively, to the weight being above and below the edge of the table), then the spring was moving downward over the interval <m>\ointerval{1}{3}</m> (assuming that <m>t</m> represents the number of seconds that pass after the weight begins to bob).</p>
                 </statement>
                 <solution>
                     <p>Negative velocity corresponds to downward motion (because the <q>position</q> is decreasing when the velocity is negative). So the statement is true.</p>
@@ -1035,31 +1035,27 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
         <exercise>
             <statement>
                 <p>Draw onto <xref ref="figure-sketch-function-supplement"/> the function <m>f</m> given the following properties of <m>f</m>.</p>
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <ul>
-                            <li>The only discontinuity on <m>f</m> occurs at the vertical asymptote <m>x=2</m>.</li>
-                            <li><m>\fe{f}{0}=\fe{f}{4}=3</m>, and <m>\fe{\fd{f}}{-1}=0</m></li>
-                            <li><m>\fe{\fd{f}}{x}\gt0</m> on <m>\ointerval{-\infty}{-1}</m>, <m>\ointerval{-1}{2}</m>, and <m>\ointerval{4}{\infty}</m></li>
-                            <li><m>\fe{\fd{f}}{x}\lt0</m> on <m>\ointerval{2}{4}</m></li>
-                            <li><m>\fe{\sd{f}}{x}\gt0</m> on <m>\ointerval{-1}{2}</m> and <m>\ointerval{2}{4}</m></li>
-                            <li><m>\fe{\sd{f}}{x}\lt0</m> on <m>\ointerval{-\infty}{-1}</m></li>
-                            <li><m>\fe{\sd{f}}{x}=0</m> on <m>\ointerval{4}{\infty}</m></li>
-                            <li><m>\lim\limits_{x\to4^{-}}\fe{f}{x}=-1</m> and <m>\lim\limits_{x\to4^{+}}\fe{f}{x}=1</m></li>
-                        </ul>
-                    </paragraphs>
-                    <figure xml:id="figure-sketch-function-supplement" valign="top">
-                        <caption><m>f</m></caption>
-                        <image>
-                            <latex-image-code>
-                            <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[]
-                            \end{axis}
-                            \end{tikzpicture}]]>
-                            </latex-image-code>
-                        </image>
-                    </figure>
-                </sidebyside>
+                <ul>
+                    <li>The only discontinuity on <m>f</m> occurs at the vertical asymptote <m>x=2</m>.</li>
+                    <li><m>\fe{f}{0}=\fe{f}{4}=3</m>, and <m>\fe{\fd{f}}{-1}=0</m></li>
+                    <li><m>\fe{\fd{f}}{x}\gt0</m> on <m>\ointerval{-\infty}{-1}</m>, <m>\ointerval{-1}{2}</m>, and <m>\ointerval{4}{\infty}</m></li>
+                    <li><m>\fe{\fd{f}}{x}\lt0</m> on <m>\ointerval{2}{4}</m></li>
+                    <li><m>\fe{\sd{f}}{x}\gt0</m> on <m>\ointerval{-1}{2}</m> and <m>\ointerval{2}{4}</m></li>
+                    <li><m>\fe{\sd{f}}{x}\lt0</m> on <m>\ointerval{-\infty}{-1}</m></li>
+                    <li><m>\fe{\sd{f}}{x}=0</m> on <m>\ointerval{4}{\infty}</m></li>
+                    <li><m>\lim\limits_{x\to4^{-}}\fe{f}{x}=-1</m> and <m>\lim\limits_{x\to4^{+}}\fe{f}{x}=1</m></li>
+                </ul>
+                <figure xml:id="figure-sketch-function-supplement" valign="top">
+                    <caption><m>f</m></caption>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
             </statement>
             <solution>
                 <image>

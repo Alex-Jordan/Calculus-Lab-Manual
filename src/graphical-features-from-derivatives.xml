@@ -15,11 +15,9 @@
     <exercises> 
         <exercisegroup>
             <introduction>
+                <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
                 <sidebyside>
-                    <paragraphs valign="top" width="23%">
-                        <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
-                    </paragraphs>
-                    <table xml:id="table-based-on-derivatives" width="42%" valign="top">
+                    <table xml:id="table-based-on-derivatives" valign="top">
                         <caption>Signs on <m>\fd{f}</m> and <m>\sd{f}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -42,7 +40,7 @@
                             </row>
                         </tabular>
                     </table>
-                    <figure xml:id="figure-based-on-derivatives" width="35%" valign="top">
+                    <figure xml:id="figure-based-on-derivatives" valign="top">
                         <caption><m>y=\fe{f}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -78,11 +76,9 @@
         </exercisegroup>
         <exercisegroup>
             <introduction>
+                <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
                 <sidebyside>
-                    <paragraphs valign="top" width="23%">
-                        <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
-                    </paragraphs>
-                    <table xml:id="table-based-on-derivatives-two" valign="top" width="42%">
+                    <table xml:id="table-based-on-derivatives-two" valign="top">
                         <caption>Signs on <m>\fd{g}</m> and <m>\sd{g}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -105,7 +101,7 @@
                             </row>
                         </tabular>
                     </table>
-                    <figure xml:id="figure-based-on-derivatives-two" width="35%" valign="top">
+                    <figure xml:id="figure-based-on-derivatives-two" valign="top">
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -141,11 +137,9 @@
         </exercisegroup>
         <exercisegroup>
             <introduction>
+                <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
                 <sidebyside>
-                    <paragraphs valign="top" width="23%">
-                        <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
-                    </paragraphs>
-                    <table xml:id="table-based-on-derivatives-three" valign="top" width="42%">
+                    <table xml:id="table-based-on-derivatives-three" valign="top">
                         <caption>Signs on <m>\fd{k}</m> and <m>\sd{k}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -168,7 +162,7 @@
                             </row>
                         </tabular>
                     </table>
-                    <figure xml:id="figure-based-on-derivatives-three" width="35%" valign="top">
+                    <figure xml:id="figure-based-on-derivatives-three" valign="top">
                         <caption><m>y=\fe{k}{x}</m></caption>
                         <image>
                             <latex-image-code>

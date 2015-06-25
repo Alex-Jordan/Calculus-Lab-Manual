@@ -12,7 +12,7 @@
     <exercises>
         <exercisegroup>
             <introduction>
-                <p>For each of <xref autoname="plural" ref="exercise-limits-supplement-first"/><ndash/><xref autoname="plural" ref="exercise-limits-supplement-last"/>, state the limit suggested by the values in the table and state whether or not the limit exists.  The correct answer for <xref ref="exercise-limits-supplement-first"/> has been given to help you understand the directions to the question.</p> 
+                <p>For <xref autoname="plural" ref="exercise-limits-supplement-first"/><ndash/><xref autoname="no" ref="exercise-limits-supplement-last"/>, state the limit suggested by the values in the table and state whether or not the limit exists.  The correct answer for <xref ref="exercise-limits-supplement-first"/> has been given to help you understand the instructions.</p> 
             </introduction>
             <exercise xml:id="exercise-limits-supplement-first">
                 <statement>
@@ -209,15 +209,20 @@
         </exercisegroup>
         <exercise>
             <statement>
-                <p>Sketch onto <xref ref="figure-sketch-properties-supplement"/> a function, <m>f</m>, with each of the following properties. Make sure that your graph includes all of the relevant features addressed in lab.</p>
+                <p>Sketch onto <xref ref="figure-sketch-properties-supplement"/> a function, <m>f</m>, with the following properties. Your graph should include all of the features addressed in lab.</p>
+                <ul cols="2">  
+                    <li>The only discontinuities on <m>f</m> are at <m>-4</m> and <m>3</m>.</li>
+                    <li><m>f</m> has no <m>x</m>-intercepts.</li>
+                    <li><m>f</m> is continuous from the right at <m>-4</m>.</li>
+                    <li><m>\lim\limits_{x\to-4^{-}}\fe{f}{x}=1</m>.</li>
+                </ul>  
+
                 <sidebyside>  
                     <paragraphs>  
                         <ul>  
-                            <li>The only discontinuities on <m>f</m> are at <m>-4</m> and <m>3</m>.</li>
-                            <li><m>f</m> has no <m>x</m>-intercepts.</li>
-                            <li><m>f</m> is continuous from the right at <m>-4</m>.</li>
-                            <li><m>\lim\limits_{x\to-4^{-}}\fe{f}{x}=1</m> and <m>\lim\limits_{x\to-4^{+}}\fe{f}{x}=-2</m>.</li>
-                            <li><m>\lim\limits_{x\to3}\fe{f}{x}=-\infty</m> and <m>\lim\limits_{x\to\infty}\fe{f}{x}=-\infty</m>.</li>
+                            <li><m>\lim\limits_{x\to-4^{+}}\fe{f}{x}=-2</m>.</li>
+                            <li><m>\lim\limits_{x\to3}\fe{f}{x}=-\infty</m>.</li>
+                            <li><m>\lim\limits_{x\to\infty}\fe{f}{x}=-\infty</m>.</li>
                             <li><m>f</m> has constant slope <m>-2</m> over <m>\ointerval{-\infty}{-4}</m>.</li>
                         </ul>  
                     </paragraphs>  
@@ -346,13 +351,13 @@
                 <p><m>k=0</m></p>
             </answer>
         </exercise>
-        <exercisegroup cols="2">
+        <exercisegroup cols="2" by="row">
             <introduction>
                 <p>Determine the appropriate symbol to write after an equal sign following each of the given limits.  In each case, the appropriate symbol is either a real number, <m>\infty</m>, or <m>-\infty</m>.  Also, state whether or not each limit exists and if the limit exists prove its existence (and value) by applying the appropriate limit laws.  The Rational Limit Forms table in <xref ref="appendix-limit-laws"/> summarizes strategies to be employed based upon the initial form of the limit.</p>
             </introduction>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to4^{-}}\left(5-\frac{1}{x-4}\right)</m></p>
+                    <p><m>\lim\limits_{x\to4^{-}}\left(5-\dfrac{1}{x-4}\right)</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to4^{-}}\left(5-\frac{1}{x-4}\right)=\infty</m>. This limit does not exist.</p>
@@ -363,7 +368,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to\infty}\frac{e^{\sfrac{2}{x}}}{e^{\sfrac{1}{x}}}</m></p>
+                    <p><m>\lim\limits_{x\to\infty}\dfrac{e^{\sfrac{2}{x}}}{e^{\sfrac{1}{x}}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -379,7 +384,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to2^{+}}\frac{x^2-4}{x^2+4}</m></p>
+                    <p><m>\lim\limits_{x\to2^{+}}\dfrac{x^2-4}{x^2+4}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -396,7 +401,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to2^{+}}\frac{x^2-4}{x^2-4x+4}</m></p>
+                    <p><m>\lim\limits_{x\to2^{+}}\dfrac{x^2-4}{x^2-4x+4}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -412,7 +417,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to\infty}\frac{\fe{\ln}{x}+\fe{\ln}{x^6}}{7\fe{\ln}{x^2}}</m></p>
+                    <p><m>\lim\limits_{x\to\infty}\dfrac{\fe{\ln}{x}+\fe{\ln}{x^6}}{7\fe{\ln}{x^2}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -429,7 +434,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to-\infty}\frac{3x^3+2x}{3x-2x^3}</m></p>
+                    <p><m>\lim\limits_{x\to-\infty}\dfrac{3x^3+2x}{3x-2x^3}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -449,7 +454,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to\infty}\fe{\sin}{\frac{\pi e^{3x}}{2e^x+4e^{3x}}}</m></p>
+                    <p><m>\lim\limits_{x\to\infty}\fe{\sin}{\dfrac{\pi e^{3x}}{2e^x+4e^{3x}}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -470,7 +475,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to\infty}\frac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}</m></p>
+                    <p><m>\lim\limits_{x\to\infty}\dfrac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to\infty}\frac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}</m> does not exist because the domain of the function <m>\frac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}</m> is <m>\emptyset</m> (the empty set). There are no <m>x</m>-values where <m>\frac{\fe{\ln}{\sfrac{1}{x}}}{\fe{\ln}{\sfrac{x}{x}}}</m> is defined.</p>
@@ -481,7 +486,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to5}\sqrt{\frac{x^2-12x+35}{5-x}}</m></p>
+                    <p><m>\lim\limits_{x\to5}\sqrt{\dfrac{x^2-12x+35}{5-x}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -501,7 +506,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{h\to0}\frac{4(3+h)^2-5(3+h)-21}{h}</m></p>
+                    <p><m>\lim\limits_{h\to0}\dfrac{4(3+h)^2-5(3+h)-21}{h}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -523,7 +528,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{h\to0}\frac{5h^2+3}{2-3h^2}</m></p>
+                    <p><m>\lim\limits_{h\to0}\dfrac{5h^2+3}{2-3h^2}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -541,7 +546,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{h\to0}\frac{\sqrt{9-h}-3}{h}</m></p>
+                    <p><m>\lim\limits_{h\to0}\dfrac{\sqrt{9-h}-3}{h}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -564,7 +569,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{\theta\to\frac{\pi}{2}}\frac{\fe{\sin}{\theta+\frac{\pi}{2}}}{\fe{\sin}{2\theta+\pi}}</m></p>
+                    <p><m>\lim\limits_{\theta\to\frac{\pi}{2}}\dfrac{\fe{\sin}{\theta+\frac{\pi}{2}}}{\fe{\sin}{2\theta+\pi}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -585,7 +590,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to0^{+}}\frac{\fe{\ln}{x^e}}{\fe{\ln}{e^x}}</m></p>
+                    <p><m>\lim\limits_{x\to0^{+}}\dfrac{\fe{\ln}{x^e}}{\fe{\ln}{e^x}}</m></p>
                 </statement>
                 <solution>
                     <p>The numerator approaches <m>-\infty</m> and the denominator approaches <m>0</m> from the positive side. So the ratio becomes large and negative without bound. We say <m>\lim\limits_{x\to0^{+}}\frac{\fe{\ln}{x^e}}{\fe{\ln}{e^x}}=-\infty</m> and the limit does not exist.</p>
@@ -601,7 +606,7 @@
             </introduction>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to\infty}e^x=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to\infty}e^x=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to\infty}e^x=\infty</m>. This limit does not exist.</p>
@@ -612,7 +617,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to-\infty}e^x=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to-\infty}e^x=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to-\infty}e^x=0</m>. This limit exists.</p>
@@ -623,7 +628,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to0}e^x=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to0}e^x=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to0}e^x=1</m>. This limit exists.</p>
@@ -634,7 +639,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to\infty}e^{-x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to\infty}e^{-x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to\infty}e^{-x}=0</m>. This limit exists.</p>
@@ -645,7 +650,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to-\infty}e^{-x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to-\infty}e^{-x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to-\infty}e^{-x}=\infty</m>. This limit does not exist.</p>
@@ -656,7 +661,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to0}e^{-x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to0}e^{-x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to0}e^{-x}=1</m>. This limit exists.</p>
@@ -667,7 +672,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to\infty}\fe{\ln}{x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to\infty}\fe{\ln}{x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to\infty}\fe{\ln}{x}=\infty</m>. This limit does not exist.</p>
@@ -678,7 +683,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to1}\fe{\ln}{x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to1}\fe{\ln}{x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to1}\fe{\ln}{x}=0</m>. This limit exists.</p>
@@ -689,7 +694,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to0^{+}}\fe{\ln}{x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to0^{+}}\fe{\ln}{x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to0^{+}}\fe{\ln}{x}=-\infty</m>. This limit does not exist.</p>
@@ -700,7 +705,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to\infty}\frac{1}{x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to\infty}\frac{1}{x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to\infty}\frac{1}{x}=0</m>. This limit exists.</p>
@@ -711,7 +716,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to-\infty}\frac{1}{x}=0</m>. This limit exists.</p>
@@ -722,7 +727,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to0^{+}}\frac{1}{x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to0^{+}}\frac{1}{x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to0^{+}}\frac{1}{x}=\infty</m>. This limit does not exist.</p>
@@ -733,7 +738,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to0^{-}}\frac{1}{x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to0^{-}}\frac{1}{x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to0^{-}}\frac{1}{x}=-\infty</m>. This limit does not exist.</p>
@@ -744,7 +749,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to\infty}e^{\sfrac{1}{x}}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to\infty}e^{\sfrac{1}{x}}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to\infty}e^{\sfrac{1}{x}}=1</m>. This limit exists.</p>
@@ -755,7 +760,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to\infty}\frac{1}{e^x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to\infty}\frac{1}{e^x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to\infty}\frac{1}{e^x}=0</m>. This limit exists.</p>
@@ -766,7 +771,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{e^x}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{e^x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to-\infty}\frac{1}{e^x}=\infty</m>. This limit does not exist.</p>
@@ -777,7 +782,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to\infty}\frac{1}{e^{-x}}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to\infty}\frac{1}{e^{-x}}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to\infty}\frac{1}{e^{-x}}=\infty</m>. This limit does not exist.</p>
@@ -788,7 +793,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{e^{-x}}=\underline{\qquad}\qquad\text{Exists?}</m></p>
+                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{e^{-x}}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to-\infty}\frac{1}{e^{-x}}=0</m>. This limit exists.</p>

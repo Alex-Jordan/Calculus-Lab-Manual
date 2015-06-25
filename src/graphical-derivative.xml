@@ -18,8 +18,8 @@
                 <p>A parabolic function is shown in <xref ref="figure-graphical-derivative"/>. The next several questions are in reference to that function.</p>
 
                 <sidebyside> 
-                    <figure xml:id="figure-graphical-derivative">
-                        <caption><m>y=\fe{g}{x}</m></caption>
+                    <figure xml:id="figure-graphical-derivative" width="41%">
+                        <caption><m>\fe{g}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -43,8 +43,8 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure xml:id="figure-graphical-derivative-plot">
-                        <caption><m>y=\fe{g}{x}</m></caption>
+                    <figure xml:id="figure-graphical-derivative-plot" width="41%">
+                        <caption><m>\fe{g}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -58,7 +58,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <table xml:id="table-graphical-derivative">
+                    <table xml:id="table-graphical-derivative" width="18%">
                         <caption><m>y=\fe{\fd{g}}{x}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -364,11 +364,9 @@
 
         <exercisegroup>
             <introduction>
+                <p>Answer the following questions in reference to the function <m>w</m>, shown in <xref ref="figure-inflection-points"/>.</p>
                 <sidebyside>
-                    <paragraphs valign="top" width="25%">
-                        <p>Answer the following questions in reference to the function <m>w</m>, shown in <xref ref="figure-inflection-points"/>.</p>
-                    </paragraphs>
-                    <figure xml:id="figure-inflection-points" valign="top">
+                    <figure xml:id="figure-inflection-points" valign="top" width="65%">
                         <caption><m>y=\fe{w}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -383,7 +381,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <table xml:id="table-inflection-points" width="30%">
+                    <table xml:id="table-inflection-points" width="35%">
                         <caption>Properties of <m>\fd{w}</m> (positive, negative, increasing, or decreasing)</caption>
                         <tabular top="major">
                             <col halign="center"/>

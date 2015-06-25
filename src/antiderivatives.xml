@@ -36,30 +36,33 @@
     </figure>
 
     <exercises>
-        <exercisegroup>
+        <exercisegroup cols="2">
             <introduction>
-                <p>Each of the linear functions in <xref ref="figure-parallel-lines"/> have the same first derivative function.</p>
-
-                <figure xml:id="figure-parallel-lines">
-                    <caption/>
-                    <image>
-                        <latex-image-code>
-                        <![CDATA[\begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot[pccplot,domain=-6.8:-4.6]{2*(x+8)};
-                            \addplot[pccplot,domain=-6.8:-2.6]{2*(x+6)};
-                            \addplot[pccplot,domain=-6.8:-0.6]{2*(x+4)};
-                            \addplot[pccplot,domain=-5.4:1.4]{2*(x+2)};
-                            \addplot[pccplot,domain=-3.4:3.4]{2*(x)};
-                            \addplot[pccplot,domain=-1.4:5.4]{2*(x-2)};
-                            \addplot[pccplot,domain=0.6:6.8]{2*(x-4)};
-                            \addplot[pccplot,domain=2.6:6.8]{2*(x-6)};
-                            \addplot[pccplot,domain=4.6:6.8]{2*(x-8)};
-                        \end{axis}
-                        \end{tikzpicture}]]>
-                        </latex-image-code>
-                    </image>
-                </figure>
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>Each of the linear functions in <xref ref="figure-parallel-lines"/> have the same first derivative function.</p>
+                    </paragraphs>
+                    <figure xml:id="figure-parallel-lines">
+                        <caption/>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot[pccplot,domain=-6.8:-4.6]{2*(x+8)};
+                                \addplot[pccplot,domain=-6.8:-2.6]{2*(x+6)};
+                                \addplot[pccplot,domain=-6.8:-0.6]{2*(x+4)};
+                                \addplot[pccplot,domain=-5.4:1.4]{2*(x+2)};
+                                \addplot[pccplot,domain=-3.4:3.4]{2*(x)};
+                                \addplot[pccplot,domain=-1.4:5.4]{2*(x-2)};
+                                \addplot[pccplot,domain=0.6:6.8]{2*(x-4)};
+                                \addplot[pccplot,domain=2.6:6.8]{2*(x-6)};
+                                \addplot[pccplot,domain=4.6:6.8]{2*(x-8)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
             </introduction>
             <exercise>
                 <statement>
@@ -205,7 +208,7 @@
                 </statement>                    
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="2">
+        <exercisegroup cols="2" by="row">
             <introduction>
                 <sidebyside>
                     <paragraphs valign="top">

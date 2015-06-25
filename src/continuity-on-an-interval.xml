@@ -29,45 +29,45 @@
             </statement>
         </exercise>
 
-        <exercisegroup cols="2">
+        <exercisegroup>
             <introduction>  
                 <statement> 
-                    <p>Referring to the function in <xref ref="figure-discontinuities"/>, decide whether each of the following statements are true or false.</p>
+                    <p>Referring to the function in <xref ref="figure-discontinuities"/>, decide whether each of the following statements are <em>true</em> or <em>false</em>.</p>
                 </statement>
             </introduction>
             <exercise>
                 <statement>
-                    <p><m>h</m> is continuous on <m>\cointerval{-4}{-1}</m>.</p>
+                    <p>True or False? <m>h</m> is continuous on <m>\cointerval{-4}{-1}</m>.</p>
                 </statement> 
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>h</m> is continuous on <m>\ointerval{-4}{-1}</m>.</p>
+                    <p>True or False? <m>h</m> is continuous on <m>\ointerval{-4}{-1}</m>.</p>
                 </statement> 
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>h</m> is continuous on <m>\ocinterval{-4}{-1}</m>.</p>
+                    <p>True or False? <m>h</m> is continuous on <m>\ocinterval{-4}{-1}</m>.</p>
                 </statement> 
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>h</m> is continuous on <m>\ocinterval{-1}{2}</m>.</p>
+                    <p>True or False? <m>h</m> is continuous on <m>\ocinterval{-1}{2}</m>.</p>
                 </statement> 
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>h</m> is continuous on <m>\ointerval{-1}{2}</m>.</p>
+                    <p>True or False? <m>h</m> is continuous on <m>\ointerval{-1}{2}</m>.</p>
                 </statement> 
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>h</m> is continuous on <m>\ointerval{-\infty}{-4}</m>.</p>
+                    <p>True or False? <m>h</m> is continuous on <m>\ointerval{-\infty}{-4}</m>.</p>
                 </statement> 
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>h</m> is continuous on <m>\ocinterval{-\infty}{-4}</m>.</p>
+                    <p>True or False? <m>h</m> is continuous on <m>\ocinterval{-\infty}{-4}</m>.</p>
                 </statement> 
             </exercise>
 
@@ -75,17 +75,17 @@
 
         <exercisegroup> 
             <introduction>
-                <p>Several functions are described below. Your task is to draw each function on its provided axis system. Do not introduce any unnecessary discontinuities or intercepts that are not directly implied by the stated properties. Make sure that you draw all implied asymptotes and label them with their equations.</p>
+                <p>Several functions are described below. Your task is to sketch a graph for each function on its provided axis system. Do not introduce any unnecessary discontinuities or intercepts that are not directly implied by the stated properties. Make sure that you draw all implied asymptotes and label them with their equations.</p>
             </introduction>
             <exercise>
                 <statement>
-                    <p>Sketch a graph of a function that satisfies all of the following properties</p>
+                    <p>Sketch a graph of a function satisfying:</p>
                     <sidebyside>
                         <paragraphs valign="top">
                             <p><md>
-                            <mrow>\lim\limits_{x\to4^{-}}\fe{f}{x}&amp;=2&amp;\fe{f}{0}&amp;=4</mrow>
-                            <mrow>\lim\limits_{x\to4^{+}}\fe{f}{x}&amp;=5&amp;\fe{f}{4}&amp;=5</mrow>
-                            <mrow>\lim\limits_{x\to-\infty}\fe{f}{x}&amp;=4&amp;\lim\limits_{x\to\infty}\fe{f}{x}&amp;=4</mrow>
+                            <mrow>\lim_{x\to4^{-}}\fe{f}{x}&amp;=2&amp;\fe{f}{0}&amp;=4</mrow>
+                            <mrow>\lim_{x\to4^{+}}\fe{f}{x}&amp;=5&amp;\fe{f}{4}&amp;=5</mrow>
+                            <mrow>\lim_{x\to-\infty}\fe{f}{x}&amp;=4&amp;\lim_{x\to\infty}\fe{f}{x}&amp;=4</mrow>
                             </md></p>
                         </paragraphs>
                         <image valign="top">
@@ -101,15 +101,15 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Sketch a graph of a function that satisfies all of the following properties</p>
+                    <p>Sketch a graph of a function satisfying:</p>
                     <sidebyside>
                         <paragraphs valign="top">
                             <p><md>
-                            <mrow>\lim\limits_{x\to-2}\fe{g}{x}&amp;=\infty&amp;\fe{g}{0}&amp;=4</mrow>
-                            <mrow>\lim\limits_{x\to-\infty}\fe{g}{x}&amp;=\infty&amp;\fe{g}{3}&amp;=-2</mrow>
+                            <mrow>\lim_{x\to-2}\fe{g}{x}&amp;=\infty&amp;\fe{g}{0}&amp;=4</mrow>
+                            <mrow>\lim_{x\to-\infty}\fe{g}{x}&amp;=\infty&amp;\fe{g}{3}&amp;=-2</mrow>
                             <mrow>&amp;&amp;\fe{g}{6}&amp;=0</mrow>
                             </md>
-                            <m>g</m> is continuous and has constant slope on <m>\ointerval{0}{\infty}</m>.</p>
+                            And <m>g</m> is continuous and has constant slope on <m>\ointerval{0}{\infty}</m>.</p>
                         </paragraphs>
                         <image valign="top">
                             <latex-image-code>
@@ -124,12 +124,13 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Sketch a graph of a function that satisfies all of the following properties</p>
+                    <p>Sketch a graph of a function satisfying:</p>
                     <sidebyside>
                         <paragraphs valign="top">
-                            <p>The only discontinuities on <m>m</m> occur at <m>-4</m> and <m>3</m>. <m>m</m> has no <m>x</m>-intercepts. <m>m</m> has constant slope of <m>-2</m> over <m>\ointerval{-\infty}{-4}</m>. <m>m</m> is continuous over <m>\cointerval{-4}{3}</m>.<md>
-                            <mrow>\fe{m}{-6}&amp;=5&amp;\lim\limits_{x\to3}\fe{m}{x}&amp;=-\infty</mrow>
-                            <mrow>\lim\limits_{x\to-4^{+}}\fe{m}{x}&amp;=-2&amp;\lim\limits_{x\to\infty}\fe{m}{x}&amp;=-\infty</mrow>
+                            <p>The only discontinuities on <m>m</m> are at <m>-4</m> and <m>3</m>. <m>m</m> has no <m>x</m>-intercepts. <m>m</m> has constant slope of <m>-2</m> over <m>\ointerval{-\infty}{-4}</m>. <m>m</m> is continuous over <m>\cointerval{-4}{3}</m>. <m>\fe{m}{-6}=5</m>,<md>
+                            <mrow>\lim_{x\to3}\fe{m}{x}&amp;=-\infty</mrow>
+                            <mrow>\lim_{x\to-4^{+}}\fe{m}{x}&amp;=-2</mrow>
+                            <mrow>\lim_{x\to\infty}\fe{m}{x}&amp;=-\infty</mrow>
                             </md></p>
                         </paragraphs>
                         <image valign="top">

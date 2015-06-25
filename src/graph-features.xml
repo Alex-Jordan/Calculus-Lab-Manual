@@ -16,20 +16,35 @@
         <title>Some Common Graphical Phrases</title>
         <statement>
             <p>These are loose, informal definitions. Technical, precise definitions can be found elsewhere.</p>
-
-            <dl cols="2">
-                <li><title>Positive function.</title>The vertical coordinate of points on the function are positive. A function is positive whenever its graph lies above the horizontal axis.</li>
-                <li><title>Increasing function.</title>The vertical coordinate of the function increases as you move along the curve from left to right. Linear functions with positive slope are always increasing.</li>
-                <li><title>Concave up function.</title>A function is concave up at <m>a</m> if the tangent line to the function at <m>a</m> lies below the curve. An upward opening parabola is everywhere concave up.</li> 
-                <li><title>Negative function.</title>The vertical coordinates of points on the function is negative. A function is negative whenever its graph lies below the horizontal axis.</li> 
-                <li><title>Decreasing function.</title>The vertical coordinate of the function decreases as you move along the curve from left to right. Linear functions with negative slope are always decreasing.</li> 
-                <li><title>Concave down function.</title>A function is concave down at <m>a</m> if the tangent line to the function at <m>a</m> lies above the curve. A downward opening parabola is everywhere concave down.</li> 
-            </dl> 
+            <sidebyside>
+                <paragraphs width="45%" valign="top">
+                    <p><term>Positive function.</term> The vertical coordinate of points on the function is positive. A function is positive whenever its graph lies above the horizontal axis.</p>
+                </paragraphs>
+                <paragraphs width="45%" valign="top">
+                    <p><term>Negative function.</term> The vertical coordinate of points on the function is negative. A function is negative whenever its graph lies below the horizontal axis.</p>
+                </paragraphs>
+            </sidebyside>
+            <sidebyside>
+                <paragraphs width="45%" valign="top">
+                    <p><term>Increasing function.</term> The vertical coordinate of the function increases as you move along the curve from left to right. Linear functions with positive slope are always increasing.</p>
+                </paragraphs>
+                <paragraphs width="45%" valign="top">
+                    <p><term>Decreasing function.</term> The vertical coordinate of the function decreases as you move along the curve from left to right. Linear functions with negative slope are always decreasing.</p>
+                </paragraphs>
+            </sidebyside>
+            <sidebyside>
+                <paragraphs width="45%" valign="top">
+                    <p><term>Concave up function.</term> A function is concave up at <m>a</m> if the tangent line to the function at <m>a</m> lies below the curve. An upward opening parabola is everywhere concave up.</p>
+                </paragraphs>
+                <paragraphs width="45%" valign="top">
+                    <p><term>Concave down function.</term> A function is concave down at <m>a</m> if the tangent line to the function at <m>a</m> lies above the curve. A downward opening parabola is everywhere concave down.</p>
+                </paragraphs>
+            </sidebyside>
         </statement>
     </definition>
 
     <exercises>
-        <exercisegroup cols="3" by="row">
+        <exercisegroup cols="2">
             <introduction>
                 <sidebyside>
                     <paragraphs valign="top">

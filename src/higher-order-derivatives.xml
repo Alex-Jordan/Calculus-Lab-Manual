@@ -15,7 +15,7 @@
             <p>Seeing as the first derivative of <m>f</m> is a function in its own right, <m>\fd{f}</m> must have its own first derivative.  The first derivative of <m>\fd{f}</m> is the <term>second derivative</term> of <m>f</m> and is symbolized as <m>\sd{f}</m> (<m>f</m> double-prime).  Likewise, <m>\td{f}</m> (<m>f</m> triple-prime) is the first derivative of <m>\sd{f}</m>, the second derivative of <m>\fd{f}</m>, and the <term>third derivative</term> of <m>f</m>. All of the graphical relationships you’ve established between <m>f</m> and <m>\fd{f}</m> work their way down the derivative chain; this is illustrated in <xref ref="table-f-prime-and-f"/>.</p>
         </paragraphs>
 
-        <table xml:id="table-f-prime-and-f" valign="top">
+        <table xml:id="table-f-prime-and-f" valign="top" width="60%">
         <caption><m>\fd{f}</m> and <m>f</m>, <m>\sd{f}</m> and <m>\fd{f}</m>, <m>\td{f}</m> and <m>\sd{f}</m></caption>
             <tabular top="major">
                 <col halign="left"/>

@@ -19,7 +19,8 @@
         <sidebyside>
             <paragraphs valign="top">
                 <p><md>
-                <mrow>m_{\text{tan}}&amp;=\lim_{h\to0}\frac{\fe{f}{4+h}-\fe{f}{4}}{h}</mrow>
+                <mrow>&amp;\phantom{{}={}}m_{\text{tan}}</mrow>
+                <mrow>&amp;=\lim_{h\to0}\frac{\fe{f}{4+h}-\fe{f}{4}}{h}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{\sqrt{4+h}-\sqrt{4}}{h}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\left(\frac{\sqrt{4+h}-2}{h}\cdot\frac{\sqrt{4+h}+2}{\sqrt{4+h}+2}\right)</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{4+h-4}{h\left(\sqrt{4+h}+2\right)}</mrow>
@@ -40,7 +41,7 @@
                                  xtick = {-2,0,...,10},
                                  ytick = {-2,0,...,10},
                                  minor xtick = {-2,-1,...,11},
-                                 minor ytick = {-2,-1,...,-11},
+                                 minor ytick = {-2,-1,...,11},
                                  legend entries = {$y=\fe{f}{x}$,{tangent line}},]
                         \addplot+[variable=t,
                             domain=0:3.25,
@@ -68,41 +69,44 @@
     <exercises>
         <exercisegroup cols="2">
             <introduction>
-                <p>Consider the function <m>g</m> given by <m>\fe{g}{x}=5-\sqrt{4-x}</m> graphed in <xref ref="figure-tangent-line-exercise"/>.</p>
+                <sidebyside>
+                    <paragraphs valign="top">
+                        <p>Consider the function <m>g</m> given by <m>\fe{g}{x}=5-\sqrt{4-x}</m> graphed in <xref ref="figure-tangent-line-exercise"/>.</p>
+                    </paragraphs>
 
-                <figure xml:id="figure-tangent-line-exercise">
-                    <caption><m>y=\fe{g}{x}</m> and its tangent line at <m>x=3</m></caption>
-                    <image>
-                        <latex-image-code>
-                        <![CDATA[\begin{tikzpicture}
-                        \begin{axis}[xmin=-7,
-                                     xmax=7,
-                                     ymin=-2,
-                                     ymax=12,
-                                     xtick = {-6,-4,...,6},
-                                     ytick = {-2,0,...,10},
-                                     minor xtick = {-7,-6,...,7},
-                                     minor ytick = {-2,-1,...,12},
-                                     legend entries = {$y=\fe{g}{x}$,{tangent line}}]
-                            \addplot+[variable=t,
-                                domain=5:1.8,
-                                ->,
-                            ]({4-(5-t)^2},{t});
-                            \addplot+[
-                                domain=-6.8:6.8,
-                                <->,
-                            ]{2.5+x/2};
-                            \addplot[
-                                soldot
-                            ]coordinates{
-                                (4,5)
-                                (3,4)};
-                        \end{axis}
-                        \end{tikzpicture}]]>
-                        </latex-image-code>
-                    </image>
-                </figure>
-
+                    <figure xml:id="figure-tangent-line-exercise">
+                        <caption><m>y=\fe{g}{x}</m> and its tangent line at <m>x=3</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xmin=-7,
+                                         xmax=7,
+                                         ymin=-2,
+                                         ymax=12,
+                                         xtick = {-6,-4,...,6},
+                                         ytick = {-2,0,...,10},
+                                         minor xtick = {-7,-6,...,7},
+                                         minor ytick = {-2,-1,...,12},
+                                         legend entries = {$y=\fe{g}{x}$,{tangent line}}]
+                                \addplot+[variable=t,
+                                    domain=5:1.8,
+                                    ->,
+                                ]({4-(5-t)^2},{t});
+                                \addplot+[
+                                    domain=-6.8:6.8,
+                                    <->,
+                                ]{2.5+x/2};
+                                \addplot[
+                                    soldot
+                                ]coordinates{
+                                    (4,5)
+                                    (3,4)};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
             </introduction>
             <exercise xml:id="exercise-tangent-line">
                 <statement>

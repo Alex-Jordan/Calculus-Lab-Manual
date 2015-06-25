@@ -17,9 +17,9 @@
         <statement>
             <p>The function <m>f</m> is <term>continuous at the number <m>a</m></term> if and only if <m>\lim\limits_{x\to a}\fe{f}{x}=\fe{f}{a}</m>.</p>
 
-            <p>There are three ways that the defining property can fail to be satisfied at a given value of <m>a</m>. To facilitate exploration of these three manner of failure, we can break the defining property into a spectrum of three properties.</p>
+            <p>There are three ways that the defining property can fail to be satisfied at a given value of <m>a</m>. To facilitate exploration of these three manners of failure, we can separate the defining property into three sub-properties.</p>
 
-            <ol cols="3">
+            <ol>
                <li xml:id="fofa-is-defined"><m>\fe{f}{a}</m> must be defined</li>
                <li xml:id="limfofx-is-defined"><m>\lim\limits_{x\to a}\fe{f}{x}</m> must exist</li>
                <li xml:id="limit-equals-value"><m>\lim\limits_{x\to a}\fe{f}{x}</m> must equal <m>\fe{f}{a}</m></li>
@@ -35,7 +35,7 @@
             <introduction>
                 <sidebyside>
                     <paragraphs valign="top">
-                        <p>These questions refer to the function in <xref ref="definition-continuity"/>.</p>
+                        <p>These questions refer to the function in <xref ref="figure-discontinuities"/>.</p>
                     </paragraphs>
                     <figure xml:id="figure-discontinuities">
                         <image>

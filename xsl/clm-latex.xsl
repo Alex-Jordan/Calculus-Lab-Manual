@@ -12,6 +12,7 @@
 <xsl:param name="latex.font.size" select="'12pt'" />
 <xsl:param name="exercise.backmatter.answer" select="'no'" />
 <xsl:param name="exercise.backmatter.hint" select="'no'" />
+<xsl:param name="exercise.text.hint" select="'no'" />
 <xsl:param name="exercise.backmatter.solution" select="'yes'" />
 <xsl:param name="latex.preamble.early" select="document('latex.preamble.xml')//latex-preamble-early" />
 <xsl:param name="latex.preamble.late" select="document('latex.preamble.xml')//latex-preamble-late" />

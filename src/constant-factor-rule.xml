@@ -38,7 +38,7 @@
             </tabular>
         </table>
     <exercises>
-        <exercisegroup cols="3" by="row">
+        <exercisegroup cols="2">
             <introduction>
                 <p>Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure to use the appropriate name for each derivative.</p>
             </introduction>
