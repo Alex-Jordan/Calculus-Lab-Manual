@@ -104,6 +104,23 @@
         </exercise>
         <exercise>
             <statement>
+                <p>For the curve <m>x\fe{\sin}{xy}=y</m> plotted in <xref ref="figure-crazy-implicit-supplement"/>, find the slope of the tangent line at <m>\point{\sqrt{\sfrac{\pi}{3}}}{\sqrt{\sfrac{\pi}{12}}}</m>.</p>
+            </statement>
+            <solution>
+                <p>In the previous exercise, we calculated that <m>\lz{y}{x}=\frac{\fe{\sin}{xy}+xy\fe{\cos}{xy}}{1-x^2\fe{\cos}{xy}}</m>. So <md>
+                <mrow>\lzoa{y}{x}{\point{\sqrt{\sfrac{\pi}{3}}}{\sqrt{\sfrac{\pi}{12}}}}&amp;=\frac{\fe{\sin}{\sqrt{\sfrac{\pi}{3}}\sqrt{\sfrac{\pi}{12}}}+\sqrt{\sfrac{\pi}{3}}\sqrt{\sfrac{\pi}{12}}\fe{\cos}{\sqrt{\sfrac{\pi}{3}}\sqrt{\sfrac{\pi}{12}}}}{1-\sqrt{\sfrac{\pi}{3}}^2\fe{\cos}{\sqrt{\sfrac{\pi}{3}}\sqrt{\sfrac{\pi}{12}}}}</mrow>
+                <mrow>&amp;=\frac{\fe{\sin}{\sfrac{\pi}{6}}+\sfrac{\pi}{6}\fe{\cos}{\sfrac{\pi}{6}}}{1-\sfrac{\pi}{3}\fe{\cos}{\sfrac{\pi}{6}}}</mrow>
+                <mrow>&amp;=\frac{\sfrac{1}{2}+\sfrac{\pi}{6}\cdot\sfrac{\sqrt{3}}{2}}{1-\sfrac{\pi}{3}\cdot\sfrac{\sqrt{3}}{2}}</mrow>
+                <mrow>&amp;=\frac{\sfrac{1}{2}+\sfrac{\pi\sqrt{3}}{12}}{1-\sfrac{\pi\sqrt{3}}{6}}</mrow>
+                <mrow>&amp;=\frac{6+\pi\sqrt{3}}{12-2\pi\sqrt{3}}</mrow>
+                </md></p>
+            </solution>
+            <answer>
+                <p><m>\frac{6+\pi\sqrt{3}}{12-2\pi\sqrt{3}}</m></p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
                 <p>Solutions to the equation <m>\fe{\ln}{x^2y^2}=x+y</m> are graphed in <xref ref="figure-ln-implicit-supplement"/>.</p>
 
                 <sidebyside>

@@ -24,11 +24,11 @@
                 <cell>Derivative</cell>
             </row>
             <row bottom="minor">
-                <cell><m>y=\frac{4x^3}{\fe{\ln}{x}}</m></cell>
+                <cell><m>y=\dfrac{4x^3}{\fe{\ln}{x}}</m></cell>
                 <cell><m>\begin{aligned}\lz{y}{x}&amp;=\frac{\lzoo{x}{4x^3}\cdot\fe{\ln}{x}-4x^3\cdot\lzoo{x}{\fe{\ln}{x}}}{\left[\fe{\ln}{x}\right]^2}\\&amp;=\frac{12x^2\cdot\fe{\ln}{x}-4x^3\cdot\frac{1}{x}}{\left[\fe{\ln}{x}\right]^2}\\&amp;=\frac{12x^2\fe{\ln}{x}-4x^2}{\left[\fe{\ln}{x}\right]^2}\end{aligned}</m></cell>
             </row>
             <row bottom="major">
-                <cell><m>V=\frac{\fe{\csc}{t}}{\fe{\tan}{t}}</m></cell>
+                <cell><m>V=\dfrac{\fe{\csc}{t}}{\fe{\tan}{t}}</m></cell>
                 <cell><m>\begin{aligned}\lz{V}{t}&amp;=\frac{\lzoo{t}{\fe{\csc}{t}}\cdot\fe{\tan}{t}-\fe{\csc}{t}\cdot\lzoo{t}{\fe{\tan}{x}}}{\fe{\tan^2}{t}}\\&amp;=\frac{-\fe{\csc}{t}\fe{\cot}{t}\fe{\tan}{t}-\fe{\csc}{t}\fe{\sec^2}{t}}{\fe{\tan^2}{t}}\\&amp;=\frac{-\fe{\csc}{t}\left(1+\fe{\sec^2}{t}\right)}{\fe{\tan^2}{t}}\end{aligned}</m></cell>
             </row>
         </tabular>
@@ -36,7 +36,7 @@
     </table>
 
     <exercises>
-        <exercisegroup cols="4">
+        <exercisegroup cols="2">
             <introduction>
                 <p>Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative. In the last problem, <m>G</m>, <m>m_1</m>, and <m>m_2</m> are constants.</p>
             </introduction>

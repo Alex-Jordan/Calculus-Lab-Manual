@@ -12,39 +12,46 @@
     <exercises>
         <exercisegroup>
             <introduction>
-                <p>The sine and cosine function are called <term>circular trigonometric functions</term> because for any given value of <m>t</m> the point <m>\point{\fe{\cos}{t}}{\fe{\sin}{t}}</m> lies on the circle with equation <m>x^2+y^2=1</m>. And the origin, <m>\point{\fe{\cos}{t}}{\fe{\sin}{t}}</m>, and either <m>\point{\fe{\cos}{t}}{0}</m> or <m>\point{0}{\fe{\sin}{t}}</m> define a right triangle.</p>
                 <sidebyside>
-                    <figure width="40%">
+                    <paragraphs valign="top">
+                        <p>The sine and cosine function are called <term>circular trigonometric functions</term> because for any given value of <m>t</m> the point <m>\point{\fe{\cos}{t}}{\fe{\sin}{t}}</m> lies on the circle with equation <m>x^2+y^2=1</m>. And the origin, <m>\point{\fe{\cos}{t}}{\fe{\sin}{t}}</m>, and either <m>\point{\fe{\cos}{t}}{0}</m> or <m>\point{0}{\fe{\sin}{t}}</m> define a right triangle.</p>
+                    </paragraphs>
+                    <figure valign="top">
                         <caption><m>\point{\fe{\cos}{t}}{\fe{\sin}{t}}</m> on the circle <m>x^2+y^2=1</m></caption>
                             <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={-3,-2,...,3},ytick={-3,-2,...,3},unit vector ratio*=1 1 1, clip=false]
-                                \addplot[domain=0:360,-,variable=t]({cos(t)},{sin(t)});
+                            \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={9},ytick={9},unit vector ratio*=1 1 1, clip=false]
+                                \addplot[pccplot,domain=0:360,-,variable=t]({cos(t)},{sin(t)});
                                 \addplot[-] coordinates {(0,0) (0.8,0) (0.8,0.6) (0,0)};
-                                \addplot[mark=*] coordinates {(0.8,0.6)} node[pin=80:{$(\fe{\cos}{t},\fe{\sin}{t})$}]{} ;
-                            \end{axis}
-                            \end{tikzpicture}]]>
-                            </latex-image-code>
-                        </image>
-                    </figure>
-                    <figure width="40%">
-                        <caption><m>\point{\fe{\cosh}{t}}{\fe{\sinh}{t}}</m> on the circle <m>x^2-y^2=1</m></caption>
-                            <image>
-                            <latex-image-code>
-                            <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={-3,-2,...,3},ytick={-3,-2,...,3},unit vector ratio*=1 1 1, clip=false]
-                                \addplot[domain=-1.76275:1.76275,-,variable=t]({(exp(t)+exp(-t))/2},{(exp(t)-exp(-t))/2});
-                                \addplot[domain=-1.76275:1.76275,-,variable=t]({-(exp(t)+exp(-t))/2},{-(exp(t)-exp(-t))/2});
-                                \addplot[-] coordinates {(0,0) (2,0) (2,1.73205) (0,0)};
-                                \addplot[mark=*] coordinates {(2,1.73205)} node[pin=-60:{$(\fe{\cosh}{t},\fe{\sinh}{t})$}]{} ;
+                                \addplot[mark=*] coordinates {(0.8,0.6)} node[pin={$(\fe{\cos}{t},\fe{\sin}{t})$}]{} ;
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
                     </figure>
                 </sidebyside>
-                <p>There are analogous functions called <term>hyperbolic sine</term> and <term>hyperbolic cosine</term>.  As you might suspect, these functions generate points that lie on a hyperbola; specifically, for all values of <m>t</m> the point <m>\point{\fe{\cosh}{t}}{\fe{\sinh}{t}}</m> lies on the hyperbola <m>x^2-y^2=1</m>.  It turns out that there are formulas for these hyperbolic trigonometric functions in terms of functions we already know.  Specifically:<md><mrow>\fe{\cosh}{t}&amp;=\frac{e^{t}+e^{-t}}{2}&amp;\fe{\sinh}{t}&amp;=\frac{e^{t}-e^{-t}}{2}</mrow></md></p> 
+                <sidebyside>
+                    <paragraphs valign="top"> 
+                        <p>There are analogous functions called <term>hyperbolic sine</term> and <term>hyperbolic cosine</term>.  As you might suspect, these functions generate points that lie on a hyperbola; specifically, for all values of <m>t</m> the point <m>\point{\fe{\cosh}{t}}{\fe{\sinh}{t}}</m> lies on the hyperbola <m>x^2-y^2=1</m>.</p>
+                    </paragraphs>
+                    <figure valign="top">
+                        <caption><m>\point{\fe{\cosh}{t}}{\fe{\sinh}{t}}</m> on the hyperbola <m>x^2-y^2=1</m></caption>
+                            <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={9},ytick={9},unit vector ratio*=1 1 1, clip=false]
+                                \addplot[pccplot,domain=-1.76275:1.76275,variable=t]({(exp(t)+exp(-t))/2},{(exp(t)-exp(-t))/2});
+                                \addplot[pccplot,domain=-1.76275:1.76275,variable=t]({-(exp(t)+exp(-t))/2},{-(exp(t)-exp(-t))/2});
+                                \addplot[-] coordinates {(0,0) (2,0) (2,1.73205) (0,0)};
+                                \addplot[mark=*] coordinates {(2,1.73205)} node[pin={$(\fe{\cosh}{t},\fe{\sinh}{t})$}]{} ;
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
+                <p>It turns out that there are formulas for these hyperbolic trigonometric functions in terms of functions we already know.  Specifically:<md><mrow>\fe{\cosh}{t}&amp;=\frac{e^{t}+e^{-t}}{2}&amp;\fe{\sinh}{t}&amp;=\frac{e^{t}-e^{-t}}{2}</mrow></md></p> 
             </introduction>
             <exercise>
                 <statement>
@@ -346,7 +353,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>State each local minimum point and local maximum point on <m>k</m>.</p>
+                    <p>State each local minimum and maximum point on <m>k</m>.</p>
                 </statement>
                 <solution>
                     <p>The local minimum points on <m>k</m> are <m>\point{-8}{-878}</m> and <m>\point{8}{878}</m>.  The only local maximum point on <m>k</m> is <m>\point{0}{0}</m>.</p>
@@ -422,7 +429,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>State each local minimum point and local maximum point on <m>f</m>.</p>
+                    <p>State each local minimum and maximum point on <m>f</m>.</p>
                 </statement>
                 <solution>
                     <p>The local minimum points on <m>f</m> are <m>\point{0}{1}</m>, <m>\point{\frac{\pi}{2}}{1}</m>, and <m>\point{\frac{3\pi}{2}}{-1}</m>.  The local maximum points on <m>f</m> are <m>\point{\frac{\pi}{6}}{\frac{5}{4}}</m>, <m>\point{\frac{5\pi}{6}}{\frac{5}{4}}</m>, and <m>\point{2\pi}{0}</m>.</p>
@@ -506,13 +513,13 @@
                 <p>inflection point at <m>\point{-18}{\frac{1}{648}}</m></p>
             </answer>
         </exercise>
-        <exercisegroup cols="3">
+        <exercisegroup cols="2" by="row">
             <introduction>
                 <p>For each of the following functions build increasing/decreasing tables and concavity tables and then state all local minimum points, local maximum points, and inflection points on the function.  Also determine and state all horizontal asymptotes and vertical asymptotes for the function.   Finally, draw a detailed sketch of the function.</p>
             </introduction>
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{x}=\frac{x-3}{(x+2)^2}</m></p>
+                    <p><m>\fe{f}{x}=\dfrac{x-3}{(x+2)^2}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -662,7 +669,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{k}{x}=\frac{(x-4)^2}{x+3}</m></p>
+                    <p><m>\fe{k}{x}=\dfrac{(x-4)^2}{x+3}</m></p>
                 </statement>
                 <solution>
                     <p><md>

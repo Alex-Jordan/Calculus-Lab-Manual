@@ -41,12 +41,12 @@
                         <caption><m>\fe{\sd{y}}{x}=\frac{2\left(x+\sqrt{3}\right)\left(x-\sqrt{3}\right)}{(x+3)^5}</m></caption> 
                         <tabular top="major">
                             <col halign="center"/>
-                            <col halign="center"/>
-                            <col halign="center"/>
+                            <col halign="1.5in"/>
+                            <col halign="1.5in"/>
                             <row bottom="medium">
                                 <cell>Interval</cell>
-                                <cell>Sign of <m>\sd{y}</m></cell>
-                                <cell>Behavior of <m>y</m></cell>
+                                <cell halign="center">Sign of <m>\sd{y}</m></cell>
+                                <cell halign="center">Behavior of <m>y</m></cell>
                             </row>
                             <row bottom="minor">
                                 <cell><m>\ointerval{-\infty}{-3}</m></cell>
@@ -83,7 +83,7 @@
                 </statement>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="2">
+        <exercisegroup>
             <introduction>
                 <p>Perform each of the following for the functions in <xref autoname="plural" ref="exercise-make-second-derivative-table-first"/><ndash/><xref autoname="no" ref="exercise-make-second-derivative-table-last"/>.</p>
                 <ul> 

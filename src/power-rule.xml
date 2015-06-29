@@ -17,27 +17,26 @@
     <table xml:id="table-power-rule">
         <caption>Examples of the Power Rule</caption>
         <tabular top="major">
-            <col halign="center"/>
-            <col halign="center"/>
-            <col halign="center"/>
-            <row bottom="medium">
+            <col halign="left" right="minor"/>
+            <col halign="left" right="minor"/>
+            <col halign="left" right="minor"/>
+            <col halign="left"/>
+            <row bottom="minor">
                 <cell>Given Function</cell>
-                <cell>You should <q>see</q></cell>
-                <cell>You should write</cell>
-            </row>
-            <row>
                 <cell><m>y=x^7</m></cell>
-                <cell></cell>
-                <cell><m>\lz{y}{x}=7x^6</m></cell>
-            </row>
-            <row>
                 <cell><m>\fe{f}{t}=\sqrt[3]{t^7}</m></cell>
+                <cell><m>z=\frac{1}{y^5}</m></cell>
+            </row>
+            <row bottom="minor">
+                <cell>You should <q>see</q></cell>
+                <cell></cell>
                 <cell><m>\fe{f}{t}=t^{\sfrac{7}{3}}</m></cell>
-                <cell><m>\fe{\fd{f}}{t}=\frac{7}{3}t^{\sfrac{4}{3}}</m></cell>
+                <cell><m>z=y^{-5}</m></cell>
             </row>
             <row bottom="major">
-                <cell><m>z=\frac{1}{y^5}</m></cell>
-                <cell><m>z=y^{-5}</m></cell>
+                <cell>You should write</cell>
+                <cell><m>\lz{y}{x}=7x^6</m></cell>
+                <cell><m>\fe{\fd{f}}{t}=\frac{7}{3}t^{\sfrac{4}{3}}</m></cell>
                 <cell><m>\lz{z}{y}=-5y^{-6}</m></cell>
             </row>
         </tabular>

@@ -1,5 +1,5 @@
 rm *.html
 xsltproc -xinclude ../xsl/clm-html.xsl clm.xml
 rm draft.*
-xsltproc -xinclude ../xsl/clm-latex.xsl clm.xml >> draft.tex
+xsltproc -xinclude ../xsl/clm-print.xsl clm.xml >> draft.tex
 

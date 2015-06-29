@@ -15,27 +15,26 @@
     <table xml:id="table-constant-divisor-rule">
         <caption>Examples of the Constant Divisor Rule</caption>
         <tabular top="major">
+            <col halign="center" right="minor"/>
+            <col halign="center" right="minor"/>
+            <col halign="center" right="minor"/>
             <col halign="center"/>
-            <col halign="center"/>
-            <col halign="center"/>
-            <row bottom="medium">
+            <row bottom="minor">
                 <cell>Given Function</cell>
-                <cell>You should <q>see</q></cell>
-                <cell>You should write</cell>
-            </row>
-            <row>
                 <cell><m>\fe{f}{x}=\frac{x^4}{8}</m></cell>
-                <cell><m>\fe{f}{x}=\frac{1}{8}x^4</m></cell>
-                <cell><m>\fe{\fd{f}}{x}=\frac{1}{2}x^3</m></cell>
-            </row>
-            <row>
                 <cell><m>y=\frac{3\fe{\tan}{\alpha}}{2}</m></cell>
+                <cell><m>z=\frac{\fe{\ln}{y}}{3}</m></cell>
+            </row>
+            <row bottom="minor">
+                <cell>You should <q>see</q></cell>
+                <cell><m>\fe{f}{x}=\frac{1}{8}x^4</m></cell>
                 <cell><m>y=\frac{3}{2}\fe{\tan}{\alpha}</m></cell>
-                <cell><m>\lz{y}{\alpha}=\frac{3}{2}\fe{\sec^2}{\alpha}</m></cell>
+                <cell><m>z=\frac{1}{3}\fe{\ln}{y}</m></cell>
             </row>
             <row bottom="major">
-                <cell><m>z=\frac{\fe{\ln}{y}}{3}</m></cell>
-                <cell><m>z=\frac{1}{3}\fe{\ln}{y}</m></cell>
+                <cell>You should write</cell>
+                <cell><m>\fe{\fd{f}}{x}=\frac{1}{2}x^3</m></cell>
+                <cell><m>\lz{y}{\alpha}=\frac{3}{2}\fe{\sec^2}{\alpha}</m></cell>
                 <cell><m>\lz{z}{y}=\frac{1}{3y}</m></cell>
             </row>
         </tabular>

@@ -174,7 +174,7 @@
                 </answer>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="3" by="row">
+        <exercisegroup cols="2">
             <introduction>
                  <p>Decide whether or not it is necessary to use the chain rule when finding the derivative with respect to <m>x</m> of each of the following functions.</p> 
             </introduction>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+
+<section xml:id="section-diagrams-for-related-rates">
+    <title>Diagrams for  Related Rates</title>
+    <p>A particular challenge when working most related rates problems is identifying the quantity-variables. For example, when working a problem that invloves a right triangle, there are six potential quantity-variables (the lengths of the three sides, the measurements of the two acute angles, and the area). In each related rates problem involving a right triangle, at least two of these measurements must be quantity-variables, or you will not end up with two (or more) rates to relate!</p>
+    <example>
+        <p>
+            <blockquote>A small drone is flying straight upward at the rate of <quantity><mag>0.88</mag><unit base="foot"/><per base="second"/></quantity>. The drone is tethered to the ground at a point that lies <quantity><mag>400</mag><unit base="foot"/></quantity> west of the launch point of the drone. Assuming that the ground is perfectly level, determine the rate at which the angle of elevation from the tether point to the drone increases at the moment the drone is <quantity><mag>300</mag><unit base="foot"/></quantity> above ground.</blockquote>
+        </p>
+    </example>
+
+    <exercises>
+        <exercisegroup>
+            <introduction>
+                <p>Three related rates problems are stated below. Each of the problems can be modeled using a right triangle. The sole task in this problem is to identify which pieces of the triangle correspond to quantity-variables and which piece of the triangle (if any) remains constant as the other pieces change.</p>
+                <p>For each problem, you need to identify which two or three pieces of the triangle correspond to quantity-variables and which pieces remain constant or are not relevant. For each problem, draw a right triangle and label the pieces appropriately (finally a <acro>D</acro> for Diagram). When you are done, any given triangle should either have two pieces labeled as variables and one piece labeled with a constant value or three pieces labeled as variables.</p>
+            </introduction>
+            <exercise xml:id="exercise-triangle-first">
+                <statement>
+                    <p>A jet is climbing at a constant airspeed of <quantity><mag>430</mag><unit base="mileperhour"/></quantity> and at a constant angle of elevation of <quantity><mag>12</mag><unit base="degree"/></quantity>. At what rate is the elevation of the jet changing when the jet is <quantity><mag>2640</mag><unit base="foot"/></quantity> above the ground? (Assume that the ground elevation below the jet's path does not change as the jet makes its climb.)</p>
+                </statement>
+                <todo>Work in solution</todo>
+            </exercise>
+            <exercise>
+                <statement><todo>adjectival form for quantities</todo>
+                    <p>A <quantity><mag>17</mag><unit base="foot"/></quantity> ladder is propped against a very tall wall but the top of the ladder is slipping down the wall. At the moment the top of the ladder is <quantity><mag>12</mag><unit base="foot"/></quantity> above the ground it is slipping at the rate of <quantity><mag>0.2</mag><unit base="foot"/><per base="second"/></quantity>. At what rate is the distance between the foot of the ladder and the wall changing at that moment?</p>
+                </statement>
+            </exercise>
+            <exercise xml:id="exercise-triangle-last">
+                <statement><todo>times of day</todo>
+                    <p>In Kansas, Highway A runs due north-south for <quantity><mag>125</mag></quantity> miles and Highway B runs dues east-west for <quantity><mag>222</mag></quantity> miles. The elevation of both highways is constantly <quantity><mag>725</mag></quantity> feet their entire lengths. The highways intersect at a point exactly halfway through their runs. One Tuesday a car is travelling east on Highway B at the constant speed of <quantity><mag>76</mag><unit base="mileperhour"/></quantity> and a truck is traveling north on Highway A at a constant speed of <quantity><mag>84</mag><unit base="mileperhour"/></quantity>. The car passes through the point of intersection at 4:12 pm and the truck passes through the point of intersection at 4:17 pm. At what rate is the distance between the two vehicles changing at 4:27 that afternoon? Assume that the speeds of the car and truck do not vary at all between 4:10 pm and 4:30 pm.</p>
+                </statement>
+            </exercise>
+        </exercisegroup>
+        <exercise>
+            <statement>
+                <p>Go ahead and finish the three problems stated in <xref autoname="plural" ref="exercise-triangle-first"/><ndash/><xref autoname="no" ref="exercise-triangle-last"/>. Remember to complete each step in the problems solving process.</p>
+                <ol>
+                    <li>Draw a properly labeled variable diagram. (<acro>D</acro>) Note that you completed this step while working <xref autoname="plural" ref="exercise-triangle-first"/><ndash/><xref autoname="no" ref="exercise-triangle-last"/>.</li>
+                    <li>Make a variable definition table. Include each variable type (quantity, rate, and time). Include the unit for each variable (<acro>R</acro>)</li>
+                    <li>Write down an equation that relates the two quantity-variables. (<acro>E</acro>)</li>
+                    <li>Differentiate both sides of the equation you just wrote with respect to <m>t</m>. Simplify the result. This equation is called the <term>related rates equation</term>. (<acro>D</acro>)</li>
+                    <li>Write an orientation sentence or phrase and create a summary table for your quantity and rate variables. (preparing for <acro>S</acro>)</li>
+                    <li>Substitute the known values into the related rates equation and solve for the unknown rate. (<acro>S</acro>)</li>
+                    <li>Write a conclusion.</li>
+                </ol> 
+            </statement>
+        </exercise>
+    </exercises>
+
+</section>

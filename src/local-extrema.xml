@@ -55,7 +55,7 @@
                 </sidebyside>
             </statement>
         </exercise>
-        <exercisegroup cols="2">
+        <exercisegroup>
             <introduction>
                 <sidebyside>
                     <paragraphs valign="top">
@@ -103,33 +103,33 @@
                 </statement>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="2">
+        <exercisegroup>
             <introduction>
                 <p>Decide whether each of the following statements is <em>True</em> or <em>False</em>.</p> 
             </introduction>
             <exercise>
                 <statement>
-                    <p>A function always has a local extreme point at each of its critical numbers.</p> 
+                    <p>True or False? A function always has a local extreme point at each of its critical numbers.</p> 
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>If the point <m>\point{t_1}{\fe{h}{t_1}}</m> is a local minimum point on <m>h</m>, then <m>t_1</m> must be a critical number of <m>h</m>.</p> 
+                    <p>True or False? If the point <m>\point{t_1}{\fe{h}{t_1}}</m> is a local minimum point on <m>h</m>, then <m>t_1</m> must be a critical number of <m>h</m>.</p> 
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>If <m>\fe{\fd{g}}{2.7}=0</m>, then <m>g</m> must have a local extreme point at <m>2.7</m>.</p> 
+                    <p>True or False? If <m>\fe{\fd{g}}{2.7}=0</m>, then <m>g</m> must have a local extreme point at <m>2.7</m>.</p> 
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>If <m>\fe{\fd{g}}{2.7}=0</m>, then <m>2.7</m> must be a critical number of <m>g</m>.</p> 
+                    <p>True or False? If <m>\fe{\fd{g}}{2.7}=0</m>, then <m>2.7</m> must be a critical number of <m>g</m>.</p> 
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>If <m>\fe{\fd{g}}{9}</m> does not exist, then <m>9</m> must be a critical number of <m>g</m>.</p> 
+                    <p>True or False? If <m>\fe{\fd{g}}{9}</m> does not exist, then <m>9</m> must be a critical number of <m>g</m>.</p> 
                 </statement>
             </exercise>
         </exercisegroup>

@@ -15,43 +15,38 @@
     <exercises>
         <exercise>
             <statement>
-                <p>The first derivative of <m>\fe{f}{x}=x^3-21x^2+135x-24</m> is <m>\fe{\fd{f}}{x}=3(x-5)(x-9)</m>.</p>
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p>The critical numbers of <m>f</m> are trivially shown to be <m>5</m> and <m>9</m>. Copy <xref ref="table-polynomial-sign-table"/> onto your paper and fill in the missing information.  Then state the local minimum and maximum points on <m>f</m>.  Specifically address both minimum and maximum points even if one and/or the other does not exist.  Remember that points on the plane are represented by ordered pairs. <em>Make sure that you state points on <m>f</m> and not <m>\fd{f}</m>!</em></p>
-                    </paragraphs>
-                    <table xml:id="table-polynomial-sign-table" valign="bottom">
-                        <caption><m>\fe{\fd{f}}{x}=3(x-5)(x-9)</m></caption>
-                        <tabular top="major">
-                            <col halign="center"/>
-                            <col halign="center"/>
-                            <col halign="center"/>
-                            <row bottom="medium">
-                                <cell>Interval</cell>
-                                <cell>Sign of <m>\fd{f}</m></cell>
-                                <cell>Behavior of <m>f</m></cell>
-                            </row>
-                            <row bottom="minor">
-                                <cell><m>\ointerval{-\infty}{5}</m></cell>
-                                <cell><m>\phantom{\text{negative}}</m></cell>
-                                <cell><m>\phantom{\text{decreasing}}</m></cell>
-                            </row>
-                            <row bottom="minor">
-                                <cell><m>\ointerval{5}{9}</m></cell>
-                                <cell/>
-                                <cell/>
-                            </row>
-                            <row bottom="major">
-                                <cell><m>\ointerval{9}{\infty}</m></cell>
-                                <cell/>
-                                <cell/>
-                            </row>
-                        </tabular>
-                    </table> 
-                </sidebyside>
+                <p>The first derivative of <m>\fe{f}{x}=x^3-21x^2+135x-24</m> is <m>\fe{\fd{f}}{x}=3(x-5)(x-9)</m>. The critical numbers of <m>f</m> are trivially shown to be <m>5</m> and <m>9</m>. Copy <xref ref="table-polynomial-sign-table"/> onto your paper and fill in the missing information.  Then state the local minimum and maximum points on <m>f</m>.  Specifically address both minimum and maximum points even if one and/or the other does not exist.  Remember that points on the plane are represented by ordered pairs. <em>Make sure that you state points on <m>f</m> and not <m>\fd{f}</m>!</em></p>
+                <table xml:id="table-polynomial-sign-table" valign="bottom">
+                    <caption><m>\fe{\fd{f}}{x}=3(x-5)(x-9)</m></caption>
+                    <tabular top="major">
+                        <col halign="center"/>
+                        <col halign="1.5in"/>
+                        <col halign="1.5in"/>
+                        <row bottom="medium">
+                            <cell>Interval</cell>
+                            <cell halign="center">Sign of <m>\fd{f}</m></cell>
+                            <cell halign="center">Behavior of <m>f</m></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{-\infty}{5}</m></cell>
+                            <cell><m>\phantom{\text{negative}}</m></cell>
+                            <cell><m>\phantom{\text{decreasing}}</m></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ointerval{5}{9}</m></cell>
+                            <cell/>
+                            <cell/>
+                        </row>
+                        <row bottom="major">
+                            <cell><m>\ointerval{9}{\infty}</m></cell>
+                            <cell/>
+                            <cell/>
+                        </row>
+                    </tabular>
+                </table> 
             </statement>
         </exercise>
-        <exercisegroup cols="2">
+        <exercisegroup>
             <introduction>
                 <p>The first derivative of the function <m>\fe{g}{t}=\frac{\sqrt{t-4}}{(t-1)^2}</m> is <m>\fe{\fd{g}}{t}=\frac{-3(t-5)}{2(t-1)^3\sqrt{t-4}}</m>.</p>
             </introduction>
@@ -68,12 +63,12 @@
                         <caption><m>\fe{\fd{g}}{t}=\frac{-3(t-5)}{2(t-1)^3\sqrt{t-4}}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
-                            <col halign="center"/>
-                            <col halign="center"/>
+                            <col halign="1.5in"/>
+                            <col halign="1.5in"/>
                             <row bottom="medium">
                                 <cell>Interval</cell>
-                                <cell>Sign of <m>\fd{g}</m></cell>
-                                <cell>Behavior of <m>g</m></cell>
+                                <cell halign="center">Sign of <m>\fd{g}</m></cell>
+                                <cell halign="center">Behavior of <m>g</m></cell>
                             </row>
                             <row bottom="minor">
                                 <cell><m>\ointerval{4}{5}</m></cell>
@@ -105,7 +100,7 @@
                 </statement>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="2">
+        <exercisegroup>
             <introduction>
                 <p>The first derivative of the function <m>\fe{k}{x}=\frac{\sqrt[3]{(x-2)^2}}{x-1}</m> is <m>\fe{\fd{k}}{t}=\frac{4-x}{3(x-1)^2\sqrt[3]{x-2}}</m>.</p>
             </introduction>
@@ -122,12 +117,12 @@
                         <caption><m>\fe{\fd{k}}{t}=\frac{4-x}{3(x-1)^2\sqrt[3]{x-2}}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
-                            <col halign="center"/>
-                            <col halign="center"/>
+                            <col halign="1.5in"/>
+                            <col halign="1.5in"/>
                             <row bottom="medium">
                                 <cell>Interval</cell>
-                                <cell>Sign of <m>\fd{k}</m></cell>
-                                <cell>Behavior of <m>k</m></cell>
+                                <cell halign="center">Sign of <m>\fd{k}</m></cell>
+                                <cell halign="center">Behavior of <m>k</m></cell>
                             </row>
                             <row bottom="minor">
                                 <cell><m>\ointerval{-\infty}{1}</m></cell>
@@ -180,7 +175,7 @@
             </exercise>
             <exercise xml:id="exercise-make-sign-table-last">
                 <statement>
-                    <p><m>\fe{F}{x}=\frac{x^2}{\fe{\ln}{x}}</m></p>
+                    <p><m>\fe{F}{x}=\dfrac{x^2}{\fe{\ln}{x}}</m></p>
                 </statement>
             </exercise>
         </exercisegroup>

@@ -367,7 +367,7 @@ formula stated above for the product of three functions.  The first application 
                 </answer>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="2">
+        <exercisegroup>
             <introduction>
                 <p>Find the first derivative with respect to <m>x</m> for each of the following functions and for each function find the equation of the tangent line at the stated value of <m>x</m>.  Make sure that you use appropriate techniques of differentiation.</p> 
             </introduction>
@@ -650,10 +650,10 @@ formula stated above for the product of three functions.  The first application 
         <exercisegroup>
             <introduction>
                 <sidebyside>
-                <paragraphs valign="top">
+                <paragraphs valign="top" width="30%">
                     <p>In <xref ref="table-functions-for-derivative-rules"/> several function and derivative values are given for the functions <m>f</m> and <m>g</m>.  The exercises that follow are based upon these two functions.</p>
                 </paragraphs>
-                <table xml:id="table-functions-for-derivative-rules" valign="top" width="65%">
+                <table xml:id="table-functions-for-derivative-rules" valign="top" width="70%">
                     <tabular top="major">
                         <col halign="right"/>
                         <col halign="right"/>

@@ -42,7 +42,7 @@
     </algorithm>
 
     <exercises>
-        <exercisegroup cols="3" by="row">
+        <exercisegroup cols="2" by="row">
             <introduction>
                 <p>Formally establish the critical numbers for each of the following functions following <algorihtm ref="algorithm-find-critical-numbers"/>.</p>
             </introduction>
@@ -77,7 +77,7 @@
                 </statement>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="2">
+        <exercisegroup cols="1">
             <introduction>
                 <p>The first derivative of the function <m>\fe{m}{x}=\frac{\sqrt{x-5}}{x-7}</m> is <m>\fe{\fd{m}}{x}=\frac{3-x}{2\sqrt{x-5}(x-7)^2}</m>.</p>
             </introduction>

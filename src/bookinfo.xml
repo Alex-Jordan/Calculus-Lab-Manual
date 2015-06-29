@@ -52,6 +52,7 @@
         %legend style={font=\tiny},
         width=0.4\textwidth,
         grid=minor,
+        grid style={dotted,gray!90},
         every node near coord/.append style={
             %font=\small
         },
@@ -64,7 +65,7 @@
     \pgfplotsset{asymptote/.style={color=gray,mark=none,line width=1pt,<->,dashed}}
     \pgfplotsset{soldot/.style={color=red,only marks,mark=*}}
     \pgfplotsset{holdot/.style={color=red,fill=white,only marks,mark=*}}
-    \pgfplotsset{blankgraph/.style={xmin=-10,xmax=10,ymin=-10,ymax=10,axis line style= {-, draw opacity=0 },axis lines=box,major tick length=0mm,xtick={-10,-9,...,10},ytick={-10,-9,...,10},grid=major,yticklabels={,,},xticklabels={,,},minor xtick=,minor ytick=,xlabel={},ylabel={}}}
+    \pgfplotsset{blankgraph/.style={xmin=-10,xmax=10,ymin=-10,ymax=10,axis line style= {-, draw opacity=0 },axis lines=box,major tick length=0mm,xtick={-10,-9,...,10},ytick={-10,-9,...,10},grid=major,yticklabels={,,},xticklabels={,,},minor xtick=,minor ytick=,xlabel={},ylabel={},width=0.75\textwidth,grid style={dotted,gray}}}
 
 
     % arrow style
@@ -75,8 +76,6 @@
     % next line is a bit more colourful
     %\pgfplotsset{framed/.style={axis background/.style ={draw=gray,fill=yellow!20,rounded corners=3ex}}}
 
-    % grid style
-    \pgfplotsset{grid style={dotted,gray!90}}
     ]]>
     </latex-image-preamble>
 

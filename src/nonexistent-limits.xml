@@ -14,7 +14,7 @@
 
     <ul>
         <li>In <xref ref="figure-first-nonexistent-limit"/> we could (correctly) write <m>\lim\limits_{x\to2}\fe{k}{x}=\infty</m>, <m>\lim\limits_{x\to2^{-}}\fe{k}{x}=\infty</m>, and <m>\lim\limits_{x\to2^{+}}\fe{k}{x}=\infty</m>.</li>
-       <li>In <xref ref="figure-middle-nonexistent-limit"/> we could (correctly) write <m>\lim\limits_{t\to4}\fe{w}{t}=-\infty</m>, <m>\lim\limits_{t\to4^{-}}\fe{w}{t}=\infty</m>, and <m>\lim\limits_{t\to4^{+}}\fe{w}{t}=-\infty</m>.</li>
+       <li>In <xref ref="figure-middle-nonexistent-limit"/> we could (correctly) write <m>\lim\limits_{t\to4}\fe{w}{t}=-\infty</m>, <m>\lim\limits_{t\to4^{-}}\fe{w}{t}=-\infty</m>, and <m>\lim\limits_{t\to4^{+}}\fe{w}{t}=-\infty</m>.</li>
        <li>In <xref ref="figure-last-nonexistent-limit"/> we could (correctly) write <m>\lim\limits_{x\to-3^{-}}\fe{T}{x}=\infty</m> and <m>\lim\limits_{x\to-3^{+}}\fe{T}{x}=-\infty</m>. There is no shorthand way of communicating the non-existence of the two sided limit <m>\lim\limits_{x\to-3}\fe{T}{x}</m>.</li>
     </ul>
 

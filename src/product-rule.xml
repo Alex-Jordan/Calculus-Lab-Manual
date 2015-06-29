@@ -43,7 +43,8 @@
         <caption/>
         <p><md>
         <mrow>&amp;\textbf{Option A}&amp;&amp;\textbf{Option B}</mrow>
-        <mrow>\fe{\fd{f}}{x}&amp;=5\left[\lzoo{x}{x^2}\cdot\fe{\ln}{x}+x^2\cdot\lzoo{x}{\fe{\ln}{x}}\right]&amp;\fe{\fd{f}}{x}&amp;=\lzoo{x}{5x^2}\cdot\fe{\ln}{x}+5x^2\cdot\lzoo{x}{\fe{\ln}{x}}</mrow>
+        <mrow>&amp;\phantom{{}={}}\fe{\fd{f}}{x}&amp;&amp;\phantom{{}={}}\fe{\fd{f}}{x}</mrow>
+        <mrow>&amp;=5\left[\lzoo{x}{x^2}\fe{\ln}{x}+x^2\lzoo{x}{\fe{\ln}{x}}\right]&amp;&amp;=\lzoo{x}{5x^2}\fe{\ln}{x}+5x^2\lzoo{x}{\fe{\ln}{x}}</mrow>
         <mrow>&amp;=5\left[2x\fe{\ln}{x}+x^2\cdot\frac{1}{x}\right]&amp;&amp;=10x\fe{\ln}{x}+5x^2\cdot\frac{1}{x}</mrow>
         <mrow>&amp;=10x\fe{\ln}{x}+5x&amp;&amp;=10x\fe{\ln}{x}+5x</mrow>
         </md></p>

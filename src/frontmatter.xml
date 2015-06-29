@@ -111,7 +111,7 @@
                         <cell><xref autoname="title" ref="section-graph-features"/><ndash/><xref autoname="title" ref="section-higher-order-derivatives"/></cell>
                         <cell><xref autoname="title" ref="functions-derivatives-antiderivatives-supplementary-exercises"/></cell>
                     </row>
-<!--                    <row bottom="medium">
+                    <row bottom="medium">
                         <cell>5</cell>
                         <cell><xref autoname="title" ref="section-antiderivatives"/><ndash/><xref autoname="title" ref="section-graphical-features-from-derivatives"/></cell>
                         <cell><xref autoname="title" ref="functions-derivatives-antiderivatives-supplementary-exercises"/></cell>
@@ -128,15 +128,15 @@
                     </row>
                     <row bottom="medium">
                         <cell>8</cell>
-                        <cell><xref autoname="title" ref="section-general-implicit-differentiation"/><ndash/><xref autoname="title" ref="section-derivatives-of-inverse-functions"/></cell>
-                        <cell></cell>
+                        <cell><xref autoname="title" ref="section-general-implicit-differentiation"/><ndash/><xref autoname="title" ref="section-logarithmic-differentiation"/></cell>
+                        <cell><xref autoname="title" ref="implicit-differentiation-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="major">
                         <cell>9 and 10</cell>
                         <cell><xref autoname="title" ref="section-motivation-for-critical-numbers"/><ndash/><xref autoname="title" ref="section-making-graphs"/></cell>
-                        <cell></cell>
+                        <cell><xref autoname="title" ref="critical-numbers-graphing-from-formulas-supplementary-exercises"/></cell>
                     </row>
--->                    </tabular> 
+                    </tabular> 
         </preface>
 
 </frontmatter>

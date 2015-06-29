@@ -83,7 +83,7 @@
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                        <caption><m>y=\fe{h}{x}</m></caption>
+                        <caption><m>y=\fe{h}{t}</m></caption>
                     </figure>
                 </sidebyside>
             </introduction>

@@ -10,7 +10,7 @@
 <section xml:id="section-difference-quotient">
     <title>The Difference Quotient</title>
 
-    <p>While it's easy to see that the formula <m>\frac{\fe{f}{x_1}-\fe{f}{x_1}}{x_1-x_0}</m> gives the slope of the line connecting two points on the function <m>f</m>, the resultant expression can at times be awkward to work with. We actually already saw that when we had to use slight-of-hand factoring in <xref ref="example-secant"/>.</p>
+    <p>While it's easy to see that the formula <m>\frac{\fe{f}{x_1}-\fe{f}{x_0}}{x_1-x_0}</m> gives the slope of the line connecting two points on the function <m>f</m>, the resultant expression can at times be awkward to work with. We actually already saw that when we had to use slight-of-hand factoring in <xref ref="example-secant"/>.</p>
 
     <p>The algebra associated with secant lines (and average velocities) can sometimes be simplified if we designate the variable <m>h</m> to be the run between the two points (or the length of the time interval). With this designation we have <m>x_1-x_0=h</m> which gives us <m>x_1=x_0+h</m>. Making these substitutions we get <xref autoname="no" ref="equation-difference-quotient"/>. The expression on the right side of <xref autoname="no" ref="equation-difference-quotient"/> is called the <term>difference quotient</term> for <m>f</m>.</p>
 
@@ -127,13 +127,13 @@
 
             <exercise>
                 <statement>
-                    <p>What, including unit, is the value of <todo>quantity</todo><m>\frac{\fe{h}{10\,\text{s}}-\fe{f}{0\,\text{s}}}{10\,\text{s}}</m> and what does this value tell you about the flight of the missile?</p>
+                    <p>What, including unit, is the value of <todo>quantity</todo><m>\frac{\fe{h}{10\,\text{s}}-\fe{h}{0\,\text{s}}}{10\,\text{s}}</m> and what does this value tell you about the flight of the missile?</p>
                 </statement>
             </exercise>
 
             <exercise>
                 <statement>
-                    <p>The velocity (<quantity><unit base="meter"/><per base="second"/></quantity>) function for the missile is <m>\fe{v}{t}=-32t+294.4</m>. What, including unit, is the value of <todo>quantity</todo><m>\frac{\fe{v}{10\,\text{s}}-\fe{v}{0\,\text{s}}}{10\,\text{s}}</m> and what does this value tell you about the flight of the missile?</p>
+                    <p>The velocity (<quantity><unit base="foot"/><per base="second"/></quantity>) function for the missile is <m>\fe{v}{t}=-32t+294.4</m>. What, including unit, is the value of <todo>quantity</todo><m>\frac{\fe{v}{10\,\text{s}}-\fe{v}{0\,\text{s}}}{10\,\text{s}}</m> and what does this value tell you about the flight of the missile?</p>
                 </statement>
             </exercise>
 

@@ -252,9 +252,9 @@
 
 <!-- A list of short answers -->
 <xsl:template match="answer-list">
-    <xsl:text>\begin{multicols}{2}&#xa;</xsl:text>
+    <!--<xsl:text>\begin{multicols}{2}&#xa;</xsl:text>-->
     <xsl:apply-templates select="//exercises" mode="answerlist" />
-    <xsl:text>\end{multicols}&#xa;</xsl:text>
+    <!--<xsl:text>\end{multicols}&#xa;</xsl:text>-->
 </xsl:template>
 <xsl:template match="exercises" mode="answerlist">
     <xsl:variable name="nonempty" select="(.//hint and $exercise.backmatter.hint='yes') or (.//answer and $exercise.backmatter.answer='yes') or (.//solution and $exercise.backmatter.solution='yes')" />
@@ -301,9 +301,7 @@
 
 <!-- GeoGebra HTML5-->
 <xsl:template match="geogebra-html5">
-    <xsl:text>{\textlangle}Use the online edition to explore a GoeGebra applet at \url{</xsl:text>
-    <xsl:value-of select="@src"/>
-    <xsl:text>}.\textrangle&#xa;</xsl:text> 
+    <xsl:text>{\textlangle}Use the online edition to explore a GoeGebra applet.\textrangle&#xa;</xsl:text> 
 </xsl:template>
 
 <!-- Overwrite table parts to use booktabs.              -->

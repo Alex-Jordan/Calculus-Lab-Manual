@@ -12,22 +12,29 @@
 
     <p>We are frequently interested in a function's <q>end behavior</q>.  That is, what is the behavior of the function as the input variable increases without bound or decreases without bound.</p>
 
-    <p>Many times a function will approach a horizontal asymptote as its end behavior.  Assuming that the horizontal asymptotei <m>y=L</m> represents the end behavior of the function <m>f</m> both as <m>x</m> increases without bound and as <m>x</m> decreases without bound, we write <m>\lim\limits_{x\to\infty}\fe{f}{x}=L</m> and <m>\lim\limits_{x\to-\infty}\fe{f}{x}=L</m>.</p>
+    <p>Many times a function will approach a horizontal asymptote as its end behavior.  If the horizontal asymptote <m>y=L</m> represents the end behavior of the function <m>f</m> both as <m>x</m> increases without bound and as <m>x</m> decreases without bound, we write <m>\lim\limits_{x\to\infty}\fe{f}{x}=L</m> and <m>\lim\limits_{x\to-\infty}\fe{f}{x}=L</m>.</p>
 
     <p>While working <xref autoname="title" ref="chapter-limits"/> you investigated strategies for formally establishing limit values as <m>x\to\infty</m> or <m>x\to-\infty</m>.  In this activity you are going to investigate a more informal strategy for determining these type limits.</p>
 
-    <p>Consider <m>\lim\limits_{x\to\infty}\frac{4x-2}{3+20x}</m>. When the value of <m>x</m> is really large, we say that the term <m>4x</m> dominates the numerator of the expression and the term <m>20x</m> dominates the denominator. We actually call those terms <term>the dominant terms</term> of the numerator and denominator.  The dominant terms are significant because when the value of <m>x</m> is really large, the other terms in the expression contribute almost nothing to the value of the expression.   That is, for really large values of <m>x</m>:<md>
-    <mrow>\frac{4x-2}{3+20x}&amp;\approx\frac{4x}{20x}</mrow>
-    <mrow>&amp;=\frac{1}{5}</mrow>
-    </md>For example, even if <m>x</m> has the paltry value of <m>1000</m>, <md>
-    <mrow>\frac{4(1000)-2}{3+20(1000)}&amp;=\frac{3998}{20003}</mrow>
-    <mrow>&amp;\approx0.19987\ldots</mrow>
-    <mrow>&amp;\approx0.2</mrow>
-    <mrow>&amp;=\frac{1}{5}</mrow>
-    </md>This tells us that <m>\lim\limits_{x\to\infty}\frac{4x-2}{3+20x}=\frac{1}{5}</m> and that <m>y=\frac{1}{5}</m> is a horizontal asymptote for the graph of <m>y=\frac{4x-2}{3+20x}</m>.</p>
+    <p>Consider <m>\lim\limits_{x\to\infty}\frac{4x-2}{3+20x}</m>. When the value of <m>x</m> is really large, we say that the term <m>4x</m> dominates the numerator of the expression and the term <m>20x</m> dominates the denominator. We actually call those terms <term>the dominant terms</term> of the numerator and denominator.  The dominant terms are significant because when the value of <m>x</m> is really large, the other terms in the expression contribute almost nothing to the value of the expression.   That is, for really large values of <m>x</m>:</p>
+    <sidebyside>
+        <paragraphs valign="top">
+            <p><md>
+            <mrow>\frac{4x-2}{3+20x}&amp;\approx\frac{4x}{20x}</mrow>
+            <mrow>&amp;=\frac{1}{5}</mrow>
+            </md></p>
+        </paragraphs>
+        <paragraphs>
+            <p>For example, even if <m>x</m> has the paltry value of <m>1000</m>, <md>
+            <mrow>\frac{4(1000)-2}{3+20(1000)}&amp;=\frac{3998}{20003}</mrow>
+            <mrow>&amp;\approx0.19987\ldots\approx\frac{1}{5}</mrow>
+            </md></p>
+        </paragraphs>
+    </sidebyside>
+    <p>This tells us that <m>\lim\limits_{x\to\infty}\frac{4x-2}{3+20x}=\frac{1}{5}</m> and that <m>y=\frac{1}{5}</m> is a horizontal asymptote for the graph of <m>y=\frac{4x-2}{3+20x}</m>.</p>
 
     <exercises>
-        <exercisegroup cols="3">
+        <exercisegroup cols="2">
             <introduction>
                 <p>The formulas used to graph <xref autoname="plural" ref="figure-match-rationals-1"/><ndash/><xref autoname="no" ref="figure-match-rationals-5"/> are given below.  Focusing first on the dominant terms of the expressions, match the formulas with the functions (<m>f_1</m> through <m>f_5</m>).</p>
             </introduction>
@@ -184,62 +191,62 @@
             </conclusion>
             <exercise>
                 <statement>
-                    <p><m>y=\frac{3x+6}{x-2}</m></p>
+                    <p><m>y=\dfrac{3x+6}{x-2}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>y=\frac{16+4x}{6+x}</m></p>
+                    <p><m>y=\dfrac{16+4x}{6+x}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>y=\frac{6x^2-6x-36}{36-3x-3x^2}</m></p>
+                    <p><m>y=\dfrac{6x^2-6x-36}{36-3x-3x^2}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>y=\frac{-2x+8}{x^2-100}</m></p>
+                    <p><m>y=\dfrac{-2x+8}{x^2-100}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>y=\frac{15}{x-5}</m></p>
+                    <p><m>y=\dfrac{15}{x-5}</m></p>
                 </statement>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="3" by="row">
+        <exercisegroup cols="2">
             <introduction>
                 <p>Use the concept of dominant terms to informally determine the value of each of the following limits.</p>
             </introduction>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to-\infty}\frac{4+x-7x^3}{14x^3+x^2+2}</m></p>
+                    <p><m>\lim\limits_{x\to-\infty}\dfrac{4+x-7x^3}{14x^3+x^2+2}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{t\to-\infty}\frac{4t^2+1}{4t^3-1}</m></p>
+                    <p><m>\lim\limits_{t\to-\infty}\dfrac{4t^2+1}{4t^3-1}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{\gamma\to\infty}\frac{8}{2\gamma^3}</m></p>
+                    <p><m>\lim\limits_{\gamma\to\infty}\dfrac{8}{2\gamma^3}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to\infty}\frac{(3x+1)(6x-2)}{(4+x)(1-2x)}</m></p>
+                    <p><m>\lim\limits_{x\to\infty}\dfrac{(3x+1)(6x-2)}{(4+x)(1-2x)}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{t\to\infty}\frac{4e^t-8e^{-t}}{e^t+e^{-t}}</m></p>
+                    <p><m>\lim\limits_{t\to\infty}\dfrac{4e^t-8e^{-t}}{e^t+e^{-t}}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{t\to-\infty}\frac{4e^t-8e^{-t}}{e^t+e^{-t}}</m></p>
+                    <p><m>\lim\limits_{t\to-\infty}\dfrac{4e^t-8e^{-t}}{e^t+e^{-t}}</m></p>
                 </statement>
             </exercise>
         </exercisegroup>

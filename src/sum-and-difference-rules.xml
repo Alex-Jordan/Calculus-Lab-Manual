@@ -17,22 +17,22 @@
     <table xml:id="table-sum-and-difference-rule">
         <caption>Examples of the Sum and Difference Rules</caption>
         <tabular top="major">
-            <col halign="center" right="minor"/>
-            <col halign="center" right="minor"/>
-            <col halign="center"/>
+            <col halign="0.63in" right="minor"/>
+            <col halign="left" right="minor"/>
+            <col halign="left"/>
             <row bottom="medium">
                 <cell>Given Function</cell>
-                <cell>You should <q>see</q></cell>
-                <cell>You should write</cell>
+                <cell><m>y=4\sqrt[5]{t^6}-\frac{1}{6\sqrt{t}}+8t</m></cell>
+                <cell><m>\fe{P}{\gamma}=\frac{\fe{\sin}{\gamma}-\fe{\cos}{\gamma}}{2}+4</m></cell>
             </row>
             <row bottom="minor">
-                <cell><m>y=4\sqrt[5]{t^6}-\frac{1}{6\sqrt{t}}+8t</m></cell>
-                <cell><m>y=4t^{\sfrac{6}{5}}-\frac{1}{6}t^{-\sfrac{1}{2}}+8t</m></cell>
-                <cell><m>\begin{aligned}\lz{y}{t}&amp;=\frac{24}{5}t^{\sfrac{1}{5}}+\frac{1}{12}t^{-\sfrac{3}{2}}+8\\&amp;=\frac{24\sqrt[5]{t}}{5}+\frac{1}{12\sqrt{t^3}}+8\end{aligned}</m></cell>
+                <cell>You should <q>see</q></cell>
+                <cell><m>y=4t^{\frac{6}{5}}-\frac{1}{6}t^{-\frac{1}{2}}+8t</m></cell>
+                <cell><m>\fe{P}{\gamma}=\frac{1}{2}\fe{\sin}{\gamma}-\frac{1}{2}\fe{\cos}{\gamma}+4</m></cell>
             </row>
             <row bottom="major">
-                <cell><m>\fe{P}{\gamma}=\frac{\fe{\sin}{\gamma}-\fe{\cos}{\gamma}}{2}+4</m></cell>
-                <cell><m>\fe{P}{\gamma}=\frac{1}{2}\fe{\sin}{\gamma}-\frac{1}{2}\fe{\cos}{\gamma}+4</m></cell>
+                <cell>You should write</cell>
+                <cell><m>\begin{aligned}\lz{y}{t}&amp;=\tfrac{24}{5}t^{\frac{1}{5}}+\tfrac{1}{12}t^{-\frac{3}{2}}+8\\&amp;=\tfrac{24\sqrt[5]{t}}{5}+\tfrac{1}{12\sqrt{t^3}}+8\end{aligned}</m></cell>
                 <cell><m>\fe{\fd{P}}{\gamma}=\frac{1}{2}\fe{\cos}{\gamma}+\frac{1}{2}\fe{\sin}{\gamma}</m></cell>
             </row>
         </tabular>
