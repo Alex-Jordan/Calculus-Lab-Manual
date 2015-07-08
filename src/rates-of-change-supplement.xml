@@ -17,6 +17,7 @@
                     <figure xml:id="figure-upside-down-parabola-supplement">
                         <caption><m>\fe{z}{x}=2+4x-x^2</m></caption>
                         <image>
+                            <description>a downward opening parabola with vertex at (2,6) and x-intercepts at about -0.5 and 4.5</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[]

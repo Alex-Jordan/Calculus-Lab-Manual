@@ -3,7 +3,6 @@
 <latex-preamble-early>
 \usepackage{titlesec}
 \usepackage{fancyhdr}
-\usepackage{longtable}
 \usepackage{textcomp}
 \usepackage{booktabs}
 </latex-preamble-early>
@@ -13,23 +12,22 @@
 <latex-preamble-late>
 <![CDATA[
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Rename "Chapter" to "Lab"
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\chaptername}{Lab}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Header and Footer
+% Header and Footer Adjustment
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\sectionmark}[1]{%
  \markright{\slshape\MakeUppercase{%
  Activity \thesection.%
  \ #1}}}%
-]]>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Allow multirow equations to break across pages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \allowdisplaybreaks
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Basic paragraph parameters
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{0.5pc}
-
+]]>
 </latex-preamble-late>
 
 </latex-preamble>

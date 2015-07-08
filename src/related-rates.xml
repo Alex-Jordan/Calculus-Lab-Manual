@@ -12,5 +12,7 @@
     
     <xi:include href="./introduction-related-rates.xml" />
     <xi:include href="./diagrams-for-related-rates.xml" />
+    <xi:include href="./related-rates-supplement.xml" />
+
     
 </chapter>

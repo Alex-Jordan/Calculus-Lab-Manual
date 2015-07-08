@@ -12,7 +12,7 @@
     <exercises>
         <exercisegroup>
             <introduction>
-                <p>Sketch the first derivatives of the functions shown in <xref autoname="plural" ref="exercise-sketch-first-supplement"/><ndash/><xref autoname="mo" ref="exercise-sketch-last-supplement"/>.</p>
+                <p>Sketch the first derivatives of the functions shown in <xref autoname="plural" ref="exercise-sketch-first-supplement"/><ndash/><xref autoname="no" ref="exercise-sketch-last-supplement"/>.</p>
             </introduction>
             <exercise xml:id="exercise-sketch-first-supplement">
                 <statement>

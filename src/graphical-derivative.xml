@@ -111,7 +111,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>The function <m>g</m> is symmetric across the line <m>x=1</m>; that is, if we move equal distance to the left and right from this line the corresponding <m>y</m>-coordinates on <m>g</m> are always equal. Notice that the slopes of the tangent lines are <q>equal but opposite</q> at points that are equally removed from the axis of symmetry; this is reflected in the values of <m>\fe{\fd{g}}{1}</m> and <m>\fe{\fd{g}}{3}</m>. Use the idea of <q>equal but opposite slope equidistance from the axis of symmetry</q> to complete <xref ref="table-graphical-derivative"/>.</p>
+                    <p>The function <m>g</m> is symmetric across the line <m>x=1</m>; that is, if we move equal distance to the left and right from this line the corresponding <m>y</m>-coordinates on <m>g</m> are always equal. Notice that the slopes of the tangent lines are <q>equal but opposite</q> at points that are equally removed from the axis of symmetry; this is reflected in the values of <m>\fe{\fd{g}}{-1}</m> and <m>\fe{\fd{g}}{3}</m>. Use the idea of <q>equal but opposite slope equidistance from the axis of symmetry</q> to complete <xref ref="table-graphical-derivative"/>.</p>
                 </statement>
             </exercise>
             <exercise>
@@ -306,7 +306,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Does the formula for <m>\fe{\fd{f}}{x}</m> support your answer to <xref ref="exercise-derivative-of-one-over-x"/>?</p>
+                    <p>Does the formula for <m>\fe{\fd{f}}{x}</m> support your answer to <xref ref="exercise-negative-derivative-of-one-over-x"/>?</p>
                 </statement>
             </exercise>
             <exercise xml:id="exercise-asymptotes-one-over-x">
@@ -322,7 +322,7 @@
         </exercisegroup>
         <exercise>
             <statement>
-                <p>A graph of the function <m>g</m> is shown in <xref ref="figure-arctangent"/>. The absolute minimum value ever obtained by <m>\fd{g}</m> is <m>3</m>. With that in mind, draw <m>\fd{g}</m> onto <xref ref="figure-derivative-of-arctangent"/>. Make sure that you draw and label any and all necessary asymptotes. Make sure that your graph of <m>\fd{g}</m> adequately reflects the symmetry in the graph of <m>g</m>.</p>
+                <p>A graph of the function <m>g</m> is shown in <xref ref="figure-arctangent"/>. The absolute minimum value ever obtained by <m>\fd{g}</m> is <m>-3</m>. With that in mind, draw <m>\fd{g}</m> onto <xref ref="figure-derivative-of-arctangent"/>. Make sure that you draw and label any and all necessary asymptotes. Make sure that your graph of <m>\fd{g}</m> adequately reflects the symmetry in the graph of <m>g</m>.</p>
                 <sidebyside>
                     <figure xml:id="figure-arctangent" >
                         <caption><m>y=\fe{g}{x}</m></caption>

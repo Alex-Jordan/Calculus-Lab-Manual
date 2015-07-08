@@ -1,0 +1,26 @@
+<latex-preamble>
+
+<latex-preamble-early>
+</latex-preamble-early>
+
+
+
+<latex-preamble-late>
+<![CDATA[
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% In print, trying to reduce color use
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{colorlinks=false}
+    \pgfplotscreateplotcyclelist{pccstylelist}{%
+        color=black,mark=none,line width=1pt,<->,solid\\%
+        color=black,mark=none,line width=1pt,<->,dashdotted\\%
+        color=black,mark=none,line width=1pt,<->,dashdotdotted\\%
+    }
+    \pgfplotsset{pccplot/.style={color=black,mark=none,line width=1pt,<->}} % this is pretty redundant in most cases now that cycle list is implemented
+    \pgfplotsset{soldot/.style={color=black,only marks,mark=*}}
+    \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+]]>
+</latex-preamble-late>
+
+</latex-preamble>

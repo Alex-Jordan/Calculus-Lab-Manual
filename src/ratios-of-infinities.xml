@@ -10,7 +10,7 @@
 <section xml:id="section-ratios-of-infinities">
     <title>Ratios of Infinities</title>
 
-    <p>Many limits have the form <m>\frac{\infty}{\infty}</m>, which we take to mean that the expressions in both the numerator and denominator are increasing or decreasing without bound. When confronted with a limit of type <m>\lim\limits_{x\to\infty}\frac{\fe{f}{x}}{\fe{g}{x}}</m> or <m>\lim\limits_{x\to-\infty}\frac{\fe{f}{x}}{\fe{g}{x}}</m> that has the form <m>\frac{\infty}{\infty}</m>, we can frequently resolve the limit if we first divide the dominant factor of the dominant term of the denominator from both the numerator and the denominator. When we do this, we need to completely simplify each of the resultant fractions and make sure that the resultant limit exists before we start to apply limit laws. We then apply the algebraic limit laws until all of the resultant limits can be replaced using limit laws R2 and R3. This process is illustrated in <xref ref="example-ratio-of-infinities"/>.</p>
+    <p>Many limits have the form <m>\frac{\infty}{\infty}</m>, which we take to mean that the expressions in both the numerator and denominator are increasing or decreasing without bound. When confronted with a limit of type <m>\lim\limits_{x\to\infty}\frac{\fe{f}{x}}{\fe{g}{x}}</m> or <m>\lim\limits_{x\to-\infty}\frac{\fe{f}{x}}{\fe{g}{x}}</m> that has the form <m>\frac{\infty}{\infty}</m>, we can frequently resolve the limit if we first divide the dominant factor of the dominant term of the denominator from both the numerator and the denominator. When we do this, we need to completely simplify each of the resultant fractions and make sure that the resultant limit exists before we start to apply limit laws. We then apply the algebraic limit laws until all of the resultant limits can be replaced using <xref autoname="title" ref="llr2"/> and <xref autoname="title" ref="llr3"/>. This process is illustrated in <xref ref="example-ratio-of-infinities"/>.</p>
 
     <example xml:id="example-ratio-of-infinities">
         <p><md>
@@ -20,7 +20,7 @@
         <mrow>&amp;=\frac{\lim_{t\to\infty}3+\lim_{t\to\infty}\frac{5}{t}}{\lim_{t\to\infty}\frac{3}{t^2}-\lim_{t\to\infty}5}&amp;&amp;\text{Limit Laws A1 and A2}</mrow>
         <mrow>&amp;=\frac{3+0}{0-5}&amp;&amp;\text{Limit Laws R2 and R3}</mrow>
         <mrow>&amp;=-\frac{3}{5}</mrow>
-        </md></p>
+        </md>(<xref autoname="title" ref="lla5"/>, <xref autoname="title" ref="lla1"/>, <xref autoname="title" ref="lla2"/>, <xref autoname="title" ref="llr2"/>, <xref autoname="title" ref="llr3"/>)</p>
     </example>
 
     <exercises>

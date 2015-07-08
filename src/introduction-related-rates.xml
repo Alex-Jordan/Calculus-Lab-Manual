@@ -7,7 +7,7 @@
 <!-- Steve Simonds (author)        -->
 <!-- Alex Jordan (editor)          -->
 
-<section xml:id="section-introduction-to-related-rates">
+<section xml:id="section-introduction-related-rates">
     <title>Introduction to Related Rates</title>
 
     <p>Consider the following problem.</p>
@@ -123,7 +123,7 @@
             <cell><m>\lz{V}{t}</m></cell>
             <cell>The value of this variable is <m>-0.3</m>. The value is negative because the volume decreases over time.</cell>
         </row>
-        <row bottom="minor">
+        <row bottom="major">
             <cell><m>\lz{r}{t}</m></cell>
             <cell>This is the variable for which we need to solve.</cell>
         </row>

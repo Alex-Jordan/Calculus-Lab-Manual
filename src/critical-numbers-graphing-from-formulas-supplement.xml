@@ -14,7 +14,7 @@
             <introduction>
                 <sidebyside>
                     <paragraphs valign="top">
-                        <p>The sine and cosine function are called <term>circular trigonometric functions</term> because for any given value of <m>t</m> the point <m>\point{\fe{\cos}{t}}{\fe{\sin}{t}}</m> lies on the circle with equation <m>x^2+y^2=1</m>. And the origin, <m>\point{\fe{\cos}{t}}{\fe{\sin}{t}}</m>, and either <m>\point{\fe{\cos}{t}}{0}</m> or <m>\point{0}{\fe{\sin}{t}}</m> define a right triangle.</p>
+                        <p>The sine and cosine function are called <term>circular trigonometric functions</term> because for any given value of <m>t</m> the point <m>\point{\fe{\cos}{t}}{\fe{\sin}{t}}</m> lies on the circle with equation <m>x^2+y^2=1</m>. The area of the <q>pie slice</q> defined by the origin, <m>\point{1}{0}</m>, and the circular arc to <m>\point{\fe{\cos}{t}}{\fe{\sin}{t}}</m> is exactly <m>\frac{1}{2}t</m>.</p>
                     </paragraphs>
                     <figure valign="top">
                         <caption><m>\point{\fe{\cos}{t}}{\fe{\sin}{t}}</m> on the circle <m>x^2+y^2=1</m></caption>
@@ -23,7 +23,7 @@
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={9},ytick={9},unit vector ratio*=1 1 1, clip=false]
                                 \addplot[pccplot,domain=0:360,-,variable=t]({cos(t)},{sin(t)});
-                                \addplot[-] coordinates {(0,0) (0.8,0) (0.8,0.6) (0,0)};
+                                \addplot[-] coordinates {(0.8,0.6) (0,0)};
                                 \addplot[mark=*] coordinates {(0.8,0.6)} node[pin={$(\fe{\cos}{t},\fe{\sin}{t})$}]{} ;
                             \end{axis}
                             \end{tikzpicture}]]>
@@ -33,7 +33,7 @@
                 </sidebyside>
                 <sidebyside>
                     <paragraphs valign="top"> 
-                        <p>There are analogous functions called <term>hyperbolic sine</term> and <term>hyperbolic cosine</term>.  As you might suspect, these functions generate points that lie on a hyperbola; specifically, for all values of <m>t</m> the point <m>\point{\fe{\cosh}{t}}{\fe{\sinh}{t}}</m> lies on the hyperbola <m>x^2-y^2=1</m>.</p>
+                        <p>There are analogous functions called <term>hyperbolic sine</term> and <term>hyperbolic cosine</term>.  As you might suspect, these functions generate points that lie on a hyperbola; specifically, for all values of <m>t</m> the point <m>\point{\fe{\cosh}{t}}{\fe{\sinh}{t}}</m> lies on the hyperbola <m>x^2-y^2=1</m>. The area of the <q>shark fin</q> defined by the origin, <m>\point{1}{0}</m>, and the hyperbolic arc to <m>\point{\fe{\cosh}{t}}{\fe{\sinh}{t}}</m> is exactly <m>\frac{1}{2}t</m>.</p>
                     </paragraphs>
                     <figure valign="top">
                         <caption><m>\point{\fe{\cosh}{t}}{\fe{\sinh}{t}}</m> on the hyperbola <m>x^2-y^2=1</m></caption>
@@ -43,8 +43,8 @@
                             \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={9},ytick={9},unit vector ratio*=1 1 1, clip=false]
                                 \addplot[pccplot,domain=-1.76275:1.76275,variable=t]({(exp(t)+exp(-t))/2},{(exp(t)-exp(-t))/2});
                                 \addplot[pccplot,domain=-1.76275:1.76275,variable=t]({-(exp(t)+exp(-t))/2},{-(exp(t)-exp(-t))/2});
-                                \addplot[-] coordinates {(0,0) (2,0) (2,1.73205) (0,0)};
-                                \addplot[mark=*] coordinates {(2,1.73205)} node[pin={$(\fe{\cosh}{t},\fe{\sinh}{t})$}]{} ;
+                                \addplot[-] coordinates {(2,1.73205) (0,0)};
+                                \addplot[mark=*] coordinates {(2,1.73205)} node[pin=170:{$(\fe{\cosh}{t},\fe{\sinh}{t})$}]{} ;
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>

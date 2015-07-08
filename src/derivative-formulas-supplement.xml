@@ -363,7 +363,7 @@ formula stated above for the product of three functions.  The first application 
                      </md></p>
                 </solution>
                 <answer>
-                     <p><m>xe^x\left(2\fe{\sin}{x}\fe{\cos}{x}+x\fe{\sin}{x}\fe{\cos}{x}+x\fe{\cos^2}{x}-x\fe{\sin^2}{x}\right)</m></p>
+                     <p><m>xe^x\big(2\fe{\sin}{x}\fe{\cos}{x}+x\fe{\sin}{x}\fe{\cos}{x}+2x\fe{\cos^2}{x}-x\big)</m></p>
                 </answer>
             </exercise>
         </exercisegroup>

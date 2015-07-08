@@ -40,13 +40,15 @@
             <exercise xml:id="exercise-average-velocity-formula">
                 <statement>
                     <p>Use <xref ref="definition-average-velocity"/> to find a formula for the average velocity of this object over the general time interval <m>\cinterval{t_0}{t_1}</m>. The first couple of lines of this process are shown below. Copy these lines onto your paper and continue the simplification process.<md>
-                    <mrow>&amp;\phantom{{}={}}\frac{\fe{p}{t_1}-\fe{p}{t_0}}{t_1-t_0}</mrow>
-                    <mrow>&amp;=\frac{\left[200-4.9t_1^2\right]-\left[200-4.9t_0^2\right]}{t_1-t_0}</mrow>
+                    <mrow>\frac{\fe{p}{t_1}-\fe{p}{t_0}}{t_1-t_0}&amp;=\frac{\left[200-4.9t_1^2\right]-\left[200-4.9t_0^2\right]}{t_1-t_0}</mrow>
                     <mrow>&amp;=\frac{200-4.9t_1^2-200+4.9t_0^2}{t_1-t_0}</mrow>
                     <mrow>&amp;=\frac{-4.9t_1^2+4.9t_0^2}{t_1-t_0}</mrow>
                     <mrow>&amp;=\cdots</mrow>
-                    </md>Hint: Factor <m>-4.9</m> from the numerator; the remaining factor will factor further.</p>
+                    </md></p>
                 </statement>
+                <hint>
+                    <p>Factor <m>-4.9</m> from the numerator; the remaining factor will factor further.</p>
+                </hint>
             </exercise>
 
             <exercise>

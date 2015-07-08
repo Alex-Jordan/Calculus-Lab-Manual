@@ -17,7 +17,7 @@
     <definition xml:id="definition-first-derivative">
         <title>The First Derivative Function</title>
         <statement>
-            <p>If <m>f</m> is a function of <m>x</m>, then we define <term>the first derivative function</term>, <m>\fd{f}</m>, as <me>\fe{\fd{f}}{x}=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}\text{.}</me> The symbols <m>\fd{f}</m> are read alound as <q><m>f</m> prime of <m>x</m></q> or <q><m>f</m> prime at <m>x</m></q>.</p>
+            <p>If <m>f</m> is a function of <m>x</m>, then we define <term>the first derivative function</term>, <m>\fd{f}</m>, as <me>\fe{\fd{f}}{x}=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}\text{.}</me> The symbols <m>\fe{\fd{f}}{x}</m> are read alound as <q><m>f</m> prime of <m>x</m></q> or <q><m>f</m> prime at <m>x</m></q>.</p>
         </statement>
     </definition>
 
@@ -87,7 +87,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Draw onto <xref ref="figure-first-derivative"/> a line through the point <m>\point{1}{3}</m> with a slope of <m>\fe{\fd{f}}{1}</m>. Also draw a line though the point <m>\point{5}{1}</m> with a slope of <m>\fe{\fd{f}}{5}</m>. What are the names for the two lines you just drew? What are their equations?</p> 
+                    <p>Draw onto <xref ref="figure-first-derivative"/> a line through the point <m>\point{1}{3}</m> with a slope of <m>\fe{\fd{f}}{1}</m>. Also draw a line though the point <m>\point{5}{-1}</m> with a slope of <m>\fe{\fd{f}}{5}</m>. What are the names for the two lines you just drew? What are their equations?</p> 
                 </statement>
             </exercise>
             <exercise>
@@ -124,7 +124,7 @@
                 <statement>
                     <p>Use <xref autoname="no" ref="instantaneous-acceleration-equation"/> to find the formula for <m>\fe{\fd{v}}{t}</m>. The first line of your presentation should be an exact copy of <xref autoname="no" ref="instantaneous-acceleration-equation"/>.</p>
                     <p><mdn> 
-                    <mrow xml:id="instantaneous-acceleration-equation">\fe{\fd{v}}{t}&amp;=\lim_{h\to0}\frac{\fe{s}{t+h}-\fe{s}{t}}{h}</mrow>
+                    <mrow xml:id="instantaneous-acceleration-equation">\fe{\fd{v}}{t}&amp;=\lim_{h\to0}\frac{\fe{v}{t+h}-\fe{v}{t}}{h}</mrow>
                     </mdn></p>
                 </statement>
             </exercise>

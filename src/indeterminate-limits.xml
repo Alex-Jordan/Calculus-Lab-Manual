@@ -19,7 +19,7 @@
         <mrow>&amp;=\lim_{x\to3}x-\lim_{x\to3}5&amp;&amp;\text{Limit Law A2}</mrow>
         <mrow>&amp;=3-5&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
         <mrow>&amp;=-2</mrow>
-        </md></p>
+        </md>(<xref autoname="title" ref="lla7"/>, <xref autoname="title" ref="lla2"/>, <xref autoname="title" ref="llr1"/>, <xref autoname="title" ref="llr2"/></p>
     </example>
 
 
@@ -33,7 +33,7 @@
         <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}1+\lim_{\theta\to0}\fe{\cos}{\theta}}&amp;&amp;\text{Limit Law A1}</mrow>
         <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}1+\fe{\cos}{\lim_{\theta\to0}\theta}}&amp;&amp;\text{Limit Law A6}</mrow>
         <mrow>&amp;=\frac{1}{1+\fe{\cos}{0}}=\frac{1}{2}&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
-        </md></p>
+        </md>(<xref autoname="title" ref="lla7"/>, <xref autoname="title" ref="lla5"/>, <xref autoname="title" ref="lla1"/>, <xref autoname="title" ref="lla6"/>, <xref autoname="title" ref="llr1"/>, <xref autoname="title" ref="llr2"/>)</p>
     </example>
 
     <p>As seen in <xref ref="example-second-indeterminate"/>, trigonometric identities can come into play while trying to eliminate the form <m>\frac{0}{0}</m>. Elementary rules of logarithms can also play a role in this process. Before you begin evaluating limits whose initial form is <m>\frac{0}{0}</m>, you need to make sure that you recall some of these basic rules. That is the purpose of <xref ref="exercise-identities-review"/>.</p>

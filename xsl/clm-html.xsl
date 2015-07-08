@@ -139,6 +139,7 @@
     <br />
 </xsl:template>
 
+<!--
 <xsl:template name="type-name">
     <xsl:param name="string-id" />
     <xsl:variable name="translation">
@@ -158,7 +159,7 @@
         </xsl:otherwise>
     </xsl:choose>
 </xsl:template>
-
+-->
 
 <!-- For tables, move caption above                -->
 <!-- MBX "table" is a displayed, captioned, numbered object      -->
@@ -314,5 +315,8 @@
     </span>
 </xsl:template>
 
+<xsl:template match="centerline">
+    <xsl:apply-templates />
+</xsl:template>
 
 </xsl:stylesheet>

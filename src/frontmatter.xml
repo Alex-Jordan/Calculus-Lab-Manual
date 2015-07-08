@@ -35,7 +35,8 @@
             <year>2012<ndash />2015</year>
             <holder>Portand Community College</holder>
             <minilicense>Creative Commons BY-SA</minilicense>
-			<shortlicense>Permission is granted to copy, distribute and/or modify this document under the terms of the Creative Commons BY-SA License, Version 3.0 or any later version.</shortlicense>
+			<shortlicense>This work is licensed under the Creative Commons BY-SA License, Version 4.0.<br/> 
+                        <image src="by-sa.png"/></shortlicense>
         </copyright>
         <date>DRAFT <today /> DRAFT</date>
 
@@ -45,7 +46,7 @@
 
 		<p>In 2012, Steve Simonds revised an earlier version of this document in Word/PDF form with some support from PCC's curriculum development grants.</p>
 		<p>In 2015, Alex Jordan converted the Word/PDF to MathBook XML (enabling the HTML output alongside a PDF) with some support from PCC's professional development grants.</p>
-                <p>Phil Thurber and Scot Leavitt created the cover composition using </p>
+                <p>Phil Thurber and Scot Leavitt created the cover composition using images provided by NASA, the Bodleian Library of the University of Oxford, and PCC instructor Ken Kidoguchi.</p>
 
 	</acknowledgement>
 
@@ -85,7 +86,7 @@
                 <tabular top="major" halign="center">
                     <col halign="right"/>
                     <col halign="3in"/>
-                    <col halign="left"/>
+                    <col halign="1.1in"/>
                     <row valign="top" bottom="medium">
                         <cell>Week</cell>
                         <cell>Labs (Lab Activities)</cell>
@@ -132,9 +133,9 @@
                         <cell><xref autoname="title" ref="implicit-differentiation-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="major">
-                        <cell>9 and 10</cell>
-                        <cell><xref autoname="title" ref="section-motivation-for-critical-numbers"/><ndash/><xref autoname="title" ref="section-making-graphs"/></cell>
-                        <cell><xref autoname="title" ref="critical-numbers-graphing-from-formulas-supplementary-exercises"/></cell>
+                        <cell>9, 10</cell>
+                        <cell><xref autoname="title" ref="section-introduction-related-rates"/><ndash/><xref autoname="title" ref="section-making-graphs"/></cell>
+                        <cell><xref autoname="title" ref="related-rates-supplementary-exercises"/>, <xref autoname="no" ref="critical-numbers-graphing-from-formulas-supplementary-exercises"/></cell>
                     </row>
                     </tabular> 
         </preface>

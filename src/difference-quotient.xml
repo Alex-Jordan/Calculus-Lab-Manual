@@ -14,14 +14,15 @@
 
     <p>The algebra associated with secant lines (and average velocities) can sometimes be simplified if we designate the variable <m>h</m> to be the run between the two points (or the length of the time interval). With this designation we have <m>x_1-x_0=h</m> which gives us <m>x_1=x_0+h</m>. Making these substitutions we get <xref autoname="no" ref="equation-difference-quotient"/>. The expression on the right side of <xref autoname="no" ref="equation-difference-quotient"/> is called the <term>difference quotient</term> for <m>f</m>.</p>
 
-    <men xml:id="equation-difference-quotient">\frac{\fe{f}{x_1}-\fe{f}{x_1}}{x_1-x_0}=\frac{\fe{f}{x_0+h}-\fe{f}{x_1}}{h}</men>
+    <men xml:id="equation-difference-quotient">\frac{\fe{f}{x_1}-\fe{f}{x_0}}{x_1-x_0}=\frac{\fe{f}{x_0+h}-\fe{f}{x_0}}{h}</men>
 
     <p>Let's revisit the function <m>\fe{f}{x}=3+2x-x^2</m> from <xref ref="example-secant"/>. The difference quotient for this function is derived in <xref ref="example-difference-quotient"/>.</p>
 
     <example xml:id="example-difference-quotient">
         <title>Calculating a Difference Quotient</title>
         <md>
-        <mrow>\frac{\fe{f}{x_0+h}-\fe{f}{x_0}}{h}&amp;=\frac{\left[3+2\left(x_0+h\right)-\left(x_0+h\right)^2\right]-\left[3+2x_0-x_0^2\right]}{h}</mrow>
+        <mrow>&amp;\phantom{{}={}}\frac{\fe{f}{x_0+h}-\fe{f}{x_0}}{h}</mrow>
+        <mrow>&amp;=\frac{\left[3+2\left(x_0+h\right)-\left(x_0+h\right)^2\right]-\left[3+2x_0-x_0^2\right]}{h}</mrow>
         <mrow>&amp;=\frac{3+2x_0+2h-x_0^2-2x_0h-h^2-3-2x_0+x_0^2}{h}</mrow>
         <mrow>&amp;=\frac{2h-2x_0h-h^2}{h}</mrow>
         <mrow>&amp;=\frac{h\left(2-2x_0-h\right)}{h}</mrow>

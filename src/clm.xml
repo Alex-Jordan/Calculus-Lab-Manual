@@ -14,7 +14,7 @@
     <xi:include href="./bookinfo.xml" />
     
     <book xml:id="clm">
-        <title>Portland Community College MTH 251 Lab Manual</title>
+        <title>Portland Community College<br />MTH 251 Lab Manual</title>
 
         <xi:include href="./frontmatter.xml" />
         <xi:include href="./rates-of-change.xml" />
@@ -24,23 +24,16 @@
         <xi:include href="./derivative-formulas.xml" />
         <xi:include href="./chain-rule.xml" />
         <xi:include href="./implicit-differentiation.xml" />
-<!--        <xi:include href="./related-rates.xml" />
--->        <xi:include href="./critical-numbers-graphing-from-formulas.xml" />
+        <xi:include href="./related-rates.xml" />
+        <xi:include href="./critical-numbers-graphing-from-formulas.xml" />
+
+        <xi:include href="./limit-laws-appendix.xml" />
+        <xi:include href="./derivative-formulas-appendix.xml" />
+        <xi:include href="./useful-algebra-appendix.xml" />
 
         <backmatter>
-        <title>Appendices</title>
-            <xi:include href="./limit-laws-appendix.xml" />
-            <xi:include href="./derivative-formulas-appendix.xml" />
-            <xi:include href="./useful-algebra-appendix.xml" />
-
-<!--            <appendix>
-                <title>Solutions to Supplementary Exercises</title>
-                <solution-list/>
-            </appendix>
--->            <appendix>
-                <title>Short Answers to Supplementary Exercises</title>
-                <answer-list/>
-            </appendix>
+            <solution-list/>
+            <answer-list/>
         </backmatter>
 
 

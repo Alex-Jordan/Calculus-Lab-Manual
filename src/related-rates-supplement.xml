@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This file is part of the book -->
+<!--                               -->
+<!-- Calculus I Lab Manual         -->
+<!--                               -->
+<!-- Steve Simonds (author)        -->
+<!-- Alex Jordan (editor)          -->
+   
+<section xml:id="related-rates-supplementary-exercises">
+    <title>Supplement</title>
+    <exercises>
+        <exercise>
+            <statement>
+                <p>At 2:00 PM one day, Muffin and Rex were sleeping atop one another.  A loud noise startled the animals and Muffin began to run due north at a constant rate of <quantity><mag>1.7</mag><unit base="foot"/><per base="second"/></quantity> while Rex ran due east at a constant rate of <quantity><mag>2.1</mag><unit base="foot"/><per base="second"/></quantity>.  The critters maintained these paths and rates for several seconds. Calculate the rate at which the distance between the cat and dog was changing three seconds into their run.</p> 
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Schuyler's clock is kaput; the minute hand functions as it should but the hour hand is stuck at <m>4</m>. The minute hand on the clock is <quantity><mag>30</mag><unit prefix="centi" base="meter"/></quantity> long and the hour hand is <quantity><mag>10</mag><unit prefix="centi" base="meter"/></quantity> long.  Determine the rate of change between the tips of the hands every time the minute hand points directly at <m>12</m>.</p> 
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>It was a dark night and <quantity><mag>5.5</mag><unit base="foot"/></quantity> tall Bahram was walking towards a street lamp whose light was perched <quantity><mag>40</mag><unit base="foot"/></quantity> into the air.  As he walked, the light caused a shadow to fall behind Bahram.  When Bahram was <quantity><mag>80</mag><unit base="foot"/></quantity> from the base of the lamp he was walking at a pace of <quantity><mag>2</mag><unit base="foot"/><per base="second"/></quantity>.  At what rate was the length of Bahram's shadow changing at that instant?   Make sure that each stated and calculated rate value has the correct sign.   Make sure that your conclusion sentence clearly communicates whether the length of the shadow was increasing or decreasing at the indicated time.</p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>The gravitational force, <m>F</m>,  between two objects in space with masses <m>m_1</m> and <m>m_2</m> is given by the formula <m>F=\frac{Gm_1m_2}{r^2}</m> where <m>r</m> is the distance between the objects' centers of mass and <m>G</m> is the universal gravitational constant.</p>
+                <p>Two pieces of space junk, one with mass <quantity><mag>500</mag><unit prefix="kilo" base="gram"/></quantity> and the other with mass <quantity><mag>3000</mag><unit prefix="kilo" base="gram"/></quantity>, were drifting directly toward one another.  When the objects' centers of mass were <quantity><mag>250</mag><unit prefix="kilo" base="meter"/></quantity> apart the lighter piece was moving at a rate of <quantity><mag>0.5</mag><unit prefix="kilo" base="meter"/><per base="hour"/></quantity> and the heavier piece was moving at a rate of <quantity><mag>0.9</mag><unit prefix="kilo" base="meter"/><per base="hour"/></quantity>.  Leaving <m>G</m> as a constant, determine the rate at which the gravitational force between the two objects was changing at that instant.  Make sure that each stated and calculated rate value has the correct sign.   Make sure that your conclusion sentence clearly communicates whether the force was increasing or decreasing at that given time.  The unit for <m>F</m> is Newtons (<quantity><unit base="newton"/></quantity>). </p>
+            </statement>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>An eighteen inch pendulum sitting atop a table is in the downward part of its motion.  The pivot point for the pendulum is <quantity><mag>30</mag><unit base="inch"/></quantity> above the table top.  When the pendulum is <quantity><mag>45</mag><unit base="degree"/></quantity> away from vertical, the angle formed at the pivot is decreasing at the rate of <quantity><mag>25</mag><unit base="degree"/><per base="second"/></quantity>.  At what rate is the end of the pendulum approaching the table top at this instant? Make sure that each stated and calculated rate value has the correct sign.  Make sure that you use appropriate units when defining your variables.</p>
+            </statement>
+            <hint>
+                <p>Draw a right triangle with one acute angle vertex at the pivot point and the other acute angle vertex at the end of the pendulum.  The rate of change of one piece of this triangle is the same as the rate you are trying to find.</p>
+            </hint>
+        </exercise>
+    </exercises>
+</section>
+
+

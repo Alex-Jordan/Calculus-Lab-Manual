@@ -107,7 +107,7 @@
                     <paragraphs valign="top">
                         <p><md>
                         <mrow>\lim\limits_{x\to3^{-}}\fe{f}{x}&amp;=-\infty&amp;\lim\limits_{x\to\infty}\fe{f}{x}&amp;=0</mrow>
-                        <mrow>\lim\limits_{x\to3^{+}}\fe{f}{x}&amp;=\infty&amp;\lim\limits_{x\to-\infty}\fe{f}{x}&amp;-2</mrow>
+                        <mrow>\lim\limits_{x\to3^{+}}\fe{f}{x}&amp;=\infty&amp;\lim\limits_{x\to-\infty}\fe{f}{x}&amp;=2</mrow>
                         </md></p>
                     </paragraphs>
                     <image valign="top">

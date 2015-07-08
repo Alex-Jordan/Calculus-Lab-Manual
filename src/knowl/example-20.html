@@ -1,0 +1,100 @@
+<!--*                                    *-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2015-07-08T15:44:02-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<article class="example-like"><h5 class="heading">
+<span class="type">Example</span><span class="codenumber">8.2.1</span>
+</h5>
+<p>
+            <blockquote>A small drone is flying straight upward at the rate of 0.88 <sup>ft</sup>⁄<sub>s</sub>. The drone is tethered to the ground (with a lot of slack) at a point that lies 400 ft west of the launch point of the drone. Assuming that the ground is perfectly level, determine the rate at which the angle of elevation from the tether point to the drone increases at the moment the drone is 300 ft above ground.</blockquote>
+        </p>
+<p>When searching for your quantity-variables, you need to identify sentences or phrases in the problem statement that contain the word “rate” or something similar (hence the <abbr class="acronym"><!--Style me-->R</abbr> in <abbr class="acronym"><!--Style me-->DREDS</abbr>). There are two such phrases in this problem:
+        <ul style="list-style-type: disc;">
+<li>“A small drone is flying straight upward at the rate of…”</li>
+<li>“…drone the rate at which the angle of elevation from the tether point to the drone increase…”</li>
+</ul>
+        </p>
+<p>The pieces of the right triangle that correspond to those phrases have been marked in <a href="section-diagrams-for-related-rates.html#figure-drone-triangle">Figure&nbsp;8.2.2</a> as, respectively, \(h\) and \(\theta\). The distance between the tether point and launch point remains constant, hence the side labeled as \(400\). Please note that there should be no other annotations of any kind on this diagram. If writing other numbers down helps you think through the problem, draw a second triangle on your scratch paper and annotate that in any way the helps. That said, you need a clean variable diagram in your solution, so leave <a href="section-diagrams-for-related-rates.html#figure-drone-triangle">Figure&nbsp;8.2.2</a> as it is.</p>
+<figure id="figure-drone-triangle" style="width:50%;"><object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-106.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object><figcaption style="text-align:center;"><span class="heading">Figure</span><span class="codenumber">8.2.2</span>Variable Diagram</figcaption></figure><p>Now we can finish using the rest of the <abbr class="acronym"><!--Style me-->DREDS</abbr> process.</p>
+<figure id="table-drone"><figcaption style="text-align:center;"><span class="heading">Table</span><span class="codenumber">8.2.3</span>Variable table for the drone problem</figcaption><table class="center"><table>
+<tr>
+<td class="c b2 r0 l0 t3">Variable</td>
+<td class="c b2 r0 l0 t3">Variable Description</td>
+<td class="c b2 r0 l0 t3">Unit</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(h\)</td>
+<td class=" b1 r0 l0 t0">The elevation of the dron \(t\) seconds after the drone begins to rise.</td>
+<td class="c b1 r0 l0 t0">ft</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(\theta\)</td>
+<td class=" b1 r0 l0 t0">The angle of elevation from the tether point to the drone \(t\) seconds after the drone begins to rise.</td>
+<td class="c b1 r0 l0 t0">rad</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(\lz{h}{t}\)</td>
+<td class=" b1 r0 l0 t0">The rate of change in elevation of the drone \(t\) seconds after the drone begins to rise.</td>
+<td class="c b1 r0 l0 t0">
+<sup>ft</sup>⁄<sub>s</sub>
+</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(\lz{\theta}{t}\)</td>
+<td class=" b1 r0 l0 t0">The rate of change in the angle of elevation from the tether point to the drone \(t\) seconds after the drone begins to rise.</td>
+<td class="c b1 r0 l0 t0">
+<sup>rad</sup>⁄<sub>s</sub>
+</td>
+</tr>
+<tr>
+<td class="c b3 r0 l0 t0">\(t\)</td>
+<td class=" b3 r0 l0 t0">The amount of time that elapses after the drone begins to rise.</td>
+<td class="c b3 r0 l0 t0">s</td>
+</tr>
+</table></table></figure><div id="sidebyside-79" class="sidebyside">
+<figure id="figure-86" style="width:48%;vertical-align:bottom;text-align:center;" class="left"><object type="image/svg+xml" style="width:90%; margin:auto;" data="images/image-107.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object>
+
+<figcaption style="text-align:center;"><span class="heading">Figure</span><span class="codenumber">8.2.4</span>Variable Diagram</figcaption></figure>
+
+<article class="paragraphs" style="width:48%;vertical-align:bottom;text-align:left;"><p>\begin{align*}
+\fe{\tan}{\theta}&amp;=\frac{h}{400}\\
+\lzoo{t}{\fe{\tan}{\theta}}&amp;=\lzoo{t}{\frac{h}{400}}\\
+\fe{\sec^2}{\theta}\lz{\theta}{t}&amp;=\frac{1}{400}\lz{h}{t}
+\end{align*}This is our related rates equation.</p></article>
+
+</div>
+<p>At the moment the drone is 300 ft above the ground and rising at a rate of 0.88 <sup>ft</sup>⁄<sub>s</sub>.</p>
+<figure id="table-drone-what-we-know"><figcaption style="text-align:center;"><span class="heading">Table</span><span class="codenumber">8.2.5</span>What we know about the variables at the described moment</figcaption><table class="center"><table>
+<tr>
+<td class="c b2 r0 l0 t3">Variable</td>
+<td class=" b2 r0 l0 t3">What we know</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(h\)</td>
+<td class=" b1 r0 l0 t0">The value of this variable is \(300\).</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(\theta\)</td>
+<td class=" b1 r0 l0 t0">\(\fe{\tan}{\theta}=\frac{3}{4}\), which implies that \(\fe{\cos}{\theta}=\frac{4}{5}\).</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(\lz{h}{t}\)</td>
+<td class=" b1 r0 l0 t0">The value of this variable is \(0.88\).</td>
+</tr>
+<tr>
+<td class="c b3 r0 l0 t0">\(\lz{\theta}{t}\)</td>
+<td class=" b3 r0 l0 t0">This is the variable for which we need to solve.</td>
+</tr>
+</table></table></figure><p>From our related rates equation and the values in <a href="section-diagrams-for-related-rates.html#table-drone-what-we-know">Table&nbsp;8.2.5</a>,</p>
+<div id="sidebyside-80" class="sidebyside">
+<article class="paragraphs" style="width:48%;vertical-align:top;text-align:left;"><p>\begin{align*}
+\lz{\theta}{t}&amp;=\frac{1}{400}\fe{\cos^2}{\theta}\lz{h}{t}\\
+&amp;=\frac{1}{400}\left(\frac{4}{5}\right)^2(0.88)\\
+&amp;=0.001408
+\end{align*}</p></article>
+
+<article class="paragraphs" style="width:48%;vertical-align:top;text-align:left;"><p>When the elevation of the drone is 300 ft and the drone is rising at a rate of 0.88 <sup>ft</sup>⁄<sub>s</sub>, the angle of elevation from the tether point to the drone is increasing at a rate of (about) 0.0014 <sup>rad</sup>⁄<sub>s</sub>.</p></article>
+
+</div></article><div class="context-link" style="text-align:right;"><a href="section-diagrams-for-related-rates.html#example-20">(in-context)</a></div>

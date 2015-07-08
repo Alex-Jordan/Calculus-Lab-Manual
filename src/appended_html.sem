@@ -1,0 +1,8 @@
+no mfenced,close
+no mfenced,close,]
+no math,class
+no mtd,class
+no mtable,class
+no mtd,class,align-odd
+no math,class,equation
+no mtable,class,align-star
