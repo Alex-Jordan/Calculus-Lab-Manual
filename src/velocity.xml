@@ -61,11 +61,11 @@
                 <statement>
                     <p>Now explore the difference quotient in tabular form.</p>
                     <sidebyside>
-                        <paragraphs width="40%" valign="top">
+                        <paragraphs valign="top">
                             <p>Using the formula found in <xref ref="exercise-average-velocity-formula"/>, replace <m>t_0</m> with <m>3</m> but leave <m>t_1</m> as a variable; simplify the result. Then copy <xref ref="table-velocity"/> onto your paper and fill in the missing entries.</p>
                         </paragraphs>
 
-                        <table width="60%" xml:id="table-velocity" valign="top">
+                        <table xml:id="table-velocity" valign="top">
                             <caption><m>\text{diff. quot.}=\frac{\fe{p}{t_1}-\fe{p}{3}}{t_1-3}</m></caption>
                             <tabular top="major">
                             <col halign="left" />

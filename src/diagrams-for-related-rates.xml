@@ -55,7 +55,7 @@
                 </row>
                 <row bottom="minor">
                     <cell><m>h</m></cell>
-                    <cell>The elevation of the dron <m>t</m> seconds after the drone begins to rise.</cell>
+                    <cell>The elevation of the drone <m>t</m> seconds after the drone begins to rise.</cell>
                     <cell><quantity><unit base="foot"/></quantity></cell>
                 </row>
                 <row bottom="minor">

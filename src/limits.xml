@@ -193,7 +193,7 @@
 
         </exercisegroup>
 
-        <exercisegroup cols="2">
+        <exercisegroup>
             <introduction>
                 <p>Values of the function <m>f</m>, where <m>\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}</m> are shown in <xref ref="table-rational-function-values"/>, and values of the function <m>p</m> where <m>\fe{p}{t}=\sqrt{t-12}</m> are shown in <xref ref="table-square-root-values"/>. These questions are in reference to these functions.</p>
                 <sidebyside>
@@ -280,7 +280,7 @@
 
             <exercise>
                 <statement>
-                    <p>What is the value of <m>\lim\limits_{x\to5}\frac{3x^2-16x+5}{2x^2-13x+15}</m>?</p>
+                    <p>What is the value of <m>\lim\limits_{x\to5}\dfrac{3x^2-16x+5}{2x^2-13x+15}</m>?</p>
                 </statement>
             </exercise>
 
@@ -297,26 +297,26 @@
             </exercise>
         </exercisegroup>
 
-        <exercisegroup cols="3">
+        <exercisegroup cols="2">
             <introduction>
                  <p>Create tables similar to <xref autoname="plural" ref="table-rational-function-values"/> and <xref autoname="no" ref="table-square-root-values"/> from which you can deduce each of the following limit values. Make sure that you include table numbers, table captions, and meaningful column headings. Make sure that your input values follow patterns similar to those used in <xref autoname="plural" ref="table-rational-function-values"/> and <xref autoname="no" ref="table-square-root-values"/>. Make sure that you round your output values in such a way that a clear and compelling pattern in the output is clearly demonstrated by your stated values. Make sure that you state the limit value!</p> 
             </introduction>
 
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{t\to6}\frac{t^2-10t+24}{t-6}</m></p>
+                    <p><m>\lim\limits_{t\to6}\dfrac{t^2-10t+24}{t-6}</m></p>
                 </statement>
             </exercise>
 
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to-1^{+}}\frac{\sin(x+1)}{3x+3}</m></p>
+                    <p><m>\lim\limits_{x\to-1^{+}}\dfrac{\sin(x+1)}{3x+3}</m></p>
                 </statement>
             </exercise>
 
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{h\to0^{-}}\frac{h}{4-\sqrt{16-h}}</m></p>
+                    <p><m>\lim\limits_{h\to0^{-}}\dfrac{h}{4-\sqrt{16-h}}</m></p>
                 </statement>
             </exercise>
 

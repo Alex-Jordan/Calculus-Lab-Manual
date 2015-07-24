@@ -55,7 +55,7 @@
             </introduction>
             <exercise xml:id="exercise-based-on-derivatives">
                 <statement>
-                    <p>Draw onto <xref ref="figure-based-on-derivatives"/> a <em>continuous</em> function <m>f</m> that has a horizontal tangent line at the point <m>\point{1}{2}</m> along with the properties stated in <xref ref="table-based-on-derivatives"/>.</p>
+                    <p>Draw onto <xref ref="figure-based-on-derivatives"/> a <em>continuous</em> function <m>f</m> that has a horizontal tangent line at the point <m>\point{-1}{2}</m> along with the properties stated in <xref ref="table-based-on-derivatives"/>.</p>
                 </statement>
             </exercise>
             <exercise>
@@ -70,7 +70,7 @@
             </exercise>
             <exercise>
                 <statement>                    
-                    <p>Can a continuous, everywhere differentiable function satisfy the properties stated in <xref ref="table-based-on-derivatives"/> and not have a slope of zero at <m>1</m>?  Draw a picture that supports your answer.</p>
+                    <p>Can a continuous, everywhere differentiable function satisfy the properties stated in <xref ref="table-based-on-derivatives"/> and not have a slope of zero at <m>-1</m>?  Draw a picture that supports your answer.</p>
                 </statement>
             </exercise>
         </exercisegroup>
@@ -121,7 +121,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Given the conditions stated in <xref ref="exercise-based-on-derivatives-two"/>, does it have to be the case that isundefined?</p>
+                    <p>Given the conditions stated in <xref ref="exercise-based-on-derivatives-two"/>, does it have to be the case that <m>\fe{\sd{g}}{-1}</m> is undefined?</p>
                 </statement>
             </exercise>
             <exercise>

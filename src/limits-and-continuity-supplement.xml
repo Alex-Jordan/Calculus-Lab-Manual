@@ -16,30 +16,30 @@
             </introduction>
             <exercise xml:id="exercise-limits-supplement-first">
                 <statement>
+                    <tabular valign="top" top="major">
+                        <col halign="right"/>
+                        <col halign="center"/>
+                        <row bottom="medium">
+                            <cell><m>t</m></cell>
+                            <cell><m>\fe{g}{t}</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>-10{,}000</m></cell>
+                            <cell><m>99.97</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>-100{,}000</m></cell>
+                            <cell><m>999.997</m></cell>
+                        </row>
+                        <row bottom="major">
+                            <cell><m>-1{,}000{,}000</m></cell>
+                            <cell><m>9999.9997</m></cell>
+                        </row>
+                    </tabular>
                     <sidebyside>
-                        <tabular valign="top" top="major">
-                                <col halign="right"/>
-                                <col halign="center"/>
-                                <row bottom="medium">
-                                    <cell><m>t</m></cell>
-                                    <cell><m>\fe{g}{t}</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>-10{,}000</m></cell>
-                                    <cell><m>99.97</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>-100{,}000</m></cell>
-                                    <cell><m>999.997</m></cell>
-                                </row>
-                                <row bottom="major">
-                                    <cell><m>-1{,}000{,}000</m></cell>
-                                    <cell><m>9999.9997</m></cell>
-                                </row>
-                        </tabular>
                         <paragraphs valign="top" halign="center">
                             <p>Limit</p>
-                            <p><m>\lim_{t\to-\infty}\fe{g}{t}=\infty</m></p>
+                            <p><m>\lim\limits_{t\to-\infty}\fe{g}{t}=\infty</m></p>
                         </paragraphs>
                         <paragraphs valign="top" halign="center">
                             <p>Limit exists?</p>
@@ -56,29 +56,30 @@
             </exercise>
             <exercise>
                 <statement>
+                    <tabular top="major" valign="top">
+                        <col halign="right"/>
+                        <col halign="right"/>
+                        <row bottom="medium">
+                            <cell><m>x</m></cell>
+                            <cell><m>\fe{f}{x}</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>51{,}000</m></cell>
+                            <cell><m>-3.2\times10^{-5}</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>510{,}000</m></cell>
+                            <cell><m>-3.02\times10^{-7}</m></cell>
+                        </row>
+                        <row bottom="major">
+                            <cell><m>5{,}100{,}000</m></cell>
+                            <cell><m>-3.002\times10^{-9}</m></cell>
+                        </row>
+                    </tabular>
                     <sidebyside>
-                        <tabular top="major" valign="top">
-                                <col halign="right"/>
-                                <col halign="right"/>
-                                <row bottom="medium">
-                                    <cell><m>x</m></cell>
-                                    <cell><m>\fe{f}{x}</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>51{,}000</m></cell>
-                                    <cell><m>-3.2\times10^{-5}</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>510{,}000</m></cell>
-                                    <cell><m>-3.02\times10^{-7}</m></cell>
-                                </row>
-                                <row bottom="major">
-                                    <cell><m>5{,}100{,}000</m></cell>
-                                    <cell><m>-3.002\times10^{-9}</m></cell>
-                                </row>
-                        </tabular>
                         <paragraphs valign="top" halign="center">
                             <p>Limit</p>
+                            <p><m>\lim\limits_{x\to\mathord{?}}=\mathord{?}</m></p>
                         </paragraphs>
                         <paragraphs valign="top" halign="center">
                             <p>Limit exists?</p>
@@ -94,29 +95,30 @@
             </exercise>
             <exercise>
                 <statement>
+                    <tabular top="major" valign="top">
+                        <col halign="left"/>
+                        <col halign="left"/>
+                        <row bottom="medium">
+                            <cell><m>t</m></cell>
+                            <cell><m>\fe{z}{t}</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>0.33</m></cell>
+                            <cell><m>0.66</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>0.333</m></cell>
+                            <cell><m>0.666</m></cell>
+                        </row>
+                        <row bottom="major">
+                            <cell><m>0.3333</m></cell>
+                            <cell><m>0.6666</m></cell>
+                        </row>
+                    </tabular>
                     <sidebyside>
-                        <tabular top="major" valign="top">
-                                <col halign="left"/>
-                                <col halign="left"/>
-                                <row bottom="medium">
-                                    <cell><m>t</m></cell>
-                                    <cell><m>\fe{z}{t}</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>0.33</m></cell>
-                                    <cell><m>0.66</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>0.333</m></cell>
-                                    <cell><m>0.666</m></cell>
-                                </row>
-                                <row bottom="major">
-                                    <cell><m>0.3333</m></cell>
-                                    <cell><m>0.6666</m></cell>
-                                </row>
-                        </tabular>
                         <paragraphs valign="top" halign="center">
                             <p>Limit</p>
+                            <p><m>\lim\limits_{t\to\mathord{?}}=\mathord{?}</m></p>
                         </paragraphs>
                         <paragraphs valign="top" halign="center">
                             <p>Limit exists?</p>
@@ -132,29 +134,30 @@
             </exercise>
             <exercise>
                 <statement>
+                    <tabular top="major" valign="top">
+                        <col halign="left"/>
+                        <col halign="center"/>
+                        <row bottom="medium">
+                            <cell><m>\theta</m></cell>
+                            <cell><m>\fe{g}{\theta}</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>-0.9</m></cell>
+                            <cell><m>2{,}999{,}990</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>-0.99</m></cell>
+                            <cell><m>2{,}999{,}999</m></cell>
+                        </row>
+                        <row bottom="major">
+                            <cell><m>-0.999</m></cell>
+                            <cell><m>2{,}999{,}999.9</m></cell>
+                        </row>
+                    </tabular>
                     <sidebyside>
-                        <tabular top="major" valign="top">
-                                <col halign="left"/>
-                                <col halign="center"/>
-                                <row bottom="medium">
-                                    <cell><m>\theta</m></cell>
-                                    <cell><m>\fe{g}{\theta}</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>-0.9</m></cell>
-                                    <cell><m>2{,}999{,}990</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>-0.99</m></cell>
-                                    <cell><m>2{,}999{,}999</m></cell>
-                                </row>
-                                <row bottom="major">
-                                    <cell><m>-0.999</m></cell>
-                                    <cell><m>2{,}999{,}999.9</m></cell>
-                                </row>
-                        </tabular>
                         <paragraphs valign="top" halign="center">
                             <p>Limit</p>
+                            <p><m>\lim\limits_{\theta\to\mathord{?}}=\mathord{?}</m></p>
                         </paragraphs>
                         <paragraphs valign="top" halign="center">
                             <p>Limit exists?</p>
@@ -170,29 +173,30 @@
             </exercise>
             <exercise xml:id="exercise-limits-supplement-last">
                 <statement>
+                    <tabular top="major" valign="top">
+                        <col halign="left"/>
+                        <col halign="center"/>
+                        <row bottom="medium">
+                            <cell><m>t</m></cell>
+                            <cell><m>\fe{T}{t}</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>0.778</m></cell>
+                            <cell><m>29{,}990</m></cell>
+                        </row>
+                        <row>
+                            <cell><m>0.7778</m></cell>
+                            <cell><m>299{,}999</m></cell>
+                        </row>
+                        <row bottom="major">
+                            <cell><m>0.77778</m></cell>
+                            <cell><m>2{,}999{,}999.9</m></cell>
+                        </row>
+                    </tabular>
                     <sidebyside>
-                        <tabular top="major" valign="top">
-                                <col halign="left"/>
-                                <col halign="center"/>
-                                <row bottom="medium">
-                                    <cell><m>t</m></cell>
-                                    <cell><m>\fe{T}{t}</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>0.778</m></cell>
-                                    <cell><m>29{,}990</m></cell>
-                                </row>
-                                <row>
-                                    <cell><m>0.7778</m></cell>
-                                    <cell><m>299{,}999</m></cell>
-                                </row>
-                                <row bottom="major">
-                                    <cell><m>0.77778</m></cell>
-                                    <cell><m>2{,}999{,}999.9</m></cell>
-                                </row>
-                        </tabular>
                         <paragraphs valign="top" halign="center">
                             <p>Limit</p>
+                            <p><m>\lim\limits_{t\to\mathord{?}}=\mathord{?}</m></p>
                         </paragraphs>
                         <paragraphs valign="top" halign="center">
                             <p>Limit exists?</p>
@@ -215,29 +219,23 @@
                     <li><m>f</m> has no <m>x</m>-intercepts.</li>
                     <li><m>f</m> is continuous from the right at <m>-4</m>.</li>
                     <li><m>\lim\limits_{x\to-4^{-}}\fe{f}{x}=1</m>.</li>
+                    <li><m>\lim\limits_{x\to-4^{+}}\fe{f}{x}=-2</m>.</li>
+                    <li><m>\lim\limits_{x\to3}\fe{f}{x}=-\infty</m>.</li>
+                    <li><m>\lim\limits_{x\to\infty}\fe{f}{x}=-\infty</m>.</li>
+                    <li><m>f</m> has constant slope <m>-2</m> over <m>\ointerval{-\infty}{-4}</m>.</li>
                 </ul>  
 
-                <sidebyside>  
-                    <paragraphs>  
-                        <ul>  
-                            <li><m>\lim\limits_{x\to-4^{+}}\fe{f}{x}=-2</m>.</li>
-                            <li><m>\lim\limits_{x\to3}\fe{f}{x}=-\infty</m>.</li>
-                            <li><m>\lim\limits_{x\to\infty}\fe{f}{x}=-\infty</m>.</li>
-                            <li><m>f</m> has constant slope <m>-2</m> over <m>\ointerval{-\infty}{-4}</m>.</li>
-                        </ul>  
-                    </paragraphs>  
-                    <figure xml:id="figure-sketch-properties-supplement">
-                        <caption><m>f</m></caption>
-                        <image>
-                            <latex-image-code>
-                            <![CDATA[\begin{tikzpicture}
-                            \begin{axis}
-                            \end{axis}
-                            \end{tikzpicture}]]>
-                            </latex-image-code>
-                        </image>                        
-                    </figure>
-                </sidebyside>  
+                <figure xml:id="figure-sketch-properties-supplement">
+                    <caption><m>f</m></caption>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>                        
+                </figure>
             </statement>
             <solution>
                 <image>
@@ -277,9 +275,9 @@
                     <paragraphs>
                         <ul>
                             <li><m>\lim\limits_{x\to-\infty}\fe{f}{x}=\lim\limits_{x\to\infty}\fe{f}{x}=3</m>.</li>
-                            <li><m>\lim\limits_{x\to-4^{+}}\fe{f}{x}=-2</m> and <m>\lim\limits_{x\to-4^{-}}\fe{f}{x}=5</m>.</li>
-                            <li><m>\lim\limits_{x\to3{-}}\fe{f}{x}=-\infty</m> and <m>\lim\limits_{x\to3^{+}}\fe{f}{x}=\infty</m>.</li>
-                            <li><m>\fe{f}{-2}=0</m>, <m>\fe{f}{0}=-1</m>, and <m>\fe{f}{-4}=5</m>.</li>
+                            <li><m>\lim\limits_{x\to-4^{+}}\fe{f}{x}=-2</m> and<br /> <m>\lim\limits_{x\to-4^{-}}\fe{f}{x}=5</m>.</li>
+                            <li><m>\lim\limits_{x\to3{-}}\fe{f}{x}=-\infty</m> and<br /> <m>\lim\limits_{x\to3^{+}}\fe{f}{x}=\infty</m>.</li>
+                            <li><m>\fe{f}{-2}=0</m>, <m>\fe{f}{0}=-1</m>, and<br /> <m>\fe{f}{-4}=5</m>.</li>
                         </ul>
                     </paragraphs>
                     <figure xml:id="figure-second-sketch-properties-supplement">
@@ -340,7 +338,7 @@
         </exercise>
         <exercise>
             <statement>
-                <p>Determine the value(s) of <m>k</m> that make(s) the function <m>\fe{g}{t}=\begin{cases}t^2+kt-k&amp;t\geq3\\t^2-4k&amp;t\lt 3\end{cases}</m> continuous over <m>\ointerval{-\infty}{\infty}</m>.</p>
+                <p>Determine the value(s) of <m>k</m> that make(s) the function <m>g</m> defined by <m>\fe{g}{t}=\begin{cases}t^2+kt-k&amp;t\geq3\\t^2-4k&amp;t\lt 3\end{cases}</m> continuous over <m>\ointerval{-\infty}{\infty}</m>.</p>
             </statement>
             <solution>
                 <p>Because the two formulas are polynomials, the only number where continuity is at issue is <m>3</m>.  The top formula is used at <m>3</m>, so <m>\fe{g}{3}</m> is defined regardless of the value of <m>k</m>.  Basically all we need to do is ensure that the limits from the left and the right of <m>3</m> are both equal to <m>\fe{g}{3}</m>.  We have: <md>

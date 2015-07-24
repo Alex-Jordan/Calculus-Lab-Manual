@@ -12,6 +12,9 @@
     <!-- For title into HTML head, then tabs, bookmarks, etc -->
     <initialism>CLM</initialism>
 
+    <!-- Thumbnail for HTML -->
+    <brandlogo url="http://spot.pcc.edu/math/calclabbeta" source="coverthumbnail.png" />
+
     <!-- Rename Chapter and Section -->
     <rename element="chapter" lang="en-US">Lab</rename> 
     <rename element="section" lang="en-US">Activity</rename> 
@@ -27,6 +30,8 @@
     \usepackage{tkz-euclide}
     \usetkzobj{all}
     \usetikzlibrary{3d,calc}
+    \usepackage{xltxtra}
+
     
     % cycle list- truly awesome; see section 4.6.7, pg 129 of pgfplots
     \pgfplotscreateplotcyclelist{pccstylelist}{%

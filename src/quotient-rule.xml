@@ -38,7 +38,7 @@
     <exercises>
         <exercisegroup cols="2">
             <introduction>
-                <p>Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative. In the last problem, <m>G</m>, <m>m_1</m>, and <m>m_2</m> are constants.</p>
+                <p>Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative.</p>
             </introduction>
             <exercise>
                 <statement>

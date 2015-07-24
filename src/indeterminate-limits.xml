@@ -25,14 +25,16 @@
 
     <example xml:id="example-second-indeterminate">
         <p><md>
-        <mrow>\lim_{\theta\to0}\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}&amp;=\lim_{\theta\to0}\left(\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}\cdot\frac{1+\fe{\cos}{\theta}}{1+\fe{\cos}{\theta}}\right)&amp;&amp;\text{Indeterminate $\frac{0}{0}$ form}</mrow>
+        <mrow>&amp;\phantom{{}={}}\lim_{\theta\to0}\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}</mrow>
+        <mrow>&amp;=\lim_{\theta\to0}\left(\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}\cdot\frac{1+\fe{\cos}{\theta}}{1+\fe{\cos}{\theta}}\right)&amp;&amp;\text{Indeterminate $\frac{0}{0}$ form}</mrow>
         <mrow>&amp;=\lim_{\theta\to0}\frac{1-\fe{\cos^2}{\theta}}{\fe{\sin^2}{\theta}\cdot\left(1+\fe{\cos}{\theta}\right)}&amp;&amp;\text{Indeterminate $\frac{0}{0}$ form}</mrow>
         <mrow>&amp;=\lim_{\theta\to0}\frac{\fe{\sin^2}{\theta}}{\fe{\sin^2}{\theta}\cdot\left(1+\fe{\cos}{\theta}\right)}&amp;&amp;\text{Indeterminate $\frac{0}{0}$ form}</mrow>
         <mrow>&amp;=\lim_{\theta\to0}\frac{1}{1+\fe{\cos}{\theta}}&amp;&amp;\text{Limit Law A7}</mrow>
         <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}\left(1+\fe{\cos}{\theta}\right)}&amp;&amp;\text{Limit Law A5}</mrow>
         <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}1+\lim_{\theta\to0}\fe{\cos}{\theta}}&amp;&amp;\text{Limit Law A1}</mrow>
         <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}1+\fe{\cos}{\lim_{\theta\to0}\theta}}&amp;&amp;\text{Limit Law A6}</mrow>
-        <mrow>&amp;=\frac{1}{1+\fe{\cos}{0}}=\frac{1}{2}&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
+        <mrow>&amp;=\frac{1}{1+\fe{\cos}{0}}&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
+        <mrow>&amp;=\frac{1}{2}</mrow>
         </md>(<xref autoname="title" ref="lla7"/>, <xref autoname="title" ref="lla5"/>, <xref autoname="title" ref="lla1"/>, <xref autoname="title" ref="lla6"/>, <xref autoname="title" ref="llr1"/>, <xref autoname="title" ref="llr2"/>)</p>
     </example>
 
@@ -61,7 +63,7 @@
             </statement>
        </exercise>
 
-       <exercisegroup cols="3" by="row">
+       <exercisegroup cols="2">
            <introduction>
                 <p>Use the limit laws to establish the value of each of the following limits after first manipulating the expression so that it
 no longer has form <m>\frac{0}{0}</m>. Make sure that you use the step-by-step, vertical format shown in <xref autoname="plural" ref="example-first-indeterminate"/> and <xref ref="example-second-indeterminate"/>. Make sure that you cite each limit law used.</p>
@@ -69,37 +71,37 @@ no longer has form <m>\frac{0}{0}</m>. Make sure that you use the step-by-step, 
 
            <exercise>
                <statement>
-                   <p><m>\lim\limits_{x\to-4}\frac{x+4}{2x^2+5x-12}</m></p>
+                   <p><m>\lim\limits_{x\to-4}\dfrac{x+4}{2x^2+5x-12}</m></p>
                </statement>
            </exercise>
 
            <exercise>
                <statement>
-                   <p><m>\lim\limits_{x\to0}\frac{\fe{\sin}{2x}}{\fe{\sin}{x}}</m></p>
+                   <p><m>\lim\limits_{x\to0}\dfrac{\fe{\sin}{2x}}{\fe{\sin}{x}}</m></p>
                </statement>
            </exercise>
 
            <exercise>
                <statement>
-                   <p><m>\lim\limits_{\beta\to0}\frac{\fe{\sin}{\beta+\pi}}{\fe{\sin}{\beta}}</m></p>
+                   <p><m>\lim\limits_{\beta\to0}\dfrac{\fe{\sin}{\beta+\pi}}{\fe{\sin}{\beta}}</m></p>
                </statement>
            </exercise>
 
            <exercise>
                <statement>
-                   <p><m>\lim\limits_{t\to0}\frac{\fe{\cos}{2t}-1}{\fe{\cos}{t}-1}</m></p>
+                   <p><m>\lim\limits_{t\to0}\dfrac{\fe{\cos}{2t}-1}{\fe{\cos}{t}-1}</m></p>
                </statement>
            </exercise>
 
            <exercise>
                <statement>
-                   <p><m>\lim\limits_{x\to1}\frac{4\fe{\ln}{x}+2\fe{\ln}{x^3}}{\fe{\ln}{x}-\fe{\ln}{\sqrt{x}}}</m></p>
+                   <p><m>\lim\limits_{x\to1}\dfrac{4\fe{\ln}{x}+2\fe{\ln}{x^3}}{\fe{\ln}{x}-\fe{\ln}{\sqrt{x}}}</m></p>
                </statement>
            </exercise>
 
            <exercise>
                <statement>
-                   <p><m>\lim\limits_{w\to9}\frac{9-w}{\sqrt{w}-3}</m></p>
+                   <p><m>\lim\limits_{w\to9}\dfrac{9-w}{\sqrt{w}-3}</m></p>
                </statement>
            </exercise>
 

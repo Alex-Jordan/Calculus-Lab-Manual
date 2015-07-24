@@ -1,5 +1,0 @@
-rm tex4htbrfdraft.xht;
-rm tex4htbrfdraft.aux;
-mk4ht mzlatex tex4htbrfdraft.tex "html,mathplayer";
-mk4ht mzlatex tex4htbrfdraft.tex "html,mathplayer";
-xml2brl tex4htbrfdraft.xht tex4htbrfdraft.brf;

@@ -19,7 +19,7 @@
     <xsl:text>\end{multicols}&#xa;</xsl:text>
 </xsl:template>
 <xsl:template match="exercises" mode="answerlist">
-    <xsl:variable name="nonempty" select="(.//hint and $exercise.backmatter.hint='yes') or (.//answer and $exercise.backmatter.answer='yes') or (.//solution and $exercise.backmatter.solution='yes')" />
+    <xsl:variable name="nonempty" select="(.//answer and $exercise.backmatter.answer='no')" />
     <xsl:if test="$nonempty='true'">
         <xsl:text>\</xsl:text>
         <xsl:apply-templates select="." mode="subdivision-name" />
@@ -144,6 +144,12 @@
     </xsl:choose>
 </xsl:template>-->
 
+
+<!-- Since we are using a tasks environment for exercisegroups, which doesn't fully use 
+\textwidth, we need to adjust the widths that are used for sidebyside objects by subtracting
+2.5em (the item-indent) divided by however many sidebyside panels there are from each panel
+width. This hack will only work for one-column exercisegroups, but more-column exercisegroups
+shouldn't have sidebysides in them anyway -->
 <!-- When a figure is in a sidebyside, it could be in a minipage, and then the proportional width 
      needs to be changed from its global default. This is done at the end of thies template. -->
 <!-- vertical alignment of objects inside sidebyside -->
@@ -210,7 +216,12 @@
             <xsl:value-of select="$width"/>
         </xsl:otherwise>
     </xsl:choose>
-    <xsl:text>\textwidth}{%&#xa;</xsl:text>
+    <xsl:text>\textwidth</xsl:text>
+    <xsl:if test="ancestor::exercisegroup">
+        <xsl:text>-2.5em/</xsl:text>
+        <xsl:value-of select="count(ancestor::sidebyside/*[not(self::caption)])"/>
+    </xsl:if>
+    <xsl:text>}{%&#xa;</xsl:text>
     <xsl:text>\pgfplotsset{every axis/.append style={width=0.9\linewidth}}%&#xa;</xsl:text>
 </xsl:template>
 
@@ -218,15 +229,6 @@
 <xsl:template match="introduction|conclusion">
     <xsl:apply-templates />
     <xsl:text>\par&#xa;</xsl:text>
-</xsl:template>
-
-<!-- Make solution list smaller -->
-<xsl:template match="solution-list">
-    <!-- TODO: check here once for backmatter switches set to "knowl", which is unrealizable -->
-    <xsl:text>\begin{multicols}{2}&#xa;</xsl:text>
-    <xsl:text>{\tiny&#xa;</xsl:text>
-    <xsl:apply-templates select="//exercises" mode="backmatter" />
-    <xsl:text>}\end{multicols}&#xa;</xsl:text>
 </xsl:template>
 
 
@@ -337,5 +339,33 @@
     <!-- add empty caption -->
     <xsl:text>}% caption &#xa;</xsl:text>
 </xsl:template>
+
+<!-- make references to exercises just use the serial number, not full path number -->
+<xsl:template match="exercises//exercise" mode="xref-number">
+    <xsl:apply-templates select="." mode="serial-number" />
+</xsl:template>
+
+
+<!-- short titles -->
+<xsl:template match="chapter[title='Functions, Derivatives, and Antiderivatives']" mode="title-simple">
+    <xsl:text>Functions, Derivatives, Antiderivatives</xsl:text>
+</xsl:template>
+<xsl:template match="chapter[title='Critical Numbers and Graphing from Formulas']" mode="title-simple">
+    <xsl:text>Critical Numbers and Graphing</xsl:text>
+</xsl:template>
+<xsl:template match="chapter/section[title='Sign Tables for the First Derivative']" mode="title-simple">
+    <xsl:text>Sign Tables</xsl:text>
+</xsl:template>
+<xsl:template match="chapter/section[title='Formal Identification of Critical Numbers']" mode="title-simple">
+    <xsl:text>Formal ID of Critical Numbers</xsl:text>
+</xsl:template>
+<xsl:template match="chapter/section[title='Product and Quotient Rules Together']" mode="title-simple">
+    <xsl:text>Product, Quotient Rules Together</xsl:text>
+</xsl:template>
+<xsl:template match="chapter/section[title='Graphical Features from Derivatives']" mode="title-simple">
+    <xsl:text>Graph Features from Derivatives</xsl:text>
+</xsl:template>
+
+
 
 </xsl:stylesheet>

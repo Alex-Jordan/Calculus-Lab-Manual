@@ -54,19 +54,19 @@
 
             <exercise xml:id="exercise-first-difference-quotient">
                 <statement>
-                    <m>\fe{v}{t}=2.5t^2-7.5t</m>
+                    <p><m>\fe{v}{t}=2.5t^2-7.5t</m></p>
                 </statement>
             </exercise>
 
             <exercise>
                 <statement>
-                    <m>\fe{g}{x}=3-7x</m>
+                    <p><m>\fe{g}{x}=3-7x</m></p>
                 </statement>
             </exercise>
 
             <exercise>
                 <statement>
-                    <m>\fe{w}{x}=\dfrac{3}{x+2}</m>
+                    <p><m>\fe{w}{x}=\dfrac{3}{x+2}</m></p>
                 </statement>
             </exercise>
 
@@ -74,7 +74,7 @@
 
         <exercisegroup>
             <introduction>
-                <p>Suppose that an object is tossed into the air in such a way that the elevation of the object (measured in <quantity><unit base="foot"/></quantity>) is given by the function <m>\fe{s}{t}=40+40t-16t^2</m> where <m>t</m> is the amount of time that has passed since the object was tossed (measured in <quantity><unit base="second"/></quantity>).</p>
+                <p>Suppose that an object is tossed into the air in such a way that the elevation of the object (measured in <quantity><unit base="foot"/></quantity>) is given by the function <m>s</m> defined by <m>\fe{s}{t}=40+40t-16t^2</m> where <m>t</m> is the amount of time that has passed since the object was tossed (measured in <quantity><unit base="second"/></quantity>).</p>
             </introduction>
 
             <exercise>
@@ -186,7 +186,7 @@
 
             <exercise>
                 <statement>
-                    <p> What is the unit for the difference quotient for <m>v</m>? What does the value of the difference quotient (including unit) tell you in the context of this problem?</p>                 </statement>
+                    <p>What is the unit for the difference quotient for <m>v</m>? What does the value of the difference quotient (including unit) tell you in the context of this problem?</p>                 </statement>
             </exercise>
 
         </exercisegroup>

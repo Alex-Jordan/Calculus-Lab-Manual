@@ -30,7 +30,7 @@
         </exercisegroup>
         <exercisegroup>
             <introduction>
-                <p>The gravitational force (Newtons) between two objects of masses <m>m_1</m> and <m>m_2</m> (<quantity><unit prefix="kilo" base="gram"/></quantity>) is a function of the distance (meters) between the objects' centers of mass, <m>r</m>.    Specifically, <m>\fe{F}{r}=\frac{Gm_1m_2}{r}</m> where <m>G</m> is the universal gravitational constant (which is approximately <m>6.7\times10^{-11}</m><quantity><unit base="newton"/><unit base="meter" exp="2"/><per prefix="kilo" base="gram" exp="2"/></quantity>.)</p>
+                <p>The gravitational force (Newtons) between two objects of masses <m>m_1</m> and <m>m_2</m> (<quantity><unit prefix="kilo" base="gram"/></quantity>) is a function of the distance (meters) between the objects' centers of mass, <m>r</m>.    Specifically, <m>\fe{F}{r}=\frac{Gm_1m_2}{r^2}</m> where <m>G</m> is the universal gravitational constant (which is approximately <m>6.7\times10^{-11}</m><quantity><unit base="newton"/><unit base="meter" exp="2"/><per prefix="kilo" base="gram" exp="2"/></quantity>.)</p>
             </introduction>
             <exercise>
                 <statement>

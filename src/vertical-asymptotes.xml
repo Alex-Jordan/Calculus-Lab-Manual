@@ -34,12 +34,12 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Is it possible to write an equality about <m>\lim\limits_{t\to-3}\fe{g}{t}</m>? If so, write it.</p>
+                    <p>Is it possible to write an equality about <m>\lim\limits_{t\to-3}\fe{g}{t}</m>? If so, do it.</p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>Which of the following limits exist? <m>\lim\limits_{t\to-3^{-}}\fe{g}{t}</m>? <m>\lim\limits_{t\to-3^{+}}\fe{g}{t}</m>? <m>\lim\limits_{t\to-3}\fe{g}{t}</m>?</p>
+                    <p>Which of the following limits exist?<br /> <m>\lim\limits_{t\to-3^{-}}\fe{g}{t}</m>? <m>\lim\limits_{t\to-3^{+}}\fe{g}{t}</m>? <m>\lim\limits_{t\to-3}\fe{g}{t}</m>?</p>
                 </statement>
             </exercise>
         </exercisegroup>
@@ -55,7 +55,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Is it possible to write an equality about <m>\lim\limits_{x\to2}\fe{z}{x}</m>? If so, write it.</p>
+                    <p>Is it possible to write an equality about <m>\lim\limits_{x\to2}\fe{z}{x}</m>? If so, do it.</p>
                 </statement>
             </exercise>
             <exercise>
@@ -65,7 +65,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Which of the following limits exist? <m>\lim\limits_{x\to2^{-}}\fe{z}{x}</m>? <m>\lim\limits_{x\to2^{+}}\fe{z}{x}</m>? <m>\lim\limits_{x\to2}\fe{z}{x}</m>?</p>
+                    <p>Which of the following limits exist?<br /> <m>\lim\limits_{x\to2^{-}}\fe{z}{x}</m>? <m>\lim\limits_{x\to2^{+}}\fe{z}{x}</m>? <m>\lim\limits_{x\to2}\fe{z}{x}</m>?</p>
                 </statement>
             </exercise>
         </exercisegroup>
@@ -79,7 +79,7 @@
                         <p>Use this as an opportunity to discuss why limits of form <q>not-zero over zero</q> are <q>infinite limits</q>. What limit equation is being illustrated in the table?</p>
                     </paragraphs>
 
-                    <table valign="top" xml:id="table-vertical-asymptote">
+                    <table valign="top" xml:id="table-vertical-asymptote" width="53%"><!-- this table is a bit too wide for 50% in print-->
                         <caption><m>\fe{f}{x}=\frac{x+7}{x-8}</m></caption>
                         <tabular top="major">
                            <col halign="left"/>

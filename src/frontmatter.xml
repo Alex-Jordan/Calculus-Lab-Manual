@@ -35,9 +35,11 @@
             <year>2012<ndash />2015</year>
             <holder>Portand Community College</holder>
             <minilicense>Creative Commons BY-SA</minilicense>
-			<shortlicense>This work is licensed under the Creative Commons BY-SA License, Version 4.0.<br/> 
-                        <image src="by-sa.png"/></shortlicense>
+            <shortlicense><p>This work is licensed under the Creative Commons BY-SA License, Version 4.0.</p>
+            <p><image source="../images/by-sa.eps"/></p></shortlicense>
+            <creativecommons BY="yes" NC="yes" ubiquity="medium"/> 
         </copyright>
+
         <date>DRAFT <today /> DRAFT</date>
 
 	</colophon>

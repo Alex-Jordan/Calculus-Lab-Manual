@@ -88,39 +88,39 @@
                     <table xml:id="table-piecewise-discontinuities-analysis">
                         <caption>Discontinuity analysis for <m>f</m></caption>
                         <tabular top="major">
-                            <col halign="0.92in"/>
-                            <col halign="1.6in"/>
-                            <col halign="center"/>
-                            <col halign="0.8in"/>
+                            <col halign="0.92in" right="minor" left="minor"/>
+                            <col halign="1.6in" right="minor"/>
+                            <col halign="center" right="minor"/>
+                            <col halign="0.8in" right="minor"/>
                             <row bottom="medium">
-                                <cell right="minor">Location of discontinuity</cell>
-                                <cell right="minor">From <xref ref="definition-continuity"/>, sub-property (1, 2, or 3) that is not met</cell>
+                                <cell>Location of discontinuity</cell>
+                                <cell>From <xref ref="definition-continuity"/>, sub-property (1, 2, or 3) that is not met</cell>
                                 <cell right="minor">Removable?</cell>
                                 <cell>Continuous from one side?</cell>
                             </row>
                             <row bottom="minor">
-                                <cell></cell>
-                                <cell></cell>
-                                <cell></cell>
-                                <cell></cell>
+                                <cell><m>\strut</m></cell>
+                                <cell/>
+                                <cell/>
+                                <cell/>
                             </row>
                             <row bottom="minor">
-                                <cell></cell>
-                                <cell></cell>
-                                <cell></cell>
-                                <cell></cell>
+                                <cell><m>\strut</m></cell>
+                                <cell/>
+                                <cell/>
+                                <cell/>
                             </row>
                             <row bottom="minor">
-                                <cell></cell>
-                                <cell></cell>
-                                <cell></cell>
-                                <cell></cell>
+                                <cell><m>\strut</m></cell>
+                                <cell/>
+                                <cell/>
+                                <cell/>
                             </row>
                             <row bottom="minor">
-                                <cell></cell>
-                                <cell></cell>
-                                <cell></cell>
-                                <cell></cell>
+                                <cell><m>\strut</m></cell>
+                                <cell/>
+                                <cell/>
+                                <cell/>
                             </row>
                         </tabular>
                     </table>
@@ -128,7 +128,7 @@
             </exercise>
         </exercisegroup>
 
-        <exercisegroup cols="2" by="row">
+        <exercisegroup>
             <introduction>                
                 <p>Consider the function <m>f</m> defined by <m>\fe{f}{x}=\begin{cases}\frac{5}{x-10}&amp;x\leq5\\\frac{5}{5x-30}&amp;5\lt x\lt7\\\frac{x-2}{12-x}&amp;x>7\text{.}\end{cases}</m></p>
                 <p>State the values of <m>x</m> where each of the following occur. If a stated property doesn't occur, make sure that you state that (as opposed to simply not responding to the question). No explanation necessary.</p>

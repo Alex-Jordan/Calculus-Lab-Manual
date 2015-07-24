@@ -149,7 +149,7 @@
             <introduction>
                 <p>Consider the following problem.</p>
                 <blockquote>A square is getting larger. The sides are each growing at a constant rate of <quantity><mag>3</mag><unit base="inch"/><per base="minute"/></quantity>. At what rate is the area of the square growing the moment its area is <quantity><mag>25</mag><unit base="inch" exp="2"/></quantity>?</blockquote>
-                <geogebra-html5 src="https://tube.geogebra.org/material/iframe/id/790909/width/1024/height/576/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/auto" width="1024px" height="576px" style="border:0px;"/>
+                <geogebra-html5 src="geogebra/SquareRelatedRates.html" width="528px" height="522px" style="border:0px;"/>
             </introduction>
             <exercise>
                 <statement>
@@ -249,7 +249,7 @@
         </exercisegroup>
         <exercise>
             <statement>
-                <p>The radius of a circle is decreasing at the rate of <quantity><mag>0.2</mag><unit prefix="centi" base="meter"/><per base="minute"/></quantity>. At what rate is the area of the circle decreasing when the area of the circle is <quantity><mag>4\pi</mag><unit prefix="centi" base="meter" exp="2"/></quantity>?</p>
+                <p>The radius of a circle is decreasing at the rate of <quantity><mag>0.2</mag><unit prefix="centi" base="meter"/><per base="minute"/></quantity>. At what rate is the area of the circle decreasing when the area of the circle is <m>4\pi</m> <quantity><unit prefix="centi" base="meter" exp="2"/></quantity>?</p>
                 <p>Use the problem solving strategy:</p>
                 <ol>
                     <li>Create your variable table. (<acro>DR</acro>)</li>

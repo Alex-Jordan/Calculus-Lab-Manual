@@ -148,7 +148,7 @@ as acceleration <quantity><mag>-32</mag><unit base="foot"/><per base="second" ex
             </introduction>
             <exercise xml:id="exercise-derivative-units-supplement-first">
                 <statement>
-                    <p><m>\fe{R}{p}</m> is Carl's heart rate (beats/min) when he jogs at a rate of <m>p</m> (measured in <quantity><unit base="foot"/><per base="minute"/></quantity>).</p>
+                    <p><m>\fe{R}{p}</m> is Carl's heart rate (beats per min) when he jogs at a rate of <m>p</m> (measured in <quantity><unit base="foot"/><per base="minute"/></quantity>).</p>
                 </statement>
                 <solution>
                     <p>The unit for <m>\fe{\fd{R}}{p}</m> is <m>\frac{\sfrac{\text{beats}}{\text{min}}}{\sfrac{\text{ft}}{\text{min}}}</m>.</p>

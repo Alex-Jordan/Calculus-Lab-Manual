@@ -653,7 +653,7 @@ formula stated above for the product of three functions.  The first application 
                 <paragraphs valign="top" width="30%">
                     <p>In <xref ref="table-functions-for-derivative-rules"/> several function and derivative values are given for the functions <m>f</m> and <m>g</m>.  The exercises that follow are based upon these two functions.</p>
                 </paragraphs>
-                <table xml:id="table-functions-for-derivative-rules" valign="top" width="70%">
+                <table xml:id="table-functions-for-derivative-rules" valign="top">
                     <tabular top="major">
                         <col halign="right"/>
                         <col halign="right"/>

@@ -12,32 +12,656 @@
     <exercises>
         <exercise>
             <statement>
-                <p>At 2:00 PM one day, Muffin and Rex were sleeping atop one another.  A loud noise startled the animals and Muffin began to run due north at a constant rate of <quantity><mag>1.7</mag><unit base="foot"/><per base="second"/></quantity> while Rex ran due east at a constant rate of <quantity><mag>2.1</mag><unit base="foot"/><per base="second"/></quantity>.  The critters maintained these paths and rates for several seconds. Calculate the rate at which the distance between the cat and dog was changing three seconds into their run.</p> 
+                <p>A weather balloon is rising vertically at the rate of <quantity><mag>10</mag><unit base="foot"/><per base="second"/></quantity>. An observer is standing on the ground <quantity><mag>300</mag><unit base="foot"/></quantity> horizontally from the point where the balloon was released. At what rate is the distance between the observer and the balloon changing when the balloon is <quantity><mag>400</mag><unit base="foot"/></quantity> height?</p> 
             </statement>
+            <solution>
+                <p>First we make a diagram of the situation.</p>
+                <figure>
+                    <caption>Variable Diagram</caption>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \coordinate (O) at (0,0);
+                        \coordinate (A) at (3,0);
+                        \coordinate (B) at (3,4);
+                        \draw (O)--(A)--(B)--cycle;
+                        \tkzLabelPoint[below=0pt](O){observer}
+                        \tkzLabelPoint[below=0pt](A){\parbox{1cm}{launch point}}
+                        \tkzLabelPoint[above=0pt](B){balloon}
+                        \tkzLabelSegment[below=0pt](O,A){$300$}
+                        \tkzLabelSegment[above left=0pt](O,B){$d$}
+                        \tkzLabelSegment[right=2pt](A,B){$h$}
+                        \tkzMarkRightAngle(O,A,B)
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
+                <p>Next we account for the various quantities and rates in the problem.</p>
+                <table>
+                    <caption>Variable table for the balloon problem</caption>
+                    <tabular top="major">
+                        <col halign="center"/>
+                        <col halign="3.5in"/>
+                        <col halign="center"/>
+                        <row bottom="medium">
+                            <cell>Variable</cell>
+                            <cell halign="center">Variable Description</cell>
+                            <cell>Unit</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>h</m></cell>
+                            <cell>How far the balloon has risen since it was released.</cell>
+                            <cell><quantity><unit base="foot"/></quantity></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>d</m></cell>
+                            <cell>How far is the observer from the balloon <m>t</m> seconds after it was released.</cell>
+                            <cell><quantity><unit base="foot"/></quantity></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\lz{h}{t}</m></cell>
+                            <cell>The rate at which the balloon is rising.</cell>
+                            <cell><quantity><unit base="foot"/><per base="second"/></quantity></cell>
+                        </row>
+                        <row bottom="major">
+                            <cell><m>\lz{d}{t}</m></cell>
+                            <cell>The rate at which the distance between the observer and the balloon is changing.</cell>
+                            <cell><quantity><unit base="foot"/><per base="second"/></quantity></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <p>Next we find an equation that relates the quantities, and use it to find the related rates equation.<md>
+                <mrow>d^2&amp;=300^2+h^2</mrow>
+                <mrow>\lzoo{t}{d^2}&amp;=\lzoo{t}{300^2+h^2}</mrow>
+                <mrow>2d\lz{d}{t}&amp;=2h\lz{h}{t}</mrow>
+                <mrow>d\lz{d}{t}&amp;=h\lz{h}{t}</mrow>
+                </md>When the balloon is <quantity><mag>400</mag><unit base="foot"/></quantity> in the air, we can determine the values of some of the variables form the related rates equation.</p>
+                <table>
+                    <caption>What we know about the variables at the described moment</caption>
+                    <tabular top="major">
+                        <col halign="center"/>
+                        <col halign="4in"/>
+                    <row bottom="medium">
+                        <cell>Variable</cell>
+                        <cell>What we know</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>h</m></cell>
+                        <cell>The value of this variable is <m>400</m>.</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>d</m></cell>
+                        <cell>The value of this variable is <m>d=\sqrt{300^2+400^2}=500</m>.</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>\lz{h}{t}</m></cell>
+                        <cell>The value of this variable is <m>10</m>.</cell>
+                    </row>
+                    <row bottom="major">
+                        <cell><m>\lz{d}{t}</m></cell>
+                        <cell>This is the variable for which we need to solve.</cell>
+                    </row>
+                    </tabular>
+                </table>
+                <p>Now we can substitute these values into the related rates equation and solve for <m>\lz{d}{t}</m>.<md>
+                <mrow>d\lz{d}{t}&amp;=h\lz{h}{t}</mrow>
+                <mrow>500\lz{d}{t}&amp;=400(10)</mrow>
+                <mrow>\lz{d}{t}&amp;=8</mrow>
+                </md>So when the balloon is <quantity><mag>400</mag><unit base="foot"/></quantity> in the air, the distance between the observer and the balloon is increasing at a rate of <quantity><mag>8</mag><unit base="foot"/><per base="second"/></quantity>.</p>
+            </solution>
+            <answer>
+                <p><quantity><mag>8</mag><unit base="foot"/><per base="second"/></quantity></p>
+            </answer>
         </exercise>
         <exercise>
             <statement>
-                <p>Schuyler's clock is kaput; the minute hand functions as it should but the hour hand is stuck at <m>4</m>. The minute hand on the clock is <quantity><mag>30</mag><unit prefix="centi" base="meter"/></quantity> long and the hour hand is <quantity><mag>10</mag><unit prefix="centi" base="meter"/></quantity> long.  Determine the rate of change between the tips of the hands every time the minute hand points directly at <m>12</m>.</p> 
+                <p>At 2:00 PM one day, Muffin and Rex were sleeping atop one another.  A loud noise startled the animals and Muffin began to run due north at a constant rate of <quantity><mag>1.7</mag><unit base="foot"/><per base="second"/></quantity> while Rex ran due east at a constant rate of <quantity><mag>2.1</mag><unit base="foot"/><per base="second"/></quantity>.  The critters maintained these paths and rates for several seconds. Calculate the rate at which the distance between the cat and dog was changing three seconds into their run.</p> 
             </statement>
+            <solution>
+                <p>First we make a diagram of the situation.</p>
+                <figure>
+                    <caption>Variable Diagram</caption>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \coordinate (O) at (0,0);
+                        \coordinate (A) at (4.2,0);
+                        \coordinate (B) at (0,3.4);
+                        \draw (O)--(A)--(B)--cycle;
+                        \tkzLabelPoint[below=2pt](O){start}
+                        \tkzLabelPoint[below=2pt](A){Rex}
+                        \tkzLabelPoint[left=2pt](B){Muffin}
+                        \tkzLabelSegment[below=2pt](O,A){$x$}
+                        \tkzLabelSegment[left=2pt](O,B){$y$}
+                        \tkzLabelSegment[above right=2pt](A,B){$d$}
+                        \tkzMarkRightAngle(A,O,B)
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
+                <p>Next we account for the various quantities and rates in the problem.</p>
+                <table>
+                    <caption>Variable table for the Rex-Muffin problem</caption>
+                    <tabular top="major">
+                        <col halign="center"/>
+                        <col halign="3.5in"/>
+                        <col halign="center"/>
+                        <row bottom="medium">
+                            <cell>Variable</cell>
+                            <cell halign="center">Variable Description</cell>
+                            <cell>Unit</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>x</m></cell>
+                            <cell>How far Rex has run <m>t</m> seconds after the loud noise.</cell>
+                            <cell><quantity><unit base="foot"/></quantity></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>y</m></cell>
+                            <cell>How far Muffin has run <m>t</m> seconds after the loud noise.</cell>
+                            <cell><quantity><unit base="foot"/></quantity></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>d</m></cell>
+                            <cell>The distance between Muffin and Rex <m>t</m> seconds after the loud noise.</cell>
+                            <cell><quantity><unit base="foot"/></quantity></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\lz{x}{t}</m></cell>
+                            <cell>The rate at which Rex is running <m>t</m> seconds after the loud noise.</cell>
+                            <cell><quantity><unit base="foot"/><per base="second"/></quantity></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\lz{y}{t}</m></cell>
+                            <cell>The rate at which Muffin is running <m>t</m> seconds after the loud noise.</cell>
+                            <cell><quantity><unit base="foot"/><per base="second"/></quantity></cell>
+                        </row>
+                        <row bottom="major">
+                            <cell><m>\lz{d}{t}</m></cell>
+                            <cell>The rate at which the distance between Rex and Muffin is changing <m>t</m> seconds after the loud noise.</cell>
+                            <cell><quantity><unit base="foot"/><per base="second"/></quantity></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <p>Next we find an equation that relates the quantities, and use it to find the related rates equation.<md>
+                <mrow>d^2&amp;=x^2+y^2</mrow>
+                <mrow>\lzoo{t}{d^2}&amp;=\lzoo{t}{x^2+y^2}</mrow>
+                <mrow>2d\lz{d}{t}&amp;=2x\lz{x}{t}+2y\lz{y}{t}</mrow>
+                </md>Three seconds into their run, we can determine the values of some of the variables form the related rates equation.</p>
+                <table>
+                    <caption>What we know about the variables at the described moment</caption>
+                    <tabular top="major">
+                        <col halign="center"/>
+                        <col halign="4in"/>
+                    <row bottom="medium">
+                        <cell>Variable</cell>
+                        <cell>What we know</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>x</m></cell>
+                        <cell>The value of this variable is <m>3\cdot2.1=6.3</m>.</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>y</m></cell>
+                        <cell>The value of this variable is <m>3\cdot1.7=5.1</m>.</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>d</m></cell>
+                        <cell>Using the diagram and the Pythagorean Theorem, we find that <m>d=\sqrt{6.3^2+5.1^2}\approx8.105\ldots</m>.</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>\lz{x}{t}</m></cell>
+                        <cell>The value of this variable is <m>2.1</m>.</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>\lz{y}{t}</m></cell>
+                        <cell>The value of this variable is <m>1.7</m>.</cell>
+                    </row>
+                    <row bottom="major">
+                        <cell><m>\lz{d}{t}</m></cell>
+                        <cell>This is the variable for which we need to solve.</cell>
+                    </row>
+                    </tabular>
+                </table>
+                <p>Now we can substitute these values into the related rates equation and solve for <m>\lz{d}{t}</m>.<md>
+                <mrow>2d\lz{d}{t}&amp;=2x\lz{x}{t}+\lz{y}{t}</mrow>
+                <mrow>2(8.105\ldots)\lz{d}{t}&amp;=2(6.3)(2.1)+2(5.1)(1.7)</mrow>
+                <mrow>16.21\ldots\lz{d}{t}&amp;=43.8</mrow>
+                <mrow>\lz{d}{t}&amp;\approx2.701\ldots</mrow>
+                </md>So <quantity><mag>3</mag><unit base="second"/></quantity> after the animals begin to run, their distance apart from each other is increasing at a rate of approximately <quantity><mag>2.701</mag><unit base="foot"/><per base="second"/></quantity>.</p>
+            </solution>
+            <answer>
+                <p>approximately <quantity><mag>2.701</mag><unit base="foot"/><per base="second"/></quantity></p>
+            </answer>
+        </exercise>
+        <exercise>
+            <statement>
+                <p>Schuyler's clock is kaput; the minute hand functions as it should but the hour hand is stuck at <m>4</m>. The minute hand on the clock is <quantity><mag>30</mag><unit prefix="centi" base="meter"/></quantity> long and the hour hand is <quantity><mag>20</mag><unit prefix="centi" base="meter"/></quantity> long.  Determine the rate of change between the tips of the hands every time the minute hand points directly at <m>12</m>.</p> 
+            </statement>
+            <solution>
+                <p>First we make a diagram of the situation.</p>
+                <figure>
+                    <caption>Variable Diagram</caption>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\newfontfamily\annatar{Tengwar Annatar}
+                        \begin{tikzpicture}
+                        \coordinate (O) at (0,0);
+                        \coordinate (A) at (0,2.1);
+                        \pgfmathsetmacro\x{1.4*cos(-30)}
+                        \pgfmathsetmacro\y{1.4*sin(-30)}
+                        \coordinate (B) at (\x,\y);
+                        \draw[very thick] (O) circle (3);
+                        \draw[very thick,->] (O) -- (A);
+                        \draw[very thick,->] (O) -- (B);
+                        \fill (O) circle (2pt);
+                        \draw[dashed] (A) -- (B);
+                            {\annatar
+                            \draw node[inner sep=0,anchor=north] at (90:2.9) {\char"00F0\char"00A8\char"00F1\char"00CA};
+                            \draw node[inner sep=0,rotate=-30,anchor=north] at (60:2.9) {\char"00F1\char"00A8};
+                            \draw node[inner sep=0,rotate=-60,anchor=north] at (30:2.9) {\char"00F2\char"2122};
+                            \draw node[inner sep=0,rotate=-90,anchor=north] at (0:2.9) {\char"00F3\char"02DC};
+                            \draw node[inner sep=0,rotate=-120,anchor=north] at (-30:2.9) {\char"00F4\char"00A8};
+                            \draw node[inner sep=0,rotate=-150,anchor=north] at (-60:2.9) {\char"00F5\char"2122};
+                            \draw node[inner sep=0,rotate=-180,anchor=north] at (-90:2.9) {\char"00F6\char"00A8};
+                            \draw node[inner sep=0,rotate=-210,anchor=north] at (-120:2.9) {\char"00F7\char"00A8};
+                            \draw node[inner sep=0,rotate=-240,anchor=north] at (-150:2.9) {\char"00F8\char"00A8};
+                            \draw node[inner sep=0,rotate=-270,anchor=north] at (-180:2.9) {\char"00F9\char"02DC};
+                            \draw node[inner sep=0,rotate=-300,anchor=north] at (-210:2.9) {\char"00FA\char"00A8};
+                            \draw node[inner sep=0,rotate=-330,anchor=north] at (-240:2.9) {\char"00FB\char"00A8};
+                            }
+                        \tkzLabelSegment[left=0pt](O,A){$30$}
+                        \tkzLabelSegment[below left=0pt](O,B){$20$}
+                        \tkzLabelSegment[above right=0pt](A,B){$d$}
+                        \tkzMarkAngle[size=0.6](B,O,A)
+                        \tkzLabelAngle[pos=0.3](B,O,A){$\theta$}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
+                <p>Next we account for the various quantities and rates in the problem.</p>
+                <table>
+                    <caption>Variable table for the clock problem</caption>
+                    <tabular top="major">
+                        <col halign="center"/>
+                        <col halign="3.5in"/>
+                        <col halign="center"/>
+                        <row bottom="medium">
+                            <cell>Variable</cell>
+                            <cell halign="center">Variable Description</cell>
+                            <cell>Unit</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>d</m></cell>
+                            <cell>The distance between the tips of the hands at time <m>t</m>.</cell>
+                            <cell><quantity><unit prefix="centi" base="meter"/></quantity></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\theta</m></cell>
+                            <cell>The angle from the minute hand to the hour hand at time <m>t</m>.</cell>
+                            <cell><quantity><unit base="radian"/></quantity></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\lz{d}{t}</m></cell>
+                            <cell>The rate at which the distance between the tips of the hands at time <m>t</m> is changing.</cell>
+                            <cell><quantity><unit prefix="centi" base="meter"/><per base="minute"/></quantity></cell>
+                        </row>
+                        <row bottom="major">
+                            <cell><m>\lz{\theta}{t}</m></cell>
+                            <cell>The rate at which the angle from the minute hand to the hour hand at time <m>t</m> is changing.</cell>
+                            <cell><quantity><unit base="radian"/><per base="second"/></quantity></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <p>Next we find an equation that relates the quantities, and use it to find the related rates equation. Here we can use the Law of Cosines.<md>
+                <mrow>d^2&amp;=30^2+20^2-2(30)(20)\fe{\cos}{\theta}</mrow>
+                <mrow>d^2&amp;=1300-1200\fe{\cos}{\theta}</mrow>
+                <mrow>\lzoo{t}{d^2}&amp;=\lzoo{t}{1300-1200\fe{\cos}{\theta}}</mrow>
+                <mrow>2d\lz{d}{t}&amp;=1200\fe{\sin}{\theta}\lz{\theta}{t}</mrow>
+                </md>When the minute hand reaches 12, we can determine the values of some of the variables form the related rates equation.</p>
+                <table>
+                    <caption>What we know about the variables at the described moment</caption>
+                    <tabular top="major">
+                        <col halign="center"/>
+                        <col halign="4in"/>
+                    <row bottom="medium">
+                        <cell>Variable</cell>
+                        <cell>What we know</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>d</m></cell>
+                        <cell>The value of this variable is found using the Law of Cosines: <m>d=\sqrt{30^2+20^2-2(30)(20)\fe{\cos}{\frac{2\pi}{3}}}\approx43.58\ldots</m>.</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>\theta</m></cell>
+                        <cell>The value of this variable is <m>\frac{2\pi}{3}</m>.</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>\lz{d}{t}</m></cell>
+                        <cell>This is the variable for which we need to solve.</cell>
+                    </row>
+                    <row bottom="major">
+                        <cell><m>\lz{\theta}{t}</m></cell>
+                        <cell>The value of this variable is <m>-\frac{2\pi}{60}</m>, since the minute hand goes through an entire revolution every <quantity><mag>60</mag><unit base="minute"/></quantity>. It is negative, because at the moment we are investigating, the minute hand is moving closer to the hour hand.</cell>
+                    </row>
+                    </tabular>
+                </table>
+                <p>Now we can substitute these values into the related rates equation and solve for <m>\lz{d}{t}</m>.<md>
+                <mrow>2d\lz{d}{t}&amp;=1200\fe{\sin}{\theta}\lz{\theta}{t}</mrow>
+                <mrow>2(43.58\ldots)\lz{d}{t}&amp;\approx1200\fe{\sin}{\frac{2\pi}{3}}(-\frac{2\pi}{60})</mrow>
+                <mrow>87.17\ldots\lz{d}{t}&amp;\approx-108.8\ldots</mrow>
+                <mrow>\lz{d}{t}&amp;\approx-1.248\ldots</mrow>
+                </md>So when the minute hand reaches the 12, the distance betwen the tips of the two hands is decreasing at a rate of about <quantity><mag>1.248</mag><unit prefix="centi" base="meter"/><per base="minute"/></quantity>.</p>
+            </solution>
+            <answer>
+                <p>approximately <quantity><mag>1.248</mag><unit prefix="centi" base="meter"/><per base="minute"/></quantity></p>
+            </answer>
         </exercise>
         <exercise>
             <statement>
                 <p>It was a dark night and <quantity><mag>5.5</mag><unit base="foot"/></quantity> tall Bahram was walking towards a street lamp whose light was perched <quantity><mag>40</mag><unit base="foot"/></quantity> into the air.  As he walked, the light caused a shadow to fall behind Bahram.  When Bahram was <quantity><mag>80</mag><unit base="foot"/></quantity> from the base of the lamp he was walking at a pace of <quantity><mag>2</mag><unit base="foot"/><per base="second"/></quantity>.  At what rate was the length of Bahram's shadow changing at that instant?   Make sure that each stated and calculated rate value has the correct sign.   Make sure that your conclusion sentence clearly communicates whether the length of the shadow was increasing or decreasing at the indicated time.</p>
             </statement>
+            <solution>
+                <p>First we make a diagram of the situation.</p>
+                <figure>
+                    <caption>Variable Diagram</caption>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \coordinate (O) at (0,0);
+                        \coordinate (A) at (0,3);
+                        \coordinate (B) at (6,0);
+                        \coordinate (C) at (6,16.5/40);
+                        \coordinate (D) at (6/0.8625,0);                     
+                        \draw (O)--(A)--(D)--cycle;
+                        \draw (B)--(C)--(D)--cycle;
+                        \tkzLabelPoint[below=2pt](O){lamp base}
+                        \tkzLabelPoint[above=2pt](A){lamp bulb}
+                        \tkzLabelPoint[right=2pt,rotate=90](C){Bahram}
+                        \tkzLabelPoint[right=2pt](D){shadow tip}
+                        \tkzLabelSegment[above=0pt,rotate=90](O,A){$40$}
+                        \tkzLabelSegment[above=0pt,rotate=90](B,C){$\,5.5$}
+                        \tkzLabelSegment[below=2pt](B,D){$\ell$}
+                        \tkzLabelSegment[below=2pt](B,O){$x$}
+                        \tkzMarkRightAngle(A,O,D)
+                        \tkzMarkRightAngle(C,B,D)
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
+                <p>Next we account for the various quantities and rates in the problem.</p>
+                <table>
+                    <caption>Variable table for the shadow problem</caption>
+                    <tabular top="major">
+                        <col halign="center"/>
+                        <col halign="3.5in"/>
+                        <col halign="center"/>
+                        <row bottom="medium">
+                            <cell>Variable</cell>
+                            <cell halign="center">Variable Description</cell>
+                            <cell>Unit</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>x</m></cell>
+                            <cell>The distance from the lamp base to wher Bahram is standing at time <m>t</m>.</cell>
+                            <cell><quantity><unit base="foot"/></quantity></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\ell</m></cell>
+                            <cell>The length of Bahram's shadow at time <m>t</m>.</cell>
+                            <cell><quantity><unit base="foot"/></quantity></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\lz{x}{t}</m></cell>
+                            <cell>The rate at which Bahram's distance from the base of the lamp post is changing at time <m>t</m>.</cell>
+                            <cell><quantity><unit base="foot"/><per base="second"/></quantity></cell>
+                        </row>
+                        <row bottom="major">
+                            <cell><m>\lz{\ell}{t}</m></cell>
+                            <cell>The rate at which the length of Bahram's shadow is changing at time <m>t</m>.</cell>
+                            <cell><quantity><unit base="foot"/><per base="second"/></quantity></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <p>Next we find an equation that relates the quantities, and use it to find the related rates equation. Here we can use similar triangles.<md>
+                <mrow>\frac{\ell+x}{40}&amp;=\frac{\ell}{5.5}</mrow>
+                <mrow>\lzoo{t}{\frac{\ell+x}{40}}&amp;=\lzoo{t}{\frac{\ell}{5.5}}</mrow>
+                <mrow>\frac{\lz{\ell}{t}+\lz{x}{t}}{40}&amp;=\frac{\lz{\ell}{t}}{5.5}</mrow>
+                </md>When Bahram is <quantity><mag>80</mag><unit base="foot"/></quantity> from the base of the lamp, we can determine the values of some of the variables form the related rates equation.</p>
+                <table>
+                    <caption>What we know about the variables at the described moment</caption>
+                    <tabular top="major">
+                        <col halign="center"/>
+                        <col halign="4in"/>
+                    <row bottom="medium">
+                        <cell>Variable</cell>
+                        <cell>What we know</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>x</m></cell>
+                        <cell>The value of this variable is <m>80</m>.</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>\ell</m></cell>
+                        <cell>The value of this variable could be found using the similar triangles quation, but since this variable does not appear in the related rates equation, there is no need to find its value.</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>\lz{x}{t}</m></cell>
+                        <cell>Since Bahram is walking with a pace of <quantity><mag>2</mag><unit base="foot"/><per base="second"/></quantity> \emph{toward} the lamp, the value of this variable is <m>-2</m>.</cell>
+                    </row>
+                    <row bottom="major">
+                        <cell><m>\lz{\ell}{t}</m></cell>
+                        <cell>This is the variable for which we must solve.</cell>
+                    </row>
+                    </tabular>
+                </table>
+                <p>Now we can substitute these values into the related rates equation and solve for <m>\lz{\ell}{t}</m>.<md>
+                <mrow>\frac{\lz{\ell}{t}+\lz{x}{t}}{40}&amp;=\frac{\lz{\ell}{t}}{5.5}</mrow>
+                <mrow>\frac{\lz{\ell}{t}-2}{40}&amp;=\frac{\lz{\ell}{t}}{5.5}</mrow>
+                <mrow>5.5\lz{\ell}{t}-11&amp;=40\lz{\ell}{t}</mrow>
+                <mrow>-34.5\lz{\ell}{t}&amp;=11</mrow>
+                <mrow>\lz{\ell}{t}&amp;=-0.3188\ldots</mrow>
+                </md>So when Bahram is <quantity><mag>80</mag><unit base="foot"/></quantity> from the lamp post, approaching it with a pace of <quantity><mag>2</mag><unit base="foot"/><per base="second"/></quantity>, his shadow is decreasing in lenght at a rate of about <quantity><mag>0.3188</mag><unit base="foot"/><per base="second"/></quantity>.</p>
+            </solution>
+            <answer>
+                <p>decreasing at approximately <quantity><mag>0.3188</mag><unit base="foot"/><per base="second"/></quantity></p>
+            </answer>
         </exercise>
         <exercise>
             <statement>
                 <p>The gravitational force, <m>F</m>,  between two objects in space with masses <m>m_1</m> and <m>m_2</m> is given by the formula <m>F=\frac{Gm_1m_2}{r^2}</m> where <m>r</m> is the distance between the objects' centers of mass and <m>G</m> is the universal gravitational constant.</p>
                 <p>Two pieces of space junk, one with mass <quantity><mag>500</mag><unit prefix="kilo" base="gram"/></quantity> and the other with mass <quantity><mag>3000</mag><unit prefix="kilo" base="gram"/></quantity>, were drifting directly toward one another.  When the objects' centers of mass were <quantity><mag>250</mag><unit prefix="kilo" base="meter"/></quantity> apart the lighter piece was moving at a rate of <quantity><mag>0.5</mag><unit prefix="kilo" base="meter"/><per base="hour"/></quantity> and the heavier piece was moving at a rate of <quantity><mag>0.9</mag><unit prefix="kilo" base="meter"/><per base="hour"/></quantity>.  Leaving <m>G</m> as a constant, determine the rate at which the gravitational force between the two objects was changing at that instant.  Make sure that each stated and calculated rate value has the correct sign.   Make sure that your conclusion sentence clearly communicates whether the force was increasing or decreasing at that given time.  The unit for <m>F</m> is Newtons (<quantity><unit base="newton"/></quantity>). </p>
             </statement>
+            <solution>
+                <p>We don't really need a diagram here, since the equation relating the various quantities has been given. Accounting for the various quantities and rates in the problem:</p>
+                <table>
+                    <caption>Variable table for the shadow problem</caption>
+                    <tabular top="major">
+                        <col halign="center"/>
+                        <col halign="3.5in"/>
+                        <col halign="center"/>
+                        <row bottom="medium">
+                            <cell>Variable</cell>
+                            <cell halign="center">Variable Description</cell>
+                            <cell>Unit</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>r</m></cell>
+                            <cell>The distance between the two objects' centers of mass at time <m>t</m>.</cell>
+                            <cell><quantity><unit prefix="kilo" base="meter"/></quantity></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>F</m></cell>
+                            <cell>The gravitaional force between the two objects at time <m>t</m>.</cell>
+                            <cell><quantity><unit base="newton"/></quantity></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\lz{r}{t}</m></cell>
+                            <cell>The rate at which the distance between the two objects' centers of mass is changing at time <m>t</m>.</cell>
+                            <cell><quantity><unit prefix="kilo" base="meter"/><per base="hour"/></quantity></cell>
+                        </row>
+                        <row bottom="major">
+                            <cell><m>\lz{F}{t}</m></cell>
+                            <cell>The rate at which the gravitaional force between the two objects is changing at time <m>t</m>.</cell>
+                            <cell><quantity><unit base="newton"/><per base="hour"/></quantity></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <p>We have been given an equation that relates the quantities, and we can use it to find the related rates equation.<md>
+                <mrow>F=\frac{G(500)(3000)}{r^2}</mrow>
+                <mrow>\lzoo{t}{F}=\lzoo{t}{\frac{G(500)(3000)}{r^2}}</mrow>
+                <mrow>\lz{F}{t}=-2\cdot\frac{G(500)(3000)}{r^3}\cdot\lz{r}{t}</mrow>
+                <mrow>\lz{F}{t}=-\frac{3000000G}{r^3}\cdot\lz{r}{t}</mrow>
+                </md>At the moment under consideration, we can determine the values of some of the variables form the related rates equation.</p>
+                <table>
+                    <caption>What we know about the variables at the described moment</caption>
+                    <tabular top="major">
+                        <col halign="center"/>
+                        <col halign="4in"/>
+                    <row bottom="medium">
+                        <cell>Variable</cell>
+                        <cell>What we know</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>r</m></cell>
+                        <cell>The value of this variable is <m>250</m>.</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>F</m></cell>
+                        <cell>This variable does not appear in the related rates equation, so we do not need to compute it.</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>\lz{r}{t}</m></cell>
+                        <cell>The value of this variable is negative, since the objecta are getting closer to each other. Given their speeds at the moment under consideration, the value of <m>\lz{r}{t}</m> is <m>-(0.9+0.5)=-1.4</m>.</cell>
+                    </row>
+                    <row bottom="major">
+                        <cell><m>\lz{F}{t}</m></cell>
+                        <cell>This is the variable for which we must solve.</cell>
+                    </row>
+                    </tabular>
+                </table>
+                <p>Now we can substitute these values into the related rates equation and solve for <m>\lz{F}{t}</m>.<md>
+                <mrow>\lz{F}{t}=-\frac{3000000G}{r^3}\cdot\lz{r}{t}</mrow>
+                <mrow>\lz{F}{t}=-\frac{3000000G}{250^3}\cdot(-1.4)</mrow>
+                <mrow>\lz{F}{t}=0.2688G</mrow>
+                </md>So at the moment when the objects are <quantity><mag>250</mag><unit prefix="kilo" base="meter"/></quantity> apart, the gravitational force between them is increasing at a rate of <m>0.2688G</m> newtons per hour. (<m>G</m> is measured in <quantity><unit base="newton"/><unit prefix="kilo" base="meter" exp="2"/><per prefix="kilo" base="gram" exp="2"/></quantity>.)</p>
+            </solution>
+            <answer>
+                <p><m>0.2688G</m> newtons per our, for <m>G</m> measured in <quantity><unit base="newton"/><unit prefix="kilo" base="meter" exp="2"/><per prefix="kilo" base="gram" exp="2"/></quantity></p>
+            </answer>
         </exercise>
         <exercise>
             <statement>
                 <p>An eighteen inch pendulum sitting atop a table is in the downward part of its motion.  The pivot point for the pendulum is <quantity><mag>30</mag><unit base="inch"/></quantity> above the table top.  When the pendulum is <quantity><mag>45</mag><unit base="degree"/></quantity> away from vertical, the angle formed at the pivot is decreasing at the rate of <quantity><mag>25</mag><unit base="degree"/><per base="second"/></quantity>.  At what rate is the end of the pendulum approaching the table top at this instant? Make sure that each stated and calculated rate value has the correct sign.  Make sure that you use appropriate units when defining your variables.</p>
             </statement>
-            <hint>
-                <p>Draw a right triangle with one acute angle vertex at the pivot point and the other acute angle vertex at the end of the pendulum.  The rate of change of one piece of this triangle is the same as the rate you are trying to find.</p>
-            </hint>
+            <solution>
+                <p>First we make a diagram of the situation.</p>
+                <figure>
+                    <caption>Variable Diagram</caption>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \coordinate (O) at (0,0);
+                        \coordinate (A) at (0,6);
+                        \coordinate (B) at (2.56,3.44);
+                        \coordinate (C) at (-4,0);
+                        \coordinate (D) at (4,0);
+                        \coordinate (E) at (2.56,0);
+                        \draw[very thick] (C)--(D);
+                        \draw (A)--(B);
+                        \draw[dashed] (E)--(B);
+                        \draw[dashed] (A)--(O);
+                        \fill (A) circle[radius=2pt];
+                        \fill (B) circle[radius=6pt];
+                        \tkzLabelPoint[above=0pt](A){pivot point}
+                        \tkzLabelPoint[right=3pt](B){pendulum}
+                        \tkzLabelSegment[above=0pt,rotate=-45](B,A){$18$}
+                        \tkzLabelSegment[left=0pt](O,A){$30$}
+                        \tkzLabelSegment[left=0pt](B,E){$h$}
+                        \tkzLabelAngle[pos=0.5](O,A,B) {$\theta$}
+                        \tkzMarkAngle(O,A,B)
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
+                <p>Next we account for the various quantities and rates in the problem. Note that an angle and an angle rate were given in terms of degrees, but we should convert to radians because the derivatives that we are familiar with for trigonometric functions assume that radians are in use.</p>
+                <table>
+                    <caption>Variable table for the shadow problem</caption>
+                    <tabular top="major">
+                        <col halign="center"/>
+                        <col halign="3.5in"/>
+                        <col halign="center"/>
+                        <row bottom="medium">
+                            <cell>Variable</cell>
+                            <cell halign="center">Variable Description</cell>
+                            <cell>Unit</cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\theta</m></cell>
+                            <cell>The angle between the pendulum and the vertical.</cell>
+                            <cell><quantity><unit base="radian"/></quantity></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>h</m></cell>
+                            <cell>The distance from the pendulum weight to the table.</cell>
+                            <cell><quantity><unit base="inch"/></quantity></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\lz{\theta}{t}</m></cell>
+                            <cell>The rate at which the angle between the pendulum and the vertical is changing at time <m>t</m>.</cell>
+                            <cell><quantity><unit base="radian"/><per base="second"/></quantity></cell>
+                        </row>
+                        <row bottom="major">
+                            <cell><m>\lz{h}{t}</m></cell>
+                            <cell>The rate at which the distance from the pendulum weight to the table is changing at time <m>t</m>.</cell>
+                            <cell><quantity><unit base="inch"/><per base="second"/></quantity></cell>
+                        </row>
+                    </tabular>
+                </table>
+                <p>Next we find an equation that relates the quantities, and use it to find the related rates equation. Here we can use the cosine formula for an angle of a right triangle.<md>
+                <mrow>\fe{\cos}{\theta}&amp;=\frac{30-h}{18}</mrow>
+                <mrow>\lzoo{t}{\fe{\cos}{\theta}}&amp;=\lzoo{t}{\frac{30-h}{18}}</mrow>
+                <mrow>-\fe{\sin}{\theta}\lz{\theta}{t}&amp;=\frac{-\lz{h}{t}}{18}</mrow>
+                <mrow>\fe{\sin}{\theta}\lz{\theta}{t}&amp;=\frac{1}{18}\lz{h}{t}</mrow>
+                </md>At the moment in questio, we can determine the values of some of the variables form the related rates equation.</p>
+                <table>
+                    <caption>What we know about the variables at the described moment</caption>
+                    <tabular top="major">
+                        <col halign="center"/>
+                        <col halign="4in"/>
+                    <row bottom="medium">
+                        <cell>Variable</cell>
+                        <cell>What we know</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>theta</m></cell>
+                        <cell>The value of this variable is <m>\frac{\pi}{4}</m>.</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>h</m></cell>
+                        <cell>This variable does not appear in the related rates equation, so there is no need to solve for it.</cell>
+                    </row>
+                    <row bottom="minor">
+                        <cell><m>\lz{\theta}{t}</m></cell>
+                        <cell>The value of this variable is <m>-25\frac{\pi}{180}</m>, or just <m>-\frac{5}{36}\pi</m>.</cell>
+                    </row>
+                    <row bottom="major">
+                        <cell><m>\lz{h}{t}</m></cell>
+                        <cell>This is the variable for which we must solve.</cell>
+                    </row>
+                    </tabular>
+                </table>
+                <p>Now we can substitute these values into the related rates equation and solve for <m>\lz{\ell}{t}</m>.<md>
+                <mrow>\fe{\sin}{\theta}\lz{\theta}{t}&amp;=\frac{1}{18}\lz{h}{t}</mrow>
+                <mrow>\fe{\sin}{\frac{\pi}{4}}\cdot-\frac{5}{36}\pi&amp;=\frac{1}{18}\lz{h}{t}</mrow>
+                <mrow>-\frac{5\pi}{36\sqrt{2}}&amp;=\frac{1}{18}\lz{h}{t}</mrow>
+                <mrow>-\frac{5\pi}{2\sqrt{2}}&amp;=\lz{h}{t}</mrow>
+                <mrow>lz{h}{t}&amp;\approx-5.553\ldots</mrow>
+                </md>So at the moment in question, the distance between the pendulum weight and the table is decreasing with a rate of about <quantity><mag>5.553</mag><unit base="inch"/><per base="second"/></quantity>.</p>
+            </solution>
+            <answer>
+                <p>decreasing at approximately <quantity><mag>5.553</mag><unit base="inch"/><per base="second"/></quantity></p>
+            </answer>
         </exercise>
     </exercises>
 </section>

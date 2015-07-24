@@ -143,12 +143,12 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Draw onto <xref ref="figure-plot-antiderivative-two"/> the continuous antiderivative of <m>f</m> that passes through the point <m>\point{3}{1}</m>.  Please note that every antiderivative of <m>f</m> increases exactly one unit over the interval <m>\ointerval{-3}{-2}</m>.</p> 
+                    <p>Draw onto <xref ref="figure-plot-antiderivative-two"/> the continuous antiderivative of <m>f</m> that passes through the point <m>\point{-3}{1}</m>.  Please note that every antiderivative of <m>f</m> increases exactly one unit over the interval <m>\ointerval{-3}{-2}</m>.</p> 
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>Because <m>f</m> is not continuous, there are other antiderivatives of <m>f</m> that pass through the point <m>\point{3}{1}</m>. Specifically, antiderivatives of <m>f</m> may or may not be continuous at <m>1</m>.  Draw onto <xref autoname="plural" ref="figure-plot-antiderivative-three"/> and <xref autoname="no" ref="figure-plot-antiderivative-four"/> different antiderivatives of <m>f</m> that pass through the point <m>\point{3}{1}</m>.</p>
+                    <p>Because <m>f</m> is not continuous, there are other antiderivatives of <m>f</m> that pass through the point <m>\point{-3}{1}</m>. Specifically, antiderivatives of <m>f</m> may or may not be continuous at <m>-1</m>.  Draw onto <xref autoname="plural" ref="figure-plot-antiderivative-three"/> and <xref autoname="no" ref="figure-plot-antiderivative-four"/> different antiderivatives of <m>f</m> that pass through the point <m>\point{-3}{1}</m>.</p>
                 </statement>
             </exercise>
         </exercisegroup>
@@ -164,11 +164,11 @@
                 <p>Consider the function <m>g</m> shown in <xref ref="figure-line-segments"/>.</p>
                 <sidebyside>
                     <figure xml:id="figure-line-segments" >
-                        <caption><m>y=\fe{g}{x}</m></caption>
+                        <caption><m>y=\fe{g}{t}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[]
+                            \begin{axis}[xlabel={$t$}]
                                 \addplot[pccplot,domain=-6:-3,-]{2/3*(x+6)+2};
                                 \addplot[pccplot,domain=-3:1,-]{-3};
                                 \addplot[pccplot,domain=1:4,-]{2/3*(x-1)+2};
@@ -180,11 +180,11 @@
                         </image>
                     </figure>
                     <figure xml:id="figure-line-segments-antiderivative" >
-                        <caption><m>y=\fe{G}{x}</m></caption>
+                        <caption><m>y=\fe{G}{t}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[]
+                            \begin{axis}[xlabel={$t$}]
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>
@@ -194,7 +194,7 @@
             </introduction>
             <exercise>
                 <statement>
-                    <p>Let <m>G</m> be an antiderivative of <m>g</m>.  Suppose that <m>G</m> is continuous on <m>\cinterval{-6}{6}</m>, <m>\fe{G}{6}=3</m>, and that the greatest value <m>G</m> ever achieves is <m>6</m>.  Draw <m>G</m> onto <xref ref="figure-line-segments-antiderivative"/>.</p>
+                    <p>Let <m>G</m> be an antiderivative of <m>g</m>.  Suppose that <m>G</m> is continuous on <m>\cinterval{-6}{6}</m>, <m>\fe{G}{-6}=-3</m>, and that the greatest value <m>G</m> ever achieves is <m>6</m>.  Draw <m>G</m> onto <xref ref="figure-line-segments-antiderivative"/>.</p>
                 </statement>
             </exercise>
             <exercise>
@@ -216,7 +216,7 @@
                     </paragraphs>
 
                     <figure xml:id="figure-discontinuous-derivative" valign="top" >
-                        <caption><m>y=\fe{g}{x}</m></caption>
+                        <caption><m>y=\fe{\fd{g}}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -240,7 +240,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>At which values of <m>x</m> is <m>g</m> nondifferentiable?</p>
+                    <p>At which values of <m>x</m> is <m>g</m> not differentiable?</p>
                 </statement>
             </exercise>
             <exercise>
@@ -255,7 +255,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Over which intervals is the value of <m>\sd{g}</m> constant?</p>
+                    <p>Over which intervals does <m>\sd{g}</m> have a constant value?</p>
                 </statement>
             </exercise>
             <exercise>

@@ -163,8 +163,6 @@
                     <p>The value found in <xref ref="exercise-upside-down-parabola-slope"/> is called <em>the slope of the tangent line to <m>z</m> at <m>4</m></em>.  Draw onto <xref ref="figure-upside-down-parabola-supplement"/> the line that passes through the point <m>\point{4}{2}</m> with this slope.  The line you just drew is called <em>the tangent line to <m>z</m> at <m>4</m></em>.</p>
                 </statement>
                 <solution>
-                    <figure>
-                        <caption><m>y=2+4x-x^2</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -179,8 +177,24 @@
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                    </figure>
                 </solution>
+                <answer>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[]
+                                \addplot+[
+                                    domain=-1.5:5.5,
+                                ]{-(x-2)^2+6};
+                                \addplot+[
+                                    domain=2.8:6.2,
+                                ]{-4*(x-4)+2};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                </answer>
+
             </exercise>
         </exercisegroup>
         <exercisegroup cols="2">
@@ -315,7 +329,7 @@
                 </answer>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="2" by="row">
+        <exercisegroup>
             <introduction>
                 <p>Several applied functions are given below.  In each case, find the indicated quantity (including unit) and interpret the value in the context of the application.</p> 
             </introduction>

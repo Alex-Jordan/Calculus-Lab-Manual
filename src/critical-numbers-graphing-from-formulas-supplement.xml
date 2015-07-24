@@ -202,7 +202,7 @@
                     <p>What would you guess to be the first derivative of <m>\fe{\tanh}{t}</m>?  Take the derivative of the formula for <m>\fe{\tanh}{t}</m> to verify your suspicion.</p>
                 </statement>
                 <solution>
-                    <p>If the hyperbolic trig funcitons behave similarly to the sircular trig functions, we would expect <m>\lzoo{t}{\fe{\tanh}{t}}=\fe{\sech^2}{t}</m>. Let's see:<md>
+                    <p>If the hyperbolic trig functions behave similarly to the sircular trig functions, we would expect <m>\lzoo{t}{\fe{\tanh}{t}}=\fe{\sech^2}{t}</m>. Let's see:<md>
                     <mrow>\lzoo{t}{\fe{\tanh}{t}}&amp;=\lzoo{t}{\frac{\fe{\sinh}{t}}{\fe{\cosh}{t}}}</mrow>
                     <mrow>&amp;=\frac{\lzoo{t}{\fe{\sinh}{t}}\cdot\fe{\cosh}{t}-\fe{\sinh}{t}\cdot\lzoo{t}{\fe{\cosh}{t}}}{\fe{\cosh^2}{t}}</mrow>
                     <mrow>&amp;=\frac{\fe{\cosh}{t}\cdot\fe{\cosh}{t}-\fe{\sinh}{t}\cdot\fe{\sinh}{t}}{\fe{\cosh^2}{t}}</mrow>

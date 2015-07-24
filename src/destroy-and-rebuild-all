@@ -6,6 +6,3 @@ mv clm.tex printdraft.tex
 rm screenpdfdraft.*
 xsltproc -xinclude ../xsl/clm-screenpdf.xsl clm.xml
 mv clm.tex screenpdfdraft.tex
-rm tex4htbrfdraft.*
-xsltproc -xinclude ../xsl/clm-tex4htbrf.xsl clm.xml
-mv clm.tex tex4htbrfdraft.tex

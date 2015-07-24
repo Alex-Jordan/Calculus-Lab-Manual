@@ -7,10 +7,14 @@
 <!-- Common thin layer                                                      -->
 <xsl:import href="clm-common.xsl" />
 
+<xsl:param name="exercise.backmatter.hint" select="'no'" />
 <xsl:param name="exercise.backmatter.answer" select="'no'" />
 <xsl:param name="exercise.backmatter.solution" select="'yes'" />
+<xsl:param name="exercise.text.hint" select="'yes'" />
+<xsl:param name="exercise.text.answer" select="'no'" />
+<xsl:param name="exercise.text.solution" select="'no'" />
 <xsl:param name="html.css.extra"  select="'../style/css/clm.css'" />
-
+<xsl:param name="html.knowl.example" select="'no'" />
 
 <!-- GeoGebra HTML5-->
 <xsl:template match="geogebra-html5">
@@ -139,71 +143,39 @@
     <br />
 </xsl:template>
 
-<!--
-<xsl:template name="type-name">
-    <xsl:param name="string-id" />
-    <xsl:variable name="translation">
-        <xsl:for-each select="document('../../mathbook/xsl/mathbook-localization.xsl')">
-            <xsl:value-of select="key('localization-key', concat($document-language,$string-id) )"/>
-        </xsl:for-each>
-    </xsl:variable>
-    <xsl:choose>
-        <xsl:when test="$string-id='chapter'">Lab</xsl:when>
-        <xsl:when test="$string-id='section'">Activity</xsl:when>
-        <xsl:when test="$translation!=''"><xsl:value-of select="$translation" /></xsl:when>
-        <xsl:otherwise>
-            <xsl:text>[</xsl:text>
-            <xsl:value-of select="$string-id" />
-            <xsl:text>]&#xa;</xsl:text>
-            <xsl:message>MBX:WARNING: could not translate string with id "<xsl:value-of select="$string-id" />" into language for code "<xsl:value-of select="$document-language" />"</xsl:message>
-        </xsl:otherwise>
-    </xsl:choose>
-</xsl:template>
--->
 
 <!-- For tables, move caption above                -->
-<!-- MBX "table" is a displayed, captioned, numbered object      -->
-<!-- Implemented as an HTML figure, but caption will say "Table" -->
-<!-- Numbered in sequence with real figures and other tables     -->
-<!-- Contents should always be a "tabular" element               -->
-<xsl:template match="table">
-    <xsl:element name="figure">
-        <xsl:variable name="ident">
-          <xsl:apply-templates select="." mode="internal-id" />
-        </xsl:variable>
-        <xsl:attribute name="id"><xsl:value-of select="$ident"/></xsl:attribute>
-        <!-- side by side figures can accept additional attributes -->
-        <xsl:if test="ancestor::sidebyside">
-            <xsl:call-template name="sidebysideCSS" select="."/>
-        </xsl:if>
-        <xsl:apply-templates select="caption" />
-        <table class="center">
-            <xsl:apply-templates select="*[not(self::caption)]" />
-        </table>
-    </xsl:element>
-    <xsl:if test="ancestor::sidebyside">
-       <xsl:text>&#xa;&#xa;</xsl:text>
-    </xsl:if>
+<xsl:template match="table" mode="body">
+    <xsl:apply-templates select="caption"/>
+    <xsl:apply-templates select="*[not(self::caption)]"/>
 </xsl:template>
 
+
 <!-- Center captions  -->
-<!-- Caption of a figure or table                  -->
+<!-- Caption of a numbered figure or table         -->
 <!-- All the relevant information is in the parent -->
 <xsl:template match="caption">
-    <figcaption style="text-align:center;">
-        <!-- subfigure/subtable captions don't have 'Figure'/'Table' in the caption -->
-        <xsl:if test="not(ancestor::sidebyside[count(caption)>0]) or local-name(..)='sidebyside'">
-          <!-- regular figures, e.g Figure 1.3 or global captions for a collection of subfigures/subtables-->
-            <span class="heading">
-                <xsl:apply-templates select=".." mode="type-name"/>
-            </span>
-        </xsl:if>
+    <figcaption style="text-align:center">
+        <span class="heading">
+            <xsl:apply-templates select="parent::*" mode="type-name"/>
+        </span>
         <span class="codenumber">
-            <xsl:apply-templates select=".." mode="number"/>
+            <xsl:apply-templates select="parent::*" mode="number"/>
         </span>
         <xsl:apply-templates />
     </figcaption>
 </xsl:template>
+<!-- Caption'ed sidebyside indicate subfigures and subtables are subsidiary -->
+<!-- so we number with just their serial number, a formatted (a), (b), (c), -->
+<xsl:template match="sidebyside[caption]/figure/caption|sidebyside[caption]/table/caption">
+    <figcaption style="text-align:center">
+        <span class="codenumber">
+            <xsl:apply-templates select="parent::*" mode="serial-number"/>
+        </span>
+        <xsl:apply-templates />
+    </figcaption>
+</xsl:template>
+
 
 <!-- For prefaces, skip codenumber                         --> 
 <!-- Both environments and sections have a "type,"         -->
@@ -224,88 +196,62 @@
     </span>
 </xsl:template>
 
-
-
-
-<!-- change default size of figures -->
-<!-- Figures and their captions -->
-<!-- TODO: class="wrap" is possible -->
-<xsl:template match="figure">
-    <xsl:element name="figure">
-        <xsl:variable name="ident">
-          <xsl:apply-templates select="." mode="internal-id" />
-        </xsl:variable>
-        <xsl:attribute name="id"><xsl:value-of select="$ident"/></xsl:attribute>
-        <xsl:attribute name="style">width:50%;</xsl:attribute>
-        <!-- side by side figures can accept additional attributes -->
-        <xsl:if test="ancestor::sidebyside">
-            <xsl:call-template name="sidebysideCSS" select="."/>
-        </xsl:if>
-        <!-- regular figure, no subfigures -->
-        <xsl:apply-templates select="*[not(self::caption)]"/>
-        <xsl:apply-templates select="caption"/>
+<!-- Adjust image widths depending on surrounding figures and sidebysides-->
+<!-- A wrapper for SVG images w/ optional fallback -->
+<!-- object element seems fine for HTML            -->
+<!-- but SageMathCloud prefers img element         -->
+<xsl:template match="*" mode="svg-wrapper">
+    <xsl:param name="png-fallback" />
+    <xsl:element name="object">
+        <xsl:attribute name="type">image/svg+xml</xsl:attribute>
+        <xsl:choose>
+            <xsl:when test="ancestor::figure and not(ancestor::sidebyside)">
+                <xsl:attribute name="style">width:48%; margin:auto;</xsl:attribute>
+            </xsl:when>
+            <xsl:when test="not(ancestor::figure) and ancestor::sidebyside">
+                <xsl:attribute name="style">width:48%; margin:auto;</xsl:attribute>
+            </xsl:when>
+            <xsl:when test="ancestor::figure and ancestor::sidebyside">
+                <xsl:attribute name="style">width:90%; margin:auto;</xsl:attribute>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:attribute name="style">width:48%; margin:auto;</xsl:attribute>
+            </xsl:otherwise>
+        </xsl:choose>
+        <xsl:attribute name="data">
+            <xsl:value-of select="$directory.images" />
+            <xsl:text>/</xsl:text>
+            <xsl:apply-templates select=".." mode="internal-id" />
+            <xsl:text>.svg</xsl:text>
+        </xsl:attribute>
+        <xsl:apply-templates select="../description" />
+        <xsl:choose>
+            <xsl:when test="$png-fallback = 'yes'">
+                <xsl:element name="img">
+                    <xsl:attribute name="src">
+                        <xsl:value-of select="$directory.images" />
+                        <xsl:text>/</xsl:text>
+                        <xsl:apply-templates select=".." mode="internal-id" />
+                        <xsl:text>.png</xsl:text>
+                    </xsl:attribute>
+                </xsl:element>
+            </xsl:when>
+            <xsl:otherwise>
+                <p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:element>
-    <xsl:if test="ancestor::sidebyside">
-       <xsl:text>&#xa;&#xa;</xsl:text>
-    </xsl:if>
 </xsl:template>
 
-<xsl:template match="exercise" mode="backmatter">
-    <xsl:if test="hint or answer or solution">
-        <!-- Lead with the problem number and some space -->
-        <xsl:variable name="xref">
-            <xsl:apply-templates select="." mode="internal-id" />
-        </xsl:variable>
-        <article class="exercise-like" id="{$xref}">
-            <xsl:if test="$exercise.backmatter.statement='yes'">
-                <!-- TODO: not a "backmatter" template - make one possibly? Or not necessary -->
-                <xsl:apply-templates select="statement" />
-            </xsl:if>
-            <xsl:if test="hint and $exercise.backmatter.hint='yes'">
-                <xsl:apply-templates select="hint" mode="backmatter" />
-            </xsl:if>
-            <xsl:if test="answer and $exercise.backmatter.answer='yes'">
-                <xsl:apply-templates select="answer" mode="backmatter" />
-            </xsl:if>
-            <xsl:if test="solution and $exercise.backmatter.solution='yes'">
-                <xsl:apply-templates select="solution" mode="backmatter" />
-            </xsl:if>
-        </article>
+<!--Put magnitudes in math mode -->
+<!-- Magnitude                                      -->
+<xsl:template match="mag">
+    <xsl:if test="not(parent::quantity)">
+        <xsl:message>MBX:WARNING: mag element should have parent quantity element</xsl:message>
     </xsl:if>
-</xsl:template>
-
-<!-- an answer-only list -->
-<xsl:template match="answer-list">
-    <xsl:apply-templates select="//exercises" mode="answerlist" />
-</xsl:template>
-<xsl:template match="exercises" mode="answerlist">
-    <xsl:variable name="nonempty" select="(.//hint and $exercise.backmatter.hint='yes') or
-                                          (.//answer and $exercise.backmatter.answer='yes') or
-                                          (.//solution and $exercise.backmatter.solution='yes')" />
-    <xsl:if test="$nonempty='true'">
-        <section class="exercises" id="">
-            <h1 class="heading">
-                <span class="type">Exercises</span>
-                <span class="codenumber"><xsl:apply-templates select="." mode="number" /></span>
-                <span class="title"><xsl:apply-templates select="title-full" /></span>
-            </h1>
-            <xsl:apply-templates select="*[not(self::title)]" mode="answerlist" />
-        </section>
-    </xsl:if>
-</xsl:template>
-<xsl:template match="exercises//introduction|exercises//conclusion" mode="answerlist" />
-<xsl:template match="exercise" mode="answerlist">
-    <xsl:if test="hint or answer or solution">
-        <!-- Lead with the problem number and some space -->
-        <xsl:variable name="xref">
-            <xsl:apply-templates select="." mode="internal-id" />
-        </xsl:variable>
-        <article class="exercise-like" id="{$xref}">
-            <xsl:if test="answer">
-                <xsl:apply-templates select="answer" mode="backmatter" />
-            </xsl:if>
-        </article>
-    </xsl:if>
+    <xsl:text>\(</xsl:text>
+    <xsl:apply-templates />
+    <xsl:text>\)</xsl:text>
 </xsl:template>
 
 
@@ -317,6 +263,10 @@
 
 <xsl:template match="centerline">
     <xsl:apply-templates />
+</xsl:template>
+
+<xsl:template match="exercises//exercise" mode="xref-number">
+    <xsl:apply-templates select="." mode="serial-number" />
 </xsl:template>
 
 </xsl:stylesheet>

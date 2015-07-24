@@ -110,7 +110,7 @@
             </introduction>
             <exercise xml:id="exercise-tangent-line">
                 <statement>
-                    <p> Find the slope of the tangent line shown in <xref ref="figure-tangent-line-exercise"/> using <me>m_{\text{tan}}=\lim_{h\to0}\frac{\fe{g}{3+h}-\fe{g}{3}}{h}\text{.}</me> Show work consistent with that illustrated in <xref ref="example-tangent-line"/>.</p> 
+                    <p>Find the slope of the tangent line shown in <xref ref="figure-tangent-line-exercise"/> using <me>m_{\text{tan}}=\lim_{h\to0}\frac{\fe{g}{3+h}-\fe{g}{3}}{h}\text{.}</me> Show work consistent with that illustrated in <xref ref="example-tangent-line"/>.</p> 
                 </statement>
             </exercise>
             <exercise>

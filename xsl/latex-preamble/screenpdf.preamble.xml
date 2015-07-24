@@ -1,7 +1,7 @@
 <latex-preamble>
 
 <latex-preamble-early>
-\usepackage[kerning=true]{microtype}
+\usepackage{microtype}
 \usepackage[T1]{fontenc}
 \usepackage{savetrees}
 </latex-preamble-early>

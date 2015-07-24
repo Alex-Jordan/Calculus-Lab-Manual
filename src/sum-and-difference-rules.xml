@@ -10,7 +10,7 @@
 <section xml:id="section-sum-and-difference-rules">
     <title>The Sum and Difference Rules</title>
 
-    <p>When taking the derivative of two or more terms, you can take the derivatives term by term and insert plus or minus signs as appropriate.  Collectively we call this the i<term>sum and difference rules</term> of differentiation.<men>\lzoo{x}{\fe{f}{x}\pm\fe{g}{x}}=\lzoo{x}{\fe{f}{x}}\pm\lzoo{x}{\fe{g}{x}}</men></p>
+    <p>When taking the derivative of two or more terms, you can take the derivatives term by term and insert plus or minus signs as appropriate.  Collectively we call this the <term>sum and difference rules</term> of differentiation.<men>\lzoo{x}{\fe{f}{x}\pm\fe{g}{x}}=\lzoo{x}{\fe{f}{x}}\pm\lzoo{x}{\fe{g}{x}}</men></p>
 
     <p>In the following examples and problems we introduce linear and constant terms into the functions being differentiated.<men xml:id="equation-constant-rule">\lzoo{x}{k}=0\quad\text{for }k\in\reals</men><men xml:id="equation-linear-rule">\lzoo{x}{kx}=k\quad\text{for }k\in\reals</men></p>  
 
@@ -48,7 +48,7 @@
 
         <exercisegroup cols="2">
             <introduction>
-                <p>Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative. In the last problem, <m>G</m>, <m>m_1</m>, and <m>m_2</m> are constants.</p>
+                <p>Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative.</p>
             </introduction>
             <exercise>
                 <statement>

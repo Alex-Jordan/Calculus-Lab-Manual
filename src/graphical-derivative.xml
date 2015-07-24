@@ -191,11 +191,11 @@
             <exercise>
                 <statement>
                     <p>Copy each of the following sentences onto your paper and supply the words or phrases that correctly complete each sentence.</p>
-                    <ul cols="2">
-                        <li>Over the interval where <m>\fd{f}</m> is negative, <m>f</m> is <ellipsis/></li> 
-                        <li>Over the interval where <m>\fd{f}</m> is positive, <m>f</m> is <ellipsis/></li> 
-                        <li>Over the interval where <m>\fd{f}</m> is increasing, <m>f</m> is <ellipsis/></li> 
-                        <li>Over the interval where <m>\fd{f}</m> is decreasing, <m>f</m> is <ellipsis/></li>
+                    <ul>
+                        <li><p>Over the interval where <m>\fd{f}</m> is negative, <m>f</m> is <ellipsis/></p></li> 
+                        <li><p>Over the interval where <m>\fd{f}</m> is positive, <m>f</m> is <ellipsis/></p></li> 
+                        <li><p>Over the interval where <m>\fd{f}</m> is increasing, <m>f</m> is <ellipsis/></p></li> 
+                        <li><p>Over the interval where <m>\fd{f}</m> is decreasing, <m>f</m> is <ellipsis/></p></li>
                     </ul>
                 </statement>
             </exercise> 
@@ -316,7 +316,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p> Keeping it simple, draw onto <xref ref="figure-derivative-of-one-over-x"/> a curve with the asymptotes found in <xref ref="exercise-asymptotes-one-over-x"/> and the property determined in <xref ref="exercise-negative-derivative-of-one-over-x"/>. Does the curve you drew have the properties you would expect to see in the first derivative of <m>f</m>? For example, <m>f</m> is concave down over <m>\ointerval{-\infty}{0}</m>, and concave up over <m>\ointerval{0}{\infty}</m>; what are the corresponding differences in the behavior of <m>\fd{f}</m> over those two intervals?</p>
+                    <p>Keeping it simple, draw onto <xref ref="figure-derivative-of-one-over-x"/> a curve with the asymptotes found in <xref ref="exercise-asymptotes-one-over-x"/> and the property determined in <xref ref="exercise-negative-derivative-of-one-over-x"/>. Does the curve you drew have the properties you would expect to see in the first derivative of <m>f</m>? For example, <m>f</m> is concave down over <m>\ointerval{-\infty}{0}</m>, and concave up over <m>\ointerval{0}{\infty}</m>; what are the corresponding differences in the behavior of <m>\fd{f}</m> over those two intervals?</p>
                 </statement>
             </exercise> 
         </exercisegroup>

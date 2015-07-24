@@ -865,7 +865,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             </introduction>
             <exercise>
                 <statement>
-                    <p>Where, over <m>\ointerval{-6}{6}</m>, is <m>\fd{f}</m> nondifferentiable?</p> 
+                    <p>Where, over <m>\ointerval{-6}{6}</m>, is <m>\fd{f}</m><br />nondifferentiable?</p> 
                 </statement>
                 <solution>
                     <p><m>\fd{f}</m> is nondifferentiable at <m>-1</m>, <m>1</m>, and <m>4</m>.</p>
@@ -887,7 +887,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             </exercise>
             <exercise>
                 <statement>
-                    <p>Where, over <m>\ointerval{-6}{6}</m>, is <m>f</m> decreasing?</p> 
+                    <p>Where, over <m>\ointerval{-6}{6}</m>, is <m>f</m><br />decreasing?</p> 
                 </statement>
                 <solution>
                     <p><m>f</m> is decreasing on <m>\ointerval{-5}{6}</m>.</p>
@@ -909,7 +909,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             </exercise>
             <exercise>
                 <statement>
-                    <p>Where, over <m>\ointerval{-6}{6}</m>, is <m>\sd{f}</m> decreasing?</p> 
+                    <p>Where, over <m>\ointerval{-6}{6}</m>, is <m>\sd{f}</m><br />decreasing?</p> 
                 </statement>
                 <solution>
                     <p><m>\sd{f}</m> is decreasing on <m>\ointerval{4}{6}</m>.</p>
@@ -920,7 +920,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             </exercise>
             <exercise>
                 <statement>
-                    <p>Where, over <m>\ointerval{-6}{6}</m>, is <m>\sd{f}</m> positive?</p> 
+                    <p>Where, over <m>\ointerval{-6}{6}</m>, is <m>\sd{f}</m><br />positive?</p> 
                 </statement>
                 <solution>
                     <p><m>\sd{f}</m> is positive on <m>\ointerval{-3}{-1}</m>, <m>\ointerval{1}{4}</m>, and <m>\ointerval{4}{6}</m>.</p>
