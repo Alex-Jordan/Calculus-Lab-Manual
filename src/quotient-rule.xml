@@ -42,42 +42,42 @@
             </introduction>
             <exercise>
                 <statement>
-                    <p><m>\fe{g}{x}=\frac{4\fe{\ln}{x}}{x}</m></p>
+                    <p><m>\fe{g}{x}=\dfrac{4\fe{\ln}{x}}{x}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{j}{y}=\frac{\sqrt[3]{y^5}}{\fe{\cos}{y}}</m></p>
+                    <p><m>\fe{j}{y}=\dfrac{\sqrt[3]{y^5}}{\fe{\cos}{y}}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>y=\frac{\fe{\sin}{x}}{4\fe{\sec}{x}}</m></p>
+                    <p><m>y=\dfrac{\fe{\sin}{x}}{4\fe{\sec}{x}}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{t}=\frac{t^2}{e^t}</m></p>
+                    <p><m>\fe{f}{t}=\dfrac{t^2}{e^t}</m></p>
                 </statement>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="3">
+        <exercisegroup cols="3" xml:id="exercisegroup-unsimplified-quotient">
             <introduction>
                 <p>Find each of the following derivatives <em>without first simplifying the formula</em>; that is, go ahead and use the quotient rule on the expression as written. For each derivative, <em>check</em> your answer by simplifying the original expression and then taking the derivative of that simplified expression.</p> 
             </introduction>
             <exercise xml:id="unsimplified-quotient-first">
                 <statement>
-                    <p><m>\lzoo{t}{\frac{\fe{\sin}{t}}{\fe{\sin}{t}}}</m></p>
+                    <p><m>\lzoo{t}{\dfrac{\fe{\sin}{t}}{\fe{\sin}{t}}}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lzoo{x}{\frac{x^6}{x^2}}</m></p>
+                    <p><m>\lzoo{x}{\dfrac{x^6}{x^2}}</m></p>
                 </statement>
             </exercise>
             <exercise xml:id="unsimplified-quotient-last">
                 <statement>
-                    <p><m>\lzoo{x}{\frac{10}{2x}}</m></p>
+                    <p><m>\lzoo{x}{\dfrac{10}{2x}}</m></p>
                 </statement>
             </exercise>
         </exercisegroup>

@@ -16,7 +16,7 @@
             </introduction> 
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{x}=\frac{\sqrt[11]{x^6}}{6}</m></p>
+                    <p><m>\fe{f}{x}=\dfrac{\sqrt[11]{x^6}}{6}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -31,7 +31,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>y=-\frac{5}{t^7}</m></p>
+                    <p><m>y=-\dfrac{5}{t^7}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -75,7 +75,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>z=\frac{8}{\sqrt{t^7}}</m></p>
+                    <p><m>z=\dfrac{8}{\sqrt{t^7}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -90,7 +90,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>T=\frac{4\sqrt[3]{t^7}}{t^2}</m></p>
+                    <p><m>T=\dfrac{4\sqrt[3]{t^7}}{t^2}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -129,7 +129,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>y=\frac{5t^2e^t}{7}</m></p>
+                    <p><m>y=\dfrac{5t^2e^t}{7}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -196,7 +196,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>T=\frac{x^77^x}{3}</m></p>
+                    <p><m>T=\dfrac{x^77^x}{3}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -218,7 +218,7 @@
             </introduction>
             <exercise>
                 <statement>
-                    <p><m>\fe{q}{\theta}=\frac{4e^{\theta}}{e^\theta+1}</m></p>
+                    <p><m>\fe{q}{\theta}=\dfrac{4e^{\theta}}{e^\theta+1}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -235,7 +235,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{u}{x}=2\frac{\fe{\ln}{x}}{x^4}</m></p>
+                    <p><m>\fe{u}{x}=2\dfrac{\fe{\ln}{x}}{x^4}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -252,7 +252,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>F=\frac{\sqrt{t}}{3t^2-5\sqrt{t^3}}</m></p>
+                    <p><m>F=\dfrac{\sqrt{t}}{3t^2-5\sqrt{t^3}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -271,7 +271,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{F}{x}=\frac{\fe{\tan}{x}}{\fe{\tan^{-1}}{x}}</m></p>
+                    <p><m>\fe{F}{x}=\dfrac{\fe{\tan}{x}}{\fe{\tan^{-1}}{x}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -288,7 +288,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>p=\frac{\fe{\tan^{-1}}{t}}{1+t^2}</m></p>
+                    <p><m>p=\dfrac{\fe{\tan^{-1}}{t}}{1+t^2}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -304,7 +304,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>y=\frac{4}{\fe{\sin}{\beta}-2\fe{\cos}{\beta}}</m></p>
+                    <p><m>y=\dfrac{4}{\fe{\sin}{\beta}-2\fe{\cos}{\beta}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -373,7 +373,7 @@ formula stated above for the product of three functions.  The first application 
             </introduction>
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{x}=\frac{x^3+x^2}{x}</m>; tangent line at <m>5</m></p>
+                    <p><m>\fe{f}{x}=\dfrac{x^3+x^2}{x}</m>; tangent line at <m>5</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -388,7 +388,7 @@ formula stated above for the product of three functions.  The first application 
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{h}{x}=\frac{x}{1+x}</m>; tangent line at <m>-2</m></p>
+                    <p><m>\fe{h}{x}=\dfrac{x}{1+x}</m>; tangent line at <m>-2</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -403,7 +403,7 @@ formula stated above for the product of three functions.  The first application 
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{K}{x}=\frac{1+x}{2x+2}</m>; tangent line at <m>8</m></p>
+                    <p><m>\fe{K}{x}=\dfrac{1+x}{2x+2}</m>; tangent line at <m>8</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -767,7 +767,7 @@ formula stated above for the product of three functions.  The first application 
             </exercise>
             <exercise>
                 <statement>
-                    <p>Find <m>\fe{\fd{k}}{3}</m>, where <m>\fe{k}{x}=\frac{\fe{g}{x}}{\fe{f}{x}}</m>.</p>
+                    <p>Find <m>\fe{\fd{k}}{3}</m>, where <m>\fe{k}{x}=\dfrac{\fe{g}{x}}{\fe{f}{x}}</m>.</p>
                 </statement>
                 <solution>
                     <p><md>
@@ -854,7 +854,7 @@ formula stated above for the product of three functions.  The first application 
             </exercise>
             <exercise>
                 <statement>
-                    <p>Find <m>\fe{\sd{T}}{0}</m>, where <m>\fe{T}{x}=\frac{\fe{f}{x}}{e^x}</m>.</p>
+                    <p>Find <m>\fe{\sd{T}}{0}</m>, where <m>\fe{T}{x}=\dfrac{\fe{f}{x}}{e^x}</m>.</p>
                 </statement>
                 <solution>
                     <p><md>

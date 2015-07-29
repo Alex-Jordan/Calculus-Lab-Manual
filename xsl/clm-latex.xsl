@@ -366,6 +366,7 @@ shouldn't have sidebysides in them anyway -->
     <xsl:text>Graph Features from Derivatives</xsl:text>
 </xsl:template>
 
-
+<!-- Make theorems in appendix not be numbered -->
+<xsl:template match="appendix//theorem" mode="xref-number" />
 
 </xsl:stylesheet>

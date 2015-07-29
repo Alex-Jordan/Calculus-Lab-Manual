@@ -29,17 +29,17 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>y=\frac{\fe{\tan}{\fe{\ln}{x}}}{x}</m></p>
+                    <p><m>y=\dfrac{\fe{\tan}{\fe{\ln}{x}}}{x}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>z=5t+\frac{\fe{\cos^2}{t^2}}{3}</m></p>
+                    <p><m>z=5t+\dfrac{\fe{\cos^2}{t^2}}{3}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{y}=\fe{\sin}{\frac{\fe{\ln}{y}}{y}}</m></p>
+                    <p><m>\fe{f}{y}=\fe{\sin}{\dfrac{\fe{\ln}{y}}{y}}</m></p>
                 </statement>
             </exercise>
             <exercise>

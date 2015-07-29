@@ -142,7 +142,7 @@ as acceleration <quantity><mag>-32</mag><unit base="foot"/><per base="second" ex
                 </answer>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="2">
+        <exercisegroup cols="2" xml:id="exercisegroup-derivative-units-supplement">
             <introduction>
                 <p>Determine the unit on the first derivative function for each of the following functions.  Remember, we do not simplify derivative units in any way, shape, or form.</p> 
             </introduction>
@@ -193,7 +193,7 @@ as acceleration <quantity><mag>-32</mag><unit base="foot"/><per base="second" ex
         </exercisegroup>
         <exercisegroup cols="2" by="row">
             <introduction>
-                <p>Referring to the functions in <xref autoname="plural" ref="exercise-derivative-units-supplement-first"/><ndash/><xref autoname="no" ref="exercise-derivative-units-supplement-last"/>, write sentences that explain the meaning of each of the following function values.</p>
+                <p>Referring to the functions in <xref ref="exercisegroup-derivative-units-supplement"/>, write sentences that explain the meaning of each of the following function values.</p>
             </introduction>
             <exercise>
                 <statement>

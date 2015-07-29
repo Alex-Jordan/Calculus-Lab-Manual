@@ -191,7 +191,7 @@
 
         </exercisegroup>
 
-        <exercisegroup>
+        <exercisegroup xml:id="exercisegroup-vat">
 
             <introduction>
                 <p>Suppose that a vat was undergoing a controlled drain and that the amount of fluid left in the vat (<quantity><unit base="gallon"/></quantity>) was given by the formula <m>\fe{V}{t}=100-2t^{3/2}</m> where <m>t</m> is the number of minutes that had passed since the draining process began.</p>

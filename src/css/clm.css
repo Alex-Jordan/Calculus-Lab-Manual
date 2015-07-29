@@ -13,3 +13,47 @@
 .alert {
     font-weight: bold;
 }
+
+.mathbook-content .paragraphs .heading::after {
+    content: "";
+}
+
+.exercisegroup .hidden-knowl-wrapper {
+    margin-left: 5%;
+}
+
+.exercisegroup .knowl-output {
+    margin-left: 5%;
+}
+
+.figure-like {
+    text-align: center;
+}
+
+.sidebyside {
+    display:table; margin:auto; text-align:center;
+}
+
+.svg-and-links {
+    margin:auto; display:inline-block;
+}
+
+.image-links {
+    display:table; margin:auto; text-align:center;
+}
+
+.image-link-list {
+    list-style: outside none none; margin: 0; padding: 0;
+}
+
+.image-link-item  {
+    float:left;
+}
+
+.image-link  {
+    display: block; padding-left: 0em; padding-right: 1em;
+}
+
+.knowl .image-links {
+    visibility: collapse;
+}

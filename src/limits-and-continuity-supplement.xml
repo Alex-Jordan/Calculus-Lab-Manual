@@ -703,7 +703,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to\infty}\frac{1}{x}=\underline{\qquad}\,(\text{exists?})</m></p>
+                    <p><m>\lim\limits_{x\to\infty}\dfrac{1}{x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to\infty}\frac{1}{x}=0</m>. This limit exists.</p>
@@ -714,7 +714,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{x}=\underline{\qquad}\,(\text{exists?})</m></p>
+                    <p><m>\lim\limits_{x\to-\infty}\dfrac{1}{x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to-\infty}\frac{1}{x}=0</m>. This limit exists.</p>
@@ -725,7 +725,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to0^{+}}\frac{1}{x}=\underline{\qquad}\,(\text{exists?})</m></p>
+                    <p><m>\lim\limits_{x\to0^{+}}\dfrac{1}{x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to0^{+}}\frac{1}{x}=\infty</m>. This limit does not exist.</p>
@@ -736,7 +736,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to0^{-}}\frac{1}{x}=\underline{\qquad}\,(\text{exists?})</m></p>
+                    <p><m>\lim\limits_{x\to0^{-}}\dfrac{1}{x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to0^{-}}\frac{1}{x}=-\infty</m>. This limit does not exist.</p>
@@ -758,7 +758,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to\infty}\frac{1}{e^x}=\underline{\qquad}\,(\text{exists?})</m></p>
+                    <p><m>\lim\limits_{x\to\infty}\dfrac{1}{e^x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to\infty}\frac{1}{e^x}=0</m>. This limit exists.</p>
@@ -769,7 +769,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{e^x}=\underline{\qquad}\,(\text{exists?})</m></p>
+                    <p><m>\lim\limits_{x\to-\infty}\dfrac{1}{e^x}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to-\infty}\frac{1}{e^x}=\infty</m>. This limit does not exist.</p>
@@ -780,7 +780,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to\infty}\frac{1}{e^{-x}}=\underline{\qquad}\,(\text{exists?})</m></p>
+                    <p><m>\lim\limits_{x\to\infty}\dfrac{1}{e^{-x}}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to\infty}\frac{1}{e^{-x}}=\infty</m>. This limit does not exist.</p>
@@ -791,7 +791,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to-\infty}\frac{1}{e^{-x}}=\underline{\qquad}\,(\text{exists?})</m></p>
+                    <p><m>\lim\limits_{x\to-\infty}\dfrac{1}{e^{-x}}=\underline{\qquad}\,(\text{exists?})</m></p>
                 </statement>
                 <solution>
                     <p><m>\lim\limits_{x\to-\infty}\frac{1}{e^{-x}}=0</m>. This limit exists.</p>

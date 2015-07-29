@@ -13,7 +13,7 @@
 <xsl:param name="exercise.text.hint" select="'yes'" />
 <xsl:param name="exercise.text.answer" select="'no'" />
 <xsl:param name="exercise.text.solution" select="'no'" />
-<xsl:param name="html.css.extra"  select="'../style/css/clm.css'" />
+<xsl:param name="html.css.extra"  select="'css/clm.css'" />
 <xsl:param name="html.knowl.example" select="'no'" />
 
 <!-- GeoGebra HTML5-->
@@ -197,49 +197,169 @@
 </xsl:template>
 
 <!-- Adjust image widths depending on surrounding figures and sidebysides-->
+<!-- Also, create PNG and EPS links                                      -->
 <!-- A wrapper for SVG images w/ optional fallback -->
 <!-- object element seems fine for HTML            -->
 <!-- but SageMathCloud prefers img element         -->
 <xsl:template match="*" mode="svg-wrapper">
     <xsl:param name="png-fallback" />
-    <xsl:element name="object">
-        <xsl:attribute name="type">image/svg+xml</xsl:attribute>
-        <xsl:choose>
-            <xsl:when test="ancestor::figure and not(ancestor::sidebyside)">
-                <xsl:attribute name="style">width:48%; margin:auto;</xsl:attribute>
-            </xsl:when>
-            <xsl:when test="not(ancestor::figure) and ancestor::sidebyside">
-                <xsl:attribute name="style">width:48%; margin:auto;</xsl:attribute>
-            </xsl:when>
-            <xsl:when test="ancestor::figure and ancestor::sidebyside">
-                <xsl:attribute name="style">width:90%; margin:auto;</xsl:attribute>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:attribute name="style">width:48%; margin:auto;</xsl:attribute>
-            </xsl:otherwise>
-        </xsl:choose>
-        <xsl:attribute name="data">
-            <xsl:value-of select="$directory.images" />
-            <xsl:text>/</xsl:text>
-            <xsl:apply-templates select=".." mode="internal-id" />
-            <xsl:text>.svg</xsl:text>
+
+    <!-- div to contain svg and links -->
+    <xsl:element name="div">
+        <xsl:attribute name="style">
+            <xsl:text>width:</xsl:text>
+                <xsl:choose>
+                    <xsl:when test="ancestor::figure and not(ancestor::sidebyside)">
+                        <xsl:text>48%</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="not(ancestor::figure) and ancestor::sidebyside">
+                        <xsl:text>48%</xsl:text>
+                    </xsl:when>
+                    <xsl:when test="ancestor::figure and ancestor::sidebyside">
+                        <xsl:text>90%</xsl:text>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:text>48%</xsl:text>
+                    </xsl:otherwise>
+                </xsl:choose>
+            <xsl:text>;</xsl:text>
         </xsl:attribute>
-        <xsl:apply-templates select="../description" />
-        <xsl:choose>
-            <xsl:when test="$png-fallback = 'yes'">
-                <xsl:element name="img">
-                    <xsl:attribute name="src">
+        <xsl:attribute name="class">
+            <xsl:text>svg-and-links</xsl:text>
+        </xsl:attribute>
+
+        <xsl:element name="object">
+            <xsl:attribute name="type">image/svg+xml</xsl:attribute>
+            <xsl:attribute name="style">
+                <xsl:text>width: 100%;</xsl:text>
+            </xsl:attribute>
+            <xsl:attribute name="data">
+                <xsl:value-of select="$directory.images" />
+                <xsl:text>/</xsl:text>
+                <xsl:apply-templates select=".." mode="internal-id" />
+                <xsl:text>.svg</xsl:text>
+            </xsl:attribute>
+            <xsl:apply-templates select="../description" />
+            <xsl:choose>
+                <xsl:when test="$png-fallback = 'yes'">
+                    <xsl:element name="img">
+                        <xsl:attribute name="src">
+                            <xsl:value-of select="$directory.images" />
+                            <xsl:text>/</xsl:text>
+                            <xsl:apply-templates select=".." mode="internal-id" />
+                            <xsl:text>.png</xsl:text>
+                        </xsl:attribute>
+                    </xsl:element>
+                </xsl:when>
+                <xsl:otherwise>
+                    <p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:element>
+
+        <xsl:element name="div">
+            <xsl:attribute name="class">
+                <xsl:text>image-links</xsl:text>
+            </xsl:attribute>
+        <xsl:element name="ul">
+            <xsl:attribute name="class">
+                <xsl:text>image-link-list</xsl:text>
+            </xsl:attribute>
+            <xsl:attribute name="style">
+                <xsl:text>width:100%</xsl:text>
+            </xsl:attribute>
+            <xsl:element name="li">
+                <xsl:attribute name="class">image-link-item</xsl:attribute>
+                    <xsl:element name="a">
+                    <xsl:attribute name="class">image-link</xsl:attribute>
+                    <xsl:attribute name="href">
                         <xsl:value-of select="$directory.images" />
                         <xsl:text>/</xsl:text>
                         <xsl:apply-templates select=".." mode="internal-id" />
                         <xsl:text>.png</xsl:text>
                     </xsl:attribute>
+                    <!-- Leave PNG so that a tab opens -->
+                    <!-- <xsl:attribute name="download">
+                        <xsl:apply-templates select=".." mode="internal-id" />
+                        <xsl:text>.png</xsl:text>
+                    </xsl:attribute> -->
+                    <xsl:attribute name="target">
+                        <xsl:text>_blank</xsl:text>
+                    </xsl:attribute>
+                    <xsl:text>PNG</xsl:text>
                 </xsl:element>
-            </xsl:when>
-            <xsl:otherwise>
-                <p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p>
-            </xsl:otherwise>
-        </xsl:choose>
+            </xsl:element>
+            <xsl:element name="li">
+                <xsl:attribute name="class">image-link-item</xsl:attribute>
+                    <xsl:element name="a">
+                    <xsl:attribute name="class">image-link</xsl:attribute>
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="$directory.images" />
+                        <xsl:text>/</xsl:text>
+                        <xsl:apply-templates select=".." mode="internal-id" />
+                        <xsl:text>.eps</xsl:text>
+                    </xsl:attribute>
+                    <xsl:attribute name="download">
+                        <xsl:apply-templates select=".." mode="internal-id" />
+                        <xsl:text>.eps</xsl:text>
+                    </xsl:attribute>
+                    <xsl:text>EPS</xsl:text>
+                </xsl:element>
+            </xsl:element>
+            <xsl:element name="li">
+                <xsl:attribute name="class">image-link-item</xsl:attribute>
+                    <xsl:element name="a">
+                    <xsl:attribute name="class">image-link</xsl:attribute>
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="$directory.images" />
+                        <xsl:text>/</xsl:text>
+                        <xsl:apply-templates select=".." mode="internal-id" />
+                        <xsl:text>.svg</xsl:text>
+                    </xsl:attribute>
+                    <xsl:attribute name="download">
+                        <xsl:apply-templates select=".." mode="internal-id" />
+                        <xsl:text>.svg</xsl:text>
+                    </xsl:attribute>
+                    <xsl:text>SVG</xsl:text>
+                </xsl:element>
+            </xsl:element>
+            <xsl:element name="li">
+                <xsl:attribute name="class">image-link-item</xsl:attribute>
+                    <xsl:element name="a">
+                    <xsl:attribute name="class">image-link</xsl:attribute>
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="$directory.images" />
+                        <xsl:text>/</xsl:text>
+                        <xsl:apply-templates select=".." mode="internal-id" />
+                        <xsl:text>.pdf</xsl:text>
+                    </xsl:attribute>
+                    <xsl:attribute name="download">
+                        <xsl:apply-templates select=".." mode="internal-id" />
+                        <xsl:text>.pdf</xsl:text>
+                    </xsl:attribute>
+                    <xsl:text>PDF</xsl:text>
+                </xsl:element>
+            </xsl:element>
+            <xsl:element name="li">
+                <xsl:attribute name="class">image-link-item</xsl:attribute>
+                    <xsl:element name="a">
+                    <xsl:attribute name="class">image-link</xsl:attribute>
+                    <xsl:attribute name="href">
+                        <xsl:value-of select="$directory.images" />
+                        <xsl:text>/</xsl:text>
+                        <xsl:apply-templates select=".." mode="internal-id" />
+                        <xsl:text>.tex</xsl:text>
+                    </xsl:attribute>
+                    <xsl:attribute name="download">
+                        <xsl:apply-templates select=".." mode="internal-id" />
+                        <xsl:text>.tex</xsl:text>
+                    </xsl:attribute>
+                    <xsl:text>TEX</xsl:text>
+                </xsl:element>
+            </xsl:element>
+        </xsl:element>
+        </xsl:element>
+
     </xsl:element>
 </xsl:template>
 
@@ -267,6 +387,10 @@
 
 <xsl:template match="exercises//exercise" mode="xref-number">
     <xsl:apply-templates select="." mode="serial-number" />
+</xsl:template>
+
+<xsl:template match="shortlicense">
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 </xsl:template>
 
 </xsl:stylesheet>

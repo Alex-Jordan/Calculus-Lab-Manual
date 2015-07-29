@@ -32,7 +32,7 @@
         <xi:include href="./useful-algebra-appendix.xml" />
 
         <backmatter>
-            <section number="no">
+            <section xml:id="supplemental-solutions" number="no">
                 <title>Solutions to Supplemental Exercises</title>
                 <solution-list />
             </section>

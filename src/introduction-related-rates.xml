@@ -101,7 +101,7 @@
     <mrow>\lz{V}{t}&amp;=4\pi r^2\lz{r}{t}&amp;\text{This is our related rates equation.}</mrow>
     </md>Now that we have our related rates equation (and only now), we can finally (<acro>S</acro>)ubstitute the given values into the appropriate variables. Before doing so, we need to alert the reader with an introductory sentence or phrase. We also need to clearly state the values of each of the variables for which we know the value. In most math texts this part of the problem is worked without units. This is because some problems contain constants with <q>hidden</q> units, and it can be confusing when the units do not work out in the end.</p>
     <p>Getting back to the actual solution<ellipsis/></p>
-    <p>When the radius of the snowball is <quantity><mag>1.4</mag><unit prefix="centi" base="meter"/></quantity> and the snowball is melting at the rate of <quantity><mag>0.3</mag><unit prefix="centi" base="meter" exp="3"/></quantity>:</p>
+    <p>When the radius of the snowball is <quantity><mag>1.4</mag><unit prefix="centi" base="meter"/></quantity> and the snowball is melting at the rate of <quantity><mag>0.3</mag><unit prefix="centi" base="meter" exp="3"/><per base="liter"/></quantity>:</p>
     <table xml:id="table-snowball-what-we-know">
         <caption>What we know about the variables at the described moment</caption>
         <tabular top="major">
@@ -166,27 +166,27 @@
                                 <cell>Unit</cell>
                             </row>
                             <row bottom="minor">
-                                <cell></cell>
-                                <cell></cell>
-                                <cell></cell>
-                            </row>
-                            <row bottom="minor">
-                                <cell></cell>
+                                <cell><m>\mathstrut</m></cell>
                                 <cell></cell>
                                 <cell></cell>
                             </row>
                             <row bottom="minor">
-                                <cell></cell>
+                                <cell><m>\mathstrut</m></cell>
                                 <cell></cell>
                                 <cell></cell>
                             </row>
                             <row bottom="minor">
+                                <cell><m>\mathstrut</m></cell>
                                 <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell><m>\mathstrut</m></cell>
                                 <cell></cell>
                                 <cell></cell>
                             </row>
                             <row bottom="major">
-                                <cell></cell>
+                                <cell><m>\mathstrut</m></cell>
                                 <cell></cell>
                                 <cell></cell>
                             </row>
@@ -217,19 +217,19 @@
                             <cell halign="center">What we know</cell>
                         </row>
                         <row bottom="minor">
-                            <cell></cell>
-                            <cell></cell>
-                        </row>
-                        <row bottom="minor">
-                            <cell></cell>
+                            <cell><m>\mathstrut</m></cell>
                             <cell></cell>
                         </row>
                         <row bottom="minor">
-                            <cell></cell>
+                            <cell><m>\mathstrut</m></cell>
                             <cell></cell>
                         </row>
                         <row bottom="minor">
+                            <cell><m>\mathstrut</m></cell>
                             <cell></cell>
+                        </row>
+                        <row bottom="minor">
+                            <cell><m>\mathstrut</m></cell>
                             <cell></cell>
                         </row>
                         </tabular>
@@ -264,7 +264,7 @@
         <exercise>
             <statement>
                 <p>As salt water boils, the only thing that evaporates is the water<mdash/>the amount of salt in the mixture remains constant. As a consequence, the concentration of the salt in the mixture increases over time.</p>
-                <p>Suppose that the concentration of salt in a pot of boiling water is given by <m>C=\frac{200}{V}</m> where <m>C</m> is the concentration of salt in the mixture (<quantity><unit prefix="milli" base="gram"/><per base="liter"/></quantity>) and <m>V</m> is the total amount of mixture in the pot (<quantity><unit base="liter"/></quantity>). Determine the rate at which the salt concentration is changing at the moment there are <quantity><mag>5.2</mag><unit base="liter"/></quantity> of liquid in the pot if at that moment water is evaporating at the rate of <quantity><mag>0.13</mag><unit prefix="milli" base="gram"/><per base="liter"/></quantity>.</p>
+                <p>Suppose that the concentration of salt in a pot of boiling water is given by <m>C=\frac{200}{V}</m> where <m>C</m> is the concentration of salt in the mixture (<quantity><unit prefix="milli" base="gram"/><per base="liter"/></quantity>) and <m>V</m> is the total amount of mixture in the pot (<quantity><unit base="liter"/></quantity>). Determine the rate at which the salt concentration is changing at the moment there are <quantity><mag>5.2</mag><unit base="liter"/></quantity> of liquid in the pot if at that moment water is evaporating at the rate of <quantity><mag>0.13</mag><unit base="liter"/><per base="min"/></quantity>.</p>
             </statement>
         </exercise>
     </exercises>

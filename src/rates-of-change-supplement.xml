@@ -349,7 +349,7 @@
                     <p>The elevation of a ping pong ball relative to the table top (in <quantity><unit base="meter"/></quantity>) is given by the function <m>\fe{h}{t}=1.1\abs{\fe{\cos}{\frac{2\pi t}{3}}}</m> where <m>t</m> is the amount of time (<quantity><unit base="second"/></quantity>) that has passed since the ball went into play.  Find and interpret <m>\frac{\fe{h}{3}-\fe{h}{1.5}}{3-1.5}</m>.</p>
                 </statement>
                 <solution>
-                    <p><m>\frac{\fe{h}{3}-\fe{h}{1.5}}{3-1.5}=0</m>. This value tells us that the average velocity experienced by the ball between the 1.5th second of play and the third second of play is <quantity><mag>0</mag><unit base="meter"/><per base="second"/></quantity>.  Please note that this does not imply that the ball doesn’t move; it simply means that the ball is at the same elevation at the two times.</p>
+                    <p><m>\frac{\fe{h}{3}-\fe{h}{1.5}}{3-1.5}=0</m>. This value tells us that the average velocity experienced by the ball between the 1.5th second of play and the third second of play is <quantity><mag>0</mag><unit base="meter"/><per base="second"/></quantity>.  Please note that this does not imply that the ball doesn't move; it simply means that the ball is at the same elevation at the two times.</p>
                 </solution>
                 <answer>
                     <p>The average velocity experienced by the ball between the 1.5th second of play and the third second of play is <quantity><mag>0</mag><unit base="meter"/><per base="second"/></quantity>.</p>

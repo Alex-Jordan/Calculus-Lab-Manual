@@ -1,6 +1,6 @@
 %%                                    %%
 %% Generated from MathBook XML source %%
-%%    on 2015-07-24T00:01:05-07:00    %%
+%%    on 2015-07-28T10:10:04-07:00    %%
 %%                                    %%
 %%   http://mathbook.pugetsound.edu   %%
 %%                                    %%
@@ -236,10 +236,16 @@ figcap\romannumeral\value{figstack}\endcsname{#5}%
 \usetikzlibrary{3d,calc}
 \usepackage{xltxtra}
 
+% curve, dot, and graph custom styles
+\pgfplotsset{pccplot/.style={color=red,mark=none,line width=1pt,<->,solid}} % primary style for curves
+\pgfplotsset{asymptote/.style={color=gray,mark=none,line width=1pt,<->,dashed}}
+\pgfplotsset{soldot/.style={color=red,only marks,mark=*}}
+\pgfplotsset{holdot/.style={color=red,fill=white,only marks,mark=*}}
+\pgfplotsset{blankgraph/.style={xmin=-10,xmax=10,ymin=-10,ymax=10,axis line style= {-, draw opacity=0 },axis lines=box,major tick length=0mm,xtick={-10,-9,...,10},ytick={-10,-9,...,10},grid=major,yticklabels={,,},xticklabels={,,},minor xtick=,minor ytick=,xlabel={},ylabel={},width=0.75\textwidth,grid style={dotted,black}}}
 
-% cycle list- truly awesome; see section 4.6.7, pg 129 of pgfplots
+% cycle list of plot styles for graphs with multiple plots
 \pgfplotscreateplotcyclelist{pccstylelist}{%
-    color=red,mark=none,line width=1pt,<->,solid\\%
+    pccplot\\%
     color=blue,mark=none,line width=1pt,<->,dashdotted\\%
     color=gray,mark=none,line width=1pt,<->,dashdotdotted\\%
 }
@@ -250,44 +256,34 @@ figcap\romannumeral\value{figstack}\endcsname{#5}%
     axis line style={<->}, % arrows on the axis
     xlabel={$x$},          % default put x on x-axis
     ylabel={$y$},          % default put y on y-axis
-    xmin = -7,
-    xmax = 7,
-    ymin = -7,
-    ymax = 7,
-    xtick = {-6,-4,...,6},
-    ytick = {-6,-4,...,6},
-    minor xtick = {-7,-6,...,7},
-    minor ytick = {-7,-6,...,7},
-    scale only axis,       % otherwise width won't be as intended: http://tex.stackexchange.com/questions/36297/pgfplots-how-can-i-scale-to-text-width
+    xmin = -7,xmax = 7,    % most graphs have this window
+    ymin = -7,ymax = 7,    % most graphs have this window
+    xtick = {-6,-4,...,6}, % fix ticks 
+    ytick = {-6,-4,...,6}, % fix ticks  
+    minor xtick = {-7,-6,...,7}, % fix ticks
+    minor ytick = {-7,-6,...,7}, % fix ticks
+    scale only axis,       % don't factor in axis and tick labels for width= and height=
     cycle list name=pccstylelist,
-    %tick label style={font=\small},
-    %label style={font=\small},
+    % tick label style={font=\small},
+    % label style={font=\small},
     legend cell align=left,
-    %legend style={font=\tiny},
-    width=0.4\textwidth,
-    grid=minor,
-    grid style={dotted,gray!90},
-    every node near coord/.append style={
-        %font=\small
-    },
+    % legend style={font=\tiny},
+    width = 0.4\textwidth,
+    grid = minor,
+    grid style = {dotted,gray!90},
+    %every node near coord/.append style={
+    %    font=\small
+    %},
 }}
 
 %\tikzset{axisnode/.style={font=\tiny,text=black}}
-
-% line style
-\pgfplotsset{pccplot/.style={color=red,mark=none,line width=1pt,<->}} % this is pretty redundant in most cases now that cycle list is implemented
-\pgfplotsset{asymptote/.style={color=gray,mark=none,line width=1pt,<->,dashed}}
-\pgfplotsset{soldot/.style={color=red,only marks,mark=*}}
-\pgfplotsset{holdot/.style={color=red,fill=white,only marks,mark=*}}
-\pgfplotsset{blankgraph/.style={xmin=-10,xmax=10,ymin=-10,ymax=10,axis line style= {-, draw opacity=0 },axis lines=box,major tick length=0mm,xtick={-10,-9,...,10},ytick={-10,-9,...,10},grid=major,yticklabels={,,},xticklabels={,,},minor xtick=,minor ytick=,xlabel={},ylabel={},width=0.75\textwidth,grid style={dotted,black}}}
-
 
 % arrow style
 \tikzset{>=stealth}
 
 % framing the graphs
 \pgfplotsset{framed/.style={axis background/.style ={draw=gray}}}
-% next line is a bit more colourful
+% next line is a bit more colorful
 %\pgfplotsset{framed/.style={axis background/.style ={draw=gray,fill=yellow!20,rounded corners=3ex}}}
 %% extpfeil package for certain extensible arrows,
 %% as also provided by MathJax extension of the same name
@@ -327,6 +323,12 @@ figcap\romannumeral\value{figstack}\endcsname{#5}%
 % Exercise list paragraph separation to match ambient parskip
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlist[exerciselist]{leftmargin=0pt,itemsep=-1.0ex,topsep=1.0ex,partopsep=0pt,parsep=0.5pc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Create theorem* environment for appendix theorems
+% destroy-and-rebuild script adds *s to these
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem*{theorem*}{Theorem}
+
 
 
 \sloppy
@@ -438,7 +440,7 @@ Department of Mathematics\\
 Portland Community College\\
 \href{mailto:alex.jordan@pcc.edu}{\nolinkurl{alex.jordan@pcc.edu}}
 }
-\date{DRAFT July 24, 2015 DRAFT}
+\date{DRAFT July 28, 2015 DRAFT}
 \begin{document}
 \frontmatter
 %% begin: half-title
@@ -463,14 +465,14 @@ Portland Community College\\
 {\Large Portland Community College}\\[3\baselineskip]
 {\Large Alex Jordan, Editor}\\[0.5\baselineskip]
 {\Large Portland Community College}\\[3\baselineskip]
-{\Large DRAFT July 24, 2015 DRAFT}\\}
+{\Large DRAFT July 28, 2015 DRAFT}\\}
 \clearpage
 %% end:   title page
 %% begin: copyright-page
 \thispagestyle{empty}
 \vspace*{\stretch{2}}
 \noindent\copyright\ 2012\textendash{}2015\quad{}Portand Community College\\[0.5\baselineskip]
-This work is licensed under the Creative Commons BY-SA License, Version 4.0.%
+This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.%
 
             \par
 \includegraphics[]{../images/by-sa.eps}%
@@ -487,6 +489,17 @@ In 2015, Alex Jordan converted the Word/PDF to MathBook XML (enabling the HTML o
 \par
 Phil Thurber and Scot Leavitt created the cover composition using images provided by NASA, the Bodleian Library of the University of Oxford, and PCC instructor Ken Kidoguchi.%
 %% end:   acknowledgement
+%% begin: preface
+\chapter*{HTML and PDF}\label{versions}
+\addcontentsline{toc}{chapter}{HTML and PDF}
+This lab manual has several synchronous versions that offer different features. The essential content of each version is the same as for all others.%
+\begin{itemize}[label=\textbullet]
+\item{}A ``for-printing'' PDF is available at \url{spot.pcc.edu/math/clm/clm-print.pdf}. This version is designed to be printed, not read on a screen. To save on printing expense, this verison is mostly black-and-white, and only offers short answers to the supplemental exercises (as opposed to full solutions).%
+\item{}A ``for-printing-with-color'' PDF is available at \url{spot.pcc.edu/math/clm/clm-print-color.pdf}. This version is like the above, except links and graphs retain their color.%
+\item{}A ``for-screen-reading'' PDF is available at \url{spot.pcc.edu/math/clm/clm-screen.pdf}. This version is intended to be stored on an electronic device and read when an internet connection is unavailable. It has page dimensions compatible with most laptops and tablets. The pages are not numbered since the page numbering would be inconsistenet with the print versions, so this version should be navigated by section numbering. Also because the page dimensions are customized for electronic devices, this version would look strange printed on standard paper. Since this version is not intended to be printed, full solutions to the supplemental problems are offered. When an internet connection is available, it will be nicer to use the web version below.%
+\item{}An web version is available at \url{spot.pcc.edu/math/clm}. Whenever there is an internet connection, and you do not prefer to have a print copy, this version is most recommended. The web version offers full walkthrough solutions to supplemental problems. More importantly, it offers interactive elements and easier navigation than any of the above PDFs could offer.%
+\end{itemize}
+%% end:   preface
 %% begin: preface
 \chapter*{To the Student}\label{to-the-student}
 \addcontentsline{toc}{chapter}{To the Student}
@@ -520,23 +533,23 @@ A suggested schedule for the labs is shown in the table below. Again, the instru
 \toprule
 Week&Labs (Lab Activities)&Supplementary Exercises\\
 \midrule
-1&\hyperref[section-velocity]{Velocity \ref{section-velocity}}\textendash{}\hyperref[section-limits]{Limits \ref{section-limits}}&\hyperref[rates-of-change-supplementary-exercises]{Supplement \ref{rates-of-change-supplementary-exercises}}\\
+1&\hyperref[section-velocity]{Velocity \ref{section-velocity}} through\newline{}\hyperref[section-limits]{Limits \ref{section-limits}}&\hyperref[rates-of-change-supplementary-exercises]{Supplement \ref{rates-of-change-supplementary-exercises}}\\
 \midrule
-2&\hyperref[section-limit-laws]{Limits Laws \ref{section-limit-laws}}\textendash{}\hyperref[section-piecewise-defined-functions]{Piecewise-Defined Functions \ref{section-piecewise-defined-functions}}&\hyperref[limits-and-continuity-supplementary-exercises]{Supplement \ref{limits-and-continuity-supplementary-exercises}}\\
+2&\hyperref[section-limit-laws]{Limits Laws \ref{section-limit-laws}} through\newline{}\hyperref[section-piecewise-defined-functions]{Piecewise-Defined Functions \ref{section-piecewise-defined-functions}}&\hyperref[limits-and-continuity-supplementary-exercises]{Supplement \ref{limits-and-continuity-supplementary-exercises}}\\
 \midrule
-3&\hyperref[section-instantaneous-velocity]{Instantaneous Velocity \ref{section-instantaneous-velocity}}\textendash{}\hyperref[section-derivative-units]{Derivative Units \ref{section-derivative-units}}&\hyperref[introduction-first-derivative-supplementary-exercises]{Supplement \ref{introduction-first-derivative-supplementary-exercises}}\\
+3&\hyperref[section-instantaneous-velocity]{Instantaneous Velocity \ref{section-instantaneous-velocity}} through\newline{}\hyperref[section-derivative-units]{Derivative Units \ref{section-derivative-units}}&\hyperref[introduction-first-derivative-supplementary-exercises]{Supplement \ref{introduction-first-derivative-supplementary-exercises}}\\
 \midrule
-4&\hyperref[section-graph-features]{Graph Features \ref{section-graph-features}}\textendash{}\hyperref[section-higher-order-derivatives]{Higher Order Derivatives \ref{section-higher-order-derivatives}}&\hyperref[functions-derivatives-antiderivatives-supplementary-exercises]{Supplement \ref{functions-derivatives-antiderivatives-supplementary-exercises}}\\
+4&\hyperref[section-graph-features]{Graph Features \ref{section-graph-features}} through\newline{}\hyperref[section-higher-order-derivatives]{Higher Order Derivatives \ref{section-higher-order-derivatives}}&\hyperref[functions-derivatives-antiderivatives-supplementary-exercises]{Supplement \ref{functions-derivatives-antiderivatives-supplementary-exercises}}\\
 \midrule
-5&\hyperref[section-antiderivatives]{Antiderivatives \ref{section-antiderivatives}}\textendash{}\hyperref[section-graphical-features-from-derivatives]{Graphical Features from Derivatives \ref{section-graphical-features-from-derivatives}}&\hyperref[functions-derivatives-antiderivatives-supplementary-exercises]{Supplement \ref{functions-derivatives-antiderivatives-supplementary-exercises}}\\
+5&\hyperref[section-antiderivatives]{Antiderivatives \ref{section-antiderivatives}} through\newline{}\hyperref[section-graphical-features-from-derivatives]{Graphical Features from Derivatives \ref{section-graphical-features-from-derivatives}}&\hyperref[functions-derivatives-antiderivatives-supplementary-exercises]{Supplement \ref{functions-derivatives-antiderivatives-supplementary-exercises}}\\
 \midrule
-6&\hyperref[section-leibniz-notation]{Leibniz Notation \ref{section-leibniz-notation}}\textendash{}\hyperref[section-derivative-formulas-and-function-behavior]{Derivative Formulas and Function Behavior \ref{section-derivative-formulas-and-function-behavior}}&\hyperref[derivative-formulas-supplementary-exercises]{Supplement \ref{derivative-formulas-supplementary-exercises}}\\
+6&\hyperref[section-leibniz-notation]{Leibniz Notation \ref{section-leibniz-notation}} through\newline{}\hyperref[section-derivative-formulas-and-function-behavior]{Derivative Formulas and Function Behavior \ref{section-derivative-formulas-and-function-behavior}}&\hyperref[derivative-formulas-supplementary-exercises]{Supplement \ref{derivative-formulas-supplementary-exercises}}\\
 \midrule
-7&\hyperref[section-introduction-to-the-chain-rule]{Introduction to the Chain Rule \ref{section-introduction-to-the-chain-rule}}\textendash{}\hyperref[section-chain-rule-and-leibniz]{Chain Rule with Leibniz Notation \ref{section-chain-rule-and-leibniz}}&\hyperref[chain-rule-supplementary-exercises]{Supplement \ref{chain-rule-supplementary-exercises}}\\
+7&\hyperref[section-introduction-to-the-chain-rule]{Introduction to the Chain Rule \ref{section-introduction-to-the-chain-rule}} through\newline{}\hyperref[section-chain-rule-and-leibniz]{Chain Rule with Leibniz Notation \ref{section-chain-rule-and-leibniz}}&\hyperref[chain-rule-supplementary-exercises]{Supplement \ref{chain-rule-supplementary-exercises}}\\
 \midrule
-8&\hyperref[section-general-implicit-differentiation]{General Implicit Differentiation \ref{section-general-implicit-differentiation}}\textendash{}\hyperref[section-logarithmic-differentiation]{Logarithmic Differentiation \ref{section-logarithmic-differentiation}}&\hyperref[implicit-differentiation-supplementary-exercises]{Supplement \ref{implicit-differentiation-supplementary-exercises}}\\
+8&\hyperref[section-general-implicit-differentiation]{General Implicit Differentiation \ref{section-general-implicit-differentiation}} through\newline{}\hyperref[section-logarithmic-differentiation]{Logarithmic Differentiation \ref{section-logarithmic-differentiation}}&\hyperref[implicit-differentiation-supplementary-exercises]{Supplement \ref{implicit-differentiation-supplementary-exercises}}\\
 \midrule
-9, 10&\hyperref[section-introduction-related-rates]{Introduction to Related Rates \ref{section-introduction-related-rates}}\textendash{}\hyperref[section-making-graphs]{Making Graphs \ref{section-making-graphs}}&\hyperref[related-rates-supplementary-exercises]{Supplement \ref{related-rates-supplementary-exercises}}, \hyperref[critical-numbers-graphing-from-formulas-supplementary-exercises]{\ref{critical-numbers-graphing-from-formulas-supplementary-exercises}}\\
+9, 10&\hyperref[section-introduction-related-rates]{Introduction to Related Rates \ref{section-introduction-related-rates}} through\newline{}\hyperref[section-making-graphs]{Making Graphs \ref{section-making-graphs}}&\hyperref[related-rates-supplementary-exercises]{Supplement \ref{related-rates-supplementary-exercises}},\newline{}\hyperref[critical-numbers-graphing-from-formulas-supplementary-exercises]{Supplement \ref{critical-numbers-graphing-from-formulas-supplementary-exercises}}\\
 \bottomrule
 \end{tabular}
 %% end:   preface
@@ -562,7 +575,7 @@ If \(p\) is a position function for something moving along a numbered line, then
 \typeout{Exercises 1.1.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-1}
-According to simplified Newtonian physics, if an object is dropped from an elevation of \SI{200}{\meter} and allowed to free fall to the ground, then the elevation of the object (measured in \si{\meter}) is given by the position function \(\fe{p}{t}=200-4.9t^2\) where \(t\) is the amount of time that has passed since the object was dropped (measured in \si{\second}).%
+\hypertarget{exercisegroup-1}{\null}According to simplified Newtonian physics, if an object is dropped from an elevation of \SI{200}{\meter} and allowed to free fall to the ground, then the elevation of the object (measured in \si{\meter}) is given by the position function \(\fe{p}{t}=200-4.9t^2\) where \(t\) is the amount of time that has passed since the object was dropped (measured in \si{\second}).%
 \par
 \begin{exercisegroup}(1)
 \exercise[1.]\hypertarget{exercise-1}{\null}What, \emph{including unit}, are the values of \(\fe{p}{t}\) three seconds and five seconds into the object's fall? Use these values when working \hyperlink{exercise-average-velocity}{Exercise 2}.%
@@ -695,7 +708,7 @@ We can check our formula using the line in \hyperref[figure-secant]{Figure \ref{
 \typeout{Exercises 1.2.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-2}
-Let \(\fe{g}{x}=x^2-5\).%
+\hypertarget{exercisegroup-2}{\null}Let \(\fe{g}{x}=x^2-5\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[1.]\hypertarget{exercise-7}{\null}Following \hyperref[example-secant]{Example \ref{example-secant}}, find a formula for the slope of the secant line connecting the points \(\point{x_0}{\fe{g}{x_0}}\) and \(\point{x_1}{\fe{g}{x_1}}\). Please note that factoring by grouping will \emph{not} be necessary when simplifying the expression.%
@@ -767,7 +780,7 @@ The \terminology{difference quotient} for the function \(y=\fe{f}{x}\) is the ex
 \typeout{Exercises 1.3.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-3}
-Completely simplify the difference quotient for each of the following functions. Please note that the template for the difference quotient needs to be adapted to the function name and independent variable in each given equation. For example, the difference quotient for the function in \hyperlink{exercise-first-difference-quotient}{Exercise 1} is \(\frac{\fe{v}{t+h}-\fe{v}{t}}{h}\).%
+\hypertarget{exercisegroup-3}{\null}Completely simplify the difference quotient for each of the following functions. Please note that the template for the difference quotient needs to be adapted to the function name and independent variable in each given equation. For example, the difference quotient for the function in \hyperlink{exercise-first-difference-quotient}{Exercise 1} is \(\frac{\fe{v}{t+h}-\fe{v}{t}}{h}\).%
 \par
 Please make sure that you lay out your work in a manner consistent with the way the work is shown in \hyperref[example-difference-quotient]{Example \ref{example-difference-quotient}} (excluding the subscripts, of course).%
 \par
@@ -777,7 +790,7 @@ Please make sure that you lay out your work in a manner consistent with the way 
 \exercise[3.]\hypertarget{exercise-11}{\null}\(\fe{w}{x}=\dfrac{3}{x+2}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
-Suppose that an object is tossed into the air in such a way that the elevation of the object (measured in \si{\foot}) is given by the function \(s\) defined by \(\fe{s}{t}=40+40t-16t^2\) where \(t\) is the amount of time that has passed since the object was tossed (measured in \si{\second}).%
+\hypertarget{exercisegroup-4}{\null}Suppose that an object is tossed into the air in such a way that the elevation of the object (measured in \si{\foot}) is given by the function \(s\) defined by \(\fe{s}{t}=40+40t-16t^2\) where \(t\) is the amount of time that has passed since the object was tossed (measured in \si{\second}).%
 \par
 \begin{exercisegroup}(1)
 \exercise[4.]\hypertarget{exercise-12}{\null}Simplify the difference quotient for \(s\).%
@@ -787,7 +800,7 @@ Suppose that an object is tossed into the air in such a way that the elevation o
 \exercise[8.]\hypertarget{exercise-16}{\null}Ignoring the unit, use the difference quotient to determine the average velocity over the interval \(\cinterval{0.4}{2.4}\).%
 \end{exercisegroup}
 \par\smallskip\noindent
-Moose and squirrel were having casual conversation when suddenly, without any apparent provocation, Boris Badenov launched anti-moose missile in their direction. Fortunately, squirrel had ability to fly as well as great knowledge of missile technology, and he was able to disarm missile well before it hit ground.%
+\hypertarget{exercisegroup-5}{\null}Moose and squirrel were having casual conversation when suddenly, without any apparent provocation, Boris Badenov launched anti-moose missile in their direction. Fortunately, squirrel had ability to fly as well as great knowledge of missile technology, and he was able to disarm missile well before it hit ground.%
 \par
 The elevation (\si{\foot}) of the tip of the missile \(t\) seconds after it was launched is given by the function \(\fe{h}{t}=-16t^2+294.4t+15\).%
 \par
@@ -797,7 +810,7 @@ The elevation (\si{\foot}) of the tip of the missile \(t\) seconds after it was 
 \exercise[11.]\hypertarget{exercise-19}{\null}The velocity (\si{\foot\per\second}) function for the missile is \(\fe{v}{t}=-32t+294.4\). What, including unit, is the value of \(\frac{\fe{v}{10\,\text{s}}-\fe{v}{0\,\text{s}}}{10\,\text{s}}\) and what does this value tell you about the flight of the missile?%
 \end{exercisegroup}
 \par\smallskip\noindent
-Timmy lived a long life in the 19th century. When Timmy was seven he found a rock that weighed exactly half a stone. (Timmy lived in jolly old England, don't you know.) That rock sat on Timmy's window sill for the next 80 years and wouldn't you know the weight of that rock did not change even one smidge the entire time. In fact, the weight function for this rock was \(\fe{w}{t}=0.5\) where \(\fe{w}{t}\) was the weight of the rock (stones) and \(t\) was the number of years that had passed since that day Timmy brought the rock home.%
+\hypertarget{exercisegroup-6}{\null}Timmy lived a long life in the 19th century. When Timmy was seven he found a rock that weighed exactly half a stone. (Timmy lived in jolly old England, don't you know.) That rock sat on Timmy's window sill for the next 80 years and wouldn't you know the weight of that rock did not change even one smidge the entire time. In fact, the weight function for this rock was \(\fe{w}{t}=0.5\) where \(\fe{w}{t}\) was the weight of the rock (stones) and \(t\) was the number of years that had passed since that day Timmy brought the rock home.%
 \par
 \begin{exercisegroup}(1)
 \exercise[12.]\hypertarget{exercise-20}{\null}What was the average rate of change in the weight of the rock over the 80 years it sat on Timmy's window sill?%
@@ -805,7 +818,7 @@ Timmy lived a long life in the 19th century. When Timmy was seven he found a roc
 \exercise[14.]\hypertarget{exercise-22}{\null}Showing each step in the process and ignoring the unit, simplify the difference quotient for \(w\). Does the result make sense in the context of this problem?%
 \end{exercisegroup}
 \par\smallskip\noindent
-Truth be told, there was one day in 1842 when Timmy's mischievous son Nigel took that rock outside and chucked it into the air. The velocity of the rock (\si{\foot\per\second}) was given by \(\fe{v}{t}=60-32t\) where \(t\) was the number of seconds that had passed since Nigel chucked the rock.%
+\hypertarget{exercisegroup-7}{\null}Truth be told, there was one day in 1842 when Timmy's mischievous son Nigel took that rock outside and chucked it into the air. The velocity of the rock (\si{\foot\per\second}) was given by \(\fe{v}{t}=60-32t\) where \(t\) was the number of seconds that had passed since Nigel chucked the rock.%
 \par
 \begin{exercisegroup}(1)
 \exercise[15.]\hypertarget{exercise-23}{\null}What, \emph{including unit}, are the values of \(\fe{v}{0}\), \(\fe{v}{1}\), and \(\fe{v}{2}\) and what do these values tell you in the context of this problem? Don't just write that the values tell you the velocity at certain times; explain what the velocity values tell you about the motion of the rock.%
@@ -813,7 +826,7 @@ Truth be told, there was one day in 1842 when Timmy's mischievous son Nigel took
 \exercise[17.]\hypertarget{exercise-25}{\null}What is the unit for the difference quotient for \(v\)? What does the value of the difference quotient (including unit) tell you in the context of this problem?%
 \end{exercisegroup}
 \par\smallskip\noindent
-Suppose that a vat was undergoing a controlled drain and that the amount of fluid left in the vat (\si{\gallon}) was given by the formula \(\fe{V}{t}=100-2t^{3/2}\) where \(t\) is the number of minutes that had passed since the draining process began.%
+\hypertarget{exercisegroup-vat}{\null}Suppose that a vat was undergoing a controlled drain and that the amount of fluid left in the vat (\si{\gallon}) was given by the formula \(\fe{V}{t}=100-2t^{3/2}\) where \(t\) is the number of minutes that had passed since the draining process began.%
 \par
 \begin{exercisegroup}(1)
 \exercise[18.]\hypertarget{exercise-vat-first}{\null}What, \emph{including unit}, is the value of \(\fe{V}{4}\) and what does that value tell you in the context of this problem?%
@@ -859,7 +872,7 @@ Copy \hyperref[table-vat]{Table \ref{table-vat}} onto your paper and fill in the
 \typeout{Exercises 1.4.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-4}
-The function \(z\) shown in \hyperref[figure-upside-down-parabola-supplement]{Figure \ref{figure-upside-down-parabola-supplement}} was generated by the formula \(\fe{z}{x}=2+4x-x^2\).%
+\hypertarget{exercisegroup-9}{\null}The function \(z\) shown in \hyperref[figure-upside-down-parabola-supplement]{Figure \ref{figure-upside-down-parabola-supplement}} was generated by the formula \(\fe{z}{x}=2+4x-x^2\).%
 \begin{figure}
 \centering
 \pushValignCaptionBottom[b]{minipage}{.50\textwidth-2.5em/2}{%
@@ -903,7 +916,7 @@ The function \(z\) shown in \hyperref[figure-upside-down-parabola-supplement]{Fi
 \exercise[5.]\hypertarget{exercise-34}{\null}The value found in \hyperlink{exercise-upside-down-parabola-slope}{Exercise 4} is called \emph{the slope of the tangent line to \(z\) at \(4\)}.  Draw onto \hyperref[figure-upside-down-parabola-supplement]{Figure \ref{figure-upside-down-parabola-supplement}} the line that passes through the point \(\point{4}{2}\) with this slope.  The line you just drew is called \emph{the tangent line to \(z\) at \(4\)}.%
 \end{exercisegroup}
 \par\smallskip\noindent
-Find the difference quotient for each function showing all relevant steps in an organized manner.%
+\hypertarget{exercisegroup-10}{\null}Find the difference quotient for each function showing all relevant steps in an organized manner.%
 \par
 \begin{exercisegroup}(2)
 \exercise[6.]\hypertarget{exercise-35}{\null}\(\fe{f}{x}=3-7x\)%
@@ -913,14 +926,14 @@ Find the difference quotient for each function showing all relevant steps in an 
 \exercise[10.]\hypertarget{exercise-39}{\null}\(\fe{k}{t}=\dfrac{(t-8)^2}{t}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
-Suppose that an object is tossed into the air in such a way that the elevation of the object (measured in \si{\foot}) is given by the function \(\fe{s}{t}=150+60t-16t^2\) where \(t\) is the amount of time that has passed since the object was tossed (measure in seconds).%
+\hypertarget{exercisegroup-11}{\null}Suppose that an object is tossed into the air in such a way that the elevation of the object (measured in \si{\foot}) is given by the function \(\fe{s}{t}=150+60t-16t^2\) where \(t\) is the amount of time that has passed since the object was tossed (measure in seconds).%
 \par
 \begin{exercisegroup}(1)
 \exercise[11.]\hypertarget{exercise-40}{\null}Find the difference quotient for \(s\).%
 \exercise[12.]\hypertarget{exercise-41}{\null}Use the difference quotient to determine the average velocity of the object over the interval \(\cinterval{4}{4.2}\) and then verify the value by calculating \(\frac{\fe{s}{4.2}-\fe{s}{4}}{4.2-4}\).%
 \end{exercisegroup}
 \par\smallskip\noindent
-Several applied functions are given below.  In each case, find the indicated quantity (including unit) and interpret the value in the context of the application.%
+\hypertarget{exercisegroup-12}{\null}Several applied functions are given below.  In each case, find the indicated quantity (including unit) and interpret the value in the context of the application.%
 \par
 \begin{exercisegroup}(1)
 \exercise[13.]\hypertarget{exercise-42}{\null}The velocity of a roller coaster (in \si{\foot\per\second}) is given by \(\fe{v}{t}=-100\fe{\sin}{\frac{\pi t}{15}}\) where \(t\) is the amount of time (\si{\second}) that has passed since the coaster topped the first hill.  Find and interpret \(\frac{\fe{v}{7.5}-\fe{v}{0}}{7.5-0}\).%
@@ -937,7 +950,7 @@ Several applied functions are given below.  In each case, find the indicated qua
 \typeout{Activity 2.1 Limits}
 \typeout{************************************************}
 \section[Limits]{Limits}\label{section-limits}
-While working \hyperlink{exercise-vat-first}{Exercises 18} through \hyperlink{exercise-vat-last}{21} from \hyperref[section-difference-quotient]{Activity \ref{section-difference-quotient}} you completed \hyperref[table-vat]{Table \ref{table-vat}}. In the context of that problem the difference quotient being evaluated returned the average rate of change in the volume of fluid remaining in a vat between times \(t=4\) and \(t=4+h\). As the elapsed time closes in on \(0\) this average rate of change converges to \(-6\). From that we deduce that the rate of change in the volume \(4\) minutes into the draining process must have been \SI{6}{\gallon\per\minute}.%
+While working \hyperlink{exercisegroup-vat}{Exercise Group 18-21} from \hyperref[section-difference-quotient]{Activity \ref{section-difference-quotient}} you completed \hyperref[table-vat]{Table \ref{table-vat}}. In the context of that problem the difference quotient being evaluated returned the average rate of change in the volume of fluid remaining in a vat between times \(t=4\) and \(t=4+h\). As the elapsed time closes in on \(0\) this average rate of change converges to \(-6\). From that we deduce that the rate of change in the volume \(4\) minutes into the draining process must have been \SI{6}{\gallon\per\minute}.%
 \par
 Please note that we could not deduce the rate of change \(4\) minutes into the process by replacing \(h\) with \(0\); in fact, there are at least two things preventing us from doing so. From a strictly mathematical perspective, we cannot replace \(h\) with \(0\) because that would lead to division by zero in the difference quotient. From a more physical perspective, replacing \(h\) with \(0\) would in essence stop the clock. If time is frozen, so is the amount of fluid in the vat and the entire concept of ``rate of change'' becomes moot.%
 \par
@@ -990,7 +1003,7 @@ Most of the time the value of a function at the number \(a\) and the limit of th
 \end{figure}
 \par\smallskip
 \end{exerciselist}
-\begin{figure}
+\hypertarget{exercisegroup-13}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -1060,7 +1073,7 @@ Copy each of the following expressions onto your paper and either state the valu
 \exercise[13.]\hypertarget{exercise-58}{\null}\(\lim\limits_{t\to-2}\fe{g}{t}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
-Values of the function \(f\), where \(\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}\) are shown in \hyperref[table-rational-function-values]{Table \ref{table-rational-function-values}}, and values of the function \(p\) where \(\fe{p}{t}=\sqrt{t-12}\) are shown in \hyperref[table-square-root-values]{Table \ref{table-square-root-values}}. These questions are in reference to these functions.%
+\hypertarget{exercisegroup-14}{\null}Values of the function \(f\), where \(\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}\) are shown in \hyperref[table-rational-function-values]{Table \ref{table-rational-function-values}}, and values of the function \(p\) where \(\fe{p}{t}=\sqrt{t-12}\) are shown in \hyperref[table-square-root-values]{Table \ref{table-square-root-values}}. These questions are in reference to these functions.%
 \begin{figure}
 \centering
 \pushValignCaptionBottom[b]{minipage}{.50\textwidth-2.5em/2}{%
@@ -1103,7 +1116,7 @@ Values of the function \(f\), where \(\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}\)
 \exercise[17.]\hypertarget{exercise-62}{\null}What is the value of \(\lim\limits_{t\to21}\sqrt{t-12}\)?%
 \end{exercisegroup}
 \par\smallskip\noindent
-Create tables similar to \hyperref[table-rational-function-values]{Tables \ref{table-rational-function-values}} and \hyperref[table-square-root-values]{\ref{table-square-root-values}} from which you can deduce each of the following limit values. Make sure that you include table numbers, table captions, and meaningful column headings. Make sure that your input values follow patterns similar to those used in \hyperref[table-rational-function-values]{Tables \ref{table-rational-function-values}} and \hyperref[table-square-root-values]{\ref{table-square-root-values}}. Make sure that you round your output values in such a way that a clear and compelling pattern in the output is clearly demonstrated by your stated values. Make sure that you state the limit value!%
+\hypertarget{exercisegroup-15}{\null}Create tables similar to \hyperref[table-rational-function-values]{Tables \ref{table-rational-function-values}} and \hyperref[table-square-root-values]{\ref{table-square-root-values}} from which you can deduce each of the following limit values. Make sure that you include table numbers, table captions, and meaningful column headings. Make sure that your input values follow patterns similar to those used in \hyperref[table-rational-function-values]{Tables \ref{table-rational-function-values}} and \hyperref[table-square-root-values]{\ref{table-square-root-values}}. Make sure that you round your output values in such a way that a clear and compelling pattern in the output is clearly demonstrated by your stated values. Make sure that you state the limit value!%
 \par
 \begin{exercisegroup}(2)
 \exercise[18.]\hypertarget{exercise-63}{\null}\(\lim\limits_{t\to6}\dfrac{t^2-10t+24}{t-6}\)%
@@ -1120,7 +1133,7 @@ When proving the value of a limit we frequently rely upon laws that are easy to 
 \typeout{Exercises 2.2.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-6}
-The value of each of the following limits can be established using one of the replacement laws. Copy each limit expression onto your own paper, state the value of the limit (e.g.\@ \(\lim\limits_{x\to9}5=5\)), and state the replacement law (by number) that establishes the value of the limit.%
+\hypertarget{exercisegroup-16}{\null}The value of each of the following limits can be established using one of the replacement laws. Copy each limit expression onto your own paper, state the value of the limit (e.g.\@ \(\lim\limits_{x\to9}5=5\)), and state the replacement law (by number) that establishes the value of the limit.%
 \par
 \begin{exercisegroup}(3)
 \exercise[1.]\hypertarget{exercise-66}{\null}\(\lim\limits_{t\to\pi}t\)%
@@ -1135,17 +1148,17 @@ The value of each of the following limits can be established using one of the re
 &=4\left(\lim_{x\to7}x\right)^2+\lim_{x\to7}3&&\text{Limit Law A6}\\
 &=4\cdot7^2+3&&\text{Limit Laws R1 and R2}\\
 &=199
-\end{align*}(\hyperref[lla1]{Limit Law A1 \ref{lla1}}, \hyperref[lla3]{Limit Law A3 \ref{lla3}}, \hyperref[lla6]{Limit Law A6 \ref{lla6}}, \hyperref[llr1]{Limit Law R1 \ref{llr1}}, \hyperref[llr2]{Limit Law R2 \ref{llr2}})%
+\end{align*}(\hyperref[lla1]{Limit Law A1}, \hyperref[lla3]{Limit Law A3}, \hyperref[lla6]{Limit Law A6}, \hyperref[llr1]{Limit Law R1}, \hyperref[llr2]{Limit Law R2})%
 \end{example}
-The algebraic limit laws allow us to replace limit expressions with equivalent limit expressions. When applying limit laws our first goal is to come up with an expression in which every limit in the expression can be replaced with its value based up on one of the replacement laws. This process is shown in \hyperref[example-apply-limit-laws]{Example \ref{example-apply-limit-laws}}. Please note that all replacement laws are saved for the second to last step and that each replacement is explicitly shown. Please note also that each limit law used is referenced by number.%
+\hypertarget{exercisegroup-17}{\null}The algebraic limit laws allow us to replace limit expressions with equivalent limit expressions. When applying limit laws our first goal is to come up with an expression in which every limit in the expression can be replaced with its value based up on one of the replacement laws. This process is shown in \hyperref[example-apply-limit-laws]{Example \ref{example-apply-limit-laws}}. Please note that all replacement laws are saved for the second to last step and that each replacement is explicitly shown. Please note also that each limit law used is referenced by number.%
 \par
 Use the limit laws to establish the value of each of the following limits. Make sure that you use the step-by-step, vertical format shown in example \hyperref[example-apply-limit-laws]{Example \ref{example-apply-limit-laws}}. Make sure that you cite the limit laws used in each step. To help you get started, the steps necessary in \hyperlink{exercise-first-apply-limit-laws}{Exercise 4} are outlined as:%
 \begin{multicols}{2}
 \begin{enumerate}[label=(\alph*)]
-\item{}Apply \hyperref[lla6]{Limit Law A6 \ref{lla6}}%
-\item{}Apply \hyperref[lla1]{Limit Law A1 \ref{lla1}}%
-\item{}Apply \hyperref[lla3]{Limit Law A3 \ref{lla3}}%
-\item{}Apply \hyperref[llr1]{Limit Law R1 \ref{llr1}} and \hyperref[llr2]{Limit Law R2 \ref{llr2}}%
+\item{}Apply \hyperref[lla6]{Limit Law A6}%
+\item{}Apply \hyperref[lla1]{Limit Law A1}%
+\item{}Apply \hyperref[lla3]{Limit Law A3}%
+\item{}Apply \hyperref[llr1]{Limit Law R1} and \hyperref[llr2]{Limit Law R2}%
 \end{enumerate}
 \end{multicols}
 \par
@@ -1167,7 +1180,7 @@ Many limits have the form \(\frac{0}{0}\) which means the expressions in both th
 &=\lim_{x\to3}x-\lim_{x\to3}5&&\text{Limit Law A2}\\
 &=3-5&&\text{Limit Laws R1 and R2}\\
 &=-2
-\end{align*}(\hyperref[lla7]{Limit Law A7 \ref{lla7}}, \hyperref[lla2]{Limit Law A2 \ref{lla2}}, \hyperref[llr1]{Limit Law R1 \ref{llr1}}, \hyperref[llr2]{Limit Law R2 \ref{llr2}}%
+\end{align*}(\hyperref[lla7]{Limit Law A7}, \hyperref[lla2]{Limit Law A2}, \hyperref[llr1]{Limit Law R1}, \hyperref[llr2]{Limit Law R2}%
 \end{example}
 \begin{example}\label{example-second-indeterminate}
 \begin{align*}
@@ -1181,7 +1194,7 @@ Many limits have the form \(\frac{0}{0}\) which means the expressions in both th
 &=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}1+\fe{\cos}{\lim_{\theta\to0}\theta}}&&\text{Limit Law A6}\\
 &=\frac{1}{1+\fe{\cos}{0}}&&\text{Limit Laws R1 and R2}\\
 &=\frac{1}{2}
-\end{align*}(\hyperref[lla7]{Limit Law A7 \ref{lla7}}, \hyperref[lla5]{Limit Law A5 \ref{lla5}}, \hyperref[lla1]{Limit Law A1 \ref{lla1}}, \hyperref[lla6]{Limit Law A6 \ref{lla6}}, \hyperref[llr1]{Limit Law R1 \ref{llr1}}, \hyperref[llr2]{Limit Law R2 \ref{llr2}})%
+\end{align*}(\hyperref[lla7]{Limit Law A7}, \hyperref[lla5]{Limit Law A5}, \hyperref[lla1]{Limit Law A1}, \hyperref[lla6]{Limit Law A6}, \hyperref[llr1]{Limit Law R1}, \hyperref[llr2]{Limit Law R2})%
 \end{example}
 \par
 As seen in \hyperref[example-second-indeterminate]{Example \ref{example-second-indeterminate}}, trigonometric identities can come into play while trying to eliminate the form \(\frac{0}{0}\). Elementary rules of logarithms can also play a role in this process. Before you begin evaluating limits whose initial form is \(\frac{0}{0}\), you need to make sure that you recall some of these basic rules. That is the purpose of \hyperlink{exercise-identities-review}{Exercise 1}.%
@@ -1209,7 +1222,7 @@ The following identities are valid for all positive values of \(x\) and \(y\) an
 \end{align*}%
 \par\smallskip
 \end{exerciselist}
-Use the limit laws to establish the value of each of the following limits after first manipulating the expression so that it
+\hypertarget{exercisegroup-18}{\null}Use the limit laws to establish the value of each of the following limits after first manipulating the expression so that it
 no longer has form \(\frac{0}{0}\). Make sure that you use the step-by-step, vertical format shown in \hyperref[example-first-indeterminate]{Examples \ref{example-first-indeterminate}} and \hyperref[example-second-indeterminate]{Example \ref{example-second-indeterminate}}. Make sure that you cite each limit law used.%
 \par
 \begin{exercisegroup}(2)
@@ -1238,7 +1251,7 @@ The formalistic way to read \(\lim\limits_{x\to\infty}\fe{f}{x}=L\) is ``the lim
 \item[1.]\hypertarget{exercise-79}{\null}For the function in \hyperref[figure-match-rationals-1]{Figure \ref{figure-match-rationals-1}}, we could (correctly) write \(\lim\limits_{x\to\infty}\fe{f_1}{x}=-2\) and \(\lim\limits_{x\to-\infty}\fe{f_1}{x}=-2\).  Go ahead and write (and say aloud) the analogous limits for the functions in \hyperref[figure-match-rationals-2]{Figures \ref{figure-match-rationals-2}}\textendash{}\hyperref[figure-match-rationals-5]{\ref{figure-match-rationals-5}}.%
 \par\smallskip
 \end{exerciselist}
-\begin{figure}
+\hypertarget{exercisegroup-19}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -1271,7 +1284,7 @@ Values of the function \(f\) defined by \(\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+1
 \exercise[3.]\hypertarget{exercise-81}{\null}What is the equation of the horizontal asymptote for the graph of \(y=\fe{f}{x}\)?%
 \end{exercisegroup}
 \par\smallskip\noindent
-\begin{figure}
+\hypertarget{exercisegroup-20}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -1313,9 +1326,9 @@ Jorge and Vanessa were in a heated discussion about horizontal asymptotes. Jorge
 \typeout{Activity 2.5 Limits at Infinity Tending to Zero}
 \typeout{************************************************}
 \section[Limits at Infinity Tending to Zero]{Limits at Infinity Tending to Zero}\label{section-limits-at-infinity-tending-to-zero}
-When using limit laws to establish limit values as \(x\to\infty\) or \(x\to-\infty\), \hyperref[lla1]{Limit Law A1 \ref{lla1}}\textendash{}\hyperref[lla6]{Limit Law A6 \ref{lla6}} and  \hyperref[llr2]{Limit Law R2 \ref{llr2}} are still in play (when applied in a valid manner), but \hyperref[llr1]{Limit Law R1 \ref{llr1}} cannot be applied. (The reason it cannot be applied is discussed in detail in \hyperlink{exercise-hear-me-first}{Exercises 11} through \hyperlink{exercise-hear-me-last}{18} from \hyperref[section-vertical-asymptotes]{Activity \ref{section-vertical-asymptotes}}.)%
+When using limit laws to establish limit values as \(x\to\infty\) or \(x\to-\infty\), \hyperref[lla1]{Limit Law A1}\textendash{}\hyperref[lla6]{Limit Law A6} and  \hyperref[llr2]{Limit Law R2} are still in play (when applied in a valid manner), but \hyperref[llr1]{Limit Law R1} cannot be applied. (The reason it cannot be applied is discussed in detail in \hyperlink{exercisegroup-hear-me}{Exercise Group 11-18} from \hyperref[section-vertical-asymptotes]{Activity \ref{section-vertical-asymptotes}}.)%
 \par
-There is a new replacement law that can only be applied when \(x\to\infty\) or \(x\to-\infty\); this is \hyperref[llr3]{Limit Law R3 \ref{llr3}}. \hyperref[llr3]{Limit Law R3 \ref{llr3}} essentially says that if the value of a function is increasing without any bound on how large it becomes or if the function is decreasing without any bound on how large its absolute value becomes, then the value of a constant divided by that function must be approaching zero. An analogy can be found in extremely poor party planning. Let's say that you plan to have a pizza party and you buy five pizzas. Suppose that as the hour of the party approaches more and more guests come in the door\textemdash{}in fact the guests never stop coming! Clearly as the number of guests continues to rise the amount of pizza each guest will receive quickly approaches zero (assuming the pizzas are equally divided among the guests).%
+There is a new replacement law that can only be applied when \(x\to\infty\) or \(x\to-\infty\); this is \hyperref[llr3]{Limit Law R3}. \hyperref[llr3]{Limit Law R3} essentially says that if the value of a function is increasing without any bound on how large it becomes or if the function is decreasing without any bound on how large its absolute value becomes, then the value of a constant divided by that function must be approaching zero. An analogy can be found in extremely poor party planning. Let's say that you plan to have a pizza party and you buy five pizzas. Suppose that as the hour of the party approaches more and more guests come in the door\textemdash{}in fact the guests never stop coming! Clearly as the number of guests continues to rise the amount of pizza each guest will receive quickly approaches zero (assuming the pizzas are equally divided among the guests).%
 \typeout{************************************************}
 \typeout{Exercises 2.5.1 Exercises}
 \typeout{************************************************}
@@ -1355,7 +1368,7 @@ Complete \hyperref[table-limit-to-zero]{Table \ref{table-limit-to-zero}} without
 \typeout{Activity 2.6 Ratios of Infinities}
 \typeout{************************************************}
 \section[Ratios of Infinities]{Ratios of Infinities}\label{section-ratios-of-infinities}
-Many limits have the form \(\frac{\infty}{\infty}\), which we take to mean that the expressions in both the numerator and denominator are increasing or decreasing without bound. When confronted with a limit of type \(\lim\limits_{x\to\infty}\frac{\fe{f}{x}}{\fe{g}{x}}\) or \(\lim\limits_{x\to-\infty}\frac{\fe{f}{x}}{\fe{g}{x}}\) that has the form \(\frac{\infty}{\infty}\), we can frequently resolve the limit if we first divide the dominant factor of the dominant term of the denominator from both the numerator and the denominator. When we do this, we need to completely simplify each of the resultant fractions and make sure that the resultant limit exists before we start to apply limit laws. We then apply the algebraic limit laws until all of the resultant limits can be replaced using \hyperref[llr2]{Limit Law R2 \ref{llr2}} and \hyperref[llr3]{Limit Law R3 \ref{llr3}}. This process is illustrated in \hyperref[example-ratio-of-infinities]{Example \ref{example-ratio-of-infinities}}.%
+Many limits have the form \(\frac{\infty}{\infty}\), which we take to mean that the expressions in both the numerator and denominator are increasing or decreasing without bound. When confronted with a limit of type \(\lim\limits_{x\to\infty}\frac{\fe{f}{x}}{\fe{g}{x}}\) or \(\lim\limits_{x\to-\infty}\frac{\fe{f}{x}}{\fe{g}{x}}\) that has the form \(\frac{\infty}{\infty}\), we can frequently resolve the limit if we first divide the dominant factor of the dominant term of the denominator from both the numerator and the denominator. When we do this, we need to completely simplify each of the resultant fractions and make sure that the resultant limit exists before we start to apply limit laws. We then apply the algebraic limit laws until all of the resultant limits can be replaced using \hyperref[llr2]{Limit Law R2} and \hyperref[llr3]{Limit Law R3}. This process is illustrated in \hyperref[example-ratio-of-infinities]{Example \ref{example-ratio-of-infinities}}.%
 \begin{example}\label{example-ratio-of-infinities}
 \begin{align*}
 \lim_{t\to\infty}\frac{3t^2+5t}{3-5t^2}&=\lim_{t\to\infty}\left(\frac{3t^2+5t}{3-5t^2}\cdot\frac{\sfrac{1}{t^2}}{\sfrac{1}{t^2}}\right)\\
@@ -1364,13 +1377,13 @@ Many limits have the form \(\frac{\infty}{\infty}\), which we take to mean that 
 &=\frac{\lim_{t\to\infty}3+\lim_{t\to\infty}\frac{5}{t}}{\lim_{t\to\infty}\frac{3}{t^2}-\lim_{t\to\infty}5}&&\text{Limit Laws A1 and A2}\\
 &=\frac{3+0}{0-5}&&\text{Limit Laws R2 and R3}\\
 &=-\frac{3}{5}
-\end{align*}(\hyperref[lla5]{Limit Law A5 \ref{lla5}}, \hyperref[lla1]{Limit Law A1 \ref{lla1}}, \hyperref[lla2]{Limit Law A2 \ref{lla2}}, \hyperref[llr2]{Limit Law R2 \ref{llr2}}, \hyperref[llr3]{Limit Law R3 \ref{llr3}})%
+\end{align*}(\hyperref[lla5]{Limit Law A5}, \hyperref[lla1]{Limit Law A1}, \hyperref[lla2]{Limit Law A2}, \hyperref[llr2]{Limit Law R2}, \hyperref[llr3]{Limit Law R3})%
 \end{example}
 \typeout{************************************************}
 \typeout{Exercises 2.6.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-10}
-Use the limit laws to establish the value of each limit after dividing the dominant term-factor in the denominator from both the numerator and denominator. Remember to simplify each resultant expression before you begin to apply the limit laws.%
+\hypertarget{exercisegroup-21}{\null}Use the limit laws to establish the value of each limit after dividing the dominant term-factor in the denominator from both the numerator and denominator. Remember to simplify each resultant expression before you begin to apply the limit laws.%
 \par
 \begin{exercisegroup}(3)
 \exercise[1.]\hypertarget{exercise-86}{\null}\(\lim\limits_{t\to-\infty}\dfrac{4t^2}{4t^2+t^3}\)%
@@ -1513,7 +1526,7 @@ Whenever \(\lim\limits_{x\to a}\fe{f}{x}\neq0\) but \(\lim\limits_{x\to a}\fe{g}
 \typeout{Exercises 2.8.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-12}
-Suppose that \(\fe{g}{t}=\frac{t+4}{t+3}\).%
+\hypertarget{exercisegroup-22}{\null}Suppose that \(\fe{g}{t}=\frac{t+4}{t+3}\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[1.]\hypertarget{exercise-90}{\null}What is the vertical asymptote on the graph of \(y=\fe{g}{t}\)?%
@@ -1523,7 +1536,7 @@ Suppose that \(\fe{g}{t}=\frac{t+4}{t+3}\).%
 \exercise[5.]\hypertarget{exercise-94}{\null}Which of the following limits exist?\newline{} \(\lim\limits_{t\to-3^{-}}\fe{g}{t}\)? \(\lim\limits_{t\to-3^{+}}\fe{g}{t}\)? \(\lim\limits_{t\to-3}\fe{g}{t}\)?%
 \end{exercisegroup}
 \par\smallskip\noindent
-Suppose that \(\fe{z}{x}=\frac{7-3x^2}{\left(x-2\right)^2}\).%
+\hypertarget{exercisegroup-23}{\null}Suppose that \(\fe{z}{x}=\frac{7-3x^2}{\left(x-2\right)^2}\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[6.]\hypertarget{exercise-95}{\null}What is the vertical asymptote on the graph of \(y=\fe{z}{x}\)?%
@@ -1562,7 +1575,7 @@ Use this as an opportunity to discuss why limits of form ``not-zero over zero'' 
 \popValignCaptionBottom
 \end{figure}
 \par\smallskip
-Hear me, and hear me loud\dots{}\(\infty\) \emph{does not exist}. This, in part, is why we cannot apply \hyperref[llr1]{Limit Law R1 \ref{llr1}} to an expression like \(\lim\limits_{x\to\infty}x\) to see that \(\lim\limits_{x\to\infty}x=\infty\). When we write, say, \(\lim\limits_{x\to7}x=7\), we are replacing the limit, we are replacing the limit expression \emph{with its value}\textemdash{}that's what the replacement laws are all about! When we write \(\lim\limits_{x\to\infty}x=\infty\), we are not replacing the limit expression with a value! We are explicitly saying that the limit has no value (i.e.\@ does not exist) as well as saying the reason the limit does not exist. The limit laws can only be applied when all of the limits in the equation exist. With this in mind, discuss and decide whether each of the following equations are \emph{true} or \emph{false}.%
+\hypertarget{exercisegroup-hear-me}{\null}Hear me, and hear me loud\dots{}\(\infty\) \emph{does not exist}. This, in part, is why we cannot apply \hyperref[llr1]{Limit Law R1} to an expression like \(\lim\limits_{x\to\infty}x\) to see that \(\lim\limits_{x\to\infty}x=\infty\). When we write, say, \(\lim\limits_{x\to7}x=7\), we are replacing the limit, we are replacing the limit expression \emph{with its value}\textemdash{}that's what the replacement laws are all about! When we write \(\lim\limits_{x\to\infty}x=\infty\), we are not replacing the limit expression with a value! We are explicitly saying that the limit has no value (i.e.\@ does not exist) as well as saying the reason the limit does not exist. The limit laws can only be applied when all of the limits in the equation exist. With this in mind, discuss and decide whether each of the following equations are \emph{true} or \emph{false}.%
 \par
 \begin{exercisegroup}(1)
 \exercise[11.]\hypertarget{exercise-hear-me-first}{\null}True or False? \(\lim\limits_{x\to0}\left(\dfrac{e^x}{e^x}\right)=\dfrac{\lim\limits_{x\to0}e^x}{\lim\limits_{x\to0}e^x}\)%
@@ -1607,7 +1620,7 @@ Please note that if either property 1 or property 2 fails to be satisfied at a g
 \typeout{Exercises 2.9.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-13}
-\begin{figure}
+\hypertarget{exercisegroup-25}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -1738,7 +1751,7 @@ The function \(f\) is \terminology{continuous} over a closed interval \(\cinterv
 \item[1.]\hypertarget{exercise-113}{\null}Write a definition for continuity on the half-open interval \(\ocinterval{a}{b}\).%
 \par\smallskip
 \end{exerciselist}
-Referring to the function in \hyperref[figure-discontinuities]{Figure \ref{figure-discontinuities}}, decide whether each of the following statements are \emph{true} or \emph{false}.%
+\hypertarget{exercisegroup-26}{\null}Referring to the function in \hyperref[figure-discontinuities]{Figure \ref{figure-discontinuities}}, decide whether each of the following statements are \emph{true} or \emph{false}.%
 \par
 \begin{exercisegroup}(1)
 \exercise[2.]\hypertarget{exercise-114}{\null}True or False? \(h\) is continuous on \(\cointerval{-4}{-1}\).%
@@ -1750,7 +1763,7 @@ Referring to the function in \hyperref[figure-discontinuities]{Figure \ref{figur
 \exercise[8.]\hypertarget{exercise-120}{\null}True or False? \(h\) is continuous on \(\ocinterval{-\infty}{-4}\).%
 \end{exercisegroup}
 \par\smallskip\noindent
-Several functions are described below. Your task is to sketch a graph for each function on its provided axis system. Do not introduce any unnecessary discontinuities or intercepts that are not directly implied by the stated properties. Make sure that you draw all implied asymptotes and label them with their equations.%
+\hypertarget{exercisegroup-27}{\null}Several functions are described below. Your task is to sketch a graph for each function on its provided axis system. Do not introduce any unnecessary discontinuities or intercepts that are not directly implied by the stated properties. Make sure that you draw all implied asymptotes and label them with their equations.%
 \par
 \begin{exercisegroup}(1)
 \exercise[9.]\hypertarget{exercise-121}{\null}Sketch a graph of a function satisfying:%
@@ -1876,7 +1889,7 @@ Piecewise-defined functions are functions where the formula used depends upon th
 \typeout{Exercises 2.13.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-17}
-This question is all about the function \(f\) defined by \[\fe{f}{x}=\begin{cases}\frac{4}{5-x}&x\lt1\\\frac{x-3}{x-3}&1\lt x\lt4\\2x+1&4\leq x\leq7\\\frac{15}{8-x}&x\gt7\text{.}\end{cases}\]%
+\hypertarget{exercisegroup-28}{\null}This question is all about the function \(f\) defined by \[\fe{f}{x}=\begin{cases}\frac{4}{5-x}&x\lt1\\\frac{x-3}{x-3}&1\lt x\lt4\\2x+1&4\leq x\leq7\\\frac{15}{8-x}&x\gt7\text{.}\end{cases}\]%
 \par
 \begin{exercisegroup}(1)
 \exercise[1.]\hypertarget{exercise-129}{\null}Complete \hyperref[table-piecewise-discontinuities]{Table \ref{table-piecewise-discontinuities}}.%
@@ -1921,7 +1934,7 @@ Location of discontinuity&From \hyperref[definition-continuity]{Definition \ref{
 \end{table}
 \end{exercisegroup}
 \par\smallskip\noindent
-Consider the function \(f\) defined by \(\fe{f}{x}=\begin{cases}\frac{5}{x-10}&x\leq5\\\frac{5}{5x-30}&5\lt x\lt7\\\frac{x-2}{12-x}&x>7\text{.}\end{cases}\)%
+\hypertarget{exercisegroup-29}{\null}Consider the function \(f\) defined by \(\fe{f}{x}=\begin{cases}\frac{5}{x-10}&x\leq5\\\frac{5}{5x-30}&5\lt x\lt7\\\frac{x-2}{12-x}&x>7\text{.}\end{cases}\)%
 \par
 State the values of \(x\) where each of the following occur. If a stated property doesn't occur, make sure that you state that (as opposed to simply not responding to the question). No explanation necessary.%
 \par
@@ -1932,7 +1945,7 @@ State the values of \(x\) where each of the following occur. If a stated propert
 \exercise[6.]\hypertarget{exercise-134}{\null}At what values of \(x\) does \(f\) have removable discontinuities?%
 \end{exercisegroup}
 \par\smallskip\noindent
-Consider the function \(g\) defined by \(\fe{g}{x}=\begin{cases}\frac{C}{x-17}&x\lt10\\C+3x&x=10\\2C-4&x\gt10\text{.}\end{cases}\)%
+\hypertarget{exercisegroup-30}{\null}Consider the function \(g\) defined by \(\fe{g}{x}=\begin{cases}\frac{C}{x-17}&x\lt10\\C+3x&x=10\\2C-4&x\gt10\text{.}\end{cases}\)%
 \par
 The symbol \(C\) represents the same real number in each of the piecewise formulas.%
 \par
@@ -1949,7 +1962,7 @@ The symbol \(C\) represents the same real number in each of the piecewise formul
 \typeout{Exercises 2.14.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-18}
-For \hyperlink{exercise-limits-supplement-first}{Exercises 1}\textendash{}\hyperlink{exercise-limits-supplement-last}{5}, state the limit suggested by the values in the table and state whether or not the limit exists.  The correct answer for \hyperlink{exercise-limits-supplement-first}{Exercise 1} has been given to help you understand the instructions.%
+\hypertarget{exercisegroup-31}{\null}For \hyperlink{exercise-limits-supplement-first}{Exercises 1}\textendash{}\hyperlink{exercise-limits-supplement-last}{5}, state the limit suggested by the values in the table and state whether or not the limit exists.  The correct answer for \hyperlink{exercise-limits-supplement-first}{Exercise 1} has been given to help you understand the instructions.%
 \par
 \begin{exercisegroup}(1)
 \exercise[1.]\hypertarget{exercise-limits-supplement-first}{\null}\begin{tabular}{rc}
@@ -2182,7 +2195,7 @@ Limit exists?%
 \item[9.]\hypertarget{exercise-145}{\null}Determine the value(s) of \(k\) that make(s) the function \(g\) defined by \(\fe{g}{t}=\begin{cases}t^2+kt-k&t\geq3\\t^2-4k&t\lt 3\end{cases}\) continuous over \(\ointerval{-\infty}{\infty}\).%
 \par\smallskip
 \end{exerciselist}
-Determine the appropriate symbol to write after an equal sign following each of the given limits.  In each case, the appropriate symbol is either a real number, \(\infty\), or \(-\infty\).  Also, state whether or not each limit exists and if the limit exists prove its existence (and value) by applying the appropriate limit laws.  The Rational Limit Forms table in \hyperref[appendix-limit-laws]{Appendix \ref{appendix-limit-laws}} summarizes strategies to be employed based upon the initial form of the limit.%
+\hypertarget{exercisegroup-32}{\null}Determine the appropriate symbol to write after an equal sign following each of the given limits.  In each case, the appropriate symbol is either a real number, \(\infty\), or \(-\infty\).  Also, state whether or not each limit exists and if the limit exists prove its existence (and value) by applying the appropriate limit laws.  The Rational Limit Forms table in \hyperref[appendix-limit-laws]{Appendix \ref{appendix-limit-laws}} summarizes strategies to be employed based upon the initial form of the limit.%
 \par
 \begin{exercisegroup}(2)
 \exercise[10.]\hypertarget{exercise-146}{\null}\(\lim\limits_{x\to4^{-}}\left(5-\dfrac{1}{x-4}\right)\)%
@@ -2201,7 +2214,7 @@ Determine the appropriate symbol to write after an equal sign following each of 
 \exercise[23.]\hypertarget{exercise-159}{\null}\(\lim\limits_{x\to0^{+}}\dfrac{\fe{\ln}{x^e}}{\fe{\ln}{e^x}}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
-Draw sketches of the curves \(y=e^x\), \(y=e^{-x}\), \(y=\fe{\ln}{x}\), and \(y=\frac{1}{x}\).  Note the coordinates of any and all intercepts.  This is something you should be able to do from memory/intuition.  If you cannot already do so, spend some time reviewing whatever you need to review so that you can do so. Once you have the graphs drawn, fill in each of the blanks below and decide whether or not each limit exists.  The appropriate symbol for some of the blanks is either \(\infty\) or \(-\infty\).%
+\hypertarget{exercisegroup-33}{\null}Draw sketches of the curves \(y=e^x\), \(y=e^{-x}\), \(y=\fe{\ln}{x}\), and \(y=\frac{1}{x}\).  Note the coordinates of any and all intercepts.  This is something you should be able to do from memory/intuition.  If you cannot already do so, spend some time reviewing whatever you need to review so that you can do so. Once you have the graphs drawn, fill in each of the blanks below and decide whether or not each limit exists.  The appropriate symbol for some of the blanks is either \(\infty\) or \(-\infty\).%
 \par
 \begin{exercisegroup}(2)
 \exercise[24.]\hypertarget{exercise-160}{\null}\(\lim\limits_{x\to\infty}e^x=\underline{\qquad}\,(\text{exists?})\)%
@@ -2213,15 +2226,15 @@ Draw sketches of the curves \(y=e^x\), \(y=e^{-x}\), \(y=\fe{\ln}{x}\), and \(y=
 \exercise[30.]\hypertarget{exercise-166}{\null}\(\lim\limits_{x\to\infty}\fe{\ln}{x}=\underline{\qquad}\,(\text{exists?})\)%
 \exercise[31.]\hypertarget{exercise-167}{\null}\(\lim\limits_{x\to1}\fe{\ln}{x}=\underline{\qquad}\,(\text{exists?})\)%
 \exercise[32.]\hypertarget{exercise-168}{\null}\(\lim\limits_{x\to0^{+}}\fe{\ln}{x}=\underline{\qquad}\,(\text{exists?})\)%
-\exercise[33.]\hypertarget{exercise-169}{\null}\(\lim\limits_{x\to\infty}\frac{1}{x}=\underline{\qquad}\,(\text{exists?})\)%
-\exercise[34.]\hypertarget{exercise-170}{\null}\(\lim\limits_{x\to-\infty}\frac{1}{x}=\underline{\qquad}\,(\text{exists?})\)%
-\exercise[35.]\hypertarget{exercise-171}{\null}\(\lim\limits_{x\to0^{+}}\frac{1}{x}=\underline{\qquad}\,(\text{exists?})\)%
-\exercise[36.]\hypertarget{exercise-172}{\null}\(\lim\limits_{x\to0^{-}}\frac{1}{x}=\underline{\qquad}\,(\text{exists?})\)%
+\exercise[33.]\hypertarget{exercise-169}{\null}\(\lim\limits_{x\to\infty}\dfrac{1}{x}=\underline{\qquad}\,(\text{exists?})\)%
+\exercise[34.]\hypertarget{exercise-170}{\null}\(\lim\limits_{x\to-\infty}\dfrac{1}{x}=\underline{\qquad}\,(\text{exists?})\)%
+\exercise[35.]\hypertarget{exercise-171}{\null}\(\lim\limits_{x\to0^{+}}\dfrac{1}{x}=\underline{\qquad}\,(\text{exists?})\)%
+\exercise[36.]\hypertarget{exercise-172}{\null}\(\lim\limits_{x\to0^{-}}\dfrac{1}{x}=\underline{\qquad}\,(\text{exists?})\)%
 \exercise[37.]\hypertarget{exercise-173}{\null}\(\lim\limits_{x\to\infty}e^{\sfrac{1}{x}}=\underline{\qquad}\,(\text{exists?})\)%
-\exercise[38.]\hypertarget{exercise-174}{\null}\(\lim\limits_{x\to\infty}\frac{1}{e^x}=\underline{\qquad}\,(\text{exists?})\)%
-\exercise[39.]\hypertarget{exercise-175}{\null}\(\lim\limits_{x\to-\infty}\frac{1}{e^x}=\underline{\qquad}\,(\text{exists?})\)%
-\exercise[40.]\hypertarget{exercise-176}{\null}\(\lim\limits_{x\to\infty}\frac{1}{e^{-x}}=\underline{\qquad}\,(\text{exists?})\)%
-\exercise[41.]\hypertarget{exercise-177}{\null}\(\lim\limits_{x\to-\infty}\frac{1}{e^{-x}}=\underline{\qquad}\,(\text{exists?})\)%
+\exercise[38.]\hypertarget{exercise-174}{\null}\(\lim\limits_{x\to\infty}\dfrac{1}{e^x}=\underline{\qquad}\,(\text{exists?})\)%
+\exercise[39.]\hypertarget{exercise-175}{\null}\(\lim\limits_{x\to-\infty}\dfrac{1}{e^x}=\underline{\qquad}\,(\text{exists?})\)%
+\exercise[40.]\hypertarget{exercise-176}{\null}\(\lim\limits_{x\to\infty}\dfrac{1}{e^{-x}}=\underline{\qquad}\,(\text{exists?})\)%
+\exercise[41.]\hypertarget{exercise-177}{\null}\(\lim\limits_{x\to-\infty}\dfrac{1}{e^{-x}}=\underline{\qquad}\,(\text{exists?})\)%
 \end{exercisegroup}
 \par\smallskip\noindent
 \typeout{************************************************}
@@ -2255,7 +2268,7 @@ From this we can infer that the velocity of the object \(2\) seconds into its fl
 \typeout{Exercises 3.1.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-19}
-\begin{figure}
+\hypertarget{exercisegroup-34}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -2363,7 +2376,7 @@ You should verify that the slope of the tangent line shown in \hyperref[figure-t
 \typeout{Exercises 3.2.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-20}
-\begin{figure}
+\hypertarget{exercisegroup-35}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -2494,7 +2507,7 @@ Let \(\fe{f}{x}=\frac{3}{2-x}\). We can find \(\fe{\fd{f}}{x}\) as follows.%
 \typeout{Exercises 3.3.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-21}
-A graph of the function \(f\) defined by \(\fe{f}{x}=\frac{3}{2-x}\) is shown in \hyperref[figure-first-derivative]{Figure \ref{figure-first-derivative}} and the formula for \(\fe{\fd{f}}{x}\) is derived in \hyperref[example-first-derivative]{Example \ref{example-first-derivative}}.%
+\hypertarget{exercisegroup-36}{\null}A graph of the function \(f\) defined by \(\fe{f}{x}=\frac{3}{2-x}\) is shown in \hyperref[figure-first-derivative]{Figure \ref{figure-first-derivative}} and the formula for \(\fe{\fd{f}}{x}\) is derived in \hyperref[example-first-derivative]{Example \ref{example-first-derivative}}.%
 \par
 \begin{exercisegroup}(1)
 \exercise[1.]\hypertarget{exercise-184}{\null}Use the formula \(\fe{\fd{f}}{x}=\frac{3}{(2-x)^2}\) to calculate \(\fe{\fd{f}}{1}\) and \(\fe{\fd{f}}{5}\).%
@@ -2502,7 +2515,7 @@ A graph of the function \(f\) defined by \(\fe{f}{x}=\frac{3}{2-x}\) is shown in
 \exercise[3.]\hypertarget{exercise-186}{\null}Showing work consistent with that shown in \hyperref[example-first-derivative]{Example \ref{example-first-derivative}}, find the formula for \(\fe{\fd{g}}{x}\) where \(\fe{g}{x}=\frac{5}{2x+1}\).%
 \end{exercisegroup}
 \par\smallskip\noindent
-Suppose that the elevation of an object (measured in \si{\foot}) is given by \(\fe{s}{t}=-16t^2+112t+5\) where \(t\) is the amount of time that has passed since the object was launched into the air (measured in \si{\second}).%
+\hypertarget{exercisegroup-37}{\null}Suppose that the elevation of an object (measured in \si{\foot}) is given by \(\fe{s}{t}=-16t^2+112t+5\) where \(t\) is the amount of time that has passed since the object was launched into the air (measured in \si{\second}).%
 \par
 \begin{exercisegroup}(1)
 \exercise[4.]\hypertarget{exercise-187}{\null}Use \hyperref[instantaneous-velocity-equation]{(\ref{instantaneous-velocity-equation})} to find the formula for the velocity function associated with this motion. The first two lines of your presentation should be an exact copy of \hyperref[instantaneous-velocity-equation]{(\ref{instantaneous-velocity-equation})}.%
@@ -2538,7 +2551,7 @@ For example, if \(\fe{v}{t}\) is the velocity of your car (measured in \si{\mile
 \typeout{Exercises 3.4.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-22}
-Determine the unit for the first derivative function for each of the following functions. Remember, \emph{we do not simplify derivative units in any way, shape, or form}.%
+\hypertarget{exercisegroup-38}{\null}Determine the unit for the first derivative function for each of the following functions. Remember, \emph{we do not simplify derivative units in any way, shape, or form}.%
 \par
 \begin{exercisegroup}(1)
 \exercise[1.]\hypertarget{exercise-193}{\null}\(\fe{V}{r}\) is the volume of a sphere (measured in \si{\milli\liter}) with radius \(r\) (measured in \si{\milli\meter}).%
@@ -2553,7 +2566,7 @@ Determine the unit for the first derivative function for each of the following f
 \item[6.]\hypertarget{exercise-198}{\null}After a while Nguyen convinced Akbar that he was wrong, so Akbar set about doing the calculation over again. This time Akbar came up with a value of \num{-12528}. Nguyen took one look at Akbar's value and declared ``still wrong''. What's the problem now?%
 \par\smallskip
 \end{exerciselist}
-Consider the function described in \hyperlink{exercise-bathtub-rate}{Exercise 4}.%
+\hypertarget{exercisegroup-39}{\null}Consider the function described in \hyperlink{exercise-bathtub-rate}{Exercise 4}.%
 \par
 \begin{exercisegroup}(1)
 \exercise[7.]\hypertarget{exercise-199}{\null}What would it mean if the value of \(\fe{R}{t}\) was zero for all \(t\gt0\)?%
@@ -2568,7 +2581,7 @@ Consider the function described in \hyperlink{exercise-bathtub-rate}{Exercise 4}
 \typeout{Exercises 3.5.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-23}
-Find the first derivative formula for each of the following functions twice: first by evaluating \(\lim\limits_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}\) and then by evaluating \(\lim\limits_{t\to x}\frac{\fe{f}{t}-\fe{f}{x}}{t-x}\).%
+\hypertarget{exercisegroup-40}{\null}Find the first derivative formula for each of the following functions twice: first by evaluating \(\lim\limits_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}\) and then by evaluating \(\lim\limits_{t\to x}\frac{\fe{f}{t}-\fe{f}{x}}{t-x}\).%
 \par
 \begin{exercisegroup}(3)
 \exercise[1.]\hypertarget{exercise-201}{\null}\(\fe{f}{x}=x^2\)%
@@ -2580,14 +2593,14 @@ Find the first derivative formula for each of the following functions twice: fir
 \item[4.]\hypertarget{exercise-204}{\null}It can be shown that \(\lim\limits_{h\to0}\frac{\fe{\sin}{h}}{h}=1\) and \(\lim\limits_{h\to0}\frac{\fe{\cos}{h}-1}{h}=0\).  Use these limits to help you to establish the first derivative formula for \(\fe{\sin}{x}\).%
 \par\smallskip
 \end{exerciselist}
-Suppose that an object is tossed into the air in such a way that the elevation of the object (measured in \si{\foot}) is given by the function \(\fe{s}{t}=150+60t-16t^2\), where \(t\) is the amount of time that has passed since the object was tossed (measure in seconds).%
+\hypertarget{exercisegroup-41}{\null}Suppose that an object is tossed into the air in such a way that the elevation of the object (measured in \si{\foot}) is given by the function \(\fe{s}{t}=150+60t-16t^2\), where \(t\) is the amount of time that has passed since the object was tossed (measure in seconds).%
 \par
 \begin{exercisegroup}(2)
 \exercise[5.]\hypertarget{exercise-205}{\null}Find the velocity function for this motion and use it to determine the velocity of the object \SI{4.1}{\second} into its motion.%
 \exercise[6.]\hypertarget{exercise-206}{\null}Find the acceleration function for this motion and use that function to determine the acceleration of the object \SI{4.1}{\second} into its motion.%
 \end{exercisegroup}
 \par\smallskip\noindent
-Determine the unit on the first derivative function for each of the following functions.  Remember, we do not simplify derivative units in any way, shape, or form.%
+\hypertarget{exercisegroup-derivative-units-supplement}{\null}Determine the unit on the first derivative function for each of the following functions.  Remember, we do not simplify derivative units in any way, shape, or form.%
 \par
 \begin{exercisegroup}(2)
 \exercise[7.]\hypertarget{exercise-derivative-units-supplement-first}{\null}\(\fe{R}{p}\) is Carl's heart rate (beats per min) when he jogs at a rate of \(p\) (measured in \si{\foot\per\minute}).%
@@ -2596,7 +2609,7 @@ Determine the unit on the first derivative function for each of the following fu
 \exercise[10.]\hypertarget{exercise-derivative-units-supplement-last}{\null}\(\fe{h}{t}\) is the elevation of the space shuttle (\si{\mile}) where \(t\) is the amount of time that has passed since lift-off (measured in \si{\second}).%
 \end{exercisegroup}
 \par\smallskip\noindent
-Referring to the functions in \hyperlink{exercise-derivative-units-supplement-first}{Exercises 7}\textendash{}\hyperlink{exercise-derivative-units-supplement-last}{10}, write sentences that explain the meaning of each of the following function values.%
+\hypertarget{exercisegroup-43}{\null}Referring to the functions in \hyperlink{exercisegroup-derivative-units-supplement}{Exercise Group 7-10}, write sentences that explain the meaning of each of the following function values.%
 \par
 \begin{exercisegroup}(2)
 \exercise[11.]\hypertarget{exercise-211}{\null}\(\fe{R}{300}=84\)%
@@ -2609,7 +2622,7 @@ Referring to the functions in \hyperlink{exercise-derivative-units-supplement-fi
 \exercise[18.]\hypertarget{exercise-218}{\null}\(\fe{\fd{h}}{20}=0.074\)%
 \end{exercisegroup}
 \par\smallskip\noindent
-It can be shown that the derivative formula for the function \(\fe{f}{x}=\frac{2x^3+2x+1}{3+5x^2}\) is \(\fe{\fd{f}}{x}=\frac{10x^4+8x^2-10x+6}{25x^4+30x^2+9}\).%
+\hypertarget{exercisegroup-44}{\null}It can be shown that the derivative formula for the function \(\fe{f}{x}=\frac{2x^3+2x+1}{3+5x^2}\) is \(\fe{\fd{f}}{x}=\frac{10x^4+8x^2-10x+6}{25x^4+30x^2+9}\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[19.]\hypertarget{exercise-219}{\null}Determine the equation of the tangent line to \(f\) at \(1\).%
@@ -2740,7 +2753,7 @@ These are loose, informal definitions. Technical, precise definitions can be fou
 \typeout{Exercises 4.1.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-24}
-\begin{figure}
+\hypertarget{exercisegroup-45}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -2817,7 +2830,7 @@ Much information about a function's first derivative can be gleaned simply by lo
 \typeout{Exercises 4.2.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-25}
-A parabolic function is shown in \hyperref[figure-graphical-derivative]{Figure \ref{figure-graphical-derivative}}. The next several questions are in reference to that function.%
+\hypertarget{exercisegroup-46}{\null}A parabolic function is shown in \hyperref[figure-graphical-derivative]{Figure \ref{figure-graphical-derivative}}. The next several questions are in reference to that function.%
 \begin{figure}
 \centering
 \pushValignCaptionBottom[b]{minipage}{.41\textwidth-2.5em/3}{%
@@ -2890,7 +2903,7 @@ A parabolic function is shown in \hyperref[figure-graphical-derivative]{Figure \
 \exercise[6.]\hypertarget{exercise-234}{\null}The line you drew onto \hyperref[figure-graphical-derivative-plot]{Figure \ref{figure-graphical-derivative-plot}} is \emph{not} a tangent line to \(g\). Just what exactly is this line?%
 \end{exercisegroup}
 \par\smallskip\noindent
-A function \(f\) is shown in \hyperref[figure-cubic]{Figure \ref{figure-cubic}} and the corresponding first derivative function \(\fd{f}\) is shown in \hyperref[figure-cubic-derivative]{Figure \ref{figure-cubic-derivative}}. Answer each of the following questions referencing these two functions.%
+\hypertarget{exercisegroup-47}{\null}A function \(f\) is shown in \hyperref[figure-cubic]{Figure \ref{figure-cubic}} and the corresponding first derivative function \(\fd{f}\) is shown in \hyperref[figure-cubic-derivative]{Figure \ref{figure-cubic-derivative}}. Answer each of the following questions referencing these two functions.%
 \begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
@@ -3010,7 +3023,7 @@ A function \(f\) is shown in \hyperref[figure-cubic]{Figure \ref{figure-cubic}} 
 \popValignCaptionBottom
 \end{figure}
 \par\smallskip
-A graph of the function \(f\) given by \(\fe{f}{x}=\frac{1}{x}\) is show in \hyperref[figure-one-over-x]{Figure \ref{figure-one-over-x}}.%
+\hypertarget{exercisegroup-48}{\null}A graph of the function \(f\) given by \(\fe{f}{x}=\frac{1}{x}\) is show in \hyperref[figure-one-over-x]{Figure \ref{figure-one-over-x}}.%
 \begin{figure}
 \centering
 \pushValignCaptionBottom[b]{minipage}{.50\textwidth-2.5em/2}{%
@@ -3101,7 +3114,7 @@ A graph of the function \(f\) given by \(\fe{f}{x}=\frac{1}{x}\) is show in \hyp
 \end{figure}
 \par\smallskip
 \end{exerciselist}
-Answer the following questions in reference to the function \(w\), shown in \hyperref[figure-inflection-points]{Figure \ref{figure-inflection-points}}.%
+\hypertarget{exercisegroup-49}{\null}Answer the following questions in reference to the function \(w\), shown in \hyperref[figure-inflection-points]{Figure \ref{figure-inflection-points}}.%
 \begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.65\textwidth-2.5em/2}{%
@@ -3187,7 +3200,7 @@ A function is said to be nondifferentiable at any value its first derivative is 
 \typeout{Exercises 4.3.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-26}
-Consider the function \(k\) shown in \hyperref[figure-nondifferentiable]{Figure \ref{figure-nondifferentiable}}.%
+\hypertarget{exercisegroup-50}{\null}Consider the function \(k\) shown in \hyperref[figure-nondifferentiable]{Figure \ref{figure-nondifferentiable}}.%
 \begin{figure}
 \centering
 \pushValignCaptionBottom[b]{minipage}{.50\textwidth-2.5em/2}{%
@@ -3246,7 +3259,7 @@ Consider the function \(k\) shown in \hyperref[figure-nondifferentiable]{Figure 
 \exercise[2.]\hypertarget{exercise-250}{\null}Draw \(\fd{k}\) onto \hyperref[figure-nondifferentiable-derivative]{Figure \ref{figure-nondifferentiable-derivative}}.%
 \end{exercisegroup}
 \par\smallskip\noindent
-Consider the function \(g\) shown in \hyperref[figure-bounce]{Figure \ref{figure-bounce}}.%
+\hypertarget{exercisegroup-51}{\null}Consider the function \(g\) shown in \hyperref[figure-bounce]{Figure \ref{figure-bounce}}.%
 \begin{figure}
 \centering
 \pushValignCaptionBottom[b]{minipage}{.50\textwidth-2.5em/2}{%
@@ -3403,7 +3416,7 @@ Constant Nonzero&Linear
 \popValignCaptionBottom
 \end{figure}
 \par\smallskip
-Three containers are shown in \hyperref[figure-prism-uniform]{Figures \ref{figure-prism-uniform}}\textendash{}\hyperref[figure-prism-bottom-heavy]{\ref{figure-prism-bottom-heavy}}. Each of the following questions are in reference to these containers.%
+\hypertarget{exercisegroup-52}{\null}Three containers are shown in \hyperref[figure-prism-uniform]{Figures \ref{figure-prism-uniform}}\textendash{}\hyperref[figure-prism-bottom-heavy]{\ref{figure-prism-bottom-heavy}}. Each of the following questions are in reference to these containers.%
 \begin{figure}
 \centering
 \pushValignCaptionBottom[b]{minipage}{.33333\textwidth-2.5em/3}{%
@@ -3508,7 +3521,7 @@ Since \(F\) is considered an antiderivative of \(f\), it must be the case that \
 \typeout{Exercises 4.5.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-28}
-\begin{figure}
+\hypertarget{exercisegroup-53}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -3549,7 +3562,7 @@ Each of the linear functions in \hyperref[figure-parallel-lines]{Figure \ref{fig
 \exercise[2.]\hypertarget{exercise-261}{\null}Each of the given lines \hyperref[figure-parallel-lines]{Figure \ref{figure-parallel-lines}} is called what in relation to \(g\)?%
 \end{exercisegroup}
 \par\smallskip\noindent
-The function \(f\) is shown in \hyperref[figure-plot-antiderivative-one]{Figure \ref{figure-plot-antiderivative-one}}. Reference this function in the following questions.%
+\hypertarget{exercisegroup-54}{\null}The function \(f\) is shown in \hyperref[figure-plot-antiderivative-one]{Figure \ref{figure-plot-antiderivative-one}}. Reference this function in the following questions.%
 \begin{figure}
 \centering
 \pushValignCaptionBottom[b]{minipage}{.50\textwidth-2.5em/2}{%
@@ -3624,7 +3637,7 @@ The function \(f\) is shown in \hyperref[figure-plot-antiderivative-one]{Figure 
 Jasmine was thinking and told her lab assistant that derivatives and antiderivatives of periodic functions must also be periodic.  Jasmine's lab assistant told her that she was half right.  Which half did Jasmine have correct?  Also, draw a function that illustrates that the other half of Jasmine's statement is not correct.%
 \par\smallskip
 \end{exerciselist}
-Consider the function \(g\) shown in \hyperref[figure-line-segments]{Figure \ref{figure-line-segments}}.%
+\hypertarget{exercisegroup-55}{\null}Consider the function \(g\) shown in \hyperref[figure-line-segments]{Figure \ref{figure-line-segments}}.%
 \begin{figure}
 \centering
 \pushValignCaptionBottom[b]{minipage}{.50\textwidth-2.5em/2}{%
@@ -3665,7 +3678,7 @@ Consider the function \(g\) shown in \hyperref[figure-line-segments]{Figure \ref
 \exercise[10.]\hypertarget{exercise-269}{\null}At what values of \(t\) is \(g\) nondifferentiable?%
 \end{exercisegroup}
 \par\smallskip\noindent
-\begin{figure}
+\hypertarget{exercisegroup-56}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -3717,7 +3730,7 @@ When given a function formula, we  often find the first and second derivative fo
 \typeout{Exercises 4.6.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-29}
-In the next few exercises, you will construct a function and then answer questions about it.%
+\hypertarget{exercisegroup-57}{\null}In the next few exercises, you will construct a function and then answer questions about it.%
 \begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
@@ -3753,7 +3766,7 @@ Interval&\(\fd{f}\)&\(\sd{f}\)\\\hrulemedium
 \exercise[4.]\hypertarget{exercise-281}{\null}Can a continuous, everywhere differentiable function satisfy the properties stated in \hyperref[table-based-on-derivatives]{Table \ref{table-based-on-derivatives}} and not have a slope of zero at \(-1\)?  Draw a picture that supports your answer.%
 \end{exercisegroup}
 \par\smallskip\noindent
-In the next few exercises, you will construct a function and then answer questions about it.%
+\hypertarget{exercisegroup-58}{\null}In the next few exercises, you will construct a function and then answer questions about it.%
 \begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
@@ -3789,7 +3802,7 @@ Interval&\(\fd{g}\)&\(\sd{g}\)\\\hrulemedium
 \exercise[8.]\hypertarget{exercise-285}{\null}Can a continuous, everywhere differentiable function satisfy the properties stated in \hyperref[table-based-on-derivatives-two]{Table \ref{table-based-on-derivatives-two}} and not have a vertical tangent line at \(1\)?  Draw a picture that supports your answer.%
 \end{exercisegroup}
 \par\smallskip\noindent
-In the next few exercises, you will construct a function and then answer questions about it.%
+\hypertarget{exercisegroup-59}{\null}In the next few exercises, you will construct a function and then answer questions about it.%
 \begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
@@ -3823,7 +3836,7 @@ Interval&\(\fd{k}\)&\(\sd{k}\)\\\hrulemedium
 \exercise[10.]\hypertarget{exercise-287}{\null}At what values of \(x\) is \(k\) nondifferentiable?%
 \end{exercisegroup}
 \par\smallskip\noindent
-You should know by now that the first derivative  continually increases over intervals where the second derivative is constantly positive and that the first derivative continually decreases over intervals where the second derivative is constantly negative.  A person might infer from this that a function changes more and more quickly over intervals where the second derivative is constantly positive and that a function changes more and more slowly over intervals where the second derivative is constantly negative.   We are going to explore that idea in this problem.%
+\hypertarget{exercisegroup-60}{\null}You should know by now that the first derivative  continually increases over intervals where the second derivative is constantly positive and that the first derivative continually decreases over intervals where the second derivative is constantly negative.  A person might infer from this that a function changes more and more quickly over intervals where the second derivative is constantly positive and that a function changes more and more slowly over intervals where the second derivative is constantly negative.   We are going to explore that idea in this problem.%
 \par
 \begin{exercisegroup}(1)
 \exercise[11.]\hypertarget{exercise-ice-cube}{\null}Suppose that \(\fe{V}{t}\) is the volume of water in an ice cube (\si{\milli\liter}) where \(t\) is the amount of time that has passed since noon (measure in minutes).  Suppose that \(\fe{\fd{V}}{6}=0\,\frac{\text{ml}}{\text{min}}\) and that \(\fe{\sd{V}}{t}\) has a constant value of \(-0.3\,\frac{\sfrac{\text{ml}}{\text{min}}}{\text{min}}\) over the interval \(\cinterval{6}{11}\).  What is the value of \(\fe{\fd{V}}{11}\)?  When is \(V\) changing more quickly, at 12:06 pm or at 12:11 pm?%
@@ -3889,7 +3902,7 @@ You should know by now that the first derivative  continually increases over int
 \exercise[14.]\hypertarget{exercise-291}{\null}Consider the signs on both the first and second derivatives in options \hyperref[figure-curve-one]{\ref{figure-curve-one}}\textendash{}\hyperref[figure-curve-four]{\ref{figure-curve-four}}.  Is there something that the two functions that change more and more quickly have in common that is different in the functions that change more and more slowly?%
 \end{exercisegroup}
 \par\smallskip\noindent
-Resolve each of the following disputes.%
+\hypertarget{exercisegroup-61}{\null}Resolve each of the following disputes.%
 \par
 \begin{exercisegroup}(1)
 \exercise[15.]\hypertarget{exercise-292}{\null}One day Sara and Jermaine were working on an assignment.  One question asked them to draw a function over the domain \(\ointerval{-2}{\infty}\) with the properties that the function is always increasing and always concave down.  Sara insisted that the curve must have a vertical asymptote at \(-2\) and Jermaine insisted that the function must have a horizontal asymptote somewhere.  Were either of these students correct?%
@@ -3898,7 +3911,7 @@ Resolve each of the following disputes.%
 \exercise[18.]\hypertarget{exercise-295}{\null}In the next problem Pedro and Yoshi were asked to draw a function that is everywhere continuous and that is concave down at every value of \(x\) \emph{except} \(3\).  Yoshi declared ``impossible'' and Pedro responded ``have some faith, Yosh-man.''  Pedro then began to draw. Is it possible that Pedro came up with such a function?%
 \end{exercisegroup}
 \par\smallskip\noindent
-Determine the correct answer to each of the following questions.  Pictures of the situation may help you determine the correct answers.%
+\hypertarget{exercisegroup-62}{\null}Determine the correct answer to each of the following questions.  Pictures of the situation may help you determine the correct answers.%
 \par
 \begin{exercisegroup}(1)
 \exercise[19.]\hypertarget{exercise-296}{\null}Which of the following propositions is true? If a given proposition is not true, draw a graph that illustrates its untruth.%
@@ -3921,7 +3934,7 @@ Determine the correct answer to each of the following questions.  Pictures of th
 \typeout{Exercises 4.7.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-30}
-Sketch the first derivatives of the functions shown in \hyperlink{exercise-sketch-first-supplement}{Exercises 1}\textendash{}\hyperlink{exercise-sketch-last-supplement}{3}.%
+\hypertarget{exercisegroup-63}{\null}Sketch the first derivatives of the functions shown in \hyperlink{exercise-sketch-first-supplement}{Exercises 1}\textendash{}\hyperlink{exercise-sketch-last-supplement}{3}.%
 \par
 \begin{exercisegroup}(1)
 \exercise[1.]\hypertarget{exercise-sketch-first-supplement}{\null}\begin{figure}
@@ -4032,7 +4045,7 @@ Sketch the first derivatives of the functions shown in \hyperlink{exercise-sketc
 \end{figure}
 \end{exercisegroup}
 \par\smallskip\noindent
-\hyperref[figure-seven-curves]{Figure \ref{figure-seven-curves}} gives seven curves.  For each statement below, identify the figure letters that go along with the given statement. Assume each statement is being made only in reference to the portion of the curves shown in each of the figures.  Assume in all cases that the axes have the traditional positive/negative orientation.  The first question has been answered for you to help you get started.%
+\hypertarget{exercisegroup-64}{\null}\hyperref[figure-seven-curves]{Figure \ref{figure-seven-curves}} gives seven curves.  For each statement below, identify the figure letters that go along with the given statement. Assume each statement is being made only in reference to the portion of the curves shown in each of the figures.  Assume in all cases that the axes have the traditional positive/negative orientation.  The first question has been answered for you to help you get started.%
 \begin{figure}
 \centering
 \pushValignCaptionBottom[b]{subfigure}{.14286\textwidth-2.5em/7}{%
@@ -4142,7 +4155,7 @@ Sketch the first derivatives of the functions shown in \hyperlink{exercise-sketc
 \exercise[12.]\hypertarget{exercise-309}{\null}The second derivative of each of these functions is never positive.%
 \end{exercisegroup}
 \par\smallskip\noindent
-As water drains from a tank the drainage rate continually decreases over time.  Suppose that a tank 
+\hypertarget{exercisegroup-65}{\null}As water drains from a tank the drainage rate continually decreases over time.  Suppose that a tank 
 that initially holds \SI{360}{\gallon} of water drains in exactly \(6\) minutes.  Answer each of the following questions about this problem situation.%
 \par
 \begin{exercisegroup}(1)
@@ -4163,7 +4176,7 @@ that initially holds \SI{360}{\gallon} of water drains in exactly \(6\) minutes.
 \end{multicols}
 \end{exercisegroup}
 \par\smallskip\noindent
-For each statement in \hyperlink{exercise-function-statement-first}{Exercises 16}\textendash{}\hyperlink{exercise-function-statement-last}{Exercise 20}, decide which of the following is true. %
+\hypertarget{exercisegroup-66}{\null}For each statement in \hyperlink{exercise-function-statement-first}{Exercises 16}\textendash{}\hyperlink{exercise-function-statement-last}{20}, decide which of the following is true. %
 \begin{multicols}{3}
 \begin{enumerate}[label=(\alph*)]
 \item{}The statement is true regardless of the specific function \(f\).\item{}The statement is true for some functions and false for other functions. \item{}The statement is false regardless of the specific function \(f\).\end{enumerate}
@@ -4177,14 +4190,14 @@ For each statement in \hyperlink{exercise-function-statement-first}{Exercises 16
 \exercise[20.]\hypertarget{exercise-function-statement-last}{\null}If a function \(f\) has a local maximum at \(3\), then \(\fe{\fd{f}}{3}=0\).%
 \end{exercisegroup}
 \par\smallskip\noindent
-For a certain function \(g\), \(\fe{\fd{g}}{t}=-8\) at all values of \(t\) on \(\ointerval{-\infty}{-3}\) and \(\fe{\fd{g}}{t}=2\) at all values of \(t\) on \(\ointerval{-3}{\infty}\).%
+\hypertarget{exercisegroup-67}{\null}For a certain function \(g\), \(\fe{\fd{g}}{t}=-8\) at all values of \(t\) on \(\ointerval{-\infty}{-3}\) and \(\fe{\fd{g}}{t}=2\) at all values of \(t\) on \(\ointerval{-3}{\infty}\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[21.]\hypertarget{exercise-318}{\null}Janice thinks that \(g\) must be discontinuous at \(-3\) but Lisa disagrees.  Who's right?%
 \exercise[22.]\hypertarget{exercise-319}{\null}Lisa thinks that the graph of \(\sd{g}\) is the line \(y=0\) but Janice disagrees.  Who's right?%
 \end{exercisegroup}
 \par\smallskip\noindent
-\begin{figure}
+\hypertarget{exercisegroup-68}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -4262,7 +4275,7 @@ Each statement below is in reference to the function shown in \hyperref[figure-p
 \end{tabular}
 \end{table}
 \par\smallskip
-\begin{figure}
+\hypertarget{exercisegroup-69}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -4365,17 +4378,15 @@ While the primary focus of this lab is to help you develop shortcut skills for f
 \begin{definition}[Leibniz Notation]\label{definition-9}
 If \(y=\fe{f}{x}\), we say that the derivative of \(y\) with respect to \(x\) is equal to \(\fe{\fd{f}}{x}\). Symbolically, we write: \(\lz{y}{x}=\fe{\fd{f}}{x}\).%
 \par
-While the symbol \(\lz{y}{x}\) certainly looks like a fraction, it is \emph{not} a fraction.  The symbol is \terminology{Leibniz notation} for the first derivative of \(y\) with respect to \(x\).  The short way of reading the symbol aloud is ``d y d x''%
-.
-
-            \par
+While the symbol \(\lz{y}{x}\) certainly looks like a fraction, it is \emph{not} a fraction.  The symbol is \terminology{Leibniz notation} for the first derivative of \(y\) with respect to \(x\).  The short way of reading the symbol aloud is ``d y d x''.%
+\par
 If \(z=\fe{g}{t}\), we say that the the derivative of \(z\) with respect to \(t\) is equal to \(\fe{\fd{g}}{t}\).  Symbolically we write: \(\lz{z}{t}=\fe{\fd{g}}{t}\). (Read aloud as ``d z d t equals g prime of t''.)%
 \end{definition}
 \typeout{************************************************}
 \typeout{Exercises 5.1.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-31}
-Take the derivative of both sides of each equation with respect to the independent variable as indicated in the function notation.  Write and say the derivative using Leibniz notation on the left side of the equal sign and function notation on the right side of the equal sign.  Make sure that every one in your group says at least one of the derivative equations aloud using both the formal reading and informal reading of the Leibniz notation.%
+\hypertarget{exercisegroup-70}{\null}Take the derivative of both sides of each equation with respect to the independent variable as indicated in the function notation.  Write and say the derivative using Leibniz notation on the left side of the equal sign and function notation on the right side of the equal sign.  Make sure that every one in your group says at least one of the derivative equations aloud using both the formal reading and informal reading of the Leibniz notation.%
 \par
 \begin{exercisegroup}(3)
 \exercise[1.]\hypertarget{exercise-345}{\null}\(y=\fe{k}{t}\)%
@@ -4396,7 +4407,7 @@ One thing you can do to help you remember the difference between the symbols \(\
 \typeout{Exercises 5.2.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-32}
-Write the Leibniz notation for each of the following expressions.%
+\hypertarget{exercisegroup-71}{\null}Write the Leibniz notation for each of the following expressions.%
 \par
 \begin{exercisegroup}(1)
 \exercise[1.]\hypertarget{exercise-348}{\null}The derivative with respect to \(\beta\) of \(\fe{\cos}{\beta}\).%
@@ -4432,13 +4443,13 @@ Notice that the type of notation used when naming the derivative is dictated by 
 \typeout{Exercises 5.3.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-33}
-Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure to use the appropriate name for each derivative.%
+\hypertarget{exercisegroup-72}{\null}Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure to use the appropriate name for each derivative.%
 \par
 \begin{exercisegroup}(4)
 \exercise[1.]\hypertarget{exercise-353}{\null}\(\fe{f}{x}=x^{43}\)%
-\exercise[2.]\hypertarget{exercise-354}{\null}\(z=\frac{1}{t^{7}}\)%
+\exercise[2.]\hypertarget{exercise-354}{\null}\(z=\dfrac{1}{t^{7}}\)%
 \exercise[3.]\hypertarget{exercise-355}{\null}\(P=\sqrt[5]{t^2}\)%
-\exercise[4.]\hypertarget{exercise-356}{\null}\(\fe{h}{x}=\frac{1}{\sqrt{x}}\)%
+\exercise[4.]\hypertarget{exercise-356}{\null}\(\fe{h}{x}=\dfrac{1}{\sqrt{x}}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
 \typeout{************************************************}
@@ -4463,14 +4474,14 @@ You should write&\(\fe{\fd{f}}{x}=54x^8\)&\(\fe{\fd{f}}{\theta}=-2\fe{\sin}{\the
 \typeout{Exercises 5.4.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-34}
-Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure to use the appropriate name for each derivative.%
+\hypertarget{exercisegroup-73}{\null}Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure to use the appropriate name for each derivative.%
 \par
 \begin{exercisegroup}(2)
 \exercise[1.]\hypertarget{exercise-357}{\null}\(z=7t^4\)%
 \exercise[2.]\hypertarget{exercise-358}{\null}\(\fe{P}{x}=-7\fe{\sin}{x}\)%
 \exercise[3.]\hypertarget{exercise-359}{\null}\(\fe{h}{t}=\frac{1}{3}\fe{\ln}{t}\)%
 \exercise[4.]\hypertarget{exercise-360}{\null}\(\fe{z}{x}=\pi\fe{\tan}{x}\)%
-\exercise[5.]\hypertarget{exercise-361}{\null}\(P=\frac{-8}{t^4}\)%
+\exercise[5.]\hypertarget{exercise-361}{\null}\(P=\dfrac{-8}{t^4}\)%
 \exercise[6.]\hypertarget{exercise-362}{\null}\(T=4\sqrt{t}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
@@ -4496,12 +4507,12 @@ You should write&\(\fe{\fd{f}}{x}=\frac{1}{2}x^3\)&\(\lz{y}{\alpha}=\frac{3}{2}\
 \typeout{Exercises 5.5.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-35}
-Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative. In the last problem, \(G\), \(m_1\), and \(m_2\) are constants.%
+\hypertarget{exercisegroup-74}{\null}Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative. In the last problem, \(G\), \(m_1\), and \(m_2\) are constants.%
 \par
 \begin{exercisegroup}(3)
-\exercise[1.]\hypertarget{exercise-363}{\null}\(\fe{z}{t}=\frac{\fe{\sin^{-1}}{t}}{6}\)%
-\exercise[2.]\hypertarget{exercise-364}{\null}\(\fe{V}{r}=\frac{\pi r^3}{3}\)%
-\exercise[3.]\hypertarget{exercise-365}{\null}\(\fe{f}{r}=\frac{Gm_1m_2}{r^2}\)%
+\exercise[1.]\hypertarget{exercise-363}{\null}\(\fe{z}{t}=\dfrac{\fe{\sin^{-1}}{t}}{6}\)%
+\exercise[2.]\hypertarget{exercise-364}{\null}\(\fe{V}{r}=\dfrac{\pi r^3}{3}\)%
+\exercise[3.]\hypertarget{exercise-365}{\null}\(\fe{f}{r}=\dfrac{Gm_1m_2}{r^2}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
 \typeout{************************************************}
@@ -4532,13 +4543,13 @@ You should write&\(\begin{aligned}\lz{y}{t}&=\tfrac{24}{5}t^{\frac{1}{5}}+\tfrac
 \item[1.]\hypertarget{exercise-366}{\null}Explain why both the constant rule (\hyperref[equation-constant-rule]{Equation (\ref{equation-constant-rule})}) and linear rule (\hyperref[equation-linear-rule]{Equation (\ref{equation-linear-rule})}) are ``obvious.'' Hint: think about the graphs \(y=k\) and \(y=kx\).  What does a first derivative tell you about a graph?%
 \par\smallskip
 \end{exerciselist}
-Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative.%
+\hypertarget{exercisegroup-75}{\null}Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative.%
 \par
 \begin{exercisegroup}(2)
 \exercise[2.]\hypertarget{exercise-367}{\null}\(T=\fe{\sin}{t}-2\fe{\cos}{t}+3\)%
-\exercise[3.]\hypertarget{exercise-368}{\null}\(\fe{k}{\theta}=\frac{4\fe{\sec}{\theta}-3\fe{\csc}{\theta}}{4}\)%
-\exercise[4.]\hypertarget{exercise-369}{\null}\(\fe{r}{x}=\frac{x}{5}+7\)%
-\exercise[5.]\hypertarget{exercise-370}{\null}\(r=\frac{x}{3\sqrt[3]{x}}-\frac{\fe{\ln}{x}}{9}+\fe{\ln}{2}\)%
+\exercise[3.]\hypertarget{exercise-368}{\null}\(\fe{k}{\theta}=\dfrac{4\fe{\sec}{\theta}-3\fe{\csc}{\theta}}{4}\)%
+\exercise[4.]\hypertarget{exercise-369}{\null}\(\fe{r}{x}=\dfrac{x}{5}+7\)%
+\exercise[5.]\hypertarget{exercise-370}{\null}\(r=\dfrac{x}{3\sqrt[3]{x}}-\dfrac{\fe{\ln}{x}}{9}+\fe{\ln}{2}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
 \typeout{************************************************}
@@ -4582,16 +4593,16 @@ In Option B we are treating the factor of \(5\) as a part of the first variable 
 \typeout{Exercises 5.7.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-37}
-Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative.%
+\hypertarget{exercisegroup-76}{\null}Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative.%
 \par
 \begin{exercisegroup}(2)
 \exercise[1.]\hypertarget{exercise-371}{\null}\(\fe{T}{t}=2\fe{\sec}{t}\fe{\tan}{t}\)%
-\exercise[2.]\hypertarget{exercise-372}{\null}\(k=\frac{e^t\sqrt{t}}{2}\)%
+\exercise[2.]\hypertarget{exercise-372}{\null}\(k=\dfrac{e^t\sqrt{t}}{2}\)%
 \exercise[3.]\hypertarget{exercise-373}{\null}\(y=4x\fe{\ln}{x}+3^x-x^3\)%
 \exercise[4.]\hypertarget{exercise-374}{\null}\(\fe{f}{x}=\fe{\cot}{x}\fe{\cot}{x}-1\)%
 \end{exercisegroup}
 \par\smallskip\noindent
-Find each of the following derivatives \emph{without first simplifying the formula}; that is, go ahead and use the product rule on the expression as written. Simplify each resultant derivative formula.  For each derivative, \emph{check} your answer by simplifying the original expression and then taking the derivative of that simplified expression.%
+\hypertarget{exercisegroup-unsimplified-product}{\null}Find each of the following derivatives \emph{without first simplifying the formula}; that is, go ahead and use the product rule on the expression as written. Simplify each resultant derivative formula.  For each derivative, \emph{check} your answer by simplifying the original expression and then taking the derivative of that simplified expression.%
 \par
 \begin{exercisegroup}(3)
 \exercise[5.]\hypertarget{unsimplified-product-first}{\null}\(\lzoo{x}{x^4x^7}\)%
@@ -4623,28 +4634,28 @@ Given Function&Derivative\\
 \typeout{Exercises 5.8.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-38}
-Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative.%
+\hypertarget{exercisegroup-78}{\null}Find the first derivative formula for each of the following functions.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative.%
 \par
 \begin{exercisegroup}(2)
-\exercise[1.]\hypertarget{exercise-378}{\null}\(\fe{g}{x}=\frac{4\fe{\ln}{x}}{x}\)%
-\exercise[2.]\hypertarget{exercise-379}{\null}\(\fe{j}{y}=\frac{\sqrt[3]{y^5}}{\fe{\cos}{y}}\)%
-\exercise[3.]\hypertarget{exercise-380}{\null}\(y=\frac{\fe{\sin}{x}}{4\fe{\sec}{x}}\)%
-\exercise[4.]\hypertarget{exercise-381}{\null}\(\fe{f}{t}=\frac{t^2}{e^t}\)%
+\exercise[1.]\hypertarget{exercise-378}{\null}\(\fe{g}{x}=\dfrac{4\fe{\ln}{x}}{x}\)%
+\exercise[2.]\hypertarget{exercise-379}{\null}\(\fe{j}{y}=\dfrac{\sqrt[3]{y^5}}{\fe{\cos}{y}}\)%
+\exercise[3.]\hypertarget{exercise-380}{\null}\(y=\dfrac{\fe{\sin}{x}}{4\fe{\sec}{x}}\)%
+\exercise[4.]\hypertarget{exercise-381}{\null}\(\fe{f}{t}=\dfrac{t^2}{e^t}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
-Find each of the following derivatives \emph{without first simplifying the formula}; that is, go ahead and use the quotient rule on the expression as written. For each derivative, \emph{check} your answer by simplifying the original expression and then taking the derivative of that simplified expression.%
+\hypertarget{exercisegroup-unsimplified-quotient}{\null}Find each of the following derivatives \emph{without first simplifying the formula}; that is, go ahead and use the quotient rule on the expression as written. For each derivative, \emph{check} your answer by simplifying the original expression and then taking the derivative of that simplified expression.%
 \par
 \begin{exercisegroup}(3)
-\exercise[5.]\hypertarget{unsimplified-quotient-first}{\null}\(\lzoo{t}{\frac{\fe{\sin}{t}}{\fe{\sin}{t}}}\)%
-\exercise[6.]\hypertarget{exercise-383}{\null}\(\lzoo{x}{\frac{x^6}{x^2}}\)%
-\exercise[7.]\hypertarget{unsimplified-quotient-last}{\null}\(\lzoo{x}{\frac{10}{2x}}\)%
+\exercise[5.]\hypertarget{unsimplified-quotient-first}{\null}\(\lzoo{t}{\dfrac{\fe{\sin}{t}}{\fe{\sin}{t}}}\)%
+\exercise[6.]\hypertarget{exercise-383}{\null}\(\lzoo{x}{\dfrac{x^6}{x^2}}\)%
+\exercise[7.]\hypertarget{unsimplified-quotient-last}{\null}\(\lzoo{x}{\dfrac{10}{2x}}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
 \typeout{************************************************}
 \typeout{Activity 5.9 Simplification}
 \typeout{************************************************}
 \section[Simplification]{Simplification}\label{section-simplification}
-In \hyperlink{unsimplified-product-first}{Exercises 5}\textendash{}\hyperlink{unsimplified-product-last}{7} from \hyperref[section-product-rule]{Activity \ref{section-product-rule}} and \hyperlink{unsimplified-quotient-first}{Exercises 5}\textendash{}\hyperlink{unsimplified-quotient-last}{7} from \hyperref[section-quotient-rule]{Activity \ref{section-quotient-rule}} you applied the product and quotient rules to expressions where the derivative could have been found much more quickly had you simplified the expression before taking the derivative.  For example, while you can find the correct derivative formula using the quotient rule when working problem \hyperlink{unsimplified-quotient-last}{Exercise 7}, the derivative can be found much more quickly if you simplify the expression before applying the rules of differentiation. This is illustrated in \hyperref[example-simplify-first]{Example \ref{example-simplify-first}}.%
+In \hyperlink{exercisegroup-unsimplified-product}{Exercise Group 5-7} from \hyperref[section-product-rule]{Activity \ref{section-product-rule}} and \hyperlink{exercisegroup-unsimplified-quotient}{Exercise Group 5-7} from \hyperref[section-quotient-rule]{Activity \ref{section-quotient-rule}} you applied the product and quotient rules to expressions where the derivative could have been found much more quickly had you simplified the expression before taking the derivative.  For example, while you can find the correct derivative formula using the quotient rule when working problem \hyperlink{unsimplified-quotient-last}{Exercise 7}, the derivative can be found much more quickly if you simplify the expression before applying the rules of differentiation. This is illustrated in \hyperref[example-simplify-first]{Example \ref{example-simplify-first}}.%
 \begin{example}\label{example-simplify-first}
 \begin{align*}
 \lzoo{x}{\frac{10}{2x}}&=\lzoo{x}{5x^{-1}}\\
@@ -4674,15 +4685,15 @@ Part of learning to take derivatives is learning  to make good choices about the
 \typeout{Exercises 5.9.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-39}
-Find the derivative with respect to \(x\) for each of the following functions after first completely simplifying the formula being differentiated.  In each case you should \emph{not} use either the product rule or the quotient rule while finding the derivative formula.%
+\hypertarget{exercisegroup-80}{\null}Find the derivative with respect to \(x\) for each of the following functions after first completely simplifying the formula being differentiated.  In each case you should \emph{not} use either the product rule or the quotient rule while finding the derivative formula.%
 \par
 \begin{exercisegroup}(2)
-\exercise[1.]\hypertarget{exercise-385}{\null}\(y=\frac{4x^{12}-5x^4+3x^2}{x^4}\)%
-\exercise[2.]\hypertarget{exercise-386}{\null}\(\fe{g}{x}=\frac{-4\fe{\sin}{x}}{\fe{\cos}{x}}\)%
-\exercise[3.]\hypertarget{exercise-387}{\null}\(\fe{h}{x}=\frac{4-x^6}{3x^{-2}}\)%
+\exercise[1.]\hypertarget{exercise-385}{\null}\(y=\dfrac{4x^{12}-5x^4+3x^2}{x^4}\)%
+\exercise[2.]\hypertarget{exercise-386}{\null}\(\fe{g}{x}=\dfrac{-4\fe{\sin}{x}}{\fe{\cos}{x}}\)%
+\exercise[3.]\hypertarget{exercise-387}{\null}\(\fe{h}{x}=\dfrac{4-x^6}{3x^{-2}}\)%
 \exercise[4.]\hypertarget{exercise-388}{\null}\(\fe{z}{x}=\fe{\sin^2}{x}+\fe{\cos^2}{x}\)%
 \exercise[5.]\hypertarget{exercise-389}{\null}\(z=(x+4)(x-4)\)%
-\exercise[6.]\hypertarget{exercise-390}{\null}\(\fe{T}{x}=\frac{\fe{\ln}{x}}{\fe{\ln}{x^2}}\)%
+\exercise[6.]\hypertarget{exercise-390}{\null}\(\fe{T}{x}=\dfrac{\fe{\ln}{x}}{\fe{\ln}{x^2}}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
 \typeout{************************************************}
@@ -4694,7 +4705,7 @@ Sometimes both the product rule and quotient rule need to be applied when findin
 \typeout{Exercises 5.10.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-40}
-Consider the functions defined by \(\fe{f}{x}=x^2\frac{\fe{\sin}{x}}{e^x}\) and \(\fe{g}{x}=\frac{x^2\fe{\sin}{x}}{e^x}\).%
+\hypertarget{exercisegroup-81}{\null}Consider the functions defined by \(\fe{f}{x}=x^2\frac{\fe{\sin}{x}}{e^x}\) and \(\fe{g}{x}=\frac{x^2\fe{\sin}{x}}{e^x}\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[1.]\hypertarget{exercise-391}{\null}Discuss why \(f\) and \(g\) are in fact two representations of the same function.%
@@ -4712,14 +4723,14 @@ Derivative formulas can give us much information about the behavior of a functio
 \typeout{Exercises 5.11.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-41}
-The amount of time (seconds), \(T\), required for a pendulum to complete one period is a function of the pendulum's length (meters), \(L\).  Specifically, \(T=2\pi\sqrt{\frac{L}{g}}\) where \(g\) is the gravitational acceleration constant for Earth (roughly \SI{9.8}{\meter\per\second\tothe{2}}).%
+\hypertarget{exercisegroup-82}{\null}The amount of time (seconds), \(T\), required for a pendulum to complete one period is a function of the pendulum's length (meters), \(L\).  Specifically, \(T=2\pi\sqrt{\frac{L}{g}}\) where \(g\) is the gravitational acceleration constant for Earth (roughly \SI{9.8}{\meter\per\second\tothe{2}}).%
 \par
 \begin{exercisegroup}(1)
 \exercise[1.]\hypertarget{exercise-395}{\null}Find \(\lz{T}{L}\) after first rewriting the formula for \(T\) as a constant times \(\sqrt{L}\).%
 \exercise[2.]\hypertarget{exercise-396}{\null}The sign on \(\lz{T}{L}\) is the same regardless of the value of \(L\).  What is this sign and what does it tell you about the relative periods of two pendulums with different lengths?%
 \end{exercisegroup}
 \par\smallskip\noindent
-The gravitational force (Newtons) between two objects of masses \(m_1\) and \(m_2\) (\si{\kilo\gram}) is a function of the distance (meters) between the objects' centers of mass, \(r\).    Specifically, \(\fe{F}{r}=\frac{Gm_1m_2}{r^2}\) where \(G\) is the universal gravitational constant (which is approximately \(6.7\times10^{-11}\)\si{\newton\meter\tothe{2}\per\kilo\gram\tothe{2}}.)%
+\hypertarget{exercisegroup-83}{\null}The gravitational force (Newtons) between two objects of masses \(m_1\) and \(m_2\) (\si{\kilo\gram}) is a function of the distance (meters) between the objects' centers of mass, \(r\).    Specifically, \(\fe{F}{r}=\frac{Gm_1m_2}{r^2}\) where \(G\) is the universal gravitational constant (which is approximately \(6.7\times10^{-11}\)\si{\newton\meter\tothe{2}\per\kilo\gram\tothe{2}}.)%
 \par
 \begin{exercisegroup}(1)
 \exercise[3.]\hypertarget{exercise-397}{\null}Leaving \(G\), \(m_1\), and \(m_2\) as constants, find \(\fe{\fd{F}}{r}\) after first rewriting the formula for \(F\) as a constant times a power of \(r\).%
@@ -4736,40 +4747,40 @@ The gravitational force (Newtons) between two objects of masses \(m_1\) and \(m_
 \typeout{Exercises 5.12.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-42}
-Apply the constant factor and power rules of differentiation to find the first derivative of each of the following functions.  In each case take the derivative with respect to the independent variable suggested by the expression on the right side of the equal sign.  Make sure that you assign the proper name to the derivative function.  Please note that there is no need to employ either the quotient rule or the product rule to find any of these derivative formulas.%
+\hypertarget{exercisegroup-84}{\null}Apply the constant factor and power rules of differentiation to find the first derivative of each of the following functions.  In each case take the derivative with respect to the independent variable suggested by the expression on the right side of the equal sign.  Make sure that you assign the proper name to the derivative function.  Please note that there is no need to employ either the quotient rule or the product rule to find any of these derivative formulas.%
 \par
 \begin{exercisegroup}(3)
-\exercise[1.]\hypertarget{exercise-401}{\null}\(\fe{f}{x}=\frac{\sqrt[11]{x^6}}{6}\)%
-\exercise[2.]\hypertarget{exercise-402}{\null}\(y=-\frac{5}{t^7}\)%
+\exercise[1.]\hypertarget{exercise-401}{\null}\(\fe{f}{x}=\dfrac{\sqrt[11]{x^6}}{6}\)%
+\exercise[2.]\hypertarget{exercise-402}{\null}\(y=-\dfrac{5}{t^7}\)%
 \exercise[3.]\hypertarget{exercise-403}{\null}\(\fe{y}{u}=12\sqrt[3]{u}\)%
 \exercise[4.]\hypertarget{exercise-404}{\null}\(\fe{z}{\alpha}=e\alpha^{\pi}\)%
-\exercise[5.]\hypertarget{exercise-405}{\null}\(z=\frac{8}{\sqrt{t^7}}\)%
-\exercise[6.]\hypertarget{exercise-406}{\null}\(T=\frac{4\sqrt[3]{t^7}}{t^2}\)%
+\exercise[5.]\hypertarget{exercise-405}{\null}\(z=\dfrac{8}{\sqrt{t^7}}\)%
+\exercise[6.]\hypertarget{exercise-406}{\null}\(T=\dfrac{4\sqrt[3]{t^7}}{t^2}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
-Apply the constant factor and product rules of differentiation to find the first derivative of each of the following functions.   Write out the Leibniz notation for the product rule as applied to the given function. In each case take the derivative with respect to the independent variable suggested by the expression on the right side of the equal sign.  Make sure that you assign the proper name to the derivative function.%
+\hypertarget{exercisegroup-85}{\null}Apply the constant factor and product rules of differentiation to find the first derivative of each of the following functions.   Write out the Leibniz notation for the product rule as applied to the given function. In each case take the derivative with respect to the independent variable suggested by the expression on the right side of the equal sign.  Make sure that you assign the proper name to the derivative function.%
 \par
 \begin{exercisegroup}(2)
 \exercise[7.]\hypertarget{exercise-407}{\null}\(y=5\fe{\sin}{x}\fe{\cos}{x}\)%
-\exercise[8.]\hypertarget{exercise-408}{\null}\(y=\frac{5t^2e^t}{7}\)%
+\exercise[8.]\hypertarget{exercise-408}{\null}\(y=\dfrac{5t^2e^t}{7}\)%
 \exercise[9.]\hypertarget{exercise-409}{\null}\(\fe{F}{x}=4x\fe{\ln}{x}\)%
 \exercise[10.]\hypertarget{exercise-410}{\null}\(z=x^2\fe{\sin^{-1}}{x}\)%
 \exercise[11.]\hypertarget{exercise-411}{\null}\(\fe{T}{t}=(t^2+1)\fe{\tan^{-1}}{t}\)%
-\exercise[12.]\hypertarget{exercise-412}{\null}\(T=\frac{x^77^x}{3}\)%
+\exercise[12.]\hypertarget{exercise-412}{\null}\(T=\dfrac{x^77^x}{3}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
-Apply the constant factor and quotient rules of differentiation to find the first derivative of each of the following functions.   Write out the Leibniz notation for the quotient rule as applied to the given function. In each case take the derivative with respect to the independent variable suggested by the expression on the right side of the equal sign.  Make sure that you assign the proper name to the derivative function.%
+\hypertarget{exercisegroup-86}{\null}Apply the constant factor and quotient rules of differentiation to find the first derivative of each of the following functions.   Write out the Leibniz notation for the quotient rule as applied to the given function. In each case take the derivative with respect to the independent variable suggested by the expression on the right side of the equal sign.  Make sure that you assign the proper name to the derivative function.%
 \par
 \begin{exercisegroup}(2)
-\exercise[13.]\hypertarget{exercise-413}{\null}\(\fe{q}{\theta}=\frac{4e^{\theta}}{e^\theta+1}\)%
-\exercise[14.]\hypertarget{exercise-414}{\null}\(\fe{u}{x}=2\frac{\fe{\ln}{x}}{x^4}\)%
-\exercise[15.]\hypertarget{exercise-415}{\null}\(F=\frac{\sqrt{t}}{3t^2-5\sqrt{t^3}}\)%
-\exercise[16.]\hypertarget{exercise-416}{\null}\(\fe{F}{x}=\frac{\fe{\tan}{x}}{\fe{\tan^{-1}}{x}}\)%
-\exercise[17.]\hypertarget{exercise-417}{\null}\(p=\frac{\fe{\tan^{-1}}{t}}{1+t^2}\)%
-\exercise[18.]\hypertarget{exercise-418}{\null}\(y=\frac{4}{\fe{\sin}{\beta}-2\fe{\cos}{\beta}}\)%
+\exercise[13.]\hypertarget{exercise-413}{\null}\(\fe{q}{\theta}=\dfrac{4e^{\theta}}{e^\theta+1}\)%
+\exercise[14.]\hypertarget{exercise-414}{\null}\(\fe{u}{x}=2\dfrac{\fe{\ln}{x}}{x^4}\)%
+\exercise[15.]\hypertarget{exercise-415}{\null}\(F=\dfrac{\sqrt{t}}{3t^2-5\sqrt{t^3}}\)%
+\exercise[16.]\hypertarget{exercise-416}{\null}\(\fe{F}{x}=\dfrac{\fe{\tan}{x}}{\fe{\tan^{-1}}{x}}\)%
+\exercise[17.]\hypertarget{exercise-417}{\null}\(p=\dfrac{\fe{\tan^{-1}}{t}}{1+t^2}\)%
+\exercise[18.]\hypertarget{exercise-418}{\null}\(y=\dfrac{4}{\fe{\sin}{\beta}-2\fe{\cos}{\beta}}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
-Multiple applications of the product rule are required when finding the derivative formula of the product of three of more functions.  After simplification, however, the predictable pattern shown below emerges.\begin{align*}
+\hypertarget{exercisegroup-87}{\null}Multiple applications of the product rule are required when finding the derivative formula of the product of three of more functions.  After simplification, however, the predictable pattern shown below emerges.\begin{align*}
 \lzoo{x}{fg}&=\lzoo{x}{f}g+f\lzoo{x}{g}\\
 \lzoo{x}{fgh}&=\lzoo{x}{f}gh+f\lzoo{x}{g}h+fg\lzoo{x}{h}\\
 \lzoo{x}{fghk}&=\lzoo{x}{f}ghk+f\lzoo{x}{g}hk+fg\lzoo{x}{h}k+fgh\lzoo{x}{k}
@@ -4783,19 +4794,19 @@ formula stated above for the product of three functions.  The first application 
 \exercise[20.]\hypertarget{exercise-420}{\null}Apply the formula shown for the product of four functions to determine the derivative with respect to \(x\) of the function \(x^2e^x\fe{\sin}{x}\fe{\cos}{x}\).%
 \end{exercisegroup}
 \par\smallskip\noindent
-Find the first derivative with respect to \(x\) for each of the following functions and for each function find the equation of the tangent line at the stated value of \(x\).  Make sure that you use appropriate techniques of differentiation.%
+\hypertarget{exercisegroup-88}{\null}Find the first derivative with respect to \(x\) for each of the following functions and for each function find the equation of the tangent line at the stated value of \(x\).  Make sure that you use appropriate techniques of differentiation.%
 \par
 \begin{exercisegroup}(1)
-\exercise[21.]\hypertarget{exercise-421}{\null}\(\fe{f}{x}=\frac{x^3+x^2}{x}\); tangent line at \(5\)%
-\exercise[22.]\hypertarget{exercise-422}{\null}\(\fe{h}{x}=\frac{x}{1+x}\); tangent line at \(-2\)%
-\exercise[23.]\hypertarget{exercise-423}{\null}\(\fe{K}{x}=\frac{1+x}{2x+2}\); tangent line at \(8\)%
+\exercise[21.]\hypertarget{exercise-421}{\null}\(\fe{f}{x}=\dfrac{x^3+x^2}{x}\); tangent line at \(5\)%
+\exercise[22.]\hypertarget{exercise-422}{\null}\(\fe{h}{x}=\dfrac{x}{1+x}\); tangent line at \(-2\)%
+\exercise[23.]\hypertarget{exercise-423}{\null}\(\fe{K}{x}=\dfrac{1+x}{2x+2}\); tangent line at \(8\)%
 \exercise[24.]\hypertarget{exercise-424}{\null}\(\fe{r}{x}=3\sqrt[3]{x}e^x\); tangent line at \(0\)%
 \end{exercisegroup}
 \par\smallskip\noindent
 \begin{exerciselist}
 \item[25.]\hypertarget{exercise-425}{\null}Find the second derivative of \(y\) with respect to \(t\) if \(y=4\sqrt{t}\,t^5\).  Make sure that you use appropriate techniques of differentiation and that you use proper notation on both sides of the equal sign.%
 \par\smallskip
-\begin{figure}
+\hypertarget{exercisegroup-89}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -4834,7 +4845,7 @@ A function \(f\) is shown in \hyperref[figure-analyze-intervals-supplement]{Figu
 \exercise[29.]\hypertarget{exercise-429}{\null}The formula for \(f\) is \(\fe{f}{x}=\frac{x^3}{3}+3x^2-16x\).  Find the formulas for \(\fd{f}\) and \(\sd{f}\), and then graph the derivatives and verify your answers to \hyperlink{exercise-analyze-intervals-from-graph-first}{Exercises 26}\textendash{}\hyperlink{exercise-analyze-intervals-from-graph-third}{28}.%
 \end{exercisegroup}
 \par\smallskip\noindent
-\begin{figure}
+\hypertarget{exercisegroup-90}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -4875,7 +4886,7 @@ A function \(g\) is shown in \hyperref[figure-second-analyze-intervals-supplemen
 \item[32.]\hypertarget{exercise-432}{\null}Find the equation of the tangent line to \(\fd{f}\) at \(\pi\) if \(\fe{f}{x}=\fe{\sin}{2x}\).%
 \par\smallskip
 \end{exerciselist}
-\begin{figure}
+\hypertarget{exercisegroup-91}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.30\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -4914,12 +4925,12 @@ Suppose that you were asked to find the value of \(\fe{\fd{h}}{2}\) where \(\fe{
 \begin{exercisegroup}(1)
 \exercise[33.]\hypertarget{exercise-433}{\null}Find \(\fe{\fd{h}}{4}\), where \(\fe{h}{x}=\fe{f}{x}\fe{g}{x}\).%
 \exercise[34.]\hypertarget{exercise-434}{\null}Find \(\fe{\sd{h}}{2}\), where \(\fe{h}{x}=\fe{f}{x}\fe{g}{x}\).%
-\exercise[35.]\hypertarget{exercise-435}{\null}Find \(\fe{\fd{k}}{3}\), where \(\fe{k}{x}=\frac{\fe{g}{x}}{\fe{f}{x}}\).%
+\exercise[35.]\hypertarget{exercise-435}{\null}Find \(\fe{\fd{k}}{3}\), where \(\fe{k}{x}=\dfrac{\fe{g}{x}}{\fe{f}{x}}\).%
 \exercise[36.]\hypertarget{exercise-436}{\null}Find \(\fe{\fd{p}}{4}\), where \(\fe{p}{x}=6\sqrt{x}\fe{f}{x}\).%
 \exercise[37.]\hypertarget{exercise-437}{\null}Find \(\fe{\fd{r}}{1}\), where \(\fe{r}{x}=\left(\fe{g}{x}\right)^2\).%
 \exercise[38.]\hypertarget{exercise-438}{\null}Find \(\fe{\fd{s}}{2}\), where \(\fe{s}{x}=x\fe{g}{x}\fe{g}{x}\).%
 \exercise[39.]\hypertarget{exercise-439}{\null}Find \(\fe{\fd{F}}{4}\), where \(\fe{F}{x}=\sqrt{x}\fe{g}{4}\).%
-\exercise[40.]\hypertarget{exercise-440}{\null}Find \(\fe{\sd{T}}{0}\), where \(\fe{T}{x}=\frac{\fe{f}{x}}{e^x}\).%
+\exercise[40.]\hypertarget{exercise-440}{\null}Find \(\fe{\sd{T}}{0}\), where \(\fe{T}{x}=\dfrac{\fe{f}{x}}{e^x}\).%
 \end{exercisegroup}
 \par\smallskip\noindent
 \typeout{************************************************}
@@ -5039,7 +5050,7 @@ While you ultimately want to perform the chain rule step in your head, your inst
 \typeout{Exercises 6.1.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-43}
-Find the first derivative formula for each function.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative (e.g.\@ \(\fe{\fd{h}}{t}\)).%
+\hypertarget{exercisegroup-92}{\null}Find the first derivative formula for each function.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative (e.g.\@ \(\fe{\fd{h}}{t}\)).%
 \par
 \begin{exercisegroup}(3)
 \exercise[1.]\hypertarget{exercise-441}{\null}\(\fe{h}{t}=\fe{\cos}{\sqrt{t}}\)%
@@ -5053,7 +5064,7 @@ Find the first derivative formula for each function.  In each case take the deri
 \exercise[9.]\hypertarget{exercise-449}{\null}\(\fe{y}{x}=\fe{\sec^{-1}}{e^x}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
-\begin{figure}
+\hypertarget{exercisegroup-93}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -5108,14 +5119,14 @@ When finding derivatives of complex formulas you need to apply the rules for dif
 \typeout{Exercises 6.2.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-44}
-Find the first derivative formula for each function.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative (e.g.\@ \(\fe{\fd{f}}{x}\)).%
+\hypertarget{exercisegroup-94}{\null}Find the first derivative formula for each function.  In each case take the derivative with respect to the independent variable as implied by the expression on the right side of the equal sign.  Make sure that you use the appropriate name for each derivative (e.g.\@ \(\fe{\fd{f}}{x}\)).%
 \par
 \begin{exercisegroup}(2)
 \exercise[1.]\hypertarget{exercise-455}{\null}\(\fe{f}{x}=\fe{\sin}{x\,e^x}\)%
 \exercise[2.]\hypertarget{exercise-456}{\null}\(\fe{g}{x}=x\fe{\sin}{e^x}\)%
-\exercise[3.]\hypertarget{exercise-457}{\null}\(y=\frac{\fe{\tan}{\fe{\ln}{x}}}{x}\)%
-\exercise[4.]\hypertarget{exercise-458}{\null}\(z=5t+\frac{\fe{\cos^2}{t^2}}{3}\)%
-\exercise[5.]\hypertarget{exercise-459}{\null}\(\fe{f}{y}=\fe{\sin}{\frac{\fe{\ln}{y}}{y}}\)%
+\exercise[3.]\hypertarget{exercise-457}{\null}\(y=\dfrac{\fe{\tan}{\fe{\ln}{x}}}{x}\)%
+\exercise[4.]\hypertarget{exercise-458}{\null}\(z=5t+\dfrac{\fe{\cos^2}{t^2}}{3}\)%
+\exercise[5.]\hypertarget{exercise-459}{\null}\(\fe{f}{y}=\fe{\sin}{\dfrac{\fe{\ln}{y}}{y}}\)%
 \exercise[6.]\hypertarget{exercise-460}{\null}\(G=x\fe{\sin^{-1}}{x\fe{\ln}{x}}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
@@ -5128,7 +5139,7 @@ As always, you want to simplify an expression before jumping in to take its deri
 \typeout{Exercises 6.3.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-45}
-Consider the functions \(\fe{f}{x}=\sqrt{x^2}\) and \(\fe{g}{x}=\left(\sqrt{x}\right)^2\).%
+\hypertarget{exercisegroup-95}{\null}Consider the functions \(\fe{f}{x}=\sqrt{x^2}\) and \(\fe{g}{x}=\left(\sqrt{x}\right)^2\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[1.]\hypertarget{exercise-461}{\null}Assuming that \(x\) is not negative, how does each of these formulas simplify?  Use the simplified formula to find the formulas for \(\fe{\fd{f}}{x}\) and \(\fe{\fd{g}}{x}\).%
@@ -5142,7 +5153,7 @@ Consider the functions \(\fe{f}{x}=\sqrt{x^2}\) and \(\fe{g}{x}=\left(\sqrt{x}\r
 \item[5.]\hypertarget{exercise-465}{\null}How does the formula \(\fe{g}{t}=\fe{\ln}{e^{5t}}\) simplify and what does this tell you about the formula for \(\fe{\fd{g}}{t}\)?  After answering those questions use the chain rule to find the formula for \(\fe{\fd{g}}{t}\) and show that it simplifies as it should.%
 \par\smallskip
 \end{exerciselist}
-Consider the function \(\fe{g}{t}=\fe{\ln}{\frac{5}{t^3\fe{\sec}{t}}}\).%
+\hypertarget{exercisegroup-96}{\null}Consider the function \(\fe{g}{t}=\fe{\ln}{\frac{5}{t^3\fe{\sec}{t}}}\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[6.]\hypertarget{exercise-466}{\null}Find the formula for \(\fe{\fd{g}}{t}\) without first simplifying the formula for \(\fe{g}{t}\).%
@@ -5168,7 +5179,7 @@ In general, we could express the chain rule as shown in \hyperref[equation-leibn
 \typeout{Exercises 6.4.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-46}
-Suppose that Carla is jogging in her sweet new running shoes. Suppose further that \(r=\fe{f}{t}\) is Carla's pace (\si{\mile\per\hour}) \(t\) hours after 1:00 pm and \(y=\fe{h}{r}\) is Carla's heart rate (bpm) when she jogs at a rate of \(r\) \si{\mile\per\hour}.  In this context we can assume that all of Carla's motion was in one direction, so the words `speed' and `velocity' are completely interchangeable.%
+\hypertarget{exercisegroup-97}{\null}Suppose that Carla is jogging in her sweet new running shoes. Suppose further that \(r=\fe{f}{t}\) is Carla's pace (\si{\mile\per\hour}) \(t\) hours after 1:00 pm and \(y=\fe{h}{r}\) is Carla's heart rate (bpm) when she jogs at a rate of \(r\) \si{\mile\per\hour}.  In this context we can assume that all of Carla's motion was in one direction, so the words `speed' and `velocity' are completely interchangeable.%
 \par
 \begin{exercisegroup}(1)
 \exercise[1.]\hypertarget{exercise-469}{\null}What is the meaning of \(\fe{f}{0.75}=7\)?%
@@ -5179,7 +5190,7 @@ Suppose that Carla is jogging in her sweet new running shoes. Suppose further th
 \exercise[6.]\hypertarget{exercise-474}{\null}Assuming that all of the previous values are for real, what is the value of \(\lzoa{y}{t}{t=0.75}\) and what does this value tell you about Carla?%
 \end{exercisegroup}
 \par\smallskip\noindent
-Portions of SW 35th Avenue are extremely hilly.  Suppose that you are riding your bike along SW 35th Ave from Vermont Street to Capitol Highway.  Let \(u=\fe{d}{t}\) be the distance you have traveled (\si{\foot}) where \(t\) is the number of seconds that have passed since you began your journey.  Suppose that \(y=\fe{e}{u}\) is the elevation (\si{\meter}) of SW 35th Ave where \(u\) is the distance (\si{\foot}) from Vermont St headed towards Capitol Highway.%
+\hypertarget{exercisegroup-98}{\null}Portions of SW 35th Avenue are extremely hilly.  Suppose that you are riding your bike along SW 35th Ave from Vermont Street to Capitol Highway.  Let \(u=\fe{d}{t}\) be the distance you have traveled (\si{\foot}) where \(t\) is the number of seconds that have passed since you began your journey.  Suppose that \(y=\fe{e}{u}\) is the elevation (\si{\meter}) of SW 35th Ave where \(u\) is the distance (\si{\foot}) from Vermont St headed towards Capitol Highway.%
 \par
 \begin{exercisegroup}(1)
 \exercise[7.]\hypertarget{exercise-475}{\null}What, including units, would be the meanings of \(\fe{d}{25}=300\), \(\fe{e}{300}=140\), and \(\fe{\left(e\circ d\right)}{25}=140\)?%
@@ -5187,7 +5198,7 @@ Portions of SW 35th Avenue are extremely hilly.  Suppose that you are riding you
 \exercise[9.]\hypertarget{exercise-477}{\null}Suppose that the values stated in \hyperlink{exercise-leibniz-chain-rule}{Exercise 8} are accurate. What, including unit, is the value of \(\lzoa{y}{t}{t=25}\)? What does this value tell you in the context of this problem?%
 \end{exercisegroup}
 \par\smallskip\noindent
-According to Hooke's Law, the force (\si{\pound}), \(F\), required to hold a spring in place when its displacement from the natural length of the spring is \(x\) (\si{\foot}), is given by the formula \(F=kx\) where \(k\) is called the \terminology{spring constant}.  The value of \(k\) varies from spring to spring.%
+\hypertarget{exercisegroup-99}{\null}According to Hooke's Law, the force (\si{\pound}), \(F\), required to hold a spring in place when its displacement from the natural length of the spring is \(x\) (\si{\foot}), is given by the formula \(F=kx\) where \(k\) is called the \terminology{spring constant}.  The value of \(k\) varies from spring to spring.%
 \par
 Suppose that it requires \SI{120}{\pound} of force to hold a given spring \SI{1.5}{\foot} beyond its natural length.%
 \par
@@ -5210,7 +5221,7 @@ Suppose that it requires \SI{120}{\pound} of force to hold a given spring \SI{1.
 \item[1.]\hypertarget{exercise-482}{\null}The functions \(\fe{f}{x}=e^{3x}\), \(\fe{g}{x}=\left(e^x\right)^3\), and \(\fe{h}{x}=\left(e^3\right)^x\) are equivalent.  Find the first derivative formulas for each of the functions (without altering their given forms) and then explicitly establish that the derivative formulas are the same.%
 \par\smallskip
 \end{exerciselist}
-Consider the function \(\fe{k}{\theta}=\fe{\sin^{-1}}{\fe{\sin}{\theta}}\).%
+\hypertarget{exercisegroup-100}{\null}Consider the function \(\fe{k}{\theta}=\fe{\sin^{-1}}{\fe{\sin}{\theta}}\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[2.]\hypertarget{exercise-trivial-chain-rule}{\null}Over the interval \(\cinterval{-\frac{\pi}{2}}{\frac{\pi}{2}}\), \(\fe{k}{\theta}=\theta\).  What does this tell you about the formula for \(\fe{\fd{k}}{\theta}\) over \(\ointerval{-\frac{\pi}{2}}{\frac{\pi}{2}}\)?%
@@ -5219,7 +5230,7 @@ Consider the function \(\fe{k}{\theta}=\fe{\sin^{-1}}{\fe{\sin}{\theta}}\).%
 \exercise[5.]\hypertarget{exercise-486}{\null}What is the value of \(\fe{\fd{k}}{\frac{\pi}{2}}\)?%
 \end{exercisegroup}
 \par\smallskip\noindent
-\begin{figure}
+\hypertarget{exercisegroup-101}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -5256,18 +5267,18 @@ Consider the function \(f\) shown in \hyperref[figure-polynomial-for-chain-rule]
 \exercise[9.]\hypertarget{exercise-490}{\null}Suppose that \(\fe{h}{x}=\frac{1}{\fe{f}{x}}\). Is \(h\) differentiable at \(-3\)? Please note that \(f\) has a horzontal tangent line at \(-3\).%
 \end{exercisegroup}
 \par\smallskip\noindent
-Decide whether or not it is necessary to use the chain rule when finding the derivative with respect to \(x\) of each of the following functions.%
+\hypertarget{exercisegroup-102}{\null}Decide whether or not it is necessary to use the chain rule when finding the derivative with respect to \(x\) of each of the following functions.%
 \par
 \begin{exercisegroup}(2)
 \exercise[10.]\hypertarget{exercise-491}{\null}\(\fe{f}{x}=\fe{\ln}{x+1}\)%
-\exercise[11.]\hypertarget{exercise-492}{\null}\(\fe{f}{x}=\frac{2}{x^5}\)%
+\exercise[11.]\hypertarget{exercise-492}{\null}\(\fe{f}{x}=\dfrac{2}{x^5}\)%
 \exercise[12.]\hypertarget{exercise-493}{\null}\(\fe{f}{x}=\fe{\cos}{\pi}\)%
 \exercise[13.]\hypertarget{exercise-494}{\null}\(\fe{f}{x}=\fe{\cos}{x}\)%
 \exercise[14.]\hypertarget{exercise-495}{\null}\(\fe{f}{x}=\fe{\cos}{\pi x}\)%
-\exercise[15.]\hypertarget{exercise-496}{\null}\(\fe{f}{x}=\frac{\fe{\cos}{\pi x}}{\pi}\)%
+\exercise[15.]\hypertarget{exercise-496}{\null}\(\fe{f}{x}=\dfrac{\fe{\cos}{\pi x}}{\pi}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
-Find the first derivative with respect to \(x\) of each of the following functions.  In all cases, look for appropriate simplifications before taking the derivative.  Please note that some of the functions will be simpler to differentiate if you first use the rules of logarithms to expand and simplify the logarithmic expression.%
+\hypertarget{exercisegroup-103}{\null}Find the first derivative with respect to \(x\) of each of the following functions.  In all cases, look for appropriate simplifications before taking the derivative.  Please note that some of the functions will be simpler to differentiate if you first use the rules of logarithms to expand and simplify the logarithmic expression.%
 \par
 \begin{exercisegroup}(2)
 \exercise[16.]\hypertarget{exercise-497}{\null}\(\fe{f}{x}=\fe{\tan^{-1}}{\sqrt{x}}\)%
@@ -5278,20 +5289,20 @@ Find the first derivative with respect to \(x\) of each of the following functio
 \exercise[21.]\hypertarget{exercise-502}{\null}\(\fe{f}{x}=\sqrt[3]{\left(\fe{\sin}{x^2}\right)^2}\)%
 \exercise[22.]\hypertarget{exercise-503}{\null}\(\fe{f}{x}=4x\fe{\sin^2}{x}\)%
 \exercise[23.]\hypertarget{exercise-504}{\null}\(\fe{f}{x}=\fe{\ln}{x\fe{\ln}{x}}\)%
-\exercise[24.]\hypertarget{exercise-505}{\null}\(\fe{f}{x}=\fe{\ln}{\frac{5}{xe^x}}\)%
+\exercise[24.]\hypertarget{exercise-505}{\null}\(\fe{f}{x}=\fe{\ln}{\dfrac{5}{xe^x}}\)%
 \exercise[25.]\hypertarget{exercise-506}{\null}\(\fe{f}{x}=2\fe{\ln}{\sqrt[3]{\fe{\tan^2}{x}}}\)%
-\exercise[26.]\hypertarget{exercise-507}{\null}\(\fe{f}{x}=\fe{\ln}{\frac{e^{x+2}}{\sqrt{x+2}}}\)%
+\exercise[26.]\hypertarget{exercise-507}{\null}\(\fe{f}{x}=\fe{\ln}{\dfrac{e^{x+2}}{\sqrt{x+2}}}\)%
 \exercise[27.]\hypertarget{exercise-508}{\null}\(\fe{f}{x}=\fe{\ln}{x^e+e}\)%
 \exercise[28.]\hypertarget{exercise-509}{\null}\(\fe{f}{x}=\fe{\sec^4}{e^x}\)%
 \exercise[29.]\hypertarget{exercise-510}{\null}\(\fe{f}{x}=\fe{\sec^{-1}}{e^x}\)%
-\exercise[30.]\hypertarget{exercise-511}{\null}\(\fe{f}{x}=\fe{\csc}{\frac{1}{\sqrt{x}}}\)%
-\exercise[31.]\hypertarget{exercise-512}{\null}\(\fe{f}{x}=\frac{1}{\fe{\csc}{\sqrt{x}}}\)%
-\exercise[32.]\hypertarget{exercise-513}{\null}\(\fe{f}{x}=\frac{\fe{\tan^{-1}}{2x}}{2}\)%
-\exercise[33.]\hypertarget{exercise-514}{\null}\(\fe{f}{x}=x^3\fe{\sin}{\frac{x}{3}}\)%
-\exercise[34.]\hypertarget{exercise-515}{\null}\(\fe{f}{x}=\frac{4}{\sqrt{\frac{3}{x^7}}}\)%
-\exercise[35.]\hypertarget{exercise-516}{\null}\(\fe{f}{x}=\frac{e^{xe^x}}{x}\)%
+\exercise[30.]\hypertarget{exercise-511}{\null}\(\fe{f}{x}=\fe{\csc}{\dfrac{1}{\sqrt{x}}}\)%
+\exercise[31.]\hypertarget{exercise-512}{\null}\(\fe{f}{x}=\dfrac{1}{\fe{\csc}{\sqrt{x}}}\)%
+\exercise[32.]\hypertarget{exercise-513}{\null}\(\fe{f}{x}=\dfrac{\fe{\tan^{-1}}{2x}}{2}\)%
+\exercise[33.]\hypertarget{exercise-514}{\null}\(\fe{f}{x}=x^3\fe{\sin}{\dfrac{x}{3}}\)%
+\exercise[34.]\hypertarget{exercise-515}{\null}\(\fe{f}{x}=\dfrac{4}{\sqrt{\frac{3}{x^7}}}\)%
+\exercise[35.]\hypertarget{exercise-516}{\null}\(\fe{f}{x}=\dfrac{e^{xe^x}}{x}\)%
 \exercise[36.]\hypertarget{exercise-517}{\null}\(\fe{f}{x}=xe^{xe^2}\)%
-\exercise[37.]\hypertarget{exercise-518}{\null}\(\fe{f}{x}=\frac{\fe{\sin^5}{x}-\sqrt{\fe{\sin}{x}}}{\fe{\sin}{x}}\)%
+\exercise[37.]\hypertarget{exercise-518}{\null}\(\fe{f}{x}=\dfrac{\fe{\sin^5}{x}-\sqrt{\fe{\sin}{x}}}{\fe{\sin}{x}}\)%
 \exercise[38.]\hypertarget{exercise-519}{\null}\(\fe{f}{x}=4x\fe{\sin}{x}\fe{\cos}{x^2}\)%
 \exercise[39.]\hypertarget{exercise-520}{\null}\(\fe{f}{x}=\fe{\sin}{x\fe{\cos^2}{x}}\)%
 \end{exercisegroup}
@@ -5360,7 +5371,7 @@ At first it might be unsettling that the formula for \(\lz{y}{x}\) contains both
 \typeout{Exercises 7.1.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-48}
-Use the process of implicit differentiation to find a formula for \(\lz{y}{x}\) for the curves generated by each of the following equations. Do not simplify the equations before taking the derivatives. You will need to use the product rule for differentiation in \hyperlink{exercise-implicit-middle}{Exercises 4}\textendash{}\hyperlink{exercise-implicit-last}{6}.%
+\hypertarget{exercisegroup-104}{\null}Use the process of implicit differentiation to find a formula for \(\lz{y}{x}\) for the curves generated by each of the following equations. Do not simplify the equations before taking the derivatives. You will need to use the product rule for differentiation in \hyperlink{exercise-implicit-middle}{Exercises 4}\textendash{}\hyperlink{exercise-implicit-last}{6}.%
 \par
 \begin{exercisegroup}(2)
 \exercise[1.]\hypertarget{exercise-521}{\null}\(3x^4=-6y^5\)%
@@ -5406,7 +5417,7 @@ Find the slope and equation of the tangent line to this curve at the origin.  (P
 \popValignCaptionBottom
 \end{figure}
 \par\smallskip
-Consider the set of points that satisfy the equation \(x\,y=4\).%
+\hypertarget{exercisegroup-105}{\null}Consider the set of points that satisfy the equation \(x\,y=4\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[8.]\hypertarget{exercise-528}{\null}Use implicit differentiation to find a formula for \(\lz{y}{x}\).%
@@ -5742,12 +5753,12 @@ Determine the equation of the tangent line to this curve at the point \(\point{1
 \end{figure}
 \par\smallskip
 \end{exerciselist}
-Use the process of logarithmic differentiation to find a first derivative formula for each of the following functions.%
+\hypertarget{exercisegroup-106}{\null}Use the process of logarithmic differentiation to find a first derivative formula for each of the following functions.%
 \par
 \begin{exercisegroup}(3)
-\exercise[4.]\hypertarget{exercise-539}{\null}\(y=\frac{x\fe{\sin}{x}}{\sqrt{x-1}}\)%
-\exercise[5.]\hypertarget{exercise-540}{\null}\(y=\frac{e^{2x}}{\fe{\sin^4}{x}\sqrt[4]{x^5}}\)%
-\exercise[6.]\hypertarget{exercise-541}{\null}\(y=\frac{\fe{\ln}{4x^3}}{x^5\fe{\ln}{x}}\)%
+\exercise[4.]\hypertarget{exercise-539}{\null}\(y=\dfrac{x\fe{\sin}{x}}{\sqrt{x-1}}\)%
+\exercise[5.]\hypertarget{exercise-540}{\null}\(y=\dfrac{e^{2x}}{\fe{\sin^4}{x}\sqrt[4]{x^5}}\)%
+\exercise[6.]\hypertarget{exercise-541}{\null}\(y=\dfrac{\fe{\ln}{4x^3}}{x^5\fe{\ln}{x}}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
 \typeout{************************************************}
@@ -5888,7 +5899,7 @@ To finish up we need to write a conclusion.%
 \typeout{Exercises 8.1.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-52}
-Consider the following problem.%
+\hypertarget{exercisegroup-107}{\null}Consider the following problem.%
 \begin{quote}A square is getting larger. The sides are each growing at a constant rate of \SI{3}{\inch\per\minute}. At what rate is the area of the square growing the moment its area is \SI{25}{\inch\tothe{2}}?\end{quote}{\textlangle}Use the online edition to explore a GoeGebra applet.\textrangle
 \par
 \begin{exercisegroup}(1)
@@ -6095,7 +6106,7 @@ When the elevation of the drone is \SI{300}{\foot} and the drone is rising at a 
 \typeout{Exercises 8.2.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-53}
-Three related rates problems are stated below. Each of the problems can be modeled using a right triangle. The sole task in this problem is to identify which pieces of the triangle correspond to quantity-variables and which piece of the triangle (if any) remains constant as the other pieces change.%
+\hypertarget{exercisegroup-related-rates-using-diagrams}{\null}Three related rates problems are stated below. Each of the problems can be modeled using a right triangle. The sole task in this problem is to identify which pieces of the triangle correspond to quantity-variables and which piece of the triangle (if any) remains constant as the other pieces change.%
 \par
 For each problem, you need to identify which two or three pieces of the triangle correspond to quantity-variables and which pieces remain constant or are not relevant. For each problem, draw a right triangle and label the pieces appropriately (finally a \acronym{D} for Diagram). When you are done, any given triangle should either have two pieces labeled as variables and one piece labeled with a constant value or three pieces labeled as variables.%
 \par
@@ -6106,9 +6117,9 @@ For each problem, you need to identify which two or three pieces of the triangle
 \end{exercisegroup}
 \par\smallskip\noindent
 \begin{exerciselist}
-\item[4.]\hypertarget{exercise-553}{\null}Go ahead and finish the three problems stated in \hyperlink{exercise-triangle-first}{Exercises 1}\textendash{}\hyperlink{exercise-triangle-last}{3}. Remember to complete each step in the problems solving process.%
+\item[4.]\hypertarget{exercise-553}{\null}Go ahead and finish the three problems stated in \hyperlink{exercisegroup-related-rates-using-diagrams}{Exercise Group 1-3}. Remember to complete each step in the problems solving process.%
 \begin{enumerate}[label=(\alph*)]
-\item{}Draw a properly labeled variable diagram. (\acronym{D}) Note that you completed this step while working \hyperlink{exercise-triangle-first}{Exercises 1}\textendash{}\hyperlink{exercise-triangle-last}{3}.\item{}Make a variable definition table. Include each variable type (quantity, rate, and time). Include the unit for each variable (\acronym{R})\item{}Write down an equation that relates the two quantity-variables. (\acronym{E})\item{}Differentiate both sides of the equation you just wrote with respect to \(t\). Simplify the result. This equation is called the \terminology{related rates equation}. (\acronym{D})\item{}Write an orientation sentence or phrase and create a summary table for your quantity and rate variables. (preparing for \acronym{S})\item{}Substitute the known values into the related rates equation and solve for the unknown rate. (\acronym{S})\item{}Write a conclusion.\end{enumerate}
+\item{}Draw a properly labeled variable diagram. (\acronym{D}) Note that you completed this step while working \hyperlink{exercisegroup-related-rates-using-diagrams}{Exercise Group 1-3}.\item{}Make a variable definition table. Include each variable type (quantity, rate, and time). Include the unit for each variable (\acronym{R})\item{}Write down an equation that relates the two quantity-variables. (\acronym{E})\item{}Differentiate both sides of the equation you just wrote with respect to \(t\). Simplify the result. This equation is called the \terminology{related rates equation}. (\acronym{D})\item{}Write an orientation sentence or phrase and create a summary table for your quantity and rate variables. (preparing for \acronym{S})\item{}Substitute the known values into the related rates equation and solve for the unknown rate. (\acronym{S})\item{}Write a conclusion.\end{enumerate}
 \par\smallskip
 \item[5.]\hypertarget{exercise-554}{\null}When working with ``common knowledge'' formulas, it is important to identify which variables in the formula are really relevant to the stated problem and to then eliminate any irrelevant variables from the formula. Consider the following problem. \begin{quote}Slushy is flowing out of the bottom of a cup at the constant rate of \SI{0.9}{\centi\meter\tothe{3}\per\second}. The cup is the shape of a right circular cone. The height of the cup is \SI{12}{\centi\meter} and the radius at the top of the cup is \SI{3}{\centi\meter}. Determine the rate at which the depth of the remaining slushy changes at the instant there are exactly \SI{8\pi}{\centi\meter\tothe{3}} of slushy remaining in the cup.\end{quote}%
 \par
@@ -6324,7 +6335,7 @@ Veronica says that \(-3\) is a critical number of \(g\) but Tito disagrees. Tito
 \end{figure}
 \par\smallskip
 \end{exerciselist}
-\begin{figure}
+\hypertarget{exercisegroup-109}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -6370,7 +6381,7 @@ Answer each of the following questions (using complete sentences) in reference t
 \exercise[4.]\hypertarget{exercise-566}{\null}What is the absolute maximum value of \(f\) over the interval \(\ointerval{-7}{7}\).  Please note that the function value is the value of the \(y\)-coordinate at the point on the curve and as such is a number.%
 \end{exercisegroup}
 \par\smallskip\noindent
-Decide whether each of the following statements is \emph{True} or \emph{False}.%
+\hypertarget{exercisegroup-110}{\null}Decide whether each of the following statements is \emph{True} or \emph{False}.%
 \par
 \begin{exercisegroup}(1)
 \exercise[5.]\hypertarget{exercise-567}{\null}True or False? A function always has a local extreme point at each of its critical numbers.%
@@ -6404,7 +6415,7 @@ Because the domain of a function is such an important issue when determining cri
 \typeout{Exercises 9.3.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-57}
-Formally establish the critical numbers for each of the following functions following .%
+\hypertarget{exercisegroup-111}{\null}Formally establish the critical numbers for each of the following functions following .%
 \par
 \begin{exercisegroup}(2)
 \exercise[1.]\hypertarget{exercise-572}{\null}\(\fe{f}{x}=x^2-9x+4\)%
@@ -6415,7 +6426,7 @@ Formally establish the critical numbers for each of the following functions foll
 \exercise[6.]\hypertarget{exercise-577}{\null}\(\fe{T}{t}=\sqrt{t-4}\sqrt{16-t}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
-The first derivative of the function \(\fe{m}{x}=\frac{\sqrt{x-5}}{x-7}\) is \(\fe{\fd{m}}{x}=\frac{3-x}{2\sqrt{x-5}(x-7)^2}\).%
+\hypertarget{exercisegroup-112}{\null}The first derivative of the function \(\fe{m}{x}=\frac{\sqrt{x-5}}{x-7}\) is \(\fe{\fd{m}}{x}=\frac{3-x}{2\sqrt{x-5}(x-7)^2}\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[7.]\hypertarget{exercise-578}{\null}Roland says that \(5\) is a critical number of \(m\) but Yuna disagrees.  Who is correct and why?%
@@ -6451,7 +6462,7 @@ Interval&\multicolumn{1}{c}{Sign of \(\fd{f}\)}&\multicolumn{1}{c}{Behavior of \
 \end{table}
 \par\smallskip
 \end{exerciselist}
-The first derivative of the function \(\fe{g}{t}=\frac{\sqrt{t-4}}{(t-1)^2}\) is \(\fe{\fd{g}}{t}=\frac{-3(t-5)}{2(t-1)^3\sqrt{t-4}}\).%
+\hypertarget{exercisegroup-113}{\null}The first derivative of the function \(\fe{g}{t}=\frac{\sqrt{t-4}}{(t-1)^2}\) is \(\fe{\fd{g}}{t}=\frac{-3(t-5)}{2(t-1)^3\sqrt{t-4}}\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[2.]\hypertarget{exercise-582}{\null}State the critical numbers of \(g\); you \emph{do not} need to show a formal determination of the critical numbers.  You \emph{do} need to write a complete sentence.%
@@ -6474,7 +6485,7 @@ Interval&\multicolumn{1}{c}{Sign of \(\fd{g}\)}&\multicolumn{1}{c}{Behavior of \
 \exercise[6.]\hypertarget{exercise-586}{\null}Write a formal definition for a local maximum point on \(g\).%
 \end{exercisegroup}
 \par\smallskip\noindent
-The first derivative of the function \(\fe{k}{x}=\frac{\sqrt[3]{(x-2)^2}}{x-1}\) is \(\fe{\fd{k}}{t}=\frac{4-x}{3(x-1)^2\sqrt[3]{x-2}}\).%
+\hypertarget{exercisegroup-114}{\null}The first derivative of the function \(\fe{k}{x}=\frac{\sqrt[3]{(x-2)^2}}{x-1}\) is \(\fe{\fd{k}}{t}=\frac{4-x}{3(x-1)^2\sqrt[3]{x-2}}\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[7.]\hypertarget{exercise-587}{\null}State the critical numbers of \(k\); you \emph{do not} need to show a formal determination of the critical numbers.  You \emph{do} need to write a complete sentence.%
@@ -6499,7 +6510,7 @@ Interval&\multicolumn{1}{c}{Sign of \(\fd{k}\)}&\multicolumn{1}{c}{Behavior of \
 \exercise[9.]\hypertarget{exercise-589}{\null}The number \(1\) was included as an endpoint in \hyperref[table-trient-rational-sign-table]{Table \ref{table-trient-rational-sign-table}} even though \(1\) is not a critical number of \(k\).  Why did we have to include the intervals \(\ointerval{-\infty}{1}\) and \(\ointerval{1}{2}\) in the table as opposed to just using the single interval \(\ointerval{-\infty}{2}\)?%
 \end{exercisegroup}
 \par\smallskip\noindent
-Perform each of the following for the functions in \hyperlink{exercise-make-sign-table-first}{Exercises 10}\textendash{}\hyperlink{exercise-make-sign-table-last}{12}.%
+\hypertarget{exercisegroup-115}{\null}Perform each of the following for the functions in \hyperlink{exercise-make-sign-table-first}{Exercises 10}\textendash{}\hyperlink{exercise-make-sign-table-last}{12}.%
 \begin{itemize}[label=\textbullet]
 \item{}Formally establish the critical numbers of the function.\item{}Create a table similar to \hyperref[table-polynomial-sign-table]{Tables \ref{table-polynomial-sign-table}}\textendash{}\hyperref[table-trient-rational-sign-table]{\ref{table-trient-rational-sign-table}}. Number the tables.  Don't forget to include table headings and column headings.\item{}State the local minimum points and local maximum points on the function.  Make sure that you explicitly address both types of points even if there are none of one type and/or the other.\end{itemize}
 \par
@@ -6509,7 +6520,7 @@ Perform each of the following for the functions in \hyperlink{exercise-make-sign
 \exercise[12.]\hypertarget{exercise-make-sign-table-last}{\null}\(\fe{F}{x}=\dfrac{x^2}{\fe{\ln}{x}}\)%
 \end{exercisegroup}
 \par\smallskip\noindent
-Consider a function \(f\) whose first derivative is \(\fe{\fd{f}}{x}=(x-9)^4\).%
+\hypertarget{exercisegroup-116}{\null}Consider a function \(f\) whose first derivative is \(\fe{\fd{f}}{x}=(x-9)^4\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[13.]\hypertarget{exercise-593}{\null}Is \(9\) definitely a critical number of \(f\)? Explain why or why not.%
@@ -6532,7 +6543,7 @@ When performing this analysis, you need to simplify the second derivative formul
 \begin{exerciselist}
 \item[1.]\hypertarget{exercise-597}{\null}Identify the inflection points for the function shown in \hyperref[figure-lots-of-critical-points]{Figure \ref{figure-lots-of-critical-points}}.%
 \par\smallskip
-The first two derivatives of the function \(\fe{y}{x}=\frac{(x+2)^2}{(x+3)^2}\) are \(\fe{\fd{y}}{x}=\frac{-x(x+2)}{(x+3)^4}\) and \(\fe{\sd{y}}{x}=\frac{2(x+\sqrt{3})(x-\sqrt{3})}{(x+3)^5}\). The first derivative of the function \(\fe{g}{t}=\frac{\sqrt{t-4}}{(t-1)^2}\) is \(\fe{\fd{g}}{t}=\frac{-3(t-5)}{2(t-1)^3\sqrt{t-4}}\).%
+\hypertarget{exercisegroup-117}{\null}The first two derivatives of the function \(\fe{y}{x}=\frac{(x+2)^2}{(x+3)^2}\) are \(\fe{\fd{y}}{x}=\frac{-x(x+2)}{(x+3)^4}\) and \(\fe{\sd{y}}{x}=\frac{2(x+\sqrt{3})(x-\sqrt{3})}{(x+3)^5}\). The first derivative of the function \(\fe{g}{t}=\frac{\sqrt{t-4}}{(t-1)^2}\) is \(\fe{\fd{g}}{t}=\frac{-3(t-5)}{2(t-1)^3\sqrt{t-4}}\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[2.]\hypertarget{exercise-598}{\null}Yolanda was given this information and asked to find the inflection points on \(y\).  The first thing Yolanda wrote was ``The critical numbers of \(y\) are \(\sqrt{3}\) and \(-\sqrt{3}\)''.  Explain to Yolanda why this is not true.%
@@ -6559,7 +6570,7 @@ Interval&\multicolumn{1}{c}{Sign of \(\sd{y}\)}&\multicolumn{1}{c}{Behavior of \
 \exercise[6.]\hypertarget{exercise-602}{\null}The function \(y\) has a vertical asymptote at \(-3\).  Given that fact, it was impossible that \(y\)would have an inflection point at \(-3\).  Why, then, did we never-the-less break the interval \(\ointerval{-\infty}{-\sqrt{3}}\) at \(-3\) when creating our concavity table?%
 \end{exercisegroup}
 \par\smallskip\noindent
-Perform each of the following for the functions in \hyperlink{exercise-make-second-derivative-table-first}{Exercises 7}\textendash{}\hyperlink{exercise-make-second-derivative-table-last}{9}.%
+\hypertarget{exercisegroup-118}{\null}Perform each of the following for the functions in \hyperlink{exercise-make-second-derivative-table-first}{Exercises 7}\textendash{}\hyperlink{exercise-make-second-derivative-table-last}{9}.%
 \begin{itemize}[label=\textbullet]
 \item{}State the domain of the function.\item{}Find, and completely simplify, the formula for the second derivative of the function. It is \emph{not} necessary to simplify the formula for the first derivative of the function.\item{}State the values in the domain of the function where the second derivative is either zero or does not exist.\item{}Create a table similar to \hyperref[table-second-derivative-signs]{Tables \ref{table-second-derivative-signs}}.  Number the table.  Don't forget to include table headings and column headings.\item{}State the inflection points on the function.  Make sure that you explicitly address this question even if there are no inflection points.\end{itemize}
 \par
@@ -6619,7 +6630,7 @@ This tells us that \(\lim\limits_{x\to\infty}\frac{4x-2}{3+20x}=\frac{1}{5}\) an
 \typeout{Exercises 9.6.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-60}
-The formulas used to graph \hyperref[figure-match-rationals-1]{Figures \ref{figure-match-rationals-1}}\textendash{}\hyperref[figure-match-rationals-5]{\ref{figure-match-rationals-5}} are given below.  Focusing first on the dominant terms of the expressions, match the formulas with the functions (\(f_1\) through \(f_5\)).%
+\hypertarget{exercisegroup-119}{\null}The formulas used to graph \hyperref[figure-match-rationals-1]{Figures \ref{figure-match-rationals-1}}\textendash{}\hyperref[figure-match-rationals-5]{\ref{figure-match-rationals-5}} are given below.  Focusing first on the dominant terms of the expressions, match the formulas with the functions (\(f_1\) through \(f_5\)).%
 \par
 \begin{exercisegroup}(2)
 \exercise[1.]\hypertarget{exercise-607}{\null}\(y=\dfrac{3x+6}{x-2}\)%
@@ -6786,7 +6797,7 @@ The formulas used to graph \hyperref[figure-match-rationals-1]{Figures \ref{figu
 \end{figure}
 \par
 \par\smallskip\noindent
-Use the concept of dominant terms to informally determine the value of each of the following limits.%
+\hypertarget{exercisegroup-120}{\null}Use the concept of dominant terms to informally determine the value of each of the following limits.%
 \par
 \begin{exercisegroup}(2)
 \exercise[6.]\hypertarget{exercise-612}{\null}\(\lim\limits_{x\to-\infty}\dfrac{4+x-7x^3}{14x^3+x^2+2}\)%
@@ -6806,7 +6817,7 @@ Let's put it all together and produce some graphs.%
 \typeout{Exercises 9.7.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-61}
-Consider the function \(\fe{f}{x}=\frac{8x^2-8}{(2x-4)^2}\).%
+\hypertarget{exercisegroup-sketch-first}{\null}Consider the function \(\fe{f}{x}=\frac{8x^2-8}{(2x-4)^2}\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[1.]\hypertarget{exercise-sketch-first-asymptotes}{\null}Evaluate each of the following limits: \(\lim\limits_{x\to\infty}\fe{f}{x}\), \(\lim\limits_{x\to-\infty}\fe{f}{x}\), \(\lim\limits_{x\to2^{-}}\fe{f}{x}\), and \(\lim\limits_{x\to2^{+}}\fe{f}{x}\).%
@@ -6830,7 +6841,7 @@ Consider the function \(\fe{f}{x}=\frac{8x^2-8}{(2x-4)^2}\).%
 \end{exercisegroup}
 \par\smallskip\noindent
 \begin{exerciselist}
-\item[7.]\hypertarget{exercise-624}{\null}Repeat \hyperlink{exercise-sketch-first-asymptotes}{Exercises 1}\textendash{}\hyperlink{exercise-check-graph}{6} for the function \(\fe{g}{t}=\frac{1}{(e^t+4)^2}\). Use the formulas \(\fe{\fd{g}}{t}=\frac{-2e^t}{(e^t+4)^3}\) and \(\fe{\sd{g}}{t}=\frac{4e^t(e^t-2)}{(e^t+4)^4}\).%
+\item[7.]\hypertarget{exercise-624}{\null}Repeat \hyperlink{exercisegroup-sketch-first}{Exercise Group 1-6} for the function \(\fe{g}{t}=\frac{1}{(e^t+4)^2}\). Use the formulas \(\fe{\fd{g}}{t}=\frac{-2e^t}{(e^t+4)^3}\) and \(\fe{\sd{g}}{t}=\frac{4e^t(e^t-2)}{(e^t+4)^4}\).%
 \begin{figure}
 \centering
 {
@@ -6851,7 +6862,7 @@ Consider the function \(\fe{f}{x}=\frac{8x^2-8}{(2x-4)^2}\).%
 \typeout{Exercises 9.8.1 Exercises}
 \typeout{************************************************}
 \subsection[Exercises]{Exercises}\label{exercises-62}
-\begin{figure}
+\hypertarget{exercisegroup-122}{\null}\begin{figure}
 \centering
 \pushValignCaptionBottom[t]{minipage}{.50\textwidth-2.5em/2}{%
 \pgfplotsset{every axis/.append style={width=0.9\linewidth}}%
@@ -6928,7 +6939,7 @@ It turns out that there are formulas for these hyperbolic trigonometric function
 \exercise[11.]\hypertarget{exercise-635}{\null}Use the information you determined in \hyperlink{exercise-tanh-behavior}{Exercises 9}\textendash{}\hyperlink{exercise-tanh-limits}{10} to help you draw a freehand sketch of \(y=\fe{\tanh}{t}\).%
 \end{exercisegroup}
 \par\smallskip\noindent
-Consider the function \(k\) defined by \(\fe{k}{t}=\sqrt[3]{t^8}-256\sqrt[3]{t^2}\).%
+\hypertarget{exercisegroup-123}{\null}Consider the function \(k\) defined by \(\fe{k}{t}=\sqrt[3]{t^8}-256\sqrt[3]{t^2}\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[12.]\hypertarget{exercise-636}{\null}What are the critical numbers of \(k\)?  Remember to show all relevant work!  Remember that your formula for \(\fe{\fd{k}}{t}\) needs to be a single, completely factored, fraction!%
@@ -6936,7 +6947,7 @@ Consider the function \(k\) defined by \(\fe{k}{t}=\sqrt[3]{t^8}-256\sqrt[3]{t^2
 \exercise[14.]\hypertarget{exercise-638}{\null}State each local minimum and maximum point on \(k\).%
 \end{exercisegroup}
 \par\smallskip\noindent
-Consider the function \(f\) defined by \(\fe{f}{x}=\fe{\cos^2}{x}+\fe{\sin}{x}\) over the restricted domain \(\cinterval{0}{2\pi}\).%
+\hypertarget{exercisegroup-124}{\null}Consider the function \(f\) defined by \(\fe{f}{x}=\fe{\cos^2}{x}+\fe{\sin}{x}\) over the restricted domain \(\cinterval{0}{2\pi}\).%
 \par
 \begin{exercisegroup}(1)
 \exercise[15.]\hypertarget{exercise-639}{\null}What are the critical numbers of \(f\)?  Remember to show all relevant work!  Remember that your formula for \(\fe{\fd{f}}{t}\) needs to be a single, completely factored, fraction!%
@@ -6948,7 +6959,7 @@ Consider the function \(f\) defined by \(\fe{f}{x}=\fe{\cos^2}{x}+\fe{\sin}{x}\)
 \item[18.]\hypertarget{exercise-642}{\null}Consider \(\fe{g}{t}=\frac{t+9}{t^3}\).  Find (and completely simplify) \(\fe{\sd{g}}{t}\) and state all numbers where \(\fe{\sd{g}}{t}\) is zero or undefined.  Then construct a concavity table for \(g\) and state all of the inflection points on \(g\).%
 \par\smallskip
 \end{exerciselist}
-For each of the following functions build increasing/decreasing tables and concavity tables and then state all local minimum points, local maximum points, and inflection points on the function.  Also determine and state all horizontal asymptotes and vertical asymptotes for the function.   Finally, draw a detailed sketch of the function.%
+\hypertarget{exercisegroup-125}{\null}For each of the following functions build increasing/decreasing tables and concavity tables and then state all local minimum points, local maximum points, and inflection points on the function.  Also determine and state all horizontal asymptotes and vertical asymptotes for the function.   Finally, draw a detailed sketch of the function.%
 \par
 \begin{exercisegroup}(2)
 \exercise[19.]\hypertarget{exercise-643}{\null}\(\fe{f}{x}=\dfrac{x-3}{(x+2)^2}\)%
@@ -6970,17 +6981,17 @@ For each of the following functions build increasing/decreasing tables and conca
 The following laws allow you to replace a limit expression with an actual value.  For example, the expression \(\lim\limits_{t\to5}t\) can be replaced with the number \(5\), the expression \(\lim\limits_{t\to7^{-}}6\) can be replaced with the number \(6\), and the expression \(\lim\limits_{z\to\infty}\frac{12}{e^z}\) can be replaced with the number \(0\).%
 \par
 In all cases both \(a\) and \(C\) represent real numbers.%
-\begin{theorem}[Limit Law R1]\label{llr1}
+\begin{theorem*}[Limit Law R1]\label{llr1}
 \begin{gather*}
 \lim_{x\to a}x=\lim_{x\to a^{-}}x=\lim_{x\to a^{+}}x=a
 \end{gather*}%
-\end{theorem}
-\begin{theorem}[Limit Law R2]\label{llr2}
+\end{theorem*}
+\begin{theorem*}[Limit Law R2]\label{llr2}
 \begin{gather*}
 \lim_{x\to a}C=\lim_{x\to a^{-}}C=\lim_{x\to a^{+}}C=\lim_{x\to \infty}C=\lim_{x\to -\infty}C=C
 \end{gather*}%
-\end{theorem}
-\begin{theorem}[Limit Law R3]\label{llr3}
+\end{theorem*}
+\begin{theorem*}[Limit Law R3]\label{llr3}
 \begin{align*}
 \lim_{x\to \infty}\fe{f}{x}=\infty&\implies\lim_{x\to \infty}\frac{C}{\fe{f}{x}}=0&\lim_{x\to \infty}\fe{f}{x}=-\infty&\implies\lim_{x\to \infty}\frac{C}{\fe{f}{x}}=0
 \end{align*}%
@@ -6988,7 +6999,7 @@ In all cases both \(a\) and \(C\) represent real numbers.%
 \begin{align*}
 \lim_{x\to -\infty}\fe{f}{x}=\infty&\implies\lim_{x\to -\infty}\frac{C}{\fe{f}{x}}=0&\lim_{x\to -\infty}\fe{f}{x}=-\infty&\implies\lim_{x\to -\infty}\frac{C}{\fe{f}{x}}=0
 \end{align*}%
-\end{theorem}
+\end{theorem*}
 \typeout{************************************************}
 \typeout{Paragraphs  Infinite Limit Laws: Limits as the output increases or decreases without bound }
 \typeout{************************************************}
@@ -7007,29 +7018,29 @@ The following laws allow you to replace a limit expression with equivalent limit
 \emph{Limit Laws A1\textendash{}A6 are valid if and only if every limit in the equation exists.}%
 \par
 In all cases \(a\) can represent a real number, a real number from the left, a real number from the right, the symbol \(\infty\), or the symbol \(-\infty\).%
-\begin{theorem}[Limit Law A1]\label{lla1}
+\begin{theorem*}[Limit Law A1]\label{lla1}
 \(\lim\limits_{x\to a}\left(\fe{f}{x}+\fe{g}{x}\right)=\lim\limits_{x\to a}\fe{f}{x}+\lim\limits_{x\to a}\fe{g}{x}\)%
-\end{theorem}
-\begin{theorem}[Limit Law A2]\label{lla2}
+\end{theorem*}
+\begin{theorem*}[Limit Law A2]\label{lla2}
 \(\lim\limits_{x\to a}\left(\fe{f}{x}-\fe{g}{x}\right)=\lim\limits_{x\to a}\fe{f}{x}-\lim\limits_{x\to a}\fe{g}{x}\)%
-\end{theorem}
-\begin{theorem}[Limit Law A3]\label{lla3}
+\end{theorem*}
+\begin{theorem*}[Limit Law A3]\label{lla3}
 \(\lim\limits_{x\to a}\left(C\fe{f}{x}\right)=C\lim\limits_{x\to a}\fe{f}{x}\)%
-\end{theorem}
-\begin{theorem}[Limit Law A4]\label{lla4}
+\end{theorem*}
+\begin{theorem*}[Limit Law A4]\label{lla4}
 \(\lim\limits_{x\to a}\left(\fe{f}{x}\cdot\fe{g}{x}\right)=\lim\limits_{x\to a}\fe{f}{x}\cdot\lim\limits_{x\to a}\fe{g}{x}\)%
-\end{theorem}
-\begin{theorem}[Limit Law A5]\label{lla5}
+\end{theorem*}
+\begin{theorem*}[Limit Law A5]\label{lla5}
 \(\lim\limits_{x\to a}\frac{\fe{f}{x}}{\fe{g}{x}}=\frac{\lim\limits_{x\to a}\fe{f}{x}}{\lim\limits_{x\to a}\fe{g}{x}}\) if and only if \(\lim\limits_{x\to a}\fe{g}{x}\neq0\)%
-\end{theorem}
-\begin{theorem}[Limit Law A6]\label{lla6}
+\end{theorem*}
+\begin{theorem*}[Limit Law A6]\label{lla6}
 \(\lim\limits_{x\to a}\fe{f}{\fe{g}{x}}=\fe{f}{\lim\limits_{x\to a}\fe{g}{x}}\) when \(f\) is continuous at \(\lim\limits_{x\to a}\fe{g}{x}\)%
-\end{theorem}
-\begin{theorem}[Limit Law A7]\label{lla7}
+\end{theorem*}
+\begin{theorem*}[Limit Law A7]\label{lla7}
 If there exists an open interval centered at \(a\) over which \(\fe{f}{x}=\fe{g}{x}\) for \(x\neq a\), then \(\lim\limits_{x\to a}\fe{f}{x}=\lim\limits_{x\to a}\fe{g}{x}\) (provided that both limits exist).%
 \par
 Additionally, if there exists an open interval centered at \(a\) over which \(\fe{f}{x}=\fe{g}{x}\) for \(x\neq a\), then \(\lim\limits_{x\to a}\fe{f}{x}=\infty\) if and only if \(\lim\limits_{x\to a}\fe{g}{x}=\infty\), and, similarly, \(\lim\limits_{x\to a}\fe{f}{x}=-\infty\) if and only if \(\lim\limits_{x\to a}\fe{g}{x}=-\infty\).%
-\end{theorem}
+\end{theorem*}
 \typeout{************************************************}
 \typeout{Paragraphs  Rational Limit Forms}
 \typeout{************************************************}
@@ -7081,7 +7092,7 @@ There are other indeterminate limit forms, although the two mentioned here are t
 \typeout{Appendix B Derivative Formulas}
 \typeout{************************************************}
 \chapter[Derivative Formulas]{Derivative Formulas}\label{appendix-derivative-formulas}
-\(k\), \(a\), and \(n\) represent constants; \(u\) and \(y\) represent funcitons of \(x\).%
+\(k\), \(a\), and \(n\) represent constants; \(u\) and \(y\) represent functions of \(x\).%
 \begin{table}
 \centering
 \caption{\label{table-53}}
@@ -7125,27 +7136,27 @@ Basic Formulas&Chain Rule Format&Implicit Derivative Format\\
 \end{tabular}
 }%
 \end{table}
-\begin{theorem}[Constant Factor Rule of Differentiation]\label{theorem-11}
+\begin{theorem*}[Constant Factor Rule of Differentiation]\label{theorem-11}
 \[\lzoo{x}{k\fe{f}{x}}=k\lzoo{x}{\fe{f}{x}}\]%
 \par
 Alternatively, if \(y=\fe{f}{x}\), then \(\lzoo{x}{ky}=k\lz{y}{x}\).%
-\end{theorem}
-\begin{theorem}[Sum/Difference Rule of Differentiation]\label{theorem-12}
+\end{theorem*}
+\begin{theorem*}[Sum/Difference Rule of Differentiation]\label{theorem-12}
 \[\lzoo{x}{\fe{f}{x}\pm\fe{g}{x}}=\lzoo{x}{\fe{f}{x}}\pm\lzoo{x}{\fe{g}{x}}\]%
-\end{theorem}
-\begin{theorem}[Product Rule of Differentiation]\label{theorem-13}
+\end{theorem*}
+\begin{theorem*}[Product Rule of Differentiation]\label{theorem-13}
 \[\lzoo{x}{\fe{f}{x}\cdot\fe{g}{x}}=\lzoo{x}{\fe{f}{x}}\cdot\fe{g}{x}+\fe{f}{x}\cdot\lzoo{x}{\fe{g}{x}}\]%
-\end{theorem}
-\begin{theorem}[Quotient Rule of Differentiation]\label{theorem-14}
+\end{theorem*}
+\begin{theorem*}[Quotient Rule of Differentiation]\label{theorem-14}
 \[\lzoo{x}{\frac{\fe{f}{x}}{\fe{g}{x}}}=\frac{\lzoo{x}{\fe{f}{x}}\cdot\fe{g}{x}-\fe{f}{x}\cdot\lzoo{x}{\fe{g}{x}}}{\left[\fe{g}{x}\right]^2}\]%
-\end{theorem}
-\begin{theorem}[Chain Rule of Differentiation]\label{theorem-15}
+\end{theorem*}
+\begin{theorem*}[Chain Rule of Differentiation]\label{theorem-15}
 \[\lzoo{x}{\fe{f}{\fe{g}{x}}}=\fe{\fd{f}}{\fe{g}{x}}\cdot\fe{\fd{g}}{x}\]%
 \par
 Alternatively, if \(u=\fe{g}{x}\), then \(\lzoo{x}{\fe{f}{u}}=\fe{\fd{f}}{u}\cdot\lzoo{x}{u}\).%
 \par
 Alternatively, if \(y=\fe{f}{u}\), where \(u=\fe{g}{x}\), then \(\lz{y}{x}=\lz{y}{u}\cdot\lz{u}{x}\).%
-\end{theorem}
+\end{theorem*}
 \typeout{************************************************}
 \typeout{Appendix C Some Useful Rules of Algebra}
 \typeout{************************************************}
@@ -7162,7 +7173,7 @@ Alternatively, if \(y=\fe{f}{u}\), where \(u=\fe{g}{x}\), then \(\lz{y}{x}=\lz{y
 \typeout{************************************************}
 \typeout{Activity .1 Solutions to Supplemental Exercises}
 \typeout{************************************************}
-\chapter[Solutions to Supplemental Exercises]{Solutions to Supplemental Exercises}\label{section-63}
+\chapter[Solutions to Supplemental Exercises]{Solutions to Supplemental Exercises}\label{supplemental-solutions}
 \subsection*{1.4.1 }
 \noindent\textbf{1.}\quad{}The difference quotient for \(z\) is \begin{align*}
 \frac{\fe{z}{x+h}-\fe{z}{x}}{h}&=\frac{\left[2+4(x+h)-(x+h)^2\right]-\left[2+4x-x^2\right]}{h}\\
@@ -7278,7 +7289,7 @@ Checking:\begin{align*}
 \par\smallskip
 \noindent\textbf{13.}\quad{}\(\frac{\fe{v}{7.5}-\fe{v}{0}}{7.5-0}=-13\frac{1}{3}\). This value tells us that during the first \SI{7.5}{\second} of descent, the average rate of change in the coaster's velocity is \(-13\frac{1}{3}\,\frac{\text{ft/s}}{\text{s}}\).  In other words, \emph{on average}, with each passing second the velocity is \(13\frac{1}{3}\,\text{ft}{s}\) less than it was the preceding second.  We could also say that the average acceleration experienced by the coaster over the first \SI{7.5}{\second} of descent is \(-13\frac{1}{3}\,\frac{\text{ft/s}}{\text{s}}\).%
 \par\smallskip
-\noindent\textbf{14.}\quad{}\(\frac{\fe{h}{3}-\fe{h}{1.5}}{3-1.5}=0\). This value tells us that the average velocity experienced by the ball between the 1.5th second of play and the third second of play is \SI{0}{\meter\per\second}.  Please note that this does not imply that the ball doesn’t move; it simply means that the ball is at the same elevation at the two times.%
+\noindent\textbf{14.}\quad{}\(\frac{\fe{h}{3}-\fe{h}{1.5}}{3-1.5}=0\). This value tells us that the average velocity experienced by the ball between the 1.5th second of play and the third second of play is \SI{0}{\meter\per\second}.  Please note that this does not imply that the ball doesn't move; it simply means that the ball is at the same elevation at the two times.%
 \par\smallskip
 \noindent\textbf{15.}\quad{}\(\frac{\fe{P}{29}-\fe{P}{1}}{29-1}=-0.1\). This value tells us that between the first swing and the 29th swing the average rate of change in the pendulum's period is \(-0.1\frac{\text{s}}{\text{swing}}\).  In other words, \emph{on average}, with each passing swing the period decreases by a tenth of a second.%
 \par\smallskip
@@ -8977,7 +8988,7 @@ t&=0&&
 &=\frac{2}{e^t-e^{-t}}&\fe{\tanh}{t}&=\frac{e^t+e^{-t}}{e^t-e^{-t}}
 \end{align*}%
 \par\smallskip
-\noindent\textbf{8.}\quad{}If the hyperbolic trig funcitons behave similarly to the sircular trig functions, we would expect \(\lzoo{t}{\fe{\tanh}{t}}=\fe{\sech^2}{t}\). Let's see:\begin{align*}
+\noindent\textbf{8.}\quad{}If the hyperbolic trig functions behave similarly to the sircular trig functions, we would expect \(\lzoo{t}{\fe{\tanh}{t}}=\fe{\sech^2}{t}\). Let's see:\begin{align*}
 \lzoo{t}{\fe{\tanh}{t}}&=\lzoo{t}{\frac{\fe{\sinh}{t}}{\fe{\cosh}{t}}}\\
 &=\frac{\lzoo{t}{\fe{\sinh}{t}}\cdot\fe{\cosh}{t}-\fe{\sinh}{t}\cdot\lzoo{t}{\fe{\cosh}{t}}}{\fe{\cosh^2}{t}}\\
 &=\frac{\fe{\cosh}{t}\cdot\fe{\cosh}{t}-\fe{\sinh}{t}\cdot\fe{\sinh}{t}}{\fe{\cosh^2}{t}}\\

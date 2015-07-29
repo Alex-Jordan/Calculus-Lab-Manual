@@ -10,10 +10,16 @@
     \usetikzlibrary{3d,calc}
     \usepackage{xltxtra}
 
+    % curve, dot, and graph custom styles
+    \pgfplotsset{pccplot/.style={color=red,mark=none,line width=1pt,<->,solid}} % primary style for curves
+    \pgfplotsset{asymptote/.style={color=gray,mark=none,line width=1pt,<->,dashed}}
+    \pgfplotsset{soldot/.style={color=red,only marks,mark=*}}
+    \pgfplotsset{holdot/.style={color=red,fill=white,only marks,mark=*}}
+    \pgfplotsset{blankgraph/.style={xmin=-10,xmax=10,ymin=-10,ymax=10,axis line style= {-, draw opacity=0 },axis lines=box,major tick length=0mm,xtick={-10,-9,...,10},ytick={-10,-9,...,10},grid=major,yticklabels={,,},xticklabels={,,},minor xtick=,minor ytick=,xlabel={},ylabel={},width=0.75\textwidth,grid style={dotted,black}}}
     
-    % cycle list- truly awesome; see section 4.6.7, pg 129 of pgfplots
+    % cycle list of plot styles for graphs with multiple plots
     \pgfplotscreateplotcyclelist{pccstylelist}{%
-        color=red,mark=none,line width=1pt,<->,solid\\%
+        pccplot\\%
         color=blue,mark=none,line width=1pt,<->,dashdotted\\%
         color=gray,mark=none,line width=1pt,<->,dashdotdotted\\%
     }
@@ -24,44 +30,34 @@
         axis line style={<->}, % arrows on the axis
         xlabel={$x$},          % default put x on x-axis
         ylabel={$y$},          % default put y on y-axis
-        xmin = -7,
-        xmax = 7,
-        ymin = -7,
-        ymax = 7,
-        xtick = {-6,-4,...,6},
-        ytick = {-6,-4,...,6},
-        minor xtick = {-7,-6,...,7},
-        minor ytick = {-7,-6,...,7},
-        scale only axis,       % otherwise width won't be as intended: http://tex.stackexchange.com/questions/36297/pgfplots-how-can-i-scale-to-text-width
+        xmin = -7,xmax = 7,    % most graphs have this window
+        ymin = -7,ymax = 7,    % most graphs have this window
+        xtick = {-6,-4,...,6}, % fix ticks 
+        ytick = {-6,-4,...,6}, % fix ticks  
+        minor xtick = {-7,-6,...,7}, % fix ticks
+        minor ytick = {-7,-6,...,7}, % fix ticks
+        scale only axis,       % don't factor in axis and tick labels for width= and height=
         cycle list name=pccstylelist,
-        %tick label style={font=\small},
-        %label style={font=\small},
+        % tick label style={font=\small},
+        % label style={font=\small},
         legend cell align=left,
-        %legend style={font=\tiny},
-        width=0.4\textwidth,
-        grid=minor,
-        grid style={dotted,gray!90},
-        every node near coord/.append style={
-            %font=\small
-        },
+        % legend style={font=\tiny},
+        width = 0.4\textwidth,
+        grid = minor,
+        grid style = {dotted,gray!90},
+        %every node near coord/.append style={
+        %    font=\small
+        %},
     }}
 
     %\tikzset{axisnode/.style={font=\tiny,text=black}}
-
-    % line style
-    \pgfplotsset{pccplot/.style={color=red,mark=none,line width=1pt,<->}} % this is pretty redundant in most cases now that cycle list is implemented
-    \pgfplotsset{asymptote/.style={color=gray,mark=none,line width=1pt,<->,dashed}}
-    \pgfplotsset{soldot/.style={color=red,only marks,mark=*}}
-    \pgfplotsset{holdot/.style={color=red,fill=white,only marks,mark=*}}
-    \pgfplotsset{blankgraph/.style={xmin=-10,xmax=10,ymin=-10,ymax=10,axis line style= {-, draw opacity=0 },axis lines=box,major tick length=0mm,xtick={-10,-9,...,10},ytick={-10,-9,...,10},grid=major,yticklabels={,,},xticklabels={,,},minor xtick=,minor ytick=,xlabel={},ylabel={},width=0.75\textwidth,grid style={dotted,black}}}
-
 
     % arrow style
     \tikzset{>=stealth}
 
     % framing the graphs
     \pgfplotsset{framed/.style={axis background/.style ={draw=gray}}}
-    % next line is a bit more colourful
+    % next line is a bit more colorful
     %\pgfplotsset{framed/.style={axis background/.style ={draw=gray,fill=yellow!20,rounded corners=3ex}}}
 
     

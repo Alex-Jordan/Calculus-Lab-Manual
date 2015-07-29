@@ -174,7 +174,7 @@
             </introduction>
             <exercise>
                 <statement>
-                    <p><m>y=\frac{x\fe{\sin}{x}}{\sqrt{x-1}}</m></p>
+                    <p><m>y=\dfrac{x\fe{\sin}{x}}{\sqrt{x-1}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -195,7 +195,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>y=\frac{e^{2x}}{\fe{\sin^4}{x}\sqrt[4]{x^5}}</m></p>
+                    <p><m>y=\dfrac{e^{2x}}{\fe{\sin^4}{x}\sqrt[4]{x^5}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -217,7 +217,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>y=\frac{\fe{\ln}{4x^3}}{x^5\fe{\ln}{x}}</m></p>
+                    <p><m>y=\dfrac{\fe{\ln}{4x^3}}{x^5\fe{\ln}{x}}</m></p>
                 </statement>
                 <solution>
                     <p><md>

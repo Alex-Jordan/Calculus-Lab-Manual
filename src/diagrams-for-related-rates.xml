@@ -151,7 +151,7 @@
     </example>
 
     <exercises>
-        <exercisegroup>
+        <exercisegroup xml:id="exercisegroup-related-rates-using-diagrams">
             <introduction>
                 <p>Three related rates problems are stated below. Each of the problems can be modeled using a right triangle. The sole task in this problem is to identify which pieces of the triangle correspond to quantity-variables and which piece of the triangle (if any) remains constant as the other pieces change.</p>
                 <p>For each problem, you need to identify which two or three pieces of the triangle correspond to quantity-variables and which pieces remain constant or are not relevant. For each problem, draw a right triangle and label the pieces appropriately (finally a <acro>D</acro> for Diagram). When you are done, any given triangle should either have two pieces labeled as variables and one piece labeled with a constant value or three pieces labeled as variables.</p>
@@ -175,9 +175,9 @@
         </exercisegroup>
         <exercise>
             <statement>
-                <p>Go ahead and finish the three problems stated in <xref autoname="plural" ref="exercise-triangle-first"/><ndash/><xref autoname="no" ref="exercise-triangle-last"/>. Remember to complete each step in the problems solving process.</p>
+                <p>Go ahead and finish the three problems stated in <xref ref="exercisegroup-related-rates-using-diagrams"/>. Remember to complete each step in the problems solving process.</p>
                 <ol>
-                    <li>Draw a properly labeled variable diagram. (<acro>D</acro>) Note that you completed this step while working <xref autoname="plural" ref="exercise-triangle-first"/><ndash/><xref autoname="no" ref="exercise-triangle-last"/>.</li>
+                    <li>Draw a properly labeled variable diagram. (<acro>D</acro>) Note that you completed this step while working <xref ref="exercisegroup-related-rates-using-diagrams"/>.</li>
                     <li>Make a variable definition table. Include each variable type (quantity, rate, and time). Include the unit for each variable (<acro>R</acro>)</li>
                     <li>Write down an equation that relates the two quantity-variables. (<acro>E</acro>)</li>
                     <li>Differentiate both sides of the equation you just wrote with respect to <m>t</m>. Simplify the result. This equation is called the <term>related rates equation</term>. (<acro>D</acro>)</li>

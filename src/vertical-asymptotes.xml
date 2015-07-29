@@ -122,7 +122,7 @@
             </statement>
         </exercise>
 
-        <exercisegroup>
+        <exercisegroup xml:id="exercisegroup-hear-me">
             <introduction>
                 <p>Hear me, and hear me loud<ellipsis/><m>\infty</m> <em>does not exist</em>. This, in part, is why we cannot apply <xref autoname="title" ref="llr1"/> to an expression like <m>\lim\limits_{x\to\infty}x</m> to see that <m>\lim\limits_{x\to\infty}x=\infty</m>. When we write, say, <m>\lim\limits_{x\to7}x=7</m>, we are replacing the limit, we are replacing the limit expression <em>with its value</em><mdash/>that's what the replacement laws are all about! When we write <m>\lim\limits_{x\to\infty}x=\infty</m>, we are not replacing the limit expression with a value! We are explicitly saying that the limit has no value (<ie/> does not exist) as well as saying the reason the limit does not exist. The limit laws can only be applied when all of the limits in the equation exist. With this in mind, discuss and decide whether each of the following equations are <em>true</em> or <em>false</em>.</p> 
             </introduction>

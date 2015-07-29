@@ -10,7 +10,7 @@
 <section xml:id="section-simplification">
     <title>Simplification</title>
 
-    <p>In <xref autoname="plural" ref="unsimplified-product-first"/><ndash/><xref autoname="no" ref="unsimplified-product-last"/> from <xref ref="section-product-rule"/> and <xref autoname="plural" ref="unsimplified-quotient-first"/><ndash/><xref autoname="no" ref="unsimplified-quotient-last"/> from <xref ref="section-quotient-rule"/> you applied the product and quotient rules to expressions where the derivative could have been found much more quickly had you simplified the expression before taking the derivative.  For example, while you can find the correct derivative formula using the quotient rule when working problem <xref ref="unsimplified-quotient-last"/>, the derivative can be found much more quickly if you simplify the expression before applying the rules of differentiation. This is illustrated in <xref ref="example-simplify-first"/>.</p>
+    <p>In <xref ref="exercisegroup-unsimplified-product"/> from <xref ref="section-product-rule"/> and <xref ref="exercisegroup-unsimplified-quotient"/> from <xref ref="section-quotient-rule"/> you applied the product and quotient rules to expressions where the derivative could have been found much more quickly had you simplified the expression before taking the derivative.  For example, while you can find the correct derivative formula using the quotient rule when working problem <xref ref="unsimplified-quotient-last"/>, the derivative can be found much more quickly if you simplify the expression before applying the rules of differentiation. This is illustrated in <xref ref="example-simplify-first"/>.</p>
 
     <example xml:id="example-simplify-first"> 
         <p><md>
@@ -47,17 +47,17 @@
             </introduction>
             <exercise>
                 <statement>
-                    <p><m>y=\frac{4x^{12}-5x^4+3x^2}{x^4}</m></p>
+                    <p><m>y=\dfrac{4x^{12}-5x^4+3x^2}{x^4}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{g}{x}=\frac{-4\fe{\sin}{x}}{\fe{\cos}{x}}</m></p>
+                    <p><m>\fe{g}{x}=\dfrac{-4\fe{\sin}{x}}{\fe{\cos}{x}}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{h}{x}=\frac{4-x^6}{3x^{-2}}</m></p>
+                    <p><m>\fe{h}{x}=\dfrac{4-x^6}{3x^{-2}}</m></p>
                 </statement>
             </exercise>
             <exercise>
@@ -72,7 +72,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{T}{x}=\frac{\fe{\ln}{x}}{\fe{\ln}{x^2}}</m></p>
+                    <p><m>\fe{T}{x}=\dfrac{\fe{\ln}{x}}{\fe{\ln}{x^2}}</m></p>
                 </statement>
             </exercise>
         </exercisegroup>

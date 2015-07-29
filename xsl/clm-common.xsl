@@ -9,6 +9,8 @@
 <xsl:param name="exercise.backmatter.answer" select="'yes'" />
 <xsl:param name="exercise.backmatter.statement" select="'no'" />
 
+<!-- Make it so that refereces to Limit Laws and Derivative Rules are nice -->
+<xsl:template match="appendix//theorem" mode="serial-number" />
 
 </xsl:stylesheet>
 

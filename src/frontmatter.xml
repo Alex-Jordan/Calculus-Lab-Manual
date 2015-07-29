@@ -35,7 +35,7 @@
             <year>2012<ndash />2015</year>
             <holder>Portand Community College</holder>
             <minilicense>Creative Commons BY-SA</minilicense>
-            <shortlicense><p>This work is licensed under the Creative Commons BY-SA License, Version 4.0.</p>
+            <shortlicense><p>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</p>
             <p><image source="../images/by-sa.eps"/></p></shortlicense>
             <creativecommons BY="yes" NC="yes" ubiquity="medium"/> 
         </copyright>
@@ -52,6 +52,17 @@
 
 	</acknowledgement>
 
+        <preface xml:id="versions">
+            <title>HTML and PDF</title>
+
+            <p>This lab manual has several synchronous versions that offer different features. The essential content of each version is the same as for all others.</p>
+            <ul>
+                <li><p>A <q>for-printing</q> PDF is available at <url href="spot.pcc.edu/math/clm/clm-print.pdf"/>. This version is designed to be printed, not read on a screen. To save on printing expense, this verison is mostly black-and-white, and only offers short answers to the supplemental exercises (as opposed to full solutions).</p></li>
+                <li><p>A <q>for-printing-with-color</q> PDF is available at <url href="spot.pcc.edu/math/clm/clm-print-color.pdf"/>. This version is like the above, except links and graphs retain their color.</p></li>
+                <li><p>A <q>for-screen-reading</q> PDF is available at <url href="spot.pcc.edu/math/clm/clm-screen.pdf"/>. This version is intended to be stored on an electronic device and read when an internet connection is unavailable. It has page dimensions compatible with most laptops and tablets. The pages are not numbered since the page numbering would be inconsistenet with the print versions, so this version should be navigated by section numbering. Also because the page dimensions are customized for electronic devices, this version would look strange printed on standard paper. Since this version is not intended to be printed, full solutions to the supplemental problems are offered. When an internet connection is available, it will be nicer to use the web version below.</p></li>
+                <li><p>An web version is available at <url href="spot.pcc.edu/math/clm"/>. Whenever there is an internet connection, and you do not prefer to have a print copy, this version is most recommended. The web version offers full walkthrough solutions to supplemental problems. More importantly, it offers interactive elements and easier navigation than any of the above PDFs could offer.</p></li>
+            </ul>
+        </preface>
 
         <preface xml:id="to-the-student">
             <title>To the Student</title>
@@ -96,48 +107,48 @@
                     </row>
                     <row bottom="medium">
                         <cell>1</cell>
-                        <cell><xref autoname="title" ref="section-velocity"/><ndash/><xref autoname="title" ref="section-limits"/></cell>
+                        <cell><xref autoname="title" ref="section-velocity"/> through<br /><xref autoname="title" ref="section-limits"/></cell>
                         <cell><xref autoname="title" ref="rates-of-change-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="medium">
                         <cell>2</cell>
-                        <cell><xref autoname="title" ref="section-limit-laws"/><ndash/><xref autoname="title" ref="section-piecewise-defined-functions"/></cell>
+                        <cell><xref autoname="title" ref="section-limit-laws"/> through<br /><xref autoname="title" ref="section-piecewise-defined-functions"/></cell>
                         <cell><xref autoname="title" ref="limits-and-continuity-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="medium">
                         <cell>3</cell>
-                        <cell><xref autoname="title" ref="section-instantaneous-velocity"/><ndash/><xref autoname="title" ref="section-derivative-units"/></cell>
+                        <cell><xref autoname="title" ref="section-instantaneous-velocity"/> through<br /><xref autoname="title" ref="section-derivative-units"/></cell>
                         <cell><xref autoname="title" ref="introduction-first-derivative-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="medium">
                         <cell>4</cell>
-                        <cell><xref autoname="title" ref="section-graph-features"/><ndash/><xref autoname="title" ref="section-higher-order-derivatives"/></cell>
+                        <cell><xref autoname="title" ref="section-graph-features"/> through<br /><xref autoname="title" ref="section-higher-order-derivatives"/></cell>
                         <cell><xref autoname="title" ref="functions-derivatives-antiderivatives-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="medium">
                         <cell>5</cell>
-                        <cell><xref autoname="title" ref="section-antiderivatives"/><ndash/><xref autoname="title" ref="section-graphical-features-from-derivatives"/></cell>
+                        <cell><xref autoname="title" ref="section-antiderivatives"/> through<br /><xref autoname="title" ref="section-graphical-features-from-derivatives"/></cell>
                         <cell><xref autoname="title" ref="functions-derivatives-antiderivatives-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="medium">
                         <cell>6</cell>
-                        <cell><xref autoname="title" ref="section-leibniz-notation"/><ndash/><xref autoname="title" ref="section-derivative-formulas-and-function-behavior"/></cell>
+                        <cell><xref autoname="title" ref="section-leibniz-notation"/> through<br /><xref autoname="title" ref="section-derivative-formulas-and-function-behavior"/></cell>
                         <cell><xref autoname="title" ref="derivative-formulas-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="medium">
                         <cell>7</cell>
-                        <cell><xref autoname="title" ref="section-introduction-to-the-chain-rule"/><ndash/><xref autoname="title" ref="section-chain-rule-and-leibniz"/></cell>
+                        <cell><xref autoname="title" ref="section-introduction-to-the-chain-rule"/> through<br /><xref autoname="title" ref="section-chain-rule-and-leibniz"/></cell>
                         <cell><xref autoname="title" ref="chain-rule-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="medium">
                         <cell>8</cell>
-                        <cell><xref autoname="title" ref="section-general-implicit-differentiation"/><ndash/><xref autoname="title" ref="section-logarithmic-differentiation"/></cell>
+                        <cell><xref autoname="title" ref="section-general-implicit-differentiation"/> through<br /><xref autoname="title" ref="section-logarithmic-differentiation"/></cell>
                         <cell><xref autoname="title" ref="implicit-differentiation-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="major">
                         <cell>9, 10</cell>
-                        <cell><xref autoname="title" ref="section-introduction-related-rates"/><ndash/><xref autoname="title" ref="section-making-graphs"/></cell>
-                        <cell><xref autoname="title" ref="related-rates-supplementary-exercises"/>, <xref autoname="no" ref="critical-numbers-graphing-from-formulas-supplementary-exercises"/></cell>
+                        <cell><xref autoname="title" ref="section-introduction-related-rates"/> through<br /><xref autoname="title" ref="section-making-graphs"/></cell>
+                        <cell><xref autoname="title" ref="related-rates-supplementary-exercises"/>,<br /><xref autoname="title" ref="critical-numbers-graphing-from-formulas-supplementary-exercises"/></cell>
                     </row>
                     </tabular> 
         </preface>

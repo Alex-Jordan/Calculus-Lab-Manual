@@ -191,7 +191,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{x}=\frac{2}{x^5}</m></p>
+                    <p><m>\fe{f}{x}=\dfrac{2}{x^5}</m></p>
                 </statement>
                 <solution>
                     <p>We can write <m>\fe{f}{x}=2x^{-5}</m>, and use the power rule and the constant multiplier rule. We do not need the chain rule.</p>
@@ -235,7 +235,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{x}=\frac{\fe{\cos}{\pi x}}{\pi}</m></p>
+                    <p><m>\fe{f}{x}=\dfrac{\fe{\cos}{\pi x}}{\pi}</m></p>
                 </statement>
                 <solution>
                     <p>Division by <m>\pi</m> is the same as multiplication by <m>\frac{1}{\pi}</m>, so the constant multiplier rule will allow us to deal with the denominator. Otherwise, this is just like the previous exercise, where we do need the chain rule.</p>
@@ -389,7 +389,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{x}=\fe{\ln}{\frac{5}{xe^x}}</m></p>
+                    <p><m>\fe{f}{x}=\fe{\ln}{\dfrac{5}{xe^x}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -423,7 +423,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{x}=\fe{\ln}{\frac{e^{x+2}}{\sqrt{x+2}}}</m></p>
+                    <p><m>\fe{f}{x}=\fe{\ln}{\dfrac{e^{x+2}}{\sqrt{x+2}}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -489,7 +489,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{x}=\fe{\csc}{\frac{1}{\sqrt{x}}}</m></p>
+                    <p><m>\fe{f}{x}=\fe{\csc}{\dfrac{1}{\sqrt{x}}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -506,7 +506,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{x}=\frac{1}{\fe{\csc}{\sqrt{x}}}</m></p>
+                    <p><m>\fe{f}{x}=\dfrac{1}{\fe{\csc}{\sqrt{x}}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -523,7 +523,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{x}=\frac{\fe{\tan^{-1}}{2x}}{2}</m></p>
+                    <p><m>\fe{f}{x}=\dfrac{\fe{\tan^{-1}}{2x}}{2}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -539,7 +539,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{x}=x^3\fe{\sin}{\frac{x}{3}}</m></p>
+                    <p><m>\fe{f}{x}=x^3\fe{\sin}{\dfrac{x}{3}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -556,7 +556,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{x}=\frac{4}{\sqrt{\frac{3}{x^7}}}</m></p>
+                    <p><m>\fe{f}{x}=\dfrac{4}{\sqrt{\frac{3}{x^7}}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -572,7 +572,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{x}=\frac{e^{xe^x}}{x}</m></p>
+                    <p><m>\fe{f}{x}=\dfrac{e^{xe^x}}{x}</m></p>
                 </statement>
                 <solution>
                     <p><md>
@@ -608,7 +608,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{x}=\frac{\fe{\sin^5}{x}-\sqrt{\fe{\sin}{x}}}{\fe{\sin}{x}}</m></p>
+                    <p><m>\fe{f}{x}=\dfrac{\fe{\sin^5}{x}-\sqrt{\fe{\sin}{x}}}{\fe{\sin}{x}}</m></p>
                 </statement>
                 <solution>
                     <p><md>

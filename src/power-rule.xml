@@ -57,7 +57,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>z=\frac{1}{t^{7}}</m></p>
+                    <p><m>z=\dfrac{1}{t^{7}}</m></p>
                 </statement>
             </exercise>
             <exercise>
@@ -67,7 +67,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{h}{x}=\frac{1}{\sqrt{x}}</m></p>
+                    <p><m>\fe{h}{x}=\dfrac{1}{\sqrt{x}}</m></p>
                 </statement>
             </exercise>
         </exercisegroup>

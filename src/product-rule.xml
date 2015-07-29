@@ -64,7 +64,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>k=\frac{e^t\sqrt{t}}{2}</m></p>
+                    <p><m>k=\dfrac{e^t\sqrt{t}}{2}</m></p>
                 </statement>
             </exercise>
             <exercise>
@@ -78,7 +78,7 @@
                 </statement>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="3">
+        <exercisegroup cols="3" xml:id="exercisegroup-unsimplified-product">
             <introduction>
                 <p>Find each of the following derivatives <em>without first simplifying the formula</em>; that is, go ahead and use the product rule on the expression as written. Simplify each resultant derivative formula.  For each derivative, <em>check</em> your answer by simplifying the original expression and then taking the derivative of that simplified expression.</p> 
             </introduction>

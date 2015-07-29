@@ -83,7 +83,7 @@
             </exercise>
             <exercise xml:id="exercise-implicit-lambert">
                 <statement>
-                    <p><m>y=x\,e^x</m></p>
+                    <p><m>y=x\,e^y</m></p>
                 </statement>
             </exercise>
             <exercise xml:id="exercise-implicit-last">

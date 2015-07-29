@@ -13,7 +13,7 @@
     <p>Let's put it all together and produce some graphs.</p>
 
     <exercises>
-        <exercisegroup by="row">
+        <exercisegroup by="row" xml:id="exercisegroup-sketch-first">
             <introduction>
                 <p>Consider the function <m>\fe{f}{x}=\frac{8x^2-8}{(2x-4)^2}</m>.</p>
             </introduction>
@@ -66,7 +66,7 @@
         </exercisegroup>
         <exercise>
             <statement>
-                <p>Repeat <xref autoname="plural" ref="exercise-sketch-first-asymptotes"/><ndash/><xref autoname="no" ref="exercise-check-graph"/> for the function <m>\fe{g}{t}=\frac{1}{(e^t+4)^2}</m>. Use the formulas <m>\fe{\fd{g}}{t}=\frac{-2e^t}{(e^t+4)^3}</m> and <m>\fe{\sd{g}}{t}=\frac{4e^t(e^t-2)}{(e^t+4)^4}</m>.</p>
+                <p>Repeat <xref ref="exercisegroup-sketch-first"/> for the function <m>\fe{g}{t}=\frac{1}{(e^t+4)^2}</m>. Use the formulas <m>\fe{\fd{g}}{t}=\frac{-2e^t}{(e^t+4)^3}</m> and <m>\fe{\sd{g}}{t}=\frac{4e^t(e^t-2)}{(e^t+4)^4}</m>.</p>
                 <figure xml:id="figure-blank-for-graphing-2">
                     <caption><m>g</m></caption>
                     <image>

@@ -500,7 +500,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
         </exercisegroup>
         <exercisegroup>
             <introduction>
-                <p>For each statement in <xref autoname="plural" ref="exercise-function-statement-first"/><ndash/><xref ref="exercise-function-statement-last"/>, decide which of the following is true. </p>
+                <p>For each statement in <xref autoname="plural" ref="exercise-function-statement-first"/><ndash/><xref autoname="no" ref="exercise-function-statement-last"/>, decide which of the following is true. </p>
                 <ol cols="3">
                    <li>The statement is true regardless of the specific function <m>f</m>.</li>
                    <li>The statement is true for some functions and false for other functions. </li>
@@ -795,7 +795,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                 </table>
             </statement>
             <solution>
-                <table xml:id="table-derivative-relations-solution">
+                <table >
                     <tabular top="major">
                         <col halign="center" right="medium"/>
                         <col halign="center" right="medium"/>
@@ -838,7 +838,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                 </table>
             </solution>
             <answer>
-                <p>See <xref ref="table-derivative-relations-solution"/> in the solutions section.</p>
+                <p>See the solutions section.</p>
             </answer>
         </exercise>
         <exercisegroup cols="2">
