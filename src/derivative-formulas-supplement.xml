@@ -244,10 +244,11 @@
                     <mrow>&amp;=2\frac{\frac{1}{x}\cdot x^4-\fe{\ln}{x}\cdot4x^3}{x^8}</mrow>
                     <mrow>&amp;=2\frac{x^3-4\fe{\ln}{x}\cdot x^3}{x^8}</mrow>
                     <mrow>&amp;=2\frac{1-4\fe{\ln}{x}}{x^5}</mrow>
+                    <mrow>&amp;=\frac{2-8\fe{\ln}{x}}{x^5}</mrow>
                     </md></p>
                 </solution>
                 <answer>
-                    <p><m>2\frac{1-4\fe{\ln}{x}}{x^5}</m></p>
+                    <p><m>\frac{2-8\fe{\ln}{x}}{x^5}</m></p>
                 </answer>
             </exercise>
             <exercise>
@@ -505,10 +506,10 @@ formula stated above for the product of three functions.  The first application 
                     <p>Over what intervals is <m>\sd{f}</m> positive and over what intervals is <m>\sd{f}</m> negative?</p> 
                 </statement>
                 <solution>
-                    <p>This is essentially the same exercise as the previous exercise. <m>\sd{f}</m> is positive over <m>\ointerval{-\infty}{-8}</m> and <m>\ointerval{2}{\infty}</m>. <m>\sd{f}</m> is negative over <m>\ointerval{-8}{2}</m>.</p>
+                    <p>This is essentially the same exercise as the previous exercise. <m>\sd{f}</m> is positive over <m>\ointerval{-3}{\infty}</m>. <m>\sd{f}</m> is negative over <m>\ointerval{-\infty}{-3}</m>.</p>
                 </solution>
                 <answer>
-                    <p><m>\sd{f}</m> positive over <m>\ointerval{-\infty}{-8}</m> and <m>\ointerval{2}{\infty}</m>; negative over <m>\ointerval{-8}{2}</m></p>
+                    <p><m>\sd{f}</m> positive over <m>\ointerval{-3}{\infty}</m>; negative over <m>\ointerval{-\infty}{-3}</m></p>
                 </answer>
             </exercise>
             <exercise>

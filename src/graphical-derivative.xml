@@ -232,21 +232,17 @@
                                 \addplot+[
                                     variable=t,
                                     domain=0:32.75,
-                                    <->,
                                 ]({-0.2998*1.1^t},{(0.2998*1.1^t)/2+1/(6*(0.2998*1.1^t)^3)+1/6});
                                 \addplot+[
                                     variable=t,
                                     domain=0:33.957,
-                                    <->,
                                 ]({0.26726*1.1^t},{1/2-1/(2*(0.26726*1.1^t)^2)});
                                 \addplot+[asymptote,
-                                    domain=-7:7,
-                                    <->,
-                                ]{1/2};
+                                    domain=7:-7,
+                                ]{1/2} node[above right] {$y=\sfrac{1}{2}$};
                                 \addplot+[
                                     variable=t,
                                     domain=0:32.75,
-                                    <->,
                                 ]({0.2998*1.1^t},{(0.2998*1.1^t)/2+1/(6*(0.2998*1.1^t)^3)+1/6});
                             \end{axis}
                             \end{tikzpicture}]]>
@@ -332,16 +328,15 @@
                             \begin{axis}[]
                                 \addplot+[smooth,
                                     domain=-6.8:6.8,
-                                    <->,
                                 ]{2-atan((x-1)*sqrt(3))/30};
                                 \addplot[asymptote,
-                                    domain=-7:7,
-                                    <->,
-                                ]{5};
+                                    domain=0:7,
+                                    ->,
+                                ]{5} node[above left] {$y=5$};
                                 \addplot[asymptote,
-                                    domain=-7:7,
-                                    <->,
-                                ]{-1};
+                                    domain=0:-7,
+                                    ->,
+                                ]{-1} node[below right] {$y=-1$};
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>

@@ -34,7 +34,7 @@
                     <figure valign="bottom" xml:id="figure-first-limit">
                         <caption><m>f</m></caption>
                         <image xml:id="image-first-limit">
-                            <description>The graph of a discontinuous function.</description>
+                            <description>a graph of a discontinuous function; reading the graph left to right, the graph enters from the left with an upward slope until it reaches (-3,5), however there is a hole at (-4,2); from (-3,5), the graph slopes in a straight line downward to (1,-3), however the plot has a hole at (1,-3); additionally, there is a hole back at (-2,3), but the graph has a solid dot above that hole at (-2,6); back at x=1, a second piece of the graph begins from (1,-1) sloping upward to the right; this piece of the graph is not connected to the piece that ended just shy of (1,-3)</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[]
@@ -79,6 +79,7 @@
                     <figure xml:id="figure-second-limit" valign="top">
                         <caption><m>g</m></caption>
                         <image xml:id="image-second-limit">
+                            <description>a graph of a discontinuous function; reading the graph left to right, the graph enters from the left with an upward slope until it reaches (-2,5); a second, separated, piece of the graph begins at (-2,-3.5), except there is a hole right where it begins; the graph moves upward linearly until reaching (3,-1), except ther was a hole at (2,-1.5); from (3,-1), the curve enters a parabolic path, dipping down to a vertex at (4,-2) and then curving upward off to the right; however there is a hole at (5,-1), with a solid dot above the hole at (5,1)</description>
                             <description>A graph of a doscontinuous function.</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}

@@ -24,8 +24,8 @@
                                 \addplot+[samples=50,
                                     domain=-6.8:6.8,
                                 ]{atan((x-2)*2)/30-1};
-                                \addplot[asymptote,domain=-7:7]{2};
-                                \addplot[asymptote,domain=-7:7]{-4};
+                                \addplot[asymptote,->,domain=0:7]{2} node[above left] {$y=2$};
+                                \addplot[asymptote,->,domain=0:-7]{-4} node[below right] {$y=-4$};
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>
@@ -52,7 +52,7 @@
                             ]{2/(1+((x-2)*2)^2)*180/3.1415926*1/30};
                             \addplot[pccplot,domain=3:6.8,->,
                             ]{2/(1+((x-2)*2)^2)*180/3.1415926*1/30};
-                            \addplot[asymptote,domain=-7:7]{0};
+                            \addplot[asymptote,domain=7:-7]{0} node[above right] {$y=0$};
                         \end{axis}
                         \end{tikzpicture}]]>
                         </latex-image-code>
@@ -70,7 +70,7 @@
                             ]{2/(1+((x-2)*2)^2)*180/3.1415926*1/30};
                             \addplot[pccplot,domain=3:6.8,->,
                             ]{2/(1+((x-2)*2)^2)*180/3.1415926*1/30};
-                            \addplot[asymptote,domain=-7:7]{0};
+                            \addplot[asymptote,domain=7:-7]{0} node[above right] {$y=0$};
                         \end{axis}
                         \end{tikzpicture}]]>
                         </latex-image-code>
@@ -201,7 +201,7 @@
                                 variable=t, domain=-6.8:-1.3641449099,
                             ]({(-1.8/t)^2.5-3},{t});
                             \addplot[asymptote,
-                            ] coordinates {(-3,-7) (-3,7)};
+                            ] coordinates {(-3,7) (-3,-7)} node[above left] {\rotatebox{90}{$x=-3$}};
                             \addplot[pccplot,->,
                                 variable=t, domain=0.3941277444:6.8,
                             ]({-(3*t/2.459456236)^-1.5+2},{t});
@@ -209,7 +209,7 @@
                                 variable=t, domain=6.8:0.8198187453,
                             ]({(3*t/2.459456236)^-1.5+2},{t});
                             \addplot[asymptote,
-                            ] coordinates {(2,-7) (2,7)};
+                            ] coordinates {(2,7) (2,-7)} node[above left] {\rotatebox{90}{$x=2$}};
                             \addplot[pccplot,->,domain=3:6.8]{0.364864059*(x-5)*2};
                             \addplot[holdot] coordinates {(-1,-1.3641449099) (-1,0.3941277444) (3,0.8198187453) (3,-4*0.364864059)};
                         \end{axis}
@@ -232,7 +232,7 @@
                                 variable=t, domain=-6.8:-1.3641449099,
                             ]({(-1.8/t)^2.5-3},{t});
                             \addplot[asymptote,
-                            ] coordinates {(-3,-7) (-3,7)};
+                            ] coordinates {(-3,7) (-3,-7)} node[above left] {\rotatebox{90}{$x=-3$}};
                             \addplot[pccplot,->,
                                 variable=t, domain=0.3941277444:6.8,
                             ]({-(3*t/2.459456236)^-1.5+2},{t});
@@ -240,7 +240,7 @@
                                 variable=t, domain=6.8:0.8198187453,
                             ]({(3*t/2.459456236)^-1.5+2},{t});
                             \addplot[asymptote,
-                            ] coordinates {(2,-7) (2,7)};
+                            ] coordinates {(2,7) (2,-7)} node[above left] {\rotatebox{90}{$x=2$}};
                             \addplot[pccplot,->,domain=3:6.8]{0.364864059*(x-5)*2};
                             \addplot[holdot] coordinates {(-1,-1.3641449099) (-1,0.3941277444) (3,0.8198187453) (3,-4*0.364864059)};
                         \end{axis}
@@ -438,6 +438,17 @@
                 </solution>
                 <answer>
                     <p><xref autoname="no" ref="figure-decreasing-down"/>, <xref autoname="no" ref="figure-increasing-down"/>, <xref autoname="no" ref="figure-increasing-zero"/>, <xref autoname="no" ref="figure-decreasing-zero"/>, <xref autoname="no" ref="figure-flat"/></p>
+                </answer>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p>The first derivative of each of these functions <em>must</em> have a graph that is a straight line.</p>
+                </statement>
+                <solution>
+                    <p><xref autoname="no" ref="figure-increasing-zero"/>, <xref autoname="no" ref="figure-decreasing-zero"/>, <xref autoname="no" ref="figure-flat"/></p>
+                </solution>
+                <answer>
+                    <p><xref autoname="no" ref="figure-increasing-zero"/>, <xref autoname="no" ref="figure-decreasing-zero"/>, <xref autoname="no" ref="figure-flat"/></p>
                 </answer>
             </exercise>
         </exercisegroup>
@@ -1062,7 +1073,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                     <latex-image-code>
                     <![CDATA[\begin{tikzpicture}
                     \begin{axis}[]
-                        \addplot[asymptote] coordinates {(2,-7) (2,7)};
+                        \addplot[asymptote] coordinates {(2,7) (2,-7)} node[above left] {\rotatebox{90}{$x=2$}};
                         \addplot[pccplot,<-,domain=-6.8:-1] {-(x+1)^2/36+2.5};
                         \addplot[pccplot,->,domain=-1:1.6] {(x+1)^(ln(9)/ln(2.6))/2+2.5};
                         \addplot[pccplot,<-,domain=2.4:4] {2/(x-2)+2};
@@ -1077,7 +1088,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                     <latex-image-code>
                     <![CDATA[\begin{tikzpicture}
                     \begin{axis}[]
-                        \addplot[asymptote] coordinates {(2,-7) (2,7)};
+                        \addplot[asymptote] coordinates {(2,7) (2,-7)} node[above left] {\rotatebox{90}{$x=2$}};
                         \addplot[pccplot,<-,domain=-6.8:-1] {-(x+1)^2/36+2.5};
                         \addplot[pccplot,->,domain=-1:1.6] {(x+1)^(ln(9)/ln(2.6))/2+2.5};
                         \addplot[pccplot,<-,domain=2.4:4] {2/(x-2)+2};

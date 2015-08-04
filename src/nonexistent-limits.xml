@@ -36,8 +36,8 @@
                              ({2-1/sqrt(13)*1.1^t}, {-6.5+1/(1/sqrt(13)*1.1^t)^2});
                     \addplot[asymptote
                     ]coordinates{
-                        (2,-7)
-                        (2,7)};
+                        (2,7)
+                        (2,-7)} node[above left] {\rotatebox{90}{$x=2$}};
                 \end{axis}
                 \end{tikzpicture}]]>
                 </latex-image-code>
@@ -63,7 +63,7 @@
                     \addplot[asymptote
                     ]coordinates{
                         (4,-7)
-                        (4,7)};
+                        (4,7)} node[below left] {\roatebox{90}{$x=4$}};
                 \end{axis}
                 \end{tikzpicture}]]>
                 </latex-image-code>
@@ -87,8 +87,8 @@
                              ({-3-1/sqrt(13)*1.1^t}, {-6.5+1/(1/sqrt(13)*1.1^t)^2});
                     \addplot[asymptote
                     ]coordinates{
-                        (-3,-7)
-                        (-3,7)};
+                        (-3,7)
+                        (-3,-7)} node[above left] {\roatebox{90}{$x=-3$}};
                 \end{axis}
                 \end{tikzpicture}]]>
                 </latex-image-code>

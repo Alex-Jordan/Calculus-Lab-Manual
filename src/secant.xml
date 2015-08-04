@@ -20,7 +20,7 @@
         <figure xml:id="figure-secant" valign="top">
             <caption><m>f</m></caption>
             <image>
-                <description>an upside down parabola with vertex at (1,4) and x-intercepts at -1 and 3; a downward slanting line intersects it at (0,3) and (4,-5)</description>
+                <description>an upside down parabola with vertex at (1,4) and x-intercepts at -1 and 3; a downward slanting line intersects the parabola at (0,3) and (4,-5)</description>
                 <latex-image-code>
                 <![CDATA[\begin{tikzpicture}
                 \begin{axis}[]
@@ -92,7 +92,7 @@
                         <figure valign="top" xml:id="figure-secant-exercise">
                             <caption><m>g</m></caption>
                             <image xml:id="image-secant-exercise">
-                                <description>an upward opening parabola with vertex at (0,-5) and x-intercepts at a little less than -2 and a little greater than 2; an upward slanting line intersects it at (-2,-1) and (3,4)</description>
+                                <description>an upward opening parabola with vertex at (0,-5) and x-intercepts at a little less than -2 and a little greater than 2; an upward slanting line intersects the parabola at (-2,-1) and (3,4)</description>
                                 <latex-image-code>
                                 <![CDATA[\begin{tikzpicture}
                                 \begin{axis}[]

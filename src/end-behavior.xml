@@ -61,8 +61,8 @@
                                 \addplot[pccplot,samples=50,
                                     domain=-83.2/21.8:19.8,
                                 ]{(6*x^2-6*x-36)/(36-3*x-3*x^2)};
-                                \addplot[asymptote] coordinates {(-20,-2) (20,-2)};
-                                \addplot[asymptote] coordinates {(-4,-20) (-4,20)};
+                                \addplot[asymptote] coordinates {(20,-2) (-20,-2)} node[above right] {$y=-2$};
+                                \addplot[asymptote] coordinates {(-4,-20) (-4,20)} node[below left] {\rotatebox{90}{$x=-4$}};
                                 \addplot[holdot] coordinates {(3,-10/7)};
                             \end{axis}
                             \end{tikzpicture}]]>
@@ -90,8 +90,8 @@
                                 \addplot[pccplot,samples=50,
                                     domain=-134.8/23.8:19.8,
                                 ]{(16+4*x)/(6+x)};
-                                \addplot[asymptote] coordinates {(-20,4) (20,4)};
-                                \addplot[asymptote] coordinates {(-6,-20) (-6,20)};
+                                \addplot[asymptote] coordinates {(-20,4) (20,4)} node[above left] {$y=4$};
+                                \addplot[asymptote] coordinates {(-6,20) (-6,-20)} node[above left] {\rotatebox{90}{$x=-6$}};
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>
@@ -123,9 +123,9 @@
                                 \addplot[pccplot,samples=50,
                                     domain=10.03:19.8,
                                 ]{(-2*x+8)/(x^2-100)};
-                                \addplot[asymptote] coordinates {(-20,0) (20,0)};
-                                \addplot[asymptote] coordinates {(-10,-20) (-10,20)};
-                                \addplot[asymptote] coordinates {(10,-20) (10,20)};
+                                \addplot[asymptote] coordinates {(20,0) (-20,0)} node[above right] {$y=0$};
+                                \addplot[asymptote] coordinates {(-10,20) (-10,-20)} node[above left] {\rotatebox{90}{$x=-10$}};
+                                \addplot[asymptote] coordinates {(10,20) (10,-20)} node[above left] {\rotatebox{90}{$x=10$}};
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>
@@ -152,8 +152,8 @@
                                 \addplot[pccplot,samples=50,
                                     domain=45.6/16.8:19.8,
                                 ]{(3*x+6)/(x-2)};
-                                \addplot[asymptote] coordinates {(-20,3) (20,3)};
-                                \addplot[asymptote] coordinates {(2,-20) (2,20)};
+                                \addplot[asymptote] coordinates {(20,3) (-20,3)} node[above right] {$y=3$};
+                                \addplot[asymptote] coordinates {(2,20) (2,-20)} node[above right] {\rotatebox{-90}{$x=2$}};
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>
@@ -181,8 +181,8 @@
                             \addplot[pccplot,samples=50,
                                 domain=114/19.8:19.8,
                             ]{(15)/(x-5)};
-                            \addplot[asymptote] coordinates {(-20,0) (20,0)};
-                            \addplot[asymptote] coordinates {(5,-20) (5,20)};
+                            \addplot[asymptote] coordinates {(20,0) (-20,0)} node[above right] {$y=0$};
+                            \addplot[asymptote] coordinates {(5,20) (5,-20)} node[above right] {\rotatebox{-90}{$x=5$}};
                         \end{axis}
                         \end{tikzpicture}]]>
                         </latex-image-code>

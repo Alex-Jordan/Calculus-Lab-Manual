@@ -14,7 +14,7 @@
     <xi:include href="./bookinfo.xml" />
     
     <book xml:id="clm">
-        <title>Portland Community College<br />MTH 251 Lab Manual</title>
+        <title>Portland Community College <br />MTH 251 Lab Manual</title>
 
         <xi:include href="./frontmatter.xml" />
         <xi:include href="./rates-of-change.xml" />

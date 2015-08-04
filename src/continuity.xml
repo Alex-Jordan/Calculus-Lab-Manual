@@ -68,8 +68,8 @@
                                          ({5+1/sqrt(6.5)*1.1^t},{1/(1/sqrt(6.5)*1.1^t)^2});
                                 \addplot[asymptote
                                 ]coordinates{
-                                    (5,-7)
-                                    (5,7)};
+                                    (5,7)
+                                    (5,-7)} node[above left] {\rotatebox{90}{$x=5$}};
                                 \addplot[soldot
                                 ]coordinates{
                                     (-4,4)

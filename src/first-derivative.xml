@@ -65,8 +65,8 @@
                             (5,-1)};
                         \addplot[asymptote
                         ]coordinates{
-                            (2,-7)
-                            (2,7)};
+                            (2,7)
+                            (2,-7)} node[above left] {\rotatebox{90}{$x=2$}};
                     \end{axis}
                     \end{tikzpicture}]]>
                     </latex-image-code>

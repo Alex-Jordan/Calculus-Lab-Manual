@@ -111,7 +111,7 @@
                     <p><m>\fe{\cosh}{t}</m> is positive on all of <m>\ointerval{-\infty}{\infty}</m>. Since <m>\lzoo{t}{\fe{\sinh}{t}}=\fe{\cosh}{t}</m> and <m>\lzon{2}{t}{\fe{\cosh}{t}}=\fe{\cosh}{t}</m>, it follows that <m>\sinh</m> is increasing on <m>\ointerval{-\infty}{\infty}</m> and <m>\cosh</m> is concave up on <m>\ointerval{-\infty}{\infty}</m>.</p>
                 </solution>
                 <answer>
-                    <p><m>\cosh</m> is increasing on <m>\ointerval{0}{\infty}</m>, decreasing on <m>\ointerval{-\infty}{0}</m>, and concave up on <m>\ointerval{-\infty}{\infty}</m>; <m>\sinh</m> is increasing on <m>\ointerval{-\infty}{\infty}</m>, convace up on <m>\ointerval{0}{\infty}</m>, and concave down on <m>\ointerval{-\infty}{0}</m></p>
+                    <p><m>\cosh</m> is increasing on <m>\ointerval{0}{\infty}</m>, decreasing on <m>\ointerval{-\infty}{0}</m>, and concave up on <m>\ointerval{-\infty}{\infty}</m>; <m>\sinh</m> is increasing on <m>\ointerval{-\infty}{\infty}</m>, concave up on <m>\ointerval{0}{\infty}</m>, and concave down on <m>\ointerval{-\infty}{0}</m></p>
                 </answer>
             </exercise>
             <exercise xml:id="exercise-hyperbolic-limits">
@@ -269,8 +269,8 @@
                         <![CDATA[\begin{tikzpicture}
                         \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={-3,-2,...,3},ytick={-3,-2,...,3},minor xtick={-3,-2,...,3}, minor ytick={-3,-2,...,3},title={$y=\fe{\tanh}{t}$},xlabel={$t$}]
                             \addplot[pccplot,domain=-2.9:2.9]{(exp(x)-exp(-x))/(exp(x)+exp(-x))};
-                            \addplot[asymptote,<-,domain=-3:0]{-1};
-                            \addplot[asymptote,->,domain=0:3]{1};
+                            \addplot[asymptote,->,domain=0:-3]{-1} node[below right] {$y=-1$};
+                            \addplot[asymptote,->,domain=0:3]{1} node[above left] {$y=1$};
                         \end{axis}
                         \end{tikzpicture}]]>
                         </latex-image-code>
@@ -282,8 +282,8 @@
                         <![CDATA[\begin{tikzpicture}
                         \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={-3,-2,...,3},ytick={-3,-2,...,3},minor xtick={-3,-2,...,3}, minor ytick={-3,-2,...,3},title={$y=\fe{\tanh}{t}$},xlabel={$t$}]
                             \addplot[pccplot,domain=-2.9:2.9]{(exp(x)-exp(-x))/(exp(x)+exp(-x))};
-                            \addplot[asymptote,<-,domain=-3:0]{-1};
-                            \addplot[asymptote,->,domain=0:3]{1};
+                            \addplot[asymptote,->,domain=0:-3]{-1} node[below right] {$y=-1$};
+                            \addplot[asymptote,->,domain=0:3]{1} node[above left] {$y=1$};
                         \end{axis}
                         \end{tikzpicture}]]>
                         </latex-image-code>
@@ -356,10 +356,10 @@
                     <p>State each local minimum and maximum point on <m>k</m>.</p>
                 </statement>
                 <solution>
-                    <p>The local minimum points on <m>k</m> are <m>\point{-8}{-878}</m> and <m>\point{8}{878}</m>.  The only local maximum point on <m>k</m> is <m>\point{0}{0}</m>.</p>
+                    <p>The local minimum points on <m>k</m> are <m>\point{-8}{-768}</m> and <m>\point{8}{-768}</m>.  The only local maximum point on <m>k</m> is <m>\point{0}{0}</m>.</p>
                 </solution>
                 <answer>
-                    <p>local minimum points at <m>\point{-8}{-878}</m> and <m>\point{8}{878}</m>; local maximum point at <m>\point{0}{0}</m></p>
+                    <p>local minimum points at <m>\point{-8}{-768}</m> and <m>\point{8}{-768}</m>; local maximum point at <m>\point{0}{0}</m></p>
                 </answer>
             </exercise>
         </exercisegroup>
@@ -484,7 +484,7 @@
                 <p>The only inflection point on <m>g</m> is <m>\point{-18}{\frac{1}{648}}</m>. <m>g</m> has a vertical asymptote at <m>0</m>.</p>
             </solution>
             <answer>
-                <p><m>\fe{\fd{g}}{t}=\frac{6(t+18)}{t^5}</m>; <m>\fe{\sd{g}}{t}=0</m> at <m>-18</m> and <m>\fe{\sd{g}}{t}</m> is undefined at <m>0</m>;</p>
+                <p><m>\fe{\sd{g}}{t}=\frac{6(t+18)}{t^5}</m>; <m>\fe{\sd{g}}{t}=0</m> at <m>-18</m> and <m>\fe{\sd{g}}{t}</m> is undefined at <m>0</m>;</p>
                 <tabular top="major">
                     <col halign="center"/>
                     <col halign="center"/>
