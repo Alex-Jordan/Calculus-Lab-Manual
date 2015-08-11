@@ -16,6 +16,11 @@
 <xsl:param name="html.css.extra"  select="'css/clm.css'" />
 <xsl:param name="html.knowl.example" select="'no'" />
 
+<xsl:template match="killinprint">
+    <xsl:apply-templates />
+</xsl:template>
+
+
 <!-- GeoGebra HTML5-->
 <xsl:template match="geogebra-html5">
     <xsl:text>This GeoGebra applet requires an internet connection.</xsl:text>
@@ -374,12 +379,6 @@
     <xsl:text>\)</xsl:text>
 </xsl:template>
 
-
-<xsl:template match="alert">
-    <span class="alert">
-    <xsl:apply-templates />
-    </span>
-</xsl:template>
 
 <xsl:template match="centerline">
     <xsl:apply-templates />

@@ -26,7 +26,7 @@
 
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to14}14</m></p>
+                    <p><m>\lim\limits_{x\to14}23</m></p>
                 </statement>
             </exercise>
 
@@ -46,7 +46,7 @@
             <mrow>&amp;=4\left(\lim_{x\to7}x\right)^2+\lim_{x\to7}3&amp;&amp;\text{Limit Law A6}</mrow>
             <mrow>&amp;=4\cdot7^2+3&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
             <mrow>&amp;=199</mrow>
-            </md>(<xref autoname="title" ref="lla1"/>, <xref autoname="title" ref="lla3"/>, <xref autoname="title" ref="lla6"/>, <xref autoname="title" ref="llr1"/>, <xref autoname="title" ref="llr2"/>)</p>
+            </md><killinprint>(<xref autoname="title" ref="lla1"/>, <xref autoname="title" ref="lla3"/>, <xref autoname="title" ref="lla6"/>, <xref autoname="title" ref="llr1"/>, <xref autoname="title" ref="llr2"/>)</killinprint></p>
         </example>
 
         <exercisegroup cols="3">
@@ -55,7 +55,7 @@
 
                 <p>Use the limit laws to establish the value of each of the following limits. Make sure that you use the step-by-step, vertical format shown in example <xref ref="example-apply-limit-laws"/>. Make sure that you cite the limit laws used in each step. To help you get started, the steps necessary in <xref ref="exercise-first-apply-limit-laws"/> are outlined as:</p>
 
-                <ol cols="2">
+                <ol>
                     <li><p>Apply <xref autoname="title" ref="lla6"/></p></li>
                     <li><p>Apply <xref autoname="title" ref="lla1"/></p></li>
                     <li><p>Apply <xref autoname="title" ref="lla3"/></p></li>

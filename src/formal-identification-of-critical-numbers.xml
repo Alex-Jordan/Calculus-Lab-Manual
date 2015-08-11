@@ -15,7 +15,7 @@
     <algorithm xml:id="algorithm-find-critical-numbers">
         <title>A process for formal determination of critical numbers</title>
         <statement>
-            <p>Please note that you should present your work in narrative form using complete sentences that establish the significance of all stated intervals and values.  For example, for the function <m>\fe{g}{t}=\sqrt{t-7}</m> the first sentence you should write is <q>The domain of <m>g</m> is <m>\cointerval{7}{\infty}</m></q>.</p>
+            <p>Please note that you should present your work in narrative form using complete sentences that establish the significance of all stated intervals and values.  For example, for the function <m>\fe{g}{t}=\sqrt{t-7}</m> the first sentence you should write is <q>The domain of <m>g</m> is <m>\cointerval{7}{\infty}</m>.</q></p>
             <ol>
                 <li>Using interval notation, state the domain of the function.</li>
                 <li>Differentiate the function and completely simplify the resultant formula.  Simplification includes:

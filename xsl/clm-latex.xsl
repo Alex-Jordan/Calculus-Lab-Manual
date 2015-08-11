@@ -12,6 +12,11 @@
 
 <!-- Templates added not existing in mathbook-latex.xsl -->
 <!--                                                    -->
+
+<xsl:template match="killinprint">
+    <xsl:apply-templates />
+</xsl:template>
+
 <!-- A list of short answers -->
 <xsl:template match="answer-list">
     <xsl:text>\begin{multicols}{2}&#xa;</xsl:text>
@@ -46,25 +51,33 @@
 
 <!-- GeoGebra HTML5-->
 <xsl:template match="geogebra-html5">
-    <xsl:text>{\textlangle}Use the online edition to explore a GoeGebra applet.\textrangle&#xa;</xsl:text> 
+    <xsl:text>{\textlangle}Use the online edition to explore a GeoGebra applet.\textrangle&#xa;</xsl:text> 
 </xsl:template>
 
-<!-- an alert mode for text -->
-<xsl:template match="alert">
-    <xsl:text>\textbf{</xsl:text>
-    <xsl:apply-templates />
-    <xsl:text>}</xsl:text>
-</xsl:template>
-
-<!-- use \centerline{} to center a wide table -->
-<xsl:template match="centerline">
-    <xsl:text>\centerline{%&#xa;</xsl:text>
-    <xsl:apply-templates select="tabular"/>
-    <xsl:text>}%&#xa;</xsl:text>
-</xsl:template>
 
 <!-- Modifications to templates in mathbook-latex.xsl   -->
 <!--                                                    -->
+
+<!-- Preface with numbers                                   -->
+<!-- Exercise Group -->
+<!-- We interrupt a description list with short commentary, -->
+<!-- typically instructions for a list of similar exercises -->
+<!-- Commentary goes in an introduction and/or conclusion   -->
+<!-- When we point to these, we use custom hypertarget, etc -->
+<xsl:template match="exercisegroup">
+    <xsl:text>\textbf{</xsl:text>
+    <xsl:apply-templates select="./exercise[1]" mode="serial-number" />
+    <xsl:text>--</xsl:text>
+    <xsl:apply-templates select="./exercise[last()]" mode="serial-number" />
+    <xsl:text>. }</xsl:text>
+    <xsl:apply-templates select="." mode="label" />
+    <xsl:apply-templates select="introduction" />
+    <xsl:apply-templates select="exercise"/>
+    <xsl:apply-templates select="conclusion" />
+    <xsl:text>\par\smallskip\noindent&#xa;</xsl:text>
+</xsl:template>
+
+
 <!-- Put caption on top                             -->
 <!-- A table is like a figure, centered, captioned  -->
 <!-- The meat of the table is given by a tabular    -->
@@ -77,6 +90,27 @@
     <xsl:apply-templates select="caption" />
     <xsl:apply-templates select="*[not(self::caption)]" />
     <xsl:text>\end{table}&#xa;</xsl:text>
+</xsl:template>
+
+<!-- Prevent line breaks on inline math -->
+<!-- Captions for Figures and Tables -->
+<!-- xml:id is on parent, but LaTeX generates number with caption -->
+<xsl:template match="caption">
+    <xsl:choose>
+      <xsl:when test="ancestor::sidebyside and ancestor::table and not(ancestor::sidebyside/caption)">
+            <xsl:text>\captionof{table}{</xsl:text>
+      </xsl:when>
+      <xsl:when test="ancestor::sidebyside and ancestor::figure and not(ancestor::sidebyside/caption)">
+            <xsl:text>\captionof{figure}{</xsl:text>
+      </xsl:when>
+      <xsl:otherwise>
+          <xsl:text>\caption{</xsl:text>
+      </xsl:otherwise>
+    </xsl:choose>
+    <xsl:text>\binoppenalty=\maxdimen \relpenalty=\maxdimen </xsl:text>
+    <xsl:apply-templates />
+    <xsl:apply-templates select=".." mode="label" />
+    <xsl:text>}&#xa;</xsl:text>
 </xsl:template>
 
 
@@ -233,7 +267,7 @@ shouldn't have sidebysides in them anyway -->
 
 
 <!-- Overwrite table parts to use booktabs.              -->
-<xsl:template match="tabular">
+<xsl:template match="tabular[(not(@left) and not(@right) and not(./col/@right) and not(./row/@left) and not(.//cell/@right)) or (count(./col[@halign]) &gt; count(./col[@halign='right']) + count(./col[@halign='center'])+ count(./col[@halign='left']))]">
     <xsl:choose>
         <xsl:when test="*[not(ancestor::sidebyside)]">
             <xsl:text>\begin{tabular}{</xsl:text>

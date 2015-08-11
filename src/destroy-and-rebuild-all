@@ -10,9 +10,11 @@ mv clm.tex printdraft.tex
 perl -pi -e 's/{(Limit Law [AR][0-9]*) }/{$1}/g' printdraft.tex
 perl -pi -e 's/\\begin{theorem}/\\begin{theorem*}/g' printdraft.tex
 perl -pi -e 's/\\end{theorem}/\\end{theorem*}/g' printdraft.tex
+perl -pi -e 's/\\SI{0.01218}/\\SI\[group-digits=false\]{0.01218}/g' printdraft.tex
 rm screenpdfdraft.*
 xsltproc -xinclude ../xsl/clm-screenpdf.xsl clm.xml
 mv clm.tex screenpdfdraft.tex
 perl -pi -e 's/{(Limit Law [AR][0-9]*) }/{$1}/g' screenpdfdraft.tex
 perl -pi -e 's/\\begin{theorem}/\\begin{theorem*}/g' screenpdfdraft.tex
 perl -pi -e 's/\\end{theorem}/\\end{theorem*}/g' screenpdfdraft.tex
+perl -pi -e 's/\\SI{0.01218}/\\SI\[group-digits=false\]{0.01218}/g' screenpdfdraft.tex

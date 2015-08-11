@@ -34,8 +34,12 @@
         <theorem xml:id="llr3" number="no"> 
             <title>Limit Law R3</title>
             <statement>
-                <p><md><mrow>\lim_{x\to \infty}\fe{f}{x}=\infty&amp;\implies\lim_{x\to \infty}\frac{C}{\fe{f}{x}}=0&amp;\lim_{x\to \infty}\fe{f}{x}=-\infty&amp;\implies\lim_{x\to \infty}\frac{C}{\fe{f}{x}}=0</mrow></md></p>
-                <p><md><mrow>\lim_{x\to -\infty}\fe{f}{x}=\infty&amp;\implies\lim_{x\to -\infty}\frac{C}{\fe{f}{x}}=0&amp;\lim_{x\to -\infty}\fe{f}{x}=-\infty&amp;\implies\lim_{x\to -\infty}\frac{C}{\fe{f}{x}}=0</mrow></md></p>
+                <p><md>
+                    <mrow>\lim_{x\to \infty}\fe{f}{x}=\infty&amp;\implies\lim_{x\to \infty}\frac{C}{\fe{f}{x}}=0</mrow>
+                    <mrow>\lim_{x\to \infty}\fe{f}{x}=-\infty&amp;\implies\lim_{x\to \infty}\frac{C}{\fe{f}{x}}=0</mrow>
+                    <mrow>\lim_{x\to -\infty}\fe{f}{x}=\infty&amp;\implies\lim_{x\to -\infty}\frac{C}{\fe{f}{x}}=0</mrow>
+                    <mrow>\lim_{x\to -\infty}\fe{f}{x}=-\infty&amp;\implies\lim_{x\to -\infty}\frac{C}{\fe{f}{x}}=0</mrow>
+                </md></p>
             </statement>
         </theorem> 
     </paragraphs>
@@ -56,7 +60,7 @@
     <paragraphs>
         <title>Algebraic Limit Laws</title>
 
-        <p>The following laws allow you to replace a limit expression with equivalent limit expressions. For example, the expression <m>\lim\limits_{x\to5}\left(2+x^2\right)</m> can be replaced with the expression <m>\lim\limits_{x\to5}2+\lim\limits_{x\to5}x^2</m>.</p>
+        <p>The following laws allow you to replace a limit expression with equivalent limit expressions. For example, the expression <me>\lim\limits_{x\to5}\left(2+x^2\right)</me> can be replaced with the expression <me>\lim\limits_{x\to5}2+\lim\limits_{x\to5}x^2\text{.}</me></p>
 
         <p><em>Limit Laws A1<ndash/>A6 are valid if and only if every limit in the equation exists.</em></p>
 

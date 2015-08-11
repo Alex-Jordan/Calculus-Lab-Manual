@@ -10,11 +10,11 @@
 <section xml:id="section-derivative-units">
     <title>Derivative Units</title>
 
-    <p>We can think about the instantaneous velocity as being <em>the instantaneous rate of change</em> in position. In general, whenever you see the phrase <q>rate of change</q> you can assume that the rate of change at one instant is being discussed. When we want to discuss average rates of change over a time interval we always say <q>average rate of change</q>.</p>
+    <p>We can think about the instantaneous velocity as being <em>the instantaneous rate of change</em> in position. In general, whenever you see the phrase <q>rate of change</q> you can assume that the rate of change at one instant is being discussed. When we want to discuss average rates of change over a time interval we always say <q>average rate of change.</q></p>
 
     <p>In general, if <m>f</m> is any function, then <em><m>\fe{\fd{f}}{a}</m> tells us the rate of change in <m>f</m> at <m>a</m></em>. Additionally, if <m>f</m> is an applied function with an input unit of <m>i_{\text{unit}}</m> and an output unit of <m>f_{\text{unit}}</m>, then the unit on <m>\fe{\fd{f}}{a}</m> is <m>\frac{f_{\text{unit}}}{i_{\text{unit}}}</m>. Please note that this unit loses all meaning if it is simplified in any way. Consequently, <em>we do not simplify derivative units in any way, shape, or form</em>.</p>
 
-    <p>For example, if <m>\fe{v}{t}</m> is the velocity of your car (measured in <quantity><unit base="mile"/><per base="hour"/></quantity>) where <m>t</m> is the amount of time that has passed since you hit the road (measured in minutes), then the unit on <m>\fe{v}{t}</m> is <m>\frac{\text{mi}/\text{h}}{\text{min}}</m>.</p>
+    <p>For example, if <m>\fe{v}{t}</m> is the velocity of your car (measured in <quantity><unit base="mile"/><per base="hour"/></quantity>) where <m>t</m> is the amount of time that has passed since you hit the road (measured in minutes), then the unit on <m>\fe{\fd{v}}{t}</m> is <m>\frac{\text{mi}/\text{h}}{\text{min}}</m>.</p>
 
     <exercises>
         <exercisegroup>
@@ -56,7 +56,7 @@
 
         <exercise>
             <statement>
-                <p>After a while Nguyen convinced Akbar that he was wrong, so Akbar set about doing the calculation over again. This time Akbar came up with a value of <quantity><mag>-12528</mag></quantity>. Nguyen took one look at Akbar's value and declared <q>still wrong</q>. What's the problem now?</p>
+                <p>After a while Nguyen convinced Akbar that he was wrong, so Akbar set about doing the calculation over again. This time Akbar came up with a value of <quantity><mag>-12528</mag></quantity>. Nguyen took one look at Akbar's value and declared <q>still wrong.</q> What's the problem now?</p>
             </statement>
         </exercise>
 

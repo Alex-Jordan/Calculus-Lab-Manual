@@ -23,56 +23,56 @@
                     <p>Complete <xref ref="table-piecewise-discontinuities"/>.</p>
                     <table xml:id="table-piecewise-discontinuities">
                         <caption>Function values and limit values for <m>f</m></caption>
-                        <tabular top="major">
-                            <col halign="left" right="minor"/>
-                            <col halign="center" />
-                            <col halign="center" />
-                            <col halign="center" />
-                            <col halign="center" />
+                        <tabular top="major" left="major">
+                            <col halign="right" right="medium"/>
+                            <col halign="center" right="minor"/>
+                            <col halign="center" right="minor"/>
+                            <col halign="center" right="minor"/>
+                            <col halign="center" right="major"/>
                             <row bottom="medium">
-                                <cell><m>x=a</m></cell>
-                                <cell right="minor"><m>\fe{f}{a}</m></cell>
-                                <cell right="minor"><m>\lim\limits_{x\to a^{-}}\fe{f}{x}</m></cell>
-                                <cell right="minor"><m>\lim\limits_{x\to a^{+}}\fe{f}{x}</m></cell>
-                                <cell right="minor"><m>\lim\limits_{x\to a}\fe{f}{x}</m></cell>
+                                <cell><m>a</m></cell>
+                                <cell><m>\fe{f}{a}</m></cell>
+                                <cell><m>\lim\limits_{x\to a^{-}}\fe{f}{x}</m></cell>
+                                <cell><m>\lim\limits_{x\to a^{+}}\fe{f}{x}</m></cell>
+                                <cell><m>\lim\limits_{x\to a}\fe{f}{x}</m></cell>
                             </row>
                             <row bottom="minor">
-                                <cell><m>x=1</m></cell>
-                                <cell></cell>
-                                <cell></cell>
-                                <cell></cell>
-                                <cell></cell>
-                            </row>
-                            <row bottom="minor">
-                                <cell><m>x=3</m></cell>
+                                <cell><m>1</m></cell>
                                 <cell></cell>
                                 <cell></cell>
                                 <cell></cell>
                                 <cell></cell>
                             </row>
                             <row bottom="minor">
-                                <cell><m>x=4</m></cell>
+                                <cell><m>3</m></cell>
                                 <cell></cell>
                                 <cell></cell>
                                 <cell></cell>
                                 <cell></cell>
                             </row>
                             <row bottom="minor">
-                                <cell><m>x=5</m></cell>
+                                <cell><m>4</m></cell>
                                 <cell></cell>
                                 <cell></cell>
                                 <cell></cell>
                                 <cell></cell>
                             </row>
                             <row bottom="minor">
-                                <cell><m>x=7</m></cell>
+                                <cell><m>5</m></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                                <cell></cell>
+                            </row>
+                            <row bottom="minor">
+                                <cell><m>7</m></cell>
                                 <cell></cell>
                                 <cell></cell>
                                 <cell></cell>
                                 <cell></cell>
                             </row>
                             <row bottom="major">
-                                <cell><m>x=8</m></cell>
+                                <cell><m>8</m></cell>
                                 <cell></cell>
                                 <cell></cell>
                                 <cell></cell>

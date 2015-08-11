@@ -14,28 +14,29 @@
 
     <example xml:id="example-first-indeterminate">
         <p><md>
-        <mrow>\lim_{x\to3}\frac{x^2-8x+15}{x-3}&amp;=\lim_{x\to3}\frac{(x-5)(x-3)}{x-3}&amp;&amp;\text{Indeterminate $\frac{0}{0}$ form}</mrow>
+        <mrow>\lim_{x\to3}\frac{x^2-8x+15}{x-3}&amp;=\lim_{x\to3}\frac{(x-5)(x-3)}{x-3}</mrow>
         <mrow>&amp;=\lim_{x\to3}(x-5)&amp;&amp;\text{Limit Law A7}</mrow>
         <mrow>&amp;=\lim_{x\to3}x-\lim_{x\to3}5&amp;&amp;\text{Limit Law A2}</mrow>
         <mrow>&amp;=3-5&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
         <mrow>&amp;=-2</mrow>
-        </md>(<xref autoname="title" ref="lla7"/>, <xref autoname="title" ref="lla2"/>, <xref autoname="title" ref="llr1"/>, <xref autoname="title" ref="llr2"/></p>
+        </md><killinprint>(<xref autoname="title" ref="lla7"/>, <xref autoname="title" ref="lla2"/>, <xref autoname="title" ref="llr1"/>, <xref autoname="title" ref="llr2"/>)</killinprint></p>
+        <p>Note that the forms of the limits on either side of the first line are <m>\frac{0}{0}</m>, but the form of the limit in the second line is no longer indeterminate. So at the second line, we can begin applying limit laws.</p>
     </example>
 
 
     <example xml:id="example-second-indeterminate">
         <p><md>
-        <mrow>&amp;\phantom{{}={}}\lim_{\theta\to0}\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}</mrow>
-        <mrow>&amp;=\lim_{\theta\to0}\left(\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}\cdot\frac{1+\fe{\cos}{\theta}}{1+\fe{\cos}{\theta}}\right)&amp;&amp;\text{Indeterminate $\frac{0}{0}$ form}</mrow>
-        <mrow>&amp;=\lim_{\theta\to0}\frac{1-\fe{\cos^2}{\theta}}{\fe{\sin^2}{\theta}\cdot\left(1+\fe{\cos}{\theta}\right)}&amp;&amp;\text{Indeterminate $\frac{0}{0}$ form}</mrow>
-        <mrow>&amp;=\lim_{\theta\to0}\frac{\fe{\sin^2}{\theta}}{\fe{\sin^2}{\theta}\cdot\left(1+\fe{\cos}{\theta}\right)}&amp;&amp;\text{Indeterminate $\frac{0}{0}$ form}</mrow>
+        <mrow>\lim_{\theta\to0}\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}&amp;=\lim_{\theta\to0}\left(\frac{1-\fe{\cos}{\theta}}{\fe{\sin^2}{\theta}}\cdot\frac{1+\fe{\cos}{\theta}}{1+\fe{\cos}{\theta}}\right)</mrow>
+        <mrow>&amp;=\lim_{\theta\to0}\frac{1-\fe{\cos^2}{\theta}}{\fe{\sin^2}{\theta}\cdot\left(1+\fe{\cos}{\theta}\right)}</mrow>
+        <mrow>&amp;=\lim_{\theta\to0}\frac{\fe{\sin^2}{\theta}}{\fe{\sin^2}{\theta}\cdot\left(1+\fe{\cos}{\theta}\right)}</mrow>
         <mrow>&amp;=\lim_{\theta\to0}\frac{1}{1+\fe{\cos}{\theta}}&amp;&amp;\text{Limit Law A7}</mrow>
         <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}\left(1+\fe{\cos}{\theta}\right)}&amp;&amp;\text{Limit Law A5}</mrow>
         <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}1+\lim_{\theta\to0}\fe{\cos}{\theta}}&amp;&amp;\text{Limit Law A1}</mrow>
         <mrow>&amp;=\frac{\lim_{\theta\to0}1}{\lim_{\theta\to0}1+\fe{\cos}{\lim_{\theta\to0}\theta}}&amp;&amp;\text{Limit Law A6}</mrow>
-        <mrow>&amp;=\frac{1}{1+\fe{\cos}{0}}&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
+        <mrow>&amp;=\frac{1}{1+\fe{\cos}{0}}&amp;&amp;\text{Limit Laws R1, R2}</mrow>
         <mrow>&amp;=\frac{1}{2}</mrow>
-        </md>(<xref autoname="title" ref="lla7"/>, <xref autoname="title" ref="lla5"/>, <xref autoname="title" ref="lla1"/>, <xref autoname="title" ref="lla6"/>, <xref autoname="title" ref="llr1"/>, <xref autoname="title" ref="llr2"/>)</p>
+        </md><killinprint>(<xref autoname="title" ref="lla7"/>, <xref autoname="title" ref="lla5"/>, <xref autoname="title" ref="lla1"/>, <xref autoname="title" ref="lla6"/>, <xref autoname="title" ref="llr1"/>, <xref autoname="title" ref="llr2"/>)</killinprint></p>
+        <p>The form of each limit above was <m>\frac{0}{0}</m> until the fourth line, where we were able to begin applying limit laws.</p>
     </example>
 
     <p>As seen in <xref ref="example-second-indeterminate"/>, trigonometric identities can come into play while trying to eliminate the form <m>\frac{0}{0}</m>. Elementary rules of logarithms can also play a role in this process. Before you begin evaluating limits whose initial form is <m>\frac{0}{0}</m>, you need to make sure that you recall some of these basic rules. That is the purpose of <xref ref="exercise-identities-review"/>.</p>

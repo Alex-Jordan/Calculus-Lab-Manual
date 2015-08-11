@@ -10,7 +10,7 @@
 <section xml:id="section-end-behavior">
     <title>End Behavior</title>
 
-    <p>We are frequently interested in a function's <q>end behavior</q>.  That is, what is the behavior of the function as the input variable increases without bound or decreases without bound.</p>
+    <p>We are frequently interested in a function's <q>end behavior.</q>  That is, what is the behavior of the function as the input variable increases without bound or decreases without bound.</p>
 
     <p>Many times a function will approach a horizontal asymptote as its end behavior.  If the horizontal asymptote <m>y=L</m> represents the end behavior of the function <m>f</m> both as <m>x</m> increases without bound and as <m>x</m> decreases without bound, we write <m>\lim\limits_{x\to\infty}\fe{f}{x}=L</m> and <m>\lim\limits_{x\to-\infty}\fe{f}{x}=L</m>.</p>
 

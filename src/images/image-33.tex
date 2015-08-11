@@ -32,25 +32,28 @@
         ylabel={$y$},          % default put y on y-axis
         xmin = -7,xmax = 7,    % most graphs have this window
         ymin = -7,ymax = 7,    % most graphs have this window
-        xtick = {-6,-4,...,6}, % fix ticks 
+        xtick = {-6,-4,...,6},       % fix ticks 
+        %extra x ticks={-6, -4, -2},
+        %extra x tick labels={$-6\phantom{-}$, $-4\phantom{-}$, $-2\phantom{-}$},
         ytick = {-6,-4,...,6}, % fix ticks  
+        yticklabel style={inner sep=0.333ex},
         minor xtick = {-7,-6,...,7}, % fix ticks
         minor ytick = {-7,-6,...,7}, % fix ticks
         scale only axis,       % don't factor in axis and tick labels for width= and height=
         cycle list name=pccstylelist,
-        % tick label style={font=\small},
-        % label style={font=\small},
+        tick label style={font=\footnotesize},
+        %label style={font=\scriptsize},
         legend cell align=left,
-        % legend style={font=\tiny},
+        %legend style={font=\scriptsize},
         width = 0.4\textwidth,
         grid = minor,
-        grid style = {dotted,gray!90},
+        grid style = {solid,gray!40},
         %every node near coord/.append style={
-        %    font=\small
+        %    font=\scriptsize
         %},
     }}
 
-    %\tikzset{axisnode/.style={font=\tiny,text=black}}
+    %\tikzset{axisnode/.style={font=\scriptsize,text=black}}
 
     % arrow style
     \tikzset{>=stealth}
@@ -165,21 +168,17 @@
                                 \addplot+[
                                     variable=t,
                                     domain=0:32.75,
-                                    <->,
                                 ]({-0.2998*1.1^t},{(0.2998*1.1^t)/2+1/(6*(0.2998*1.1^t)^3)+1/6});
                                 \addplot+[
                                     variable=t,
                                     domain=0:33.957,
-                                    <->,
                                 ]({0.26726*1.1^t},{1/2-1/(2*(0.26726*1.1^t)^2)});
                                 \addplot+[asymptote,
-                                    domain=-7:7,
-                                    <->,
-                                ]{1/2};
+                                    domain=7:-7,
+                                ]{1/2} node[above right] {$y=\sfrac{1}{2}$};
                                 \addplot+[
                                     variable=t,
                                     domain=0:32.75,
-                                    <->,
                                 ]({0.2998*1.1^t},{(0.2998*1.1^t)/2+1/(6*(0.2998*1.1^t)^3)+1/6});
                             \end{axis}
                             \end{tikzpicture}

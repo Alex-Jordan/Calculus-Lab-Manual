@@ -32,25 +32,28 @@
         ylabel={$y$},          % default put y on y-axis
         xmin = -7,xmax = 7,    % most graphs have this window
         ymin = -7,ymax = 7,    % most graphs have this window
-        xtick = {-6,-4,...,6}, % fix ticks 
+        xtick = {-6,-4,...,6},       % fix ticks 
+        %extra x ticks={-6, -4, -2},
+        %extra x tick labels={$-6\phantom{-}$, $-4\phantom{-}$, $-2\phantom{-}$},
         ytick = {-6,-4,...,6}, % fix ticks  
+        yticklabel style={inner sep=0.333ex},
         minor xtick = {-7,-6,...,7}, % fix ticks
         minor ytick = {-7,-6,...,7}, % fix ticks
         scale only axis,       % don't factor in axis and tick labels for width= and height=
         cycle list name=pccstylelist,
-        % tick label style={font=\small},
-        % label style={font=\small},
+        tick label style={font=\footnotesize},
+        %label style={font=\scriptsize},
         legend cell align=left,
-        % legend style={font=\tiny},
+        %legend style={font=\scriptsize},
         width = 0.4\textwidth,
         grid = minor,
-        grid style = {dotted,gray!90},
+        grid style = {solid,gray!40},
         %every node near coord/.append style={
-        %    font=\small
+        %    font=\scriptsize
         %},
     }}
 
-    %\tikzset{axisnode/.style={font=\tiny,text=black}}
+    %\tikzset{axisnode/.style={font=\scriptsize,text=black}}
 
     % arrow style
     \tikzset{>=stealth}
@@ -188,8 +191,8 @@
                                          ({5+1/sqrt(6.5)*1.1^t},{1/(1/sqrt(6.5)*1.1^t)^2});
                                 \addplot[asymptote
                                 ]coordinates{
-                                    (5,-7)
-                                    (5,7)};
+                                    (5,7)
+                                    (5,-7)} node[above left] {\rotatebox{90}{$x=5$}};
                                 \addplot[soldot
                                 ]coordinates{
                                     (-4,4)

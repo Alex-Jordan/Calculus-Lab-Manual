@@ -49,6 +49,7 @@
 		<p>In 2012, Steve Simonds revised an earlier version of this document in Word/PDF form with some support from PCC's curriculum development grants.</p>
 		<p>In 2015, Alex Jordan converted the Word/PDF to MathBook XML (enabling the HTML output alongside a PDF) with some support from PCC's professional development grants.</p>
                 <p>Phil Thurber and Scot Leavitt created the cover composition using images provided by NASA, the Bodleian Library of the University of Oxford, and PCC instructor Ken Kidoguchi.</p>
+                <p>Special thanks to Joe Bradford, Pete Haberman, Kandace Kling, Ross Kouzes, and Scot Leavitt for proofreading.</p> 
 
 	</acknowledgement>
 
@@ -57,10 +58,10 @@
 
             <p>This lab manual has several synchronous versions that offer different features. The essential content of each version is the same as for all others.</p>
             <ul>
+                <li><p>A web version is available at <url href="spot.pcc.edu/math/clm"/>. Whenever there is an internet connection, and you do not prefer to have a print copy, this version is most recommended. The web version offers full walkthrough solutions to supplemental problems. More importantly, it offers interactive elements and easier navigation than any of the PDFs below could offer.</p></li>
                 <li><p>A <q>for-printing</q> PDF is available at <url href="spot.pcc.edu/math/clm/clm-print.pdf"/>. This version is designed to be printed, not read on a screen. To save on printing expense, this verison is mostly black-and-white, and only offers short answers to the supplemental exercises (as opposed to full solutions).</p></li>
                 <li><p>A <q>for-printing-with-color</q> PDF is available at <url href="spot.pcc.edu/math/clm/clm-print-color.pdf"/>. This version is like the above, except links and graphs retain their color.</p></li>
-                <li><p>A <q>for-screen-reading</q> PDF is available at <url href="spot.pcc.edu/math/clm/clm-screen.pdf"/>. This version is intended to be stored on an electronic device and read when an internet connection is unavailable. It has page dimensions compatible with most laptops and tablets. The pages are not numbered since the page numbering would be inconsistenet with the print versions, so this version should be navigated by section numbering. Also because the page dimensions are customized for electronic devices, this version would look strange printed on standard paper. Since this version is not intended to be printed, full solutions to the supplemental problems are offered. When an internet connection is available, it will be nicer to use the web version below.</p></li>
-                <li><p>An web version is available at <url href="spot.pcc.edu/math/clm"/>. Whenever there is an internet connection, and you do not prefer to have a print copy, this version is most recommended. The web version offers full walkthrough solutions to supplemental problems. More importantly, it offers interactive elements and easier navigation than any of the above PDFs could offer.</p></li>
+                <li><p>A <q>for-screen-reading</q> PDF is available at <url href="spot.pcc.edu/math/clm/clm-screen.pdf"/>. This version is intended to be stored on an electronic device and read when an internet connection is unavailable. It has page dimensions compatible with most laptops and tablets. The pages are not numbered since the page numbering would be inconsistenet with the print versions, so this version should be navigated by section numbering. Also because the page dimensions are customized for electronic devices, this version would look strange printed on standard paper. Since this version is not intended to be printed, full solutions to the supplemental problems are offered. When an internet connection is available, it will be nicer to use the web version.</p></li>
             </ul>
         </preface>
 
@@ -70,7 +71,7 @@
 
             <p>The lab activities have been written under the presumption that students will be working in groups and will be actively discussing the examples and problems included in each activity. Many of the exercises and problems lend themselves quite naturally to discussion. Some of the more algebraic problems are not so much discussion problems as they are <q>practice and help</q> problems.</p>
 
-            <p>You do not need to fully understand an example be fore starting on the associated problems. The intent is that your understanding of the material will grow while you work on the problems.</p>
+            <p>You do not need to fully understand an example before starting on the associated problems. The intent is that your understanding of the material will grow while you work on the problems.</p>
 
             <p>When working through the lab activities, the students in a given group should be working on the same activity at the same time. Sometimes this means an individual student will have to go a little more slowly than he or she may like and sometimes it means an individual student will need to move on to the next activity before he or she fully grasps the current activity.</p>
 

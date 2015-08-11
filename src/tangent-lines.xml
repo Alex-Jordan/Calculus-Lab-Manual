@@ -15,18 +15,18 @@
     <p>Graphically, the difference quotient of a function <m>f</m> can be used to calculate the slope of secant lines to <m>f</m>. What happens when we take the run of the secant line to zero? Basically, we are connecting two points on the line that are really, really, (<em>really</em>), close to one another. As mentioned above, sending <m>h</m> to zero turns an average velocity into an instantaneous velocity. Graphically, sending <m>h</m> to zero turns a secant line into a <term>tangent line</term>.</p>
 
     <example xml:id="example-tangent-line">
-        <p>The tangent line to the function <m>f</m> defined by <m>\fe{f}{x}=\sqrt{x}</m> at <m>x=4</m> is shown in <xref ref="figure-tangent-line"/>. Here is a calculation of the slope of this line.</p>
+        <p>The tangent line at <m>x=4</m> to the function <m>f</m> defined by <m>\fe{f}{x}=\sqrt{x}</m> is shown in <xref ref="figure-tangent-line"/>. Here is a calculation of the slope of this line.</p>
         <sidebyside>
             <paragraphs valign="top">
                 <p><md>
-                <mrow>&amp;\phantom{{}={}}m_{\text{tan}}</mrow>
-                <mrow>&amp;=\lim_{h\to0}\frac{\fe{f}{4+h}-\fe{f}{4}}{h}</mrow>
+                <mrow>m_{\text{tan}}&amp;=\lim_{h\to0}\frac{\fe{f}{4+h}-\fe{f}{4}}{h}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{\sqrt{4+h}-\sqrt{4}}{h}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\left(\frac{\sqrt{4+h}-2}{h}\cdot\frac{\sqrt{4+h}+2}{\sqrt{4+h}+2}\right)</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{4+h-4}{h\left(\sqrt{4+h}+2\right)}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{h}{h\left(\sqrt{4+h}+2\right)}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{1}{1\left(\sqrt{4+h}+2\right)}</mrow>
-                <mrow>&amp;=\frac{1}{\sqrt{4+0}+2}=\frac{1}{4}</mrow>
+                <mrow>&amp;=\frac{1}{\sqrt{4+0}+2}</mrow>
+                <mrow>&amp;=\frac{1}{4}</mrow>
                 </md></p>
             </paragraphs>
             <figure xml:id="figure-tangent-line" valign="bottom">
@@ -67,7 +67,7 @@
     </example>
 
     <exercises>
-        <exercisegroup cols="2">
+        <exercisegroup>
             <introduction>
                 <sidebyside>
                     <paragraphs valign="top">

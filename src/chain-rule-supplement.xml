@@ -406,19 +406,21 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\fe{f}{x}=2\fe{\ln}{\sqrt[3]{\fe{\tan^2}{x}}}</m></p>
+                    <p><m>\fe{f}{x}=2\fe{\ln}{\sqrt[3]{x\fe{\tan^2}{x}}}</m></p>
                 </statement>
                 <solution>
                     <p><md>
-                    <mrow>\fe{f}{x}&amp;=2\fe{\ln}{\sqrt[3]{\fe{\tan^2}{x}}}</mrow>
-                    <mrow>&amp;=\frac{4}{3}\fe{\ln}{\fe{\tan}{x}}</mrow>
-                    <mrow>\fe{\fd{f}}{x}&amp;=\frac{4}{3}\cdot\frac{1}{\fe{\tan}{x}}\cdot\lzoo{x}{\fe{\tan}{x}}</mrow>
-                    <mrow>&amp;=\frac{4}{3\fe{\tan}{x}}\cdot\fe{\sec^2}{x}</mrow>
-                    <mrow>&amp;=\frac{4\fe{\sec^2}{x}}{3\fe{\tan}{x}}</mrow>
+                    <mrow>\fe{f}{x}&amp;=2\fe{\ln}{\sqrt[3]{x\fe{\tan^2}{x}}}</mrow>
+                    <mrow>&amp;=\frac{2}{3}\fe{\ln}{x\fe{\tan^2}{x}}</mrow>
+                    <mrow>&amp;=\frac{2}{3}\fe{\ln}{x}+\frac{2}{3}\fe{\ln}{\fe{\tan^2}{x}}</mrow>
+                    <mrow>&amp;=\frac{2}{3}\fe{\ln}{x}+\frac{4}{3}\fe{\ln}{\fe{\tan}{x}}</mrow>
+                    <mrow>\fe{\fd{f}}{x}&amp;=\frac{2}{3}\cdot\frac{1}{x}+\frac{4}{3}\cdot\frac{1}{\fe{\tan}{x}}\cdot\lzoo{x}{\fe{\tan}{x}}</mrow>
+                    <mrow>&amp;=\frac{2}{3x}+\frac{4}{3\fe{\tan}{x}}\cdot\fe{\sec^2}{x}</mrow>
+                    <mrow>&amp;=\frac{2}{3x}+\frac{4\fe{\sec^2}{x}}{3\fe{\tan}{x}}</mrow>
                     </md></p>
                 </solution>
                 <answer>
-                    <p><m>\frac{4\fe{\sec^2}{x}}{3\fe{\tan}{x}}</m></p>
+                    <p><m>\frac{2}{3x}+\frac{4\fe{\sec^2}{x}}{3\fe{\tan}{x}}</m></p>
                 </answer>
             </exercise>
             <exercise>

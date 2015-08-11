@@ -20,7 +20,7 @@
         <mrow>&amp;=\frac{\lim_{t\to\infty}3+\lim_{t\to\infty}\frac{5}{t}}{\lim_{t\to\infty}\frac{3}{t^2}-\lim_{t\to\infty}5}&amp;&amp;\text{Limit Laws A1 and A2}</mrow>
         <mrow>&amp;=\frac{3+0}{0-5}&amp;&amp;\text{Limit Laws R2 and R3}</mrow>
         <mrow>&amp;=-\frac{3}{5}</mrow>
-        </md>(<xref autoname="title" ref="lla5"/>, <xref autoname="title" ref="lla1"/>, <xref autoname="title" ref="lla2"/>, <xref autoname="title" ref="llr2"/>, <xref autoname="title" ref="llr3"/>)</p>
+        </md><killinprint>(<xref autoname="title" ref="lla5"/>, <xref autoname="title" ref="lla1"/>, <xref autoname="title" ref="lla2"/>, <xref autoname="title" ref="llr2"/>, <xref autoname="title" ref="llr3"/>)</killinprint></p>
     </example>
 
     <exercises>

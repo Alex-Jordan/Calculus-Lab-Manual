@@ -856,7 +856,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             <introduction>
                 <sidebyside>
                     <paragraphs valign="top">
-                        <p>Answer each question about the function <m>f</m> whose first derivative is shown in <xref ref="figure-first-derivative-of-f-supplement"/>.  The correct answer to one or more of the questions may be <q>there's no way of knowing</q>.</p> 
+                        <p>Answer each question about the function <m>f</m> whose first derivative is shown in <xref ref="figure-first-derivative-of-f-supplement"/>.  The correct answer to one or more of the questions may be <q>there's no way of knowing.</q></p> 
                     </paragraphs>
                     <figure xml:id="figure-first-derivative-of-f-supplement" valign="top" >
                         <image>

@@ -32,25 +32,28 @@
         ylabel={$y$},          % default put y on y-axis
         xmin = -7,xmax = 7,    % most graphs have this window
         ymin = -7,ymax = 7,    % most graphs have this window
-        xtick = {-6,-4,...,6}, % fix ticks 
+        xtick = {-6,-4,...,6},       % fix ticks 
+        %extra x ticks={-6, -4, -2},
+        %extra x tick labels={$-6\phantom{-}$, $-4\phantom{-}$, $-2\phantom{-}$},
         ytick = {-6,-4,...,6}, % fix ticks  
+        yticklabel style={inner sep=0.333ex},
         minor xtick = {-7,-6,...,7}, % fix ticks
         minor ytick = {-7,-6,...,7}, % fix ticks
         scale only axis,       % don't factor in axis and tick labels for width= and height=
         cycle list name=pccstylelist,
-        % tick label style={font=\small},
-        % label style={font=\small},
+        tick label style={font=\footnotesize},
+        %label style={font=\scriptsize},
         legend cell align=left,
-        % legend style={font=\tiny},
+        %legend style={font=\scriptsize},
         width = 0.4\textwidth,
         grid = minor,
-        grid style = {dotted,gray!90},
+        grid style = {solid,gray!40},
         %every node near coord/.append style={
-        %    font=\small
+        %    font=\scriptsize
         %},
     }}
 
-    %\tikzset{axisnode/.style={font=\tiny,text=black}}
+    %\tikzset{axisnode/.style={font=\scriptsize,text=black}}
 
     % arrow style
     \tikzset{>=stealth}
@@ -163,8 +166,8 @@
                         \begin{tikzpicture}
                         \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={-3,-2,...,3},ytick={-3,-2,...,3},minor xtick={-3,-2,...,3}, minor ytick={-3,-2,...,3},title={$y=\fe{\tanh}{t}$},xlabel={$t$}]
                             \addplot[pccplot,domain=-2.9:2.9]{(exp(x)-exp(-x))/(exp(x)+exp(-x))};
-                            \addplot[asymptote,<-,domain=-3:0]{-1};
-                            \addplot[asymptote,->,domain=0:3]{1};
+                            \addplot[asymptote,->,domain=0:-3]{-1} node[below right] {$y=-1$};
+                            \addplot[asymptote,->,domain=0:3]{1} node[above left] {$y=1$};
                         \end{axis}
                         \end{tikzpicture}
                         \end{document}

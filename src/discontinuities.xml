@@ -15,15 +15,15 @@
     <definition>
         <title>One-sided Continuity</title>
         <statement>
-            <p>The function <m>f</m> is continuous from the left at <m>a</m> if and only if <m>\lim\limits_{x\to a^{-}}\fe{f}{x}=\fe{f}{a}</m>.</p>
-            <p>The function <m>f</m> is continuous from the right at <m>a</m> if and only if <m>\lim\limits_{x\to a^{+}}\fe{f}{x}=\fe{f}{a}</m>.</p>
+            <p>The function <m>f</m> is continuous from the left at <m>a</m> if and only if <me>\lim\limits_{x\to a^{-}}\fe{f}{x}=\fe{f}{a}\text{.}</me></p>
+            <p>The function <m>f</m> is continuous from the right at <m>a</m> if and only if <me>\lim\limits_{x\to a^{+}}\fe{f}{x}=\fe{f}{a}\text{.}</me></p>
         </statement>
     </definition> 
 
     <p>Some discontinuities are classified as <term>removable discontinuities</term>. Specifically, discontinuities that are holes or skips (holes with a secondary point) are called removable.</p>
 
     <definition>
-        <title>Removeable Discontinuity</title>
+        <title>Removable Discontinuity</title>
         <statement>
             <p>We say that <m>f</m> has a removable discontinuity at <m>a</m> if <m>f</m> is discontinuous at <m>a</m> but <m>\lim\limits_{x\to a}\fe{f}{x}</m> exists.</p>
         </statement>

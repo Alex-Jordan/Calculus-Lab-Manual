@@ -79,7 +79,7 @@
                     <sidebyside>
                         <paragraphs valign="top" halign="center">
                             <p>Limit</p>
-                            <p><m>\lim\limits_{x\to\mathord{?}}=\mathord{?}</m></p>
+                            <p><m>\lim\limits_{x\to\mathord{?}}\mathord{?}=\mathord{?}</m></p>
                         </paragraphs>
                         <paragraphs valign="top" halign="center">
                             <p>Limit exists?</p>
@@ -118,7 +118,7 @@
                     <sidebyside>
                         <paragraphs valign="top" halign="center">
                             <p>Limit</p>
-                            <p><m>\lim\limits_{t\to\mathord{?}}=\mathord{?}</m></p>
+                            <p><m>\lim\limits_{t\to\mathord{?}}\mathord{?}=\mathord{?}</m></p>
                         </paragraphs>
                         <paragraphs valign="top" halign="center">
                             <p>Limit exists?</p>
@@ -157,7 +157,7 @@
                     <sidebyside>
                         <paragraphs valign="top" halign="center">
                             <p>Limit</p>
-                            <p><m>\lim\limits_{\theta\to\mathord{?}}=\mathord{?}</m></p>
+                            <p><m>\lim\limits_{\theta\to\mathord{?}}\mathord{?}=\mathord{?}</m></p>
                         </paragraphs>
                         <paragraphs valign="top" halign="center">
                             <p>Limit exists?</p>
@@ -196,7 +196,7 @@
                     <sidebyside>
                         <paragraphs valign="top" halign="center">
                             <p>Limit</p>
-                            <p><m>\lim\limits_{t\to\mathord{?}}=\mathord{?}</m></p>
+                            <p><m>\lim\limits_{t\to\mathord{?}}\mathord{?}=\mathord{?}</m></p>
                         </paragraphs>
                         <paragraphs valign="top" halign="center">
                             <p>Limit exists?</p>
@@ -226,7 +226,7 @@
                 </ul>  
 
                 <figure xml:id="figure-sketch-properties-supplement">
-                    <caption><m>f</m></caption>
+                    <caption><m>y=\fe{f}{x}</m></caption>
                     <image>
                         <latex-image-code>
                         <![CDATA[\begin{tikzpicture}
@@ -270,7 +270,7 @@
         </exercise>
         <exercise>
             <statement>
-                <p>Sketch onto <xref ref="figure-second-sketch-properties-supplement"/> a function, <m>f</m>, with each of the following properties. Make sure that your graph includes all of the relevant features addressed in lab.</p>
+                <p>Sketch onto <xref ref="figure-second-sketch-properties-supplement"/> a function, <m>f</m>, with each of the properties stated below. Assume that there are no intercepts or discontinuities other than those directly implied by the given properties. Make sure that your graph includes all of the relevant features addressed in lab.</p>
                 <sidebyside>
                     <paragraphs>
                         <ul>
@@ -281,7 +281,7 @@
                         </ul>
                     </paragraphs>
                     <figure xml:id="figure-second-sketch-properties-supplement">
-                        <caption><m>f</m></caption>
+                        <caption><m>y=\fe{f}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}

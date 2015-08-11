@@ -140,7 +140,8 @@
             <paragraphs valign="top">
                 <p><md>
                 <mrow>\lz{\theta}{t}&amp;=\frac{1}{400}\fe{\cos^2}{\theta}\lz{h}{t}</mrow>
-                <mrow>&amp;=\frac{1}{400}\left(\frac{4}{5}\right)^2(0.88)</mrow>
+                <mrow/>
+                <mrow>\lzoa{\theta}{t}{\fe{\cos}{\theta}=\frac{4}{5}, \lz{h}{t}=0.88 }&amp;=\frac{1}{400}\left(\frac{4}{5}\right)^2(0.88)</mrow>
                 <mrow>&amp;=0.001408</mrow>
                 </md></p>
             </paragraphs>
@@ -192,7 +193,7 @@
                 <p>When working with <q>common knowledge</q> formulas, it is important to identify which variables in the formula are really relevant to the stated problem and to then eliminate any irrelevant variables from the formula. Consider the following problem. <blockquote>Slushy is flowing out of the bottom of a cup at the constant rate of <quantity><mag>0.9</mag><unit prefix="centi" base="meter" exp="3"/><per base="second"/></quantity>. The cup is the shape of a right circular cone. The height of the cup is <quantity><mag>12</mag><unit prefix="centi" base="meter"/></quantity> and the radius at the top of the cup is <quantity><mag>3</mag><unit prefix="centi" base="meter"/></quantity>. Determine the rate at which the depth of the remaining slushy changes at the instant there are exactly <quantity><mag>8\pi</mag><unit prefix="centi" base="meter" exp="3"/></quantity> of slushy remaining in the cup.</blockquote></p>
                 <p>The presence of the cubic-centimeter unit indicates that the problem is rooted in a volume formula. Specifically, we need the volume formula for a right circular cone which is <m>V=\frac{\pi}{3}r^2h</m> where <m>r</m> is the radius at the top of the cone and <m>h</m> is the height of the cone.</p>
                 <p>In the stated problem, we are told the rate at which the volume of the remaining slushy changes and we are asked to determine the rate at which the depth of the remaining slushy changes. The rates correspond to <m>\lz{V}{t}</m> and <m>\lz{h}{t}</m> where <m>V</m> and <m>h</m> are, respectively, the volume (<quantity><unit prefix="centi" base="meter" exp="3"/></quantity>) and depth (<quantity><unit prefix="centi" base="meter"/></quantity>) of the slushy that remains in the cup <m>t</m> seconds after the slushy begins to flow out of the bottom of the cup.</p>
-                <p>Since the value of <m>\lz{r}{t}</m> is neither given nor desired, we need to eliminate the variable <m>r</m> from the formula <m>>V=\frac{\pi}{3}r^2h</m>. We do this by exploiting a property of similar triangles. Two triangle are said to be similar if an only if the two triangles have equal angle measures. One thing that is always true about similar triangles is that their corresponding sides are proportional. This latter fact is the only reason we are able to define trigonometric functions in terms of the ratios of the sides of a right triangle!</p>
+                <p>Since the value of <m>\lz{r}{t}</m> is neither given nor desired, we need to eliminate the variable <m>r</m> from the formula <m>V=\frac{\pi}{3}r^2h</m>. We do this by exploiting a property of similar triangles. Two triangles are said to be similar if and only if the three angular measurements of the first triangle are identical to the angular measurements of the second triangle. One thing that is always true about similar triangles is that their corresponding sides are proportional. This latter fact is the only reason we are able to define trigonometric functions in terms of the ratios of the sides of a right triangle!</p>
                 <sidebyside>
                     <figure xml:id="figure-slushy">
                         <caption>Slushy Cone</caption>
