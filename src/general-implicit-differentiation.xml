@@ -14,7 +14,7 @@
 
     <sidebyside>
         <paragraphs valign="top">
-            <p>Nevertheless, there is a unique tangent line to the curve at each point on the curve and so long as the tangent line is not vertical it has a unique slope.  We still identify the value of this slope using the symbol <m>\lz{y}{x}</m>, so it would be helpful if we had a formula for <m>\lz{y}{x}</m>.  If we could solve <m>y^3-4y=x^2-1</m> for <m>y</m>, finding the formula for <m>\lz{y}{x}</m> would be a snap.  Hopefully you quickly see that such an approach is just not possible.</p>
+            <p>Nevertheless, there is a unique tangent line to the curve at each point on the curve and so long as the tangent line is not vertical it has a unique slope.  We still identify the value of this slope using the symbol <m>\lz{y}{x}</m>, so it would be helpful if we had a formula for <m>\lz{y}{x}</m>.  If we could solve <m>y^3-4y=x^2-1</m> for <m>y</m>, finding the formula for <m>\lz{y}{x}</m> would be a snap.  Hopefully you quickly see that such an approach is just not reasonable.</p>
         </paragraphs>
         <figure xml:id="figure-elliptic-curve" valign="top">
             <caption><m>y^3-4y=x^2-1</m></caption>
@@ -43,7 +43,7 @@
     <example xml:id="example-implicit-differentiation">
         <p><md>
         <mrow>y^3-4y&amp;=x^2-1</mrow>
-        <mrow>\lzoo{x}{y^3-4y}&amp;=\lzoo{x}{x^2-1}&amp;&amp;\text{Differentiate both sides with respect to $x$.}</mrow>
+        <mrow>\lzoo{x}{y^3-4y}&amp;=\lzoo{x}{x^2-1}&amp;&amp;\text{Differentiate each side with respect to $x$.}</mrow>
         <mrow>3y^2\lz{y}{x}-4\lz{y}{x}&amp;=2x&amp;&amp;\text{Respect the chain rule with the $y$-terms.}</mrow>
         <mrow>\left(3y^2-4\right)\lz{y}{x}&amp;=2x&amp;&amp;\text{Begin to isolate $\lz{y}{x}$}</mrow>
         <mrow>\lz{y}{x}&amp;=\frac{2x}{3y^2-4}.</mrow>
@@ -51,8 +51,7 @@
     </example> 
 
     <p>At first it might be unsettling that the formula for <m>\lz{y}{x}</m> contains both the variables <m>x</m> and <m>y</m>. However, if you think it through you should conclude that the formula <em>must</em> include the variable <m>y</m>; otherwise, how could the formula generate three different slopes at the points <m>\point{1}{2}</m>, <m>\point{1}{0}</m>, and <m>\point{1}{-2}</m>?  These slopes are given below.  The reader should verify their values by drawing lines onto <xref ref="figure-elliptic-curve"/> with the indicated slopes at the indicated points.<md>
-    <mrow>&amp;\phantom{{}={}}\lzoa{y}{x}{\point{1}{2}}&amp;&amp;\phantom{{}={}}\lzoa{y}{x}{\point{1}{0}}&amp;&amp;\phantom{{}={}}\lzoa{y}{x}{\point{1}{-2}}</mrow>
-    <mrow>&amp;=\frac{2(1)}{3(2)^2-4}&amp;&amp;=\frac{2(1)}{3(0)^2-4}&amp;&amp;=\frac{2(1)}{3(-2)^2-4}</mrow>
+    <mrow>\textstyle\lzoa{y}{x}{\point{1}{2}}&amp;=\tfrac{2(1)}{3(2)^2-4}\quad&amp;\textstyle\lzoa{y}{x}{\point{1}{0}}&amp;=\tfrac{2(1)}{3(0)^2-4}\quad&amp;\textstyle\lzoa{y}{x}{\point{1}{-2}}&amp;=\tfrac{2(1)}{3(-2)^2-4}</mrow>
     <mrow>&amp;=\frac{1}{4}&amp;&amp;=-\frac{1}{2}&amp;&amp;=\frac{1}{4}</mrow>
     </md></p>
 
@@ -83,7 +82,7 @@
             </exercise>
             <exercise xml:id="exercise-implicit-lambert">
                 <statement>
-                    <p><m>y=x\,e^y</m></p>
+                    <p><m>y=xe^y</m></p>
                 </statement>
             </exercise>
             <exercise xml:id="exercise-implicit-last">
@@ -94,13 +93,13 @@
         </exercisegroup>
         <exercise>
             <statement>
-                <p>Several points that satisfy the equation <m>y=x\,e^y</m> are graphed in <xref ref="figure-lambert"/>.</p>
+                <p>Several points that satisfy the equation <m>y=xe^y</m> are graphed in <xref ref="figure-lambert"/>.</p>
                 <sidebyside>
                     <paragraphs valign="top">
                         <p>Find the slope and equation of the tangent line to this curve at the origin.  (Please note that you already found the formula for <m>\lz{y}{x}</m> in <xref ref="exercise-implicit-lambert"/>.</p>
                     </paragraphs>
                     <figure xml:id="figure-lambert" valign="top">
-                        <caption><m>y=x\,e^y</m></caption>
+                        <caption><m>y=xe^y</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -121,7 +120,7 @@
         </exercise>
 	<exercisegroup>
 	    <introduction>
-	        <p>Consider the set of points that satisfy the equation <m>x\,y=4</m>.</p>
+	        <p>Consider the set of points that satisfy the equation <m>xy=4</m>.</p>
 	    </introduction>
 	    <exercise>
 	        <statement>
@@ -130,12 +129,12 @@
 	    </exercise>
 	    <exercise>
 	        <statement>
-	           <p>Find a formula for <m>\lz{y}{x}</m> after first solving the equation <m>\lz{y}{x}</m> for <m>y</m>.</p>
+	           <p>Find a formula for <m>\lz{y}{x}</m> after first solving the equation <m>xy=4</m> for <m>y</m>.</p>
 	        </statement>
 	    </exercise>
 	    <exercise>
 	        <statement>
-	           <p>Show that the two formulas are equivalent so long as <m>x\,y=4</m>.</p>
+	           <p>Show that the two formulas are equivalent so long as <m>xy=4</m>.</p>
 	        </statement>
 	    </exercise>
         </exercisegroup>

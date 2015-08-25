@@ -18,12 +18,12 @@
                 <p>A parabolic function is shown in <xref ref="figure-graphical-derivative"/>. The next several questions are in reference to that function.</p>
 
                 <sidebyside> 
-                    <figure xml:id="figure-graphical-derivative" width="41%">
-                        <caption><m>\fe{g}{x}</m></caption>
+                    <figure xml:id="figure-graphical-derivative" width="40%">
+                        <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[xmin=-8,xmax=8,ymin=-16,ymax=8,xtick={-6,-4,...,6}, minor xtick={-7,-6,...,7},ytick={-14,-12,...,6}, minor ytick={-15,-14,...,7},y post scale=1.5]
+                            \begin{axis}[xmin=-8,xmax=8,ymin=-16,ymax=8,xtick={-6,-4,...,6}, minor xtick={-7,-6,...,7},ytick={-14,-12,-10,-8,-6,-4,2,4,6}, minor ytick={-15,-14,...,7},y post scale=1.5]
                                 \addplot+[
                                     domain=-5.5:7.5,
                                     <->,
@@ -43,8 +43,8 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure xml:id="figure-graphical-derivative-plot" width="41%">
-                        <caption><m>\fe{g}{x}</m></caption>
+                    <figure xml:id="figure-graphical-derivative-plot" width="40%">
+                        <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -58,7 +58,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <table xml:id="table-graphical-derivative" width="18%">
+                    <table xml:id="table-graphical-derivative">
                         <caption><m>y=\fe{\fd{g}}{x}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -101,17 +101,17 @@
             </introduction> 
             <exercise> 
                 <statement> 
-                    <p>Several values of <m>\fd{g}</m> are given in <xref ref="table-graphical-derivative"/>. For each given value draw a nice long line segment at the corresponding point on <m>g</m> whose slope is equal to the value of <m>\fd{g}</m>. If we think of these line segments as actual lines, what do we call the lines?</p> 
+                    <p>Several values of <m>\fd{g}</m> are given in <xref ref="table-graphical-derivative"/>. For each given value of <m>x</m> draw a nice long line segment at the corresponding point on <m>g</m> whose slope is equal to the value of <m>\fd{g}</m>. If we think of these line segments as actual lines, what do we call the lines?</p> 
                 </statement> 
             </exercise> 
             <exercise> 
                 <statement> 
-                    <p>What is the value of <m>\fd{g}</m> at <m>1</m>? How do you know? Enter that value into <xref ref="table-graphical-derivative"/>.</p>
+                    <p>What is the value of <m>\fe{\fd{g}}{1}</m>? How do you know? Enter that value into <xref ref="table-graphical-derivative"/>.</p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>The function <m>g</m> is symmetric across the line <m>x=1</m>; that is, if we move equal distance to the left and right from this line the corresponding <m>y</m>-coordinates on <m>g</m> are always equal. Notice that the slopes of the tangent lines are <q>equal but opposite</q> at points that are equally removed from the axis of symmetry; this is reflected in the values of <m>\fe{\fd{g}}{-1}</m> and <m>\fe{\fd{g}}{3}</m>. Use the idea of <q>equal but opposite slope equidistance from the axis of symmetry</q> to complete <xref ref="table-graphical-derivative"/>.</p>
+                    <p>The function <m>g</m> is symmetric across the line <m>x=1</m>; that is, if we move equal distance to the left and right from this line the corresponding <m>y</m>-coordinates on <m>g</m> are always equal. Notice that the slopes of the tangent lines are <q>equal but opposite</q> at points that are equally removed from the axis of symmetry; this is reflected in the values of <m>\fe{\fd{g}}{-1}</m> and <m>\fe{\fd{g}}{3}</m>. Use the idea of <q>equal but opposite slope equidistant from the axis of symmetry</q> to complete <xref ref="table-graphical-derivative"/>.</p>
                 </statement>
             </exercise>
             <exercise>
@@ -121,7 +121,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>The formula for <m>g</m> is <m>-0.5x^2+x+5.5</m>. Use <xref ref="definition-first-derivative"/> to determine the formula for <m>\fe{\fd{g}}{x}</m>.</p>
+                    <p>The formula for <m>\fe{g}{x}</m> is <m>-0.5x^2+x+5.5</m>. Use <xref ref="definition-first-derivative"/> to determine the formula for <m>\fe{\fd{g}}{x}</m>.</p>
                 </statement>
             </exercise>
             <exercise>
@@ -202,14 +202,14 @@
         </exercisegroup> 
         <exercise>
             <statement>
-                <p>In each of <xref autoname="plural" ref="figure-sine"/> and <xref autoname="no" ref="figure-rational"/> a function (the solid curve) is given; both of these functions are symmetric about the <m>y</m>-axis. The first derivative of each function (the dash-dotted curves) have been drawn over the interval <m>\ointerval{0}{7}</m>. Use the given portion of the first derivative together with the symmetry of the function to help you draw each first derivative over the interval <m>\ointerval{-7}{0}</m>.</p>
+                <p>In each of <xref autoname="plural" ref="figure-sine"/> and <xref autoname="no" ref="figure-rational"/> a function (the solid curve) is given; both of these functions are symmetric about the <m>y</m>-axis. The first derivative of each function (the dash-dotted curves) have been drawn over the interval <m>\ointerval{0}{7}</m>. Use the given portion of the first derivative together with the symmetry of the function to help you draw each first derivative over the interval <m>\ointerval{-7}{0}</m>. Please note that a function that is symmetric across a vertical line has a first derivative that is symmetric about a point.  Similarly, a function that is symmetric about a point has a first derivative that is symmetric across a vertical line.</p>
                 <sidebyside>
                     <figure xml:id="figure-sine">
                         <caption></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[legend style={at={(0,0)},anchor=south west},legend entries={$y=\fe{g}{x}$,$y=\fe{\fd{g}}{x}$},samples=50,]
+                            \begin{axis}[legend style={at={(1,0)},anchor=south east},legend entries={$y=\fe{g}{x}$,$y=\fe{\fd{g}}{x}$},samples=50,]
                                 \addplot+[
                                     domain=-6.8:6.8,
                                     <->,
@@ -228,7 +228,7 @@
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[legend style={at={(0,0)},anchor=south west},legend entries={$y=\fe{g}{x}$,$y=\fe{\fd{g}}{x}$,$y=\frac{1}{2}$}]
+                            \begin{axis}[legend style={at={(1,0)},anchor=south east},legend entries={$y=\fe{g}{x}$,$y=\fe{\fd{g}}{x}$,$y=\frac{1}{2}$}]
                                 \addplot+[
                                     variable=t,
                                     domain=0:32.75,
@@ -254,7 +254,7 @@
         </exercise>
         <exercisegroup>
             <introduction>
-                <p>A graph of the function <m>f</m> given by <m>\fe{f}{x}=\frac{1}{x}</m> is show in <xref ref="figure-one-over-x"/>.</p>
+                <p>A graph of the function <m>f</m> given by <m>\fe{f}{x}=\frac{1}{x}</m> is shown in <xref ref="figure-one-over-x"/>.</p>
                 <sidebyside>
                     <figure xml:id="figure-one-over-x" >
                         <caption><m>y=\fe{f}{x}=\frac{1}{x}</m></caption>
@@ -318,7 +318,7 @@
         </exercisegroup>
         <exercise>
             <statement>
-                <p>A graph of the function <m>g</m> is shown in <xref ref="figure-arctangent"/>. The absolute minimum value ever obtained by <m>\fd{g}</m> is <m>-3</m>. With that in mind, draw <m>\fd{g}</m> onto <xref ref="figure-derivative-of-arctangent"/>. Make sure that you draw and label any and all necessary asymptotes. Make sure that your graph of <m>\fd{g}</m> adequately reflects the symmetry in the graph of <m>g</m>.</p>
+                <p>A graph of the function <m>g</m> is shown in <xref ref="figure-arctangent"/>. The absolute minimum value ever obtained by <m>\fd{g}</m> is <m>-3</m>. With that in mind, draw <m>\fd{g}</m> onto <xref ref="figure-derivative-of-arctangent"/>. Make sure that you draw and label any and all necessary asymptotes. Please note that <m>g</m> is symmetric about the point <m>\point{1}{2}</m>.</p>
                 <sidebyside>
                     <figure xml:id="figure-arctangent" >
                         <caption><m>y=\fe{g}{x}</m></caption>
@@ -360,34 +360,38 @@
         <exercisegroup>
             <introduction>
                 <p>Answer the following questions in reference to the function <m>w</m>, shown in <xref ref="figure-inflection-points"/>.</p>
-                <sidebyside>
-                    <figure xml:id="figure-inflection-points" valign="top" width="65%">
-                        <caption><m>y=\fe{w}{x}</m></caption>
-                        <image>
-                            <latex-image-code>
-                            <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[xmin=-1,xmax=10,ymin=-1,ymax=10,xtick={-1,0,...,10}, minor xtick={-1,-0.5,...,10},ytick={0,1,...,10}, minor ytick={-1,-0.5,...,10},samples=100]
-                                \addplot+[
-                                    domain=-0.1:8.25,
-                                    <->,
-                                ]{x^5/60-5/16*x^4+19/9*x^3-13/2*x^2+28/3*x};
-                            \end{axis}
-                            \end{tikzpicture}]]>
-                            </latex-image-code>
-                        </image>
-                    </figure>
-                    <table xml:id="table-inflection-points" width="35%">
+                <figure xml:id="figure-inflection-points" valign="top" width="90%">
+                    <caption><m>y=\fe{w}{x}</m></caption>
+                    <image>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[width=0.75\textwidth,xmin=-1,xmax=10,ymin=-1,ymax=10,xtick={-1,0,...,10}, minor xtick={-1,-0.5,...,10},ytick={-1,0,...,10}, minor ytick={-1,-0.5,...,10},grid=major,samples=100]
+                            \addplot+[
+                                domain=-0.1:8.25,
+                                <->,
+                            ]{x^5/60-5/16*x^4+19/9*x^3-13/2*x^2+28/3*x};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
+            </introduction>
+
+            <exercise>
+                <statement>
+                    <p> An <term>inflection point</term> is a point where the function is continuous and the concavity of the function changes. The inflection points on <m>w</m> occur at <m>2</m>, <m>3.25</m>, and <m>6</m>. With that in mind, over each interval stated in <xref ref="table-inflection-points"/> exactly two of the properties from its caption apply to <m>\fd{w}</m>. Complete <xref ref="table-inflection-points"/> with the appropriate pairs of properties.</p> 
+                    <table xml:id="table-inflection-points">
                         <caption>Properties of <m>\fd{w}</m> (positive, negative, increasing, or decreasing)</caption>
                         <tabular top="major">
                             <col halign="center"/>
                             <col halign="center"/>
                             <row bottom="medium">
                                 <cell>Interval</cell>
-                                <cell>Properties</cell>
+                                <cell>Properties of <m>\fd{w}</m></cell>
                             </row>
                             <row bottom="minor">
                                 <cell><m>\ointerval{-\infty}{2}</m></cell>
-                                <cell><m>\phantom{\text{decreasing}}</m></cell>
+                                <cell><m>\phantom{\text{positive, decreasing}}</m></cell>
                             </row>
                             <row bottom="minor">
                                 <cell><m>\ointerval{2}{3.25}</m></cell>
@@ -411,13 +415,6 @@
                             </row>
                         </tabular>
                     </table>
-                </sidebyside>
-            </introduction>
-
-
-            <exercise>
-                <statement>
-                    <p> An <term>inflection point</term> is a point where the function is continuous and the concavity of the function changes. The inflection points on <m>w</m> occur at <m>2</m>, <m>3.25</m>, and <m>6</m>. With that in mind, over each interval stated in <xref ref="table-inflection-points"/> exactly two of the properties from its caption apply to <m>\fd{w}</m>. Complete <xref ref="table-inflection-points"/> with the appropriate pairs of properties.</p> 
                 </statement>
             </exercise>
             <exercise>
@@ -464,7 +461,7 @@
                             <image>
                                 <latex-image-code>
                                 <![CDATA[\begin{tikzpicture}
-                                \begin{axis}[xmin=-1,xmax=10,ymin=-5,ymax=5,xtick={0,1,...,10}, minor xtick={-1,-0.5,...,10},ytick={-5,-4,...,5}, minor ytick={-5,-5.5,...,5},]
+                                \begin{axis}[xmin=-1,xmax=10,ymin=-12,ymax=12,xtick={0,1,...,10}, minor xtick={-1,0,...,10},ytick={-12,-11,...,12}, minor ytick={-12,-11,...,12},y post scale=2.4]
                                 \end{axis}
                                 \end{tikzpicture}]]>
                                 </latex-image-code>

@@ -15,7 +15,7 @@
     \pgfplotsset{asymptote/.style={color=gray,mark=none,line width=1pt,<->,dashed}}
     \pgfplotsset{soldot/.style={color=red,only marks,mark=*}}
     \pgfplotsset{holdot/.style={color=red,fill=white,only marks,mark=*}}
-    \pgfplotsset{blankgraph/.style={xmin=-10,xmax=10,ymin=-10,ymax=10,axis line style= {-, draw opacity=0 },axis lines=box,major tick length=0mm,xtick={-10,-9,...,10},ytick={-10,-9,...,10},grid=major,yticklabels={,,},xticklabels={,,},minor xtick=,minor ytick=,xlabel={},ylabel={},width=0.75\textwidth,grid style={dotted,black}}}
+    \pgfplotsset{blankgraph/.style={xmin=-10,xmax=10,ymin=-10,ymax=10,axis line style= {-, draw opacity=0 },axis lines=box,major tick length=0mm,xtick={-10,-9,...,10},ytick={-10,-9,...,10},grid=major,yticklabels={,,},xticklabels={,,},minor xtick=,minor ytick=,xlabel={},ylabel={},width=0.75\textwidth,grid style={solid,gray!40}}}
     
     % cycle list of plot styles for graphs with multiple plots
     \pgfplotscreateplotcyclelist{pccstylelist}{%
@@ -45,7 +45,7 @@
         %label style={font=\scriptsize},
         legend cell align=left,
         %legend style={font=\scriptsize},
-        width = 0.4\textwidth,
+        width = 0.45\textwidth,
         grid = minor,
         grid style = {solid,gray!40},
         %every node near coord/.append style={
@@ -192,7 +192,7 @@
                                 \addplot[asymptote
                                 ]coordinates{
                                     (5,7)
-                                    (5,-7)} node[above left] {\rotatebox{90}{$x=5$}};
+                                    (5,-7)} node[above left] {\rotatebox{90}{$t=5$}};
                                 \addplot[soldot
                                 ]coordinates{
                                     (-4,4)

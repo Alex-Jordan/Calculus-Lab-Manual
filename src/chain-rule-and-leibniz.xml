@@ -19,19 +19,19 @@
 
     <p>Let's define <m>\fe{g}{t}</m>  as the population of Etown <m>t</m> years after January 1, 1990 and <m>\fe{f}{u}</m> as the daily amount of electricity used in Etown when the population was <m>u</m>.  From the given information, <m>\fe{g}{7.5}=100{,}000</m>, <m>\fe{\fd{g}}{7.5}=-6</m>, and <m>\fe{\fd{f}}{u}=18</m> for all values of <m>u</m>.  If we let <m>y=\fe{f}{u}</m> where <m>u=\fe{g}{t}</m>, then we have (from <xref ref="equation-leibniz-chain-example"/>):</p>
 
-        <men xml:id="equation-second-leibniz-chain-example">\left(\lzoa{y}{u}{u=100{,}000}\right)\left(\lzoa{u}{t}{t=7.5}\right)=\lzoa{y}{t}{t=7.5}</men>
+        <men xml:id="equation-second-leibniz-chain-example">\left(\lzoa{y}{u}{u=100{,}000}\right)\left(\lzoa{u}{t}{t=7.5}\right)=\lzoa{y}{t}{t=7.5}\text{.}</men>
  
     <p>You should note that <xref ref="equation-second-leibniz-chain-example"/> is an application of the chain rule expressed in Leibniz notation; specifically, the expression on the left side of the equal sign represents <m>\fe{\fd{f}}{\fe{g}{7.5}}\fe{\fd{g}}{7.5}</m>.</p>
     </example>
 
-    <p>In general, we could express the chain rule as shown in <xref ref="equation-leibniz-chain-rule"/></p>
+    <p>In general, we could express the chain rule as shown in <xref ref="equation-leibniz-chain-rule"/>.</p>
 
     <men xml:id="equation-leibniz-chain-rule"><m>\lz{y}{x}=\lz{y}{u}\cdot\lz{u}{x}</m></men>
 
     <exercises>
         <exercisegroup>
             <introduction>
-                <p>Suppose that Carla is jogging in her sweet new running shoes. Suppose further that <m>r=\fe{f}{t}</m> is Carla's pace (<quantity><unit base="mile"/><per base="hour"/></quantity>) <m>t</m> hours after 1:00 pm and <m>y=\fe{h}{r}</m> is Carla's heart rate (bpm) when she jogs at a rate of <m>r</m> <quantity><unit base="mile"/><per base="hour"/></quantity>.  In this context we can assume that all of Carla's motion was in one direction, so the words <sq>speed</sq> and <sq>velocity</sq> are completely interchangeable.</p> 
+                <p>Suppose that Carla is jogging in her sweet new running shoes. Suppose further that <m>r=\fe{f}{t}</m> is Carla's pace (<quantity><unit base="mileperhour"/></quantity>) <m>t</m> hours after 1:00 pm and <m>y=\fe{h}{r}</m> is Carla's heart rate (bpm) when she jogs at a rate of <m>r</m> <quantity><unit base="mileperhour"/></quantity>.  In this context we can assume that all of Carla's motion was in one direction, so the words <sq>speed</sq> and <sq>velocity</sq> are completely interchangeable.</p> 
             </introduction>
             <exercise>
                 <statement>
@@ -60,7 +60,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Assuming that all of the previous values are for real, what is the value of <m>\lzoa{y}{t}{t=0.75}</m> and what does this value tell you about Carla?</p>
+                    <p>Assuming that all of the previous values are accurate, what is the value of <m>\lzoa{y}{t}{t=0.75}</m> and what does this value tell you about Carla?</p>
                 </statement>
             </exercise>
         </exercisegroup>

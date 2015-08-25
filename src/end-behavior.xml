@@ -46,23 +46,27 @@
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[
-                                xmin=-20,
-                                xmax=20,
-                                xtick={-20,-16,...,20},
-                                minor xtick={-20,-19,...,20},
-                                ymin=-20,
-                                ymax=20,
-                                ytick={-20,-16,...,20},
-                                minor ytick={-20,-19,...,20},
+                                xmin=-16,
+                                xmax=16,
+                                xtick={-16,-12,...,16},
+                                minor xtick={-16,-15,...,16},
+                                ymin=-16,
+                                ymax=16,
+                                ytick={-16,-12,...,16},
+                                minor ytick={-16,-15,...,16},
+                                grid=major,
                                 ]
                                 \addplot[pccplot,samples=50,
-                                    domain=-19.8:-75.2/17.8,
+                                    domain=-15.8:-4.29,
                                 ]{(6*x^2-6*x-36)/(36-3*x-3*x^2)};
-                                \addplot[pccplot,samples=50,
-                                    domain=-83.2/21.8:19.8,
+                                \addplot[pccplot,<-,
+                                    domain=-3.77:0,
                                 ]{(6*x^2-6*x-36)/(36-3*x-3*x^2)};
-                                \addplot[asymptote] coordinates {(20,-2) (-20,-2)} node[above right] {$y=-2$};
-                                \addplot[asymptote] coordinates {(-4,-20) (-4,20)} node[below left] {\rotatebox{90}{$x=-4$}};
+                                \addplot[pccplot,->,
+                                    domain=0:15.8,
+                                ]{(6*x^2-6*x-36)/(36-3*x-3*x^2)};
+                                \addplot[asymptote] coordinates {(-16,-2) (16,-2)} node[below left] {$y=-2$};
+                                \addplot[asymptote] coordinates {(-4,-16) (-4,16)} node[below left] {\rotatebox{90}{$x=-4$}};
                                 \addplot[holdot] coordinates {(3,-10/7)};
                             \end{axis}
                             \end{tikzpicture}]]>
@@ -75,23 +79,27 @@
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[
-                                xmin=-20,
-                                xmax=20,
-                                xtick={-20,-16,...,20},
-                                minor xtick={-20,-19,...,20},
-                                ymin=-20,
-                                ymax=20,
-                                ytick={-20,-16,...,20},
-                                minor ytick={-20,-19,...,20},
+                                xmin=-16,
+                                xmax=16,
+                                xtick={-16,-12,...,16},
+                                minor xtick={-16,-15,...,16},
+                                ymin=-16,
+                                ymax=16,
+                                ytick={-16,-12,...,16},
+                                minor ytick={-16,-15,...,16},
+                                grid=major,
                                 ]
                                 \addplot[pccplot,samples=50,
-                                    domain=-19.8:-102.8/15.8,
+                                    domain=-15.8:-6.7,
                                 ]{(16+4*x)/(6+x)};
-                                \addplot[pccplot,samples=50,
-                                    domain=-134.8/23.8:19.8,
+                                \addplot[pccplot,<-,
+                                    domain=-5.59:-2,
                                 ]{(16+4*x)/(6+x)};
-                                \addplot[asymptote] coordinates {(-20,4) (20,4)} node[above left] {$y=4$};
-                                \addplot[asymptote] coordinates {(-6,20) (-6,-20)} node[above left] {\rotatebox{90}{$x=-6$}};
+                                \addplot[pccplot,->,
+                                    domain=-2:15.8,
+                                ]{(16+4*x)/(6+x)};
+                                \addplot[asymptote] coordinates {(-16,4) (16,4)} node[above left] {$y=4$};
+                                \addplot[asymptote] coordinates {(-6,16) (-6,-16)} node[above left] {\rotatebox{90}{$x=-6$}};
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>
@@ -105,27 +113,34 @@
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[
-                                xmin=-20,
-                                xmax=20,
-                                xtick={-20,-16,...,20},
-                                minor xtick={-20,-19,...,20},
-                                ymin=-20,
-                                ymax=20,
-                                ytick={-20,-16,...,20},
-                                minor ytick={-20,-19,...,20},
+                                xmin=-16,
+                                xmax=16,
+                                xtick={-16,-12,...,16},
+                                minor xtick={-16,-15,...,16},
+                                ymin=-16,
+                                ymax=16,
+                                ytick={-16,-12,...,16},
+                                minor ytick={-16,-15,...,16},
+                                grid=major,
                                 ]
                                 \addplot[pccplot,samples=50,
-                                    domain=-19.8:-10.07,
+                                    domain=-15.8:-10.09,
+                                ]{(-2*x+8)/(x^2-100)};
+                                \addplot[pccplot,<-,
+                                    domain=-9.91:-8,
+                                ]{(-2*x+8)/(x^2-100)};
+                                \addplot[pccplot,-,
+                                    domain=-8:8,
+                                ]{(-2*x+8)/(x^2-100)};
+                                \addplot[pccplot,->,
+                                    domain=8:9.96,
                                 ]{(-2*x+8)/(x^2-100)};
                                 \addplot[pccplot,samples=50,
-                                    domain=-9.9294:9.9698,
+                                    domain=10.04:15.8,
                                 ]{(-2*x+8)/(x^2-100)};
-                                \addplot[pccplot,samples=50,
-                                    domain=10.03:19.8,
-                                ]{(-2*x+8)/(x^2-100)};
-                                \addplot[asymptote] coordinates {(20,0) (-20,0)} node[above right] {$y=0$};
-                                \addplot[asymptote] coordinates {(-10,20) (-10,-20)} node[above left] {\rotatebox{90}{$x=-10$}};
-                                \addplot[asymptote] coordinates {(10,20) (10,-20)} node[above left] {\rotatebox{90}{$x=10$}};
+                                \addplot[asymptote] coordinates {(16,0) (-16,0)} node[above right] {$y=0$};
+                                \addplot[asymptote] coordinates {(-10,16) (-10,-16)} node[above left] {\rotatebox{90}{$x=-10$}};
+                                \addplot[asymptote] coordinates {(10,16) (10,-16)} node[above left] {\rotatebox{90}{$x=10$}};
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>
@@ -137,23 +152,24 @@
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[
-                                xmin=-20,
-                                xmax=20,
-                                xtick={-20,-16,...,20},
-                                minor xtick={-20,-19,...,20},
-                                ymin=-20,
-                                ymax=20,
-                                ytick={-20,-16,...,20},
-                                minor ytick={-20,-19,...,20},
+                                xmin=-16,
+                                xmax=16,
+                                xtick={-16,-12,...,16},
+                                minor xtick={-16,-15,...,16},
+                                ymin=-16,
+                                ymax=16,
+                                ytick={-16,-12,...,16},
+                                minor ytick={-16,-15,...,16},
+                                grid=major,
                                 ]
                                 \addplot[pccplot,samples=50,
-                                    domain=-19.8:33.6/22.8,
+                                    domain=-15.8:1.35,
                                 ]{(3*x+6)/(x-2)};
                                 \addplot[pccplot,samples=50,
-                                    domain=45.6/16.8:19.8,
+                                    domain=2.95:15.8,
                                 ]{(3*x+6)/(x-2)};
-                                \addplot[asymptote] coordinates {(20,3) (-20,3)} node[above right] {$y=3$};
-                                \addplot[asymptote] coordinates {(2,20) (2,-20)} node[above right] {\rotatebox{-90}{$x=2$}};
+                                \addplot[asymptote] coordinates {(16,3) (-16,3)} node[above right] {$y=3$};
+                                \addplot[asymptote] coordinates {(2,16) (2,-16)} node[above right] {\rotatebox{90}{$x=2$}};
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>
@@ -166,23 +182,24 @@
                         <latex-image-code>
                         <![CDATA[\begin{tikzpicture}
                         \begin{axis}[
-                            xmin=-20,
-                            xmax=20,
-                            xtick={-20,-16,...,20},
-                            minor xtick={-20,-19,...,20},
-                            ymin=-20,
-                            ymax=20,
-                            ytick={-20,-16,...,20},
-                            minor ytick={-20,-19,...,20},
+                            xmin=-16,
+                            xmax=16,
+                            xtick={-16,-12,...,16},
+                            minor xtick={-16,-15,...,16},
+                            ymin=-16,
+                            ymax=16,
+                            ytick={-16,-12,...,16},
+                            minor ytick={-16,-15,...,16},
+                            grid=major,
                             ]
                             \addplot[pccplot,samples=50,
-                                domain=-19.8:84/19.8,
+                                domain=-15.8:4.05,
                             ]{(15)/(x-5)};
                             \addplot[pccplot,samples=50,
-                                domain=114/19.8:19.8,
+                                domain=5.95:15.8,
                             ]{(15)/(x-5)};
-                            \addplot[asymptote] coordinates {(20,0) (-20,0)} node[above right] {$y=0$};
-                            \addplot[asymptote] coordinates {(5,20) (5,-20)} node[above right] {\rotatebox{-90}{$x=5$}};
+                            \addplot[asymptote] coordinates {(16,0) (-16,0)} node[above right] {$y=0$};
+                            \addplot[asymptote] coordinates {(5,16) (5,-16)} node[above right] {\rotatebox{90}{$x=5$}};
                         \end{axis}
                         \end{tikzpicture}]]>
                         </latex-image-code>

@@ -22,7 +22,7 @@
             <col halign="left" right="minor"/>
             <col halign="left"/>
             <row bottom="minor">
-                <cell>Given Function</cell>
+                <cell>Given function</cell>
                 <cell><m>y=x^7</m></cell>
                 <cell><m>\fe{f}{t}=\sqrt[3]{t^7}</m></cell>
                 <cell><m>z=\frac{1}{y^5}</m></cell>
@@ -36,8 +36,8 @@
             <row bottom="major">
                 <cell>You should write</cell>
                 <cell><m>\lz{y}{x}=7x^6</m></cell>
-                <cell><m>\fe{\fd{f}}{t}=\frac{7}{3}t^{\sfrac{4}{3}}</m></cell>
-                <cell><m>\lz{z}{y}=-5y^{-6}</m></cell>
+                <cell><m>\begin{aligned}[t]\fe{\fd{f}}{t}&amp;=\frac{7}{3}t^{\sfrac{4}{3}}\\&amp;=\frac{7}{3}\sqrt[3]{t^4}\end{aligned}</m></cell>
+                <cell><m>\begin{aligned}[t]\lz{z}{y}&amp;=-5y^{-6}\\&amp;=-\frac{5}{y^6}\end{aligned}</m></cell>
             </row>
         </tabular>
 

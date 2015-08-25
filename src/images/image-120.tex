@@ -15,7 +15,7 @@
     \pgfplotsset{asymptote/.style={color=gray,mark=none,line width=1pt,<->,dashed}}
     \pgfplotsset{soldot/.style={color=red,only marks,mark=*}}
     \pgfplotsset{holdot/.style={color=red,fill=white,only marks,mark=*}}
-    \pgfplotsset{blankgraph/.style={xmin=-10,xmax=10,ymin=-10,ymax=10,axis line style= {-, draw opacity=0 },axis lines=box,major tick length=0mm,xtick={-10,-9,...,10},ytick={-10,-9,...,10},grid=major,yticklabels={,,},xticklabels={,,},minor xtick=,minor ytick=,xlabel={},ylabel={},width=0.75\textwidth,grid style={dotted,black}}}
+    \pgfplotsset{blankgraph/.style={xmin=-10,xmax=10,ymin=-10,ymax=10,axis line style= {-, draw opacity=0 },axis lines=box,major tick length=0mm,xtick={-10,-9,...,10},ytick={-10,-9,...,10},grid=major,yticklabels={,,},xticklabels={,,},minor xtick=,minor ytick=,xlabel={},ylabel={},width=0.75\textwidth,grid style={solid,gray!40}}}
     
     % cycle list of plot styles for graphs with multiple plots
     \pgfplotscreateplotcyclelist{pccstylelist}{%
@@ -45,7 +45,7 @@
         %label style={font=\scriptsize},
         legend cell align=left,
         %legend style={font=\scriptsize},
-        width = 0.4\textwidth,
+        width = 0.45\textwidth,
         grid = minor,
         grid style = {solid,gray!40},
         %every node near coord/.append style={
@@ -165,23 +165,27 @@
 
                             \begin{tikzpicture}
                             \begin{axis}[
-                                xmin=-20,
-                                xmax=20,
-                                xtick={-20,-16,...,20},
-                                minor xtick={-20,-19,...,20},
-                                ymin=-20,
-                                ymax=20,
-                                ytick={-20,-16,...,20},
-                                minor ytick={-20,-19,...,20},
+                                xmin=-16,
+                                xmax=16,
+                                xtick={-16,-12,...,16},
+                                minor xtick={-16,-15,...,16},
+                                ymin=-16,
+                                ymax=16,
+                                ytick={-16,-12,...,16},
+                                minor ytick={-16,-15,...,16},
+                                grid=major,
                                 ]
                                 \addplot[pccplot,samples=50,
-                                    domain=-19.8:-102.8/15.8,
+                                    domain=-15.8:-6.7,
                                 ]{(16+4*x)/(6+x)};
-                                \addplot[pccplot,samples=50,
-                                    domain=-134.8/23.8:19.8,
+                                \addplot[pccplot,<-,
+                                    domain=-5.59:-2,
                                 ]{(16+4*x)/(6+x)};
-                                \addplot[asymptote] coordinates {(-20,4) (20,4)} node[above left] {$y=4$};
-                                \addplot[asymptote] coordinates {(-6,20) (-6,-20)} node[above left] {\rotatebox{90}{$x=-6$}};
+                                \addplot[pccplot,->,
+                                    domain=-2:15.8,
+                                ]{(16+4*x)/(6+x)};
+                                \addplot[asymptote] coordinates {(-16,4) (16,4)} node[above left] {$y=4$};
+                                \addplot[asymptote] coordinates {(-6,16) (-6,-16)} node[above left] {\rotatebox{90}{$x=-6$}};
                             \end{axis}
                             \end{tikzpicture}
                             \end{document}

@@ -14,10 +14,9 @@
 
     <table>
         <caption/>
-        <centerline>
-        <tabular top="major">
-            <col right="minor" halign="center"/>
-            <col right="minor" halign="center"/>
+        <centerline><tabular top="major">
+            <col halign="center"/>
+            <col halign="center"/>
             <col halign="center"/>
             <row bottom="medium">
                 <cell>Basic Formulas</cell>
@@ -104,8 +103,7 @@
                 <cell><m>\lzoo{x}{\abs{u}}=\frac{\abs{u}}{u}\lzoo{x}{u}</m></cell>
                 <cell><m>\lzoo{x}{\abs{y}}=\frac{\abs{y}}{y}\lz{y}{x}</m></cell>
             </row>
-        </tabular>
-        </centerline>
+        </tabular></centerline>
     </table>
 
     <theorem number="no">

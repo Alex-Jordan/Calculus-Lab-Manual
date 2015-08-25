@@ -15,7 +15,7 @@
     <exercises>
         <exercisegroup>
             <introduction>
-                <p>Consider the functions defined by <m>\fe{f}{x}=x^2\frac{\fe{\sin}{x}}{e^x}</m> and <m>\fe{g}{x}=\frac{x^2\fe{\sin}{x}}{e^x}</m>.</p>
+                <p>Consider the functions defined by <me>\fe{f}{x}=x^2\frac{\fe{\sin}{x}}{e^x}\qquad\fe{g}{x}=\frac{x^2\fe{\sin}{x}}{e^x}\text{.}</me></p>
             </introduction>
             <exercise>
                 <statement>

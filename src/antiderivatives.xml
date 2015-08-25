@@ -17,7 +17,7 @@
         <p><me>f\xrightarrow{\text{differentiate}}\fd{f}\xrightarrow{\text{differentiate}}\sd{f}\xrightarrow{\text{differentiate}}\td{f}\xrightarrow{\text{differentiate}}\cdots</me></p>
     </figure>
     <figure xml:id="figure-antiderivative-chain">
-        <caption>Antiifferentiating</caption>
+        <caption>Antidifferentiating</caption>
         <p><me>\cdots\td{f}\xrightarrow{\text{antidifferentiate}}\sd{f}\xrightarrow{\text{antidifferentiate}}\fd{f}\xrightarrow{\text{antidifferentiate}}f\xrightarrow{\text{antidifferentiate}}F</me></p>
     </figure>
 
@@ -36,7 +36,7 @@
     </figure>
 
     <exercises>
-        <exercisegroup cols="2">
+        <exercisegroup>
             <introduction>
                 <sidebyside>
                     <paragraphs valign="top">
@@ -143,7 +143,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Draw onto <xref ref="figure-plot-antiderivative-two"/> the continuous antiderivative of <m>f</m> that passes through the point <m>\point{-3}{1}</m>.  Please note that every antiderivative of <m>f</m> increases exactly one unit over the interval <m>\ointerval{-3}{-2}</m>.</p> 
+                    <p>Draw onto <xref ref="figure-plot-antiderivative-two"/> the continuous antiderivative of <m>f</m> that passes through the point <m>\point{-3}{1}</m>.  Note that every antiderivative of <m>f</m> increases exactly one unit over the interval <m>\ointerval{-3}{-2}</m>.</p> 
                 </statement>
             </exercise>
             <exercise>
@@ -159,8 +159,8 @@
                 <p>Jasmine was thinking and told her lab assistant that derivatives and antiderivatives of periodic functions must also be periodic.  Jasmine's lab assistant told her that she was half right.  Which half did Jasmine have correct?  Also, draw a function that illustrates that the other half of Jasmine's statement is not correct.</p>
             </statement>
         </exercise>
-        <exercisegroup>
-            <introduction>
+        <exercise>
+            <statement>
                 <p>Consider the function <m>g</m> shown in <xref ref="figure-line-segments"/>.</p>
                 <sidebyside>
                     <figure xml:id="figure-line-segments" >
@@ -191,24 +191,10 @@
                         </image>
                     </figure>
                 </sidebyside>
-            </introduction>
-            <exercise>
-                <statement>
-                    <p>Let <m>G</m> be an antiderivative of <m>g</m>.  Suppose that <m>G</m> is continuous on <m>\cinterval{-6}{6}</m>, <m>\fe{G}{-6}=-3</m>, and that the greatest value <m>G</m> ever achieves is <m>6</m>.  Draw <m>G</m> onto <xref ref="figure-line-segments-antiderivative"/>.</p>
-                </statement>
-            </exercise>
-            <exercise>
-                <statement>
-                    <p>At what values of <m>t</m> is <m>G</m> nondifferentiable?</p>
-                </statement>
-            </exercise>
-            <exercise>
-                <statement>                    
-                    <p>At what values of <m>t</m> is <m>g</m> nondifferentiable?</p>
-                </statement>                    
-            </exercise>
-        </exercisegroup>
-        <exercisegroup cols="2" by="row">
+                <p>Let <m>G</m> be an antiderivative of <m>g</m>.  Suppose that <m>G</m> is continuous on <m>\cinterval{-6}{6}</m>, <m>\fe{G}{-6}=-3</m>, and that the greatest value <m>G</m> ever achieves is <m>6</m>.  Draw <m>G</m> onto <xref ref="figure-line-segments-antiderivative"/>.</p>
+            </statement>
+        </exercise>
+        <exercisegroup>
             <introduction>
                 <sidebyside>
                     <paragraphs valign="top">
@@ -240,37 +226,37 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>At which values of <m>x</m> is <m>g</m> not differentiable?</p>
+                    <p>At what values of <m>x</m> is <m>g</m> nondifferentiable?</p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>Over which intervals is <m>g</m> not negative?</p>
+                    <p>Over what intervals is <m>g</m> never negative?</p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>At which values of <m>x</m> is every antiderivative of <m>g</m> nondifferentiable?</p>
+                    <p>At what values of <m>x</m> is every antiderivative of <m>g</m> nondifferentiable?</p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>Over which intervals does <m>\sd{g}</m> have a constant value?</p>
+                    <p>Over what intervals does <m>\sd{g}</m> have a constant value?</p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>Over which intervals is <m>g</m> linear?</p>
+                    <p>Over what intervals is <m>g</m> linear?</p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>Over which intervals are antiderivatives of <m>g</m> linear?</p>
+                    <p>Over what intervals are antiderivatives of <m>g</m> linear?</p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>Over which intervals is <m>\td{g}</m> not negative?</p>
+                    <p>Over what intervals is <m>\td{g}</m> never negative?</p>
                 </statement>
             </exercise>
         </exercisegroup>

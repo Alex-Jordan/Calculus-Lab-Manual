@@ -10,7 +10,7 @@
 <section xml:id="section-first-derivative">
     <title>The First Derivative</title>
 
-    <p>So far we've seen two applications of expressions of the form <m>\lim\limits_{h\to0}\frac{\fe{f}{a+h}-\fe{f}{a}}{h}</m>. It turns out that this expression is so important in mathematics, the sciences, economics, and many other fields that it deserves a name in and of its own right. We call the expression <term>the first derivative of <m>f</m> at <m>a</m></term>.</p>
+    <p>At this point, we have seen two applications of expressions of the form <m>\lim\limits_{h\to0}\frac{\fe{f}{a+h}-\fe{f}{a}}{h}</m>. It turns out that this expression is so important in mathematics, the sciences, economics, and many other fields that it deserves a name in and of its own right. We call the expression <term>the first derivative of <m>f</m> at <m>a</m></term>.</p>
 
     <p>So far we've always fixed the value of <m>a</m> before making the calculation. There's no reason why we couldn't use a variable for <m>a</m>, make the calculation, and then replace the variable with specific values; in fact, it seems like this might be a better plan all around. This leads us to a definition of <term>the first derivative function</term>.</p>
 
@@ -32,7 +32,7 @@
         <sidebyside>
             <paragraphs valign="top">
                 <p><md>
-                <mrow>\fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}</mrow>
+                <mrow>\qquad\qquad\;\fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{\frac{3}{2-(x+h)}-\frac{3}{2-x}}{h}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{\frac{3}{2-x-h}-\frac{3}{2-x}}{h}\cdot\frac{(2-x-h)(2-x)}{(2-x-h)(2-x)}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{3(2-x)-3(2-x-h)}{h(2-x-h)(2-x)}</mrow>

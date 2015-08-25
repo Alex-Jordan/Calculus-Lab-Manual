@@ -20,7 +20,7 @@
         </statement>
     </definition> 
 
-    <p>Some discontinuities are classified as <term>removable discontinuities</term>. Specifically, discontinuities that are holes or skips (holes with a secondary point) are called removable.</p>
+    <p>Some discontinuities are classified as <term>removable discontinuities</term>. Discontinuities that are holes or skips (holes with a secondary point) are <term>removable</term>.</p>
 
     <definition>
         <title>Removable Discontinuity</title>

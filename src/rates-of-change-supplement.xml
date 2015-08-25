@@ -291,7 +291,7 @@
         </exercisegroup>
         <exercisegroup>
             <introduction>
-                <p>Suppose that an object is tossed into the air in such a way that the elevation of the object (measured in <quantity><unit base="foot"/></quantity>) is given by the function <m>\fe{s}{t}=150+60t-16t^2</m> where <m>t</m> is the amount of time that has passed since the object was tossed (measure in seconds).</p> 
+                <p>Suppose that an object is tossed directly upward in the air in such a way that the elevation of the object (measured in <quantity><unit base="foot"/></quantity>) is given by the function <m>\fe{s}{t}=150+60t-16t^2</m> where <m>t</m> is the amount of time that has passed since the object was tossed (measure in seconds).</p> 
             </introduction>
             <exercise>
                 <statement>
@@ -335,7 +335,7 @@
             </introduction>
             <exercise>
                 <statement>
-                    <p>The velocity of a roller coaster (in <quantity><unit base="foot"/><per base="second"/></quantity>) is given by <m>\fe{v}{t}=-100\fe{\sin}{\frac{\pi t}{15}}</m> where <m>t</m> is the amount of time (<quantity><unit base="second"/></quantity>) that has passed since the coaster topped the first hill.  Find and interpret <m>\frac{\fe{v}{7.5}-\fe{v}{0}}{7.5-0}</m>.</p>
+                    <p>The velocity, <m>v</m>, of a roller coaster (in <quantity><unit base="foot"/><per base="second"/></quantity>) is given by <me>\fe{v}{t}=-100\fe{\sin}{\frac{\pi t}{15}}</me> where <m>t</m> is the amount of time (<quantity><unit base="second"/></quantity>) that has passed since the coaster topped the first hill.  Find and interpret <m>\frac{\fe{v}{7.5}-\fe{v}{0}}{7.5-0}</m>.</p>
                 </statement>
                 <solution>
                    <p><m>\frac{\fe{v}{7.5}-\fe{v}{0}}{7.5-0}=-13\frac{1}{3}</m>. This value tells us that during the first <quantity><mag>7.5</mag><unit base="second"/></quantity> of descent, the average rate of change in the coaster's velocity is <m>-13\frac{1}{3}\,\frac{\text{ft/s}}{\text{s}}</m>.  In other words, <em>on average</em>, with each passing second the velocity is <m>13\frac{1}{3}\,\text{ft}{s}</m> less than it was the preceding second.  We could also say that the average acceleration experienced by the coaster over the first <quantity><mag>7.5</mag><unit base="second"/></quantity> of descent is <m>-13\frac{1}{3}\,\frac{\text{ft/s}}{\text{s}}</m>.</p> 
@@ -368,10 +368,10 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>The acceleration of a rocket (<quantity><unit base="mileperhour"/><per base="second"/></quantity>) is given by <m>\fe{h}{t}=0.02+0.13t</m> where <m>t</m> is the amount of time (<quantity><unit base="second"/></quantity>) that has passed since lift-off.  Find and interpret <m>\frac{\fe{h}{120}-\fe{h}{60}}{120-60}</m>.</p>
+                    <p>The acceleration of a rocket (<quantity><unit base="mileperhour"/><per base="second"/></quantity>) is given by <m>\fe{a}{t}=0.02+0.13t</m> where <m>t</m> is the amount of time (<quantity><unit base="second"/></quantity>) that has passed since lift-off.  Find and interpret <m>\frac{\fe{a}{120}-\fe{a}{60}}{120-60}</m>.</p>
                 </statement>
                 <solution>
-                    <p><m>\frac{\fe{h}{120}-\fe{h}{60}}{120-60}=0.13</m>. This value tells us that during the second minute of flight, the average rate of change in the rocket's acceleration is <quantity><mag>0.13</mag><unit base="mileperhour"/><per base="second"/><per base="second"/></quantity>.  In other words, <em>on average</em>, with each passing second the acceleration  is <quantity><mag>0.13</mag><unit base="mileperhour"/><per base="second"/></quantity> more than it was the preceding second.  You might have noticed that since the acceleration function is linear, the rate of change in the acceleration is constant.  That is, with each passing second the acceleration <em>actually is</em> <quantity><mag>0.13</mag><unit base="mileperhour"/><per base="second"/></quantity> more than it was the preceding second.</p>
+                    <p><m>\frac{\fe{a}{120}-\fe{a}{60}}{120-60}=0.13</m>. This value tells us that during the second minute of flight, the average rate of change in the rocket's acceleration is <quantity><mag>0.13</mag><unit base="mileperhour"/><per base="second"/><per base="second"/></quantity>.  In other words, <em>on average</em>, with each passing second the acceleration  is <quantity><mag>0.13</mag><unit base="mileperhour"/><per base="second"/></quantity> more than it was the preceding second.  You might have noticed that since the acceleration function is linear, the rate of change in the acceleration is constant.  That is, with each passing second the acceleration <em>actually is</em> <quantity><mag>0.13</mag><unit base="mileperhour"/><per base="second"/></quantity> more than it was the preceding second.</p>
                 </solution>
                 <answer>
                     <p>During the second minute of flight, the average rate of change in the rocket's acceleration is <quantity><mag>0.13</mag><unit base="mileperhour"/><per base="second"/><per base="second"/></quantity>.</p>

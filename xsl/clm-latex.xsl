@@ -13,6 +13,14 @@
 <!-- Templates added not existing in mathbook-latex.xsl -->
 <!--                                                    -->
 
+<!-- center the derivative formulas table -->
+<xsl:template match="centerline">
+    <xsl:text>\centerline{</xsl:text>
+    <xsl:apply-templates/>
+    <xsl:text>}</xsl:text>
+</xsl:template>
+
+
 <xsl:template match="killinprint">
     <xsl:apply-templates />
 </xsl:template>
@@ -58,6 +66,7 @@
 <!-- Modifications to templates in mathbook-latex.xsl   -->
 <!--                                                    -->
 
+
 <!-- Preface with numbers                                   -->
 <!-- Exercise Group -->
 <!-- We interrupt a description list with short commentary, -->
@@ -72,7 +81,7 @@
     <xsl:text>. }</xsl:text>
     <xsl:apply-templates select="." mode="label" />
     <xsl:apply-templates select="introduction" />
-    <xsl:apply-templates select="exercise"/>
+    <xsl:apply-templates select="exercise|remark"/>
     <xsl:apply-templates select="conclusion" />
     <xsl:text>\par\smallskip\noindent&#xa;</xsl:text>
 </xsl:template>
@@ -267,7 +276,8 @@ shouldn't have sidebysides in them anyway -->
 
 
 <!-- Overwrite table parts to use booktabs.              -->
-<xsl:template match="tabular[(not(@left) and not(@right) and not(./col/@right) and not(./row/@left) and not(.//cell/@right)) or (count(./col[@halign]) &gt; count(./col[@halign='right']) + count(./col[@halign='center'])+ count(./col[@halign='left']))]">
+<xsl:template match="tabular[not(@left) or (count(./col[@halign]) &gt; count(./col[@halign='right']) + count(./col[@halign='center'])+ count(./col[@halign='left']))]">
+<!--<xsl:template match="tabular[(not(@left) and not(@right) and not(./col/@right) and not(./row/@left) and not(.//cell/@right)) or (count(./col[@halign]) &gt; count(./col[@halign='right']) + count(./col[@halign='center'])+ count(./col[@halign='left']))]">-->
     <xsl:choose>
         <xsl:when test="*[not(ancestor::sidebyside)]">
             <xsl:text>\begin{tabular}{</xsl:text>

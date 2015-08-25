@@ -126,7 +126,7 @@
             <li><p><m>\frac{\text{zero}}{\text{zero}}</m>. Example: <m>\lim\limits_{x\to-2}\frac{x^2-4}{x^2+3x+2}</m> (the form is <m>\frac{0}{0}</m>)</p>
                 <p>This is an <term>indeterminate form limit</term>. You do not know the value of the limit (or even if it exists) nor can you begin to apply limit laws.  You need to manipulate the expression whose limit is being found until the resultant limit no longer has indeterminate form.  For example:<md>
                 <mrow>\lim_{x\to-2}\frac{x^2-4}{x^2+3x+2}&amp;=\lim_{x\to-2}\frac{(x+2)(x-2)}{(x+2)(x+1)}</mrow>
-                <mrow>&amp;=\lim_{x\to-2}\frac{x-2}{x+1}</mrow>
+                <mrow>&amp;=\lim_{x\to-2}\frac{x-2}{x+1}\text{.}</mrow>
                 </md>The limit form is now <m>\frac{-4}{-1}</m>; you may begin applying the limit laws.</p></li>
         </ul>
         <ul>
@@ -141,7 +141,7 @@
             <li><p><m>\frac{\text{infinity}}{\text{infinity}}</m>. Example: <m>\lim\limits_{x\to\infty}\frac{3+e^x}{1+3e^x}</m> (the form is <m>\frac{\infty}{\infty}</m>)</p>
                 <p>This is an <term>indeterminate form limit</term>. You do not know the value of the limit (or even if it exists) nor can you begin to apply limit laws.  You need to manipulate the expression whose limit is being found until the resultant limit no longer has indeterminate form.  For example:<md>
                 <mrow>\lim_{x\to\infty}\frac{3+e^x}{1+3e^x}&amp;=\lim_{x\to\infty}\left(\frac{3+e^x}{1+3e^x}\cdot\frac{\sfrac{1}{e^x}}{\sfrac{1}{e^x}}\right)</mrow>
-                <mrow>&amp;=\lim_{x\to\infty}\frac{\frac{3}{e^x}+1}{\frac{1}{e^x}+3}</mrow>
+                <mrow>&amp;=\lim_{x\to\infty}\frac{\frac{3}{e^x}+1}{\frac{1}{e^x}+3}\text{.}</mrow>
                 </md>The limit form is now <m>\frac{1}{3}</m>; you may begin applying the limit laws.</p></li>
         </ul>
         <p>There are other indeterminate limit forms, although the two mentioned here are the only two <term>rational indeterminate forms</term>.  The other indeterminate forms are discussed in future calculus courses.</p>

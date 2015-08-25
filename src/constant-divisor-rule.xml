@@ -20,7 +20,7 @@
             <col halign="center" right="minor"/>
             <col halign="center"/>
             <row bottom="minor">
-                <cell>Given Function</cell>
+                <cell>Given function</cell>
                 <cell><m>\fe{f}{x}=\frac{x^4}{8}</m></cell>
                 <cell><m>y=\frac{3\fe{\tan}{\alpha}}{2}</m></cell>
                 <cell><m>z=\frac{\fe{\ln}{y}}{3}</m></cell>

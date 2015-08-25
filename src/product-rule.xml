@@ -22,7 +22,7 @@
             <col halign="center"/>
             <col halign="center"/>
             <row bottom="medium">
-                <cell>Given Function</cell>
+                <cell>Given function</cell>
                 <cell>Derivative</cell>
             </row>
             <row bottom="minor">
@@ -42,11 +42,16 @@
     <figure xml:id="figure-constant-factors-with-product-rule"> 
         <caption/>
         <p><md>
-        <mrow>&amp;\textbf{Option A}&amp;&amp;\textbf{Option B}</mrow>
-        <mrow>&amp;\phantom{{}={}}\fe{\fd{f}}{x}&amp;&amp;\phantom{{}={}}\fe{\fd{f}}{x}</mrow>
-        <mrow>&amp;=5\left[\lzoo{x}{x^2}\fe{\ln}{x}+x^2\lzoo{x}{\fe{\ln}{x}}\right]&amp;&amp;=\lzoo{x}{5x^2}\fe{\ln}{x}+5x^2\lzoo{x}{\fe{\ln}{x}}</mrow>
-        <mrow>&amp;=5\left[2x\fe{\ln}{x}+x^2\cdot\frac{1}{x}\right]&amp;&amp;=10x\fe{\ln}{x}+5x^2\cdot\frac{1}{x}</mrow>
-        <mrow>&amp;=10x\fe{\ln}{x}+5x&amp;&amp;=10x\fe{\ln}{x}+5x</mrow>
+        <mrow>&amp;\textbf{Option A}</mrow>
+        <mrow>\fe{\fd{f}}{x}&amp;=\lzoo{x}{5x^2}\fe{\ln}{x}+5x^2\lzoo{x}{\fe{\ln}{x}}</mrow>
+        <mrow>&amp;=5\left[2x\fe{\ln}{x}+x^2\cdot\frac{1}{x}\right]</mrow>
+        <mrow>&amp;=10x\fe{\ln}{x}+5x</mrow>
+        </md></p>
+        <p><md>
+        <mrow>&amp;\textbf{Option B}</mrow>
+        <mrow>\fe{\fd{f}}{x}&amp;=\lzoo{x}{5x^2}\fe{\ln}{x}+5x^2\lzoo{x}{\fe{\ln}{x}}</mrow>
+        <mrow>&amp;=10x\fe{\ln}{x}+5x^2\cdot\frac{1}{x}</mrow>
+        <mrow>&amp;=10x\fe{\ln}{x}+5x</mrow>
         </md></p>
     </figure>
 

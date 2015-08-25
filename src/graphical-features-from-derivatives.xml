@@ -17,7 +17,7 @@
             <introduction>
                 <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
                 <sidebyside>
-                    <table xml:id="table-based-on-derivatives" valign="top">
+                    <table width="52%" xml:id="table-based-on-derivatives" valign="top">
                         <caption>Signs on <m>\fd{f}</m> and <m>\sd{f}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -78,7 +78,7 @@
             <introduction>
                 <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
                 <sidebyside>
-                    <table xml:id="table-based-on-derivatives-two" valign="top">
+                    <table width="52%" xml:id="table-based-on-derivatives-two" valign="top">
                         <caption>Signs on <m>\fd{g}</m> and <m>\sd{g}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -139,7 +139,7 @@
             <introduction>
                 <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
                 <sidebyside>
-                    <table xml:id="table-based-on-derivatives-three" valign="top">
+                    <table width="52%" xml:id="table-based-on-derivatives-three" valign="top">
                         <caption>Signs on <m>\fd{k}</m> and <m>\sd{k}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -177,7 +177,7 @@
             </introduction>
             <exercise xml:id="exercise-based-on-derivatives-three">
                 <statement>
-                    <p>Draw onto <xref ref="figure-based-on-derivatives-three"/> a continuous function <m>k</m> that passes through the point <m>\point{-1}{2}</m> and also satisfies the properties stated in <xref ref="table-based-on-derivatives-three"/>.</p>
+                    <p>Draw onto <xref ref="figure-based-on-derivatives-three"/> the graph of a continuous function <m>k</m> that passes through the point <m>\point{-1}{2}</m> and also satisfies the properties stated in <xref ref="table-based-on-derivatives-three"/>.</p>
                 </statement>
             </exercise>
             <exercise>
@@ -303,7 +303,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Suppose that the function <m>f</m> is everywhere continuous and concave down.  Suppose further that <m>\fe{f}{7}=5</m> and <m>\fe{\fd{f}}{7}=3</m>.  Which of the following is true?</p>
+                    <p>Suppose that the function <m>f</m> is continuous, concave down, and is such that <m>\fe{f}{7}=5</m> and <m>\fe{\fd{f}}{7}=3</m>.  Which of the following is true?</p>
                     <ol cols="2">
                         <li><m>\fe{f}{9}\lt11</m></li>
                         <li><m>\fe{f}{9}=11</m></li>

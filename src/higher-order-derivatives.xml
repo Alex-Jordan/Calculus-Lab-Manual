@@ -16,8 +16,8 @@
             <p>All of the graphical relationships you've established between <m>f</m> and <m>\fd{f}</m> work their way down the derivative chain; this is illustrated in <xref ref="table-f-prime-and-f"/>.</p>
         </paragraphs>
 
-        <table xml:id="table-f-prime-and-f" valign="top" width="60%">
-        <caption><m>\fd{f}</m> and <m>f</m>, <m>\sd{f}</m> and <m>\fd{f}</m>, <m>\td{f}</m> and <m>\sd{f}</m></caption>
+        <table xml:id="table-f-prime-and-f" valign="top" width="55%">
+        <caption>Relationships between <m>f</m>, <m>\fd{f}</m>, <m>\sd{f}</m> and <m>\td{f}</m></caption>
             <tabular top="major">
                 <col halign="left"/>
                 <col halign="left"/>
@@ -54,7 +54,7 @@
                     <cell>Concave Down</cell>
                 </row>
                 <row>
-                    <cell>Constant Nonzero</cell>
+                    <cell>Constant</cell>
                     <cell>Linear</cell>
                 </row>
             </tabular> 
@@ -64,7 +64,7 @@
     <exercises>
         <exercise>
             <statement>
-                <p>Extrapolating from <xref ref="table-f-prime-and-f"/>, what must be true about <m>f</m> over intervals where <m>\sd{f}</m> is, respectively: positive, negative, and constantly zero?</p> 
+                <p>Extrapolating from <xref ref="table-f-prime-and-f"/>, what must be true about <m>f</m> over intervals where <m>\sd{f}</m> is, respectively: positive, negative, or constantly zero?</p> 
             </statement>
         </exercise>
         <exercise>
@@ -76,11 +76,11 @@
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-0.5,0,...,3}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
+                            \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-1,-0.5,...,4}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
                                 \addplot+[
-                                    domain=-0.5:4,
+                                    domain=0:4,
                                     -,
-                                ]{(x^6-18*x^4+48*x^2)/64*3*exp(-(x/2)^2)};
+                                ]{1.2*(x^6-18*x^4+48*x^2)/64*3*exp(-(x/2)^2)};
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>
@@ -91,11 +91,11 @@
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-0.5,0,...,3}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
+                            \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-1,-0.5,...,4}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
                                 \addplot+[
-                                    domain=-0.5:4,
+                                    domain=0:4,
                                     -,
-                                ]{(x/2)^4*3*exp(-(x/2)^2)-1};
+                                ]{1.2*(x/2)^4*3*exp(-(x/2)^2)-1};
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>
@@ -106,11 +106,11 @@
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-0.5,0,...,3}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
+                            \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-1,-0.5,...,4}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
                                 \addplot+[samples=50,
-                                    domain=-0.5:4,
+                                    domain=0:4,
                                     -,
-                                ]{(-x^7+30*x^5-192*x^3+192*x)/128*3*exp(-(x/2)^2)};
+                                ]{1.2*(-x^7+30*x^5-192*x^3+192*x)/128*3*exp(-(x/2)^2)};
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>
@@ -121,11 +121,11 @@
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-0.5,0,...,3}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
+                            \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-1,-0.5,...,4}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
                                 \addplot+[
-                                    domain=-0.5:4,
+                                    domain=0:4,
                                     -,
-                                ]{(-x^5+8*x^3)/32*3*exp(-(x/2)^2)};
+                                ]{1.2*(-x^5+8*x^3)/32*3*exp(-(x/2)^2)};
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>
@@ -200,7 +200,7 @@
             </introduction>
             <exercise>
                 <statement>
-                    <p>Suppose that water is being poured into each  of the containers at a constant rate.  Let <m>h_a</m>, <m>h_b</m>, and <m>h_c</m> be the heights (measured in <quantity><unit prefix="centi" base="meter"/></quantity>) of the liquid in containers <xref autoname="no" ref="figure-prism-uniform"/><ndash/><xref autoname="no" ref="figure-prism-bottom-heavy"/> respectively, <m>t</m> seconds after the water began to fill the containers.  What would you expect the sign to be on the second derivative functions <m>\sd{h_a}</m>, <m>\sd{h_b}</m>, and <m>\sd{h_c}</m> while the containers are being filled?  (Hint:  Think about the shape of the curves <m>y=\fe{\sd{h_a}}{t}</m>, <m>y=\fe{\sd{h_b}}{t}</m>, and <m>y=\fe{\sd{h_c}}{t}</m>.)</p>
+                    <p>Suppose that water is being poured into each  of the containers at a constant rate.  Let <m>h_a</m>, <m>h_b</m>, and <m>h_c</m> be the heights (measured in <quantity><unit prefix="centi" base="meter"/></quantity>) of the liquid in containers <xref autoname="no" ref="figure-prism-uniform"/><ndash/><xref autoname="no" ref="figure-prism-bottom-heavy"/> respectively, <m>t</m> seconds after the water began to fill the containers.  What would you expect the sign to be on the second derivative functions <m>\sd{h_a}</m>, <m>\sd{h_b}</m>, and <m>\sd{h_c}</m> while the containers are being filled?  (Hint:  Think about the shape of the curves <m>y=\fe{h_a}{t}</m>, <m>y=\fe{h_b}{t}</m>, and <m>y=\fe{h_c}{t}</m>.)</p>
                 </statement>
             </exercise>
             <exercise>

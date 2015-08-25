@@ -351,7 +351,7 @@ formula stated above for the product of three functions.  The first application 
             </exercise>
             <exercise>
                 <statement>
-                     <p>Apply the formula shown for the product of four functions to determine the derivative with respect to <m>x</m> of the function <m>x^2e^x\fe{\sin}{x}\fe{\cos}{x}</m>.</p>
+                     <p>Apply the formula shown for the product of four functions to determine the derivative with respect to <m>x</m> of the function <m>p</m> defined by  <m>\fe{p}{x}=x^2e^x\fe{\sin}{x}\fe{\cos}{x}</m>.</p>
                 </statement>
                 <solution>
                      <p><md>
@@ -468,7 +468,7 @@ formula stated above for the product of three functions.  The first application 
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[xmin=-10,xmax=10,ymin=-30,ymax=170,
                                      xtick={-8,-6,...,8}, minor xtick={-10,-9,...,10},
-                                     ytick={-20,0,...,160}, minor ytick={-30,-20,...,170}]
+                                     ytick={0,20,...,160}, minor ytick={-30,-20,...,170}]
                                 \addplot+[samples=100,
                                     domain=-9.8:7.2,
                                 ]{x^3/3+3*x^2-16*x};
@@ -650,10 +650,7 @@ formula stated above for the product of three functions.  The first application 
         </exercise>
         <exercisegroup>
             <introduction>
-                <sidebyside>
-                <paragraphs valign="top" width="30%">
-                    <p>In <xref ref="table-functions-for-derivative-rules"/> several function and derivative values are given for the functions <m>f</m> and <m>g</m>.  The exercises that follow are based upon these two functions.</p>
-                </paragraphs>
+                <p>In <xref ref="table-functions-for-derivative-rules"/> several function and derivative values are given for the functions <m>f</m> and <m>g</m>.  The exercises that follow are based upon these two functions.</p>
                 <table xml:id="table-functions-for-derivative-rules" valign="top">
                     <tabular top="major">
                         <col halign="right"/>
@@ -718,10 +715,9 @@ formula stated above for the product of three functions.  The first application 
                             <cell><m>214</m></cell>
                         </row>
                     </tabular>
-                    <caption/>
+                    <caption>Various values for derivatives of <m>f</m> and <m>g</m></caption>
                 </table>
-                </sidebyside>
-                <p>Suppose that you were asked to find the value of <m>\fe{\fd{h}}{2}</m> where <m>\fe{h}{x}=\fe{f}{x}\fe{g}{x}</m>.  The first thing you would need to do is find a formula for <m>\fe{\fd{h}}{x}</m>.  You would then replace <m>x</m> with <m>2</m>, substitute the appropriate function and derivative values, and simplify.  This is illustrated below:<md>
+                <p>Suppose that you were asked to find the value of <m>\fe{\fd{h}}{2}</m> where <m>\fe{h}{x}=\fe{f}{x}\fe{g}{x}</m>.  The first thing you would need to do is find a formula for <m>\fe{\fd{h}}{x}</m>.  You would then replace <m>x</m> with <m>2</m>, substitute the appropriate function and derivative values, and simplify.  This is illustrated below.<md>
                 <mrow>\fe{\fd{h}}{x}&amp;=\lzoo{x}{\fe{f}{x}}\fe{g}{x}+\fe{f}{x}\lzoo{x}{\fe{g}{x}}</mrow> 
                 <mrow>&amp;=\fe{\fd{f}}{x}\fe{g}{x}+\fe{f}{x}\fe{\fd{g}}{x}</mrow> 
                 <mrow>\fe{\fd{h}}{2}&amp;=\fe{\fd{f}}{2}\fe{g}{2}+\fe{f}{2}\fe{\fd{g}}{2}</mrow> 

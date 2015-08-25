@@ -135,20 +135,11 @@
             </row>
             </tabular>
         </table>
-        <p>From our related rates equation and the values in <xref ref="table-drone-what-we-know"/>,</p>
-        <sidebyside>
-            <paragraphs valign="top">
-                <p><md>
-                <mrow>\lz{\theta}{t}&amp;=\frac{1}{400}\fe{\cos^2}{\theta}\lz{h}{t}</mrow>
-                <mrow/>
-                <mrow>\lzoa{\theta}{t}{\fe{\cos}{\theta}=\frac{4}{5}, \lz{h}{t}=0.88 }&amp;=\frac{1}{400}\left(\frac{4}{5}\right)^2(0.88)</mrow>
-                <mrow>&amp;=0.001408</mrow>
-                </md></p>
-            </paragraphs>
-            <paragraphs valign="top">
-                <p>When the elevation of the drone is <quantity><mag>300</mag><unit base="foot"/></quantity> and the drone is rising at a rate of <quantity><mag>0.88</mag><unit base="foot"/><per base="second"/></quantity>, the angle of elevation from the tether point to the drone is increasing at a rate of (about) <quantity><mag>0.0014</mag><unit base="radian"/><per base="second"/></quantity>.</p>
-            </paragraphs>
-        </sidebyside>
+        <p>From our related rates equation and the values in <xref ref="table-drone-what-we-know"/>,<md>
+            <mrow>\lz{\theta}{t}&amp;=\frac{1}{400}\fe{\cos^2}{\theta}\lz{h}{t}</mrow>
+            <mrow>\lzoa{\theta}{t}{\fe{\cos}{\theta}=\frac{4}{5}, \lz{h}{t}=0.88 }&amp;=\frac{1}{400}\left(\frac{4}{5}\right)^2(0.88)</mrow>
+            <mrow>&amp;=0.001408\text{.}</mrow>
+        </md>When the elevation of the drone is <quantity><mag>300</mag><unit base="foot"/></quantity> and the drone is rising at a rate of <quantity><mag>0.88</mag><unit base="foot"/><per base="second"/></quantity>, the angle of elevation from the tether point to the drone is increasing at a rate of (about) <quantity><mag>0.0014</mag><unit base="radian"/><per base="second"/></quantity>.</p>
     </example>
 
     <exercises>

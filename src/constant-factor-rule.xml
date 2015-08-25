@@ -22,7 +22,7 @@
                 <col halign="left" right="minor"/>
                 <col halign="left"/>
                 <row bottom="minor">
-                    <cell>Given Function</cell>
+                    <cell>Given function</cell>
                     <cell><m>\fe{f}{x}=6x^9</m></cell>
                     <cell><m>\fe{f}{\theta}=2\fe{\cos}{\theta}</m></cell>
                     <cell><m>z=2\fe{\ln}{x}</m></cell>

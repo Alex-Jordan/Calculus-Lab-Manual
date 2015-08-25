@@ -22,11 +22,11 @@
         </exercise>
         <exercisegroup>
             <introduction>
-                <p>The first two derivatives of the function <m>\fe{y}{x}=\frac{(x+2)^2}{(x+3)^2}</m> are <m>\fe{\fd{y}}{x}=\frac{-x(x+2)}{(x+3)^4}</m> and <m>\fe{\sd{y}}{x}=\frac{2(x+\sqrt{3})(x-\sqrt{3})}{(x+3)^5}</m>. The first derivative of the function <m>\fe{g}{t}=\frac{\sqrt{t-4}}{(t-1)^2}</m> is <m>\fe{\fd{g}}{t}=\frac{-3(t-5)}{2(t-1)^3\sqrt{t-4}}</m>.</p>
+                <p>The first two derivatives of the function <m>\fe{y}{x}=\frac{(x+2)^2}{(x+3)^3}</m> are <me>\fe{\fd{y}}{x}=\frac{-x(x+2)}{(x+3)^4}\qquad\fe{\sd{y}}{x}=\frac{2(x+\sqrt{3})(x-\sqrt{3})}{(x+3)^5}\text{.}</me> The first derivative of the function <m>\fe{g}{t}=\frac{\sqrt{t-4}}{(t-1)^2}</m> is <me>\fe{\fd{g}}{t}=\frac{-3(t-5)}{2(t-1)^3\sqrt{t-4}}\text{.}</me></p>
             </introduction>
             <exercise>
                 <statement>
-                   <p>Yolanda was given this information and asked to find the inflection points on <m>y</m>.  The first thing Yolanda wrote was <q>The critical numbers of <m>y</m> are <m>\sqrt{3}</m> and <m>-\sqrt{3}</m>.</q>  Explain to Yolanda why this is not true.</p>
+                   <p>Yolanda was given this information and asked to find the inflection points on <m>y</m>.  The first thing Yolanda wrote was, <q>The critical numbers of <m>y</m> are <m>\sqrt{3}</m> and <m>-\sqrt{3}</m>.</q>  Explain to Yolanda why this is not true.</p>
                 </statement>
             </exercise>
             <exercise>
@@ -79,7 +79,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>The function <m>y</m> has a vertical asymptote at <m>-3</m>.  Given that fact, it was impossible that <m>y</m>would have an inflection point at <m>-3</m>.  Why, then, did we never-the-less break the interval <m>\ointerval{-\infty}{-\sqrt{3}}</m> at <m>-3</m> when creating our concavity table?</p> 
+                    <p>The function <m>y</m> has a vertical asymptote at <m>-3</m>.  Given that fact, it was impossible that <m>y</m> would have an inflection point at <m>-3</m>.  Why, then, did we never-the-less break the interval <m>\ointerval{-\infty}{-\sqrt{3}}</m> at <m>-3</m> when creating our concavity table?</p> 
                 </statement>
             </exercise>
         </exercisegroup>

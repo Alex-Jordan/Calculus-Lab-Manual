@@ -21,7 +21,7 @@
             <col halign="left" right="minor"/>
             <col halign="left"/>
             <row bottom="medium">
-                <cell>Given Function</cell>
+                <cell>Given function</cell>
                 <cell><m>y=4\sqrt[5]{t^6}-\frac{1}{6\sqrt{t}}+8t</m></cell>
                 <cell><m>\fe{P}{\gamma}=\frac{\fe{\sin}{\gamma}-\fe{\cos}{\gamma}}{2}+4</m></cell>
             </row>

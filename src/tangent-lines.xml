@@ -19,7 +19,7 @@
         <sidebyside>
             <paragraphs valign="top">
                 <p><md>
-                <mrow>m_{\text{tan}}&amp;=\lim_{h\to0}\frac{\fe{f}{4+h}-\fe{f}{4}}{h}</mrow>
+                <mrow>\qquad\;m_{\text{tan}}&amp;=\lim_{h\to0}\frac{\fe{f}{4+h}-\fe{f}{4}}{h}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{\sqrt{4+h}-\sqrt{4}}{h}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\left(\frac{\sqrt{4+h}-2}{h}\cdot\frac{\sqrt{4+h}+2}{\sqrt{4+h}+2}\right)</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{4+h-4}{h\left(\sqrt{4+h}+2\right)}</mrow>

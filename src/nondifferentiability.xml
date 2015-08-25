@@ -21,7 +21,7 @@
     <exercises> 
         <exercisegroup>
             <introduction>
-                <p>Consider the function <m>k</m> shown in <xref ref="figure-nondifferentiable"/>.</p>
+                <p>Consider the function <m>k</m> shown in <xref ref="figure-nondifferentiable"/>. Please note that <m>k</m> has a vertical tangent line at <m>-4</m>.</p>
                 <sidebyside>
                     <figure xml:id="figure-nondifferentiable">
                         <caption><m>y=\fe{k}{x}</m></caption>

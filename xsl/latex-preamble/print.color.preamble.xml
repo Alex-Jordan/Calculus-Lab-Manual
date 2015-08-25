@@ -1,0 +1,18 @@
+<latex-preamble>
+
+<latex-preamble-early>
+</latex-preamble-early>
+
+
+
+<latex-preamble-late>
+<![CDATA[
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% In print, helping with stopping inline math breaks in captions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\captionsetup{justification=RaggedRight}
+]]>
+</latex-preamble-late>
+
+</latex-preamble>

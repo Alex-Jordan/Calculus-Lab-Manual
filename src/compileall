@@ -1,0 +1,7 @@
+xelatex printdraft.tex
+xelatex printdraft.tex
+xelatex printcolordraft.tex
+xelatex printcolordraft.tex
+xelatex screenpdfdraft.tex
+xelatex screenpdfdraft.tex
+

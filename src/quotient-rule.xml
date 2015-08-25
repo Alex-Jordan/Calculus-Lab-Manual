@@ -20,7 +20,7 @@
             <col halign="center"/>
             <col halign="center"/>
             <row bottom="medium">
-                <cell>Given Function</cell>
+                <cell>Given function</cell>
                 <cell>Derivative</cell>
             </row>
             <row bottom="minor">
@@ -29,7 +29,7 @@
             </row>
             <row bottom="major">
                 <cell><m>V=\dfrac{\fe{\csc}{t}}{\fe{\tan}{t}}</m></cell>
-                <cell><m>\begin{aligned}\lz{V}{t}&amp;=\frac{\lzoo{t}{\fe{\csc}{t}}\cdot\fe{\tan}{t}-\fe{\csc}{t}\cdot\lzoo{t}{\fe{\tan}{x}}}{\fe{\tan^2}{t}}\\&amp;=\frac{-\fe{\csc}{t}\fe{\cot}{t}\fe{\tan}{t}-\fe{\csc}{t}\fe{\sec^2}{t}}{\fe{\tan^2}{t}}\\&amp;=\frac{-\fe{\csc}{t}\left(1+\fe{\sec^2}{t}\right)}{\fe{\tan^2}{t}}\end{aligned}</m></cell>
+                <cell><m>\begin{aligned}\lz{V}{t}&amp;=\frac{\lzoo{t}{\fe{\csc}{t}}\cdot\fe{\tan}{t}-\fe{\csc}{t}\cdot\lzoo{t}{\fe{\tan}{t}}}{\fe{\tan^2}{t}}\\&amp;=\frac{-\fe{\csc}{t}\fe{\cot}{t}\fe{\tan}{t}-\fe{\csc}{t}\fe{\sec^2}{t}}{\fe{\tan^2}{t}}\\&amp;=\frac{-\fe{\csc}{t}\left(1+\fe{\sec^2}{t}\right)}{\fe{\tan^2}{t}}\end{aligned}</m></cell>
             </row>
         </tabular>
 
@@ -67,17 +67,17 @@
             </introduction>
             <exercise xml:id="unsimplified-quotient-first">
                 <statement>
-                    <p><m>\lzoo{t}{\dfrac{\fe{\sin}{t}}{\fe{\sin}{t}}}</m></p>
+                    <p><m>\displaystyle\lzoo{t}{\dfrac{\fe{\sin}{t}}{\fe{\sin}{t}}}</m></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p><m>\lzoo{x}{\dfrac{x^6}{x^2}}</m></p>
+                    <p><m>\displaystyle\lzoo{x}{\dfrac{x^6}{x^2}}</m></p>
                 </statement>
             </exercise>
             <exercise xml:id="unsimplified-quotient-last">
                 <statement>
-                    <p><m>\lzoo{x}{\dfrac{10}{2x}}</m></p>
+                    <p><m>\displaystyle\lzoo{x}{\dfrac{10}{2x}}</m></p>
                 </statement>
             </exercise>
         </exercisegroup>

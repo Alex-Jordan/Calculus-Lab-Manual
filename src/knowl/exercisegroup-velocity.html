@@ -1,0 +1,67 @@
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2015-08-23T23:07:25-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<div class="exercisegroup">
+<article class="introduction" id="introduction-1"><h5 class="heading"></h5>
+<p>According to simplified Newtonian physics, if an object is dropped from an elevation<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a></span><span id="hk-fn-1" style="display: none;" class="tex2jax_ignore"><span class="footnote">If you encounter an unfamiliar unit of measure while reading this lab manual, see <a href="appendix-units.html" alt="Appendix D Units of Measure" title="Appendix D Units of Measure">Appendix D</a>.</span></span> of \(200\) meters (m) and allowed to free fall to the ground, then the elevation of the object is given by the position function <article class="displaymath" id="me-2">\[\fe{p}{t}=200\,\text{m}-\left(4.9\,\sfrac{\text{m}}{\text{s}^2}\right)t^2\]</article> where \(t\) is the amount of time that has passed since the object was dropped. (The “\(200\) m” in the formula represents the elevation from which the object was dropped, and the “\(4.9\) <sup>m</sup>⁄<sub>s<sup>2</sup></sub>” represents one half of the acceleration due to gravity near the surface of Earth.)</p></article><article class="exercise-like" id="exercise-calculate-position"><h5 class="heading"><span class="codenumber">1</span></h5>
+<p>Calculate \(\fe{p}{3\,\text{s}}\) and \(\fe{p}{5\,\text{s}}\). Make sure that you include the units specified in the formula for \(\fe{p}{t}\), and that you replace \(t\) with, respectively, \(3\) s and \(5\) s. Make sure that you simplify the units, as well as the numerical part of the funciton value.</p></article><div class="hidden-knowl-wrapper"></div>
+<article class="exercise-like" id="exercise-average-velocity"><h5 class="heading"><span class="codenumber">2</span></h5>
+<p>Calculate \(\frac{\fe{p}{5\,\text{s}}-\fe{p}{3\,\text{s}}}{{5\,\text{s}}-{3\,\text{s}}}\); <!--Style me with CSS--><em>include units while making the calculation</em>. Note that you already calculated \(\fe{p}{3\,\text{s}}\) and \(\fe{p}{5\,\text{s}}\) in <a knowl="./knowl/exercise-calculate-position.html" knowl-id="xref-exercise-calculate-position" alt="Exercise 1.1.1.0.1 " title="Exercise 1.1.1.0.1 ">Exercise 1</a>. What does the result tell you in the context of this problem?</p></article><div class="hidden-knowl-wrapper"></div>
+<article class="example-like" id="remark-1"><h5 class="heading">
+<span class="type">Remark</span><span class="codenumber">1.1.2</span><span class="title">Units in formulas</span>
+</h5>
+<p>Thus far we have used a formula where every number that appears in the formula comes with its real world unit (\(\fe{p}{t}=200\,\text{m}-\left(4.9\,\sfrac{\text{m}}{\text{s}^2}\right)t^2\)). A formula like this allows you to calculate \(\fe{p}{5\,\text{s}}\) or \(\fe{p}{5\,\text{min}}\) as you please, as long as you track the units and reduce ratios appropriately.</p>
+<p>However, all those units in the original formula might distract you from new calculus topics. We <!--Style me with CSS--><em>could</em> have just written \(\fe{p}{t}=200-4.9t^2\), but if we do so, we <!--Style me with CSS--><em>have</em> to specify that \(t\) is in seconds and \(\fe{p}{t}\) is in meters. With this formula, we can calculate something like \(\fe{p}{5}\), but we need to recognize that in context, the \(5\) means that \(5\) <!--Style me with CSS--><em>seconds</em> have passed. And when we arrive at the result, \(\fe{p}{5}=77.5\), we need to realize that the position is \(77.5\) <!--Style me with CSS--><em>meters</em>.</p>
+<p>For the remainder of this lab manual, formulas will be written in this second way, without explicit units. Each variable will be specified with what unit it is intended to be measured in. To continue the current block of exercises, we redefine <article class="displaymath" id="me-3">\[\fe{p}{t}=200-4.9t^2\text{,}\]</article> where \(t\) is in s, and \(\fe{p}{t}\) is in m.</p></article><article class="exercise-like" id="exercise-average-velocity-formula"><h5 class="heading"><span class="codenumber">3</span></h5>
+<p>Use <a knowl="./knowl/definition-average-velocity.html" knowl-id="xref-definition-average-velocity" alt="Definition 1.1.1 Average Velocity" title="Definition 1.1.1 Average Velocity">Definition 1.1.1</a> to find a formula for the average velocity of this object over the general time interval \(\cinterval{t_0}{t_1}\). The first couple of lines of this process are shown below. Copy these lines onto your paper and continue the simplification process.<article class="displaymath" id="md-1">\begin{align*}
+\frac{\fe{p}{t_1}-\fe{p}{t_0}}{t_1-t_0}&amp;=\frac{\left[200-4.9t_1^2\right]-\left[200-4.9t_0^2\right]}{t_1-t_0}\\
+&amp;=\frac{200-4.9t_1^2-200+4.9t_0^2}{t_1-t_0}\\
+&amp;=\frac{-4.9t_1^2+4.9t_0^2}{t_1-t_0}\\
+&amp;=\cdots
+\end{align*}</article></p></article><div class="hidden-knowl-wrapper">
+<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-hint-1" id="hint-1"><span class="heading"><span class="type">Hint</span></span></a></span><span id="hk-hint-1" style="display: none;" class="tex2jax_ignore"><span class="solution"><p>Factor \(-4.9\) from the numerator; the remaining factor will factor further.</p></span></span>
+</div>
+<article class="exercise-like" id="exercise-4"><h5 class="heading"><span class="codenumber">4</span></h5>
+<p>Check the formula you derived in <a knowl="./knowl/exercise-average-velocity-formula.html" knowl-id="xref-exercise-average-velocity-formula" alt="Exercise 1.1.1.0.3 " title="Exercise 1.1.1.0.3 ">Exercise 3</a> using \(t_0=3\) and \(t_1=5\); that is, compare the value generated by the formula to that you found in <a knowl="./knowl/exercise-average-velocity.html" knowl-id="xref-exercise-average-velocity" alt="Exercise 1.1.1.0.2 " title="Exercise 1.1.1.0.2 ">Exercise 2</a>.</p></article><div class="hidden-knowl-wrapper"></div>
+<article class="exercise-like" id="exercise-5"><h5 class="heading"><span class="codenumber">5</span></h5>
+<p>Now explore some average velocities in tabular form.</p>
+<div class="sidebyside" id="sidebyside-1">
+<article class="paragraphs" id="paragraphs-1" style="width:43%;vertical-align:top;text-align:left;"><h5 class="heading"><span class="title"></span></h5>
+<p>Using the formula found in <a knowl="./knowl/exercise-average-velocity-formula.html" knowl-id="xref-exercise-average-velocity-formula" alt="Exercise 1.1.1.0.3 " title="Exercise 1.1.1.0.3 ">Exercise 3</a>, replace \(t_0\) with \(3\) but leave \(t_1\) as a variable; simplify the result. Then copy <a knowl="./knowl/table-velocity.html" knowl-id="xref-table-velocity" alt="Table 1.1.3 " title="Table 1.1.3 ">Table 1.1.3</a> onto your paper and fill in the missing entries.</p></article><figure class="right" id="table-velocity" style="width:53%;vertical-align:top;text-align:center;"><figcaption style="text-align:center"><span class="heading">Table</span><span class="codenumber">1.1.3</span>Values of \(\frac{\fe{p}{t_1}-\fe{p}{3}}{t_1-3}\)</figcaption><table>
+<tr>
+<td class="l b2 r0 l0 t3">\(t_1\) (s)</td>
+<td class="c b2 r0 l0 t3">\(\frac{\fe{p}{t_1}-\fe{p}{3}}{t_1-3}\) (<sup>m</sup>⁄<sub>s</sub>)</td>
+</tr>
+<tr>
+<td class="l b0 r0 l0 t0">2.9</td>
+<td class="c b0 r0 l0 t0"></td>
+</tr>
+<tr>
+<td class="l b0 r0 l0 t0">2.99</td>
+<td class="c b0 r0 l0 t0"></td>
+</tr>
+<tr>
+<td class="l b0 r0 l0 t0">2.999</td>
+<td class="c b0 r0 l0 t0"></td>
+</tr>
+<tr>
+<td class="l b0 r0 l0 t0">3.001</td>
+<td class="c b0 r0 l0 t0"></td>
+</tr>
+<tr>
+<td class="l b0 r0 l0 t0">3.01</td>
+<td class="c b0 r0 l0 t0"></td>
+</tr>
+<tr>
+<td class="l b3 r0 l0 t0">3.1</td>
+<td class="c b3 r0 l0 t0"></td>
+</tr>
+</table></figure>
+</div></article><div class="hidden-knowl-wrapper"></div>
+<article class="exercise-like" id="exercise-6"><h5 class="heading"><span class="codenumber">6</span></h5>
+<p>As the value of \(t_1\) gets closer to \(3\), the values in the \(y\)-column of <a knowl="./knowl/table-velocity.html" knowl-id="xref-table-velocity" alt="Table 1.1.3 " title="Table 1.1.3 ">Table 1.1.3</a> appear to be converging on a single quantity; what is this quantity? What does it mean in the context of this problem?</p></article><div class="hidden-knowl-wrapper"></div>
+</div><div class="context-link" style="text-align:right;"><a href="section-velocity.html#exercisegroup-velocity">(in-context)</a></div>

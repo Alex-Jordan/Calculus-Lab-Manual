@@ -127,7 +127,8 @@
                     <p>Sketch a graph of a function satisfying:</p>
                     <sidebyside>
                         <paragraphs valign="top">
-                            <p>The only discontinuities on <m>m</m> are at <m>-4</m> and <m>3</m>. <m>m</m> has no <m>x</m>-intercepts. <m>m</m> has constant slope of <m>-2</m> over <m>\ointerval{-\infty}{-4}</m>. <m>m</m> is continuous over <m>\cointerval{-4}{3}</m>. <m>\fe{m}{-6}=5</m>,<md>
+                            <p>The only discontinuities on <m>m</m> are at <m>-4</m> and <m>3</m>. <m>m</m> has no <m>x</m>-intercepts. <m>m</m> has constant slope of <m>-2</m> over <m>\ointerval{-\infty}{-4}</m>. <m>m</m> is continuous over <m>\cointerval{-4}{3}</m>. And:<md>
+                            <mrow>\fe{m}{-6}&amp;=5</mrow>
                             <mrow>\lim_{x\to3}\fe{m}{x}&amp;=-\infty</mrow>
                             <mrow>\lim_{x\to-4^{+}}\fe{m}{x}&amp;=-2</mrow>
                             <mrow>\lim_{x\to\infty}\fe{m}{x}&amp;=-\infty</mrow>

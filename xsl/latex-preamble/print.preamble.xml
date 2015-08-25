@@ -7,6 +7,11 @@
 
 <latex-preamble-late>
 <![CDATA[
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% In print, helping with stopping inline math breaks in captions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\captionsetup{justification=RaggedRight}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % In print, trying to reduce color use
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -21,6 +26,7 @@
     \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
 
 ]]>
+\colorlet{blue}{black}
 </latex-preamble-late>
 
 </latex-preamble>

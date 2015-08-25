@@ -10,7 +10,7 @@
 <section xml:id="section-simplification">
     <title>Simplification</title>
 
-    <p>In <xref ref="exercisegroup-unsimplified-product"/> from <xref ref="section-product-rule"/> and <xref ref="exercisegroup-unsimplified-quotient"/> from <xref ref="section-quotient-rule"/> you applied the product and quotient rules to expressions where the derivative could have been found much more quickly had you simplified the expression before taking the derivative.  For example, while you can find the correct derivative formula using the quotient rule when working problem <xref ref="unsimplified-quotient-last"/>, the derivative can be found much more quickly if you simplify the expression before applying the rules of differentiation. This is illustrated in <xref ref="example-simplify-first"/>.</p>
+    <p>In <xref ref="exercisegroup-unsimplified-product"/> from <xref ref="section-product-rule"/> and <xref ref="exercisegroup-unsimplified-quotient"/> from <xref ref="section-quotient-rule"/> you applied the product and quotient rules to expressions where the derivative could have been found much more quickly had you simplified the expression before taking the derivative.  For example, while you can find the correct derivative formula using the quotient rule when working <xref ref="unsimplified-quotient-last"/>, the derivative can be found much more quickly if you simplify the expression before applying the rules of differentiation. This is illustrated in <xref ref="example-simplify-first"/>.</p>
 
     <example xml:id="example-simplify-first"> 
         <p><md>

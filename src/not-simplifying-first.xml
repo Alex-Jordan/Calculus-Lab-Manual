@@ -40,7 +40,7 @@
         </exercise>
         <exercise>
             <statement>
-                <p>How does the formula <m>\fe{g}{t}=\fe{\ln}{e^{5t}}</m> simplify and what does this tell you about the formula for <m>\fe{\fd{g}}{t}</m>?  After answering those questions use the chain rule to find the formula for <m>\fe{\fd{g}}{t}</m> and show that it simplifies as it should.</p>
+                <p>How does the formula <m>\fe{g}{t}=\fe{\ln}{e^{5t}}</m> simplify and what does this tell you about the formula for <m>\fe{\fd{g}}{t}</m>?  After answering those questions, use the chain rule to find the formula for <m>\fe{\fd{g}}{t}</m> and show that it simplifies as it should.</p>
             </statement>
         </exercise>
         <exercisegroup> 

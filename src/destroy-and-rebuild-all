@@ -11,6 +11,31 @@ perl -pi -e 's/{(Limit Law [AR][0-9]*) }/{$1}/g' printdraft.tex
 perl -pi -e 's/\\begin{theorem}/\\begin{theorem*}/g' printdraft.tex
 perl -pi -e 's/\\end{theorem}/\\end{theorem*}/g' printdraft.tex
 perl -pi -e 's/\\SI{0.01218}/\\SI\[group-digits=false\]{0.01218}/g' printdraft.tex
+perl -pi -e 's/{Limit Law A1~}\\textendash{}/{Limit Law A1}\textendash{}/g' printdraft.tex
+perl -pi -e 's/\\exercise(.*)\\begin{tabular}/\\exercise$1\\begin{tabular}[t]/g' printdraft.tex
+perl -pi -e 's/\\section\[HTML and PDF\]{HTML and PDF}/\\section\*{HTML and PDF}/g' printdraft.tex
+perl -pi -e 's/\\section\[Copying Content\]{Copying Content}/\\section\*{Copying Content}/g' printdraft.tex
+perl -pi -e 's/\\section\[Accessibility\]{Accessibility}/\\section\*{Accessibility}/g' printdraft.tex
+perl -pi -e 's/\\section\[Tablets and Smartphones\]{Tablets and Smartphones}/\\section\*{Tablets and Smartphones}/g' printdraft.tex
+perl -pi -e 's/\\lstinline/\\verb/g' printdraft.tex
+perl -pi -e 's/\\begin{tikzpicture}%hook/\\begin{minipage}[t]{0.47\\linewidth}\\vspace{0pt}\\begin{tikzpicture}/g' printdraft.tex
+perl -pi -e 's/\\end{tikzpicture}%hook/\\end{tikzpicture}\\end{minipage}/g' printdraft.tex
+rm printcolordraft.*
+xsltproc -xinclude ../xsl/clm-print-color.xsl clm.xml
+mv clm.tex printcolordraft.tex
+perl -pi -e 's/{(Limit Law [AR][0-9]*) }/{$1}/g' printcolordraft.tex
+perl -pi -e 's/\\begin{theorem}/\\begin{theorem*}/g' printcolordraft.tex
+perl -pi -e 's/\\end{theorem}/\\end{theorem*}/g' printcolordraft.tex
+perl -pi -e 's/\\SI{0.01218}/\\SI\[group-digits=false\]{0.01218}/g' printcolordraft.tex
+perl -pi -e 's/{Limit Law A1~}\\textendash{}/{Limit Law A1}\textendash{}/g' printcolordraft.tex
+perl -pi -e 's/\\exercise(.*)\\begin{tabular}/\\exercise$1\\begin{tabular}[t]/g' printcolordraft.tex
+perl -pi -e 's/\\section\[HTML and PDF\]{HTML and PDF}/\\section\*{HTML and PDF}/g' printcolordraft.tex
+perl -pi -e 's/\\section\[Copying Content\]{Copying Content}/\\section\*{Copying Content}/g' printcolordraft.tex
+perl -pi -e 's/\\section\[Accessibility\]{Accessibility}/\\section\*{Accessibility}/g' printcolordraft.tex
+perl -pi -e 's/\\section\[Tablets and Smartphones\]{Tablets and Smartphones}/\\section\*{Tablets and Smartphones}/g' printcolordraft.tex
+perl -pi -e 's/\\lstinline/\\verb/g' printcolordraft.tex
+perl -pi -e 's/\\begin{tikzpicture}%hook/\\begin{minipage}[t]{0.47\\linewidth}\\vspace{0pt}\\begin{tikzpicture}/g' printcolordraft.tex
+perl -pi -e 's/\\end{tikzpicture}%hook/\\end{tikzpicture}\\end{minipage}/g' printcolordraft.tex
 rm screenpdfdraft.*
 xsltproc -xinclude ../xsl/clm-screenpdf.xsl clm.xml
 mv clm.tex screenpdfdraft.tex
@@ -18,3 +43,12 @@ perl -pi -e 's/{(Limit Law [AR][0-9]*) }/{$1}/g' screenpdfdraft.tex
 perl -pi -e 's/\\begin{theorem}/\\begin{theorem*}/g' screenpdfdraft.tex
 perl -pi -e 's/\\end{theorem}/\\end{theorem*}/g' screenpdfdraft.tex
 perl -pi -e 's/\\SI{0.01218}/\\SI\[group-digits=false\]{0.01218}/g' screenpdfdraft.tex
+perl -pi -e 's/{Limit Law A1~}\\textendash{}/{Limit Law A1}\textendash{}/g' screenpdfdraft.tex
+perl -pi -e 's/\\exercise(.*)\\begin{tabular}/\\exercise$1\\begin{tabular}[t]/g' screenpdfdraft.tex
+perl -pi -e 's/\\section\[HTML and PDF\]{HTML and PDF}/\\section\*{HTML and PDF}/g' screenpdfdraft.tex
+perl -pi -e 's/\\section\[Copying Content\]{Copying Content}/\\section\*{Copying Content}/g' screenpdfdraft.tex
+perl -pi -e 's/\\section\[Accessibility\]{Accessibility}/\\section\*{Accessibility}/g' screenpdfdraft.tex
+perl -pi -e 's/\\section\[Tablets and Smartphones\]{Tablets and Smartphones}/\\section\*{Tablets and Smartphones}/g' screenpdfdraft.tex
+perl -pi -e 's/\\lstinline/\\verb/g' screenpdfdraft.tex
+perl -pi -e 's/\\begin{tikzpicture}%hook/\\begin{minipage}[t]{0.47\\linewidth}\\vspace{0pt}\\begin{tikzpicture}/g' screenpdfdraft.tex
+perl -pi -e 's/\\end{tikzpicture}%hook/\\end{tikzpicture}\\end{minipage}/g' screenpdfdraft.tex

@@ -16,11 +16,11 @@
     <definition xml-id="definition-leibniz-notation">
         <title>Leibniz Notation</title>
         <statement>
-            <p>If <m>y=\fe{f}{x}</m>, we say that the derivative of <m>y</m> with respect to <m>x</m> is equal to <m>\fe{\fd{f}}{x}</m>. Symbolically, we write: <m>\lz{y}{x}=\fe{\fd{f}}{x}</m>.</p>
+            <p>If <m>y=\fe{f}{x}</m>, we say that the derivative of <m>y</m> with respect to <m>x</m> is equal to <m>\fe{\fd{f}}{x}</m>. Symbolically, we write <m>\lz{y}{x}=\fe{\fd{f}}{x}</m>.</p>
 
             <p>While the symbol <m>\lz{y}{x}</m> certainly looks like a fraction, it is <em>not</em> a fraction.  The symbol is <term>Leibniz notation</term> for the first derivative of <m>y</m> with respect to <m>x</m>.  The short way of reading the symbol aloud is <q><m>d</m> <m>y</m> <m>d</m> <m>x</m>.</q></p>
 
-            <p>If <m>z=\fe{g}{t}</m>, we say that the the derivative of <m>z</m> with respect to <m>t</m> is equal to <m>\fe{\fd{g}}{t}</m>.  Symbolically we write: <m>\lz{z}{t}=\fe{\fd{g}}{t}</m>. (Read aloud as <q><m>d</m> <m>z</m> <m>d</m> <m>t</m> equals <m>g</m> prime of <m>t</m>.</q>)</p>
+            <p>If <m>z=\fe{g}{t}</m>, we say that the the derivative of <m>z</m> with respect to <m>t</m> is equal to <m>\fe{\fd{g}}{t}</m>.  Symbolically, we write <m>\lz{z}{t}=\fe{\fd{g}}{t}</m>. (Read aloud as <q><m>d</m> <m>z</m> <m>d</m> <m>t</m> equals <m>g</m> prime of <m>t</m>.</q>)</p>
         </statement>
     </definition>
 

@@ -15,7 +15,7 @@
     \pgfplotsset{asymptote/.style={color=gray,mark=none,line width=1pt,<->,dashed}}
     \pgfplotsset{soldot/.style={color=red,only marks,mark=*}}
     \pgfplotsset{holdot/.style={color=red,fill=white,only marks,mark=*}}
-    \pgfplotsset{blankgraph/.style={xmin=-10,xmax=10,ymin=-10,ymax=10,axis line style= {-, draw opacity=0 },axis lines=box,major tick length=0mm,xtick={-10,-9,...,10},ytick={-10,-9,...,10},grid=major,yticklabels={,,},xticklabels={,,},minor xtick=,minor ytick=,xlabel={},ylabel={},width=0.75\textwidth,grid style={dotted,black}}}
+    \pgfplotsset{blankgraph/.style={xmin=-10,xmax=10,ymin=-10,ymax=10,axis line style= {-, draw opacity=0 },axis lines=box,major tick length=0mm,xtick={-10,-9,...,10},ytick={-10,-9,...,10},grid=major,yticklabels={,,},xticklabels={,,},minor xtick=,minor ytick=,xlabel={},ylabel={},width=0.75\textwidth,grid style={solid,gray!40}}}
     
     % cycle list of plot styles for graphs with multiple plots
     \pgfplotscreateplotcyclelist{pccstylelist}{%
@@ -45,7 +45,7 @@
         %label style={font=\scriptsize},
         legend cell align=left,
         %legend style={font=\scriptsize},
-        width = 0.4\textwidth,
+        width = 0.45\textwidth,
         grid = minor,
         grid style = {solid,gray!40},
         %every node near coord/.append style={
@@ -164,11 +164,11 @@
     \begin{document}
 
                             \begin{tikzpicture}
-                            \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-0.5,0,...,3}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
+                            \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-1,-0.5,...,4}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
                                 \addplot+[
-                                    domain=-0.5:4,
+                                    domain=0:4,
                                     -,
-                                ]{(-x^5+8*x^3)/32*3*exp(-(x/2)^2)};
+                                ]{1.2*(-x^5+8*x^3)/32*3*exp(-(x/2)^2)};
                             \end{axis}
                             \end{tikzpicture}
                             \end{document}

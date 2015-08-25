@@ -30,6 +30,7 @@
         <xi:include href="./limit-laws-appendix.xml" />
         <xi:include href="./derivative-formulas-appendix.xml" />
         <xi:include href="./useful-algebra-appendix.xml" />
+        <xi:include href="./units-appendix.xml" />
 
         <backmatter>
             <section xml:id="supplemental-solutions" number="no">

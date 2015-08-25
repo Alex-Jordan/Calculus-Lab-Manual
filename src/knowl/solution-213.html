@@ -1,0 +1,81 @@
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2015-08-23T23:07:52-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<span class="solution"><span class="heading"><span class="type">Solution</span> <span class="codenumber">8.3.1.0.3.1</span></span><p>First we make a diagram of the situation.</p>
+<figure class="figure-like" id="figure-89"><div style="width:48%;" class="svg-and-links">
+<object type="image/svg+xml" style="width: 100%;" data="images/image-109.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object><div class="image-links"><ul class="image-link-list" style="width:100%">
+<li class="image-link-item"><a class="image-link" href="images/image-109.png" target="_blank">PNG</a></li>
+<li class="image-link-item"><a class="image-link" href="images/image-109.eps" download="image-109.eps">EPS</a></li>
+<li class="image-link-item"><a class="image-link" href="images/image-109.svg" download="image-109.svg">SVG</a></li>
+<li class="image-link-item"><a class="image-link" href="images/image-109.pdf" download="image-109.pdf">PDF</a></li>
+<li class="image-link-item"><a class="image-link" href="images/image-109.tex" download="image-109.tex">TEX</a></li>
+</ul></div>
+</div>
+<figcaption style="text-align:center"><span class="heading">Figure</span><span class="codenumber">8.3.7</span>Variable Diagram</figcaption></figure><p>Next we account for the various quantities and rates in the problem.</p>
+<figure class="figure-like" id="table-41"><figcaption style="text-align:center"><span class="heading">Table</span><span class="codenumber">8.3.8</span>Variable table for the clock problem</figcaption><table>
+<tr>
+<td class="c b2 r0 l0 t3">Variable</td>
+<td class="c b2 r0 l0 t3">Variable Description</td>
+<td class="c b2 r0 l0 t3">Unit</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(d\)</td>
+<td class=" b1 r0 l0 t0">The distance between the tips of the hands at time \(t\).</td>
+<td class="c b1 r0 l0 t0">cm</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(\theta\)</td>
+<td class=" b1 r0 l0 t0">The angle from the minute hand to the hour hand at time \(t\).</td>
+<td class="c b1 r0 l0 t0">rad</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(\lz{d}{t}\)</td>
+<td class=" b1 r0 l0 t0">The rate at which the distance between the tips of the hands at time \(t\) is changing.</td>
+<td class="c b1 r0 l0 t0">
+<sup>cm</sup>⁄<sub>min</sub>
+</td>
+</tr>
+<tr>
+<td class="c b3 r0 l0 t0">\(\lz{\theta}{t}\)</td>
+<td class=" b3 r0 l0 t0">The rate at which the angle from the minute hand to the hour hand at time \(t\) is changing.</td>
+<td class="c b3 r0 l0 t0">
+<sup>rad</sup>⁄<sub>s</sub>
+</td>
+</tr>
+</table></figure><p>Next we find an equation that relates the quantities, and use it to find the related rates equation. Here we can use the Law of Cosines.<article class="displaymath" id="md-150">\begin{align*}
+d^2&amp;=30^2+20^2-2(30)(20)\fe{\cos}{\theta}\\
+d^2&amp;=1300-1200\fe{\cos}{\theta}\\
+\lzoo{t}{d^2}&amp;=\lzoo{t}{1300-1200\fe{\cos}{\theta}}\\
+2d\lz{d}{t}&amp;=1200\fe{\sin}{\theta}\lz{\theta}{t}
+\end{align*}</article>When the minute hand reaches 12, we can determine the values of some of the variables form the related rates equation.</p>
+<figure class="figure-like" id="table-42"><figcaption style="text-align:center"><span class="heading">Table</span><span class="codenumber">8.3.9</span>What we know about the variables at the described moment</figcaption><table>
+<tr>
+<td class="c b2 r0 l0 t3">Variable</td>
+<td class=" b2 r0 l0 t3">What we know</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(d\)</td>
+<td class=" b1 r0 l0 t0">The value of this variable is found using the Law of Cosines: \(d=\sqrt{30^2+20^2-2(30)(20)\fe{\cos}{\frac{2\pi}{3}}}\approx43.58\ldots\).</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(\theta\)</td>
+<td class=" b1 r0 l0 t0">The value of this variable is \(\frac{2\pi}{3}\).</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(\lz{d}{t}\)</td>
+<td class=" b1 r0 l0 t0">This is the variable for which we need to solve.</td>
+</tr>
+<tr>
+<td class="c b3 r0 l0 t0">\(\lz{\theta}{t}\)</td>
+<td class=" b3 r0 l0 t0">The value of this variable is \(-\frac{2\pi}{60}\), since the minute hand goes through an entire revolution every \(60\) min. It is negative, because at the moment we are investigating, the minute hand is moving closer to the hour hand.</td>
+</tr>
+</table></figure><p>Now we can substitute these values into the related rates equation and solve for \(\lz{d}{t}\).<article class="displaymath" id="md-151">\begin{align*}
+2d\lz{d}{t}&amp;=1200\fe{\sin}{\theta}\lz{\theta}{t}\\
+2(43.58\ldots)\lz{d}{t}&amp;\approx1200\fe{\sin}{\frac{2\pi}{3}}(-\frac{2\pi}{60})\\
+87.17\ldots\lz{d}{t}&amp;\approx-108.8\ldots\\
+\lz{d}{t}&amp;\approx-1.248\ldots
+\end{align*}</article>So when the minute hand reaches the 12, the distance betwen the tips of the two hands is decreasing at a rate of about \(1.248\) <sup>cm</sup>⁄<sub>min</sub>.</p></span><div class="context-link" style="text-align:right;"><a href="related-rates-supplementary-exercises.html#solution-213">(in-context)</a></div>

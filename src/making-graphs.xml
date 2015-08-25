@@ -19,7 +19,7 @@
             </introduction>
             <exercise xml:id="exercise-sketch-first-asymptotes">
                 <statement>
-                    <p>Evaluate each of the following limits: <m>\lim\limits_{x\to\infty}\fe{f}{x}</m>, <m>\lim\limits_{x\to-\infty}\fe{f}{x}</m>, <m>\lim\limits_{x\to2^{-}}\fe{f}{x}</m>, and <m>\lim\limits_{x\to2^{+}}\fe{f}{x}</m>.</p>
+                    <p>Evaluate each of the following limits:<br/><m>\lim\limits_{x\to\infty}\fe{f}{x}</m>, <m>\lim\limits_{x\to-\infty}\fe{f}{x}</m>, <m>\lim\limits_{x\to2^{-}}\fe{f}{x}</m>, and <m>\lim\limits_{x\to2^{+}}\fe{f}{x}</m>.</p>
                 </statement>
             </exercise>
             <exercise>
@@ -42,7 +42,7 @@
                     </ul>
                 </statement>
             </exercise>
-            <exercise>
+            <exercise xml:id="exercise-sketch-first-total">
                 <statement>
                     <p>Graph <m>y=\fe{f}{x}</m> onto <xref ref="figure-blank-for-graphing-1"/>. Choose a scale that allows you to clearly illustrate each of the features found in <xref autoname="plural" ref="exercise-sketch-first-asymptotes"/><ndash/><xref autoname="no" ref="exercise-sketch-first-critical-numbers"/>.  Label all axes and asymptotes well and write the coordinates of each local extreme point and inflection point next to the point.</p>
                     <figure xml:id="figure-blank-for-graphing-1">
@@ -66,7 +66,7 @@
         </exercisegroup>
         <exercise>
             <statement>
-                <p>Repeat <xref ref="exercisegroup-sketch-first"/> for the function <m>\fe{g}{t}=\frac{1}{(e^t+4)^2}</m>. Use the formulas <m>\fe{\fd{g}}{t}=\frac{-2e^t}{(e^t+4)^3}</m> and <m>\fe{\sd{g}}{t}=\frac{4e^t(e^t-2)}{(e^t+4)^4}</m>.</p>
+                <p>Following analysis similar to that implied in <xref autoname="plural" ref="exercise-sketch-first-asymptotes"/><ndash/><xref autoname="no" ref="exercise-sketch-first-total"/> graph the function <me>\fe{g}{t}=\frac{1}{(e^t+4)^2}\text{.}</me> Use the formulas <me>\fe{\fd{g}}{t}=\frac{-2e^t}{(e^t+4)^3}\qquad\fe{\sd{g}}{t}=\frac{4e^t(e^t-2)}{(e^t+4)^4}\text{.}</me> Check your graph using a graphing calculator.</p>
                 <figure xml:id="figure-blank-for-graphing-2">
                     <caption><m>g</m></caption>
                     <image>

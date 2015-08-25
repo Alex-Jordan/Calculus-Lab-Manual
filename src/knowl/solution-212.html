@@ -1,0 +1,100 @@
+<!--**************************************-->
+<!--* Generated from MathBook XML source *-->
+<!--*    on 2015-08-23T23:07:52-07:00    *-->
+<!--*                                    *-->
+<!--*   http://mathbook.pugetsound.edu   *-->
+<!--*                                    *-->
+<!--**************************************-->
+<span class="solution"><span class="heading"><span class="type">Solution</span> <span class="codenumber">8.3.1.0.2.1</span></span><p>First we make a diagram of the situation.</p>
+<figure class="figure-like" id="figure-88"><div style="width:48%;" class="svg-and-links">
+<object type="image/svg+xml" style="width: 100%;" data="images/image-108.svg"><p style="margin:auto">&lt;&lt;Your browser is unable to render this SVG image&gt;&gt;</p></object><div class="image-links"><ul class="image-link-list" style="width:100%">
+<li class="image-link-item"><a class="image-link" href="images/image-108.png" target="_blank">PNG</a></li>
+<li class="image-link-item"><a class="image-link" href="images/image-108.eps" download="image-108.eps">EPS</a></li>
+<li class="image-link-item"><a class="image-link" href="images/image-108.svg" download="image-108.svg">SVG</a></li>
+<li class="image-link-item"><a class="image-link" href="images/image-108.pdf" download="image-108.pdf">PDF</a></li>
+<li class="image-link-item"><a class="image-link" href="images/image-108.tex" download="image-108.tex">TEX</a></li>
+</ul></div>
+</div>
+<figcaption style="text-align:center"><span class="heading">Figure</span><span class="codenumber">8.3.4</span>Variable Diagram</figcaption></figure><p>Next we account for the various quantities and rates in the problem.</p>
+<figure class="figure-like" id="table-39"><figcaption style="text-align:center"><span class="heading">Table</span><span class="codenumber">8.3.5</span>Variable table for the Rex-Muffin problem</figcaption><table>
+<tr>
+<td class="c b2 r0 l0 t3">Variable</td>
+<td class="c b2 r0 l0 t3">Variable Description</td>
+<td class="c b2 r0 l0 t3">Unit</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(x\)</td>
+<td class=" b1 r0 l0 t0">How far Rex has run \(t\) seconds after the loud noise.</td>
+<td class="c b1 r0 l0 t0">ft</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(y\)</td>
+<td class=" b1 r0 l0 t0">How far Muffin has run \(t\) seconds after the loud noise.</td>
+<td class="c b1 r0 l0 t0">ft</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(d\)</td>
+<td class=" b1 r0 l0 t0">The distance between Muffin and Rex \(t\) seconds after the loud noise.</td>
+<td class="c b1 r0 l0 t0">ft</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(\lz{x}{t}\)</td>
+<td class=" b1 r0 l0 t0">The rate at which Rex is running \(t\) seconds after the loud noise.</td>
+<td class="c b1 r0 l0 t0">
+<sup>ft</sup>⁄<sub>s</sub>
+</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(\lz{y}{t}\)</td>
+<td class=" b1 r0 l0 t0">The rate at which Muffin is running \(t\) seconds after the loud noise.</td>
+<td class="c b1 r0 l0 t0">
+<sup>ft</sup>⁄<sub>s</sub>
+</td>
+</tr>
+<tr>
+<td class="c b3 r0 l0 t0">\(\lz{d}{t}\)</td>
+<td class=" b3 r0 l0 t0">The rate at which the distance between Rex and Muffin is changing \(t\) seconds after the loud noise.</td>
+<td class="c b3 r0 l0 t0">
+<sup>ft</sup>⁄<sub>s</sub>
+</td>
+</tr>
+</table></figure><p>Next we find an equation that relates the quantities, and use it to find the related rates equation.<article class="displaymath" id="md-148">\begin{align*}
+d^2&amp;=x^2+y^2\\
+\lzoo{t}{d^2}&amp;=\lzoo{t}{x^2+y^2}\\
+2d\lz{d}{t}&amp;=2x\lz{x}{t}+2y\lz{y}{t}
+\end{align*}</article>Three seconds into their run, we can determine the values of some of the variables form the related rates equation.</p>
+<figure class="figure-like" id="table-40"><figcaption style="text-align:center"><span class="heading">Table</span><span class="codenumber">8.3.6</span>What we know about the variables at the described moment</figcaption><table>
+<tr>
+<td class="c b2 r0 l0 t3">Variable</td>
+<td class=" b2 r0 l0 t3">What we know</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(x\)</td>
+<td class=" b1 r0 l0 t0">The value of this variable is \(3\cdot2.1=6.3\).</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(y\)</td>
+<td class=" b1 r0 l0 t0">The value of this variable is \(3\cdot1.7=5.1\).</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(d\)</td>
+<td class=" b1 r0 l0 t0">Using the diagram and the Pythagorean Theorem, we find that \(d=\sqrt{6.3^2+5.1^2}\approx8.105\ldots\).</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(\lz{x}{t}\)</td>
+<td class=" b1 r0 l0 t0">The value of this variable is \(2.1\).</td>
+</tr>
+<tr>
+<td class="c b1 r0 l0 t0">\(\lz{y}{t}\)</td>
+<td class=" b1 r0 l0 t0">The value of this variable is \(1.7\).</td>
+</tr>
+<tr>
+<td class="c b3 r0 l0 t0">\(\lz{d}{t}\)</td>
+<td class=" b3 r0 l0 t0">This is the variable for which we need to solve.</td>
+</tr>
+</table></figure><p>Now we can substitute these values into the related rates equation and solve for \(\lz{d}{t}\).<article class="displaymath" id="md-149">\begin{align*}
+2d\lz{d}{t}&amp;=2x\lz{x}{t}+\lz{y}{t}\\
+2(8.105\ldots)\lz{d}{t}&amp;=2(6.3)(2.1)+2(5.1)(1.7)\\
+16.21\ldots\lz{d}{t}&amp;=43.8\\
+\lz{d}{t}&amp;\approx2.701\ldots
+\end{align*}</article>So \(3\) s after the animals begin to run, their distance apart from each other is increasing at a rate of approximately \(2.701\) <sup>ft</sup>⁄<sub>s</sub>.</p></span><div class="context-link" style="text-align:right;"><a href="related-rates-supplementary-exercises.html#solution-212">(in-context)</a></div>

@@ -18,37 +18,38 @@
             <p>These are loose, informal definitions. Technical, precise definitions can be found elsewhere.</p>
             <sidebyside>
                 <paragraphs width="45%" valign="top">
-                    <p><term>Positive function.</term> The vertical coordinate of points on the function is positive. A function is positive whenever its graph lies above the horizontal axis.</p>
+                    <p><term>Positive function.</term> The vertical coordinates of points on the function are positive. A function is positive whenever its graph lies above the horizontal axis.</p>
                 </paragraphs>
                 <paragraphs width="45%" valign="top">
-                    <p><term>Negative function.</term> The vertical coordinate of points on the function is negative. A function is negative whenever its graph lies below the horizontal axis.</p>
-                </paragraphs>
-            </sidebyside>
-            <sidebyside>
-                <paragraphs width="45%" valign="top">
-                    <p><term>Increasing function.</term> The vertical coordinate of the function increases as you move along the curve from left to right. Linear functions with positive slope are always increasing.</p>
-                </paragraphs>
-                <paragraphs width="45%" valign="top">
-                    <p><term>Decreasing function.</term> The vertical coordinate of the function decreases as you move along the curve from left to right. Linear functions with negative slope are always decreasing.</p>
+                    <p><term>Negative function.</term> The vertical coordinates of points on the function are negative. A function is negative whenever its graph lies below the horizontal axis.</p>
                 </paragraphs>
             </sidebyside>
             <sidebyside>
                 <paragraphs width="45%" valign="top">
-                    <p><term>Concave up function.</term> A function is concave up at <m>a</m> if the tangent line to the function at <m>a</m> lies below the curve. An upward opening parabola is everywhere concave up.</p>
+                    <p><term>Increasing function.</term> The vertical coordinates of the function increase as you move along the curve from left to right. Linear functions with positive slope are always increasing.</p>
                 </paragraphs>
                 <paragraphs width="45%" valign="top">
-                    <p><term>Concave down function.</term> A function is concave down at <m>a</m> if the tangent line to the function at <m>a</m> lies above the curve. A downward opening parabola is everywhere concave down.</p>
+                    <p><term>Decreasing function.</term> The vertical coordinates of the function decrease as you move along the curve from left to right. Linear functions with negative slope are always decreasing.</p>
+                </paragraphs>
+            </sidebyside>
+            <sidebyside>
+                <paragraphs width="45%" valign="top">
+                    <p><term>Concave up function.</term> A function is concave up at <m>a</m> if the tangent line to the function at <m>a</m> lies below the curve. The bottom half of a circle is concave up.</p>
+                </paragraphs>
+                <paragraphs width="45%" valign="top">
+                    <p><term>Concave down function.</term> A function is concave down at <m>a</m> if the tangent line to the function at <m>a</m> lies above the curve. The top half of a circle is concave down.</p>
                 </paragraphs>
             </sidebyside>
         </statement>
     </definition>
 
     <exercises>
-        <exercisegroup cols="2">
+        <exercisegroup>
             <introduction>
+                <p>Answer each of the following questions in reference to the function shown in <xref ref="figure-graph-features"/>. Each answer is an interval (or intervals) along the <m>x</m>-axis.</p> 
                 <sidebyside>
                     <paragraphs valign="top">
-                        <p>Answer each of the following questions in reference to the function shown in <xref ref="figure-graph-features"/>. Each answer is an interval (or intervals) along the <m>x</m>-axis. Use interval notation when expressing your answers. Make each interval as wide as possible; that is, do not break an interval into pieces if the interval does not need to be broken up. Assume that the slope of the function is constant on <m>\ointerval{-\infty}{-5}</m>, <m>\ointerval{3}{4}</m>, and <m>\ointerval{4}{\infty}</m>.</p> 
+                        <p>Use interval notation when expressing your answers. Make each interval as wide as possible; that is, do not break an interval into pieces if the interval does not need to be broken. Assume that the slope of the function is constant on <m>\ointerval{-\infty}{-5}</m>, <m>\ointerval{3}{4}</m>, and <m>\ointerval{4}{\infty}</m>.</p> 
                     </paragraphs>
                     <figure xml:id="figure-graph-features" valign="top">
                         <caption><m>y=\fe{f}{x}</m></caption>

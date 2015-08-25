@@ -87,11 +87,11 @@
                     <p>Complete <xref ref="table-piecewise-discontinuities-analysis"/>.</p>
                     <table xml:id="table-piecewise-discontinuities-analysis">
                         <caption>Discontinuity analysis for <m>f</m></caption>
-                        <tabular top="major">
-                            <col halign="0.92in" right="minor" left="minor"/>
-                            <col halign="1.6in" right="minor"/>
+                        <centerline><tabular top="major">
+                            <col halign="1in" right="minor" left="minor"/>
+                            <col halign="1.8in" right="minor"/>
                             <col halign="center" right="minor"/>
-                            <col halign="0.8in" right="minor"/>
+                            <col halign="1.1in" right="minor"/>
                             <row bottom="medium">
                                 <cell>Location of discontinuity</cell>
                                 <cell>From <xref ref="definition-continuity"/>, sub-property (1, 2, or 3) that is not met</cell>
@@ -122,7 +122,7 @@
                                 <cell/>
                                 <cell/>
                             </row>
-                        </tabular>
+                        </tabular></centerline>
                     </table>
                 </statement>
             </exercise>

@@ -71,7 +71,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>What would it mean if the value of <m>\fe{\fd{R}}{t}</m> was zero for all <m>0\lt t\lt2.25</m>?</p>
+                    <p>What would it mean if the value of <m>\fe{\fd{R}}{t}</m> was zero for all <m>t</m> in <m>\ointerval{0}{2.25}</m>?</p>
                 </statement>
             </exercise>
         </exercisegroup>

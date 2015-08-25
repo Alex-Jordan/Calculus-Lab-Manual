@@ -10,23 +10,13 @@
 <section xml:id="section-derivatives-of-inverse-functions">
     <title>Derivatives of Inverse Functions</title>
 
-    <p>Using the definition <m>\fe{\fd{f}}{x}=\lim\limits_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{h}}{h}</m>, it is easy to establish that <m>\lzoo{x}{x^2}=2x</m>. We can use this formula and implicit differentiation to find the formula for <m>\lzoo{x}{\sqrt{x}}</m>.  If <m>y=\sqrt{x}</m>, then <m>y^2=x</m> (and <m>y\geq0</m>). Using implicit differentiation we have:</p>
-    <sidebyside>
-        <paragraphs valign="bottom">
-            <p><md>
+    <p>Using <xref ref="definition-first-derivative"/>, it is easy to establish that <m>\lzoo{x}{x^2}=2x</m>. We can use this formula and implicit differentiation to find the formula for <m>\lzoo{x}{\sqrt{x}}</m>.  If <m>y=\sqrt{x}</m>, then <m>y^2=x</m> (and <m>y\geq0</m>). Using implicit differentiation we have:<md>
             <mrow>y^2&amp;=x</mrow>
             <mrow>\lzoo{x}{y^2}&amp;=\lzoo{x}{x}</mrow>
             <mrow>2y\lz{y}{x}&amp;=1</mrow>
-            <mrow>\lz{y}{x}&amp;=\frac{1}{2y}</mrow>
-            </md></p>
-        </paragraphs>
-        <paragraphs valign="bottom">
-            <p>But <m>y=\sqrt{x}</m>, so we have:<md>
-            <mrow>\lz{y}{x}&amp;=\frac{1}{2y}</mrow>
-            <mrow>&amp;=\frac{1}{2\sqrt{x}}</mrow>
-            </md></p>
-        </paragraphs>
-    </sidebyside>
+            <mrow>\lz{y}{x}&amp;=\frac{1}{2y}\text{.}</mrow>
+    </md></p>
+    <p>But <m>y=\sqrt{x}</m>, so we have:<m>\begin{aligned}[t]\lz{y}{x}&amp;=\frac{1}{2y}\\&amp;=\frac{1}{2\sqrt{x}}\text{.}\end{aligned}</m></p>
 
     <p>In a similar manner, we can use the fact that <m>\lzoo{x}{\fe{\sin}{x}}=\fe{\cos}{x}</m> to come up with a formula for <m>\lzoo{x}{\fe{\sin^{-1}}{x}}</m>. If <m>y=\fe{\sin^{-1}}{x}</m>, then <m>\fe{\sin}{y}=x</m> and <m>-\frac{\pi}{2}\leq y\leq \frac{\pi}{2}</m>. Note that because of the angle range that <m>y</m> is confined to, that <m>\fe{\cos}{y}</m> is positive. So the Pythagorean identity <m>\fe{\cos^2}{y}=1-\fe{\sin^2}{y}</m> implies that <m>\fe{\cos}{y}=\sqrt{1-\fe{\sin^2}{y}}</m>. This gives us:<md>
     <mrow>\fe{\sin}{y}=x</mrow>
@@ -34,7 +24,7 @@
     <mrow>\fe{\cos}{y}\lz{y}{x}&amp;=1</mrow>
     <mrow>\lz{y}{x}&amp;=\frac{1}{\fe{\cos}{y}}</mrow>
     <mrow>\lz{y}{x}&amp;=\frac{1}{\sqrt{1-\fe{\sin^2}{y}}}</mrow>
-    <mrow>\lz{y}{x}&amp;=\frac{1}{\sqrt{1-x^2}}</mrow></md></p>
+    <mrow>\lz{y}{x}&amp;=\frac{1}{\sqrt{1-x^2}}\text{.}</mrow></md></p>
 
     <exercises>
         <exercise>

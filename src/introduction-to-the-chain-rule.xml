@@ -82,9 +82,9 @@
     <example xml:id="example-fourth-chain-rule">
         <p><md>
         <mrow>\text{Problem}&amp;&amp;&amp;\text{Solution}</mrow>
-        <mrow>\text{Find }\lz{y}{x}\text{ if }y&amp;=4^x\text{.}&amp;y&amp;=e^{\fe{\ln}{4}x}</mrow>
-        <mrow>&amp;&amp;\lz{y}{x}&amp;=e^{\fe{\ln}{4}x}\cdot\lzoo{x}{\fe{\ln}{4}x}</mrow>
-        <mrow>&amp;&amp;&amp;=e^{\fe{\ln}{4}x}\cdot\fe{\ln}{4}</mrow>
+        <mrow>\text{Find }\lz{y}{x}\text{ if }y&amp;=4^x&amp;y&amp;=e^{\fe{\ln}{4}x}</mrow>
+        <mrow>&amp;=(e^{\fe{\ln}{4}})^x&amp;\lz{y}{x}&amp;=e^{\fe{\ln}{4}x}\cdot\lzoo{x}{\fe{\ln}{4}x}</mrow>
+        <mrow>&amp;=e^{\fe{\ln}{4}x}\text{.}&amp;&amp;=e^{\fe{\ln}{4}x}\cdot\fe{\ln}{4}\text{.}</mrow>
         <mrow>&amp;&amp;&amp;=\fe{\ln}{4}\cdot4^{x}</mrow>
         </md>While this is the same task as in <xref ref="example-third-chain-rule"/>, here we view the function as a composite function, and apply the chain rule.</p>
     </example> 
@@ -142,7 +142,7 @@
                 </statement>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="2">
+        <exercisegroup >
             <introduction>
                 <sidebyside>
                     <paragraphs valign="top">
