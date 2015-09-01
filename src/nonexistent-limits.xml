@@ -21,6 +21,7 @@
     <sidebyside>
         <figure xml:id="figure-first-nonexistent-limit">
             <image>
+                <description>a plot of a function; the curve comes in from the left low on the graph at about y=-6.5; it is flat for a while, but when it reaches the x-axis it begins to curve up steeply; there is a dashed vertical line at x=2, and the curve bends upward until it is almost parallel with this vertical line; the curve is quite close to this vertical line (but still to its left) when the curve leaves the top of the graph; the curve picks up again on the other side of the vertical line, coming in downward from the top of the graph a little to the right of the vertical line; it moves almost straight downward and slightly to the right for a while, crossing below the x-axis; around when it reaches the point (3,-5.5), it flattens as it continues to move rightward</description>
                 <latex-image-code>
                 <![CDATA[\begin{tikzpicture}
                 \begin{axis}[]
@@ -46,6 +47,7 @@
         </figure>
         <figure xml:id="figure-middle-nonexistent-limit">
             <image>
+                <description>a plot of a function; the curve comes in from the left high on the graph at about y=6.5; it is flat for a while, but when it reaches about x=2 it begins to curve down steeply; there is a dashed vertical line at x=4, and the curve bends downward until it is almost parallel with this vertical line; the curve is quite close to this vertical line (but still to its left) when the curve leaves the bottom of the graph; the curve picks up again on the other side of the vertical line, coming in upward from the bottom of the graph a little to the right of the vertical line; it moves almost straight upward and slightly to the right for a while, crossing above the x-axis; around when it reaches the point (5,5.5), it flattens as it continues to move rightward</description>
                 <latex-image-code>
                 <![CDATA[\begin{tikzpicture}
                 \begin{axis}[,
@@ -72,6 +74,7 @@
         </figure>
         <figure xml:id="figure-last-nonexistent-limit">
             <image>
+                <description>a plot of a function; the curve comes in from the left low on the graph at about y=-6.5; it is flat for a short while, but when it reaches about x=-5, it begins to curve up steeply; there is a dashed vertical line at x=-3, and the curve bends upward until it is almost parallel with this vertical line; the curve is quite close to this vertical line (but still to its left) when the curve leaves the top of the graph; the curve picks up again on the other side of the vertical line, coming in upward from the bottom of the graph a little to the right of the vertical line; it moves almost straight upward and slightly to the right for a while, crossing above the x-axis; around when it reaches the point (-2,5.5), it flattens as it continues to move rightward</description>
                 <latex-image-code>
                 <![CDATA[\begin{tikzpicture}
                 \begin{axis}[]
@@ -106,11 +109,14 @@
                 <sidebyside>
                     <paragraphs valign="top">
                         <p><md>
-                        <mrow>\lim\limits_{x\to3^{-}}\fe{f}{x}&amp;=-\infty&amp;\lim\limits_{x\to\infty}\fe{f}{x}&amp;=0</mrow>
-                        <mrow>\lim\limits_{x\to3^{+}}\fe{f}{x}&amp;=\infty&amp;\lim\limits_{x\to-\infty}\fe{f}{x}&amp;=2</mrow>
+                        <mrow>\lim\limits_{x\to3^{-}}\fe{f}{x}&amp;=-\infty</mrow>
+                        <mrow>\lim\limits_{x\to\infty}\fe{f}{x}&amp;=0</mrow>
+                        <mrow>\lim\limits_{x\to3^{+}}\fe{f}{x}&amp;=\infty</mrow>
+                        <mrow>\lim\limits_{x\to-\infty}\fe{f}{x}&amp;=2</mrow>
                         </md></p>
                     </paragraphs>
                     <image valign="top">
+                        <description>a blank Cartesian grid, with x-axis covering the interval from -7 to 7, and y-axis covering the interval from -7 to 7</description>
                         <latex-image-code>
                         <![CDATA[\begin{tikzpicture}
                         \begin{axis}[]

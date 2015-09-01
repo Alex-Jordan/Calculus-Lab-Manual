@@ -176,17 +176,13 @@
                                 grid=major,
                                 ]
                                 \addplot[pccplot,samples=50,
-                                    domain=-15.8:-4.29,
-                                ]{(6*x^2-6*x-36)/(36-3*x-3*x^2)};
-                                \addplot[pccplot,<-,
-                                    domain=-3.77:0,
-                                ]{(6*x^2-6*x-36)/(36-3*x-3*x^2)};
-                                \addplot[pccplot,->,
-                                    domain=0:15.8,
-                                ]{(6*x^2-6*x-36)/(36-3*x-3*x^2)};
-                                \addplot[asymptote] coordinates {(-16,-2) (16,-2)} node[below left] {$y=-2$};
-                                \addplot[asymptote] coordinates {(-4,-16) (-4,16)} node[below left] {\rotatebox{90}{$x=-4$}};
-                                \addplot[holdot] coordinates {(3,-10/7)};
+                                    domain=-15.8:1.35,
+                                ]{(3*x+6)/(x-2)};
+                                \addplot[pccplot,samples=50,
+                                    domain=2.95:15.8,
+                                ]{(3*x+6)/(x-2)};
+                                \addplot[asymptote] coordinates {(16,3) (-16,3)} node[above right] {$y=3$};
+                                \addplot[asymptote] coordinates {(2,16) (2,-16)} node[above right] {\rotatebox{90}{$x=2$}};
                             \end{axis}
                             \end{tikzpicture}
                             \end{document}

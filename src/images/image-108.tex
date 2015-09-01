@@ -163,14 +163,17 @@
 
     \begin{document}
 
-                    \begin{tikzpicture}
-                    \coordinate (O) at (0,0);
-                    \coordinate (A) at (4,0);
-                    \coordinate (B) at (4,2);
-                    \draw (O)--(A)--(B)--cycle;
-                    \tkzLabelSegment[below=2pt](O,A){$400$}
-                    \tkzLabelSegment[right=2pt](A,B){$h$}
-                    \tkzMarkAngle(A,O,B)
-                    \tkzLabelAngle[pos = 0.8](A,O,B){$\theta$}
-                    \end{tikzpicture}
-                    \end{document}
+                        \begin{tikzpicture}
+                        \coordinate (O) at (0,0);
+                        \coordinate (A) at (4.2,0);
+                        \coordinate (B) at (0,3.4);
+                        \draw (O)--(A)--(B)--cycle;
+                        \tkzLabelPoint[below=2pt](O){start}
+                        \tkzLabelPoint[below=2pt](A){Rex}
+                        \tkzLabelPoint[left=2pt](B){Muffin}
+                        \tkzLabelSegment[below=2pt](O,A){$x$}
+                        \tkzLabelSegment[left=2pt](O,B){$y$}
+                        \tkzLabelSegment[above right=2pt](A,B){$d$}
+                        \tkzMarkRightAngle(A,O,B)
+                        \end{tikzpicture}
+                        \end{document}

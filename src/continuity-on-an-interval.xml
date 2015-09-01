@@ -85,7 +85,8 @@
                             <p><md>
                             <mrow>\lim_{x\to4^{-}}\fe{f}{x}&amp;=2&amp;\fe{f}{0}&amp;=4</mrow>
                             <mrow>\lim_{x\to4^{+}}\fe{f}{x}&amp;=5&amp;\fe{f}{4}&amp;=5</mrow>
-                            <mrow>\lim_{x\to-\infty}\fe{f}{x}&amp;=4&amp;\lim_{x\to\infty}\fe{f}{x}&amp;=4</mrow>
+                            <mrow>\lim_{x\to-\infty}\fe{f}{x}&amp;=4</mrow>
+                            <mrow>\lim_{x\to\infty}\fe{f}{x}&amp;=4</mrow>
                             </md></p>
                         </paragraphs>
                         <image valign="top">

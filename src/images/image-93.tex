@@ -163,13 +163,13 @@
 
     \begin{document}
 
-                    \begin{tikzpicture}
-                    \begin{axis}[]
-                        \addplot[asymptote] coordinates {(2,7) (2,-7)} node[above left] {\rotatebox{90}{$x=2$}};
-                        \addplot[pccplot,<-,domain=-6.8:-1] {-(x+1)^2/36+2.5};
-                        \addplot[pccplot,->,domain=-1:1.6] {(x+1)^(ln(9)/ln(2.6))/2+2.5};
-                        \addplot[pccplot,<-,domain=2.4:4] {2/(x-2)+2};
-                        \addplot[pccplot,->,domain=4:6.8] {x-1};
-                    \end{axis}
-                    \end{tikzpicture}
-                    \end{document}
+                                \begin{tikzpicture}
+                                \begin{axis}[xmin=-10,xmax=10,ymin=-30,ymax=170,
+                                         xtick={-8,-6,...,8}, minor xtick={-10,-9,...,10},
+                                         ytick={-20,0,...,160}, minor ytick={-30,-20,...,170}]
+                                    \addplot+[samples=100,
+                                        domain=-9.8:9.8,
+                                    ]{2*x+6};
+                                \end{axis}
+                                \end{tikzpicture}
+                                \end{document}

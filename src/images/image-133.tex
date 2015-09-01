@@ -164,10 +164,14 @@
     \begin{document}
 
                         \begin{tikzpicture}
-                        \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={-3,-2,...,3},ytick={-3,-2,...,3},minor xtick={-3,-2,...,3}, minor ytick={-3,-2,...,3},title={$y=\fe{\tanh}{t}$},xlabel={$t$}]
-                            \addplot[pccplot,domain=-2.9:2.9]{(exp(x)-exp(-x))/(exp(x)+exp(-x))};
-                            \addplot[asymptote,->,domain=0:-3]{-1} node[below right] {$y=-1$};
-                            \addplot[asymptote,->,domain=0:3]{1} node[above left] {$y=1$};
+                        \begin{axis}[xmin=-30,xmax=30, xtick={-28,-24,...,28}, minor xtick={-30,-28,...,30},ymin=-40,ymax=20,ytick={-40,-36,...,20},minor ytick={-40,-38,...,20},title={$y=\frac{(x-4)^2}{x+3}$}]
+                            \addplot[pccplot,domain=-26:-5]{(x-4)^2/(x+3)};
+                            \addplot[pccplot,domain=-2:29]{(x-4)^2/(x+3)};
+                            \addplot[asymptote] coordinates {(-3,-40) (-3,20)};
+                            \addplot[asymptote,domain=-15:-5]{-28};
+                            \addplot[asymptote,domain=-1:9]{0};
+                            \addplot[asymptote,domain=-5:5]{-40/9*x+16/3};
+                            \addplot[soldot] coordinates {(-10,-28) (4,0) (0,5.33333)};
                         \end{axis}
                         \end{tikzpicture}
                         \end{document}

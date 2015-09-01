@@ -163,17 +163,17 @@
 
     \begin{document}
 
-                \begin{tikzpicture}
-                \coordinate (O) at (0,0);
-                \coordinate (A) at (4,0);
-                \coordinate (B) at (4,2);
-                \draw (O)--(A)--(B)--cycle;
-                \tkzLabelPoint[below=2pt](O){tether point}
-                \tkzLabelPoint[below=2pt](A){launch point}
-                \tkzLabelPoint[right=2pt](B){drone}
-                \tkzLabelSegment[below=2pt](O,A){$400$}
-                \tkzLabelSegment[right=2pt](A,B){$h$}
-                \tkzMarkAngle(A,O,B)
-                \tkzLabelAngle[pos = 0.8](A,O,B){$\theta$}
-                \end{tikzpicture}
-                \end{document}
+                        \begin{tikzpicture}
+                        \coordinate (O) at (0,0);
+                        \coordinate (A) at (3,0);
+                        \coordinate (B) at (3,4);
+                        \draw (O)--(A)--(B)--cycle;
+                        \tkzLabelPoint[below=0pt](O){observer}
+                        \tkzLabelPoint[below=0pt](A){\parbox{1cm}{launch point}}
+                        \tkzLabelPoint[above=0pt](B){balloon}
+                        \tkzLabelSegment[below=0pt](O,A){$300$}
+                        \tkzLabelSegment[above left=0pt](O,B){$d$}
+                        \tkzLabelSegment[right=2pt](A,B){$h$}
+                        \tkzMarkRightAngle(O,A,B)
+                        \end{tikzpicture}
+                        \end{document}

@@ -163,11 +163,11 @@
 
     \begin{document}
 
-                            \begin{tikzpicture}
-                            \begin{axis}[]
-                                \addplot[pccplot,-,domain=-6:3] {-2*cos(30*x)};
-                                \addplot[pccplot,-,domain=3:6] {2*cos(30*x)};
-                                \addplot[holdot] coordinates {(-6,2) (6,-2)};
-                            \end{axis}
-                            \end{tikzpicture}
-                            \end{document}
+                    \begin{tikzpicture}
+                    \begin{axis}[]
+                        \addplot[pccplot,-,domain=-6:3] {-12/3.1415926*sin(30*x)-2+12/3.1415926};
+                        \addplot[pccplot,-,domain=3:6] {12/3.1415926*sin(30*x)-2-12/3.1415926};
+                        \addplot[holdot] coordinates {(-6,-2+12/3.1415926) (6,-2-12/3.1415926)};
+                    \end{axis}
+                    \end{tikzpicture}
+                    \end{document}

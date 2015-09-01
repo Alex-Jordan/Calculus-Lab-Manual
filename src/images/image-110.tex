@@ -165,15 +165,21 @@
 
                         \begin{tikzpicture}
                         \coordinate (O) at (0,0);
-                        \coordinate (A) at (3,0);
-                        \coordinate (B) at (3,4);
-                        \draw (O)--(A)--(B)--cycle;
-                        \tkzLabelPoint[below=0pt](O){observer}
-                        \tkzLabelPoint[below=0pt](A){\parbox{1cm}{launch point}}
-                        \tkzLabelPoint[above=0pt](B){balloon}
-                        \tkzLabelSegment[below=0pt](O,A){$300$}
-                        \tkzLabelSegment[above left=0pt](O,B){$d$}
-                        \tkzLabelSegment[right=2pt](A,B){$h$}
-                        \tkzMarkRightAngle(O,A,B)
+                        \coordinate (A) at (0,3);
+                        \coordinate (B) at (6,0);
+                        \coordinate (C) at (6,16.5/40);
+                        \coordinate (D) at (6/0.8625,0);                     
+                        \draw (O)--(A)--(D)--cycle;
+                        \draw (B)--(C)--(D)--cycle;
+                        \tkzLabelPoint[below=2pt](O){lamp base}
+                        \tkzLabelPoint[above=2pt](A){lamp bulb}
+                        \tkzLabelPoint[right=2pt,rotate=90](C){Bahram}
+                        \tkzLabelPoint[right=2pt](D){shadow tip}
+                        \tkzLabelSegment[above=0pt,rotate=90](O,A){$40$}
+                        \tkzLabelSegment[above=0pt,rotate=90](B,C){$\,5.5$}
+                        \tkzLabelSegment[below=2pt](B,D){$\ell$}
+                        \tkzLabelSegment[below=2pt](B,O){$x$}
+                        \tkzMarkRightAngle(A,O,D)
+                        \tkzMarkRightAngle(C,B,D)
                         \end{tikzpicture}
                         \end{document}

@@ -163,30 +163,36 @@
 
     \begin{document}
 
-                            \begin{tikzpicture}
-                            \draw (-2,0) arc (190:350:2 and 0.5) -- (0,-4) -- cycle;
-                            \draw (-2,0) arc (190:-10:2 and 0.5);
-                            \draw (-1.5,-1) arc (190:350:1.5 and 0.375);
-                            \draw (-1.5,-1) arc (190:-10:1.5 and 0.375);
-                            \shade[left color=blue!5!white,right color=blue!40!white,opacity=0.8] (-1.5,-1) arc (190:350:1.5 and 0.375) -- (0,-4) -- cycle;
-                            \shade[left color=blue!5!white,right color=blue!40!white,opacity=0.4] (-1.5,-1) arc (190:550:1.5 and 0.375) -- cycle;
-                            \coordinate (O) at (0,0.1);
-                            \coordinate (A) at (2,0.1);
-                            \coordinate (B) at (2,-4);    
-                            \coordinate (C) at (0,-4);    
-                            \coordinate (D) at (0,-0.925);    
-                            \coordinate (M) at (0.6,-0.925);    
-                            \coordinate (N) at (0.9,-0.925);    
-                            \coordinate (E) at (1.5,-0.925);    
-                            \coordinate (F) at (1.5,-4);    
-                            \draw[] (O) -- (A) -- (B) -- (C) -- cycle;
-                            \draw[] (N) -- (E) -- (F);
-                            \draw[] (D) -- (M);
-                            \tkzLabelSegment[rotate=270,anchor=south](A,B){$12\,\mathrm{cm}$}
-                            \tkzLabelSegment[](O,A){$3\,\mathrm{cm}$}
-                            \tkzLabelSegment[fill=white](E,F){$h$}
-                            \tkzLabelSegment[above=-1.2ex](D,E){$r$}
-                            \tkzMarkRightAngle[](C,O,A)    
-                            \tkzMarkRightAngle[](C,D,M)    
-                            \end{tikzpicture}
-                            \end{document}
+                        \newfontfamily\annatar{Tengwar Annatar}
+                        \begin{tikzpicture}
+                        \coordinate (O) at (0,0);
+                        \coordinate (A) at (0,2.1);
+                        \pgfmathsetmacro\x{1.4*cos(-30)}
+                        \pgfmathsetmacro\y{1.4*sin(-30)}
+                        \coordinate (B) at (\x,\y);
+                        \draw[very thick] (O) circle (3);
+                        \draw[very thick,->] (O) -- (A);
+                        \draw[very thick,->] (O) -- (B);
+                        \fill (O) circle (2pt);
+                        \draw[dashed] (A) -- (B);
+                            {\annatar
+                            \draw node[inner sep=0,anchor=north] at (90:2.9) {\char"00F0\char"00A8\char"00F1\char"00CA};
+                            \draw node[inner sep=0,rotate=-30,anchor=north] at (60:2.9) {\char"00F1\char"00A8};
+                            \draw node[inner sep=0,rotate=-60,anchor=north] at (30:2.9) {\char"00F2\char"2122};
+                            \draw node[inner sep=0,rotate=-90,anchor=north] at (0:2.9) {\char"00F3\char"02DC};
+                            \draw node[inner sep=0,rotate=-120,anchor=north] at (-30:2.9) {\char"00F4\char"00A8};
+                            \draw node[inner sep=0,rotate=-150,anchor=north] at (-60:2.9) {\char"00F5\char"2122};
+                            \draw node[inner sep=0,rotate=-180,anchor=north] at (-90:2.9) {\char"00F6\char"00A8};
+                            \draw node[inner sep=0,rotate=-210,anchor=north] at (-120:2.9) {\char"00F7\char"00A8};
+                            \draw node[inner sep=0,rotate=-240,anchor=north] at (-150:2.9) {\char"00F8\char"00A8};
+                            \draw node[inner sep=0,rotate=-270,anchor=north] at (-180:2.9) {\char"00F9\char"02DC};
+                            \draw node[inner sep=0,rotate=-300,anchor=north] at (-210:2.9) {\char"00FA\char"00A8};
+                            \draw node[inner sep=0,rotate=-330,anchor=north] at (-240:2.9) {\char"00FB\char"00A8};
+                            }
+                        \tkzLabelSegment[left=0pt](O,A){$30$}
+                        \tkzLabelSegment[below left=0pt](O,B){$20$}
+                        \tkzLabelSegment[above right=0pt](A,B){$d$}
+                        \tkzMarkAngle[size=0.6](B,O,A)
+                        \tkzLabelAngle[pos=0.3](B,O,A){$\theta$}
+                        \end{tikzpicture}
+                        \end{document}

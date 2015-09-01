@@ -163,9 +163,11 @@
 
     \begin{document}
 
-                            \begin{tikzpicture}
-                            \begin{axis}[xtick={100},ytick={100},minor xtick={100}, minor ytick={100},title={$y=\fe{\cosh}{t}$},xlabel={$t$}]
-                                \addplot[pccplot,domain=-2.5:2.5]{(exp(x)+exp(-x))/2};
-                            \end{axis}
-                            \end{tikzpicture}
-                            \end{document}
+                        \begin{tikzpicture}
+                        \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={-3,-2,...,3},ytick={-3,-2,...,3},minor xtick={-3,-2,...,3}, minor ytick={-3,-2,...,3},title={$y=\fe{\tanh}{t}$},xlabel={$t$}]
+                            \addplot[pccplot,domain=-2.9:2.9]{(exp(x)-exp(-x))/(exp(x)+exp(-x))};
+                            \addplot[asymptote,->,domain=0:-3]{-1} node[below right] {$y=-1$};
+                            \addplot[asymptote,->,domain=0:3]{1} node[above left] {$y=1$};
+                        \end{axis}
+                        \end{tikzpicture}
+                        \end{document}

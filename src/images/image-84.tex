@@ -164,8 +164,10 @@
     \begin{document}
 
                             \begin{tikzpicture}
-                            \begin{axis}[grid=none, xtick={10}, ytick={10}, minor xtick={10}, minor ytick={10}, xmin=-1,xmax=5,ymin=-1,ymax=5,xlabel={},ylabel={}]
-                                \addplot[patch, patch type=quadratic spline,pccplot] coordinates {(1,2.5) (4,2.5) (2,2.5)};
+                            \begin{axis}[]
+                                \addplot[pccplot,-,domain=-6:3] {-2*cos(30*x)};
+                                \addplot[pccplot,-,domain=3:6] {2*cos(30*x)};
+                                \addplot[holdot] coordinates {(-6,2) (6,-2)};
                             \end{axis}
                             \end{tikzpicture}
                             \end{document}

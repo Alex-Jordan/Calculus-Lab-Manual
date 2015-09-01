@@ -163,11 +163,11 @@
 
     \begin{document}
 
-                            \begin{tikzpicture}
-                            \begin{axis}[]
-                                \addplot[pccplot,<-,domain=-6.2:-1] {(x+3)^2-4};
-                                \addplot[pccplot,-,domain=-1:1] {-3*(x+1)};
-                                \addplot[pccplot,->,variable=t,domain=-6:-2.1] ({3/8*(t+4)^3+4},{t});
-                            \end{axis}
-                            \end{tikzpicture}
-                            \end{document}
+                    \begin{tikzpicture}
+                    \begin{axis}[]
+                        \addplot[pccplot,-,domain=-6:3] {-12/3.1415926*sin(30*x)-2+12/3.1415926};
+                        \addplot[pccplot,-,domain=3:6] {12/3.1415926*sin(30*x)-2-12/3.1415926};
+                        \addplot[holdot] coordinates {(-6,-2+12/3.1415926) (6,-2-12/3.1415926)};
+                    \end{axis}
+                    \end{tikzpicture}
+                    \end{document}

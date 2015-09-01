@@ -164,35 +164,7 @@
     \begin{document}
 
                             \begin{tikzpicture}
-                            \begin{axis}[
-                                xmin=-16,
-                                xmax=16,
-                                xtick={-16,-12,...,16},
-                                minor xtick={-16,-15,...,16},
-                                ymin=-16,
-                                ymax=16,
-                                ytick={-16,-12,...,16},
-                                minor ytick={-16,-15,...,16},
-                                grid=major,
-                                ]
-                                \addplot[pccplot,samples=50,
-                                    domain=-15.8:-10.09,
-                                ]{(-2*x+8)/(x^2-100)};
-                                \addplot[pccplot,<-,
-                                    domain=-9.91:-8,
-                                ]{(-2*x+8)/(x^2-100)};
-                                \addplot[pccplot,-,
-                                    domain=-8:8,
-                                ]{(-2*x+8)/(x^2-100)};
-                                \addplot[pccplot,->,
-                                    domain=8:9.96,
-                                ]{(-2*x+8)/(x^2-100)};
-                                \addplot[pccplot,samples=50,
-                                    domain=10.04:15.8,
-                                ]{(-2*x+8)/(x^2-100)};
-                                \addplot[asymptote] coordinates {(16,0) (-16,0)} node[above right] {$y=0$};
-                                \addplot[asymptote] coordinates {(-10,16) (-10,-16)} node[above left] {\rotatebox{90}{$x=-10$}};
-                                \addplot[asymptote] coordinates {(10,16) (10,-16)} node[above left] {\rotatebox{90}{$x=10$}};
+                            \begin{axis}[blankgraph]
                             \end{axis}
                             \end{tikzpicture}
                             \end{document}

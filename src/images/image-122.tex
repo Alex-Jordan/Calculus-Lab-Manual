@@ -163,26 +163,8 @@
 
     \begin{document}
 
-                            \begin{tikzpicture}
-                            \begin{axis}[
-                                xmin=-16,
-                                xmax=16,
-                                xtick={-16,-12,...,16},
-                                minor xtick={-16,-15,...,16},
-                                ymin=-16,
-                                ymax=16,
-                                ytick={-16,-12,...,16},
-                                minor ytick={-16,-15,...,16},
-                                grid=major,
-                                ]
-                                \addplot[pccplot,samples=50,
-                                    domain=-15.8:1.35,
-                                ]{(3*x+6)/(x-2)};
-                                \addplot[pccplot,samples=50,
-                                    domain=2.95:15.8,
-                                ]{(3*x+6)/(x-2)};
-                                \addplot[asymptote] coordinates {(16,3) (-16,3)} node[above right] {$y=3$};
-                                \addplot[asymptote] coordinates {(2,16) (2,-16)} node[above right] {\rotatebox{90}{$x=2$}};
-                            \end{axis}
-                            \end{tikzpicture}
-                            \end{document}
+                        \begin{tikzpicture}
+                        \begin{axis}[blankgraph]
+                        \end{axis}
+                        \end{tikzpicture}
+                        \end{document}

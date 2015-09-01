@@ -163,13 +163,21 @@
 
     \begin{document}
 
-                                \begin{tikzpicture}
-                                \begin{axis}[xmin=-10,xmax=10,ymin=-30,ymax=170,
-                                         xtick={-8,-6,...,8}, minor xtick={-10,-9,...,10},
-                                         ytick={-20,0,...,160}, minor ytick={-30,-20,...,170}]
-                                    \addplot+[samples=100,
-                                        domain=-9.8:9.8,
-                                    ]{x^2+6*x-16};
-                                \end{axis}
-                                \end{tikzpicture}
-                                \end{document}
+                \begin{tikzpicture}
+                \begin{axis}[legend entries ={{$f$},{$k$}},
+                    xmin=-3.1415926,
+                    xtick={-3.1415926,-1.5707963,...,6.2831852},
+                    minor xtick={-3.1415926,-1.5707963,...,6.2831852},
+                    xmax=6.2831852,
+                    ymin=-2,
+                    ymax=2,
+                    y post scale = 1/1.5707963,
+                    xticklabels={$-\pi$,$-\frac{\pi}{2}$,$0$,$\frac{\pi}{2}$,$\pi$,$\frac{3\pi}{2}$,$2\pi$}, 
+                    xlabel={$t$},
+                    domain=-3.1415926:6.2831852,
+                    smooth]
+                    \addplot+[]{sin(180*x/3.1415926)};
+                    \addplot+[]{sin(3*180*x/3.1415926)};
+                \end{axis}
+                \end{tikzpicture}
+                \end{document}

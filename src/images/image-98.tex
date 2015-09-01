@@ -164,20 +164,13 @@
     \begin{document}
 
                 \begin{tikzpicture}
-                \begin{axis}[legend entries ={{$f$},{$k$}},
-                    xmin=-3.1415926,
-                    xtick={-3.1415926,-1.5707963,...,6.2831852},
-                    minor xtick={-3.1415926,-1.5707963,...,6.2831852},
-                    xmax=6.2831852,
-                    ymin=-2,
-                    ymax=2,
-                    y post scale = 1/1.5707963,
-                    xticklabels={$-\pi$,$-\frac{\pi}{2}$,$0$,$\frac{\pi}{2}$,$\pi$,$\frac{3\pi}{2}$,$2\pi$}, 
-                    xlabel={$t$},
-                    domain=-3.1415926:6.2831852,
-                    smooth]
-                    \addplot+[]{sin(180*x/3.1415926)};
-                    \addplot+[]{sin(3*180*x/3.1415926)};
+                \begin{axis}[
+                    smooth,
+                    variable=t,]
+                    \addplot[pccplot,domain=1.861:4,->]({sqrt(t^3-4*t+1)},{t});
+                    \addplot[pccplot,domain=1.861:4,->]({-sqrt(t^3-4*t+1)},{t});
+                    \addplot[pccplot,domain=-2.1149:0.2541,-]({sqrt(t^3-4*t+1)},{t});
+                    \addplot[pccplot,domain=-2.1149:0.2541,-]({-sqrt(t^3-4*t+1)},{t});
                 \end{axis}
                 \end{tikzpicture}
                 \end{document}

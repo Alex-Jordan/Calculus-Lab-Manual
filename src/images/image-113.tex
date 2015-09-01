@@ -163,23 +163,20 @@
 
     \begin{document}
 
-                        \begin{tikzpicture}
-                        \coordinate (O) at (0,0);
-                        \coordinate (A) at (0,3);
-                        \coordinate (B) at (6,0);
-                        \coordinate (C) at (6,16.5/40);
-                        \coordinate (D) at (6/0.8625,0);                     
-                        \draw (O)--(A)--(D)--cycle;
-                        \draw (B)--(C)--(D)--cycle;
-                        \tkzLabelPoint[below=2pt](O){lamp base}
-                        \tkzLabelPoint[above=2pt](A){lamp bulb}
-                        \tkzLabelPoint[right=2pt,rotate=90](C){Bahram}
-                        \tkzLabelPoint[right=2pt](D){shadow tip}
-                        \tkzLabelSegment[above=0pt,rotate=90](O,A){$40$}
-                        \tkzLabelSegment[above=0pt,rotate=90](B,C){$\,5.5$}
-                        \tkzLabelSegment[below=2pt](B,D){$\ell$}
-                        \tkzLabelSegment[below=2pt](B,O){$x$}
-                        \tkzMarkRightAngle(A,O,D)
-                        \tkzMarkRightAngle(C,B,D)
-                        \end{tikzpicture}
-                        \end{document}
+                            \begin{tikzpicture}
+                            \begin{axis}[
+                                xmin=-3,
+                                xmax=7,
+                                xtick={-3,-2,...,7},
+                                ytick={40},
+                                minor ytick={40},
+                                ymin=-1.6,
+                                ymax=4.8,
+                                grid=none,
+                                samples=100,
+                                y post scale=0.6,]
+                                \addplot[pccplot,domain=-3:2,<-]{(abs(x-2))^(2/7)+1.6};
+                                \addplot[pccplot,domain=2:7,->]{(abs(x-2))^(2/7)+1.6};
+                            \end{axis}
+                            \end{tikzpicture}
+                            \end{document}

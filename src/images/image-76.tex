@@ -163,29 +163,9 @@
 
     \begin{document}
 
-                        \begin{tikzpicture}
-                        \begin{axis}[]
-                            \addplot[pccplot,<-,
-                                domain=-6.8:-4,
-                            ]{1.8*(-(x+3))^(-0.4)};
-                            \addplot[pccplot,->,
-                                variable=t, domain=1.8:6.8,
-                            ]({-(1.8/t)^2.5-3},{t});
-                            \addplot[pccplot,<-,
-                                variable=t, domain=-6.8:-1.3641449099,
-                            ]({(-1.8/t)^2.5-3},{t});
-                            \addplot[asymptote,
-                            ] coordinates {(-3,7) (-3,-7)} node[above left] {\rotatebox{90}{$x=-3$}};
-                            \addplot[pccplot,->,
-                                variable=t, domain=0.3941277444:6.8,
-                            ]({-(3*t/2.459456236)^-1.5+2},{t});
-                            \addplot[pccplot,<-,
-                                variable=t, domain=6.8:0.8198187453,
-                            ]({(3*t/2.459456236)^-1.5+2},{t});
-                            \addplot[asymptote,
-                            ] coordinates {(2,7) (2,-7)} node[above left] {\rotatebox{90}{$x=2$}};
-                            \addplot[pccplot,->,domain=3:6.8]{0.364864059*(x-5)*2};
-                            \addplot[holdot] coordinates {(-1,-1.3641449099) (-1,0.3941277444) (3,0.8198187453) (3,-4*0.364864059)};
-                        \end{axis}
-                        \end{tikzpicture}
-                        \end{document}
+                            \begin{tikzpicture}
+                            \begin{axis}[grid=none, xtick={10}, ytick={10}, minor xtick={10}, minor ytick={10}, xmin=-1,xmax=5,ymin=-1,ymax=5,xlabel={},ylabel={}]
+                                \addplot[patch, patch type=quadratic spline,pccplot] coordinates {(1,4) (4,1) (2,2)};
+                            \end{axis}
+                            \end{tikzpicture}
+                            \end{document}

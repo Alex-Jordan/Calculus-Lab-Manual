@@ -164,12 +164,13 @@
     \begin{document}
 
                             \begin{tikzpicture}
-                            \begin{axis}[xmin=-10,xmax=10,ymin=-30,ymax=170,
-                                     xtick={-8,-6,...,8}, minor xtick={-10,-9,...,10},
-                                     ytick={-20,0,...,160}, minor ytick={-30,-20,...,170}]
+                            \begin{axis}[xmin=-1.047197551,xmax=7.068583471,xlabel={$t$},
+                                     xtick={0.7854, 1.5708, 2.3562, 3.14159, 3.927, 4.7123889, 5.4978, 6.28318},
+                                     minor xtick={-1.047197551,-0.785398163,...,7.068583471},
+                                     xticklabels={$\frac{\pi}{4}$,$\frac{\pi}{2}$,$\frac{3\pi}{4}$,$\pi$,$\frac{5\pi}{4}$,$\frac{3\pi}{2}$,$\frac{7\pi}{4}$,$2\pi$}]
                                 \addplot+[samples=100,
-                                    domain=-9.8:7.2,
-                                ]{x^3/3+3*x^2-16*x};
+                                    domain=-1:7,
+                                ]{3*sin(x*360/6.283185311)+3*(sin(x*360/6.283185311))^2-5};
                             \end{axis}
                             \end{tikzpicture}
                             \end{document}

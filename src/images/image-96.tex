@@ -163,13 +163,19 @@
 
     \begin{document}
 
-                                \begin{tikzpicture}
-                                \begin{axis}[xmin=-10,xmax=10,ymin=-30,ymax=170,
-                                         xtick={-8,-6,...,8}, minor xtick={-10,-9,...,10},
-                                         ytick={-20,0,...,160}, minor ytick={-30,-20,...,170}]
-                                    \addplot+[samples=100,
-                                        domain=-9.8:9.8,
-                                    ]{2*x+6};
-                                \end{axis}
-                                \end{tikzpicture}
-                                \end{document}
+                            \begin{tikzpicture}
+                            \begin{axis}[
+                                xmin=-1.75,
+                                xtick={-1,0,1},
+                                minor xtick={-1.75,-1.5,...,1.75},
+                                xmax=1.75,
+                                ymin=-3.5,
+                                ytick={-3,-2,...,3},
+                                ymax=3.5,
+                                xlabel={$t$},
+                                domain=-1.34:1.64,
+                                smooth]
+                                \addplot+[]{x*exp(x)-exp(x^2)+3};
+                            \end{axis}
+                            \end{tikzpicture}
+                            \end{document}

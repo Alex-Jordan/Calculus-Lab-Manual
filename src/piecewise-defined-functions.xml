@@ -87,7 +87,7 @@
                     <p>Complete <xref ref="table-piecewise-discontinuities-analysis"/>.</p>
                     <table xml:id="table-piecewise-discontinuities-analysis">
                         <caption>Discontinuity analysis for <m>f</m></caption>
-                        <centerline><tabular top="major">
+                        <centerline><tabular top="major" left="minor">
                             <col halign="1in" right="minor" left="minor"/>
                             <col halign="1.8in" right="minor"/>
                             <col halign="center" right="minor"/>

@@ -163,8 +163,13 @@
 
     \begin{document}
 
-                        \begin{tikzpicture}
-                        \begin{axis}[]
-                        \end{axis}
-                        \end{tikzpicture}
-                        \end{document}
+                            \begin{tikzpicture}
+                            \begin{axis}[xmin=-10,xmax=10,ymin=-30,ymax=170,
+                                     xtick={-8,-6,...,8}, minor xtick={-10,-9,...,10},
+                                     ytick={0,20,...,160}, minor ytick={-30,-20,...,170}]
+                                \addplot+[samples=100,
+                                    domain=-9.8:7.2,
+                                ]{x^3/3+3*x^2-16*x};
+                            \end{axis}
+                            \end{tikzpicture}
+                            \end{document}

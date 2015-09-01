@@ -4,6 +4,16 @@ perl -pi -e 's/Activity .1 //g' supplemental-solutions.html
 perl -pi -e 's/<span class="type">Activity<\/span><span class="codenumber">.1<\/span>//g' supplemental-solutions.html
 perl -pi -e 's/<\/div><\/main>/<footer><a rel="license" href="http:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/"><img alt="Creative Commons License" style="border-width:0" src="https:\/\/i\.creativecommons\.org\/l\/by-sa\/4\.0\/88x31\.png" \/><\/a><br \/>This work is licensed under a <a rel="license" href="http:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/">Creative Commons Attribution-ShareAlike 4\.0 International License<\/a>\.<\/footer><\/div><\/main>/g' *.html
 perl -pi -e 's/<footer><a rel="license" href="http:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/"><img alt="Creative Commons License" style="border-width:0" src="https:\/\/i\.creativecommons\.org\/l\/by-sa\/4\.0\/88x31\.png" \/><\/a><br \/>This work is licensed under a <a rel="license" href="http:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/">Creative Commons Attribution-ShareAlike 4\.0 International License<\/a>\.<\/footer>//g' colophon-1.html
+perl -pi -e 's/Activity \.\.. //g' to-all.html
+perl -pi -e 's/<span class="type">Activity<\/span>//g' to-all.html
+perl -pi -e 's/<span class="codenumber">\.\..<\/span>//g' to-all.html
+perl -pi -e 's/elevation<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-1" id="fn-1"><sup> 1 <\/sup>/elevation<span class="hidden-knowl-wrapper" style="margin-left: 0; "><a knowl="" class="id-ref" refid="hk-fn-1" id="fn-1"><sup>1<\/sup>/g' section-velocity.html
+perl -pi -e 's/>(Limit Law [AR][0-9]*) </>$1</g' *.html
+perl -pi -e 's/<div class="sidebyside" id="sidebyside-curves">/<div class="sidebyside" id="sidebyside-curves" style="text-align: center;">/g' section-graphical-features-from-derivatives.html
+perl -pi -e 's/^<div class="svg-and-links">/<div style="width:90%;" class="svg-and-links">/g' functions-derivatives-antiderivatives-supplementary-exercises.html
+perl -pi -e 's/<div class="sidebyside" id="figure-seven-curves">/<div class="sidebyside" id="figure-seven-curves" style="text-align: center;">/g' functions-derivatives-antiderivatives-supplementary-exercises.html
+perl -pi -e 's/<figure class="figure-like" id="figure-inflection-points"><div class="svg-and-links">/<figure class="figure-like" id="figure-inflection-points"><div style="width:75%; min-width:220px" class="svg-and-links">/g' section-graphical-derivatives.html
+perl -pi -e 's/width:10%;min-width:[0-9]*px;/width:23%;min-width:100px;/g' section-graphical-features-from-derivatives.html
 rm printdraft.*
 xsltproc -xinclude ../xsl/clm-print.xsl clm.xml
 mv clm.tex printdraft.tex
@@ -20,6 +30,9 @@ perl -pi -e 's/\\section\[Tablets and Smartphones\]{Tablets and Smartphones}/\\s
 perl -pi -e 's/\\lstinline/\\verb/g' printdraft.tex
 perl -pi -e 's/\\begin{tikzpicture}%hook/\\begin{minipage}[t]{0.47\\linewidth}\\vspace{0pt}\\begin{tikzpicture}/g' printdraft.tex
 perl -pi -e 's/\\end{tikzpicture}%hook/\\end{tikzpicture}\\end{minipage}/g' printdraft.tex
+perl -pi -e 's/\\begin{example}\[Calculating Secant Slope\]\\label{example-secant}/\\pagebreak\\begin{example}\[Calculating Secant Slope\]\\label{example-secant}/g' printdraft.tex
+perl -pi -e 's/\\subsection\[Exercises\]{Exercises}\\label{exercises-13}/\\pagebreak\\subsection\[Exercises\]{Exercises}\\label{exercises-13}/g' printdraft.tex
+perl -pi -e 's/\\section\[Supplement\]{Supplement}\\label{critical-numbers-graphing-from-formulas-supplementary-exercises}/\\newpage\\section\[Supplement\]{Supplement}\\label{critical-numbers-graphing-from-formulas-supplementary-exercises}/g' printdraft.tex
 rm printcolordraft.*
 xsltproc -xinclude ../xsl/clm-print-color.xsl clm.xml
 mv clm.tex printcolordraft.tex
@@ -36,6 +49,9 @@ perl -pi -e 's/\\section\[Tablets and Smartphones\]{Tablets and Smartphones}/\\s
 perl -pi -e 's/\\lstinline/\\verb/g' printcolordraft.tex
 perl -pi -e 's/\\begin{tikzpicture}%hook/\\begin{minipage}[t]{0.47\\linewidth}\\vspace{0pt}\\begin{tikzpicture}/g' printcolordraft.tex
 perl -pi -e 's/\\end{tikzpicture}%hook/\\end{tikzpicture}\\end{minipage}/g' printcolordraft.tex
+perl -pi -e 's/\\begin{example}\[Calculating Secant Slope\]\\label{example-secant}/\\pagebreak\\begin{example}\[Calculating Secant Slope\]\\label{example-secant}/g' printcolordraft.tex
+perl -pi -e 's/\\subsection\[Exercises\]{Exercises}\\label{exercises-13}/\\pagebreak\\subsection\[Exercises\]{Exercises}\\label{exercises-13}/g' printcolordraft.tex
+perl -pi -e 's/\\section\[Supplement\]{Supplement}\\label{critical-numbers-graphing-from-formulas-supplementary-exercises}/\\newpage\\section\[Supplement\]{Supplement}\\label{critical-numbers-graphing-from-formulas-supplementary-exercises}/g' printcolordraft.tex
 rm screenpdfdraft.*
 xsltproc -xinclude ../xsl/clm-screenpdf.xsl clm.xml
 mv clm.tex screenpdfdraft.tex

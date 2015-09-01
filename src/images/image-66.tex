@@ -163,13 +163,18 @@
 
     \begin{document}
 
-                            \begin{tikzpicture}
-                            \begin{axis}[]
-                                \addplot+[samples=50,
-                                    domain=-6.8:6.8,
-                                ]{atan((x-2)*2)/30-1};
-                                \addplot[asymptote,->,domain=0:7]{2} node[above left] {$y=2$};
-                                \addplot[asymptote,->,domain=0:-7]{-4} node[below right] {$y=-4$};
-                            \end{axis}
-                            \end{tikzpicture}
-                            \end{document}
+                        \begin{tikzpicture}%hook
+                        \begin{axis}[width=0.45\textwidth]
+                            \addplot+[samples=50,
+                                domain=-6.8:6.8,
+                            ]{atan((x-2)*2)/30-1};
+                            \addplot[asymptote,->,domain=0:7]{2} node[above left] {$y=2$};
+                            \addplot[asymptote,->,domain=0:-7]{-4} node[below right] {$y=-4$};
+                        \end{axis}
+                        \end{tikzpicture}%hook
+                        \hspace{2em} 
+                        \begin{tikzpicture}%hook
+                        \begin{axis}[width=0.45\textwidth]
+                        \end{axis}
+                        \end{tikzpicture}%hook
+                        \end{document}

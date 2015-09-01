@@ -163,12 +163,14 @@
 
     \begin{document}
 
-                        \begin{tikzpicture}
-                                \begin{axis}[variable=v]
-                                \addplot[pccplot,domain=0.173587:0.70346,<-] ({ln(v^2)+sqrt((ln(v^2))^2-v^2)}, {v^2/(ln(v^2)+sqrt((ln(v^2))^2-v^2))});
-                                \addplot[pccplot,domain=0.173587:0.70346,<-] ({v^2/(ln(v^2)+sqrt((ln(v^2))^2-v^2))},{ln(v^2)+sqrt((ln(v^2))^2-v^2)});
-                                \addplot[pccplot,domain=0.173587:3.6116] ({ln(v^2)+sqrt((ln(v^2))^2+v^2)}, {-v^2/(ln(v^2)+sqrt((ln(v^2))^2+v^2))});
-                                \addplot[pccplot,domain=0.173587:3.6116] ({-v^2/(ln(v^2)+sqrt((ln(v^2))^2+v^2))}, {ln(v^2)+sqrt((ln(v^2))^2+v^2)});
-                                \end{axis}
-                        \end{tikzpicture}
-                        \end{document}
+                    \begin{tikzpicture}
+                    \coordinate (O) at (0,0);
+                    \coordinate (A) at (4,0);
+                    \coordinate (B) at (4,2);
+                    \draw (O)--(A)--(B)--cycle;
+                    \tkzLabelSegment[below=2pt](O,A){$400$}
+                    \tkzLabelSegment[right=2pt](A,B){$h$}
+                    \tkzMarkAngle(A,O,B)
+                    \tkzLabelAngle[pos = 0.8](A,O,B){$\theta$}
+                    \end{tikzpicture}
+                    \end{document}

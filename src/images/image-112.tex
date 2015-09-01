@@ -163,36 +163,19 @@
 
     \begin{document}
 
-                        \newfontfamily\annatar{Tengwar Annatar}
-                        \begin{tikzpicture}
-                        \coordinate (O) at (0,0);
-                        \coordinate (A) at (0,2.1);
-                        \pgfmathsetmacro\x{1.4*cos(-30)}
-                        \pgfmathsetmacro\y{1.4*sin(-30)}
-                        \coordinate (B) at (\x,\y);
-                        \draw[very thick] (O) circle (3);
-                        \draw[very thick,->] (O) -- (A);
-                        \draw[very thick,->] (O) -- (B);
-                        \fill (O) circle (2pt);
-                        \draw[dashed] (A) -- (B);
-                            {\annatar
-                            \draw node[inner sep=0,anchor=north] at (90:2.9) {\char"00F0\char"00A8\char"00F1\char"00CA};
-                            \draw node[inner sep=0,rotate=-30,anchor=north] at (60:2.9) {\char"00F1\char"00A8};
-                            \draw node[inner sep=0,rotate=-60,anchor=north] at (30:2.9) {\char"00F2\char"2122};
-                            \draw node[inner sep=0,rotate=-90,anchor=north] at (0:2.9) {\char"00F3\char"02DC};
-                            \draw node[inner sep=0,rotate=-120,anchor=north] at (-30:2.9) {\char"00F4\char"00A8};
-                            \draw node[inner sep=0,rotate=-150,anchor=north] at (-60:2.9) {\char"00F5\char"2122};
-                            \draw node[inner sep=0,rotate=-180,anchor=north] at (-90:2.9) {\char"00F6\char"00A8};
-                            \draw node[inner sep=0,rotate=-210,anchor=north] at (-120:2.9) {\char"00F7\char"00A8};
-                            \draw node[inner sep=0,rotate=-240,anchor=north] at (-150:2.9) {\char"00F8\char"00A8};
-                            \draw node[inner sep=0,rotate=-270,anchor=north] at (-180:2.9) {\char"00F9\char"02DC};
-                            \draw node[inner sep=0,rotate=-300,anchor=north] at (-210:2.9) {\char"00FA\char"00A8};
-                            \draw node[inner sep=0,rotate=-330,anchor=north] at (-240:2.9) {\char"00FB\char"00A8};
-                            }
-                        \tkzLabelSegment[left=0pt](O,A){$30$}
-                        \tkzLabelSegment[below left=0pt](O,B){$20$}
-                        \tkzLabelSegment[above right=0pt](A,B){$d$}
-                        \tkzMarkAngle[size=0.6](B,O,A)
-                        \tkzLabelAngle[pos=0.3](B,O,A){$\theta$}
-                        \end{tikzpicture}
-                        \end{document}
+                            \begin{tikzpicture}
+                            \begin{axis}[
+                                xmin=-3,
+                                xmax=7,
+                                xtick={-3,-2,...,7},
+                                ytick={40},
+                                minor ytick={40},
+                                ymin=-10,
+                                ymax=30,
+                                grid=none,
+                                samples=100,
+                                y post scale=0.6,]
+                                \addplot[pccplot,domain=-3:7]{(abs(x-2))^(10/7)+10};
+                            \end{axis}
+                            \end{tikzpicture}
+                            \end{document}

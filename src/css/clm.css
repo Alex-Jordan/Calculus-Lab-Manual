@@ -2,16 +2,14 @@
     caption-side: top;
 }
 
-.mathbook-content .definition-like > .heading::after, .mathbook-content .theorem-like > .heading::after, .mathbook-content .remark-like > .heading::after, .mathbook-content .example-like > .heading::after, .mathbook-content .exercise-like > .heading::after, .mathbook-content .aside-like > .heading::after, .mathbook-content .definition-like > header > .heading::after, .mathbook-content .theorem-like > header > .heading::after, .mathbook-content .remark-like > header > .heading::after, .mathbook-content .example-like > header > .heading::after, .mathbook-content .exercise-like > header > .heading::after, .mathbook-content .aside-like > header > .heading::after {
+.mathbook-content .definition-like > .heading::after, .mathbook-content .theorem-like > .heading::after, .mathbook-content .remark-like > .heading::after, .mathbook-content .example-like > .heading::after, .mathbook-content .aside-like > .heading::after, .mathbook-content .definition-like > header > .heading::after, .mathbook-content .theorem-like > header > .heading::after, .mathbook-content .remark-like > header > .heading::after, .mathbook-content .example-like > header > .heading::after, .mathbook-content .exercise-like > header > .heading::after, .mathbook-content .aside-like > header > .heading::after {
     content: "";
 }
 
+
+
 .exercisegroup .exercise-like {
     margin-left: 5%;
-}
-
-.alert {
-    font-weight: bold;
 }
 
 .mathbook-content .paragraphs .heading::after {
@@ -30,13 +28,49 @@
     text-align: center;
 }
 
+.mathbook-content figcaption {
+    text-align:center;
+}
+
+.mathbook-content .sidebyside > figure > figcaption {
+    margin: 0;
+    max-width: 100%;
+    padding: 0 5%;
+}
+
 .sidebyside {
     display:table; margin:auto; text-align:center;
 }
 
-.svg-and-links {
-    margin:auto; display:inline-block;
+.sidebyside .paragraphs, .sidebyside figure {
+    padding: 0 0 1.25em;
 }
+
+.sidebyside .left {
+    padding-left: 0;
+    padding-right: 0.99%;
+}
+
+.sidebyside .right {
+    padding-left: 0.99%;
+    padding-right: 0;
+}
+
+
+.sidebyside .middle {
+    padding-left: 0.99%;
+    padding-right: 0.99%;
+}
+
+.svg-and-links {
+    margin:auto; display:inline-block; width: 48%; min-width: 220px; 
+}
+
+
+.sidebyside .svg-and-links {
+    width: 100%; min-width:inherit;
+}
+
 
 .image-links {
     display:table; margin:auto; text-align:center;
@@ -51,9 +85,19 @@
 }
 
 .image-link  {
-    display: block; padding-left: 0em; padding-right: 1em;
+    display: block; padding-left: 0em; padding-right: 1em; font-family: monospace;
 }
+
+.mathbook-content a:link {
+    background-image:none;
+}
+
 
 .knowl .image-links {
     visibility: collapse;
+}
+
+
+.geogebra {
+    border:0px;
 }

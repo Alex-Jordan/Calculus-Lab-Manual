@@ -164,7 +164,11 @@
     \begin{document}
 
                             \begin{tikzpicture}
-                            \begin{axis}[blankgraph]
+                            \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={9},ytick={9},unit vector ratio*=1 1 1, clip=false]
+                                \addplot[pccplot,domain=-1.76275:1.76275,variable=t]({(exp(t)+exp(-t))/2},{(exp(t)-exp(-t))/2});
+                                \addplot[pccplot,domain=-1.76275:1.76275,variable=t]({-(exp(t)+exp(-t))/2},{-(exp(t)-exp(-t))/2});
+                                \addplot[-] coordinates {(1.5,1.11803399) (0,0)};
+                                \addplot[mark=*] coordinates {(1.5,1.11803399)} node[pin=170:{$(\fe{\cosh}{t},\fe{\sinh}{t})$}]{} ;
                             \end{axis}
                             \end{tikzpicture}
                             \end{document}

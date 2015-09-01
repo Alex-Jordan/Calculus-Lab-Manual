@@ -165,15 +165,23 @@
 
                         \begin{tikzpicture}
                         \coordinate (O) at (0,0);
-                        \coordinate (A) at (4.2,0);
-                        \coordinate (B) at (0,3.4);
-                        \draw (O)--(A)--(B)--cycle;
-                        \tkzLabelPoint[below=2pt](O){start}
-                        \tkzLabelPoint[below=2pt](A){Rex}
-                        \tkzLabelPoint[left=2pt](B){Muffin}
-                        \tkzLabelSegment[below=2pt](O,A){$x$}
-                        \tkzLabelSegment[left=2pt](O,B){$y$}
-                        \tkzLabelSegment[above right=2pt](A,B){$d$}
-                        \tkzMarkRightAngle(A,O,B)
+                        \coordinate (A) at (0,6);
+                        \coordinate (B) at (2.56,3.44);
+                        \coordinate (C) at (-4,0);
+                        \coordinate (D) at (4,0);
+                        \coordinate (E) at (2.56,0);
+                        \draw[very thick] (C)--(D);
+                        \draw (A)--(B);
+                        \draw[dashed] (E)--(B);
+                        \draw[dashed] (A)--(O);
+                        \fill (A) circle[radius=2pt];
+                        \fill (B) circle[radius=6pt];
+                        \tkzLabelPoint[above=0pt](A){pivot point}
+                        \tkzLabelPoint[right=3pt](B){pendulum}
+                        \tkzLabelSegment[above=0pt,rotate=-45](B,A){$18$}
+                        \tkzLabelSegment[left=0pt](O,A){$30$}
+                        \tkzLabelSegment[left=0pt](B,E){$h$}
+                        \tkzLabelAngle[pos=0.5](O,A,B) {$\theta$}
+                        \tkzMarkAngle(O,A,B)
                         \end{tikzpicture}
                         \end{document}

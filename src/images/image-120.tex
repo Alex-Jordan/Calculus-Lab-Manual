@@ -163,29 +163,26 @@
 
     \begin{document}
 
-                            \begin{tikzpicture}
-                            \begin{axis}[
-                                xmin=-16,
-                                xmax=16,
-                                xtick={-16,-12,...,16},
-                                minor xtick={-16,-15,...,16},
-                                ymin=-16,
-                                ymax=16,
-                                ytick={-16,-12,...,16},
-                                minor ytick={-16,-15,...,16},
-                                grid=major,
-                                ]
-                                \addplot[pccplot,samples=50,
-                                    domain=-15.8:-6.7,
-                                ]{(16+4*x)/(6+x)};
-                                \addplot[pccplot,<-,
-                                    domain=-5.59:-2,
-                                ]{(16+4*x)/(6+x)};
-                                \addplot[pccplot,->,
-                                    domain=-2:15.8,
-                                ]{(16+4*x)/(6+x)};
-                                \addplot[asymptote] coordinates {(-16,4) (16,4)} node[above left] {$y=4$};
-                                \addplot[asymptote] coordinates {(-6,16) (-6,-16)} node[above left] {\rotatebox{90}{$x=-6$}};
-                            \end{axis}
-                            \end{tikzpicture}
-                            \end{document}
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            xmin=-16,
+                            xmax=16,
+                            xtick={-16,-12,...,16},
+                            minor xtick={-16,-15,...,16},
+                            ymin=-16,
+                            ymax=16,
+                            ytick={-16,-12,...,16},
+                            minor ytick={-16,-15,...,16},
+                            grid=major,
+                            ]
+                            \addplot[pccplot,samples=50,
+                                domain=-15.8:4.05,
+                            ]{(15)/(x-5)};
+                            \addplot[pccplot,samples=50,
+                                domain=5.95:15.8,
+                            ]{(15)/(x-5)};
+                            \addplot[asymptote] coordinates {(16,0) (-16,0)} node[above right] {$y=0$};
+                            \addplot[asymptote] coordinates {(5,16) (5,-16)} node[above right] {\rotatebox{90}{$x=5$}};
+                        \end{axis}
+                        \end{tikzpicture}
+                        \end{document}

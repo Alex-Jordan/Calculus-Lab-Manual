@@ -165,18 +165,28 @@
 
                             \begin{tikzpicture}
                             \begin{axis}[
-                                xmin=-3,
-                                xmax=7,
-                                xtick={-3,-2,...,7},
-                                ytick={40},
-                                minor ytick={40},
-                                ymin=-1.6,
-                                ymax=4.8,
-                                grid=none,
-                                samples=100,
-                                y post scale=0.6,]
-                                \addplot[pccplot,domain=-3:2,<-]{(abs(x-2))^(2/7)+1.6};
-                                \addplot[pccplot,domain=2:7,->]{(abs(x-2))^(2/7)+1.6};
+                                xmin=-16,
+                                xmax=16,
+                                xtick={-16,-12,...,16},
+                                minor xtick={-16,-15,...,16},
+                                ymin=-16,
+                                ymax=16,
+                                ytick={-16,-12,...,16},
+                                minor ytick={-16,-15,...,16},
+                                grid=major,
+                                ]
+                                \addplot[pccplot,samples=50,
+                                    domain=-15.8:-4.29,
+                                ]{(6*x^2-6*x-36)/(36-3*x-3*x^2)};
+                                \addplot[pccplot,<-,
+                                    domain=-3.77:0,
+                                ]{(6*x^2-6*x-36)/(36-3*x-3*x^2)};
+                                \addplot[pccplot,->,
+                                    domain=0:15.8,
+                                ]{(6*x^2-6*x-36)/(36-3*x-3*x^2)};
+                                \addplot[asymptote] coordinates {(-16,-2) (16,-2)} node[below left] {$y=-2$};
+                                \addplot[asymptote] coordinates {(-4,-16) (-4,16)} node[below left] {\rotatebox{90}{$x=-4$}};
+                                \addplot[holdot] coordinates {(3,-10/7)};
                             \end{axis}
                             \end{tikzpicture}
                             \end{document}

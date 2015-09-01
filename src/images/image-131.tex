@@ -163,9 +163,16 @@
 
     \begin{document}
 
-                            \begin{tikzpicture}
-                            \begin{axis}[xtick={100},ytick={100},minor xtick={100}, minor ytick={100},title={$y=\fe{\sinh}{t}$},xlabel={$t$}]
-                                \addplot[pccplot,domain=-2.5:2.5]{(exp(x)-exp(-x))/2};
-                            \end{axis}
-                            \end{tikzpicture}
-                            \end{document}
+                        \begin{tikzpicture}
+                        \begin{axis}[xmin=-20,xmax=20,ymin=-1.5,ymax=0.25,xtick={-16,-12,...,16},minor xtick={-20,-19,...,20},ytick={-1.25,-1,...,0},minor ytick={-1.5,-1.45,...,0.25},title={$y=\frac{x-3}{(x+2)^2}$}]
+                            \addplot[pccplot,domain=-19.8:-4.25]{(x-3)/(x+2)^2};
+                            \addplot[pccplot,domain=-0.45:19.8]{(x-3)/(x+2)^2};
+                            \addplot[asymptote,domain=-19.8:19.8]{0};
+                            \addplot[asymptote,domain=-0.5:0.5]{x-3/4};
+                            \addplot[asymptote,domain=-2:8]{(x-3)/25};
+                            \addplot[asymptote,domain=-20:20]{-1/675*(x-13)+2/45};
+                            \addplot[asymptote] coordinates {(-2,-1.5) (-2,0.25)};
+                            \addplot[soldot] coordinates {(0,-3/4) (3,0) (8,1/20) (13,2/45)};
+                        \end{axis}
+                        \end{tikzpicture}
+                        \end{document}

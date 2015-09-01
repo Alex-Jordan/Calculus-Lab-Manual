@@ -164,10 +164,8 @@
     \begin{document}
 
                             \begin{tikzpicture}
-                            \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={9},ytick={9},unit vector ratio*=1 1 1, clip=false]
-                                \addplot[pccplot,domain=0:360,-,variable=t]({cos(t)},{sin(t)});
-                                \addplot[-] coordinates {(0.8,0.6) (0,0)};
-                                \addplot[mark=*] coordinates {(0.8,0.6)} node[pin={$(\fe{\cos}{t},\fe{\sin}{t})$}]{} ;
+                            \begin{axis}[xtick={100},ytick={100},minor xtick={100}, minor ytick={100},title={$y=\fe{\sinh}{t}$},xlabel={$t$}]
+                                \addplot[pccplot,domain=-2.5:2.5]{(exp(x)-exp(-x))/2};
                             \end{axis}
                             \end{tikzpicture}
                             \end{document}

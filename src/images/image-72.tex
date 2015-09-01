@@ -163,19 +163,25 @@
 
     \begin{document}
 
-                        \begin{tikzpicture}
-                        \begin{axis}[]
+                        \begin{tikzpicture}%hook
+                        \begin{axis}[width=0.45\textwidth]
+                            \addplot[pccplot,<-,
+                                variable=t, domain=-4.8:2,
+                            ]({-((2-t)/3)^(5/3)-3},{t});
                             \addplot[pccplot,-,
-                                domain=-5:-1,
-                            ]{-tan((x+3)*30)/6*3.1415926*4/ln(2)};
+                                variable=t, domain=2:-2.5471496995,
+                            ]({((2-t)/3)^(5/3)-3},{t});
                             \addplot[pccplot,-,
-                                domain=-1:3,
-                            ]{-tan((x-1)*30)/6*3.1415926*4/ln(2)};
+                                variable=t, domain=-2.5471496995:3.459456236,
+                            ]({((t-1)/2.459456236)^3+2},{t});
                             \addplot[pccplot,->,
                                 domain=3:6.8,
-                            ]{-2};
-                            \addplot[holdot] coordinates {(-5, 5.2335186959) (-1, -5.2335186959) (3, -2)};
-                            \addplot[holdot] coordinates {(-1, 5.2335186959) (3, -5.2335186959)};
+                            ]{0.364864059*(x-5)^2+2};
                         \end{axis}
-                        \end{tikzpicture}
+                        \end{tikzpicture}%hook\hfill
+                        \hspace{2em}
+                        \begin{tikzpicture}%hook
+                        \begin{axis}[width=0.45\textwidth]
+                        \end{axis}
+                        \end{tikzpicture}%hook
                         \end{document}

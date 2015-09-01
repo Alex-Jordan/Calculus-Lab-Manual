@@ -163,20 +163,29 @@
 
     \begin{document}
 
-                            \begin{tikzpicture}
-                            \begin{axis}[]
-                                \addplot[pccplot,<-,
-                                    variable=t, domain=-4.8:2,
-                                ]({-((2-t)/3)^(5/3)-3},{t});
-                                \addplot[pccplot,-,
-                                    variable=t, domain=2:-2.5471496995,
-                                ]({((2-t)/3)^(5/3)-3},{t});
-                                \addplot[pccplot,-,
-                                    variable=t, domain=-2.5471496995:3.459456236,
-                                ]({((t-1)/2.459456236)^3+2},{t});
-                                \addplot[pccplot,->,
-                                    domain=3:6.8,
-                                ]{0.364864059*(x-5)^2+2};
-                            \end{axis}
-                            \end{tikzpicture}
-                            \end{document}
+                        \begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot[pccplot,<-,
+                                domain=-6.8:-4,
+                            ]{1.8*(-(x+3))^(-0.4)};
+                            \addplot[pccplot,->,
+                                variable=t, domain=1.8:6.8,
+                            ]({-(1.8/t)^2.5-3},{t});
+                            \addplot[pccplot,<-,
+                                variable=t, domain=-6.8:-1.3641449099,
+                            ]({(-1.8/t)^2.5-3},{t});
+                            \addplot[asymptote,
+                            ] coordinates {(-3,7) (-3,-7)} node[above left] {\rotatebox{90}{$x=-3$}};
+                            \addplot[pccplot,->,
+                                variable=t, domain=0.3941277444:6.8,
+                            ]({-(3*t/2.459456236)^-1.5+2},{t});
+                            \addplot[pccplot,<-,
+                                variable=t, domain=6.8:0.8198187453,
+                            ]({(3*t/2.459456236)^-1.5+2},{t});
+                            \addplot[asymptote,
+                            ] coordinates {(2,7) (2,-7)} node[above left] {\rotatebox{90}{$x=2$}};
+                            \addplot[pccplot,->,domain=3:6.8]{0.364864059*(x-5)*2};
+                            \addplot[holdot] coordinates {(-1,-1.3641449099) (-1,0.3941277444) (3,0.8198187453) (3,-4*0.364864059)};
+                        \end{axis}
+                        \end{tikzpicture}
+                        \end{document}

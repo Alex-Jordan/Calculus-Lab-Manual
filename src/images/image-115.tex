@@ -163,19 +163,21 @@
 
     \begin{document}
 
-                            \begin{tikzpicture}
-                            \begin{axis}[
-                                xmin=-3,
-                                xmax=7,
-                                xtick={-3,-2,...,7},
-                                ytick={40},
-                                minor ytick={40},
-                                ymin=-10,
-                                ymax=30,
-                                grid=none,
-                                samples=100,
-                                y post scale=0.6,]
-                                \addplot[pccplot,domain=-3:7]{(abs(x-2))^(10/7)+10};
-                            \end{axis}
-                            \end{tikzpicture}
-                            \end{document}
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            ]
+                            \addplot[pccplot,domain=-6.9:-5.35]{-1/(x+5)^2+2};
+                            \addplot[pccplot,domain=-4.65:-3,<-]{-1/(x+5)^2+2};
+                            \addplot[pccplot,domain=-3:2,-]{x^2-5};
+                            \addplot[pccplot,domain=2:5,-,samples=80]{(abs(x-4))^(1/3)*(x-4)/(abs(x-4))+3};
+                            \addplot[pccplot,domain=5:6.9,->]{4-(x-5)^(0.9)};
+                            \addplot[holdot] coordinates {
+                                (-3,1.75)
+                                (-3,4)
+                                (2,-1)
+                            };
+                            \addplot[soldot] coordinates {(2,1.74)};
+                            \addplot[asymptote] coordinates {(-5,-7) (-5,7)} node[below left] {\rotatebox{90}{$x=-5$}};
+                        \end{axis}
+                        \end{tikzpicture}
+                        \end{document}

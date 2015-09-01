@@ -165,9 +165,11 @@
 
                     \begin{tikzpicture}
                     \begin{axis}[]
-                        \addplot[pccplot,-,domain=-6:3] {-12/3.1415926*sin(30*x)-2+12/3.1415926};
-                        \addplot[pccplot,-,domain=3:6] {12/3.1415926*sin(30*x)-2-12/3.1415926};
-                        \addplot[holdot] coordinates {(-6,-2+12/3.1415926) (6,-2-12/3.1415926)};
+                        \addplot[asymptote] coordinates {(2,7) (2,-7)} node[above left] {\rotatebox{90}{$x=2$}};
+                        \addplot[pccplot,<-,domain=-6.8:-1] {-(x+1)^2/36+2.5};
+                        \addplot[pccplot,->,domain=-1:1.6] {(x+1)^(ln(9)/ln(2.6))/2+2.5};
+                        \addplot[pccplot,<-,domain=2.4:4] {2/(x-2)+2};
+                        \addplot[pccplot,->,domain=4:6.8] {x-1};
                     \end{axis}
                     \end{tikzpicture}
                     \end{document}

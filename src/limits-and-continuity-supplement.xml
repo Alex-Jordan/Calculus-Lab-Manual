@@ -36,16 +36,10 @@
                             <cell><m>9999.9997</m></cell>
                         </row>
                     </tabular>
-                    <sidebyside>
-                        <paragraphs valign="top" halign="center">
-                            <p>Limit</p>
-                            <p><m>\lim\limits_{t\to-\infty}\fe{g}{t}=\infty</m></p>
-                        </paragraphs>
-                        <paragraphs valign="top" halign="center">
-                            <p>Limit exists?</p>
-                            <p>No</p>
-                        </paragraphs>
-                    </sidebyside>
+                    <p><md>
+                    <mrow>\text{Limit}&amp;&amp;&amp;\text{Limit Exists?}</mrow>
+                    <mrow>\lim\limits_{t\to-\infty}\fe{g}{t}&amp;=\infty&amp;&amp;\text{No}</mrow>
+                    </md></p>
                 </statement>
                 <solution>
                     <p>The relevant pattern in the <m>y</m> column is that <m>y</m> appears to be positive and growing by a little more than a factor of <m>10</m> every time <m>t</m> is negative and grows by a factor of <m>10</m>. It's not guaranteed, but this suggest that <m>\lim\limits_{t\to-\infty}\fe{g}{t}=\infty</m>. In this circumstance, we say that <m>\lim\limits_{t\to-\infty}\fe{g}{t}</m> does not exist.</p>
@@ -76,15 +70,10 @@
                             <cell><m>-3.002\times10^{-9}</m></cell>
                         </row>
                     </tabular>
-                    <sidebyside>
-                        <paragraphs valign="top" halign="center">
-                            <p>Limit</p>
-                            <p><m>\lim\limits_{x\to\mathord{?}}\mathord{?}=\mathord{?}</m></p>
-                        </paragraphs>
-                        <paragraphs valign="top" halign="center">
-                            <p>Limit exists?</p>
-                        </paragraphs>
-                    </sidebyside>
+                    <p><md>
+                    <mrow>\text{Limit}&amp;&amp;&amp;\text{Limit Exists?}</mrow>
+                    <mrow>\lim\limits_{x\to\mathord{?}}\mathord{?}&amp;=\mathord{?}</mrow>
+                    </md></p>
                 </statement>
                 <solution>
                     <p>The relevant pattern in the <m>y</m> column is the powers of <m>10</m>.  The first nonzero digit is moving farther and farther to the right of the decimal point. So the <m>y</m>-values are approaching zero. This suggest that <m>\lim\limits_{x\to\infty}\fe{f}{x}=0</m>. So <m>\lim\limits_{x\to\infty}\fe{f}{x}</m> exists.</p>
@@ -115,15 +104,10 @@
                             <cell><m>0.6666</m></cell>
                         </row>
                     </tabular>
-                    <sidebyside>
-                        <paragraphs valign="top" halign="center">
-                            <p>Limit</p>
-                            <p><m>\lim\limits_{t\to\mathord{?}}\mathord{?}=\mathord{?}</m></p>
-                        </paragraphs>
-                        <paragraphs valign="top" halign="center">
-                            <p>Limit exists?</p>
-                        </paragraphs>
-                    </sidebyside>
+                    <p><md>
+                    <mrow>\text{Limit}&amp;&amp;&amp;\text{Limit Exists?}</mrow>
+                    <mrow>\lim\limits_{x\to\mathord{?}}\mathord{?}&amp;=\mathord{?}</mrow>
+                    </md></p>
                 </statement>
                 <solution>
                     <p>You should definitely recognize decimals approaching common fractions.  Good catch if you noted the <m>t</m> was approaching <m>\frac{1}{3}</m> only from the left. The suggested limit is <m>\lim\limits_{t\to\frac{1}{3}^{-}}\fe{z}{t}=\frac{2}{3}</m>, and this (one-sided) limit exists.</p> 
@@ -154,15 +138,10 @@
                             <cell><m>2{,}999{,}999.9</m></cell>
                         </row>
                     </tabular>
-                    <sidebyside>
-                        <paragraphs valign="top" halign="center">
-                            <p>Limit</p>
-                            <p><m>\lim\limits_{\theta\to\mathord{?}}\mathord{?}=\mathord{?}</m></p>
-                        </paragraphs>
-                        <paragraphs valign="top" halign="center">
-                            <p>Limit exists?</p>
-                        </paragraphs>
-                    </sidebyside>
+                    <p><md>
+                    <mrow>\text{Limit}&amp;&amp;&amp;\text{Limit Exists?}</mrow>
+                    <mrow>\lim\limits_{x\to\mathord{?}}\mathord{?}&amp;=\mathord{?}</mrow>
+                    </md></p>
                 </statement>
                 <solution>
                     <p>Stay focused when determining <q>from the left</q> or <q>from the right</q>; that can get tricky<ellipsis/>especially when the numbers are negative.  The limit suggested here is <m>\lim\limits_{\theta\to-1^{+}}\fe{g}{\theta}=3{,}000{,}000</m>. So this limit exists.</p> 
@@ -193,15 +172,10 @@
                             <cell><m>2{,}999{,}999.9</m></cell>
                         </row>
                     </tabular>
-                    <sidebyside>
-                        <paragraphs valign="top" halign="center">
-                            <p>Limit</p>
-                            <p><m>\lim\limits_{t\to\mathord{?}}\mathord{?}=\mathord{?}</m></p>
-                        </paragraphs>
-                        <paragraphs valign="top" halign="center">
-                            <p>Limit exists?</p>
-                        </paragraphs>
-                    </sidebyside>
+                    <p><md>
+                    <mrow>\text{Limit}&amp;&amp;&amp;\text{Limit Exists?}</mrow>
+                    <mrow>\lim\limits_{x\to\mathord{?}}\mathord{?}&amp;=\mathord{?}</mrow>
+                    </md></p>
                 </statement>
                 <solution>
                     <p>The last entry in the output column is the same in the previous exercise.  Hopefully you recognized that you need to look at the pattern in the output, not just the last entry.  Recognizing that <m>t</m> approaches <m>\frac{7}{9}</m> might requires some guessing and checking. The limit suggested here is <m>\lim\limits_{t\to\frac{7}{9}^{+}}\fe{T}{t}=\infty</m>. So we say that this limit does not exist.</p>

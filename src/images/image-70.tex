@@ -163,19 +163,19 @@
 
     \begin{document}
 
-                            \begin{tikzpicture}
-                            \begin{axis}[]
-                                \addplot[pccplot,-,
-                                    domain=-5:-1,
-                                ]{-ln(sec((x+3)/6*3.1415926*180/3.1415926))*4/ln(sec(3.1415926/3*180/3.1415926))+1};
-                                \addplot[pccplot,-,
-                                    domain=-1:3,
-                                ]{-ln(sec((x-1)/6*3.1415926*180/3.1415926))*4/ln(sec(3.1415926/3*180/3.1415926))-2};
-                                \addplot[pccplot,->,
-                                    domain=3:6.8,
-                                ]{-2*(x-3)+4};
-                                \addplot[soldot] coordinates {(-5, -3) (-1, -3) (3, 4)};
-                                \addplot[holdot] coordinates {(-1, -6) (3, -6)};
-                            \end{axis}
-                            \end{tikzpicture}
-                            \end{document}
+                        \begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot[pccplot,-,
+                                domain=-5:-1,
+                            ]{-tan((x+3)*30)/6*3.1415926*4/ln(2)};
+                            \addplot[pccplot,-,
+                                domain=-1:3,
+                            ]{-tan((x-1)*30)/6*3.1415926*4/ln(2)};
+                            \addplot[pccplot,->,
+                                domain=3:6.8,
+                            ]{-2};
+                            \addplot[holdot] coordinates {(-5, 5.2335186959) (-1, -5.2335186959) (3, -2)};
+                            \addplot[holdot] coordinates {(-1, 5.2335186959) (3, -5.2335186959)};
+                        \end{axis}
+                        \end{tikzpicture}
+                        \end{document}

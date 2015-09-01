@@ -196,4 +196,11 @@
 
     </macros>
 
+    <analytics>
+        <statcounter>
+            <project>10593885</project>
+            <security>f26513ac</security>
+        </statcounter>
+    </analytics>
+
 </docinfo>

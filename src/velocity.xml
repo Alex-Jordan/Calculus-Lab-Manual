@@ -27,7 +27,7 @@
 
             <exercise xml:id="exercise-calculate-position">
                 <statement>
-                    <p>Calculate <m>\fe{p}{3\,\text{s}}</m> and <m>\fe{p}{5\,\text{s}}</m>. Make sure that you include the units specified in the formula for <m>\fe{p}{t}</m>, and that you replace <m>t</m> with, respectively, <quantity><mag>3</mag><unit base="second"/></quantity> and <quantity><mag>5</mag><unit base="second"/></quantity>. Make sure that you simplify the units, as well as the numerical part of the funciton value.</p>
+                    <p>Calculate <m>\fe{p}{3\,\text{s}}</m> and <m>\fe{p}{5\,\text{s}}</m>. Make sure that you include the units specified in the formula for <m>\fe{p}{t}</m>, and that you replace <m>t</m> with, respectively, <quantity><mag>3</mag><unit base="second"/></quantity> and <quantity><mag>5</mag><unit base="second"/></quantity>. Make sure that you simplify the units, as well as the numerical part of the function value.</p>
                 </statement>
             </exercise>
 
@@ -40,7 +40,7 @@
             <remark>
                 <title>Units in formulas</title>
                 <p>Thus far we have used a formula where every number that appears in the formula comes with its real world unit (<m>\fe{p}{t}=200\,\text{m}-\left(4.9\,\sfrac{\text{m}}{\text{s}^2}\right)t^2</m>). A formula like this allows you to calculate <m>\fe{p}{5\,\text{s}}</m> or <m>\fe{p}{5\,\text{min}}</m> as you please, as long as you track the units and reduce ratios appropriately.</p> 
-                <p>However, all those units in the original formula might distract you from new calculus topics. We <em>could</em> have just written <m>\fe{p}{t}=200-4.9t^2</m>, but if we do so, we <em>have</em> to specify that <m>t</m> is in seconds and <m>\fe{p}{t}</m> is in meters. With this formula, we can calculate something like <m>\fe{p}{5}</m>, but we need to recognize that in context, the <m>5</m> means that <m>5</m> <em>seconds</em> have passed. And when we arrive at the result, <m>\fe{p}{5}=77.5</m>, we need to realize that the position is <m>77.5</m> <em>meters</em>.</p>
+                <p>However, all those units in the original formula might distract you from new calculus topics. We <em>could</em> just write <m>\fe{p}{t}=200-4.9t^2</m>, but if we do so, we <em>have</em> to specify that <m>t</m> is in seconds and <m>\fe{p}{t}</m> is in meters. With this formula, we can calculate something like <m>\fe{p}{5}</m>, but we need to recognize that in context, the <m>5</m> means that <m>5</m> <em>seconds</em> have passed. And when we arrive at the result, <m>\fe{p}{5}=77.5</m>, we need to realize that the position is <m>77.5</m> <em>meters</em>.</p>
                 <p>For the remainder of this lab manual, formulas will be written in this second way, without explicit units. Each variable will be specified with what unit it is intended to be measured in. To continue the current block of exercises, we redefine <me>\fe{p}{t}=200-4.9t^2\text{,}</me> where <m>t</m> is in <quantity><unit base="second"/></quantity>, and <m>\fe{p}{t}</m> is in <quantity><unit base="meter"/></quantity>.</p> 
             </remark>
 

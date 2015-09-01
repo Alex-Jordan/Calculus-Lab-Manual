@@ -165,19 +165,34 @@
 
                             \begin{tikzpicture}
                             \begin{axis}[
+                                xmin=-16,
+                                xmax=16,
+                                xtick={-16,-12,...,16},
+                                minor xtick={-16,-15,...,16},
+                                ymin=-16,
+                                ymax=16,
+                                ytick={-16,-12,...,16},
+                                minor ytick={-16,-15,...,16},
+                                grid=major,
                                 ]
-                                \addplot[pccplot,domain=-6.9:-5.35]{-1/(x+5)^2+2};
-                                \addplot[pccplot,domain=-4.65:-3,<-]{-1/(x+5)^2+2};
-                                \addplot[pccplot,domain=-3:2,-]{x^2-5};
-                                \addplot[pccplot,domain=2:5,-,samples=80]{(abs(x-4))^(1/3)*(x-4)/(abs(x-4))+3};
-                                \addplot[pccplot,domain=5:6.9,->]{4-(x-5)^(0.9)};
-                                \addplot[holdot] coordinates {
-                                    (-3,1.75)
-                                    (-3,4)
-                                    (2,-1)
-                                };
-                                \addplot[soldot] coordinates {(2,1.74)};
-                                \addplot[asymptote] coordinates {(-5,-7) (-5,7)} node[below left] {\rotatebox{90}{$x=-5$}};
+                                \addplot[pccplot,samples=50,
+                                    domain=-15.8:-10.09,
+                                ]{(-2*x+8)/(x^2-100)};
+                                \addplot[pccplot,<-,
+                                    domain=-9.91:-8,
+                                ]{(-2*x+8)/(x^2-100)};
+                                \addplot[pccplot,-,
+                                    domain=-8:8,
+                                ]{(-2*x+8)/(x^2-100)};
+                                \addplot[pccplot,->,
+                                    domain=8:9.96,
+                                ]{(-2*x+8)/(x^2-100)};
+                                \addplot[pccplot,samples=50,
+                                    domain=10.04:15.8,
+                                ]{(-2*x+8)/(x^2-100)};
+                                \addplot[asymptote] coordinates {(16,0) (-16,0)} node[above right] {$y=0$};
+                                \addplot[asymptote] coordinates {(-10,16) (-10,-16)} node[above left] {\rotatebox{90}{$x=-10$}};
+                                \addplot[asymptote] coordinates {(10,16) (10,-16)} node[above left] {\rotatebox{90}{$x=10$}};
                             \end{axis}
                             \end{tikzpicture}
                             \end{document}

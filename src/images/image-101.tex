@@ -163,14 +163,55 @@
 
     \begin{document}
 
-                \begin{tikzpicture}
-                \begin{axis}[
-                    smooth,
-                    variable=t,]
-                    \addplot[pccplot,domain=1.861:4,->]({sqrt(t^3-4*t+1)},{t});
-                    \addplot[pccplot,domain=1.861:4,->]({-sqrt(t^3-4*t+1)},{t});
-                    \addplot[pccplot,domain=-2.1149:0.2541,-]({sqrt(t^3-4*t+1)},{t});
-                    \addplot[pccplot,domain=-2.1149:0.2541,-]({-sqrt(t^3-4*t+1)},{t});
-                \end{axis}
-                \end{tikzpicture}
-                \end{document}
+                        \begin{tikzpicture}[
+                                     declare function={
+                                         s(\x)= sqrt(sin(\x^2*180/3.14159265359));
+                                         f(\x)= \x/s(\x);
+                                         g(\x)= \x*s(\x);
+                                     }]
+                                     \begin{axis}[
+                                         xtick={100},
+                                         ytick={100},
+                                         minor xtick={100},
+                                         minor ytick={100},
+                                         variable=v,
+                                     ]
+                                     \addplot[pccplot,domain=-7:7,] {0};
+                                     \addplot[pccplot,domain=0.01:1.7546,->,] ({f(v)},{g(v)});
+                                     \addplot[pccplot,domain=2.53268:3.03894,] ({f(v)},{g(v)});
+                                     \addplot[pccplot,domain=3.58208:3.92281,] ({f(v)},{g(v)});
+                                     \addplot[pccplot,domain=4.38786:4.64069,] ({f(v)},{g(v)});
+                                     \addplot[pccplot,domain=5.06798:5.26062,] ({f(v)},{g(v)});
+                                     \addplot[pccplot,domain=5.66842:5.81346,] ({f(v)},{g(v)});
+                                     \addplot[pccplot,domain=6.21341:6.31581,] ({f(v)},{g(v)});
+                                     \addplot[pccplot,domain=6.71969:6.77570,] ({f(v)},{g(v)});
+%
+                                     \addplot[pccplot,domain=0.01:1.7546,->,] ({f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=2.53268:3.03894,] ({f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=3.58208:3.92281,] ({f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=4.38786:4.64069,] ({f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=5.06798:5.26062,] ({f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=5.66842:5.81346,] ({f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=6.21341:6.31581,] ({f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=6.71969:6.77570,] ({f(v)},{-g(v)});
+%
+                                     \addplot[pccplot,domain=0.01:1.7546,->,] ({-f(v)},{g(v)});
+                                     \addplot[pccplot,domain=2.53268:3.03894,] ({-f(v)},{g(v)});
+                                     \addplot[pccplot,domain=3.58208:3.92281,] ({-f(v)},{g(v)});
+                                     \addplot[pccplot,domain=4.38786:4.64069,] ({-f(v)},{g(v)});
+                                     \addplot[pccplot,domain=5.06798:5.26062,] ({-f(v)},{g(v)});
+                                     \addplot[pccplot,domain=5.66842:5.81346,] ({-f(v)},{g(v)});
+                                     \addplot[pccplot,domain=6.21341:6.31581,] ({-f(v)},{g(v)});
+                                     \addplot[pccplot,domain=6.71969:6.77570,] ({-f(v)},{g(v)});
+%
+                                     \addplot[pccplot,domain=0.01:1.7546,->,] ({-f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=2.53268:3.03894,] ({-f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=3.58208:3.92281,] ({-f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=4.38786:4.64069,] ({-f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=5.06798:5.26062,] ({-f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=5.66842:5.81346,] ({-f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=6.21341:6.31581,] ({-f(v)},{-g(v)});
+                                     \addplot[pccplot,domain=6.71969:6.77570,] ({-f(v)},{-g(v)});
+                                 \end{axis}
+                        \end{tikzpicture}
+                        \end{document}

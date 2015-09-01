@@ -28,8 +28,8 @@
         <xsl:attribute name="scrolling">
             <xsl:text>no</xsl:text>
         </xsl:attribute>
-        <xsl:attribute name="style">
-            <xsl:text>border:0px;</xsl:text>
+        <xsl:attribute name="class">
+            <xsl:text>geogebra</xsl:text>
         </xsl:attribute>
         <xsl:attribute name="src">
             <xsl:value-of select="@src"/>
@@ -156,31 +156,6 @@
 </xsl:template>
 
 
-<!-- Center captions  -->
-<!-- Caption of a numbered figure or table         -->
-<!-- All the relevant information is in the parent -->
-<xsl:template match="caption">
-    <figcaption style="text-align:center">
-        <span class="heading">
-            <xsl:apply-templates select="parent::*" mode="type-name"/>
-        </span>
-        <span class="codenumber">
-            <xsl:apply-templates select="parent::*" mode="number"/>
-        </span>
-        <xsl:apply-templates />
-    </figcaption>
-</xsl:template>
-<!-- Caption'ed sidebyside indicate subfigures and subtables are subsidiary -->
-<!-- so we number with just their serial number, a formatted (a), (b), (c), -->
-<xsl:template match="sidebyside[caption]/figure/caption|sidebyside[caption]/table/caption">
-    <figcaption style="text-align:center">
-        <span class="codenumber">
-            <xsl:apply-templates select="parent::*" mode="serial-number"/>
-        </span>
-        <xsl:apply-templates />
-    </figcaption>
-</xsl:template>
-
 
 <!-- For prefaces, skip codenumber                         --> 
 <!-- Both environments and sections have a "type,"         -->
@@ -201,6 +176,88 @@
     </span>
 </xsl:template>
 
+
+<!-- Add a min-width attribute in pixels for side by side panels -->
+<!-- Also, kill space between and handle with CSS -->
+<!-- TODO: study "image" template and consolidate -->
+<!-- TODO: convert to a match="" template and break up conditionals -->
+<xsl:template name="sidebysideCSS">
+  <!-- paragraphs have their own class -->
+  <xsl:if test="not(self::paragraphs)">
+    <xsl:choose>
+        <!-- first child is class="left" -->
+        <xsl:when test="not(preceding-sibling::figure or preceding-sibling::image or preceding-sibling::paragraphs or preceding-sibling::p or preceding-sibling::table or preceding-sibling::tabular)">
+          <xsl:attribute name="class">left</xsl:attribute>
+        </xsl:when>
+        <!-- last child is class="right" -->
+        <xsl:when test="not(following-sibling::figure or following-sibling::image or following-sibling::paragraphs or following-sibling::p or following-sibling::table or following-sibling::tabular)">
+          <xsl:attribute name="class">right</xsl:attribute>
+        </xsl:when>
+        <!-- middle children are class="middle" -->
+        <xsl:otherwise>
+          <xsl:attribute name="class">middle</xsl:attribute>
+        </xsl:otherwise>
+    </xsl:choose>
+  </xsl:if>
+  <xsl:attribute name="style">
+  <xsl:text>width:</xsl:text>
+  <!-- if width is defined, then use it -->
+  <xsl:variable name="width">
+    <xsl:choose>
+      <xsl:when test="@width">
+          <xsl:value-of select="substring-before(@width,'%')"/>
+      </xsl:when>
+      <xsl:otherwise>
+          <!-- calculate widths that have been specified
+             and auto-print a remaining width -->
+               <xsl:call-template name="printWidth" select="."/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+  <!-- Allow for 2% CSS padding between each pair -->
+  <xsl:value-of select="$width - 2"/>
+  <xsl:text>%</xsl:text>
+  <xsl:text>;</xsl:text>
+  <!-- add min-width -->
+  <xsl:text>min-width:</xsl:text>
+  <xsl:value-of select="floor(($width)*0.01*470)"/>
+  <xsl:text>px</xsl:text>
+  <xsl:text>;</xsl:text>
+  <!-- vertical alignment option -->
+  <xsl:text>vertical-align:</xsl:text>
+  <xsl:choose>
+    <xsl:when test="@valign">
+      <xsl:value-of select="@valign"/>
+    </xsl:when>
+    <!-- default -->
+    <xsl:otherwise>
+      <xsl:text>bottom</xsl:text>
+    </xsl:otherwise>
+  </xsl:choose>
+  <xsl:text>;</xsl:text>
+  <!-- horizontal alignment option -->
+  <xsl:text>text-align:</xsl:text>
+  <xsl:choose>
+    <xsl:when test="@halign">
+      <xsl:value-of select="@halign"/>
+    </xsl:when>
+    <!-- default -->
+    <xsl:otherwise>
+      <xsl:choose>
+        <xsl:when test="not(self::paragraphs or self::p)">
+            <xsl:text>center</xsl:text>
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:text>left</xsl:text>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:otherwise>
+  </xsl:choose>
+  <xsl:text>;</xsl:text>
+  </xsl:attribute>
+</xsl:template>
+
+
 <!-- Adjust image widths depending on surrounding figures and sidebysides-->
 <!-- Also, create PNG and EPS links                                      -->
 <!-- A wrapper for SVG images w/ optional fallback -->
@@ -211,24 +268,6 @@
 
     <!-- div to contain svg and links -->
     <xsl:element name="div">
-        <xsl:attribute name="style">
-            <xsl:text>width:</xsl:text>
-                <xsl:choose>
-                    <xsl:when test="ancestor::figure and not(ancestor::sidebyside)">
-                        <xsl:text>48%</xsl:text>
-                    </xsl:when>
-                    <xsl:when test="not(ancestor::figure) and ancestor::sidebyside">
-                        <xsl:text>48%</xsl:text>
-                    </xsl:when>
-                    <xsl:when test="ancestor::figure and ancestor::sidebyside">
-                        <xsl:text>90%</xsl:text>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <xsl:text>48%</xsl:text>
-                    </xsl:otherwise>
-                </xsl:choose>
-            <xsl:text>;</xsl:text>
-        </xsl:attribute>
         <xsl:attribute name="class">
             <xsl:text>svg-and-links</xsl:text>
         </xsl:attribute>
@@ -291,7 +330,7 @@
                     <xsl:attribute name="target">
                         <xsl:text>_blank</xsl:text>
                     </xsl:attribute>
-                    <xsl:text>PNG</xsl:text>
+                    <xsl:text>png</xsl:text>
                 </xsl:element>
             </xsl:element>
             <xsl:element name="li">
@@ -308,7 +347,7 @@
                         <xsl:apply-templates select=".." mode="internal-id" />
                         <xsl:text>.eps</xsl:text>
                     </xsl:attribute>
-                    <xsl:text>EPS</xsl:text>
+                    <xsl:text>eps</xsl:text>
                 </xsl:element>
             </xsl:element>
             <xsl:element name="li">
@@ -325,7 +364,7 @@
                         <xsl:apply-templates select=".." mode="internal-id" />
                         <xsl:text>.svg</xsl:text>
                     </xsl:attribute>
-                    <xsl:text>SVG</xsl:text>
+                    <xsl:text>svg</xsl:text>
                 </xsl:element>
             </xsl:element>
             <xsl:element name="li">
@@ -342,7 +381,7 @@
                         <xsl:apply-templates select=".." mode="internal-id" />
                         <xsl:text>.pdf</xsl:text>
                     </xsl:attribute>
-                    <xsl:text>PDF</xsl:text>
+                    <xsl:text>pdf</xsl:text>
                 </xsl:element>
             </xsl:element>
             <xsl:element name="li">
@@ -359,7 +398,7 @@
                         <xsl:apply-templates select=".." mode="internal-id" />
                         <xsl:text>.tex</xsl:text>
                     </xsl:attribute>
-                    <xsl:text>TEX</xsl:text>
+                    <xsl:text>tex</xsl:text>
                 </xsl:element>
             </xsl:element>
         </xsl:element>
