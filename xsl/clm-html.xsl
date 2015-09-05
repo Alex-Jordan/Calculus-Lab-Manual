@@ -7,6 +7,8 @@
 <!-- Common thin layer                                                      -->
 <xsl:import href="clm-common.xsl" />
 
+<xsl:param name="html.css.file" select="'mathbook-6.css'" />
+
 <xsl:param name="exercise.backmatter.hint" select="'no'" />
 <xsl:param name="exercise.backmatter.answer" select="'no'" />
 <xsl:param name="exercise.backmatter.solution" select="'yes'" />
