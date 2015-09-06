@@ -150,7 +150,7 @@
             <introduction>
                 <p>Consider the following problem.</p>
                 <blockquote>A square is getting larger. The sides are each growing at a constant rate of <quantity><mag>3</mag><unit base="inch"/><per base="minute"/></quantity>. At what rate is the area of the square growing the moment its area is <quantity><mag>25</mag><unit base="inch" exp="2"/></quantity>?</blockquote>
-                <geogebra-html5 src="https://tube.geogebra.org/material/iframe/id/1400537/width/539/height/494/border/888888/rc/false/ai/false/sdz/true/smb/false/stb/false/stbh/true/ld/false/sri/true/at/auto" width="539px" height="494px" style="border:0px;"/>
+                <geogebra-html5 src="geogebra/SquareRelatedRates.html" width="520px" height="600px" style="border:0px;"/>
             </introduction>
             <exercise>
                 <statement>
