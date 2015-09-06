@@ -309,6 +309,7 @@ as acceleration <quantity><mag>-32</mag><unit base="foot"/><per base="second" ex
                         <figure xml:id="figure-long-term-behavior-supplement" valign="top">
                             <caption><m>y=\fe{f}{x}=\frac{2x^3+2x+1}{3+5x^2}</m></caption>
                             <image>
+                                <description>a plot of a curve; there is an x-axis and a y-axis, but no tick marks for a sense of scale; the curve begins just a little above and to the right from the origin; the curve here has an arrow to the left, indicating that it continues to the left, but that part of it is omitted form the picture; the curve extends to the right with a small positive slope, but that slope gradually increases; the slope appears to reach some value and stay there, giving most of the curve the appearance of being a straight line with a positive slope; the curve exits the graph on its right edge still seeming to have a straight line shape</description>
                                 <latex-image-code>
                                 <![CDATA[\begin{tikzpicture}
                                 \begin{axis}[xmin=-2,

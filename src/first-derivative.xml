@@ -46,6 +46,7 @@
             <figure xml:id="figure-first-derivative" valign="bottom">
                 <caption><m>y=\fe{f}{x}=\frac{3}{2-x}</m></caption>
                 <image>
+                    <description>the plot of a function curve with two segments; the first segment enters the graph from the left at just above the x-axis; it moves mostly to the right and slightly upward, but becomes steeper as it goes; it crosses the y-axis at 1.5, passes through (1,3) (which is emphasized with a solid dot) and bends upward so steeply that it exits the graph on its top just to he left of the vertical line x=2; a second segment enters the graph from its bottom, just to the right of the line x=2; at first it moves mostly upward and slightly to the right; as it continues, it moves more and more to the right and less and less upward; it passes through (5,-1), which is emphasized with a solid dot; it exits the graph on its right side, moving almost entirely rightward, exiting a little beneath the x-axis</description>
                     <latex-image-code>
                     <![CDATA[\begin{tikzpicture}
                     \begin{axis}[]

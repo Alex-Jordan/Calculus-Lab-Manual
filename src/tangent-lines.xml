@@ -32,6 +32,7 @@
             <figure xml:id="figure-tangent-line" valign="bottom">
                 <caption><m>y=\fe{f}{x}</m> and its tangent line at <m>x=4</m></caption>
                 <image>
+                    <description>the curve y=sqrt(x) is plotted; beginning with a solid dot at (0,0), this curve briefly moves more upward than rightward, but quickly moves more and more rightward; it exits the graph on its right edge at about (11,3.3); the point (4,2) is on the curve, and has a solid dot to emphasize this; a straight line has been superimposed onto the graph that passes through (4,2), and is perfectly tangent to the curve; all of the curve is below the line, except for at the point (4,2) where they touch</description>
                     <latex-image-code>
                     <![CDATA[\begin{tikzpicture}
                     \begin{axis}[xmin=-2,
@@ -77,6 +78,8 @@
                     <figure xml:id="figure-tangent-line-exercise">
                         <caption><m>y=\fe{g}{x}</m> and its tangent line at <m>x=3</m></caption>
                         <image>
+                            <description>a curve is plotted; this description will describe it from right to left; beginning with a solid dot at (4,5), this curve briefly moves more downward than leftward, but quickly moves more and more leftward; it exits the graph on its left edge at about (-7,1.7); the point (3,4) is on the curve, and has a solid dot to emphasize this; a straight line has been superimposed onto the graph that passes through (3,4), and is perfectly tangent to the curve; all of the curve is above the line, except for at the point (3,4) where they touch</description>
+
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[xmin=-7,
