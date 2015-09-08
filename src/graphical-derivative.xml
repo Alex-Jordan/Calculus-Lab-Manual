@@ -330,13 +330,13 @@
                                     domain=-6.8:6.8,
                                 ]{2-atan((x-1)*sqrt(3))/30};
                                 \addplot[asymptote,
-                                    domain=0:7,
-                                    ->,
-                                ]{5} node[above left] {$y=5$};
-                                \addplot[asymptote,
                                     domain=0:-7,
                                     ->,
-                                ]{-1} node[below right] {$y=-1$};
+                                ]{5} node[above right] {$y=5$};
+                                \addplot[asymptote,
+                                    domain=0:7,
+                                    ->,
+                                ]{-1} node[below left] {$y=-1$};
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>
@@ -391,7 +391,7 @@
                             </row>
                             <row bottom="minor">
                                 <cell><m>\ointerval{-\infty}{2}</m></cell>
-                                <cell><m>\phantom{\text{positive, decreasing}}</m></cell>
+                                <cell><m>\phantom{\text{positive/negative, increasing/decreasing}}</m></cell>
                             </row>
                             <row bottom="minor">
                                 <cell><m>\ointerval{2}{3.25}</m></cell>
