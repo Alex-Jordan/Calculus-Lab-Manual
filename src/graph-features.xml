@@ -54,6 +54,7 @@
                     <figure xml:id="figure-graph-features" valign="top">
                         <caption><m>y=\fe{f}{x}</m></caption>
                         <image> 
+                            <description>a graph of a function whose curve has three separated components; the first component comes in from the left at y=3, completely flat, until it reaches(-5, 3); then it sharply bends downward, tracing a parabolic curve through a vertex at (-3,-1), back up to (-1,3); at (-1,3) the curve again sharply changes direction, bending down to (0,2), smoothly bending back up to (2,4) and then down to (3,3); this is the end of the first component, and there is a solid dot at (3,3); the second component is simply a straight line segment from (3,-2) to (4,-4); there are hollow dots at both endpoints; the third component of the curve is also a straight line; it starts up at (4,6), and moves downward and to the right with slope -2/3 until the curve exits the graph at about (7,4)</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[]

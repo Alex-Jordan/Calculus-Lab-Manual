@@ -21,6 +21,7 @@
                     <figure xml:id="figure-graphical-derivative" width="40%">
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
+                            <description>a graph of a quadratic function having the shape of a parabola; the parabola has its vertex at (1,6) and opens downward; the following points are on the parabola and are emphasized with a solid dot: (-5,-12), (-3,-2), (-1,4), (1,6), (3,4), (5,-2), and (7,-12)</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[xmin=-8,xmax=8,ymin=-16,ymax=8,xtick={-6,-4,...,6}, minor xtick={-7,-6,...,7},ytick={-14,-12,-10,-8,-6,-4,2,4,6}, minor ytick={-15,-14,...,7},y post scale=1.5]
@@ -46,6 +47,7 @@
                     <figure xml:id="figure-graphical-derivative-plot" width="40%">
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
+                            <description>a graph of a quadratic function having the shape of a parabola; the parabola has its vertex at (1,6) and opens downward; the plot is of the same function from the previous image, but no points are emphasized in this version</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[xmin=-8,xmax=8,ymin=-16,ymax=8,xtick={-6,-4,...,6}, minor xtick={-7,-6,...,7},ytick={-14,-12,...,6}, minor ytick={-15,-14,...,7},y post scale=1.5]
@@ -137,6 +139,7 @@
                     <figure xml:id="figure-cubic" valign="top">
                         <caption><m>y=\fe{f}{x}</m></caption>
                         <image>
+                            <description>the graph of a function; the curve enters from below at about (-4.2,-7), heading slightly to the right as it mainly moves upward; near (-2.5,6), the curve bends by a lot, smoothly, until it reaches about (-2,6.2), at which point the curve turns around and begins moving predominantly downward and to the right; it passes through (0,1); as it reaches about (1.5,-4), the curve bends by a lot, smoothly, so that it reaches about (2,-4.2) and turns around again; from here it moves predominantly upward and to the right, passing through (3,-2), and exiting the graph at about (4,7)</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[samples=50]
@@ -158,6 +161,7 @@
                     <figure xml:id="figure-cubic-derivative" valign="top">
                         <caption><m>y=\fe{\fd{f}}{x}</m></caption>
                         <image>
+                            <description>the graph of a function; the overall appearance resembles a parabola, although there is no solid evidence that it is a true parabola; the curve enters from above at about (-3.5,7), moving mostly downward and slightly to the right; as it moves downward, it tapers more and more, passing through -2 on the x-axis, and then smoothly flattening out at -4 on the y-axis; then the curve bends upward, bending more and more upward as it moves to the right; it passes through (3,5); it exits the graph at about (3.5,7)</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[]
@@ -207,6 +211,7 @@
                     <figure xml:id="figure-sine">
                         <caption></caption>
                         <image>
+                            <description>the graph of two functions; the first is identified as y=g(x), and it has an overall appearance of a sinusoidal wave; the curve enters from the left, reaching a low point at (-6,2), then a high point at (-3,6), then a low point at (0,2), then a high point at (3,6), then a low point at (6,2), and then it exits the graph to the right; a second curve is on the same graph, and is denoted y=g'(x); this curve is only partially plotted; only the portion on the right half of the graph is plotted; this curve also appears to have a sinusoidal shape; the part we see abruptly starts at (0,0), moving up to a peak at (1.5,2), then down to a low point at (4.5,2), then upward exiting the graph at about (7,1.5)</description> 
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[legend style={at={(1,0)},anchor=south east},legend entries={$y=\fe{g}{x}$,$y=\fe{\fd{g}}{x}$},samples=50,]
@@ -226,6 +231,7 @@
                     <figure xml:id="figure-rational" >
                         <caption></caption>
                         <image>
+                            <description>the graph of two functions; the first is identified as y=g(x); it enters the graph from the left at about (-7,3.5), moving downward and to the right with an almost constant slope; it reaches about (-1,1) and smoothly bends upward so that it becomes almost vertical; the curve exits the graph at about (-0.3,7); a second portion of this same curve comes in on the right half of the graph, symmetrically to the first portion; it comes in from the top at about (0.3,7), moves mostly downward and ever so slightly to the right until reaching about (1,1), where it smoothly bends so that it continues moving upward and to the right, with a seemingly constant slop until it exits the graph at about (7,3.5); a second curve is identified as y=g'(x); only the portion on the right half of the graph is plotted; this portion enters the graph from below at about (0.2,-7), moves mostly upward to (1,0), where it bends smoothly, so that it continues moving mostly rightward, becoming closer and closer to the horizontal line y=1/2; this portion of the curve exits the graph at about (7,1/2)</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[legend style={at={(1,0)},anchor=south east},legend entries={$y=\fe{g}{x}$,$y=\fe{\fd{g}}{x}$,$y=\frac{1}{2}$}]
@@ -239,7 +245,7 @@
                                 ]({0.26726*1.1^t},{1/2-1/(2*(0.26726*1.1^t)^2)});
                                 \addplot+[asymptote,
                                     domain=7:-7,
-                                ]{1/2} node[above right] {$y=\sfrac{1}{2}$};
+                                ]{1/2} node[above right] {$y=1/2$};
                                 \addplot+[
                                     variable=t,
                                     domain=0:32.75,
@@ -259,6 +265,7 @@
                     <figure xml:id="figure-one-over-x" >
                         <caption><m>y=\fe{f}{x}=\frac{1}{x}</m></caption>
                         <image>
+                            <description>a graph of a function whose curve has two portions; the first portion enters from the left, only a small bit below the x-axis; as it travels tot he right, it slowly moves more and more downward; at about (-1,-1), it bends much more downward, moving almost vertically downward and exiting the graph a bit to the left of the y-axis; the second portion is a symmetric opposite from the first; the second portion enters the graph from the top, just to the right of the y-axis; it moves mostly straight down and slightly to the right, until at about (1,1) it smoothly bends rightward; it continues moving rightward, moving slightly downard too, until it leaves the graph on the right side slightly above the x-axis</description> 
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[]
@@ -280,6 +287,7 @@
                      <figure xml:id="figure-derivative-of-one-over-x" >
                         <caption><m>y=\fe{\fd{f}}{x}</m></caption>
                         <image>
+                            <description>a blank graph, with x-axis and y-axis each ranging from -7 to 7</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[]
@@ -323,6 +331,7 @@
                     <figure xml:id="figure-arctangent" >
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
+                            <description>a grpah of a function that enters from the left just below y=5; the curve moves rightward fairly flat, but begins to move more and more downward as well; it reaches its steepest downward point at (1,2), and then continues to move right, but bends less and less downward; by the time it reaches the right edge of the graph, it is essentially horizontal, and exits the graph just above the line y=-1</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[]
@@ -345,6 +354,7 @@
                     <figure xml:id="figure-derivative-of-arctangent" >
                         <caption><m>y=\fe{\fd{g}}{x}</m></caption>
                         <image>
+                            <description>a blank graph, with x-axis and y-axis each ranging from -7 to 7</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[]
@@ -363,6 +373,7 @@
                 <figure xml:id="figure-inflection-points" valign="top" width="90%">
                     <caption><m>y=\fe{w}{x}</m></caption>
                     <image>
+                        <description>a graph with x-axis ranging from -1 to 10, and y-axis ranging from -1 to 10; the curve enters from below, slightly to the left of the y-axis; it passes through the origin, and continues moving mostly upward for a while; but it bends more and more to the right, until it reaches about (2,5.1), where it temporarily appears to be flat; then it bends a little upward briefly, flattening out again at about (4,5.5); now the curve turns downward as it keeps traveling to the right; it eventually reaches a low point at about (7,0.7), where it smoothly turns around and travels predominantly upwards and slightly to the right; the curve exits the graph at about (8.3,10)</description>
                         <latex-image-code>
                         <![CDATA[\begin{tikzpicture}
                         \begin{axis}[width=0.75\textwidth,xmin=-1,xmax=10,ymin=-1,ymax=10,xtick={-1,0,...,10}, minor xtick={-1,-0.5,...,10},ytick={-1,0,...,10}, minor ytick={-1,-0.5,...,10},grid=major,samples=100]
@@ -459,6 +470,7 @@
                         <figure xml:id="figure-w-prime" >
                             <caption><m>y=\fe{\fd{w}}{x}</m></caption>
                             <image>
+                                <description>a blank graph, with x-axis ranging from -1 to 10, and y-axis ranging from -12 to 12</description>
                                 <latex-image-code>
                                 <![CDATA[\begin{tikzpicture}
                                 \begin{axis}[xmin=-1,xmax=10,ymin=-12,ymax=12,xtick={0,1,...,10}, minor xtick={-1,0,...,10},ytick={-12,-11,...,12}, minor ytick={-12,-11,...,12},y post scale=2.4]

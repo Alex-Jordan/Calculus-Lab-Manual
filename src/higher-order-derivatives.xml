@@ -74,6 +74,7 @@
                     <figure xml:id="figure-derivatives-one" >
                         <caption />
                         <image>
+                            <description>a funciton's curve that starts at the origin, initially moves almost flat to the right, but steadily increasing in steepness until about (0.5,1.5), where it begins losing steepness; it flattens out at about (1.1,1.3), reaching a peak; then it descends, crossing the x-axis at about 1.8, and moving down to about (2.7,-2), where it smoothly flattens out and turns around, moving upward, again crossing the x-axis at about 3.8, and then exiting the graph at about (4,0.3)</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-1,-0.5,...,4}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
@@ -89,6 +90,7 @@
                     <figure xml:id="figure-derivatives-two" >
                         <caption />
                         <image>
+                            <description>a function's curve that starts at -1 on the y-axis, initially moveing almost flat to the right, but eventually curving upward; it crosses the x-axis at about 1.75, and continues rising to a peak at about (2.8,1), where it smoothly bends back downward, exiting the graph at a little above (4,0)</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-1,-0.5,...,4}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
@@ -104,6 +106,7 @@
                     <figure xml:id="figure-derivatives-three" >
                         <caption />
                         <image>
+                            <description>a function's curve that starts at the origin with an upward slope, reach a peak at about (0.6,2) before smoothly bending downward; it crosses the x-axis at about 1.1, continuing downward to reach a low point of about (1.8,-3.5); the curve flattens out here and smoothly bends back upward, again crossing the x-axis at about 2.7, and continuing upward to a peak at about (3.4,2.3); the curve then smoothly bends back downward and exits the graph at about (4,1.5)</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-1,-0.5,...,4}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
@@ -119,6 +122,7 @@
                     <figure xml:id="figure-derivatives-four" >
                         <caption />
                         <image>
+                            <description>a funciton's curve that starts at the origin, initially moves almost flat to the right, but steadily increasing in steepness until about (1.2,0.8), where the curve begins to lose steepness; it reaches a peak at about (1.8,1.3), bending back down and corssing the x-axis at about 2.8; the curev continues downward and to the right, but flattening out as it exits the graph at about (4,-1)</description> 
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-1,-0.5,...,4}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
@@ -143,6 +147,7 @@
                     <figure xml:id="figure-prism-uniform">
                         <caption />
                         <image>
+                            <description>a rectangular prism</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                                 \pgfmathsetmacro{\cubex}{1}
@@ -161,6 +166,7 @@
                     <figure xml:id="figure-prism-top-heavy">
                         <caption />
                         <image>
+                            <description>a prism-like shape, with a top that is a large square and a bottom that is a small square</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                                 \pgfmathsetmacro{\cubex}{1}
@@ -180,6 +186,7 @@
                     <figure xml:id="figure-prism-bottom-heavy">
                         <caption />
                         <image>
+                            <description>a prism-like shape, with a top that is a small square and a bottom that is a large square</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                                 \pgfmathsetmacro{\cubex}{1}
