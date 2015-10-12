@@ -20,7 +20,7 @@
 
         <exercise>
             <statement>
-                 <p>For the function in <xref ref="figure-match-rationals-1"/> from <xref ref="chapter-critical-numbers-graphing-from-formulas"/>, we could (correctly) write down that <m>\lim\limits_{x\to\infty}\fe{f_1}{x}=-2</m> and <m>\lim\limits_{x\to-\infty}\fe{f_1}{x}=-2</m>.  Go ahead and write (and say aloud) the analogous limits for the functions in <xref autoname="plural" ref="figure-match-rationals-2"/><ndash/><xref autoname="no" ref="figure-match-rationals-5"/>.</p> 
+                 <p>For the function in <xref ref="figure-match-rationals-1"/> from <xref ref="chapter-critical-numbers-graphing-from-formulas"/>, we could (correctly) write down that <m>\lim\limits_{x\to\infty}\fe{f_1}{x}=-2</m> and <m>\lim\limits_{x\to-\infty}\fe{f_1}{x}=-2</m>.  Go ahead and write (and say aloud) the analogous limits for the functions in <xref autoname="plural" ref="figure-match-rationals-2"/>, <xref autoname="no" ref="figure-match-rationals-3"/>, <xref autoname="no" ref="figure-match-rationals-4"/>, and <xref autoname="no" ref="figure-match-rationals-5"/>,.</p> 
             </statement>
         </exercise>
 

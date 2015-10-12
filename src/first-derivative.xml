@@ -32,7 +32,7 @@
         <sidebyside>
             <paragraphs valign="top">
                 <p><md>
-                <mrow>\qquad\qquad\;\fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}</mrow>
+                <mrow>\fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{\frac{3}{2-(x+h)}-\frac{3}{2-x}}{h}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{\frac{3}{2-x-h}-\frac{3}{2-x}}{h}\cdot\frac{(2-x-h)(2-x)}{(2-x-h)(2-x)}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{3(2-x)-3(2-x-h)}{h(2-x-h)(2-x)}</mrow>

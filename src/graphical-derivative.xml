@@ -265,7 +265,7 @@
                     <figure xml:id="figure-one-over-x" >
                         <caption><m>y=\fe{f}{x}=\frac{1}{x}</m></caption>
                         <image>
-                            <description>a graph of a function whose curve has two portions; the first portion enters from the left, only a small bit below the x-axis; as it travels tot he right, it slowly moves more and more downward; at about (-1,-1), it bends much more downward, moving almost vertically downward and exiting the graph a bit to the left of the y-axis; the second portion is a symmetric opposite from the first; the second portion enters the graph from the top, just to the right of the y-axis; it moves mostly straight down and slightly to the right, until at about (1,1) it smoothly bends rightward; it continues moving rightward, moving slightly downard too, until it leaves the graph on the right side slightly above the x-axis</description> 
+                            <description>a graph of a function whose curve has two portions; the first portion enters from the left, only a small bit below the x-axis; as it travels to the right, it slowly moves more and more downward; at about (-1,-1), it bends much more downward, moving almost vertically downward and exiting the graph a bit to the left of the y-axis; the second portion is a symmetric opposite from the first; the second portion enters the graph from the top, just to the right of the y-axis; it moves mostly straight down and slightly to the right, until at about (1,1) it smoothly bends rightward; it continues moving rightward, moving slightly downard too, until it leaves the graph on the right side slightly above the x-axis</description> 
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[]
@@ -279,6 +279,11 @@
                                     domain=0:39.278,
                                     <->,
                                 ]({1/6.5*1.1^t},{1/(1/6.5*1.1^t)});
+                                \addplot+[asymptote,
+                                    domain=7:-7,
+                                ]{0} node[above right] {$y=0$};
+                                \addplot+[asymptote,
+                                ] coordinates {(0,7) (0,-7)} node[above right] {\rotatebox{90}{$x=0$}};
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>

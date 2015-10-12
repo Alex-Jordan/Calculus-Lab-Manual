@@ -74,7 +74,7 @@
                     <figure xml:id="figure-derivatives-one" >
                         <caption />
                         <image>
-                            <description>a funciton's curve that starts at the origin, initially moves almost flat to the right, but steadily increasing in steepness until about (0.5,1.5), where it begins losing steepness; it flattens out at about (1.1,1.3), reaching a peak; then it descends, crossing the x-axis at about 1.8, and moving down to about (2.7,-2), where it smoothly flattens out and turns around, moving upward, again crossing the x-axis at about 3.8, and then exiting the graph at about (4,0.3)</description>
+                            <description>a function's curve that starts at the origin, initially moves almost flat to the right, but steadily increasing in steepness until about (0.5,1.5), where it begins losing steepness; it flattens out at about (1.1,1.3), reaching a peak; then it descends, crossing the x-axis at about 1.8, and moving down to about (2.7,-2), where it smoothly flattens out and turns around, moving upward, again crossing the x-axis at about 3.8, and then exiting the graph at about (4,0.3)</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-1,-0.5,...,4}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
@@ -122,7 +122,7 @@
                     <figure xml:id="figure-derivatives-four" >
                         <caption />
                         <image>
-                            <description>a funciton's curve that starts at the origin, initially moves almost flat to the right, but steadily increasing in steepness until about (1.2,0.8), where the curve begins to lose steepness; it reaches a peak at about (1.8,1.3), bending back down and corssing the x-axis at about 2.8; the curev continues downward and to the right, but flattening out as it exits the graph at about (4,-1)</description> 
+                            <description>a function's curve that starts at the origin, initially moves almost flat to the right, but steadily increasing in steepness until about (1.2,0.8), where the curve begins to lose steepness; it reaches a peak at about (1.8,1.3), bending back down and corssing the x-axis at about 2.8; the curev continues downward and to the right, but flattening out as it exits the graph at about (4,-1)</description> 
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[xmin=-0.5,xmax=4,ymin=-4,ymax=4,xtick={1,2,...,3}, minor xtick={-1,-0.5,...,4}, ytick={-4,-2,...,4}, minor ytick={-4,-3,...,4}]
