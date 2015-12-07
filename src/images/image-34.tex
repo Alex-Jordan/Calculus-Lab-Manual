@@ -175,6 +175,11 @@
                                     domain=0:39.278,
                                     <->,
                                 ]({1/6.5*1.1^t},{1/(1/6.5*1.1^t)});
+                                \addplot+[asymptote,
+                                    domain=7:-7,
+                                ]{0} node[above right] {$y=0$};
+                                \addplot+[asymptote,
+                                ] coordinates {(0,7) (0,-7)} node[above right] {\rotatebox{90}{$x=0$}};
                             \end{axis}
                             \end{tikzpicture}
                             \end{document}

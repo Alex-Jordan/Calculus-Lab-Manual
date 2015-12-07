@@ -164,7 +164,7 @@
     \begin{document}
 
                         \begin{tikzpicture}%hook
-                        \begin{axis}[width=0.45\textwidth]
+                        \begin{axis}[width=\textwidth]
                             \addplot[pccplot,<-,
                                 variable=t, domain=-4.8:2,
                             ]({-((2-t)/3)^(5/3)-3},{t});
@@ -179,9 +179,8 @@
                             ]{0.364864059*(x-5)^2+2};
                         \end{axis}
                         \end{tikzpicture}%hook\hfill
-                        \hspace{2em}
                         \begin{tikzpicture}%hook
-                        \begin{axis}[width=0.45\textwidth]
+                        \begin{axis}[width=\textwidth]
                         \end{axis}
                         \end{tikzpicture}%hook
                         \end{document}

@@ -91,7 +91,7 @@
                     <figure xml:id="figure-bounce" >
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
-                            <description>the graph of a periodic function; the curve enters fromt he left at about (-7,2.5), and curves down to (-5,-2); here it sharply changes direction, moving back upward as it travels to the right; it gradually loses its steepness until it reaches (-2.5,3), where it smoothly transitions from an increasing curve to a decreasing one, and then falls down to (0,-2); here it sharply changes direction again, and repeats the same "camel hump" shape that was just described; it repreats this again, exiting the graph at about (7,2.5); all together there were three visible sharp turning points, at (-5,-2), (0,-2), and (5,-2); and there were two visible flat points, at (-2.5,3) and (2.5,3)</description>
+                            <description>the graph of a periodic function; the curve enters from the left at about (-7,2.5), and curves down to (-5,-2); here it sharply changes direction, moving back upward as it travels to the right; it gradually loses its steepness until it reaches (-2.5,3), where it smoothly transitions from an increasing curve to a decreasing one, and then falls down to (0,-2); here it sharply changes direction again, and repeats the same "camel hump" shape that was just described; it repreats this again, exiting the graph at about (7,2.5); all together there were three visible sharp turning points, at (-5,-2), (0,-2), and (5,-2); and there were two visible flat points, at (-2.5,3) and (2.5,3)</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[samples = 289]
@@ -114,7 +114,7 @@
                                     domain=-5:-2.5,
                                     -,
                                 ]{3.1415926*abs(cos(36*x))};
-                                \addplot[holdot] coordinates {(-5,3.1415926)};
+                                \addplot[holdot, nodes near coords={$\color{black}\left(-5,\pi\right)$}] coordinates {(-5,3.1415926)} ;
                             \end{axis}
                             \end{tikzpicture}]]>
                             </latex-image-code>

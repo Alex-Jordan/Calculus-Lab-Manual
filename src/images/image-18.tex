@@ -166,7 +166,8 @@
                     \begin{tikzpicture}
                     \begin{axis}
                         \addplot[pccplot,domain=-6.8:-4,<-] {-2*(x+4)+1};
-                        \addplot[pccplot,domain=-4:2.8,->] {1/(x-3)-13/7};
+                        \addplot[pccplot,domain=-4:2,-] {1/(x-3)-13/7};
+                        \addplot[pccplot,domain=2:2.8,->] {1/(x-3)-13/7};
                         \addplot[pccplot,domain=3.5:6.8,<->] {-exp(x-3)/(x-3)^2};
                         \addplot[holdot] coordinates {(-4,1)};
                         \addplot[soldot] coordinates {(-4,-2)};

@@ -188,29 +188,33 @@
         <exercise>
             <statement>
                 <p>Sketch onto <xref ref="figure-sketch-properties-supplement"/> a function, <m>f</m>, with the following properties. Your graph should include all of the features addressed in lab.</p>
-                <ul cols="2">  
-                    <li>The only discontinuities on <m>f</m> are at <m>-4</m> and <m>3</m>.</li>
-                    <li><m>f</m> has no <m>x</m>-intercepts.</li>
-                    <li><m>f</m> is continuous from the right at <m>-4</m>.</li>
-                    <li><m>\lim\limits_{x\to-4^{-}}\fe{f}{x}=1</m>.</li>
-                    <li><m>\lim\limits_{x\to-4^{+}}\fe{f}{x}=-2</m>.</li>
-                    <li><m>\lim\limits_{x\to3}\fe{f}{x}=-\infty</m>.</li>
-                    <li><m>\lim\limits_{x\to\infty}\fe{f}{x}=-\infty</m>.</li>
-                    <li><m>f</m> has constant slope <m>-2</m> over <m>\ointerval{-\infty}{-4}</m>.</li>
-                </ul>  
-
-                <figure xml:id="figure-sketch-properties-supplement">
-                    <caption><m>y=\fe{f}{x}</m></caption>
-                    <image>
-                        <description>a blank Cartesian grid, with x-axis covering the interval from -7 to 7, and y-axis covering the interval from -7 to 7</description>
-                        <latex-image-code>
-                        <![CDATA[\begin{tikzpicture}
-                        \begin{axis}
-                        \end{axis}
-                        \end{tikzpicture}]]>
-                        </latex-image-code>
-                    </image>                        
-                </figure>
+                <sidebyside>
+                    <paragraphs>
+                        <p><md>
+                        <mrow>\lim\limits_{x\to-4^{-}}\fe{f}{x}&amp;=1</mrow>
+                        <mrow>\lim\limits_{x\to-4^{+}}\fe{f}{x}&amp;=-2</mrow>
+                        <mrow>\lim\limits_{x\to3}\fe{f}{x}&amp;=-\infty</mrow>
+                        <mrow>\lim\limits_{x\to\infty}\fe{f}{x}&amp;=-\infty</mrow>
+                        </md>
+                        The only discontinuities on <m>f</m> are at <m>-4</m> and <m>3</m>.<br/>
+                        <m>f</m> has no <m>x</m>-intercepts.<br/>
+                        <m>f</m> is continuous from the right at <m>-4</m>.<br/>
+                        <m>f</m> has constant slope <m>-2</m> over <m>\ointerval{-\infty}{-4}</m>.
+                        </p>  
+                    </paragraphs>
+                    <figure xml:id="figure-sketch-properties-supplement">
+                        <caption><m>y=\fe{f}{x}</m></caption>
+                        <image>
+                            <description>a blank Cartesian grid, with x-axis covering the interval from -7 to 7, and y-axis covering the interval from -7 to 7</description>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>                        
+                    </figure>
+                </sidebyside>
             </statement>
             <solution>
                 <image>
@@ -249,12 +253,16 @@
                 <p>Sketch onto <xref ref="figure-second-sketch-properties-supplement"/> a function, <m>f</m>, with each of the properties stated below. Assume that there are no intercepts or discontinuities other than those directly implied by the given properties. Make sure that your graph includes all of the relevant features addressed in lab.</p>
                 <sidebyside>
                     <paragraphs>
-                        <ul>
-                            <li><m>\lim\limits_{x\to-\infty}\fe{f}{x}=\lim\limits_{x\to\infty}\fe{f}{x}=3</m>.</li>
-                            <li><m>\lim\limits_{x\to-4^{+}}\fe{f}{x}=-2</m> and<br /> <m>\lim\limits_{x\to-4^{-}}\fe{f}{x}=5</m>.</li>
-                            <li><m>\lim\limits_{x\to3{-}}\fe{f}{x}=-\infty</m> and<br /> <m>\lim\limits_{x\to3^{+}}\fe{f}{x}=\infty</m>.</li>
-                            <li><m>\fe{f}{-2}=0</m>, <m>\fe{f}{0}=-1</m>, and<br /> <m>\fe{f}{-4}=5</m>.</li>
-                        </ul>
+                        <p><md>
+                        <mrow>\fe{f}{-2}&amp;=0</mrow>
+                        <mrow>\fe{f}{0}&amp;=-1</mrow>
+                        <mrow>\fe{f}{-4}&amp;=5</mrow>
+                        <mrow>\lim\limits_{x\to-\infty}\fe{f}{x}&amp;=\lim\limits_{x\to\infty}\fe{f}{x}=3</mrow>
+                        <mrow>\lim\limits_{x\to-4^{+}}\fe{f}{x}&amp;=-2</mrow>
+                        <mrow>\lim\limits_{x\to-4^{-}}\fe{f}{x}&amp;=5</mrow>
+                        <mrow>\lim\limits_{x\to3{-}}\fe{f}{x}&amp;=-\infty</mrow>
+                        <mrow>\lim\limits_{x\to3^{+}}\fe{f}{x}&amp;=\infty</mrow>
+                        </md></p>
                     </paragraphs>
                     <figure xml:id="figure-second-sketch-properties-supplement">
                         <caption><m>y=\fe{f}{x}</m></caption>

@@ -198,7 +198,7 @@
             <introduction>
                 <sidebyside>
                     <paragraphs valign="top">
-                        <p>Answer the following question in reference to a continuous function <m>g</m> whose first derivative is shown in <xref ref="figure-discontinuous-derivative"/>.  You do not need to state how you made your determination; just state the interval(s) or values of <m>x</m> that satisfy the stated property. Note: the correct answer to one or more of these questions may be <q>There is no way of knowing.</q></p> 
+                        <p>Answer the following questions in reference to a continuous function <m>g</m> whose first derivative is shown in <xref ref="figure-discontinuous-derivative"/>.  You do not need to state how you made your determination; just state the interval(s) or values of <m>x</m> that satisfy the stated property. Note: the correct answer to one or more of these questions may be <q>There is no way of knowing.</q></p> 
                     </paragraphs>
 
                     <figure xml:id="figure-discontinuous-derivative" valign="top" >
@@ -221,42 +221,42 @@
             </introduction>
             <exercise>
                 <statement>
-                    <p>Over what intervals is <m>\sd{g}</m> positive and increasing?</p> 
+                    <p>Over what interval(s) is <m>\sd{g}</m> positive and increasing?</p> 
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>At what values of <m>x</m> is <m>g</m> nondifferentiable?</p>
+                    <p>At what value(s) of <m>x</m> is <m>g</m> nondifferentiable?</p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>Over what intervals is <m>g</m> never negative?</p>
+                    <p>Over what interval(s) is <m>g</m> never negative?</p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>At what values of <m>x</m> is every antiderivative of <m>g</m> nondifferentiable?</p>
+                    <p>At what value(s) of <m>x</m> is every antiderivative of <m>g</m> nondifferentiable?</p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>Over what intervals does <m>\sd{g}</m> have a constant value?</p>
+                    <p>Over what interval(s) does <m>\sd{g}</m> have a constant value?</p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>Over what intervals is <m>g</m> linear?</p>
+                    <p>Over what interval(s) is <m>g</m> linear?</p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>Over what intervals are antiderivatives of <m>g</m> linear?</p>
+                    <p>Over what interval(s) are antiderivatives of <m>g</m> linear?</p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>Over what intervals is <m>\td{g}</m> never negative?</p>
+                    <p>Over what interval(s) is <m>\td{g}</m> never negative?</p>
                 </statement>
             </exercise>
         </exercisegroup>

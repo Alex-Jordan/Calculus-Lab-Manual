@@ -103,52 +103,6 @@
 
         
 
-<!-- description lists -->
-<xsl:template match="dl">
-    <xsl:element name="ul">
-        <xsl:attribute name="style">
-            <xsl:text>list-style-type: </xsl:text>
-            <xsl:choose>
-                <xsl:when test="@label">
-                    <xsl:apply-templates select="." mode="html-unordered-list-label" />
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:apply-templates select="." mode="html-unordered-list-label-default" />
-                </xsl:otherwise>
-            </xsl:choose>
-            <xsl:text>;</xsl:text>
-        </xsl:attribute>
-        <xsl:choose>
-            <xsl:when test="@cols">
-                <xsl:apply-templates select="li" mode="variable-width">
-                    <xsl:with-param name="percent-width" select="90 div @cols" />
-                </xsl:apply-templates>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:apply-templates select="li" />
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:element>
-    <xsl:if test="@cols">
-        <div style="clear:both;"></div>
-    </xsl:if>
-</xsl:template>
-<xsl:template match="dl/li" mode="variable-width">
-    <xsl:param name="percent-width" />
-    <xsl:element name="li">
-        <xsl:attribute name="style">
-            <xsl:text>width:</xsl:text><xsl:value-of select="$percent-width" /><xsl:text>%; float:left;</xsl:text>
-            <xsl:if test="(position() mod ../@cols) = 1">
-                <xsl:text>clear: left;</xsl:text>
-            </xsl:if>
-        </xsl:attribute>
-       <xsl:apply-templates />
-    </xsl:element>
-</xsl:template>
-<xsl:template match="dl/li/title">
-    <xsl:apply-templates />
-    <br />
-</xsl:template>
 
 
 <!-- For tables, move caption above                -->

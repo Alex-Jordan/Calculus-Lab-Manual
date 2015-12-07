@@ -59,7 +59,7 @@
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[]
                                 \addplot[pccplot,
-                                    domain=-6.7:-5,
+                                    domain=-7:-5,
                                     <-,
                                 ]{3};
                                 \addplot[pccplot,
@@ -75,7 +75,7 @@
                                     -,
                                 ]{-2*(x-3)-2};
                                 \addplot[pccplot,
-                                    domain=4:6.7,
+                                    domain=4:7,
                                     ->,
                                 ]{-2/3*(x-4)+6};
                                 \addplot[

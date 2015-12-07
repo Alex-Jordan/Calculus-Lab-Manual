@@ -83,12 +83,16 @@
                     <sidebyside>
                         <paragraphs valign="top">
                             <p><md>
-                            <mrow>\lim_{x\to4^{-}}\fe{f}{x}&amp;=2&amp;\fe{f}{0}&amp;=4</mrow>
-                            <mrow>\lim_{x\to4^{+}}\fe{f}{x}&amp;=5&amp;\fe{f}{4}&amp;=5</mrow>
+                            <mrow>\fe{f}{0}&amp;=4</mrow>
+                            <mrow>\fe{f}{4}&amp;=5</mrow>
+                            <mrow>\lim_{x\to4^{-}}\fe{f}{x}&amp;=2</mrow>
+                            <mrow>\lim_{x\to4^{+}}\fe{f}{x}&amp;=5</mrow>
                             <mrow>\lim_{x\to-\infty}\fe{f}{x}&amp;=4</mrow>
                             <mrow>\lim_{x\to\infty}\fe{f}{x}&amp;=4</mrow>
                             </md></p>
                         </paragraphs>
+                        <figure>
+                        <caption/>
                         <image valign="top">
                             <description>a blank Cartesian grid, with x-axis covering the interval from -7 to 7, and y-axis covering the interval from -7 to 7</description>
                             <latex-image-code>
@@ -98,6 +102,7 @@
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
+                        </figure>
                     </sidebyside>
                 </statement>
             </exercise>
@@ -107,12 +112,16 @@
                     <sidebyside>
                         <paragraphs valign="top">
                             <p><md>
-                            <mrow>\lim_{x\to-2}\fe{g}{x}&amp;=\infty&amp;\fe{g}{0}&amp;=4</mrow>
-                            <mrow>\lim_{x\to-\infty}\fe{g}{x}&amp;=\infty&amp;\fe{g}{3}&amp;=-2</mrow>
-                            <mrow>&amp;&amp;\fe{g}{6}&amp;=0</mrow>
+                            <mrow>\fe{g}{0}&amp;=4</mrow>
+                            <mrow>\fe{g}{3}&amp;=-2</mrow>
+                            <mrow>\fe{g}{6}&amp;=0</mrow>
+                            <mrow>\lim_{x\to-2}\fe{g}{x}&amp;=\infty</mrow>
+                            <mrow>\lim_{x\to-\infty}\fe{g}{x}&amp;=\infty</mrow>
                             </md>
                             And <m>g</m> is continuous and has constant slope on <m>\ointerval{0}{\infty}</m>.</p>
                         </paragraphs>
+                        <figure>
+                        <caption/>
                         <image valign="top">
                             <description>a blank Cartesian grid, with x-axis covering the interval from -7 to 7, and y-axis covering the interval from -7 to 7</description>
                             <latex-image-code>
@@ -122,6 +131,7 @@
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
+                        </figure>
                     </sidebyside>
                 </statement>
             </exercise>
@@ -130,13 +140,20 @@
                     <p>Sketch a graph of a function satisfying:</p>
                     <sidebyside>
                         <paragraphs valign="top">
-                            <p>The only discontinuities on <m>m</m> are at <m>-4</m> and <m>3</m>. <m>m</m> has no <m>x</m>-intercepts. <m>m</m> has constant slope of <m>-2</m> over <m>\ointerval{-\infty}{-4}</m>. <m>m</m> is continuous over <m>\cointerval{-4}{3}</m>. And:<md>
+                            <p><md>
                             <mrow>\fe{m}{-6}&amp;=5</mrow>
                             <mrow>\lim_{x\to3}\fe{m}{x}&amp;=-\infty</mrow>
                             <mrow>\lim_{x\to-4^{+}}\fe{m}{x}&amp;=-2</mrow>
                             <mrow>\lim_{x\to\infty}\fe{m}{x}&amp;=-\infty</mrow>
-                            </md></p>
+                            </md>
+                            The only discontinuities on <m>m</m> are at <m>-4</m> and <m>3</m>.<br/>
+                            <m>m</m> has no <m>x</m>-intercepts.<br/>
+                            <m>m</m> has constant slope of <m>-2</m> over <m>\ointerval{-\infty}{-4}</m>.<br/>
+                            <m>m</m> is continuous over <m>\cointerval{-4}{3}</m>.<br/>
+                            </p>
                         </paragraphs>
+                        <figure>
+                        <caption/>
                         <image valign="top">
                             <description>a blank Cartesian grid, with x-axis covering the interval from -7 to 7, and y-axis covering the interval from -7 to 7</description>
                             <latex-image-code>
@@ -146,6 +163,7 @@
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
+                        </figure>
                     </sidebyside>
                 </statement>
             </exercise>
