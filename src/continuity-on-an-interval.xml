@@ -79,7 +79,7 @@
             </introduction>
             <exercise>
                 <statement>
-                    <p>Sketch a graph of a function satisfying:</p>
+                    <p>Sketch a graph of a function <m>f</m> satisfying:</p>
                     <sidebyside>
                         <paragraphs valign="top">
                             <p><md>
@@ -92,7 +92,7 @@
                             </md></p>
                         </paragraphs>
                         <figure>
-                        <caption/>
+                        <caption><m>y=\fe{f}{x}</m></caption>
                         <image valign="top">
                             <description>a blank Cartesian grid, with x-axis covering the interval from -7 to 7, and y-axis covering the interval from -7 to 7</description>
                             <latex-image-code>
@@ -108,7 +108,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Sketch a graph of a function satisfying:</p>
+                    <p>Sketch a graph of a function <m>g</m> satisfying:</p>
                     <sidebyside>
                         <paragraphs valign="top">
                             <p><md>
@@ -121,7 +121,7 @@
                             And <m>g</m> is continuous and has constant slope on <m>\ointerval{0}{\infty}</m>.</p>
                         </paragraphs>
                         <figure>
-                        <caption/>
+                        <caption><m>y=\fe{g}{x}</m></caption>
                         <image valign="top">
                             <description>a blank Cartesian grid, with x-axis covering the interval from -7 to 7, and y-axis covering the interval from -7 to 7</description>
                             <latex-image-code>
@@ -137,7 +137,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Sketch a graph of a function satisfying:</p>
+                    <p>Sketch a graph of a function <m>m</m> satisfying:</p>
                     <sidebyside>
                         <paragraphs valign="top">
                             <p><md>
@@ -153,7 +153,7 @@
                             </p>
                         </paragraphs>
                         <figure>
-                        <caption/>
+                        <caption><m>y=\fe{m}{x}</m></caption>
                         <image valign="top">
                             <description>a blank Cartesian grid, with x-axis covering the interval from -7 to 7, and y-axis covering the interval from -7 to 7</description>
                             <latex-image-code>

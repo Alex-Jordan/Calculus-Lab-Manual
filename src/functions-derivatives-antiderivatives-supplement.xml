@@ -852,7 +852,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                        <caption><m>\fd{f}</m></caption>
+                        <caption><m>y=\fe{\fd{f}}{x}</m></caption>
                     </figure>
                 </sidebyside>
             </introduction>
@@ -983,7 +983,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                        <caption><m>f</m></caption>
+                        <caption><m>y=\fe{f}{x}</m></caption>
                     </figure>
                     <figure >
                         <image>
@@ -994,7 +994,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                        <caption><m>F</m></caption>
+                        <caption><m>y=\fe{F}{x}</m></caption>
                     </figure>
                 </sidebyside>
             </statement>
@@ -1039,7 +1039,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                     <li><m>\lim\limits_{x\to4^{-}}\fe{f}{x}=-1</m> and <m>\lim\limits_{x\to4^{+}}\fe{f}{x}=1</m></li>
                 </ul>
                 <figure xml:id="figure-sketch-function-supplement" valign="top">
-                    <caption><m>f</m></caption>
+                    <caption><m>y=\fe{f}{x}</m></caption>
                     <image>
                         <latex-image-code>
                         <![CDATA[\begin{tikzpicture}

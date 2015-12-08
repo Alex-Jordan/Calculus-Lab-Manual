@@ -46,7 +46,7 @@
                 <statement>
                     <p>Graph <m>y=\fe{f}{x}</m> onto <xref ref="figure-blank-for-graphing-1"/>. Choose a scale that allows you to clearly illustrate each of the features found in <xref autoname="plural" ref="exercise-sketch-first-asymptotes"/><ndash/><xref autoname="no" ref="exercise-sketch-first-critical-numbers"/>.  Label all axes and asymptotes well and write the coordinates of each local extreme point and inflection point next to the point.</p>
                     <figure xml:id="figure-blank-for-graphing-1">
-                        <caption><m>f</m></caption>
+                        <caption><m>y=\fe{f}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -68,7 +68,7 @@
             <statement>
                 <p>Following analysis similar to that implied in <xref autoname="plural" ref="exercise-sketch-first-asymptotes"/><ndash/><xref autoname="no" ref="exercise-sketch-first-total"/> graph the function <me>\fe{g}{t}=\frac{1}{(e^t+4)^2}\text{.}</me> Use the formulas <me>\fe{\fd{g}}{t}=\frac{-2e^t}{(e^t+4)^3}\qquad\fe{\sd{g}}{t}=\frac{4e^t(e^t-2)}{(e^t+4)^4}\text{.}</me> Check your graph using a graphing calculator.</p>
                 <figure xml:id="figure-blank-for-graphing-2">
-                    <caption><m>g</m></caption>
+                    <caption><m>y=\fe{g}{x}</m></caption>
                     <image>
                         <latex-image-code>
                         <![CDATA[\begin{tikzpicture}

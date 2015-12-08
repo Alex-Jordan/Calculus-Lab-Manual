@@ -82,8 +82,8 @@
 
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[xmin=-7,
-                                         xmax=7,
+                            \begin{axis}[xmin=-5,
+                                         xmax=9,
                                          ymin=-2,
                                          ymax=12,
                                          xtick = {-6,-4,...,6},
@@ -92,11 +92,11 @@
                                          minor ytick = {-2,-1,...,12},
                                          legend entries = {$y=\fe{g}{x}$,{tangent line}}]
                                 \addplot+[variable=t,
-                                    domain=5:1.8,
+                                    domain=5:2,
                                     ->,
                                 ]({4-(5-t)^2},{t});
                                 \addplot+[
-                                    domain=-6.8:6.8,
+                                    domain=-5:9,
                                     <->,
                                 ]{2.5+x/2};
                                 \addplot[

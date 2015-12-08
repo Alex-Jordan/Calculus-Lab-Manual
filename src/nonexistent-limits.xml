@@ -115,6 +115,8 @@
                         <mrow>\lim\limits_{x\to-\infty}\fe{f}{x}&amp;=2</mrow>
                         </md></p>
                     </paragraphs>
+                    <figure>
+                    <caption><m>y=\fe{f}{x}</m></caption>
                     <image valign="top">
                         <description>a blank Cartesian grid, with x-axis covering the interval from -7 to 7, and y-axis covering the interval from -7 to 7</description>
                         <latex-image-code>
@@ -124,6 +126,7 @@
                         \end{tikzpicture}]]>
                         </latex-image-code>
                     </image>
+                    </figure>
                 </sidebyside>
 
             </statement>

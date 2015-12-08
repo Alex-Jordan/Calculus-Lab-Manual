@@ -155,12 +155,12 @@
                     </row>
                     <row bottom="medium">
                         <cell>4</cell>
-                        <cell><xref autoname="title" ref="section-graph-features"/> through<br /><xref autoname="title" ref="section-higher-order-derivatives"/></cell>
+                        <cell><xref autoname="title" ref="section-graph-features"/> through<br /><xref autoname="title" ref="section-nondifferentiability"/></cell>
                         <cell><xref autoname="title" ref="functions-derivatives-antiderivatives-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="medium">
                         <cell>5</cell>
-                        <cell><xref autoname="title" ref="section-antiderivatives"/> through<br /><xref autoname="title" ref="section-graphical-features-from-derivatives"/></cell>
+                        <cell><xref autoname="title" ref="section-higher-order-derivatives"/> through<br /><xref autoname="title" ref="section-graphical-features-from-derivatives"/></cell>
                         <cell><xref autoname="title" ref="functions-derivatives-antiderivatives-supplementary-exercises"/></cell>
                     </row>
                     <row bottom="medium">

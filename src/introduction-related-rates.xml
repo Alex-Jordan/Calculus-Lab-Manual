@@ -39,7 +39,7 @@
     </sidebyside>
     <p>Since the volume is decreasing at a constant rate, and a change in volume has a greater and greater effect on the radius as the volume decreases, the rate at which the radius decreases must increase as time goes by. This relationship between the rates at which the volume and radius change is an example of what is called <term>related rates</term>.</p>
 
-    <p>An acronym sometimes associated with the solution process for related rates problems is <acro>DREDS</acro>. The first for letters of the acronym stand for Diagram, Rates, Equation, and Differentiate. The final letter stands for Substitute. The reason the substitution steps comes last is that you need to have a rates equation before you have a place to substitute your values.</p>
+    <p>An acronym sometimes associated with the solution process for related rates problems is <acro>DREDS</acro>. The first four letters of the acronym stand for Diagram, Rates, Equation, and Differentiate. The final letter stands for Substitute. The reason the substitution steps comes last is that you need to have a rates equation before you have a place to substitute your values.</p>
 
     <p>The first thing we need to do is clearly identify our variables. In related rates problems there are three broad types of variables.</p>
     <ol>
@@ -141,7 +141,7 @@
         </paragraphs>
         <paragraphs valign="top">
             <p>To finish up we need to write a conclusion.</p>
-            <blockquote>At the moment the radius of the snowball is <quantity><mag>1.4</mag><unit prefix="centi" base="meter"/></quantity>, the radius is decreasing at the rate of (about) <quantity><mag>0.01218</mag><unit prefix="centi" base="meter"/><per base="minute"/></quantity>.</blockquote>
+            <blockquote>At the moment the radius of the snowball is <quantity><mag>1.4</mag><unit prefix="centi" base="meter"/></quantity>, the radius is decreasing at the rate of about <quantity><mag>0.01218</mag><unit prefix="centi" base="meter"/><per base="minute"/></quantity>.</blockquote>
         </paragraphs>
     </sidebyside>
 

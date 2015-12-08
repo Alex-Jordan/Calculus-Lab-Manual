@@ -96,7 +96,7 @@
                         <p>Consider the function <m>f</m> shown in <xref ref="figure-polynomial-for-chain-rule"/>.</p>
                     </paragraphs>
                     <figure xml:id="figure-polynomial-for-chain-rule" valign="top">
-                        <caption><m>f</m></caption>
+                        <caption><m>y=\fe{f}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -273,8 +273,8 @@
                     <p><md>
                     <mrow>\fe{f}{x}&amp;=e^{e^{\fe{\sin}{x}}}</mrow>
                     <mrow>\fe{\fd{f}}{x}&amp;=e^{e^{\fe{\sin}{x}}}\cdot\lzoo{x}{e^{\fe{\sin}{x}}}</mrow>
-                    <mrow>&amp;=e^{e^{\fe{\sin}{x}}}e^{\lzoo{\sin}{x}}\cdot\lzoo{x}{\fe{\sin}{x}}</mrow>
-                    <mrow>&amp;=e^{e^{\fe{\sin}{x}}}e^{\lzoo{\sin}{x}}\fe{\cos}{x}</mrow>
+                    <mrow>&amp;=e^{e^{\fe{\sin}{x}}}e^{\fe{\sin}{x}}\cdot\lzoo{x}{\fe{\sin}{x}}</mrow>
+                    <mrow>&amp;=e^{e^{\fe{\sin}{x}}}e^{\fe{\sin}{x}}\fe{\cos}{x}</mrow>
                     <mrow>&amp;=e^{e^{\fe{\sin}{x}}+\fe{\sin}{x}}\fe{\cos}{x}</mrow>
                     </md></p>
                 </solution>

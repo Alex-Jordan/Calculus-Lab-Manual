@@ -77,7 +77,7 @@
                         <p>Copy each of the following expressions onto your paper and either state the value or state that the value is undefined or doesn't exist. Make sure that when discussing the values you use proper terminology. All expressions are in reference to the function <m>g</m> shown in <xref ref="figure-second-limit"/>.</p>
                     </paragraphs>
                     <figure xml:id="figure-second-limit" valign="top">
-                        <caption><m>y=\fe{g}{x}</m></caption>
+                        <caption><m>y=\fe{g}{t}</m></caption>
                         <image xml:id="image-second-limit">
                             <description>a graph of a discontinuous function; reading the graph left to right, the graph enters from the left with an upward slope until it reaches (-2,5); a second, separated, piece of the graph begins at (-2,-3.5), except there is a hole right where it begins; the graph moves upward linearly until reaching (3,-1), except ther was a hole at (2,-1.5); from (3,-1), the curve enters a parabolic path, dipping down to a vertex at (4,-2) and then curving upward off to the right; however there is a hole at (5,-1), with a solid dot above the hole at (5,1)</description>
                             <description>A graph of a doscontinuous function.</description>

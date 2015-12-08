@@ -17,7 +17,7 @@
         <p>When searching for your quantity-variables, you need to identify sentences or phrases in the problem statement that contain the word <q>rate</q> or something similar (hence the <acro>R</acro> in <acro>DREDS</acro>). There are two such phrases in this problem:
         <ul>
             <li><q>A small drone is flying straight upward at the rate of<ellipsis/></q></li>
-            <li><q><ellipsis/>drone the rate at which the angle of elevation from the tether point to the drone increase<ellipsis/></q></li>
+            <li><q><ellipsis/>determine the rate at which the angle of elevation from the tether point to the drone increase<ellipsis/></q></li>
         </ul>
         </p>
         <p>The pieces of the right triangle that correspond to those phrases have been marked in <xref ref="figure-drone-triangle"/> as, respectively, <m>h</m> and <m>\theta</m>. The distance between the tether point and launch point remains constant, hence the side labeled as <m>400</m>. Please note that there should be no other annotations of any kind on this diagram. If writing other numbers down helps you think through the problem, draw a second triangle on your scratch paper and annotate that in any way the helps. That said, you need a clean variable diagram in your solution, so leave <xref ref="figure-drone-triangle"/> as it is.</p>

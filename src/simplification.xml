@@ -37,7 +37,9 @@
         <mrow>&amp;&amp;&amp;=\frac{4t^5}{2t^2}-\frac{3t^3}{2t^2}</mrow>
         <mrow>&amp;&amp;&amp;=2t^3-\frac{3}{2}t</mrow>
         <mrow>&amp;&amp;\fe{\fd{f}}{t}&amp;=6t^2-\frac{3}{2}</mrow>
-        </md></p>
+        <mrow>&amp;&amp;\fe{\fd{f}}{t}&amp;=\frac{12t^2-3}{2}</mrow>
+        </md>
+        Note that since <m>f</m> is undefined at <m>0</m>, <m>\fd{f}</m> is also undefined at <m>0</m>.</p>
     </example>
 
     <exercises>

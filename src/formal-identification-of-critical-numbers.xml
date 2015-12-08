@@ -44,7 +44,7 @@
     <exercises>
         <exercisegroup cols="2" by="row">
             <introduction>
-                <p>Formally establish the critical numbers for each of the following functions following <algorihtm ref="algorithm-find-critical-numbers"/>.</p>
+                <p>Formally establish the critical numbers for each of the following functions following the procedure outlined in <xref ref="algorithm-find-critical-numbers"/>.</p>
             </introduction>
             <exercise>
                 <statement>

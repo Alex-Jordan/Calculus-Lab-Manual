@@ -209,7 +209,7 @@
                 <p>In each of <xref autoname="plural" ref="figure-sine"/> and <xref autoname="no" ref="figure-rational"/> a function (the solid curve) is given; both of these functions are symmetric about the <m>y</m>-axis. The first derivative of each function (the dash-dotted curves) have been drawn over the interval <m>\ointerval{0}{7}</m>. Use the given portion of the first derivative together with the symmetry of the function to help you draw each first derivative over the interval <m>\ointerval{-7}{0}</m>. Please note that a function that is symmetric across a vertical line has a first derivative that is symmetric about a point.  Similarly, a function that is symmetric about a point has a first derivative that is symmetric across a vertical line.</p>
                 <sidebyside>
                     <figure xml:id="figure-sine">
-                        <caption></caption>
+                        <caption><m>y=\fe{f}{x}</m> and part of the curve <m>y=\fe{\fd{f}}{x}</m></caption>
                         <image>
                             <description>the graph of two functions; the first is identified as y=g(x), and it has an overall appearance of a sinusoidal wave; the curve enters from the left, reaching a low point at (-6,2), then a high point at (-3,6), then a low point at (0,2), then a high point at (3,6), then a low point at (6,2), and then it exits the graph to the right; a second curve is on the same graph, and is denoted y=g'(x); this curve is only partially plotted; only the portion on the right half of the graph is plotted; this curve also appears to have a sinusoidal shape; the part we see abruptly starts at (0,0), moving up to a peak at (1.5,2), then down to a low point at (4.5,2), then upward exiting the graph at about (7,1.5)</description> 
                             <latex-image-code>
@@ -229,12 +229,12 @@
                         </image>
                     </figure>
                     <figure xml:id="figure-rational" >
-                        <caption></caption>
+                        <caption><m>y=\fe{f}{x}</m> and part of the curve <m>y=\fe{\fd{f}}{x}</m></caption>
                         <image>
                             <description>the graph of two functions; the first is identified as y=g(x); it enters the graph from the left at about (-7,3.5), moving downward and to the right with an almost constant slope; it reaches about (-1,1) and smoothly bends upward so that it becomes almost vertical; the curve exits the graph at about (-0.3,7); a second portion of this same curve comes in on the right half of the graph, symmetrically to the first portion; it comes in from the top at about (0.3,7), moves mostly downward and ever so slightly to the right until reaching about (1,1), where it smoothly bends so that it continues moving upward and to the right, with a seemingly constant slop until it exits the graph at about (7,3.5); a second curve is identified as y=g'(x); only the portion on the right half of the graph is plotted; this portion enters the graph from below at about (0.2,-7), moves mostly upward to (1,0), where it bends smoothly, so that it continues moving mostly rightward, becoming closer and closer to the horizontal line y=1/2; this portion of the curve exits the graph at about (7,1/2)</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[legend style={at={(1,0)},anchor=south east},legend entries={$y=\fe{g}{x}$,$y=\fe{\fd{g}}{x}$,$y=\frac{1}{2}$}]
+                            \begin{axis}[legend style={at={(1,0)},anchor=south east},legend entries={$y=\fe{g}{x}$,$y=\fe{\fd{g}}{x}$}]
                                 \addplot+[
                                     variable=t,
                                     domain=0:32.75,

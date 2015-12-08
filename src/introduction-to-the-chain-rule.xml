@@ -15,7 +15,7 @@
             <p>The functions <m>\fe{f}{t}=\fe{\sin}{t}</m> and <m>\fe{k}{t}=\fe{\sin}{3t}</m> are shown in <xref ref="figure-sine-waves"/>. Since <m>\fe{\fd{f}}{t}=\fe{\cos}{t}</m>, it is reasonable to speculate that <m>\fe{\fd{k}}{t}=\fe{\cos}{3t}</m>.  But this would imply that <m>\fe{\fd{k}}{0}=\fe{\fd{f}}{0}=1</m>, and a quick glance of the two functions at <m>0</m> should convince you that this is not true; clearly <m>\fe{\fd{k}}{0}>\fe{\fd{f}}{0}</m>.</p>
         </paragraphs>
         <figure xml:id="figure-sine-waves" valign="top" >
-            <caption/>
+            <caption><m>y=\fe{f}{t}</m> and <m>y=\fe{k}{t}</m></caption>
             <image>
                 <latex-image-code>
                 <![CDATA[\begin{tikzpicture}
@@ -150,7 +150,7 @@
                     </paragraphs>
 
                     <figure xml:id="figure-chain-rule-exercise" valign="top">
-                        <caption><m>f</m></caption>
+                        <caption><m>y=\fe{f}{t}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}

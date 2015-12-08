@@ -57,7 +57,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Copy <xref ref="table-semi-rational-sign-table"/> onto your paper and fill in the missing information.</p>
+                    <p>Copy <xref ref="table-semi-rational-sign-table"/> onto your paper and fill in the missing information. Then state the local minimum and maximum points on <m>k</m>.  Specifically address both minimum and maximum points even if one and/or the other does not exist.</p>
 
                     <table xml:id="table-semi-rational-sign-table">
                         <caption><m>\fe{\fd{g}}{t}=\frac{-3(t-5)}{2(t-1)^3\sqrt{t-4}}</m></caption>

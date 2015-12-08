@@ -41,7 +41,7 @@
             <conclusion>
                 <sidebyside>
                     <figure xml:id="figure-match-rationals-1">
-                        <caption><m>f_1</m></caption>
+                        <caption><m>y=\fe{f_1}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -74,7 +74,7 @@
                         </image>
                     </figure>
                     <figure xml:id="figure-match-rationals-2">
-                        <caption><m>f_2</m></caption>
+                        <caption><m>y=\fe{f_2}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -108,7 +108,7 @@
                 </sidebyside>
                 <sidebyside>
                     <figure xml:id="figure-match-rationals-3">
-                        <caption><m>f_3</m></caption>
+                        <caption><m>y=\fe{f_3}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -147,7 +147,7 @@
                         </image>
                     </figure>
                     <figure xml:id="figure-match-rationals-4">
-                        <caption><m>f_4</m></caption>
+                        <caption><m>y=\fe{f_4}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -177,7 +177,7 @@
                     </figure>
                 </sidebyside>
                 <figure xml:id="figure-match-rationals-5">
-                    <caption><m>f_5</m></caption>
+                    <caption><m>y=\fe{f_5}{x}</m></caption>
                     <image>
                         <latex-image-code>
                         <![CDATA[\begin{tikzpicture}

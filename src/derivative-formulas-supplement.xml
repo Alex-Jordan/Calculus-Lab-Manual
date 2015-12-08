@@ -462,7 +462,7 @@ formula stated above for the product of three functions.  The first application 
                         <p>A function <m>f</m> is shown in <xref ref="figure-analyze-intervals-supplement"/>. Each question below is in reference to this function.  Please note that the numeric endpoints of each interval answer are all integers.</p> 
                     </paragraphs>
                     <figure valign="top" xml:id="figure-analyze-intervals-supplement">
-                        <caption><m>f</m></caption>
+                        <caption><m>y=\fe{f}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -526,7 +526,7 @@ formula stated above for the product of three functions.  The first application 
                             </md></p>
                         </paragraphs>
                         <figure valign="top" xml:id="figure-analyze-intervals-supplement-derivative">
-                            <caption><m>\fd{f}</m></caption>
+                            <caption><m>y=\fe{\fd{f}}{x}</m></caption>
                             <image>
                                 <latex-image-code>
                                 <![CDATA[\begin{tikzpicture}
@@ -542,7 +542,7 @@ formula stated above for the product of three functions.  The first application 
                             </image>
                         </figure>
                         <figure valign="top" xml:id="figure-analyze-intervals-supplement-2nd-derivative">
-                            <caption><m>\sd{f}</m></caption>
+                            <caption><m>y=\fe{\sd{f}}{x}</m></caption>
                             <image>
                                 <latex-image-code>
                                 <![CDATA[\begin{tikzpicture}
@@ -571,7 +571,7 @@ formula stated above for the product of three functions.  The first application 
                         <p>A function <m>g</m> is shown in <xref ref="figure-second-analyze-intervals-supplement"/>. Each question below is in reference to this function.</p> 
                     </paragraphs>
                     <figure valign="top" xml:id="figure-second-analyze-intervals-supplement">
-                        <caption><m>g</m></caption>
+                        <caption><m>y=\fe{g}{t}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
