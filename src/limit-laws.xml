@@ -41,12 +41,12 @@
         <example xml:id="example-apply-limit-laws">
             <title>Applying Limit Laws</title>
             <p><md>
-            <mrow>\lim_{x\to7}\left(4x^2+3\right)&amp;=\lim_{x\to7}\left(4x^2\right)+\lim_{x\to7}3&amp;&amp;\text{Limit Law A1}</mrow>
-            <mrow>&amp;=4\lim_{x\to7}x^2+\lim_{x\to7}3&amp;&amp;\text{Limit Law A3}</mrow>
-            <mrow>&amp;=4\left(\lim_{x\to7}x\right)^2+\lim_{x\to7}3&amp;&amp;\text{Limit Law A6}</mrow>
-            <mrow>&amp;=4\cdot7^2+3&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
+            <mrow>\lim_{x\to7}\left(4x^2+3\right)&amp;=\lim_{x\to7}\left(4x^2\right)+\lim_{x\to7}3&amp;&amp;<xref autoname="title" ref="lla1"/></mrow>
+            <mrow>&amp;=4\lim_{x\to7}x^2+\lim_{x\to7}3&amp;&amp;<xref autoname="title" ref="lla3"/></mrow>
+            <mrow>&amp;=4\left(\lim_{x\to7}x\right)^2+\lim_{x\to7}3&amp;&amp;<xref autoname="title" ref="lla6"/></mrow>
+            <mrow>&amp;=4\cdot7^2+3&amp;&amp;<xref autoname="title" ref="llr1"/>, <xref autoname="title" ref="llr2"/></mrow>
             <mrow>&amp;=199</mrow>
-            </md><killinprint>(<xref autoname="title" ref="lla1"/>, <xref autoname="title" ref="lla3"/>, <xref autoname="title" ref="lla6"/>, <xref autoname="title" ref="llr1"/>, <xref autoname="title" ref="llr2"/>)</killinprint></p>
+            </md></p>
         </example>
 
         <exercisegroup cols="3">

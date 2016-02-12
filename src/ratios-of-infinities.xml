@@ -16,11 +16,11 @@
         <p><md>
         <mrow>\lim_{t\to\infty}\frac{3t^2+5t}{3-5t^2}&amp;=\lim_{t\to\infty}\left(\frac{3t^2+5t}{3-5t^2}\cdot\frac{\sfrac{1}{t^2}}{\sfrac{1}{t^2}}\right)</mrow>
         <mrow>&amp;=\lim_{t\to\infty}\frac{3+\sfrac{5}{t}}{\sfrac{3}{t^2}-5}&amp;&amp;\text{No longer indeterminate form}</mrow>
-        <mrow>&amp;=\frac{\lim_{t\to\infty}\left(3+\sfrac{5}{t}\right)}{\lim_{t\to\infty}\left(\sfrac{3}{t^2}-5\right)}&amp;&amp;\text{Limit Law A5}</mrow>
-        <mrow>&amp;=\frac{\lim_{t\to\infty}3+\lim_{t\to\infty}\frac{5}{t}}{\lim_{t\to\infty}\frac{3}{t^2}-\lim_{t\to\infty}5}&amp;&amp;\text{Limit Laws A1 and A2}</mrow>
-        <mrow>&amp;=\frac{3+0}{0-5}&amp;&amp;\text{Limit Laws R2 and R3}</mrow>
+        <mrow>&amp;=\frac{\lim_{t\to\infty}\left(3+\sfrac{5}{t}\right)}{\lim_{t\to\infty}\left(\sfrac{3}{t^2}-5\right)}&amp;&amp;<xref autoname="title" ref="lla5"/></mrow>
+        <mrow>&amp;=\frac{\lim_{t\to\infty}3+\lim_{t\to\infty}\frac{5}{t}}{\lim_{t\to\infty}\frac{3}{t^2}-\lim_{t\to\infty}5}&amp;&amp;<xref autoname="title" ref="lla1"/>, <xref autoname="title" ref="lla2"/></mrow>
+        <mrow>&amp;=\frac{3+0}{0-5}&amp;&amp;<xref autoname="title" ref="llr2"/>, <xref autoname="title" ref="llr3"/></mrow>
         <mrow>&amp;=-\frac{3}{5}</mrow>
-        </md><killinprint>(<xref autoname="title" ref="lla5"/>, <xref autoname="title" ref="lla1"/>, <xref autoname="title" ref="lla2"/>, <xref autoname="title" ref="llr2"/>, <xref autoname="title" ref="llr3"/>)</killinprint></p>
+        </md></p>
     </example>
 
     <exercises>

@@ -18,15 +18,14 @@
 <xsl:param name="latex.preamble.late" select="concat(document('latex-preamble/latex.preamble.xml')//latex-preamble-late, document('latex-preamble/print.preamble.xml')//latex-preamble-late)" />
 <xsl:param name="chunk.level" select="0" />
 
-<xsl:template match="killinprint"/>
 
-
+<!--
 <xsl:template match="backmatter/section[title='Solutions to Supplemental Exercises']" mode="title-full">
     <xsl:text>Answers to Supplemental Exercises (Full Solutions in Online Edition)</xsl:text>
 </xsl:template>
 <xsl:template match="backmatter/section[title='Solutions to Supplemental Exercises']" mode="title-simple">
     <xsl:text>Answers to Supplemental Exercises</xsl:text>
 </xsl:template>
-
+-->
 
 </xsl:stylesheet>
