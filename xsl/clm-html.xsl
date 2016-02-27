@@ -37,6 +37,13 @@
 
 
 
+<!-- Suppress "Activity ..1" from the frontmatter prefaces' sections -->
+<xsl:template match="frontmatter//section" mode="header-content">
+    <span class="title">
+        <xsl:apply-templates select="." mode="title-full" />
+    </span>
+    <xsl:apply-templates select="." mode="permalink" />
+</xsl:template>
 
 
 <!-- GeoGebra HTML5-->

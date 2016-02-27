@@ -2,9 +2,6 @@ rm *.html
 xsltproc -xinclude ../xsl/clm-html.xsl clm.xml
 perl -pi -e 's/<\/div><\/main>/<footer><a rel="license" href="http:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/"><img alt="Creative Commons License" style="border-width:0" src="https:\/\/i\.creativecommons\.org\/l\/by-sa\/4\.0\/88x31\.png" \/><\/a><br \/>This work is licensed under a <a rel="license" href="http:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/">Creative Commons Attribution-ShareAlike 4\.0 International License<\/a>\.<\/footer><\/div><\/main>/g' *.html
 perl -pi -e 's/<footer><a rel="license" href="http:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/"><img alt="Creative Commons License" style="border-width:0" src="https:\/\/i\.creativecommons\.org\/l\/by-sa\/4\.0\/88x31\.png" \/><\/a><br \/>This work is licensed under a <a rel="license" href="http:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/">Creative Commons Attribution-ShareAlike 4\.0 International License<\/a>\.<\/footer>//g' colophon-1.html
-perl -pi -e 's/Activity \.\.. //g' to-all.html
-perl -pi -e 's/<span class="type">Activity<\/span>//g' to-all.html
-perl -pi -e 's/<span class="codenumber">\.\..<\/span>//g' to-all.html
 perl -pi -e 's/elevation<span class="hidden-knowl-wrapper"><a knowl="" class="id-ref" refid="hk-fn-1" id="fn-1"><sup> 1 <\/sup>/elevation<span class="hidden-knowl-wrapper" style="margin-left: 0; "><a knowl="" class="id-ref" refid="hk-fn-1" id="fn-1"><sup>1<\/sup>/g' section-velocity.html
 perl -pi -e 's/>(Limit Law [AR][0-9]*) </>$1</g' *.html
 perl -pi -e 's/<div class="sidebyside" id="sidebyside-curves">/<div class="sidebyside" id="sidebyside-curves" style="text-align: center;">/g' section-graphical-features-from-derivatives.html
