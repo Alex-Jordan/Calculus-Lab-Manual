@@ -19,6 +19,25 @@
 <xsl:param name="html.knowl.example" select="'no'" />
 
 
+<!-- Suppress "Lab .1" from the backmatter solutions chapter -->
+<xsl:template match="backmatter/chapter" mode="header-content">
+    <span class="title">
+        <xsl:apply-templates select="." mode="title-full" />
+    </span>
+    <xsl:apply-templates select="." mode="permalink" />
+</xsl:template>
+<xsl:template match="backmatter/chapter" mode="summary-nav">
+        <xsl:variable name="url"><xsl:apply-templates select="." mode="url" /></xsl:variable>
+        <a href="{$url}">
+            <span class="title">
+                <xsl:apply-templates select="." mode="title-simple" />
+            </span>
+        </a>
+</xsl:template>
+
+
+
+
 
 <!-- GeoGebra HTML5-->
 <xsl:template match="geogebra-html5">
