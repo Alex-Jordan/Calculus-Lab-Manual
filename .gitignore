@@ -1,0 +1,4 @@
+output/html/
+output/pdf/
+output/epub/
+Makefile.paths

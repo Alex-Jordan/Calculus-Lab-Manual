@@ -1,0 +1,192 @@
+\documentclass[12pt,border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+
+    
+    \usepackage{pgfplots}
+    \usepackage{xparse}
+    \usepgfplotslibrary{patchplots}
+    \usepackage{tkz-euclide}
+    \usetkzobj{all}
+    \usetikzlibrary{3d,calc}
+    \usepackage{xltxtra}
+
+    % curve, dot, and graph custom styles
+    \pgfplotsset{pccplot/.style={color=red,mark=none,line width=1pt,<->,solid}} % primary style for curves
+    \pgfplotsset{asymptote/.style={color=gray,mark=none,line width=1pt,<->,dashed}}
+    \pgfplotsset{soldot/.style={color=red,only marks,mark=*}}
+    \pgfplotsset{holdot/.style={color=red,fill=white,only marks,mark=*}}
+    \pgfplotsset{blankgraph/.style={xmin=-10,xmax=10,ymin=-10,ymax=10,axis line style= {-, draw opacity=0 },axis lines=box,major tick length=0mm,xtick={-10,-9,...,10},ytick={-10,-9,...,10},grid=major,yticklabels={,,},xticklabels={,,},minor xtick=,minor ytick=,xlabel={},ylabel={},width=0.75\textwidth,grid style={solid,gray!40}}}
+    
+    % cycle list of plot styles for graphs with multiple plots
+    \pgfplotscreateplotcyclelist{pccstylelist}{%
+        pccplot\\%
+        color=blue,mark=none,line width=1pt,<->,dashdotted\\%
+        color=gray,mark=none,line width=1pt,<->,dashdotdotted\\%
+    }
+
+    \pgfplotsset{every axis/.append style={
+        axis x line=middle,    % put the x axis in the middle
+        axis y line=middle,    % put the y axis in the middle
+        axis line style={<->}, % arrows on the axis
+        xlabel={$x$},          % default put x on x-axis
+        ylabel={$y$},          % default put y on y-axis
+        xmin = -7,xmax = 7,    % most graphs have this window
+        ymin = -7,ymax = 7,    % most graphs have this window
+        xtick = {-6,-4,...,6},       % fix ticks 
+        %extra x ticks={-6, -4, -2},
+        %extra x tick labels={$-6\phantom{-}$, $-4\phantom{-}$, $-2\phantom{-}$},
+        ytick = {-6,-4,...,6}, % fix ticks  
+        yticklabel style={inner sep=0.333ex},
+        minor xtick = {-7,-6,...,7}, % fix ticks
+        minor ytick = {-7,-6,...,7}, % fix ticks
+        scale only axis,       % don't factor in axis and tick labels for width= and height=
+        cycle list name=pccstylelist,
+        tick label style={font=\footnotesize},
+        %label style={font=\scriptsize},
+        legend cell align=left,
+        %legend style={font=\scriptsize},
+        width = 0.45\textwidth,
+        grid = minor,
+        grid style = {solid,gray!40},
+        %every node near coord/.append style={
+        %    font=\scriptsize
+        %},
+    }}
+
+    %\tikzset{axisnode/.style={font=\scriptsize,text=black}}
+
+    % arrow style
+    \tikzset{>=stealth}
+
+    % framing the graphs
+    \pgfplotsset{framed/.style={axis background/.style ={draw=gray}}}
+    % next line is a bit more colorful
+    %\pgfplotsset{framed/.style={axis background/.style ={draw=gray,fill=yellow!20,rounded corners=3ex}}}
+
+    
+    
+% These macros are automatically generated from the "macros"
+% XML element.  Make permanent edits there.
+%
+%%%%%%%%%%%%%%%%%%%%%
+%
+%     Conveniences
+%
+%%%%%%%%%%%%%%%%%%%%%
+%
+%  Integers
+%  Usage:  \Z
+\newcommand{\Z}{\mathbb{Z}}
+%
+%  Real numbers, as set of scalars
+%  Usage:  \reals
+\newcommand{\reals}{\mathbb{R}}
+%
+%  n-space over real field
+%  Usage: \complex{integer-dimension}
+\newcommand{\real}[1]{\mathbb{R}^{#1}}
+%
+%  evaluate a function
+%  Usage: \fe{function-name}{input}
+\newcommand{\fe}[2]{#1\mathopen{}\left(#2\right)\mathclose{}}
+%
+%  closed interval
+%  Usage: \cinterval{left-endpoint}{right-endpoint}
+\newcommand{\cinterval}[2]{\left[#1,#2\right]}
+%
+%  open interval
+%  Usage: \ointerval{left-endpoint}{right-endpoint}
+\newcommand{\ointerval}[2]{\left(#1,#2\right)}
+%
+%  closed-open interval
+%  Usage: \cointerval{left-endpoint}{right-endpoint}
+\newcommand{\cointerval}[2]{\left[\left.#1,#2\right)\right.}
+%
+%  open-closed interval
+%  Usage: \ocinterval{left-endpoint}{right-endpoint}
+\newcommand{\ocinterval}[2]{\left(\left.#1,#2\right]\right.}
+%
+%  point
+%  Usage: \point{x}{y}
+\newcommand{\point}[2]{\left(#1,#2\right)}
+%
+%  first derivative
+%  Usage: \fd{f}
+\newcommand{\fd}[1]{#1'}
+%
+%  second derivative
+%  Usage: \sd{f}
+\newcommand{\sd}[1]{#1''}
+%
+%  third derivative
+%  Usage: \td{f}
+\newcommand{\td}[1]{#1'''}
+%
+%  Leibniz notation
+%  Usage: \lz{y}{x}
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+%
+%  higher Leibniz notation
+%  Usage: \lzn{n}{y}{x}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+%
+%  Leibniz operator
+%  Usage: \lzo{x}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+%
+%  Leibniz operator on ....
+%  Usage: \lzoo{x}{y}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+%
+%  higher Leibniz operator
+%  Usage: \lzon{n}{x}{y}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+%
+%  Leibniz operator at ....
+%  Usage: \lzoa{y}{x}{a}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+%
+%  Absolute Value
+%  Usage: \abs{x}
+\newcommand{\abs}[1]{\left|#1\right|}
+%
+%  sech
+%  Usage: \sech
+\newcommand{\sech}{\operatorname{sech}}
+%
+%  csch
+%  Usage: \csch
+\newcommand{\csch}{\operatorname{csch}}
+%
+
+
+
+    \begin{document}
+
+                            \begin{tikzpicture}
+                            \draw (-2,0) arc (190:350:2 and 0.5) -- (0,-4) -- cycle;
+                            \draw (-2,0) arc (190:-10:2 and 0.5);
+                            \draw (-1.5,-1) arc (190:350:1.5 and 0.375);
+                            \draw (-1.5,-1) arc (190:-10:1.5 and 0.375);
+                            \shade[left color=blue!5!white,right color=blue!40!white,opacity=0.8] (-1.5,-1) arc (190:350:1.5 and 0.375) -- (0,-4) -- cycle;
+                            \shade[left color=blue!5!white,right color=blue!40!white,opacity=0.4] (-1.5,-1) arc (190:550:1.5 and 0.375) -- cycle;
+                            \coordinate (O) at (0,0.1);
+                            \coordinate (A) at (2,0.1);
+                            \coordinate (B) at (2,-4);    
+                            \coordinate (C) at (0,-4);    
+                            \coordinate (D) at (0,-0.925);    
+                            \coordinate (M) at (0.6,-0.925);    
+                            \coordinate (N) at (0.9,-0.925);    
+                            \coordinate (E) at (1.5,-0.925);    
+                            \coordinate (F) at (1.5,-4);    
+                            \draw[] (O) -- (A) -- (B) -- (C) -- cycle;
+                            \draw[] (N) -- (E) -- (F);
+                            \draw[] (D) -- (M);
+                            \tkzLabelSegment[rotate=270,anchor=south](A,B){$12\,\mathrm{cm}$}
+                            \tkzLabelSegment[](O,A){$3\,\mathrm{cm}$}
+                            \tkzLabelSegment[fill=white](E,F){$h$}
+                            \tkzLabelSegment[above=-1.2ex](D,E){$r$}
+                            \tkzMarkRightAngle[](C,O,A)    
+                            \tkzMarkRightAngle[](C,D,M)    
+                            \end{tikzpicture}
+                            \end{document}
