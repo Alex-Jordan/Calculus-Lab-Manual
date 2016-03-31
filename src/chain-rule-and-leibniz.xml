@@ -13,20 +13,10 @@
     <p>So far we have worked with the chain rule as expressed using function notation.  In some applications it is easier to think of the chain rule using Leibniz notation. Consider the following example.</p>
 
     <example>
-        <p>During the 1990s, the amount of electricity used per day in Etown increased as a function of population at the rate of <quantity><mag>18</mag><unit prefix="kilo" base="watt"/></quantity>/person.  On July 1, 1997, the population of Etown was <m>100{,}000</m> and the population was decreasing at a rate of 6 people/day.  In <xref ref="equation-leibniz-chain-example"/> we use these values to determine the rate at which electrical usage was changing (with respect to time) in Etown on 7/1/1997.  Please note that in this extremely simplified example we are ignoring all factors that contribute to citywide electrical usage other than population (such as temperature).</p>
-
-        <men xml:id="equation-leibniz-chain-example">\left(18\frac{\text{kW}}{\text{person}}\right)\left(-6\frac{\text{people}}{\text{day}}\right)=-108\frac{\text{kW}}{\text{day}}</men>
-
-    <p>Let's define <m>\fe{g}{t}</m>  as the population of Etown <m>t</m> years after January 1, 1990 and <m>\fe{f}{u}</m> as the daily amount of electricity used in Etown when the population was <m>u</m>.  From the given information, <m>\fe{g}{7.5}=100{,}000</m>, <m>\fe{\fd{g}}{7.5}=-6</m>, and <m>\fe{\fd{f}}{u}=18</m> for all values of <m>u</m>.  If we let <m>y=\fe{f}{u}</m> where <m>u=\fe{g}{t}</m>, then we have (from <xref ref="equation-leibniz-chain-example"/>):</p>
-
-        <men xml:id="equation-second-leibniz-chain-example">\left(\lzoa{y}{u}{u=100{,}000}\right)\left(\lzoa{u}{t}{t=7.5}\right)=\lzoa{y}{t}{t=7.5}\text{.}</men>
- 
-    <p>You should note that <xref ref="equation-second-leibniz-chain-example"/> is an application of the chain rule expressed in Leibniz notation; specifically, the expression on the left side of the equal sign represents <m>\fe{\fd{f}}{\fe{g}{7.5}}\fe{\fd{g}}{7.5}</m>.</p>
+        <p>During the 1990s, the amount of electricity used per day in Etown increased as a function of population at the rate of <quantity><mag>18</mag><unit prefix="kilo" base="watt"/></quantity>/person.  On July 1, 1997, the population of Etown was <m>100{,}000</m> and the population was decreasing at a rate of 6 people/day.  In <xref ref="equation-leibniz-chain-example"/> we use these values to determine the rate at which electrical usage was changing (with respect to time) in Etown on 7/1/1997.  Please note that in this extremely simplified example we are ignoring all factors that contribute to citywide electrical usage other than population (such as temperature).<men xml:id="equation-leibniz-chain-example">\left(18\frac{\text{kW}}{\text{person}}\right)\left(-6\frac{\text{people}}{\text{day}}\right)=-108\frac{\text{kW}}{\text{day}}</men>Let's define <m>\fe{g}{t}</m>  as the population of Etown <m>t</m> years after January 1, 1990 and <m>\fe{f}{u}</m> as the daily amount of electricity used in Etown when the population was <m>u</m>.  From the given information, <m>\fe{g}{7.5}=100{,}000</m>, <m>\fe{\fd{g}}{7.5}=-6</m>, and <m>\fe{\fd{f}}{u}=18</m> for all values of <m>u</m>.  If we let <m>y=\fe{f}{u}</m> where <m>u=\fe{g}{t}</m>, then we have (from <xref ref="equation-leibniz-chain-example"/>):<men xml:id="equation-second-leibniz-chain-example">\left(\lzoa{y}{u}{u=100{,}000}\right)\left(\lzoa{u}{t}{t=7.5}\right)=\lzoa{y}{t}{t=7.5}\text{.}</men>You should note that <xref ref="equation-second-leibniz-chain-example"/> is an application of the chain rule expressed in Leibniz notation; specifically, the expression on the left side of the equal sign represents <m>\fe{\fd{f}}{\fe{g}{7.5}}\fe{\fd{g}}{7.5}</m>.</p>
     </example>
 
-    <p>In general, we could express the chain rule as shown in <xref ref="equation-leibniz-chain-rule"/>.</p>
-
-    <men xml:id="equation-leibniz-chain-rule"><m>\lz{y}{x}=\lz{y}{u}\cdot\lz{u}{x}</m></men>
+    <p>In general, we could express the chain rule as shown in <xref ref="equation-leibniz-chain-rule"/>.<men xml:id="equation-leibniz-chain-rule"><m>\lz{y}{x}=\lz{y}{u}\cdot\lz{u}{x}</m></men></p>
 
     <exercises>
         <exercisegroup>

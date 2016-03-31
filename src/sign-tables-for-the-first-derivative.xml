@@ -158,9 +158,9 @@
             <introduction>
                 <p>Perform each of the following for the functions in <xref autoname="plural" ref="exercise-make-sign-table-first"/><ndash/><xref autoname="no" ref="exercise-make-sign-table-last"/>.</p>
                 <ul> 
-                    <li>Formally establish the critical numbers of the function.</li> 
-                    <li>Create a table similar to <xref autoname="plural" ref="table-polynomial-sign-table"/><ndash/><xref autoname="no" ref="table-trient-rational-sign-table"/>. Number the tables.  Don't forget to include table headings and column headings.</li> 
-                    <li>State the local minimum points and local maximum points on the function.  Make sure that you explicitly address both types of points even if there are none of one type and/or the other.</li> 
+                    <li><p>Formally establish the critical numbers of the function.</p></li> 
+                    <li><p>Create a table similar to <xref autoname="plural" ref="table-polynomial-sign-table"/><ndash/><xref autoname="no" ref="table-trient-rational-sign-table"/>. Number the tables.  Don't forget to include table headings and column headings.</p></li> 
+                    <li><p>State the local minimum points and local maximum points on the function.  Make sure that you explicitly address both types of points even if there are none of one type and/or the other.</p></li> 
                 </ul> 
             </introduction>
             <exercise xml:id="exercise-make-sign-table-first">

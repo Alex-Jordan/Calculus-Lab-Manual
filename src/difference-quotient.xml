@@ -12,9 +12,7 @@
 
     <p>While it's easy to see that the formula <m>\frac{\fe{f}{x_1}-\fe{f}{x_0}}{x_1-x_0}</m> gives the slope of the line connecting two points on the function <m>f</m>, the resultant expression can at times be awkward to work with. We actually already saw that in <xref ref="example-secant"/>.</p>
 
-    <p>The algebra associated with secant lines (and average velocities) can sometimes be simplified if we designate the variable <m>h</m> to be the run between the two points (or the length of the time interval). With this designation we have <m>x_1-x_0=h</m> which gives us <m>x_1=x_0+h</m>. Making these substitutions we get <xref autoname="no" ref="equation-difference-quotient"/>. The expression on the right side of <xref autoname="no" ref="equation-difference-quotient"/> is called the <term>difference quotient</term> for <m>f</m>.</p>
-
-    <men xml:id="equation-difference-quotient">\frac{\fe{f}{x_1}-\fe{f}{x_0}}{x_1-x_0}=\frac{\fe{f}{x_0+h}-\fe{f}{x_0}}{h}</men>
+    <p>The algebra associated with secant lines (and average velocities) can sometimes be simplified if we designate the variable <m>h</m> to be the run between the two points (or the length of the time interval). With this designation we have <m>x_1-x_0=h</m> which gives us <m>x_1=x_0+h</m>. Making these substitutions we get <xref autoname="no" ref="equation-difference-quotient"/>. The expression on the right side of <xref autoname="no" ref="equation-difference-quotient"/> is called the <term>difference quotient</term> for <m>f</m>.<men xml:id="equation-difference-quotient">\frac{\fe{f}{x_1}-\fe{f}{x_0}}{x_1-x_0}=\frac{\fe{f}{x_0+h}-\fe{f}{x_0}}{h}</men></p>
 
     <p>Let's revisit the function <m>\fe{f}{x}=3+2x-x^2</m> from <xref ref="example-secant"/>. The difference quotient for this function is derived in <xref ref="example-difference-quotient"/>.</p>
 

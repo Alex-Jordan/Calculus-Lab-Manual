@@ -13,7 +13,7 @@
     <p>While the primary focus of this lab is to help you develop shortcut skills for finding derivative formulas, there are inevitable notational issues that must be addressed.  It turns out that the latter issue is the one we are going to address first.</p>
 
 
-    <definition xml-id="definition-leibniz-notation">
+    <definition xml:id="definition-leibniz-notation">
         <title>Leibniz Notation</title>
         <statement>
             <p>If <m>y=\fe{f}{x}</m>, we say that the derivative of <m>y</m> with respect to <m>x</m> is equal to <m>\fe{\fd{f}}{x}</m>. Symbolically, we write <m>\lz{y}{x}=\fe{\fd{f}}{x}</m>.</p>

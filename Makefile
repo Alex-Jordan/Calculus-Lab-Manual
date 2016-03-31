@@ -159,16 +159,8 @@ epub:
 #     "Element XXXX content does not follow"
 #     "No declaration for"
 #   Automatically invokes the "less" pager, could configure as $(PAGER)
-sample-chapter-check:
+check:
 	install -d $(OUTPUT)
 	-rm $(OUTPUT)/dtderrors.*
 	-xmllint --xinclude --postvalid --noout --dtdvalid $(DTD)/mathbook.dtd $(SRC)/clm.xml 2> $(OUTPUT)/dtderrors.txt
 	# less $(OUTPUT)/dtderrors.txt
-
-# 2016-02-10: no serious effort yet to make this check below pass
-template-check:
-	install -d $(OUTPUT)
-	-rm $(OUTPUT)/dtderrors.*
-	-xmllint --xinclude --postvalid --noout --dtdvalid $(DTD)/mathbook.dtd $(SRC)/clm.xml 2> $(OUTPUT)/dtderrors.txt
-	# less $(OUTPUT)/dtderrors.txt
-

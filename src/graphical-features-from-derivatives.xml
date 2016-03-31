@@ -296,8 +296,8 @@
                 <statement>
                     <p>Which of the following propositions is true? If a given proposition is not true, draw a graph that illustrates its untruth.</p>
                     <ol cols="2">
-                        <li>If the graph of <m>f</m> has a vertical asymptote, then the graph of <m>\fd{f}</m> must also have a vertical asymptote.</li>
-                        <li>If the graph of <m>\fd{f}</m> has a vertical asymptote, then the graph of <m>f</m> must also have a vertical asymptote.</li> 
+                        <li><p>If the graph of <m>f</m> has a vertical asymptote, then the graph of <m>\fd{f}</m> must also have a vertical asymptote.</p></li>
+                        <li><p>If the graph of <m>\fd{f}</m> has a vertical asymptote, then the graph of <m>f</m> must also have a vertical asymptote.</p></li> 
                     </ol>
                 </statement>
             </exercise>
@@ -305,10 +305,10 @@
                 <statement>
                     <p>Suppose that the function <m>f</m> is continuous, concave down, and is such that <m>\fe{f}{7}=5</m> and <m>\fe{\fd{f}}{7}=3</m>.  Which of the following is true?</p>
                     <ol cols="2">
-                        <li><m>\fe{f}{9}\lt11</m></li>
-                        <li><m>\fe{f}{9}=11</m></li>
-                        <li><m>\fe{f}{9}\gt11</m></li>
-                        <li>There is not enough information to determine the relationship between <m>\fe{f}{9}</m> and <m>11</m>.</li>
+                        <li><p><m>\fe{f}{9}\lt11</m></p></li>
+                        <li><p><m>\fe{f}{9}=11</m></p></li>
+                        <li><p><m>\fe{f}{9}\gt11</m></p></li>
+                        <li><p>There is not enough information to determine the relationship between <m>\fe{f}{9}</m> and <m>11</m>.</p></li>
                     </ol>
                  </statement>
             </exercise>

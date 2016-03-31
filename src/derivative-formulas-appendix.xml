@@ -14,7 +14,7 @@
 
     <table>
         <caption/>
-        <centerline><tabular top="major">
+        <tabular top="major">
             <col halign="center"/>
             <col halign="center"/>
             <col halign="center"/>
@@ -103,7 +103,7 @@
                 <cell><m>\lzoo{x}{\abs{u}}=\frac{\abs{u}}{u}\lzoo{x}{u}</m></cell>
                 <cell><m>\lzoo{x}{\abs{y}}=\frac{\abs{y}}{y}\lz{y}{x}</m></cell>
             </row>
-        </tabular></centerline>
+        </tabular>
     </table>
 
     <theorem number="no">

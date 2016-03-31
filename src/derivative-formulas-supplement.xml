@@ -652,6 +652,7 @@ formula stated above for the product of three functions.  The first application 
             <introduction>
                 <p>In <xref ref="table-functions-for-derivative-rules"/> several function and derivative values are given for the functions <m>f</m> and <m>g</m>.  The exercises that follow are based upon these two functions.</p>
                 <table xml:id="table-functions-for-derivative-rules" valign="top">
+                    <caption>Various values for derivatives of <m>f</m> and <m>g</m></caption>
                     <tabular top="major">
                         <col halign="right"/>
                         <col halign="right"/>
@@ -715,7 +716,6 @@ formula stated above for the product of three functions.  The first application 
                             <cell><m>214</m></cell>
                         </row>
                     </tabular>
-                    <caption>Various values for derivatives of <m>f</m> and <m>g</m></caption>
                 </table>
                 <p>Suppose that you were asked to find the value of <m>\fe{\fd{h}}{2}</m> where <m>\fe{h}{x}=\fe{f}{x}\fe{g}{x}</m>.  The first thing you would need to do is find a formula for <m>\fe{\fd{h}}{x}</m>.  You would then replace <m>x</m> with <m>2</m>, substitute the appropriate function and derivative values, and simplify.  This is illustrated below.<md>
                 <mrow>\fe{\fd{h}}{x}&amp;=\lzoo{x}{\fe{f}{x}}\fe{g}{x}+\fe{f}{x}\lzoo{x}{\fe{g}{x}}</mrow> 

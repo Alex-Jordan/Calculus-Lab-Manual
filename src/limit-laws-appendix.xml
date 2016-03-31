@@ -15,34 +15,35 @@
 
         <p>The following laws allow you to replace a limit expression with an actual value.  For example, the expression <m>\lim\limits_{t\to5}t</m> can be replaced with the number <m>5</m>, the expression <m>\lim\limits_{t\to7^{-}}6</m> can be replaced with the number <m>6</m>, and the expression <m>\lim\limits_{z\to\infty}\frac{12}{e^z}</m> can be replaced with the number <m>0</m>.</p>
 
-    <p>In all cases both <m>a</m> and <m>C</m> represent real numbers.</p>
+        <p>In all cases both <m>a</m> and <m>C</m> represent real numbers.</p>
 
-        <theorem xml:id="llr1" number="no"> 
-            <title>Limit Law R1</title>
-            <statement>
-                <p><md><mrow>\lim_{x\to a}x=\lim_{x\to a^{-}}x=\lim_{x\to a^{+}}x=a</mrow></md></p>
-            </statement>
-        </theorem> 
-   
-        <theorem xml:id="llr2" number="no"> 
-            <title>Limit Law R2</title>
-            <statement>
-                <p><md><mrow>\lim_{x\to a}C=\lim_{x\to a^{-}}C=\lim_{x\to a^{+}}C=\lim_{x\to \infty}C=\lim_{x\to -\infty}C=C</mrow></md></p>
-            </statement>
-        </theorem> 
-
-        <theorem xml:id="llr3" number="no"> 
-            <title>Limit Law R3</title>
-            <statement>
-                <p><md>
-                    <mrow>\lim_{x\to \infty}\fe{f}{x}=\infty&amp;\implies\lim_{x\to \infty}\frac{C}{\fe{f}{x}}=0</mrow>
-                    <mrow>\lim_{x\to \infty}\fe{f}{x}=-\infty&amp;\implies\lim_{x\to \infty}\frac{C}{\fe{f}{x}}=0</mrow>
-                    <mrow>\lim_{x\to -\infty}\fe{f}{x}=\infty&amp;\implies\lim_{x\to -\infty}\frac{C}{\fe{f}{x}}=0</mrow>
-                    <mrow>\lim_{x\to -\infty}\fe{f}{x}=-\infty&amp;\implies\lim_{x\to -\infty}\frac{C}{\fe{f}{x}}=0</mrow>
-                </md></p>
-            </statement>
-        </theorem> 
     </paragraphs>
+
+    <theorem xml:id="llr1" number="no"> 
+        <title>Limit Law R1</title>
+        <statement>
+            <p><md><mrow>\lim_{x\to a}x=\lim_{x\to a^{-}}x=\lim_{x\to a^{+}}x=a</mrow></md></p>
+        </statement>
+    </theorem> 
+
+    <theorem xml:id="llr2" number="no"> 
+        <title>Limit Law R2</title>
+        <statement>
+            <p><md><mrow>\lim_{x\to a}C=\lim_{x\to a^{-}}C=\lim_{x\to a^{+}}C=\lim_{x\to \infty}C=\lim_{x\to -\infty}C=C</mrow></md></p>
+        </statement>
+    </theorem> 
+
+    <theorem xml:id="llr3" number="no"> 
+        <title>Limit Law R3</title>
+        <statement>
+            <p><md>
+                <mrow>\lim_{x\to \infty}\fe{f}{x}=\infty&amp;\implies\lim_{x\to \infty}\frac{C}{\fe{f}{x}}=0</mrow>
+                <mrow>\lim_{x\to \infty}\fe{f}{x}=-\infty&amp;\implies\lim_{x\to \infty}\frac{C}{\fe{f}{x}}=0</mrow>
+                <mrow>\lim_{x\to -\infty}\fe{f}{x}=\infty&amp;\implies\lim_{x\to -\infty}\frac{C}{\fe{f}{x}}=0</mrow>
+                <mrow>\lim_{x\to -\infty}\fe{f}{x}=-\infty&amp;\implies\lim_{x\to -\infty}\frac{C}{\fe{f}{x}}=0</mrow>
+            </md></p>
+        </statement>
+    </theorem> 
 
     <paragraphs>
         <title>Infinite Limit Laws: Limits as the output increases or decreases without bound </title>
@@ -50,10 +51,10 @@
         <p>Many limit values do not exist.  Sometimes the non-existence is caused by the function value either increasing without bound or decreasing without bound.  In these special cases we use the symbols <m>\infty</m> and <m>-\infty</m> to communicate the non-existence of the limits.</p>
         <p>Some examples of these type of non-existent limits follow.</p>
         <ul>
-            <li><m>\lim\limits_{x\to\infty}x^n=\infty</m> (if <m>n</m> is a positive real number)</li>
-            <li><m>\lim\limits_{x\to-\infty}x^n=\infty</m> (if <m>n</m> is an even positive integer)</li>
-            <li><m>\lim\limits_{x\to-\infty}x^n=-\infty</m> (if <m>n</m> is an odd positive integer)</li>
-            <li><m>\lim\limits_{x\to\infty}e^x=\infty</m>, <m>\lim\limits_{x\to-\infty}e^{-x}=\infty</m>, <m>\lim\limits_{x\to\infty}\fe{\ln}{x}=\infty</m>, <m>\lim\limits_{x\to0^{+}}\fe{\ln}{x}=-\infty</m></li>
+            <li><p><m>\lim\limits_{x\to\infty}x^n=\infty</m> (if <m>n</m> is a positive real number)</p></li>
+            <li><p><m>\lim\limits_{x\to-\infty}x^n=\infty</m> (if <m>n</m> is an even positive integer)</p></li>
+            <li><p><m>\lim\limits_{x\to-\infty}x^n=-\infty</m> (if <m>n</m> is an odd positive integer)</p></li>
+            <li><p><m>\lim\limits_{x\to\infty}e^x=\infty</m>, <m>\lim\limits_{x\to-\infty}e^{-x}=\infty</m>, <m>\lim\limits_{x\to\infty}\fe{\ln}{x}=\infty</m>, <m>\lim\limits_{x\to0^{+}}\fe{\ln}{x}=-\infty</m></p></li>
         </ul> 
     </paragraphs>
 
@@ -66,50 +67,51 @@
 
         <p>In all cases <m>a</m> can represent a real number, a real number from the left, a real number from the right, the symbol <m>\infty</m>, or the symbol <m>-\infty</m>.</p>
 
-        <theorem xml:id="lla1" number="A1">
-            <title>Limit Law A1</title>
-            <statement>
-                <p><m>\lim\limits_{x\to a}\left(\fe{f}{x}+\fe{g}{x}\right)=\lim\limits_{x\to a}\fe{f}{x}+\lim\limits_{x\to a}\fe{g}{x}</m></p>
-            </statement>
-        </theorem> 
-        <theorem xml:id="lla2" number="no">
-            <title>Limit Law A2</title>
-            <statement>
-                <p><m>\lim\limits_{x\to a}\left(\fe{f}{x}-\fe{g}{x}\right)=\lim\limits_{x\to a}\fe{f}{x}-\lim\limits_{x\to a}\fe{g}{x}</m></p>
-            </statement>
-        </theorem> 
-        <theorem xml:id="lla3" number="no">
-            <title>Limit Law A3</title>
-            <statement>
-                <p><m>\lim\limits_{x\to a}\left(C\fe{f}{x}\right)=C\lim\limits_{x\to a}\fe{f}{x}</m></p>
-            </statement>
-        </theorem> 
-        <theorem xml:id="lla4" number="no">
-            <title>Limit Law A4</title>
-            <statement>
-                <p><m>\lim\limits_{x\to a}\left(\fe{f}{x}\cdot\fe{g}{x}\right)=\lim\limits_{x\to a}\fe{f}{x}\cdot\lim\limits_{x\to a}\fe{g}{x}</m></p>
-            </statement>
-        </theorem> 
-        <theorem xml:id="lla5" number="no">
-            <title>Limit Law A5</title>
-            <statement>
-                <p><m>\lim\limits_{x\to a}\frac{\fe{f}{x}}{\fe{g}{x}}=\frac{\lim\limits_{x\to a}\fe{f}{x}}{\lim\limits_{x\to a}\fe{g}{x}}</m> if and only if <m>\lim\limits_{x\to a}\fe{g}{x}\neq0</m></p>
-            </statement>
-        </theorem> 
-        <theorem xml:id="lla6" number="no">
-            <title>Limit Law A6</title>
-            <statement>
-                <p><m>\lim\limits_{x\to a}\fe{f}{\fe{g}{x}}=\fe{f}{\lim\limits_{x\to a}\fe{g}{x}}</m> when <m>f</m> is continuous at <m>\lim\limits_{x\to a}\fe{g}{x}</m></p>
-            </statement>
-        </theorem> 
-        <theorem xml:id="lla7" number="no">
-            <title>Limit Law A7</title>
-            <statement>
-                <p>If there exists an open interval centered at <m>a</m> over which <m>\fe{f}{x}=\fe{g}{x}</m> for <m>x\neq a</m>, then <m>\lim\limits_{x\to a}\fe{f}{x}=\lim\limits_{x\to a}\fe{g}{x}</m> (provided that both limits exist).</p>
-                <p>Additionally, if there exists an open interval centered at <m>a</m> over which <m>\fe{f}{x}=\fe{g}{x}</m> for <m>x\neq a</m>, then <m>\lim\limits_{x\to a}\fe{f}{x}=\infty</m> if and only if <m>\lim\limits_{x\to a}\fe{g}{x}=\infty</m>, and, similarly, <m>\lim\limits_{x\to a}\fe{f}{x}=-\infty</m> if and only if <m>\lim\limits_{x\to a}\fe{g}{x}=-\infty</m>.</p>
-            </statement>
-        </theorem> 
     </paragraphs>
+
+    <theorem xml:id="lla1" number="A1">
+        <title>Limit Law A1</title>
+        <statement>
+            <p><m>\lim\limits_{x\to a}\left(\fe{f}{x}+\fe{g}{x}\right)=\lim\limits_{x\to a}\fe{f}{x}+\lim\limits_{x\to a}\fe{g}{x}</m></p>
+        </statement>
+    </theorem> 
+    <theorem xml:id="lla2" number="no">
+        <title>Limit Law A2</title>
+        <statement>
+            <p><m>\lim\limits_{x\to a}\left(\fe{f}{x}-\fe{g}{x}\right)=\lim\limits_{x\to a}\fe{f}{x}-\lim\limits_{x\to a}\fe{g}{x}</m></p>
+        </statement>
+    </theorem> 
+    <theorem xml:id="lla3" number="no">
+        <title>Limit Law A3</title>
+        <statement>
+            <p><m>\lim\limits_{x\to a}\left(C\fe{f}{x}\right)=C\lim\limits_{x\to a}\fe{f}{x}</m></p>
+        </statement>
+    </theorem> 
+    <theorem xml:id="lla4" number="no">
+        <title>Limit Law A4</title>
+        <statement>
+            <p><m>\lim\limits_{x\to a}\left(\fe{f}{x}\cdot\fe{g}{x}\right)=\lim\limits_{x\to a}\fe{f}{x}\cdot\lim\limits_{x\to a}\fe{g}{x}</m></p>
+        </statement>
+    </theorem> 
+    <theorem xml:id="lla5" number="no">
+        <title>Limit Law A5</title>
+        <statement>
+            <p><m>\lim\limits_{x\to a}\frac{\fe{f}{x}}{\fe{g}{x}}=\frac{\lim\limits_{x\to a}\fe{f}{x}}{\lim\limits_{x\to a}\fe{g}{x}}</m> if and only if <m>\lim\limits_{x\to a}\fe{g}{x}\neq0</m></p>
+        </statement>
+    </theorem> 
+    <theorem xml:id="lla6" number="no">
+        <title>Limit Law A6</title>
+        <statement>
+            <p><m>\lim\limits_{x\to a}\fe{f}{\fe{g}{x}}=\fe{f}{\lim\limits_{x\to a}\fe{g}{x}}</m> when <m>f</m> is continuous at <m>\lim\limits_{x\to a}\fe{g}{x}</m></p>
+        </statement>
+    </theorem> 
+    <theorem xml:id="lla7" number="no">
+        <title>Limit Law A7</title>
+        <statement>
+            <p>If there exists an open interval centered at <m>a</m> over which <m>\fe{f}{x}=\fe{g}{x}</m> for <m>x\neq a</m>, then <m>\lim\limits_{x\to a}\fe{f}{x}=\lim\limits_{x\to a}\fe{g}{x}</m> (provided that both limits exist).</p>
+            <p>Additionally, if there exists an open interval centered at <m>a</m> over which <m>\fe{f}{x}=\fe{g}{x}</m> for <m>x\neq a</m>, then <m>\lim\limits_{x\to a}\fe{f}{x}=\infty</m> if and only if <m>\lim\limits_{x\to a}\fe{g}{x}=\infty</m>, and, similarly, <m>\lim\limits_{x\to a}\fe{f}{x}=-\infty</m> if and only if <m>\lim\limits_{x\to a}\fe{g}{x}=-\infty</m>.</p>
+        </statement>
+    </theorem> 
 
     <paragraphs>
         <title>Rational Limit Forms</title>
@@ -119,26 +121,31 @@
                 <p>The value of the limit is the number to which the limit form simplifies; for example, <m>\lim\limits_{x\to3}\frac{2x+16}{5x-4}=2</m>. You can immediately begin applying limit laws if you are <q>proving</q> the limit value. </p></li>
         </ul>
         <ul>
-            <li><p><m>\frac{\text{non-zero real number}}{\text{zero}}</m>. Example: <m>\lim\limits_{x\to7^{-}}\frac{x+7}{7-x}</m> (the form is <m>\frac{14}{0}</m>)</p>
+            <li>
+                <p><m>\frac{\text{non-zero real number}}{\text{zero}}</m>. Example: <m>\lim\limits_{x\to7^{-}}\frac{x+7}{7-x}</m> (the form is <m>\frac{14}{0}</m>)</p>
                 <p>The limit value doesn't exist. The expression whose limit is being found is either increasing without bound or decreasing without bound (or possibly both if you have a two-sided limit).   You may be able to communicate the non-existence of the limit using <m>\infty</m> or <m>-\infty</m>. For example, if the value of <m>x</m> is a little less than <m>7</m>, the value of <m>\frac{x+7}{7-x}</m> is positive.  Hence you could write <m>\lim\limits_{x\to7^{-}}\frac{x+7}{7-x}=\infty</m>.</p></li>
         </ul>
         <ul>
-            <li><p><m>\frac{\text{zero}}{\text{zero}}</m>. Example: <m>\lim\limits_{x\to-2}\frac{x^2-4}{x^2+3x+2}</m> (the form is <m>\frac{0}{0}</m>)</p>
+            <li>
+                <p><m>\frac{\text{zero}}{\text{zero}}</m>. Example: <m>\lim\limits_{x\to-2}\frac{x^2-4}{x^2+3x+2}</m> (the form is <m>\frac{0}{0}</m>)</p>
                 <p>This is an <term>indeterminate form limit</term>. You do not know the value of the limit (or even if it exists) nor can you begin to apply limit laws.  You need to manipulate the expression whose limit is being found until the resultant limit no longer has indeterminate form.  For example:<md>
                 <mrow>\lim_{x\to-2}\frac{x^2-4}{x^2+3x+2}&amp;=\lim_{x\to-2}\frac{(x+2)(x-2)}{(x+2)(x+1)}</mrow>
                 <mrow>&amp;=\lim_{x\to-2}\frac{x-2}{x+1}\text{.}</mrow>
                 </md>The limit form is now <m>\frac{-4}{-1}</m>; you may begin applying the limit laws.</p></li>
         </ul>
         <ul>
-            <li><p><m>\frac{\text{real number}}{\text{infinity}}</m>. Example: <m>\lim\limits_{x\to0^{+}}\frac{1-4e^{x}}{\fe{\ln}{x}}</m> (the form is <m>\frac{-3}{-\infty}</m>)</p>
+            <li>
+                <p><m>\frac{\text{real number}}{\text{infinity}}</m>. Example: <m>\lim\limits_{x\to0^{+}}\frac{1-4e^{x}}{\fe{\ln}{x}}</m> (the form is <m>\frac{-3}{-\infty}</m>)</p>
                 <p>The limit value is zero and this is justified by logic similar to that used to justify Limit Law R3.</p></li>
         </ul>
         <ul>
-            <li><p><m>\frac{\text{infinity}}{\text{real number}}</m>. Example: <m>\lim\limits_{x\to0^{+}}\frac{\fe{\ln}{x}}{1-4e^{x}}</m> (the form is <m>\frac{-\infty}{-3}</m>)</p>
+            <li>
+                <p><m>\frac{\text{infinity}}{\text{real number}}</m>. Example: <m>\lim\limits_{x\to0^{+}}\frac{\fe{\ln}{x}}{1-4e^{x}}</m> (the form is <m>\frac{-\infty}{-3}</m>)</p>
                 <p>The limit value doesn't exist.  The expression whose limit is being found is either increasing without bound or decreasing without bound (or possibly both if you have a two-sided limit).   You may be able to communicate the non-existence of the limit using <m>\infty</m> or <m>-\infty</m>. For example, you can write <m>\lim\limits_{x\to0^{+}}\frac{\fe{\ln}{x}}{1-4e^{x}}=\infty</m>.</p></li>
         </ul>
         <ul>
-            <li><p><m>\frac{\text{infinity}}{\text{infinity}}</m>. Example: <m>\lim\limits_{x\to\infty}\frac{3+e^x}{1+3e^x}</m> (the form is <m>\frac{\infty}{\infty}</m>)</p>
+            <li>
+                <p><m>\frac{\text{infinity}}{\text{infinity}}</m>. Example: <m>\lim\limits_{x\to\infty}\frac{3+e^x}{1+3e^x}</m> (the form is <m>\frac{\infty}{\infty}</m>)</p>
                 <p>This is an <term>indeterminate form limit</term>. You do not know the value of the limit (or even if it exists) nor can you begin to apply limit laws.  You need to manipulate the expression whose limit is being found until the resultant limit no longer has indeterminate form.  For example:<md>
                 <mrow>\lim_{x\to\infty}\frac{3+e^x}{1+3e^x}&amp;=\lim_{x\to\infty}\left(\frac{3+e^x}{1+3e^x}\cdot\frac{\sfrac{1}{e^x}}{\sfrac{1}{e^x}}\right)</mrow>
                 <mrow>&amp;=\lim_{x\to\infty}\frac{\frac{3}{e^x}+1}{\frac{1}{e^x}+3}\text{.}</mrow>

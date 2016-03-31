@@ -12,7 +12,7 @@
 
     <p>Consider the following problem.</p>
 
-    <blockquote>A perfectly spherical snowball melts at a constant rate of <quantity><mag>0.3</mag><unit prefix="centi" base="meter" exp="3"/><per base="minute"/></quantity>. At what rate is the radius decreasing when the radius of the snowball is exactly <quantity><mag>1.4</mag><unit prefix="centi" base="meter"/></quantity>?</blockquote>
+    <blockquote><p>A perfectly spherical snowball melts at a constant rate of <quantity><mag>0.3</mag><unit prefix="centi" base="meter" exp="3"/><per base="minute"/></quantity>. At what rate is the radius decreasing when the radius of the snowball is exactly <quantity><mag>1.4</mag><unit prefix="centi" base="meter"/></quantity>?</p></blockquote>
 
     <p>Before we actually solve the problem, let's take a moment to think about the situation. If the snowball were really large, there would be a lot of surface area to account for the loss of water. When the snowball gets small, however, there's less surface area to contribute water and, consequently, the radius will decrease at a faster rate than it does when the snowball is large. Mathematically, this increase in the rate at which the radius changes over time is a result of the manner in which the radius changes with respect to volume.</p>
 
@@ -43,9 +43,9 @@
 
     <p>The first thing we need to do is clearly identify our variables. In related rates problems there are three broad types of variables.</p>
     <ol>
-        <li>Variables that measure physical quantities. These include, among other things, length variables, angle measurement variables, area variables, and volume variables. We will call these <term>quantity-variables</term>.</li>
-        <li>Variables that measure rates (with respect to time). These variables always <em>emerge</em> by taking the derivatives (with respect to time) of the quantity-variables. We will call these <term>rate-variables</term>.</li>
-        <li>A <term>time variable</term>. Depending on context, time may be measured in seconds, minutes, hours, days, weeks, years, <etc/></li>
+        <li><p>Variables that measure physical quantities. These include, among other things, length variables, angle measurement variables, area variables, and volume variables. We will call these <term>quantity-variables</term>.</p></li>
+        <li><p>Variables that measure rates (with respect to time). These variables always <em>emerge</em> by taking the derivatives (with respect to time) of the quantity-variables. We will call these <term>rate-variables</term>.</p></li>
+        <li><p>A <term>time variable</term>. Depending on context, time may be measured in seconds, minutes, hours, days, weeks, years, <etc/></p></li>
     </ol>
     <p>The first three letters of <acro>DREDS</acro> (Diagram, Rates, Equation) are all interrelated and are not always to be taken literally. Basically they are meant to suggest that you need to identify the rates in the problem (either a given rate or the unknown rate you seek to find), identify quantity-variables that differentiate to each rate, and find an equation that relates those quantity-variables. A diagram is frequently useful during this part of the problem solving process.</p>
 
@@ -92,8 +92,8 @@
     <p>Since we are asked to determine a rate at which the radius changes, we are ultimately going to need to determine a value of <m>\lz{r}{t}</m>. We cannot do that until we have an equation that includes the symbol <m>\lz{r}{t}</m>. There is a two-step process that we follow to find that equation.</p>
 
     <ol>
-        <li>Find an equation that relates the quantity variables. This step is one of the places where a diagram sometimes comes into play. This step corresponds to <acro>E</acro> in the <acro>DREDS</acro> acronym.</li>
-        <li>Differentiate both sides of the first equation with respect to time and simplify each side. The resultant equation is called the <em>related rates equation</em>. This step corresponds to the second <acro>D</acro> in the <acro>DREDS</acro> acronym.</li>
+        <li><p>Find an equation that relates the quantity variables. This step is one of the places where a diagram sometimes comes into play. This step corresponds to <acro>E</acro> in the <acro>DREDS</acro> acronym.</p></li>
+        <li><p>Differentiate both sides of the first equation with respect to time and simplify each side. The resultant equation is called the <em>related rates equation</em>. This step corresponds to the second <acro>D</acro> in the <acro>DREDS</acro> acronym.</p></li>
     </ol>
     <p>The quantity variables in the snowball problem are <m>V</m> and <m>r</m>. We don't need a diagram in this problem as it is <q>standard knowledge</q> that the equation that relates the volume and radius of a sphere is <m>V=\frac{4}{3}\pi r^3</m>. Now that we have our (<acro>E</acro>)quation, we need to (<acro>D</acro>)ifferentiate both sides of this equation with respect to <m>t</m>, keeping in mind that both <m>V</m> and <m>r</m> are variables dependent upon <m>t</m>.<md>
     <mrow>V&amp;=\frac{4}{3}\pi r^3</mrow>
@@ -141,7 +141,7 @@
         </paragraphs>
         <paragraphs valign="top">
             <p>To finish up we need to write a conclusion.</p>
-            <blockquote>At the moment the radius of the snowball is <quantity><mag>1.4</mag><unit prefix="centi" base="meter"/></quantity>, the radius is decreasing at the rate of about <quantity><mag>0.01218</mag><unit prefix="centi" base="meter"/><per base="minute"/></quantity>.</blockquote>
+            <blockquote><p>At the moment the radius of the snowball is <quantity><mag>1.4</mag><unit prefix="centi" base="meter"/></quantity>, the radius is decreasing at the rate of about <quantity><mag>0.01218</mag><unit prefix="centi" base="meter"/><per base="minute"/></quantity>.</p></blockquote>
         </paragraphs>
     </sidebyside>
 
@@ -149,7 +149,7 @@
         <exercisegroup by="row">
             <introduction>
                 <p>Consider the following problem.</p>
-                <blockquote>A square is getting larger. The sides are each growing at a constant rate of <quantity><mag>3</mag><unit base="inch"/><per base="minute"/></quantity>. At what rate is the area of the square growing the moment its area is <quantity><mag>25</mag><unit base="inch" exp="2"/></quantity>?</blockquote>
+                <blockquote><p>A square is getting larger. The sides are each growing at a constant rate of <quantity><mag>3</mag><unit base="inch"/><per base="minute"/></quantity>. At what rate is the area of the square growing the moment its area is <quantity><mag>25</mag><unit base="inch" exp="2"/></quantity>?</p></blockquote>
                 <geogebra-html5 src="geogebra/SquareRelatedRates.html" width="520px" height="600px" style="border:0px;"/>
             </introduction>
             <exercise>
@@ -253,19 +253,19 @@
                 <p>The radius of a circle is decreasing at the rate of <quantity><mag>0.2</mag><unit prefix="centi" base="meter"/><per base="minute"/></quantity>. At what rate is the area of the circle decreasing when the area of the circle is <m>4\pi</m> <quantity><unit prefix="centi" base="meter" exp="2"/></quantity>?</p>
                 <p>Use the problem solving strategy:</p>
                 <ol>
-                    <li>Create your variable table. (<acro>DR</acro>)</li>
-                    <li>Write down an equation that relates the two quantity-variables. (<acro>E</acro>)</li>
-                    <li>Differentiate both sides of the equation you just wrote with respect to <m>t</m>. Simplify the result. This equation is called the <term>related rates equation</term>. (<acro>D</acro>)</li>
-                    <li>Write an orientation sentence or phrase and create a summary table for your quantity and rate variables. (preparing for <acro>S</acro>)</li>
-                    <li>Substitute the known values into the related rates equation and solve for the unknown rate. (<acro>S</acro>)</li>
-                    <li>Write a conclusion.</li>
+                    <li><p>Create your variable table. (<acro>DR</acro>)</p></li>
+                    <li><p>Write down an equation that relates the two quantity-variables. (<acro>E</acro>)</p></li>
+                    <li><p>Differentiate both sides of the equation you just wrote with respect to <m>t</m>. Simplify the result. This equation is called the <term>related rates equation</term>. (<acro>D</acro>)</p></li>
+                    <li><p>Write an orientation sentence or phrase and create a summary table for your quantity and rate variables. (preparing for <acro>S</acro>)</p></li>
+                    <li><p>Substitute the known values into the related rates equation and solve for the unknown rate. (<acro>S</acro>)</p></li>
+                    <li><p>Write a conclusion.</p></li>
                 </ol> 
             </statement>
         </exercise>
         <exercise>
             <statement>
                 <p>As salt water boils, the only thing that evaporates is the water<mdash/>the amount of salt in the mixture remains constant. As a consequence, the concentration of the salt in the mixture increases over time.</p>
-                <p>Suppose that the concentration of salt in a pot of boiling water is given by <m>C=\frac{200}{V}</m> where <m>C</m> is the concentration of salt in the mixture (<quantity><unit prefix="milli" base="gram"/><per base="liter"/></quantity>) and <m>V</m> is the total amount of mixture in the pot (<quantity><unit base="liter"/></quantity>). Determine the rate at which the salt concentration is changing at the moment there are <quantity><mag>5.2</mag><unit base="liter"/></quantity> of liquid in the pot if at that moment water is evaporating at the rate of <quantity><mag>0.13</mag><unit base="liter"/><per base="min"/></quantity>.</p>
+                <p>Suppose that the concentration of salt in a pot of boiling water is given by <m>C=\frac{200}{V}</m> where <m>C</m> is the concentration of salt in the mixture (<quantity><unit prefix="milli" base="gram"/><per base="liter"/></quantity>) and <m>V</m> is the total amount of mixture in the pot (<quantity><unit base="liter"/></quantity>). Determine the rate at which the salt concentration is changing at the moment there are <quantity><mag>5.2</mag><unit base="liter"/></quantity> of liquid in the pot if at that moment water is evaporating at the rate of <quantity><mag>0.13</mag><unit base="liter"/><per base="minute"/></quantity>.</p>
             </statement>
         </exercise>
     </exercises>

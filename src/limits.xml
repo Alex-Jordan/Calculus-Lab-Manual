@@ -25,10 +25,10 @@
             <statement>
                 <p>Several function values and limit values for the function in <xref ref="figure-first-limit"/> are given below. You and your group mates should take turns reading the equations aloud. Make sure that you read the symbols correctly, that's part of what you are learning! Also, discuss why the values are what they are and make sure that you get help from your instructor to clear up any confusion.</p>
                         <ul>
-                            <li><m>\fe{f}{-2}=6</m>, but <m>\lim\limits_{x\to-2}\fe{f}{x}=3</m></li>
-                            <li><m>\fe{f}{-4}</m> is undefined, but <m>\lim\limits_{x\to-4}\fe{f}{x}=2</m></li>
-                            <li><m>\fe{f}{1}=-1</m>, but <m>\lim\limits_{x\to1}\fe{f}{x}</m> does not exist</li>
-                            <li><m>\underbrace{\lim_{x\to1^{-}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the left}\end{array}}=-3</m>, but <m>\underbrace{\lim_{x\to1^{+}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the right}\end{array}}=-1</m></li>
+                            <li><p><m>\fe{f}{-2}=6</m>, but <m>\lim\limits_{x\to-2}\fe{f}{x}=3</m></p></li>
+                            <li><p><m>\fe{f}{-4}</m> is undefined, but <m>\lim\limits_{x\to-4}\fe{f}{x}=2</m></p></li>
+                            <li><p><m>\fe{f}{1}=-1</m>, but <m>\lim\limits_{x\to1}\fe{f}{x}</m> does not exist</p></li>
+                            <li><p><m>\underbrace{\lim_{x\to1^{-}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the left}\end{array}}=-3</m>, but <m>\underbrace{\lim_{x\to1^{+}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the right}\end{array}}=-1</m></p></li>
                         </ul>
 
                     <figure valign="bottom" xml:id="figure-first-limit">
@@ -80,7 +80,6 @@
                         <caption><m>y=\fe{g}{t}</m></caption>
                         <image xml:id="image-second-limit">
                             <description>a graph of a discontinuous function; reading the graph left to right, the graph enters from the left with an upward slope until it reaches (-2,5); a second, separated, piece of the graph begins at (-2,-3.5), except there is a hole right where it begins; the graph moves upward linearly until reaching (3,-1), except ther was a hole at (2,-1.5); from (3,-1), the curve enters a parabolic path, dipping down to a vertex at (4,-2) and then curving upward off to the right; however there is a hole at (5,-1), with a solid dot above the hole at (5,1)</description>
-                            <description>A graph of a doscontinuous function.</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[xlabel = {$t$},]

@@ -20,9 +20,9 @@
             <p>There are three ways that the defining property can fail to be satisfied at a given value of <m>a</m>. To facilitate exploration of these three manners of failure, we can separate the defining property into three sub-properties.</p>
 
             <ol>
-               <li xml:id="fofa-is-defined"><m>\fe{f}{a}</m> must be defined</li>
-               <li xml:id="limfofx-is-defined"><m>\lim\limits_{x\to a}\fe{f}{x}</m> must exist</li>
-               <li xml:id="limit-equals-value"><m>\lim\limits_{x\to a}\fe{f}{x}</m> must equal <m>\fe{f}{a}</m></li>
+               <li xml:id="fofa-is-defined"><p><m>\fe{f}{a}</m> must be defined</p></li>
+               <li xml:id="limfofx-is-defined"><p><m>\lim\limits_{x\to a}\fe{f}{x}</m> must exist</p></li>
+               <li xml:id="limit-equals-value"><p><m>\lim\limits_{x\to a}\fe{f}{x}</m> must equal <m>\fe{f}{a}</m></p></li>
             </ol>
 
             <todo>Property numbers currently hard coded since referencing not working for ordered lists</todo>
@@ -35,6 +35,7 @@
             <introduction>
                 <p>These questions refer to the function in <xref ref="figure-discontinuities"/>.</p>
                 <figure xml:id="figure-discontinuities">
+                    <caption><m>y=\fe{h}{t}</m></caption>
                     <image>
                         <description>a plot of a function where the horizontal axis is labeled with t, and the vertical with y; one segment of the plot is a straght line with slope 1 coming in from the left, upward and to the right until reaching the point (-4,1); there is a hollow dot at (-4,1); the next segment of the curve starts at (-4,4) with a solid dot; the curve moves to the right in a stratight, flat line, until reaching (-2,4); at this point, it sharply bends to having slope -1, and extends down to (3,1); along the way, there is a hoollow dot at (-1,3) and at (2,0), and a solid dot hovering below the curve at (2-3); picking up back at (3,-1), the curve bends sharply upward and curves steeper and steeper until it exits the plot a little to the left of the vertical line t=5; a third segment of the curve comes back in from the top, a little to the right of the line t=5; it moves downward and slightly to the right; around (6,1), it begins moving more rightward than downward, and exits the plot on the right a little above the t-axis.</description> 
                         <latex-image-code>
@@ -81,7 +82,6 @@
                         \end{tikzpicture}]]>
                         </latex-image-code>
                     </image>
-                    <caption><m>y=\fe{h}{t}</m></caption>
                 </figure>
             </introduction>
             <exercise>

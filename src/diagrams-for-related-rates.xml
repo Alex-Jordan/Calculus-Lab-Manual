@@ -11,15 +11,12 @@
     <title>Diagrams for  Related Rates</title>
     <p>A particular challenge when working most related rates problems is identifying the quantity-variables. For example, when working a problem that invloves a right triangle, there are six potential quantity-variables (the lengths of the three sides, the measurements of the two acute angles, and the area). In each related rates problem involving a right triangle, at least two of these measurements must be quantity-variables, or you will not end up with two (or more) rates to relate!</p>
     <example>
-        <p>
-            <blockquote>A small drone is flying straight upward at the rate of <quantity><mag>0.88</mag><unit base="foot"/><per base="second"/></quantity>. The drone is tethered to the ground (with a lot of slack) at a point that lies <quantity><mag>400</mag><unit base="foot"/></quantity> west of the launch point of the drone. Assuming that the ground is perfectly level, determine the rate at which the angle of elevation from the tether point to the drone increases at the moment the drone is <quantity><mag>300</mag><unit base="foot"/></quantity> above ground.</blockquote>
-        </p>
-        <p>When searching for your quantity-variables, you need to identify sentences or phrases in the problem statement that contain the word <q>rate</q> or something similar (hence the <acro>R</acro> in <acro>DREDS</acro>). There are two such phrases in this problem:
+        <blockquote><p>A small drone is flying straight upward at the rate of <quantity><mag>0.88</mag><unit base="foot"/><per base="second"/></quantity>. The drone is tethered to the ground (with a lot of slack) at a point that lies <quantity><mag>400</mag><unit base="foot"/></quantity> west of the launch point of the drone. Assuming that the ground is perfectly level, determine the rate at which the angle of elevation from the tether point to the drone increases at the moment the drone is <quantity><mag>300</mag><unit base="foot"/></quantity> above ground.</p></blockquote>
+        <p>When searching for your quantity-variables, you need to identify sentences or phrases in the problem statement that contain the word <q>rate</q> or something similar (hence the <acro>R</acro> in <acro>DREDS</acro>). There are two such phrases in this problem:</p>
         <ul>
-            <li><q>A small drone is flying straight upward at the rate of<ellipsis/></q></li>
-            <li><q><ellipsis/>determine the rate at which the angle of elevation from the tether point to the drone increase<ellipsis/></q></li>
+            <li><p><q>A small drone is flying straight upward at the rate of<ellipsis/></q></p></li>
+            <li><p><q><ellipsis/>determine the rate at which the angle of elevation from the tether point to the drone increase<ellipsis/></q></p></li>
         </ul>
-        </p>
         <p>The pieces of the right triangle that correspond to those phrases have been marked in <xref ref="figure-drone-triangle"/> as, respectively, <m>h</m> and <m>\theta</m>. The distance between the tether point and launch point remains constant, hence the side labeled as <m>400</m>. Please note that there should be no other annotations of any kind on this diagram. If writing other numbers down helps you think through the problem, draw a second triangle on your scratch paper and annotate that in any way the helps. That said, you need a clean variable diagram in your solution, so leave <xref ref="figure-drone-triangle"/> as it is.</p>
         <figure xml:id="figure-drone-triangle">
             <caption>Variable Diagram</caption>
@@ -152,7 +149,6 @@
                 <statement>
                     <p>A jet is climbing at a constant airspeed of <quantity><mag>430</mag><unit base="mileperhour"/></quantity> and at a constant angle of elevation of <quantity><mag>12</mag><unit base="degree"/></quantity>. At what rate is the elevation of the jet changing when the jet is <quantity><mag>2640</mag><unit base="foot"/></quantity> above the ground? (Assume that the ground elevation below the jet's path does not change as the jet makes its climb.)</p>
                 </statement>
-                <todo>Work in solution</todo>
             </exercise>
             <exercise>
                 <statement><todo>adjectival form for quantities</todo>
@@ -169,19 +165,20 @@
             <statement>
                 <p>Go ahead and finish the three problems stated in <xref ref="exercisegroup-related-rates-using-diagrams"/>. Remember to complete each step in the problems solving process.</p>
                 <ol>
-                    <li>Draw a properly labeled variable diagram. (<acro>D</acro>) Note that you completed this step while working <xref ref="exercisegroup-related-rates-using-diagrams"/>.</li>
-                    <li>Make a variable definition table. Include each variable type (quantity, rate, and time). Include the unit for each variable (<acro>R</acro>)</li>
-                    <li>Write down an equation that relates the two quantity-variables. (<acro>E</acro>)</li>
-                    <li>Differentiate both sides of the equation you just wrote with respect to <m>t</m>. Simplify the result. This equation is called the <term>related rates equation</term>. (<acro>D</acro>)</li>
-                    <li>Write an orientation sentence or phrase and create a summary table for your quantity and rate variables. (preparing for <acro>S</acro>)</li>
-                    <li>Substitute the known values into the related rates equation and solve for the unknown rate. (<acro>S</acro>)</li>
-                    <li>Write a conclusion.</li>
+                    <li><p>Draw a properly labeled variable diagram. (<acro>D</acro>) Note that you completed this step while working <xref ref="exercisegroup-related-rates-using-diagrams"/>.</p></li>
+                    <li><p>Make a variable definition table. Include each variable type (quantity, rate, and time). Include the unit for each variable (<acro>R</acro>)</p></li>
+                    <li><p>Write down an equation that relates the two quantity-variables. (<acro>E</acro>)</p></li>
+                    <li><p>Differentiate both sides of the equation you just wrote with respect to <m>t</m>. Simplify the result. This equation is called the <term>related rates equation</term>. (<acro>D</acro>)</p></li>
+                    <li><p>Write an orientation sentence or phrase and create a summary table for your quantity and rate variables. (preparing for <acro>S</acro>)</p></li>
+                    <li><p>Substitute the known values into the related rates equation and solve for the unknown rate. (<acro>S</acro>)</p></li>
+                    <li><p>Write a conclusion.</p></li>
                 </ol> 
             </statement>
         </exercise>
         <exercise>
             <statement>
-                <p>When working with <q>common knowledge</q> formulas, it is important to identify which variables in the formula are really relevant to the stated problem and to then eliminate any irrelevant variables from the formula. Consider the following problem. <blockquote>Slushy is flowing out of the bottom of a cup at the constant rate of <quantity><mag>0.9</mag><unit prefix="centi" base="meter" exp="3"/><per base="second"/></quantity>. The cup is the shape of a right circular cone. The height of the cup is <quantity><mag>12</mag><unit prefix="centi" base="meter"/></quantity> and the radius at the top of the cup is <quantity><mag>3</mag><unit prefix="centi" base="meter"/></quantity>. Determine the rate at which the depth of the remaining slushy changes at the instant there are exactly <quantity><mag>8\pi</mag><unit prefix="centi" base="meter" exp="3"/></quantity> of slushy remaining in the cup.</blockquote></p>
+                <p>When working with <q>common knowledge</q> formulas, it is important to identify which variables in the formula are really relevant to the stated problem and to then eliminate any irrelevant variables from the formula. Consider the following problem.</p>
+                <blockquote><p>Slushy is flowing out of the bottom of a cup at the constant rate of <quantity><mag>0.9</mag><unit prefix="centi" base="meter" exp="3"/><per base="second"/></quantity>. The cup is the shape of a right circular cone. The height of the cup is <quantity><mag>12</mag><unit prefix="centi" base="meter"/></quantity> and the radius at the top of the cup is <quantity><mag>3</mag><unit prefix="centi" base="meter"/></quantity>. Determine the rate at which the depth of the remaining slushy changes at the instant there are exactly <quantity><mag>8\pi</mag><unit prefix="centi" base="meter" exp="3"/></quantity> of slushy remaining in the cup.</p></blockquote>
                 <p>The presence of the cubic-centimeter unit indicates that the problem is rooted in a volume formula. Specifically, we need the volume formula for a right circular cone which is <m>V=\frac{\pi}{3}r^2h</m> where <m>r</m> is the radius at the top of the cone and <m>h</m> is the height of the cone.</p>
                 <p>In the stated problem, we are told the rate at which the volume of the remaining slushy changes and we are asked to determine the rate at which the depth of the remaining slushy changes. The rates correspond to <m>\lz{V}{t}</m> and <m>\lz{h}{t}</m> where <m>V</m> and <m>h</m> are, respectively, the volume (<quantity><unit prefix="centi" base="meter" exp="3"/></quantity>) and depth (<quantity><unit prefix="centi" base="meter"/></quantity>) of the slushy that remains in the cup <m>t</m> seconds after the slushy begins to flow out of the bottom of the cup.</p>
                 <p>Since the value of <m>\lz{r}{t}</m> is neither given nor desired, we need to eliminate the variable <m>r</m> from the formula <m>V=\frac{\pi}{3}r^2h</m>. We do this by exploiting a property of similar triangles. Two triangles are said to be similar if and only if the three angular measurements of the first triangle are identical to the angular measurements of the second triangle. One thing that is always true about similar triangles is that their corresponding sides are proportional. This latter fact is the only reason we are able to define trigonometric functions in terms of the ratios of the sides of a right triangle!</p>

@@ -38,6 +38,31 @@
             <introduction>
                 <p>The formulas used to graph <xref autoname="plural" ref="figure-match-rationals-1"/><ndash/><xref autoname="no" ref="figure-match-rationals-5"/> are given below.  Focusing first on the dominant terms of the expressions, match the formulas with the functions (<m>f_1</m> through <m>f_5</m>).</p>
             </introduction>
+            <exercise>
+                <statement>
+                    <p><m>y=\dfrac{3x+6}{x-2}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=\dfrac{16+4x}{6+x}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=\dfrac{6x^2-6x-36}{36-3x-3x^2}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=\dfrac{-2x+8}{x^2-100}</m></p>
+                </statement>
+            </exercise>
+            <exercise>
+                <statement>
+                    <p><m>y=\dfrac{15}{x-5}</m></p>
+                </statement>
+            </exercise>
             <conclusion>
                 <sidebyside>
                     <figure xml:id="figure-match-rationals-1">
@@ -206,31 +231,6 @@
                     </image>
                 </figure>
             </conclusion>
-            <exercise>
-                <statement>
-                    <p><m>y=\dfrac{3x+6}{x-2}</m></p>
-                </statement>
-            </exercise>
-            <exercise>
-                <statement>
-                    <p><m>y=\dfrac{16+4x}{6+x}</m></p>
-                </statement>
-            </exercise>
-            <exercise>
-                <statement>
-                    <p><m>y=\dfrac{6x^2-6x-36}{36-3x-3x^2}</m></p>
-                </statement>
-            </exercise>
-            <exercise>
-                <statement>
-                    <p><m>y=\dfrac{-2x+8}{x^2-100}</m></p>
-                </statement>
-            </exercise>
-            <exercise>
-                <statement>
-                    <p><m>y=\dfrac{15}{x-5}</m></p>
-                </statement>
-            </exercise>
         </exercisegroup>
         <exercisegroup cols="2">
             <introduction>

@@ -87,11 +87,11 @@
             <introduction>
                 <p>Perform each of the following for the functions in <xref autoname="plural" ref="exercise-make-second-derivative-table-first"/><ndash/><xref autoname="no" ref="exercise-make-second-derivative-table-last"/>.</p>
                 <ul> 
-                    <li>State the domain of the function.</li> 
-                    <li>Find, and completely simplify, the formula for the second derivative of the function. It is <em>not</em> necessary to simplify the formula for the first derivative of the function.</li> 
-                    <li>State the values in the domain of the function where the second derivative is either zero or does not exist.</li>
-                    <li>Create a table similar to <xref autoname="plural" ref="table-second-derivative-signs"/>.  Number the table.  Don't forget to include table headings and column headings.</li> 
-                    <li>State the inflection points on the function.  Make sure that you explicitly address this question even if there are no inflection points.</li> 
+                    <li><p>State the domain of the function.</p></li> 
+                    <li><p>Find, and completely simplify, the formula for the second derivative of the function. It is <em>not</em> necessary to simplify the formula for the first derivative of the function.</p></li> 
+                    <li><p>State the values in the domain of the function where the second derivative is either zero or does not exist.</p></li>
+                    <li><p>Create a table similar to <xref autoname="plural" ref="table-second-derivative-signs"/>.  Number the table.  Don't forget to include table headings and column headings.</p></li> 
+                    <li><p>State the inflection points on the function.  Make sure that you explicitly address this question even if there are no inflection points.</p></li> 
                 </ul> 
             </introduction>
             <exercise xml:id="exercise-make-second-derivative-table-first">

@@ -256,7 +256,7 @@
                     </md></p>
                 </solution>
                 <answer>
-                    <m>\lim\limits_{t\to-\infty}\fe{\tanh}{t}=-1</m> and <m>\lim\limits_{t\to\infty}\fe{\tanh}{t}=1</m>
+                    <p><m>\lim\limits_{t\to-\infty}\fe{\tanh}{t}=-1</m> and <m>\lim\limits_{t\to\infty}\fe{\tanh}{t}=1</m></p>
                 </answer>
             </exercise>
             <exercise>

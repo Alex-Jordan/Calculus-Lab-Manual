@@ -13,7 +13,7 @@
     <p>Motion is frequently modeled using calculus. A building block for this application is the concept of <term>average velocity</term>. Average velocity is defined to be net displacement divided by elapsed time.  More precisely,</p>
 
     <definition xml:id="definition-average-velocity">
-    <title>Average Velocity</title>
+        <title>Average Velocity</title>
         <statement>
             <p>If <m>p</m> is a position function for something moving along a numbered line, then we define the <term>average velocity</term> over the time interval <m>\cinterval{t_0}{t_1}</m> to be: <me>\frac{\fe{p}{t_1}-\fe{p}{t_0}}{t_1-t_0}\text{.}</me></p>
         </statement>

@@ -236,7 +236,9 @@
             <introduction>
                 <p><xref ref="figure-seven-curves"/> gives seven curves.  For each statement below, identify the figure letters that go along with the given statement. Assume each statement is being made only in reference to the portion of the curves shown in each of the figures.  Assume in all cases that the axes have the traditional positive/negative orientation.  The first question has been answered for you to help you get started.</p> 
                 <sidebyside xml:id="figure-seven-curves">
+                    <caption>Seven curves</caption>
                     <figure xml:id="figure-decreasing-down">
+                        <caption/>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -246,9 +248,9 @@
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                        <caption/>
                     </figure>
                     <figure xml:id="figure-decreasing-up">
+                        <caption/>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -258,9 +260,9 @@
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                        <caption/>
                     </figure>
                     <figure xml:id="figure-increasing-down">
+                        <caption/>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -270,9 +272,9 @@
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                        <caption/>
                     </figure>
                     <figure xml:id="figure-increasing-up">
+                        <caption/>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -282,9 +284,9 @@
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                        <caption/>
                     </figure>
                     <figure xml:id="figure-increasing-zero">
+                        <caption/>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -294,9 +296,9 @@
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                        <caption/>
                     </figure>
                     <figure xml:id="figure-decreasing-zero">
+                        <caption/>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -306,9 +308,9 @@
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                        <caption/>
                     </figure>
                     <figure xml:id="figure-flat">
+                        <caption/>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -318,9 +320,7 @@
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                        <caption/>
                     </figure>
-                    <caption>Seven curves</caption>
                 </sidebyside>
             </introduction>
             <exercise>
@@ -443,10 +443,10 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                 <statement>
                     <p>Suppose that <m>\fe{V}{t}</m> is the amount of water (<quantity><unit base="gallon"/></quantity>) left in the tank where <m>t</m> is the amount of time that has elapsed (<quantity><unit base="second"/></quantity>) since the drainage began.  What are the units on <m>\fe{\fd{V}}{45}</m> and <m>\fe{\sd{V}}{45}</m>? Which of the following is the most realistic value for <m>\fe{\fd{V}}{45}</m>?</p>
                     <ol cols="4"> 
-                        <li><m>0.8</m></li>
-                        <li><m>1.2</m></li>
-                        <li><m>-0.8</m></li>
-                        <li><m>-1.2</m></li>
+                        <li><p><m>0.8</m></p></li>
+                        <li><p><m>1.2</m></p></li>
+                        <li><p><m>-0.8</m></p></li>
+                        <li><p><m>-1.2</m></p></li>
                     </ol>
                 </statement>
                 <solution>
@@ -460,10 +460,10 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                 <statement>
                     <p>Suppose that <m>\fe{R}{t}</m> is the water's flow rate (<quantity><unit base="gallon"/><per base="second"/></quantity>) where <m>t</m> is the amount of time that has elapsed (<quantity><unit base="second"/></quantity>) since the drainage began.  What are the units on <m>\fe{\fd{R}}{45}</m> and <m>\fe{\sd{R}}{45}</m>?  Which of the following is the most realistic value for <m>\fe{\fd{R}}{45}</m>?</p>
                     <ol cols="4">
-                        <li><m>1.0</m></li>
-                        <li><m>0.001</m></li>
-                        <li><m>-1.0</m></li>
-                        <li><m>-0.001</m></li>
+                        <li><p><m>1.0</m></p></li>
+                        <li><p><m>0.001</m></p></li>
+                        <li><p><m>-1.0</m></p></li>
+                        <li><p><m>-0.001</m></p></li>
                     </ol>
                 </statement>
                 <solution>
@@ -477,10 +477,10 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                 <statement>
                     <p>Suppose that <m>\fe{V}{t}</m> is the amount of water (<quantity><unit base="gallon"/></quantity>)left in the tank where <m>t</m> is the amount of time that has elapsed (<quantity><unit base="second"/></quantity>) since the drainage began.  Which of the following is the most realistic value for <m>\fe{\sd{V}}{45}</m>?</p>
                     <ol cols="4">
-                        <li><m>1.0</m></li>
-                        <li><m>0.001</m></li>
-                        <li><m>-1.0</m></li>
-                        <li><m>-0.001</m></li>
+                        <li><p><m>1.0</m></p></li>
+                        <li><p><m>0.001</m></p></li>
+                        <li><p><m>-1.0</m></p></li>
+                        <li><p><m>-0.001</m></p></li>
                     </ol>
                 </statement> 
                 <solution>
@@ -495,9 +495,9 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             <introduction>
                 <p>For each statement in <xref autoname="plural" ref="exercise-function-statement-first"/><ndash/><xref autoname="no" ref="exercise-function-statement-last"/>, decide which of the following is true. </p>
                 <ol cols="3">
-                   <li>The statement is true regardless of the specific function <m>f</m>.</li>
-                   <li>The statement is true for some functions and false for other functions. </li>
-                   <li>The statement is false regardless of the specific function <m>f</m>.</li>
+                   <li><p>The statement is true regardless of the specific function <m>f</m>.</p></li>
+                   <li><p>The statement is true for some functions and false for other functions.</p></li>
+                   <li><p>The statement is false regardless of the specific function <m>f</m>.</p></li>
                 </ol>
             </introduction>
             <exercise xml:id="exercise-function-statement-first">
@@ -590,6 +590,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                         <p>Each statement below is in reference to the function shown in <xref ref="figure-periodic-dips"/>.  Decide whether each statement is <em>True</em> or <em>False</em>.  A caption has been omitted from <xref ref="figure-periodic-dips"/> because the identity of the curve changes from question to question.</p> 
                     </paragraphs>
                     <figure valign="top" xml:id="figure-periodic-dips">
+                    <caption/>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -604,7 +605,6 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                    <caption/>
                     </figure>
                 </sidebyside>
             </introduction>
@@ -746,7 +746,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                 <p>Complete as many cells in <xref ref="table-derivative-relations"/> as possible so that when read left to right the relationships between the derivatives, function, and antiderivative are always true. Please note that several cells will remain blank.</p>
                 <table xml:id="table-derivative-relations">
                     <caption/>
-                    <centerline><tabular top="major" left="major">
+                    <tabular top="major" left="major">
                         <col halign="center" right="medium"/>
                         <col halign="center" right="medium"/>
                         <col halign="center" right="medium"/>
@@ -784,7 +784,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                         <row bottom="major">
                             <cell/><cell/><cell>Linear</cell><cell/>
                         </row>
-                    </tabular></centerline>
+                    </tabular>
                 </table>
             </statement>
             <solution>
@@ -841,6 +841,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                         <p>Answer each question about the function <m>f</m> whose first derivative is shown in <xref ref="figure-first-derivative-of-f-supplement"/>.  The correct answer to one or more of the questions may be <q>there's no way of knowing.</q></p> 
                     </paragraphs>
                     <figure xml:id="figure-first-derivative-of-f-supplement" valign="top" >
+                        <caption><m>y=\fe{\fd{f}}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -852,7 +853,6 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                        <caption><m>y=\fe{\fd{f}}{x}</m></caption>
                     </figure>
                 </sidebyside>
             </introduction>
@@ -972,6 +972,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                 <p>A certain antiderivative, <m>F</m>, of the function <m>f</m> shown in <xref ref="figure-sketch-antiderivative-supplement"/> passes through the points <m>\point{3}{-2}</m> and about <m>\point{-3}{5.6}</m>.  Draw this antiderivative (over the interval <m>\ointerval{-6}{6}</m>) onto the provided graph.</p> 
                 <sidebyside>
                     <figure xml:id="figure-sketch-antiderivative-supplement" >
+                        <caption><m>y=\fe{f}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -983,9 +984,9 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                        <caption><m>y=\fe{f}{x}</m></caption>
                     </figure>
                     <figure >
+                        <caption><m>y=\fe{F}{x}</m></caption>
                         <image>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -994,7 +995,6 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                             \end{tikzpicture}]]>
                             </latex-image-code>
                         </image>
-                        <caption><m>y=\fe{F}{x}</m></caption>
                     </figure>
                 </sidebyside>
             </statement>
@@ -1029,14 +1029,14 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             <statement>
                 <p>Draw onto <xref ref="figure-sketch-function-supplement"/> the function <m>f</m> given the following properties of <m>f</m>.</p>
                 <ul>
-                    <li>The only discontinuity on <m>f</m> occurs at the vertical asymptote <m>x=2</m>.</li>
-                    <li><m>\fe{f}{0}=\fe{f}{4}=3</m>, and <m>\fe{\fd{f}}{-1}=0</m></li>
-                    <li><m>\fe{\fd{f}}{x}\gt0</m> on <m>\ointerval{-\infty}{-1}</m>, <m>\ointerval{-1}{2}</m>, and <m>\ointerval{4}{\infty}</m></li>
-                    <li><m>\fe{\fd{f}}{x}\lt0</m> on <m>\ointerval{2}{4}</m></li>
-                    <li><m>\fe{\sd{f}}{x}\gt0</m> on <m>\ointerval{-1}{2}</m> and <m>\ointerval{2}{4}</m></li>
-                    <li><m>\fe{\sd{f}}{x}\lt0</m> on <m>\ointerval{-\infty}{-1}</m></li>
-                    <li><m>\fe{\sd{f}}{x}=0</m> on <m>\ointerval{4}{\infty}</m></li>
-                    <li><m>\lim\limits_{x\to4^{-}}\fe{f}{x}=-1</m> and <m>\lim\limits_{x\to4^{+}}\fe{f}{x}=1</m></li>
+                    <li><p>The only discontinuity on <m>f</m> occurs at the vertical asymptote <m>x=2</m>.</p></li>
+                    <li><p><m>\fe{f}{0}=\fe{f}{4}=3</m>, and <m>\fe{\fd{f}}{-1}=0</m></p></li>
+                    <li><p><m>\fe{\fd{f}}{x}\gt0</m> on <m>\ointerval{-\infty}{-1}</m>, <m>\ointerval{-1}{2}</m>, and <m>\ointerval{4}{\infty}</m></p></li>
+                    <li><p><m>\fe{\fd{f}}{x}\lt0</m> on <m>\ointerval{2}{4}</m></p></li>
+                    <li><p><m>\fe{\sd{f}}{x}\gt0</m> on <m>\ointerval{-1}{2}</m> and <m>\ointerval{2}{4}</m></p></li>
+                    <li><p><m>\fe{\sd{f}}{x}\lt0</m> on <m>\ointerval{-\infty}{-1}</m></p></li>
+                    <li><p><m>\fe{\sd{f}}{x}=0</m> on <m>\ointerval{4}{\infty}</m></p></li>
+                    <li><p><m>\lim\limits_{x\to4^{-}}\fe{f}{x}=-1</m> and <m>\lim\limits_{x\to4^{+}}\fe{f}{x}=1</m></p></li>
                 </ul>
                 <figure xml:id="figure-sketch-function-supplement" valign="top">
                     <caption><m>y=\fe{f}{x}</m></caption>

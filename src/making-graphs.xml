@@ -19,7 +19,7 @@
             </introduction>
             <exercise xml:id="exercise-sketch-first-asymptotes">
                 <statement>
-                    <p>Evaluate each of the following limits:<br/><m>\lim\limits_{x\to\infty}\fe{f}{x}</m>, <m>\lim\limits_{x\to-\infty}\fe{f}{x}</m>, <m>\lim\limits_{x\to2^{-}}\fe{f}{x}</m>, and <m>\lim\limits_{x\to2^{+}}\fe{f}{x}</m>.</p>
+                    <p>Evaluate each of the following limits: <m>\lim\limits_{x\to\infty}\fe{f}{x}</m>, <m>\lim\limits_{x\to-\infty}\fe{f}{x}</m>, <m>\lim\limits_{x\to2^{-}}\fe{f}{x}</m>, and <m>\lim\limits_{x\to2^{+}}\fe{f}{x}</m>.</p>
                 </statement>
             </exercise>
             <exercise>
@@ -36,9 +36,9 @@
                 <statement>
                     <p>Use the formulas <m>\fe{\fd{f}}{x}=\frac{4(1-2x)}{(x-2)^3}</m> and <m>\fe{\sd{f}}{x}=\frac{4(4x+1)}{(x-2)^4}</m> to help you accomplish each of the following.</p>
                     <ul>
-                        <li>State the critical numbers of <m>f</m>.</li>
-                        <li>Create well-documented increasing/decreasing and concavity tables for <m>f</m>.</li> 
-                        <li>State the local minimum, local maximum, and inflection points on <m>f</m>.  Make sure that you explicitly address all three types of points whether they exist or not.</li> 
+                        <li><p>State the critical numbers of <m>f</m>.</p></li>
+                        <li><p>Create well-documented increasing/decreasing and concavity tables for <m>f</m>.</p></li> 
+                        <li><p>State the local minimum, local maximum, and inflection points on <m>f</m>.  Make sure that you explicitly address all three types of points whether they exist or not.</p></li> 
                     </ul>
                 </statement>
             </exercise>

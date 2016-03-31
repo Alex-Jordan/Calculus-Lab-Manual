@@ -12,7 +12,7 @@
 
     <table>
         <caption>Distance</caption>
-        <centerline><tabular top="major">
+        <tabular top="major">
             <col halign="0.4in"/>
             <col halign="0.8in"/>
             <col halign="1.8in"/>
@@ -65,11 +65,11 @@
                 <cell>exactly <m>5280</m> feet</cell>
                 <cell>in parts of Portland where the city blocks are square, about <m>20</m> blocks</cell>
             </row>
-        </tabular></centerline>
+        </tabular>
     </table>
     <table>
         <caption>Area</caption>
-        <centerline><tabular top="major">
+        <tabular top="major">
             <col halign="0.4in"/>
             <col halign="0.8in"/>
             <col halign="1.8in"/>
@@ -92,11 +92,11 @@
                 <cell>the area of a square whose sides are each one inch</cell>
                 <cell>the area of a photograph on an ID card</cell>
             </row>
-        </tabular></centerline>
+        </tabular>
     </table>
     <table>
         <caption>Volume</caption>
-        <centerline><tabular top="major">
+        <tabular top="major">
             <col halign="0.4in"/>
             <col halign="0.8in"/>
             <col halign="2.2in"/>
@@ -137,11 +137,11 @@
                 <cell>exactly <m>231</m> cubic inches</cell>
                 <cell>the volume of the larger type of plastic milk containers sold in supermarkets</cell>
             </row>
-        </tabular></centerline>
+        </tabular>
     </table>
     <table>
         <caption>Time</caption>
-        <centerline><tabular top="major">
+        <tabular top="major">
             <col halign="0.4in"/>
             <col halign="0.8in"/>
             <col halign="2.4in"/>
@@ -170,11 +170,11 @@
                 <cell>exactly <m>3600</m> seconds; exaclty <m>60</m> minutes</cell>
                 <cell>the length of one episode of a premium cable television show</cell>
             </row>
-        </tabular></centerline>
+        </tabular>
     </table>
     <table>
         <caption>Speed</caption>
-        <centerline><tabular top="major">
+        <tabular top="major">
             <col halign="0.4in"/>
             <col halign="0.95in"/>
             <col halign="2.025in"/>
@@ -191,12 +191,12 @@
                 <cell>exactly one mile per hour</cell>
                 <cell>a typical walking speed is about three miles per hour</cell>
             </row>
-        </tabular></centerline>
+        </tabular>
     </table>
 
     <table>
         <caption>Mass</caption>
-        <centerline><tabular top="major">
+        <tabular top="major">
             <col halign="0.4in"/>
             <col halign="0.8in"/>
             <col halign="2.4in"/>
@@ -219,11 +219,11 @@
                 <cell>exactly <m>\sfrac{1}{1000000}</m> of a kilogram</cell>
                 <cell>the mass of a small snowflake</cell>
             </row>
-        </tabular></centerline>
+        </tabular>
     </table>
     <table>
         <caption>Angle</caption>
-        <centerline><tabular top="major">
+        <tabular top="major">
             <col halign="0.4in"/>
             <col halign="0.8in"/>
             <col halign="2.1in"/>
@@ -246,11 +246,11 @@
                 <cell>the angle subtended at the center of a circly by an arc whose length is <m>\sfrac{1}{360}</m> the circumferece of the circle</cell>
                 <cell>a very small angle; if you could look directly at the bottom of the sun, and then moved your eyes to look at the top of the sun, you would have moved your eyes about half of one degree</cell>
             </row>
-        </tabular></centerline>
+        </tabular>
     </table>
     <table>
         <caption>Force</caption>
-        <centerline><tabular top="major">
+        <tabular top="major">
             <col halign="0.4in"/>
             <col halign="0.8in"/>
             <col halign="2.4in"/>
@@ -267,12 +267,12 @@
                 <cell>the force needed to accelerate one kilogram from rest up to a speed of one meter per second with one second of time</cell>
                 <cell>if you hold an apple in the palm of your hand, it applies about two newtons of force</cell>
             </row>
-        </tabular></centerline>
+        </tabular>
     </table>
 
     <table>
         <caption>Power</caption>
-        <centerline><tabular top="major">
+        <tabular top="major">
             <col halign="0.4in"/>
             <col halign="0.8in"/>
             <col halign="2.4in"/>
@@ -289,7 +289,7 @@
                 <cell>the power to transfer one thousand joules of energy in one second (one joule is the amount of energy used when one newton of force pushes an object one meter)</cell>
                 <cell>the power used by a nicer microwave oven</cell>
             </row>
-        </tabular></centerline>
+        </tabular>
     </table>
 
 

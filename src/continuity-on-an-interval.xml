@@ -31,9 +31,7 @@
 
         <exercisegroup>
             <introduction>  
-                <statement> 
-                    <p>Referring to the function in <xref ref="figure-discontinuities"/>, decide whether each of the following statements are <em>true</em> or <em>false</em>.</p>
-                </statement>
+                <p>Referring to the function in <xref ref="figure-discontinuities"/>, decide whether each of the following statements are <em>true</em> or <em>false</em>.</p>
             </introduction>
             <exercise>
                 <statement>

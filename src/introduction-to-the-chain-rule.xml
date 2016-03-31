@@ -46,10 +46,10 @@
             <p><m>k</m> is an example of a composite function (as illustrated in <xref ref="equation-composite-function"/>).  If we define <m>g</m> by the rule <m>\fe{g}{t}=3t</m>, then <m>\fe{k}{t}=\fe{f}{\fe{g}{t}}</m>.</p>
         </paragraphs>
         <paragraphs valign="top">
-            <men xml:id="equation-composite-function">t\xrightarrow{g}3t\xrightarrow{f}\fe{\sin}{3t}</men>
-            <md><mrow>\fe{g}{t}&amp;=3t</mrow>
+            <p><men xml:id="equation-composite-function">t\xrightarrow{g}3t\xrightarrow{f}\fe{\sin}{3t}</men></p>
+            <p><md><mrow>\fe{g}{t}&amp;=3t</mrow>
             <mrow>\fe{f}{u}&amp;=\fe{\sin}{u}</mrow>
-            <mrow>\fe{k}{t}&amp;=\fe{f}{\fe{g}{t}}</mrow></md>
+            <mrow>\fe{k}{t}&amp;=\fe{f}{\fe{g}{t}}</mrow></md></p>
         </paragraphs>
     </sidebyside>
     <p>Taking the output from <m>g</m> and processing it through a second function, <m>f</m>, is the action that characterizes <m>k</m> as a composite function.</p>
