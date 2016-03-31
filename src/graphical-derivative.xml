@@ -103,7 +103,7 @@
             </introduction> 
             <exercise> 
                 <statement> 
-                    <p>Several values of <m>\fd{g}</m> are given in <xref ref="table-graphical-derivative"/>. For each given value of <m>x</m> draw a nice long line segment at the corresponding point on <m>g</m> whose slope is equal to the value of <m>\fd{g}</m>. If we think of these line segments as actual lines, what do we call the lines?</p> 
+                    <p>Several values of <m>\fd{g}</m> are given in <xref ref="table-graphical-derivative"/>. For each given value of <m>x</m> draw onto <xref ref="figure-graphical-derivative"/> a nice long line segment at the corresponding point on <m>g</m> whose slope is equal to the value of <m>\fd{g}</m>. If we think of these line segments as actual lines, what do we call the lines?</p> 
                 </statement> 
             </exercise> 
             <exercise> 

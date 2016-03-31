@@ -1036,7 +1036,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                     <li><p><m>\fe{\sd{f}}{x}\gt0</m> on <m>\ointerval{-1}{2}</m> and <m>\ointerval{2}{4}</m></p></li>
                     <li><p><m>\fe{\sd{f}}{x}\lt0</m> on <m>\ointerval{-\infty}{-1}</m></p></li>
                     <li><p><m>\fe{\sd{f}}{x}=0</m> on <m>\ointerval{4}{\infty}</m></p></li>
-                    <li><p><m>\lim\limits_{x\to4^{-}}\fe{f}{x}=-1</m> and <m>\lim\limits_{x\to4^{+}}\fe{f}{x}=1</m></p></li>
+                    <li><p><m>\lim\limits_{x\to4^{-}}\fe{\fd{f}}{x}=-1</m> and <m>\lim\limits_{x\to4^{+}}\fe{\fd{f}}{x}=1</m></p></li>
                 </ul>
                 <figure xml:id="figure-sketch-function-supplement" valign="top">
                     <caption><m>y=\fe{f}{x}</m></caption>
@@ -1058,7 +1058,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                         \addplot[asymptote] coordinates {(2,7) (2,-7)} node[above left] {\rotatebox{90}{$x=2$}};
                         \addplot[pccplot,<-,domain=-6.8:-1] {-(x+1)^2/36+2.5};
                         \addplot[pccplot,->,domain=-1:1.6] {(x+1)^(ln(9)/ln(2.6))/2+2.5};
-                        \addplot[pccplot,<-,domain=2.4:4] {2/(x-2)+2};
+                        \addplot[pccplot,<-,domain=2.7:4] {4/(x-2)+1};
                         \addplot[pccplot,->,domain=4:6.8] {x-1};
                     \end{axis}
                     \end{tikzpicture}]]>
@@ -1073,7 +1073,7 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
                         \addplot[asymptote] coordinates {(2,7) (2,-7)} node[above left] {\rotatebox{90}{$x=2$}};
                         \addplot[pccplot,<-,domain=-6.8:-1] {-(x+1)^2/36+2.5};
                         \addplot[pccplot,->,domain=-1:1.6] {(x+1)^(ln(9)/ln(2.6))/2+2.5};
-                        \addplot[pccplot,<-,domain=2.4:4] {2/(x-2)+2};
+                        \addplot[pccplot,<-,domain=2.7:4] {4/(x-2)+1};
                         \addplot[pccplot,->,domain=4:6.8] {x-1};
                     \end{axis}
                     \end{tikzpicture}]]>

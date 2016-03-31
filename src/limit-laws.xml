@@ -53,7 +53,7 @@
             <introduction>
                 <p>The algebraic limit laws allow us to replace limit expressions with equivalent limit expressions. When applying limit laws our first goal is to come up with an expression in which every limit in the expression can be replaced with its value based upon one of the replacement laws. This process is shown in <xref ref="example-apply-limit-laws"/>. Please note that all replacement laws are saved for the second to last step and that each replacement is explicitly shown. Please note also that each limit law used is referenced by number.</p>
 
-                <p>Use the limit laws to establish the value of each of the following limits. Make sure that you use the step-by-step, vertical format shown in example <xref ref="example-apply-limit-laws"/>. Make sure that you cite the limit laws used in each step. To help you get started, the steps necessary in <xref ref="exercise-first-apply-limit-laws"/> are outlined as:</p>
+                <p>Use the limit laws to establish the value of each of the following limits. Make sure that you use the step-by-step, vertical format shown in <xref ref="example-apply-limit-laws"/>. Make sure that you cite the limit laws used in each step. To help you get started, the steps necessary in <xref ref="exercise-first-apply-limit-laws"/> are outlined as:</p>
 
                 <ol>
                     <li><p>Apply <xref autoname="title" ref="lla6"/></p></li>
