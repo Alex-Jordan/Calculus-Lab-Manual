@@ -18,15 +18,13 @@
 
     <example xml:id="example-difference-quotient">
         <title>Calculating a Difference Quotient</title>
-        <md>
+        <p><md>
         <mrow>\frac{\fe{f}{x_0+h}-\fe{f}{x_0}}{h}&amp;=\frac{\left[3+2\left(x_0+h\right)-\left(x_0+h\right)^2\right]-\left[3+2x_0-x_0^2\right]}{h}</mrow>
         <mrow>&amp;=\frac{3+2x_0+2h-x_0^2-2x_0h-h^2-3-2x_0+x_0^2}{h}</mrow>
         <mrow>&amp;=\frac{2h-2x_0h-h^2}{h}</mrow>
         <mrow>&amp;=\frac{h\left(2-2x_0-h\right)}{h}</mrow>
         <mrow>&amp;=2-2x_0-h\text{ for }h\neq 0</mrow>
-        </md>
-
-    <p>Please notice that all of the terms without a factor of <m>h</m> subtracted to zero. Please notice, too, that we avoided all of the tricky factoring that appeared in <xref ref="example-secant"/>!</p>
+        </md>Please notice that all of the terms without a factor of <m>h</m> subtracted to zero. Please notice, too, that we avoided all of the tricky factoring that appeared in <xref ref="example-secant"/>!</p>
 
     </example>
 
@@ -203,11 +201,15 @@
             <exercise>
                 <statement>
                     <p>Ignoring the unit, write down the formula you get for the difference quotient of <m>V</m> when <m>t=4</m>.</p>
+                </statement>
+            </exercise>
 
-                    <sidebyside>
-                        <paragraphs>
-                            <p>Copy <xref ref="table-vat"/> onto your paper and fill in the missing values. <em>Look for a pattern in the output and write down enough digits for each entry so that the pattern is clearly illustrated;</em> the first two entries in the output column have been given to help you understand what is meant by this direction.</p>
-                        </paragraphs>
+            <exercise>
+                <statement>
+                    <p>Copy <xref ref="table-vat"/> onto your paper and fill in the missing values.</p>
+
+                    <sidebyside widths="47% 47%">
+                        <p>Look for a pattern in the output and write down enough digits for each entry so that the pattern is clearly illustrated; the first two entries in the output column have been given to help you understand what is meant by this direction.</p>
 
                         <table xml:id="table-vat">
                             <caption><m>y=\frac{\fe{V}{4+h}-\fe{V}{4}}{h}</m></caption>

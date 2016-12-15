@@ -32,8 +32,8 @@
     <colophon>
 
         <copyright>
-            <year>2012<ndash />2015</year>
-            <holder>Portand Community College</holder>
+            <year>2012<ndash />2016</year>
+            <holder>Portland Community College</holder>
             <minilicense>Creative Commons BY-SA</minilicense>
             <shortlicense>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</shortlicense>
             <creativecommons BY="yes" NC="yes" ubiquity="medium"/> 
@@ -56,10 +56,9 @@
             <title>HTML and PDF</title>
             <p>This manual has been released with several synchronous versions that offer different features. The essential content of each version is the same as for all others.</p>
             <ul>
-                <li><p>A web version is available at <url href="http://spot.pcc.edu/math/clm"/>. Whenever there is an internet connection, and you do not prefer to have a print copy, this version is most recommended. The web version offers full walk-through solutions to supplemental problems. More importantly, it offers interactive elements and easier navigation than any of the PDFs below could offer.</p></li>
-                <li><p>A <q>for-printing</q> PDF is available at <url href="http://spot.pcc.edu/math/clm/clm-print.pdf"/>. This version is designed to be printed, not read on a screen. To save on printing expense, this version is mostly black-and-white, and only offers short answers to the supplemental exercises (as opposed to full solutions).</p></li>
+                <li><p>A web version is available at <url href="http://spot.pcc.edu/math/clm"/>, and this version is recommended. The web version offers full walk-through solutions to supplemental problems. More importantly, it offers interactive elements and easier navigation than print versions.</p></li>
+                <li><p>A PDF-for-print is available at <url href="http://spot.pcc.edu/math/clm/clm-print.pdf"/>. This version is designed to be printed, not read on a screen. To save on printing expense, this version is mostly black-and-white, and only offers short answers to the supplemental exercises (as opposed to full solutions).</p></li>
                 <li><p>A <q>for-printing-with-color</q> PDF is available at <url href="http://spot.pcc.edu/math/clm/clm-print-color.pdf"/>. This version is like the above, except links and graphs retain their color.</p></li>
-                <li><p>A <q>for-screen-reading</q> PDF is available at <url href="http://spot.pcc.edu/math/clm/clm-screen.pdf"/>. This version is intended to be stored on an electronic device and read when an internet connection is unavailable. It has page dimensions compatible with most laptops and tablets. The pages are not numbered since the page numbering would be inconsistent with the print versions, so this version should be navigated by section numbering. Because the page dimensions are customized for electronic devices, this version would also look strange printed on standard paper. Since this version is not intended to be printed, full solutions to the supplemental problems are offered. Keep in mind that even if you store this PDF version on your electronic device, when an internet connection is available, you might opt to use the HTML version instead, as that version has more interactive and accessible functionality than the PDF version.</p></li>
             </ul>
         </paragraphs>
 
@@ -102,6 +101,7 @@
 
         <p>If your lab section meets more than once a week, <em>you should not work on lab activities between lab sections that occur during the same week.</em> It is OK to work on lab activities outside of class once the entire classroom time allotted for that lab has passed.</p>
 
+        <p><xref ref="chapter-related-rates">Lab</xref> on related rates uses a strategy for related rates exercises that your instructor may not use in lecture. It is a multi-step process that may take some time to learn. We recommend that you read the examples from this lab <em>before</em> coming to lab. Too much lab time should not be spent silently reading to yourself.</p> 
         <p>There are no written solutions for the lab activity problems. Between your group mates, your instructor, and (if you have one) your lab assistant, you should know whether or not you have the correct answers and proper writing strategies for these problems.</p>
 
         <p>Each lab has a section of supplementary exercises; these exercises are fully keyed with solutions. The supplementary exercises are not simply copies of the problems in the lab activities. While some questions will look familiar, many others will challenge you to apply the material covered in the lab to a new type of problem. These questions are meant to supplement your textbook homework, not replace your textbook homework.</p>
@@ -119,10 +119,10 @@
             <li><p>The numbering scheme does not match the earlier numbering scheme. This was a necessary consequence of converting to MathBook XML.</p></li>
             <li><p>The related rates lab has been mostly rewritten using the DREDS approach.</p></li>
             <li><p>In the implicit differentiation lab, a section on logarithmic differentiation has been added.</p></li>
-            <li><p>The printed version only contains short answers to the supplemental questions rather than complete walk-through solutions. However, complete solutions may still be found in the HTML version and the screen PDF version.</p></li>
+            <li><p>The printed version only contains short answers to the supplemental questions rather than complete walk-through solutions. However, complete solutions may still be found in the HTML version.</p></li>
         </ul>
 
-        <p>It is strongly recommended that you pick and choose what you consider to be the most vital activities for a given week, and that you have your students work those activities first. For some activities you might also want to have the students only work selected problems in the activity. Students who complete the high priority activities and problems can then go back and work the activities that they initially skipped. There are also fully keyed problems in the supplementary exercises that the students could work on both during lab time and outside of class. (The full solutions are only in the HTML and screen PDF versions.)</p>
+        <p>It is strongly recommended that you pick and choose what you consider to be the most vital activities for a given week, and that you have your students work those activities first. For some activities you might also want to have the students only work selected problems in the activity. Students who complete the high priority activities and problems can then go back and work the activities that they initially skipped. There are also fully keyed problems in the supplementary exercises that the students could work on both during lab time and outside of class. (The full solutions are only in the HTML version.)</p>
 
         <p>A suggested schedule for the labs is shown in the table below. Again, you should choose what you feel to be the most relevant activities and problems for a given week, and have the students work those activities and problems first.</p>
 
@@ -130,62 +130,73 @@
 
         <table>
 
-            <tabular top="major" halign="center">
+            <tabular top="major" valign="top">
                 <col halign="right"/>
-                <col halign="3.8in"/>
-                <col halign="1.2in"/>
-                <row valign="top" bottom="medium">
+                <col halign="left"/>
+                <col halign="left"/>
+                <row bottom="medium">
                     <cell>Week</cell>
                     <cell>Labs (Lab Activities)</cell>
-                    <cell>Supplementary Exercises</cell>
+                    <cell><line>Supplementary</line><line>Exercises</line></cell>
                 </row>
                 <row bottom="medium">
                     <cell>1</cell>
-                    <cell><xref autoname="title" ref="section-velocity"/> through<br /><xref autoname="title" ref="section-limits"/></cell>
-                    <cell><xref autoname="title" ref="rates-of-change-supplementary-exercises"/></cell>
+                    <cell><line><xref autoname="title" ref="section-velocity"/> through</line>
+                          <line><xref autoname="title" ref="section-limits"/></line></cell>
+                    <cell><xref ref="rates-of-change-supplementary-exercises">Supplement</xref></cell>
                 </row>
                 <row bottom="medium">
                     <cell>2</cell>
-                    <cell><xref autoname="title" ref="section-limit-laws"/> through<br /><xref autoname="title" ref="section-piecewise-defined-functions"/></cell>
-                    <cell><xref autoname="title" ref="limits-and-continuity-supplementary-exercises"/></cell>
+                    <cell><line><xref autoname="title" ref="section-limit-laws"/> through</line>
+                          <line><xref autoname="title" ref="section-piecewise-defined-functions"/></line></cell>
+                    <cell><xref ref="limits-and-continuity-supplementary-exercises">Supplement</xref></cell>
                 </row>
                 <row bottom="medium">
                     <cell>3</cell>
-                    <cell><xref autoname="title" ref="section-instantaneous-velocity"/> through<br /><xref autoname="title" ref="section-derivative-units"/></cell>
-                    <cell><xref autoname="title" ref="introduction-first-derivative-supplementary-exercises"/></cell>
+                    <cell><line><xref autoname="title" ref="section-instantaneous-velocity"/> through</line>
+                          <line><xref autoname="title" ref="section-derivative-units"/></line></cell>
+                    <cell><xref ref="introduction-first-derivative-supplementary-exercises">Supplement</xref></cell>
                 </row>
                 <row bottom="medium">
                     <cell>4</cell>
-                    <cell><xref autoname="title" ref="section-graph-features"/> through<br /><xref autoname="title" ref="section-nondifferentiability"/></cell>
-                    <cell><xref autoname="title" ref="functions-derivatives-antiderivatives-supplementary-exercises"/></cell>
+                    <cell><line><xref autoname="title" ref="section-graph-features"/> through</line>
+                          <line><xref autoname="title" ref="section-nondifferentiability"/></line></cell>
+                    <cell><xref ref="functions-derivatives-antiderivatives-supplementary-exercises">Supplement</xref></cell>
                 </row>
                 <row bottom="medium">
                     <cell>5</cell>
-                    <cell><xref autoname="title" ref="section-higher-order-derivatives"/> through<br /><xref autoname="title" ref="section-graphical-features-from-derivatives"/></cell>
-                    <cell><xref autoname="title" ref="functions-derivatives-antiderivatives-supplementary-exercises"/></cell>
+                    <cell><line><xref autoname="title" ref="section-higher-order-derivatives"/> through</line>
+                          <line><xref autoname="title" ref="section-graphical-features-from-derivatives"/></line></cell>
+                    <cell><xref ref="functions-derivatives-antiderivatives-supplementary-exercises">Supplement</xref></cell>
                 </row>
                 <row bottom="medium">
                     <cell>6</cell>
-                    <cell><xref autoname="title" ref="section-leibniz-notation"/> through<br /><xref autoname="title" ref="section-derivative-formulas-and-function-behavior"/></cell>
-                    <cell><xref autoname="title" ref="derivative-formulas-supplementary-exercises"/></cell>
+                    <cell><line><xref autoname="title" ref="section-leibniz-notation"/> through</line>
+                          <line><xref autoname="title" ref="section-derivative-formulas-and-function-behavior"/></line></cell>
+                    <cell><xref ref="derivative-formulas-supplementary-exercises">Supplement</xref></cell>
                 </row>
                 <row bottom="medium">
                     <cell>7</cell>
-                    <cell><xref autoname="title" ref="section-introduction-to-the-chain-rule"/> through<br /><xref autoname="title" ref="section-chain-rule-and-leibniz"/></cell>
-                    <cell><xref autoname="title" ref="chain-rule-supplementary-exercises"/></cell>
+                    <cell><line><xref autoname="title" ref="section-introduction-to-the-chain-rule"/> through</line>
+                          <line><xref autoname="title" ref="section-chain-rule-and-leibniz"/></line></cell>
+                    <cell><xref ref="chain-rule-supplementary-exercises">Supplement</xref></cell>
                 </row>
                 <row bottom="medium">
                     <cell>8</cell>
-                    <cell><xref autoname="title" ref="section-general-implicit-differentiation"/> through<br /><xref autoname="title" ref="section-logarithmic-differentiation"/></cell>
-                    <cell><xref autoname="title" ref="implicit-differentiation-supplementary-exercises"/></cell>
+                    <cell><line><xref autoname="title" ref="section-general-implicit-differentiation"/> through</line>
+                          <line><xref autoname="title" ref="section-logarithmic-differentiation"/></line></cell>
+                    <cell><xref ref="implicit-differentiation-supplementary-exercises">Supplement</xref></cell>
                 </row>
                 <row bottom="major">
                     <cell>9, 10</cell>
-                    <cell><xref autoname="title" ref="section-introduction-related-rates"/> through<br /><xref autoname="title" ref="section-making-graphs"/></cell>
-                    <cell><xref autoname="title" ref="related-rates-supplementary-exercises"/>,<br /><xref autoname="title" ref="critical-numbers-graphing-from-formulas-supplementary-exercises"/></cell>
+                    <cell><line><xref autoname="title" ref="section-introduction-related-rates"/><m>\dagger</m> through</line>
+                          <line><xref autoname="title" ref="section-making-graphs"/></line></cell>
+                    <cell><line><xref ref="related-rates-supplementary-exercises">Supplement</xref>,</line>
+                          <line><xref ref="critical-numbers-graphing-from-formulas-supplementary-exercises">Supplement</xref></line></cell>
                 </row>
             </tabular> 
         </table>
+        <p><m>\dagger</m> Students should read the related rates examples <em>before</em> coming to lab.</p>
     </preface>
 
 </frontmatter>

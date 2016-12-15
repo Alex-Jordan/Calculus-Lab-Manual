@@ -3,6 +3,9 @@
 <latex-preamble-early>
 \usepackage{titlesec}
 \usepackage{fancyhdr}
+\makeatletter
+\renewcommand{\@chapapp}{Lab}
+\makeatother
 \usepackage{textcomp}
 \usepackage{booktabs}
 </latex-preamble-early>
@@ -43,7 +46,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Use commas for group separator in siunitx
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\sisetup{group-separator={,}}
+\sisetup{group-digits=integer, group-separator={,}}
 ]]>
 </latex-preamble-late>
 

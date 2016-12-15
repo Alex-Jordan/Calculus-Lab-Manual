@@ -1,5 +1,3 @@
-output/html/
-output/pdf/
-output/epub/
-output/dtderrors.txt
+output/*
 Makefile.paths
+*.swp

@@ -19,21 +19,21 @@
 
     </paragraphs>
 
-    <theorem xml:id="llr1" number="no"> 
+    <theorem xml:id="llr1"> 
         <title>Limit Law R1</title>
         <statement>
             <p><md><mrow>\lim_{x\to a}x=\lim_{x\to a^{-}}x=\lim_{x\to a^{+}}x=a</mrow></md></p>
         </statement>
     </theorem> 
 
-    <theorem xml:id="llr2" number="no"> 
+    <theorem xml:id="llr2"> 
         <title>Limit Law R2</title>
         <statement>
             <p><md><mrow>\lim_{x\to a}C=\lim_{x\to a^{-}}C=\lim_{x\to a^{+}}C=\lim_{x\to \infty}C=\lim_{x\to -\infty}C=C</mrow></md></p>
         </statement>
     </theorem> 
 
-    <theorem xml:id="llr3" number="no"> 
+    <theorem xml:id="llr3"> 
         <title>Limit Law R3</title>
         <statement>
             <p><md>
@@ -46,7 +46,7 @@
     </theorem> 
 
     <paragraphs>
-        <title>Infinite Limit Laws: Limits as the output increases or decreases without bound </title>
+        <title>Infinite Limit Laws (limits as the output increases or decreases without bound):</title>
 
         <p>Many limit values do not exist.  Sometimes the non-existence is caused by the function value either increasing without bound or decreasing without bound.  In these special cases we use the symbols <m>\infty</m> and <m>-\infty</m> to communicate the non-existence of the limits.</p>
         <p>Some examples of these type of non-existent limits follow.</p>
@@ -69,43 +69,43 @@
 
     </paragraphs>
 
-    <theorem xml:id="lla1" number="A1">
+    <theorem xml:id="lla1">
         <title>Limit Law A1</title>
         <statement>
             <p><m>\lim\limits_{x\to a}\left(\fe{f}{x}+\fe{g}{x}\right)=\lim\limits_{x\to a}\fe{f}{x}+\lim\limits_{x\to a}\fe{g}{x}</m></p>
         </statement>
     </theorem> 
-    <theorem xml:id="lla2" number="no">
+    <theorem xml:id="lla2">
         <title>Limit Law A2</title>
         <statement>
             <p><m>\lim\limits_{x\to a}\left(\fe{f}{x}-\fe{g}{x}\right)=\lim\limits_{x\to a}\fe{f}{x}-\lim\limits_{x\to a}\fe{g}{x}</m></p>
         </statement>
     </theorem> 
-    <theorem xml:id="lla3" number="no">
+    <theorem xml:id="lla3">
         <title>Limit Law A3</title>
         <statement>
             <p><m>\lim\limits_{x\to a}\left(C\fe{f}{x}\right)=C\lim\limits_{x\to a}\fe{f}{x}</m></p>
         </statement>
     </theorem> 
-    <theorem xml:id="lla4" number="no">
+    <theorem xml:id="lla4">
         <title>Limit Law A4</title>
         <statement>
             <p><m>\lim\limits_{x\to a}\left(\fe{f}{x}\cdot\fe{g}{x}\right)=\lim\limits_{x\to a}\fe{f}{x}\cdot\lim\limits_{x\to a}\fe{g}{x}</m></p>
         </statement>
     </theorem> 
-    <theorem xml:id="lla5" number="no">
+    <theorem xml:id="lla5">
         <title>Limit Law A5</title>
         <statement>
             <p><m>\lim\limits_{x\to a}\frac{\fe{f}{x}}{\fe{g}{x}}=\frac{\lim\limits_{x\to a}\fe{f}{x}}{\lim\limits_{x\to a}\fe{g}{x}}</m> if and only if <m>\lim\limits_{x\to a}\fe{g}{x}\neq0</m></p>
         </statement>
     </theorem> 
-    <theorem xml:id="lla6" number="no">
+    <theorem xml:id="lla6">
         <title>Limit Law A6</title>
         <statement>
             <p><m>\lim\limits_{x\to a}\fe{f}{\fe{g}{x}}=\fe{f}{\lim\limits_{x\to a}\fe{g}{x}}</m> when <m>f</m> is continuous at <m>\lim\limits_{x\to a}\fe{g}{x}</m></p>
         </statement>
     </theorem> 
-    <theorem xml:id="lla7" number="no">
+    <theorem xml:id="lla7">
         <title>Limit Law A7</title>
         <statement>
             <p>If there exists an open interval centered at <m>a</m> over which <m>\fe{f}{x}=\fe{g}{x}</m> for <m>x\neq a</m>, then <m>\lim\limits_{x\to a}\fe{f}{x}=\lim\limits_{x\to a}\fe{g}{x}</m> (provided that both limits exist).</p>

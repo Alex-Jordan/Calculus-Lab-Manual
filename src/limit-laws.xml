@@ -38,22 +38,26 @@
 
         </exercisegroup>
 
-        <example xml:id="example-apply-limit-laws">
+        <exercise xml:id="exercise-apply-limit-laws">
             <title>Applying Limit Laws</title>
-            <p><md>
-            <mrow>\lim_{x\to7}\left(4x^2+3\right)&amp;=\lim_{x\to7}\left(4x^2\right)+\lim_{x\to7}3&amp;&amp;<xref autoname="title" ref="lla1"/></mrow>
-            <mrow>&amp;=4\lim_{x\to7}x^2+\lim_{x\to7}3&amp;&amp;<xref autoname="title" ref="lla3"/></mrow>
-            <mrow>&amp;=4\left(\lim_{x\to7}x\right)^2+\lim_{x\to7}3&amp;&amp;<xref autoname="title" ref="lla6"/></mrow>
-            <mrow>&amp;=4\cdot7^2+3&amp;&amp;<xref autoname="title" ref="llr1"/>, <xref autoname="title" ref="llr2"/></mrow>
-            <mrow>&amp;=199</mrow>
-            </md></p>
-        </example>
+            <statement>
+                <p>This exercise is fully worked out to serve as an example.</p>
+                <p>Find <m>\lim_{x\to7}\left(4x^2+3\right)</m>.
+                <md>
+                <mrow>\lim_{x\to7}\left(4x^2+3\right)&amp;=\lim_{x\to7}\left(4x^2\right)+\lim_{x\to7}3&amp;&amp;<xref autoname="title" ref="lla1"/></mrow>
+                <mrow>&amp;=4\lim_{x\to7}x^2+\lim_{x\to7}3&amp;&amp;<xref autoname="title" ref="lla3"/></mrow>
+                <mrow>&amp;=4\left(\lim_{x\to7}x\right)^2+\lim_{x\to7}3&amp;&amp;<xref autoname="title" ref="lla6"/></mrow>
+                <mrow>&amp;=4\cdot7^2+3&amp;&amp;<xref autoname="title" ref="llr1"/>, <xref autoname="title" ref="llr2">R2</xref></mrow>
+                <mrow>&amp;=199</mrow>
+                </md></p>
+            </statement>
+        </exercise>
 
         <exercisegroup cols="3">
             <introduction>
-                <p>The algebraic limit laws allow us to replace limit expressions with equivalent limit expressions. When applying limit laws our first goal is to come up with an expression in which every limit in the expression can be replaced with its value based upon one of the replacement laws. This process is shown in <xref ref="example-apply-limit-laws"/>. Please note that all replacement laws are saved for the second to last step and that each replacement is explicitly shown. Please note also that each limit law used is referenced by number.</p>
+                <p>The algebraic limit laws allow us to replace limit expressions with equivalent limit expressions. When applying limit laws our first goal is to come up with an expression in which every limit in the expression can be replaced with its value based upon one of the replacement laws. This process is shown in <xref ref="exercise-apply-limit-laws"/>. Please note that all replacement laws are saved for the second to last step and that each replacement is explicitly shown. Please note also that each limit law used is referenced by number.</p>
 
-                <p>Use the limit laws to establish the value of each of the following limits. Make sure that you use the step-by-step, vertical format shown in <xref ref="example-apply-limit-laws"/>. Make sure that you cite the limit laws used in each step. To help you get started, the steps necessary in <xref ref="exercise-first-apply-limit-laws"/> are outlined as:</p>
+                <p>Use the limit laws to establish the value of each of the following limits. Make sure that you use the step-by-step, vertical format shown in <xref ref="exercise-apply-limit-laws"/>. Make sure that you cite the limit laws used in each step. To help you get started, the steps necessary in <xref ref="exercise-first-apply-limit-laws"/> are outlined as:</p>
 
                 <ol>
                     <li><p>Apply <xref autoname="title" ref="lla6"/></p></li>
@@ -78,7 +82,7 @@
 
             <exercise>
                 <statement>
-                    <p><m>\lim\limits_{x\to\pi}x\cos(x)</m></p>
+                    <p><m>\lim\limits_{x\to\pi}\left(x\cos(x)\right)</m></p>
                 </statement>
             </exercise>
 

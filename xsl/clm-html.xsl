@@ -2,7 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
 <!-- Thin layer on MathBook XML -->
-<xsl:import href="/Users/alexjordan/mathbook/xsl/mathbook-html.xsl" />
+<xsl:import href="/Users/alex.jordan/mathbook/xsl/mathbook-html.xsl" />
 
 <!-- Common thin layer                                                      -->
 <xsl:import href="clm-common.xsl" />
@@ -20,7 +20,7 @@
 
 
 <!-- Suppress "Lab .1" from the backmatter solutions chapter -->
-<xsl:template match="backmatter/chapter" mode="header-content">
+<!--<xsl:template match="backmatter/chapter" mode="header-content">
     <span class="title">
         <xsl:apply-templates select="." mode="title-full" />
     </span>
@@ -34,20 +34,20 @@
             </span>
         </a>
 </xsl:template>
-
+-->
 
 
 <!-- Suppress "Activity ..1" from the frontmatter prefaces' sections -->
-<xsl:template match="frontmatter//section" mode="header-content">
+<!--<xsl:template match="frontmatter//section" mode="header-content">
     <span class="title">
         <xsl:apply-templates select="." mode="title-full" />
     </span>
     <xsl:apply-templates select="." mode="permalink" />
 </xsl:template>
-
+-->
 
 <!-- GeoGebra HTML5-->
-<xsl:template match="geogebra-html5">
+<!--<xsl:template match="geogebra-html5">
     <xsl:text>This GeoGebra applet requires an internet connection.</xsl:text>
     <xsl:element name="iframe">
         <xsl:attribute name="scrolling">
@@ -67,7 +67,7 @@
         </xsl:attribute>
     </xsl:element>
 </xsl:template>
-
+-->
 
 <!-- For tables, move caption above                -->
 <!--

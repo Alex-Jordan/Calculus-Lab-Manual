@@ -25,11 +25,9 @@
         <exercise>
             <statement>
                 <p>The function <m>g</m> shown in <xref ref="figure-vertical-moment"/> has a vertical tangent line at <m>-3</m>.</p>
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p>Veronica says that <m>-3</m> is a critical number of <m>g</m> but Tito disagrees. Tito contends that <m>-3</m> is not a critical number because <m>g</m> does not have a local extreme point at <m>-3</m>.  Who is right?</p>
-                    </paragraphs>
-                    <figure xml:id="figure-vertical-moment" valign="top">
+                <sidebyside  widths="47% 47%">
+                    <p>Veronica says that <m>-3</m> is a critical number of <m>g</m> but Tito disagrees. Tito contends that <m>-3</m> is not a critical number because <m>g</m> does not have a local extreme point at <m>-3</m>.  Who is right?</p>
+                    <figure xml:id="figure-vertical-moment">
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -45,7 +43,7 @@
                                 ymax=5,
                                 samples=100,
                                 ]
-                                \addplot[pccplot,domain=-8:2]{-(x+3)/abs(x+3)*abs((x+3))^(1/3)-1};
+                                \addplot[pccplot,domain=-2.7:0.7] ({-(x+1)^3-3},{x});
                                 %\addplot[asymptote]coordinates{(-3,-3) (-3,1)} node[above] {\rotatebox{90}{$x=-3$}};
                             \end{axis}
                             \end{tikzpicture}]]>
@@ -57,31 +55,33 @@
         </exercise>
         <exercisegroup>
             <introduction>
-                <p>Answer each of the following questions (using complete sentences) in reference to the function <m>f</m> shown in <xref ref="figure-lots-of-critical-points"/>.</p> 
-                <figure xml:id="figure-lots-of-critical-points">
-                    <caption><m>y=\fe{f}{x}</m></caption>
-                    <image>
-                        <latex-image-code>
-                        <![CDATA[\begin{tikzpicture}
-                        \begin{axis}[
-                            ]
-                            \addplot[pccplot,domain=-6.9:-5.35]{-1/(x+5)^2+2};
-                            \addplot[pccplot,domain=-4.65:-3,<-]{-1/(x+5)^2+2};
-                            \addplot[pccplot,domain=-3:2,-]{x^2-5};
-                            \addplot[pccplot,domain=2:5,-,samples=80]{(abs(x-4))^(1/3)*(x-4)/(abs(x-4))+3};
-                            \addplot[pccplot,domain=5:6.9,->]{4-(x-5)^(0.9)};
-                            \addplot[holdot] coordinates {
-                                (-3,1.75)
-                                (-3,4)
-                                (2,-1)
-                            };
-                            \addplot[soldot] coordinates {(2,1.74)};
-                            \addplot[asymptote] coordinates {(-5,-7) (-5,7)} node[below left] {\rotatebox{90}{$x=-5$}};
-                        \end{axis}
-                        \end{tikzpicture}]]>
-                        </latex-image-code>
-                    </image>
-                </figure>
+                <sidebyside>
+                    <p>Answer each of the following questions (using complete sentences) in reference to the function <m>f</m> shown in <xref ref="figure-lots-of-critical-points"/>.</p> 
+                    <figure xml:id="figure-lots-of-critical-points">
+                        <caption><m>y=\fe{f}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[
+                                ]
+                                \addplot[pccplot,domain=-6.9:-5.35]{-1/(x+5)^2+2};
+                                \addplot[pccplot,domain=-4.65:-3,<-]{-1/(x+5)^2+2};
+                                \addplot[pccplot,domain=-3:2,-]{x^2-5};
+                                \addplot[pccplot,domain=2:5,-,samples=80]{(abs(x-4))^(1/3)*(x-4)/(abs(x-4))+3};
+                                \addplot[pccplot,domain=5:6.9,->]{4-(x-5)^(0.9)};
+                                \addplot[holdot] coordinates {
+                                    (-3,1.75)
+                                    (-3,4)
+                                    (2,-1)
+                                };
+                                \addplot[soldot] coordinates {(2,1.74)};
+                                \addplot[asymptote] coordinates {(-5,-7) (-5,7)} node[below left] {\rotatebox{90}{$x=-5$}};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
             </introduction>
             <exercise>
                 <statement>

@@ -87,16 +87,16 @@
                     <p>Complete <xref ref="table-piecewise-discontinuities-analysis"/>.</p>
                     <table xml:id="table-piecewise-discontinuities-analysis">
                         <caption>Discontinuity analysis for <m>f</m></caption>
-                        <tabular top="major" left="minor">
-                            <col halign="1in" right="minor" left="minor"/>
-                            <col halign="1.8in" right="minor"/>
-                            <col halign="center" right="minor"/>
-                            <col halign="1.1in" right="minor"/>
+                        <tabular top="major" left="major">
+                            <col halign="left" right="minor"/>
+                            <col halign="left" right="minor"/>
+                            <col halign="center" right="minor" />
+                            <col halign="left" right="major"/>
                             <row bottom="medium">
-                                <cell>Location of discontinuity</cell>
-                                <cell>From <xref ref="definition-continuity"/>, sub-property (1, 2, or 3) that is not met</cell>
+                                <cell><line>Location of</line><line>discontinuity</line></cell>
+                                <cell><line>From <xref ref="definition-continuity"/>,</line><line>sub-property (1, 2, 3)</line><line>that is not met</line></cell>
                                 <cell right="minor">Removable?</cell>
-                                <cell>Continuous from one side?</cell>
+                                <cell><line>Continuous</line><line>from one side?</line></cell>
                             </row>
                             <row bottom="minor">
                                 <cell><m>\strut</m></cell>
@@ -116,7 +116,7 @@
                                 <cell/>
                                 <cell/>
                             </row>
-                            <row bottom="minor">
+                            <row bottom="major">
                                 <cell><m>\strut</m></cell>
                                 <cell/>
                                 <cell/>

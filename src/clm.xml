@@ -15,7 +15,7 @@
     
     <book xml:id="clm">
         <title>Calculus Lab Manual</title>
-        <subtitle>for MTH 251 at Portland Community College</subtitle>
+        <subtitle>MTH 251 at Portland Community College</subtitle>
 
         <xi:include href="./frontmatter.xml" />
         <xi:include href="./rates-of-change.xml" />

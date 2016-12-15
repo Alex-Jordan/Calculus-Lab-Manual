@@ -19,10 +19,8 @@
         <exercise>
             <statement>
                 <p>Consider the function <m>f</m> defined by <m>\fe{f}{x}=\frac{12}{x}</m>.</p>
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p>Complete <xref ref="table-limit-to-zero"/> without the use of your calculator. What limit value and limit law are being illustrated in the table?</p>
-                    </paragraphs>
+                <sidebyside widths="47% 47%">
+                    <p>Complete <xref ref="table-limit-to-zero"/> without the use of your calculator. What limit value and limit law are being illustrated in the table?</p>
 
                     <table xml:id="table-limit-to-zero">
                         <caption><m>\fe{f}{x}=\frac{12}{x}</m></caption>

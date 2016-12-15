@@ -16,7 +16,7 @@
   
     <table xml:id="table-quotient-rule">
         <caption>Examples of the Quotient Rule</caption>
-        <tabular top="major">
+        <tabular top="major" valign="top">
             <col halign="center"/>
             <col halign="center"/>
             <row bottom="medium">
@@ -24,12 +24,12 @@
                 <cell>Derivative</cell>
             </row>
             <row bottom="minor">
-                <cell><m>y=\dfrac{4x^3}{\fe{\ln}{x}}</m></cell>
-                <cell><m>\begin{aligned}\lz{y}{x}&amp;=\frac{\lzoo{x}{4x^3}\cdot\fe{\ln}{x}-4x^3\cdot\lzoo{x}{\fe{\ln}{x}}}{\left[\fe{\ln}{x}\right]^2}\\&amp;=\frac{12x^2\cdot\fe{\ln}{x}-4x^3\cdot\frac{1}{x}}{\left[\fe{\ln}{x}\right]^2}\\&amp;=\frac{12x^2\fe{\ln}{x}-4x^2}{\left[\fe{\ln}{x}\right]^2}\end{aligned}</m></cell>
+                <cell><m>y=\dfrac{4x^3}{\fe{\ln}{x}}\phantom{\frac{\lzoo{x}{4x^3}}{\left[\fe{\ln}{x}\right]^2}}</m></cell>
+                <cell><m>\begin{aligned}[t]\lz{y}{x}&amp;=\frac{\lzoo{x}{4x^3}\cdot\fe{\ln}{x}-4x^3\cdot\lzoo{x}{\fe{\ln}{x}}}{\left[\fe{\ln}{x}\right]^2}\\&amp;=\frac{12x^2\cdot\fe{\ln}{x}-4x^3\cdot\frac{1}{x}}{\left[\fe{\ln}{x}\right]^2}\\&amp;=\frac{12x^2\fe{\ln}{x}-4x^2}{\left[\fe{\ln}{x}\right]^2}\end{aligned}</m></cell>
             </row>
             <row bottom="major">
-                <cell><m>V=\dfrac{\fe{\csc}{t}}{\fe{\tan}{t}}</m></cell>
-                <cell><m>\begin{aligned}\lz{V}{t}&amp;=\frac{\lzoo{t}{\fe{\csc}{t}}\cdot\fe{\tan}{t}-\fe{\csc}{t}\cdot\lzoo{t}{\fe{\tan}{t}}}{\fe{\tan^2}{t}}\\&amp;=\frac{-\fe{\csc}{t}\fe{\cot}{t}\fe{\tan}{t}-\fe{\csc}{t}\fe{\sec^2}{t}}{\fe{\tan^2}{t}}\\&amp;=\frac{-\fe{\csc}{t}\left(1+\fe{\sec^2}{t}\right)}{\fe{\tan^2}{t}}\end{aligned}</m></cell>
+                <cell><m>V=\dfrac{\fe{\csc}{t}}{\fe{\tan}{t}}\phantom{\frac{\lzoo{t}{\fe{\csc}{t}}}{\fe{\tan^2}{t}}}</m></cell>
+                <cell><m>\begin{aligned}[t]\lz{V}{t}&amp;=\frac{\lzoo{t}{\fe{\csc}{t}}\cdot\fe{\tan}{t}-\fe{\csc}{t}\cdot\lzoo{t}{\fe{\tan}{t}}}{\fe{\tan^2}{t}}\\&amp;=\frac{-\fe{\csc}{t}\fe{\cot}{t}\fe{\tan}{t}-\fe{\csc}{t}\fe{\sec^2}{t}}{\fe{\tan^2}{t}}\\&amp;=\frac{-\fe{\csc}{t}\left(1+\fe{\sec^2}{t}\right)}{\fe{\tan^2}{t}}\end{aligned}</m></cell>
             </row>
         </tabular>
 

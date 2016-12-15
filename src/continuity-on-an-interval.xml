@@ -77,21 +77,15 @@
             </introduction>
             <exercise>
                 <statement>
-                    <p>Sketch a graph of a function <m>f</m> satisfying:</p>
-                    <sidebyside>
-                        <paragraphs valign="top">
-                            <p><md>
-                            <mrow>\fe{f}{0}&amp;=4</mrow>
-                            <mrow>\fe{f}{4}&amp;=5</mrow>
-                            <mrow>\lim_{x\to4^{-}}\fe{f}{x}&amp;=2</mrow>
-                            <mrow>\lim_{x\to4^{+}}\fe{f}{x}&amp;=5</mrow>
-                            <mrow>\lim_{x\to-\infty}\fe{f}{x}&amp;=4</mrow>
-                            <mrow>\lim_{x\to\infty}\fe{f}{x}&amp;=4</mrow>
-                            </md></p>
-                        </paragraphs>
+                    <sidebyside widths="47% 47%">
+                        <p><md>
+                            <mrow>\fe{f}{0}=4\text{ and }\fe{f}{4}&amp;=5</mrow>
+                            <mrow>\lim_{x\to4^{-}}\fe{f}{x}=2\text{ and }\lim_{x\to4^{+}}\fe{f}{x}&amp;=5</mrow>
+                            <mrow>\lim_{x\to-\infty}\fe{f}{x}=\lim_{x\to\infty}\fe{f}{x}&amp;=4</mrow>
+                        </md><m>f</m> has at most one discontinuity.</p>
                         <figure>
                         <caption><m>y=\fe{f}{x}</m></caption>
-                        <image valign="top">
+                        <image>
                             <description>a blank Cartesian grid, with x-axis covering the interval from -7 to 7, and y-axis covering the interval from -7 to 7</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -106,21 +100,14 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Sketch a graph of a function <m>g</m> satisfying:</p>
-                    <sidebyside>
-                        <paragraphs valign="top">
-                            <p><md>
-                            <mrow>\fe{g}{0}&amp;=4</mrow>
-                            <mrow>\fe{g}{3}&amp;=-2</mrow>
-                            <mrow>\fe{g}{6}&amp;=0</mrow>
-                            <mrow>\lim_{x\to-2}\fe{g}{x}&amp;=\infty</mrow>
-                            <mrow>\lim_{x\to-\infty}\fe{g}{x}&amp;=\infty</mrow>
-                            </md>
-                            And <m>g</m> is continuous and has constant slope on <m>\ointerval{0}{\infty}</m>.</p>
-                        </paragraphs>
+                    <sidebyside widths="47% 47%">
+                        <p><md>
+                            <mrow>\fe{g}{0}=4,\text{ }\fe{g}{3}=-2,\text{ and }\fe{g}{6}&amp;=0</mrow>
+                            <mrow>\lim_{x\to-2}\fe{g}{x}=\lim_{x\to-\infty}\fe{g}{x}&amp;=\infty</mrow>
+                        </md><m>g</m> is continuous and has constant slope on <m>\ointerval{0}{\infty}</m>.</p>
                         <figure>
                         <caption><m>y=\fe{g}{x}</m></caption>
-                        <image valign="top">
+                        <image>
                             <description>a blank Cartesian grid, with x-axis covering the interval from -7 to 7, and y-axis covering the interval from -7 to 7</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
@@ -135,24 +122,15 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Sketch a graph of a function <m>m</m> satisfying:</p>
-                    <sidebyside>
-                        <paragraphs valign="top">
-                            <p><md>
-                            <mrow>\fe{m}{-6}&amp;=5</mrow>
-                            <mrow>\lim_{x\to3}\fe{m}{x}&amp;=-\infty</mrow>
-                            <mrow>\lim_{x\to-4^{+}}\fe{m}{x}&amp;=-2</mrow>
-                            <mrow>\lim_{x\to\infty}\fe{m}{x}&amp;=-\infty</mrow>
-                            </md>
-                            The only discontinuities on <m>m</m> are at <m>-4</m> and <m>3</m>.<br/>
-                            <m>m</m> has no <m>x</m>-intercepts.<br/>
-                            <m>m</m> has constant slope of <m>-2</m> over <m>\ointerval{-\infty}{-4}</m>.<br/>
-                            <m>m</m> is continuous over <m>\cointerval{-4}{3}</m>.<br/>
-                            </p>
-                        </paragraphs>
+                    <sidebyside widths="47% 47%">
+                        <p><md>
+                            <mrow>\fe{m}{-6}\amp=5</mrow>
+                            <mrow>\lim_{x\to-4^{+}}\fe{m}{x}\amp=-2</mrow>
+                            <mrow>\lim_{x\to3}\fe{m}{x}=\lim_{x\to\infty}\fe{m}{x}\amp=-\infty</mrow>
+                        </md><m>m</m> only has discontinuities at <m>-4</m> and <m>3</m>. <m>m</m> has no zeros. <m>m</m> has slope <m>-2</m> over <m>\ointerval{-\infty}{-4}</m>. <m>m</m> is continuous over <m>\cointerval{-4}{3}</m>.</p>
                         <figure>
                         <caption><m>y=\fe{m}{x}</m></caption>
-                        <image valign="top">
+                        <image>
                             <description>a blank Cartesian grid, with x-axis covering the interval from -7 to 7, and y-axis covering the interval from -7 to 7</description>
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}

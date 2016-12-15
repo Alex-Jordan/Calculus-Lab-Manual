@@ -106,32 +106,32 @@
         </tabular>
     </table>
 
-    <theorem number="no">
+    <theorem>
         <title>Constant Factor Rule of Differentiation</title>
         <statement>
             <p><me>\lzoo{x}{k\fe{f}{x}}=k\lzoo{x}{\fe{f}{x}}</me></p>
             <p>Alternatively, if <m>y=\fe{f}{x}</m>, then <m>\lzoo{x}{ky}=k\lz{y}{x}</m>.</p>
         </statement>
     </theorem>
-    <theorem number="no">
+    <theorem>
         <title>Sum/Difference Rule of Differentiation</title>
         <statement>
             <p><me>\lzoo{x}{\fe{f}{x}\pm\fe{g}{x}}=\lzoo{x}{\fe{f}{x}}\pm\lzoo{x}{\fe{g}{x}}</me></p>
         </statement>
     </theorem>
-    <theorem number="no">
+    <theorem>
         <title>Product Rule of Differentiation</title>
         <statement>
             <p><me>\lzoo{x}{\fe{f}{x}\cdot\fe{g}{x}}=\lzoo{x}{\fe{f}{x}}\cdot\fe{g}{x}+\fe{f}{x}\cdot\lzoo{x}{\fe{g}{x}}</me></p>
         </statement>
     </theorem>
-    <theorem number="no">
+    <theorem>
         <title>Quotient Rule of Differentiation</title>
         <statement>
             <p><me>\lzoo{x}{\frac{\fe{f}{x}}{\fe{g}{x}}}=\frac{\lzoo{x}{\fe{f}{x}}\cdot\fe{g}{x}-\fe{f}{x}\cdot\lzoo{x}{\fe{g}{x}}}{\left[\fe{g}{x}\right]^2}</me></p>
         </statement>
     </theorem>
-    <theorem number="no">
+    <theorem>
         <title>Chain Rule of Differentiation</title>
         <statement>
             <p><me>\lzoo{x}{\fe{f}{\fe{g}{x}}}=\fe{\fd{f}}{\fe{g}{x}}\cdot\fe{\fd{g}}{x}</me></p>

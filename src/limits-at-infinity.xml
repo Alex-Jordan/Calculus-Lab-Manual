@@ -12,7 +12,7 @@
 
     <p>We are frequently interested in a function's <q>end behavior.</q> That is, what is the behavior of the function as the input variable increases without bound or decreases without bound.</p> 
 
-    <p>Many times a function will approach a horizontal asymptote as its end behavior. Assuming that the horizontal asymptote <m>y=L</m> represents the end behavior of the function <m>f</m> both as <m>x</m> increases without bound and as <m>x</m> decreases into the negative without bound, we write <m>\lim\limits_{x\to\infty}\fe{f}{x}=L</m> and <m>\lim\limits_{x\to\infty}\fe{f}{x}=L</m>.</p>
+    <p>Many times a function will approach a horizontal asymptote as its end behavior. Assuming that the horizontal asymptote <m>y=L</m> represents the end behavior of the function <m>f</m> both as <m>x</m> increases without bound and as <m>x</m> decreases into the negative without bound, we write <m>\lim\limits_{x\to\infty}\fe{f}{x}=L</m> and <m>\lim\limits_{x\to-\infty}\fe{f}{x}=L</m>.</p>
 
     <p>The formalistic way to read <m>\lim\limits_{x\to\infty}\fe{f}{x}=L</m> is <q>the limit of <m>\fe{f}{x}</m> as <m>x</m> approaches infinity equals <m>L</m>.</q> When read that way, however, the words need to be taken <em>anything but literally</em>. In the first place, <m>x</m> isn't approaching anything! The entire point is that <m>x</m> is increasing without any bound on how large its value becomes. Secondly, there is no place on the real number line called <q>infinity</q>; infinity is not a number. Hence <m>x</m> certainly can't be approaching something that isn't even there!</p> 
 
@@ -20,16 +20,14 @@
 
         <exercise>
             <statement>
-                 <p>For the function in <xref ref="figure-match-rationals-1"/> from <xref ref="chapter-critical-numbers-graphing-from-formulas"/>, we could (correctly) write down that <m>\lim\limits_{x\to\infty}\fe{f_1}{x}=-2</m> and <m>\lim\limits_{x\to-\infty}\fe{f_1}{x}=-2</m>.  Go ahead and write (and say aloud) the analogous limits for the functions in <xref autoname="plural" ref="figure-match-rationals-2"/>, <xref autoname="no" ref="figure-match-rationals-3"/>, <xref autoname="no" ref="figure-match-rationals-4"/>, and <xref autoname="no" ref="figure-match-rationals-5"/>,.</p> 
+                 <p>For the function in <xref ref="figure-match-rationals-1"/> from <xref ref="chapter-critical-numbers-graphing-from-formulas"/>, we could (correctly) write down that <m>\lim\limits_{x\to\infty}\fe{f_1}{x}=-2</m> and <m>\lim\limits_{x\to-\infty}\fe{f_1}{x}=-2</m>.  Go ahead and write (and say aloud) the analogous limits for the functions in <xref ref="figure-match-rationals-2">Figures</xref>, <xref autoname="no" ref="figure-match-rationals-3"/>, <xref autoname="no" ref="figure-match-rationals-4"/>, and <xref autoname="no" ref="figure-match-rationals-5"/>,.</p> 
             </statement>
         </exercise>
 
         <exercisegroup>
             <introduction>
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p>Values of the function <m>f</m> defined by <m>\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}</m> are shown in <xref ref="table-limit-at-minus-infinity"/>. Both of the questions below are in reference to this function.</p>
-                    </paragraphs>
+                <sidebyside widths="47% 47%">
+                    <p>Values of the function <m>f</m> defined by <m>\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}</m> are shown in <xref ref="table-limit-at-minus-infinity"/>. Both of the questions below are in reference to this function.</p>
                     <table valign="top" xml:id="table-limit-at-minus-infinity">
                         <caption><m>\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}</m></caption>
                         <tabular top="major">
@@ -75,10 +73,8 @@
 
         <exercisegroup>
             <introduction>
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p>Jorge and Vanessa were in a heated discussion about horizontal asymptotes. Jorge said that functions never cross horizontal asymptotes. Vanessa said Jorge was nuts. Vanessa whipped out her trusty calculator and generated the values in <xref ref="table-limit-crossing-asymptote"/> to prove her point.</p>
-                    </paragraphs>
+                <sidebyside widths="47% 47%">
+                    <p>Jorge and Vanessa were in a heated discussion about horizontal asymptotes. Jorge said that functions never cross horizontal asymptotes. Vanessa said Jorge was nuts. Vanessa whipped out her trusty calculator and generated the values in <xref ref="table-limit-crossing-asymptote"/> to prove her point.</p>
                     <table xml:id="table-limit-crossing-asymptote">
                         <caption><m>\fe{g}{t}=1+\frac{\fe{\sin}{t}}{t}</m></caption>
                         <tabular top="major">

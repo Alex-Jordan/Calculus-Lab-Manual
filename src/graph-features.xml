@@ -16,30 +16,20 @@
         <title>Some Common Graphical Phrases</title>
         <statement>
             <p>These are loose, informal definitions. Technical, precise definitions can be found elsewhere.</p>
-            <sidebyside>
-                <paragraphs width="45%" valign="top">
+            <sbsgroup>
+                <sidebyside widths="47% 47%" valign="top">
                     <p><term>Positive function.</term> The vertical coordinates of points on the function are positive. A function is positive whenever its graph lies above the horizontal axis.</p>
-                </paragraphs>
-                <paragraphs width="45%" valign="top">
                     <p><term>Negative function.</term> The vertical coordinates of points on the function are negative. A function is negative whenever its graph lies below the horizontal axis.</p>
-                </paragraphs>
-            </sidebyside>
-            <sidebyside>
-                <paragraphs width="45%" valign="top">
+                </sidebyside>
+                <sidebyside widths="47% 47%" valign="top">
                     <p><term>Increasing function.</term> The vertical coordinates of the function increase as you move along the curve from left to right. Linear functions with positive slope are always increasing.</p>
-                </paragraphs>
-                <paragraphs width="45%" valign="top">
                     <p><term>Decreasing function.</term> The vertical coordinates of the function decrease as you move along the curve from left to right. Linear functions with negative slope are always decreasing.</p>
-                </paragraphs>
-            </sidebyside>
-            <sidebyside>
-                <paragraphs width="45%" valign="top">
+                </sidebyside>
+                <sidebyside widths="47% 47%" valign="top">
                     <p><term>Concave up function.</term> A function is concave up at <m>a</m> if the tangent line to the function at <m>a</m> lies below the curve. The bottom half of a circle is concave up.</p>
-                </paragraphs>
-                <paragraphs width="45%" valign="top">
                     <p><term>Concave down function.</term> A function is concave down at <m>a</m> if the tangent line to the function at <m>a</m> lies above the curve. The top half of a circle is concave down.</p>
-                </paragraphs>
-            </sidebyside>
+                </sidebyside>
+            </sbsgroup>
         </statement>
     </definition>
 
@@ -47,11 +37,9 @@
         <exercisegroup>
             <introduction>
                 <p>Answer each of the following questions in reference to the function shown in <xref ref="figure-graph-features"/>. Each answer is an interval (or intervals) along the <m>x</m>-axis.</p> 
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p>Use interval notation when expressing your answers. Make each interval as wide as possible; that is, do not break an interval into pieces if the interval does not need to be broken. Assume that the slope of the function is constant on <m>\ointerval{-\infty}{-5}</m>, <m>\ointerval{3}{4}</m>, and <m>\ointerval{4}{\infty}</m>.</p> 
-                    </paragraphs>
-                    <figure xml:id="figure-graph-features" valign="top">
+                <sidebyside widths="47% 47%" valign="top">
+                    <p>Use interval notation when expressing your answers. Make each interval as wide as possible; that is, do not break an interval into pieces if the interval does not need to be broken. Assume that the slope of the function is constant on <m>\ointerval{-\infty}{-5}</m>, <m>\ointerval{3}{4}</m>, and <m>\ointerval{4}{\infty}</m>.</p> 
+                    <figure xml:id="figure-graph-features">
                         <caption><m>y=\fe{f}{x}</m></caption>
                         <image> 
                             <description>a graph of a function whose curve has three separated components; the first component comes in from the left at y=3, completely flat, until it reaches(-5, 3); then it sharply bends downward, tracing a parabolic curve through a vertex at (-3,-1), back up to (-1,3); at (-1,3) the curve again sharply changes direction, bending down to (0,2), smoothly bending back up to (2,4) and then down to (3,3); this is the end of the first component, and there is a solid dot at (3,3); the second component is simply a straight line segment from (3,-2) to (4,-4); there are hollow dots at both endpoints; the third component of the curve is also a straight line; it starts up at (4,6), and moves downward and to the right with slope -2/3 until the curve exits the graph at about (7,4)</description>

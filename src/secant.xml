@@ -13,11 +13,9 @@
     <p>One of the building blocks in differential calculus is the <em>secant line to a curve</em>. The only requirement for a line to be considered a secant line to a curve is that the line must intersect the curve in at least two points.</p>
     <p>In <xref ref="figure-secant"/>, we see a secant line to the curve <m>y=\fe{f}{x}</m> through the points <m>\point{0}{3}</m> and <m>\point{4}{-5}</m>. Verify that the slope of this line is <m>-2</m>.</p>
 
-    <sidebyside>
-        <paragraphs valign="top" width="55%">
-            <p>The formula for <m>f</m> is <m>\fe{f}{x}=3+2x-x^2</m>. We can use this formula to come up with a generalized formula for the slope of secant lines to this curve. Specifically, the slope of the line connecting the point <m>\point{x_0}{\fe{f}{x_0}}</m> to the point <m>\point{x_1}{\fe{f}{x_1}}</m> is derived in the following example.</p> 
-        </paragraphs>
-        <figure xml:id="figure-secant" valign="top">
+    <sidebyside widths="47% 47%">
+        <p>The formula for <m>f</m> is <m>\fe{f}{x}=3+2x-x^2</m>. We can use this formula to come up with a generalized formula for the slope of secant lines to this curve. Specifically, the slope of the line connecting the point <m>\point{x_0}{\fe{f}{x_0}}</m> to the point <m>\point{x_1}{\fe{f}{x_1}}</m> is derived in the following example.</p> 
+        <figure xml:id="figure-secant">
             <caption>A secant line to <m>y=\fe{f}{x}=3+2x-x^2</m></caption>
             <image>
                 <description>an upside down parabola with vertex at (1,4) and x-intercepts at -1 and 3; a downward slanting line intersects the parabola at (0,3) and (4,-5)</description>
@@ -55,13 +53,11 @@
         <mrow>&amp;=\frac{2\left(x_1-x_0\right)-\left(x_1+x_0\right)\left(x_1-x_0\right)}{x_1-x_0}</mrow>
         <mrow>&amp;=\frac{\left[2-\left(x_1+x_0\right)\right]\left(x_1-x_0\right)}{x_1-x_0}</mrow>
         <mrow>&amp;=2-x_1-x_0\text{ for }x_1\neq x_0</mrow>
-        </md></p>
-
-        <p>We can check our formula using the line in <xref ref="figure-secant"/>. If we let <m>x_0=0</m> and <m>x_1=4</m> then our simplified slope formula gives us: <m>2-x_1-x_0=2-4-0</m>, which simplifies to <m>-2</m> as we expected.</p>
+        </md>We can check our formula using the line in <xref ref="figure-secant"/>. If we let <m>x_0=0</m> and <m>x_1=4</m> then our simplified slope formula gives us: <m>2-x_1-x_0=2-4-0</m>, which simplifies to <m>-2</m> as we expected.</p>
     </example>
 
     <exercises>
-        <exercisegroup by="row">
+        <exercisegroup>
             <introduction>
                 <p>Let <m>\fe{g}{x}=x^2-5</m>.</p>
             </introduction>
@@ -75,10 +71,8 @@
             <exercise>
                 <statement>
                     <p>Check your slope formula using the two points indicated in <xref ref="figure-secant-exercise"/>.</p>
-                    <sidebyside>
-                        <paragraphs valign="top">
-                            <p>That is, use the graph to find the slope between the two points and then use your formula to find the slope; make sure that the two values agree!</p>
-                        </paragraphs>
+                    <sidebyside widths="47% 47%">
+                        <p>That is, use the graph to find the slope between the two points and then use your formula to find the slope; make sure that the two values agree!</p>
                         <figure valign="top" xml:id="figure-secant-exercise">
                             <caption><m>y=\fe{g}{x}=x^2-5</m> and a secant line</caption>
                             <image xml:id="image-secant-exercise">

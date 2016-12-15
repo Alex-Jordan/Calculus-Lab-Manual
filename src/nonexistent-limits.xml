@@ -10,15 +10,15 @@
 <section xml:id="section-nonexistent-limits">
     <title>Non-existent Limits</title>
 
-    <p>Many limit values do not exist. Sometimes the non-existence is caused by the function value either increasing without bound or decreasing without bound. In these special cases we use the symbols <m>\infty</m> and <m>-\infty</m> to communicate the non-existence of the limits. <xref autoname="plural" ref="figure-first-nonexistent-limit"/><ndash/><xref autoname="no" ref="figure-last-nonexistent-limit"/> can be used to illustrate some ways in which we communicate the <term>non-existence</term> of these types of limits.</p>
+    <p>Many limit values do not exist. Sometimes the non-existence is caused by the function value either increasing without bound or decreasing without bound. In these special cases we use the symbols <m>\infty</m> and <m>-\infty</m> to communicate the non-existence of the limits. <xref ref="figure-first-nonexistent-limit">Figures</xref><ndash/><xref autoname="no" ref="figure-last-nonexistent-limit"/> can be used to illustrate some ways in which we communicate the <term>non-existence</term> of these types of limits.</p>
 
     <ul>
-        <li><p>In <xref ref="figure-first-nonexistent-limit"/> we could (correctly) write<br /><m>\lim\limits_{x\to2}\fe{k}{x}=\infty</m>, <m>\lim\limits_{x\to2^{-}}\fe{k}{x}=\infty</m>, and <m>\lim\limits_{x\to2^{+}}\fe{k}{x}=\infty</m>.</p></li>
-       <li><p>In <xref ref="figure-middle-nonexistent-limit"/> we could (correctly) write<br /><m>\lim\limits_{t\to4}\fe{w}{t}=-\infty</m>, <m>\lim\limits_{t\to4^{-}}\fe{w}{t}=-\infty</m>, and <m>\lim\limits_{t\to4^{+}}\fe{w}{t}=-\infty</m>.</p></li>
-       <li><p>In <xref ref="figure-last-nonexistent-limit"/> we could (correctly) write<br /><m>\lim\limits_{x\to-3^{-}}\fe{T}{x}=\infty</m> and <m>\lim\limits_{x\to-3^{+}}\fe{T}{x}=-\infty</m>.<br /> There is no shorthand way of communicating the non-existence of the two-sided limit <m>\lim\limits_{x\to-3}\fe{T}{x}</m>.</p></li>
+        <li><p>In <xref ref="figure-first-nonexistent-limit"/> we could (correctly) write<me>\lim\limits_{x\to2}\fe{k}{x}=\infty, \lim\limits_{x\to2^{-}}\fe{k}{x}=\infty,\text{ and }\lim\limits_{x\to2^{+}}\fe{k}{x}=\infty\text{.}</me></p></li>
+       <li><p>In <xref ref="figure-middle-nonexistent-limit"/> we could (correctly) write<me>\lim\limits_{t\to4}\fe{w}{t}=-\infty, \lim\limits_{t\to4^{-}}\fe{w}{t}=-\infty,\text{ and }\lim\limits_{t\to4^{+}}\fe{w}{t}=-\infty\text{.}</me></p></li>
+       <li><p>In <xref ref="figure-last-nonexistent-limit"/> we could (correctly) write<me>\lim\limits_{x\to-3^{-}}\fe{T}{x}=\infty\text{ and }\lim\limits_{x\to-3^{+}}\fe{T}{x}=-\infty\text{.}</me> There is no shorthand way of communicating the non-existence of the two-sided limit <m>\lim\limits_{x\to-3}\fe{T}{x}</m>.</p></li>
     </ul>
 
-    <sidebyside>
+    <sidebyside widths="32% 32% 32%">
         <figure xml:id="figure-first-nonexistent-limit">
             <caption><m>y=\fe{k}{x}</m></caption>
             <image>
@@ -38,8 +38,8 @@
                              ({2-1/sqrt(13)*1.1^t}, {-6.5+1/(1/sqrt(13)*1.1^t)^2});
                     \addplot[asymptote
                     ]coordinates{
-                        (2,7)
-                        (2,-7)} node[above left] {\rotatebox{90}{$x=2$}};
+                        (2,-7)
+                        (2,7)} node[below right] {\rotatebox{90}{$x=2$}};
                 \end{axis}
                 \end{tikzpicture}]]>
                 </latex-image-code>
@@ -65,8 +65,8 @@
                              ({4-1/sqrt(13)*1.1^t}, {6.5-1/(1/sqrt(13)*1.1^t)^2});
                     \addplot[asymptote
                     ]coordinates{
-                        (4,-7)
-                        (4,7)} node[below left] {\rotatebox{90}{$t=4$}};
+                        (4,7)
+                        (4,-7)} node[above left] {\rotatebox{90}{$t=4$}};
                 \end{axis}
                 \end{tikzpicture}]]>
                 </latex-image-code>
@@ -91,8 +91,8 @@
                              ({-3-1/sqrt(13)*1.1^t}, {-6.5+1/(1/sqrt(13)*1.1^t)^2});
                     \addplot[asymptote
                     ]coordinates{
-                        (-3,7)
-                        (-3,-7)} node[above left] {\rotatebox{90}{$x=-3$}};
+                        (-3,-7)
+                        (-3,7)} node[below left] {\rotatebox{90}{$x=-3$}};
                 \end{axis}
                 \end{tikzpicture}]]>
                 </latex-image-code>
@@ -106,15 +106,13 @@
             <statement>
                 <p>In the plane provided, draw the graph of a single function, <m>f</m>, that satisfies each of the following limit statements. Make sure that you draw the necessary asymptotes and that you label each asymptote with its equation.</p>
 
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p><md>
+                <sidebyside widths="47% 47%">
+                    <p><md>
                         <mrow>\lim\limits_{x\to3^{-}}\fe{f}{x}&amp;=-\infty</mrow>
                         <mrow>\lim\limits_{x\to\infty}\fe{f}{x}&amp;=0</mrow>
                         <mrow>\lim\limits_{x\to3^{+}}\fe{f}{x}&amp;=\infty</mrow>
                         <mrow>\lim\limits_{x\to-\infty}\fe{f}{x}&amp;=2</mrow>
-                        </md></p>
-                    </paragraphs>
+                    </md></p>
                     <figure>
                     <caption><m>y=\fe{f}{x}</m></caption>
                     <image valign="top">

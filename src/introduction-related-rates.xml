@@ -18,11 +18,9 @@
 
     <p><xref ref="figure-snowball"/> shows a graph of <m>r=\fe{f}{V}</m> where <m>r</m> is the radius of a sphere of volume <m>V</m>. Note that the tangent lines to the curve have greater slope the closer <m>V</m> gets to zero. This tells us that a small change in volume has a greater effect on the radius the closer <m>V</m> is to zero. </p>
 
-    <sidebyside>
-        <paragraphs valign="top">
-            <p>Once the value of <m>V</m> gets large, the slope of the tangent lines is almost zero. This tells us that when the volume is large, a small change in volume has almost no effect on the radius.</p>
-        </paragraphs>
-        <figure xml:id="figure-snowball" valign="top">
+    <sidebyside widths="47% 47%">
+        <p>Once the value of <m>V</m> gets large, the slope of the tangent lines is almost zero. This tells us that when the volume is large, a small change in volume has almost no effect on the radius.</p>
+        <figure xml:id="figure-snowball">
             <caption><m>r=\fe{f}{V}</m></caption>
             <image>
                 <latex-image-code>
@@ -55,7 +53,7 @@
         <caption>Variable table for the snowball problem</caption>
         <tabular top="major">
             <col halign="center"/>
-            <col halign="3.5in"/>
+            <col width="72%"/>
             <col halign="center"/>
             <row bottom="medium">
                 <cell>Variable</cell>
@@ -64,27 +62,27 @@
             </row>
             <row bottom="minor">
                 <cell><m>V</m></cell>
-                <cell>The volume of the snowball <m>t</m> minutes after the snowball begins to melt.</cell>
+                <cell><p>The volume of the snowball <m>t</m> minutes after the snowball begins to melt.</p></cell>
                 <cell><quantity><unit prefix="centi" base="meter" exp="3"/></quantity></cell>
             </row>
             <row bottom="minor">
                 <cell><m>r</m></cell>
-                <cell>The radius of the snowball <m>t</m> minutes after the snowball begins to melt.</cell>
+                <cell><p>The radius of the snowball <m>t</m> minutes after the snowball begins to melt.</p></cell>
                 <cell><quantity><unit prefix="centi" base="meter"/></quantity></cell>
             </row>
             <row bottom="minor">
                 <cell><m>\lz{V}{t}</m></cell>
-                <cell>The rate of change in the volume of the snowball <m>t</m> minutes after the snowball begins to melt.</cell>
+                <cell><p>The rate of change in the volume of the snowball <m>t</m> minutes after the snowball begins to melt.</p></cell>
                 <cell><quantity><unit prefix="centi" base="meter" exp="3"/><per base="minute"/></quantity></cell>
             </row>
             <row bottom="minor">
                 <cell><m>\lz{r}{t}</m></cell>
-                <cell>The rate of change in the radius of the snowball <m>t</m> minutes after the snowball begins to melt.</cell>
+                <cell><p>The rate of change in the radius of the snowball <m>t</m> minutes after the snowball begins to melt.</p></cell>
                 <cell><quantity><unit prefix="centi" base="meter"/><per base="minute"/></quantity></cell>
             </row>
             <row bottom="major">
                 <cell><m>t</m></cell>
-                <cell>The amount of time that elapses after the snowball begins to melt.</cell>
+                <cell><p>The amount of time that elapses after the snowball begins to melt.</p></cell>
                 <cell><quantity><unit base="minute"/></quantity></cell>
             </row>
         </tabular>
@@ -106,47 +104,45 @@
         <caption>What we know about the variables at the described moment</caption>
         <tabular top="major">
             <col halign="center"/>
-            <col halign="4in"/>
+            <col width="80%"/>
         <row bottom="medium">
             <cell>Variable</cell>
             <cell>What we know</cell>
         </row>
         <row bottom="minor">
             <cell><m>V</m></cell>
-            <cell>This variable is not in the related rates equation so it is no longer relevant in the problem solving process.</cell>
+            <cell><p>This variable is not in the related rates equation so it is no longer relevant in the problem solving process.</p></cell>
         </row>
         <row bottom="minor">
             <cell><m>r</m></cell>
-            <cell>The value of this variable is <m>1.4</m>.</cell>
+            <cell><p>The value of this variable is <m>1.4</m>.</p></cell>
         </row>
         <row bottom="minor">
             <cell><m>\lz{V}{t}</m></cell>
-            <cell>The value of this variable is <m>-0.3</m>. The value is negative because the volume decreases over time.</cell>
+            <cell><p>The value of this variable is <m>-0.3</m>. The value is negative because the volume decreases over time.</p></cell>
         </row>
         <row bottom="major">
             <cell><m>\lz{r}{t}</m></cell>
-            <cell>This is the variable for which we need to solve.</cell>
+            <cell><p>This is the variable for which we need to solve.</p></cell>
         </row>
         </tabular>
     </table>
     <p>From our related rates equation and the values in <xref ref="table-snowball-what-we-know"/>:</p>
-    <sidebyside>
-        <paragraphs valign="top">
-            <p><md>
+    <sidebyside widths="47% 47%">
+        <p><md>
             <mrow>\lz{r}{t}&amp;=\frac{\lz{V}{t}}{4\pi r^2}</mrow>
             <mrow/>
             <mrow>\lzoa{r}{t}{r=1.4,\lz{V}{t}=-0.3}&amp;=\frac{-0.3}{4\pi (1.4)^2}</mrow>
             <mrow>&amp;\approx-0.01218\ldots</mrow>
-            </md></p>
-        </paragraphs>
-        <paragraphs valign="top">
+        </md></p>
+        <paragraphs>
             <p>To finish up we need to write a conclusion.</p>
             <blockquote><p>At the moment the radius of the snowball is <quantity><mag>1.4</mag><unit prefix="centi" base="meter"/></quantity>, the radius is decreasing at the rate of about <quantity><mag>0.01218</mag><unit prefix="centi" base="meter"/><per base="minute"/></quantity>.</p></blockquote>
         </paragraphs>
     </sidebyside>
 
     <exercises>
-        <exercisegroup by="row">
+        <exercisegroup>
             <introduction>
                 <p>Consider the following problem.</p>
                 <blockquote><p>A square is getting larger. The sides are each growing at a constant rate of <quantity><mag>3</mag><unit base="inch"/><per base="minute"/></quantity>. At what rate is the area of the square growing the moment its area is <quantity><mag>25</mag><unit base="inch" exp="2"/></quantity>?</p></blockquote>
@@ -159,7 +155,7 @@
                         <caption>Variable table for the square problem</caption>
                         <tabular top="major">
                             <col halign="center"/>
-                            <col halign="3in"/>
+                            <col halign="left"/>
                             <col halign="center"/>
                             <row bottom="medium">
                                 <cell>Variable</cell>
@@ -212,7 +208,7 @@
                         <caption>What we know about the variables at the described moment</caption>
                         <tabular top="major">
                             <col halign="center"/>
-                            <col halign="3.5in"/>
+                            <col halign="left"/>
                         <row bottom="medium">
                             <cell>Variable</cell>
                             <cell halign="center">What we know</cell>
@@ -229,7 +225,7 @@
                             <cell><m>\mathstrut</m></cell>
                             <cell></cell>
                         </row>
-                        <row bottom="minor">
+                        <row bottom="major">
                             <cell><m>\mathstrut</m></cell>
                             <cell></cell>
                         </row>
@@ -254,7 +250,7 @@
                 <p>Use the problem solving strategy:</p>
                 <ol>
                     <li><p>Create your variable table. (<acro>DR</acro>)</p></li>
-                    <li><p>Write down an equation that relates the two quantity-variables. (<acro>E</acro>)</p></li>
+                    <li><p>Write an equation that relates the two quantity-variables. (<acro>E</acro>)</p></li>
                     <li><p>Differentiate both sides of the equation you just wrote with respect to <m>t</m>. Simplify the result. This equation is called the <term>related rates equation</term>. (<acro>D</acro>)</p></li>
                     <li><p>Write an orientation sentence or phrase and create a summary table for your quantity and rate variables. (preparing for <acro>S</acro>)</p></li>
                     <li><p>Substitute the known values into the related rates equation and solve for the unknown rate. (<acro>S</acro>)</p></li>

@@ -17,26 +17,22 @@
     <p>While working <xref autoname="title" ref="chapter-limits"/> you investigated strategies for formally establishing limit values as <m>x\to\infty</m> or <m>x\to-\infty</m>.  In this activity you are going to investigate a more informal strategy for determining these type limits.</p>
 
     <p>Consider <m>\lim\limits_{x\to\infty}\frac{4x-2}{3+20x}</m>. When the value of <m>x</m> is really large, we say that the term <m>4x</m> dominates the numerator of the expression and the term <m>20x</m> dominates the denominator. We actually call those terms <term>the dominant terms</term> of the numerator and denominator.  The dominant terms are significant because when the value of <m>x</m> is really large, the other terms in the expression contribute almost nothing to the value of the expression.   That is, for really large values of <m>x</m>:</p>
-    <sidebyside>
-        <paragraphs valign="top">
-            <p><md>
+    <sidebyside widths="47% 47%">
+        <p><md>
             <mrow>\frac{4x-2}{3+20x}&amp;\approx\frac{4x}{20x}</mrow>
             <mrow>&amp;=\frac{1}{5}</mrow>
-            </md></p>
-        </paragraphs>
-        <paragraphs>
-            <p>For example, even if <m>x</m> has the paltry value of <m>1000</m>, <md>
+        </md></p>
+        <p>For example, even if <m>x</m> has the paltry value of <m>1000</m>, <md>
             <mrow>\frac{4(1000)-2}{3+20(1000)}&amp;=\frac{3998}{20003}</mrow>
             <mrow>&amp;\approx0.19987\ldots\approx\frac{1}{5}</mrow>
-            </md></p>
-        </paragraphs>
+        </md></p>
     </sidebyside>
     <p>This tells us that <m>\lim\limits_{x\to\infty}\frac{4x-2}{3+20x}=\frac{1}{5}</m> and that <m>y=\frac{1}{5}</m> is a horizontal asymptote for the graph of <m>y=\frac{4x-2}{3+20x}</m>.</p>
 
     <exercises>
         <exercisegroup cols="2">
             <introduction>
-                <p>The formulas used to graph <xref autoname="plural" ref="figure-match-rationals-1"/><ndash/><xref autoname="no" ref="figure-match-rationals-5"/> are given below.  Focusing first on the dominant terms of the expressions, match the formulas with the functions (<m>f_1</m> through <m>f_5</m>).</p>
+                <p>The formulas used to graph <xref ref="figure-match-rationals-1">Figures</xref><ndash/><xref autoname="no" ref="figure-match-rationals-5"/> are given below.  Focusing first on the dominant terms of the expressions, match the formulas with the functions (<m>f_1</m> through <m>f_5</m>).</p>
             </introduction>
             <exercise>
                 <statement>
@@ -64,7 +60,7 @@
                 </statement>
             </exercise>
             <conclusion>
-                <sidebyside>
+                <sidebyside widths="47% 47%">
                     <figure xml:id="figure-match-rationals-1">
                         <caption><m>y=\fe{f_1}{x}</m></caption>
                         <image>
@@ -131,7 +127,7 @@
                         </image>
                     </figure>
                 </sidebyside>
-                <sidebyside>
+                <sidebyside widths="47% 47%">
                     <figure xml:id="figure-match-rationals-3">
                         <caption><m>y=\fe{f_3}{x}</m></caption>
                         <image>
@@ -201,35 +197,37 @@
                         </image>
                     </figure>
                 </sidebyside>
-                <figure xml:id="figure-match-rationals-5">
-                    <caption><m>y=\fe{f_5}{x}</m></caption>
-                    <image>
-                        <latex-image-code>
-                        <![CDATA[\begin{tikzpicture}
-                        \begin{axis}[
-                            xmin=-16,
-                            xmax=16,
-                            xtick={-16,-12,...,16},
-                            minor xtick={-16,-15,...,16},
-                            ymin=-16,
-                            ymax=16,
-                            ytick={-16,-12,...,16},
-                            minor ytick={-16,-15,...,16},
-                            grid=major,
-                            ]
-                            \addplot[pccplot,samples=50,
-                                domain=-15.8:4.05,
-                            ]{(15)/(x-5)};
-                            \addplot[pccplot,samples=50,
-                                domain=5.95:15.8,
-                            ]{(15)/(x-5)};
-                            \addplot[asymptote] coordinates {(16,0) (-16,0)} node[above right] {$y=0$};
-                            \addplot[asymptote] coordinates {(5,16) (5,-16)} node[above right] {\rotatebox{90}{$x=5$}};
-                        \end{axis}
-                        \end{tikzpicture}]]>
-                        </latex-image-code>
-                    </image>
-                </figure>
+                <sidebyside widths="47%">
+                    <figure xml:id="figure-match-rationals-5">
+                        <caption><m>y=\fe{f_5}{x}</m></caption>
+                        <image>
+                            <latex-image-code>
+                            <![CDATA[\begin{tikzpicture}
+                            \begin{axis}[
+                                xmin=-16,
+                                xmax=16,
+                                xtick={-16,-12,...,16},
+                                minor xtick={-16,-15,...,16},
+                                ymin=-16,
+                                ymax=16,
+                                ytick={-16,-12,...,16},
+                                minor ytick={-16,-15,...,16},
+                                grid=major,
+                                ]
+                                \addplot[pccplot,samples=50,
+                                    domain=-15.8:4.05,
+                                ]{(15)/(x-5)};
+                                \addplot[pccplot,samples=50,
+                                    domain=5.95:15.8,
+                                ]{(15)/(x-5)};
+                                \addplot[asymptote] coordinates {(16,0) (-16,0)} node[above right] {$y=0$};
+                                \addplot[asymptote] coordinates {(5,16) (5,-16)} node[above right] {\rotatebox{90}{$x=5$}};
+                            \end{axis}
+                            \end{tikzpicture}]]>
+                            </latex-image-code>
+                        </image>
+                    </figure>
+                </sidebyside>
             </conclusion>
         </exercisegroup>
         <exercisegroup cols="2">

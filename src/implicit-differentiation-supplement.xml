@@ -9,16 +9,19 @@
    
 <section xml:id="implicit-differentiation-supplementary-exercises">
     <title>Supplement</title>
+    <aside>
+        <title>Read the next lab early!</title>
+        <p>Before coming to the <em>next</em> lab session, <xref ref="chapter-related-rates">Lab</xref>, read the special note at the beginning of that lab. You are asked to do some reading outside of class before you begin working on the lab in class. More explanation is given in that note.</p>
+    </aside>
+
     <exercises>
         <exercise>
             <statement>
                 <p>The curve <m>x\fe{\sin}{xy}=y</m> is shown in <xref ref="figure-crazy-implicit-supplement"/>.</p>
 
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p>Find a formula for <m>\lz{y}{x}</m> and use that formula to determine the <m>x</m>-coordinate at each of the two points the curve crosses the <m>x</m>-axis.  (Note: The tangent line to the curve is vertical at each of these points.)  Scales have deliberately been omitted in <xref ref="figure-crazy-implicit-supplement"/>.</p> 
-                    </paragraphs>
-                    <figure xml:id="figure-crazy-implicit-supplement" valign="top">
+                <sidebyside widths="47% 47%">
+                    <p>Find a formula for <m>\lz{y}{x}</m> and use that formula to determine the <m>x</m>-coordinate at each of the two points the curve crosses the <m>x</m>-axis.  (Note: The tangent line to the curve is vertical at each of these points.)  Scales have deliberately been omitted in <xref ref="figure-crazy-implicit-supplement"/>.</p> 
+                    <figure xml:id="figure-crazy-implicit-supplement">
                         <caption><m>x\fe{\sin}{xy}=y</m></caption>
                         <image>
                         <latex-image-code>
@@ -78,6 +81,9 @@
                     </figure>
                 </sidebyside>
             </statement>
+            <answer>
+                <p><m>-1</m> and <m>1</m></p>
+            </answer>
             <solution>
                 <p><md>
                 <mrow>x\fe{\sin}{xy}&amp;=y</mrow>
@@ -98,14 +104,14 @@
                 <mrow>x&amp;=\pm1</mrow> 
                 </md>So the <m>x</m>-coordinates are <m>-1</m> and <m>1</m>.</p>
             </solution>
-            <answer>
-                <p><m>-1</m> and <m>1</m></p>
-            </answer>
         </exercise>
         <exercise>
             <statement>
                 <p>For the curve <m>x\fe{\sin}{xy}=y</m> plotted in <xref ref="figure-crazy-implicit-supplement"/>, find the slope of the tangent line at <m>\point{\sqrt{\sfrac{\pi}{3}}}{\sqrt{\sfrac{\pi}{12}}}</m>.</p>
             </statement>
+            <answer>
+                <p><m>\frac{6+\pi\sqrt{3}}{12-2\pi\sqrt{3}}</m></p>
+            </answer>
             <solution>
                 <p>In the previous exercise, we calculated that <m>\lz{y}{x}=\frac{\fe{\sin}{xy}+xy\fe{\cos}{xy}}{1-x^2\fe{\cos}{xy}}</m>. So <md>
                 <mrow>\lzoa{y}{x}{\point{\sqrt{\sfrac{\pi}{3}}}{\sqrt{\sfrac{\pi}{12}}}}&amp;=\frac{\fe{\sin}{\sqrt{\sfrac{\pi}{3}}\sqrt{\sfrac{\pi}{12}}}+\sqrt{\sfrac{\pi}{3}}\sqrt{\sfrac{\pi}{12}}\fe{\cos}{\sqrt{\sfrac{\pi}{3}}\sqrt{\sfrac{\pi}{12}}}}{1-\sqrt{\sfrac{\pi}{3}}^2\fe{\cos}{\sqrt{\sfrac{\pi}{3}}\sqrt{\sfrac{\pi}{12}}}}</mrow>
@@ -115,19 +121,14 @@
                 <mrow>&amp;=\frac{6+\pi\sqrt{3}}{12-2\pi\sqrt{3}}</mrow>
                 </md></p>
             </solution>
-            <answer>
-                <p><m>\frac{6+\pi\sqrt{3}}{12-2\pi\sqrt{3}}</m></p>
-            </answer>
         </exercise>
         <exercise>
             <statement>
                 <p>Solutions to the equation <m>\fe{\ln}{x^2y^2}=x+y</m> are graphed in <xref ref="figure-ln-implicit-supplement"/>.</p>
 
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p>Determine the equation of the tangent line to this curve at the point <m>\point{1}{-1}</m>.</p>
-                    </paragraphs>
-                    <figure xml:id="figure-ln-implicit-supplement" valign="top">
+                <sidebyside widths="47% 47%">
+                    <p>Determine the equation of the tangent line to this curve at the point <m>\point{1}{-1}</m>.</p>
+                    <figure xml:id="figure-ln-implicit-supplement">
                         <caption><m>\fe{\ln}{x^2y^2}=x+y</m></caption>
                         <image>
                         <latex-image-code>
@@ -147,6 +148,9 @@
             <hint>
                 <p>It is easier to differentiate if you first use rules of logarithms to completely expand the logarithmic expression.</p>
             </hint>
+            <answer>
+               <p><m>y=\frac{1}{3}(x-1)-1</m></p>
+            </answer>
             <solution>
                 <p>Note that we will be investigating this curve near <m>\point{1}{-1}</m>, where <m>x</m> is positive and <m>y</m> is negative. Therefore in that region, <m>\fe{\ln}{x^2}=2\fe{\ln}{x}</m> and <m>\fe{\ln}{y^2}=2\fe{\ln}{-y}</m>.<md>
                 <mrow>\fe{\ln}{x^2y^2}&amp;=x+y</mrow>
@@ -164,9 +168,6 @@
                 <mrow>\lzoa{y}{x}{\point{1}{-1}}&amp;=\frac{1}{3}</mrow>
                 </md>The slope of the tangent line is <m>\frac{1}{3}</m> and the line passes through the point <m>\point{1}{-1}</m>, so the equation of the tangent line is <m>y=\frac{1}{3}(x-1)-1</m>.</p>
             </solution>
-            <answer>
-               <p><m>y=\frac{1}{3}(x-1)-1</m></p>
-            </answer>
         </exercise>
         <exercisegroup cols="3">
             <introduction>
@@ -176,6 +177,9 @@
                 <statement>
                     <p><m>y=\dfrac{x\fe{\sin}{x}}{\sqrt{x-1}}</m></p>
                 </statement>
+                <answer>
+                    <p><m>\frac{x\fe{\sin}{x}}{\sqrt{x-1}}\left(\frac{1}{x}+\fe{\cot}{x}-\frac{1}{2x-2}\right)</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>y&amp;=\frac{x\fe{\sin}{x}}{\sqrt{x-1}}</mrow>
@@ -189,14 +193,14 @@
                     <mrow>\lz{y}{x}&amp;=\frac{x\fe{\sin}{x}}{\sqrt{x-1}}\left(\frac{1}{x}+\fe{\cot}{x}-\frac{1}{2x-2}\right)</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{x\fe{\sin}{x}}{\sqrt{x-1}}\left(\frac{1}{x}+\fe{\cot}{x}-\frac{1}{2x-2}\right)</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>y=\dfrac{e^{2x}}{\fe{\sin^4}{x}\sqrt[4]{x^5}}</m></p>
                 </statement>
+                <answer>
+                    <p><m>\frac{e^{2x}}{\fe{\sin^4}{x}\sqrt[4]{x^5}}\left(2-4\fe{\cot}{x}-\frac{5}{4x}\right)</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>y&amp;=\frac{e^{2x}}{\fe{\sin^4}{x}\sqrt[4]{x^5}}</mrow>
@@ -211,14 +215,14 @@
                     <mrow>\lz{y}{x}&amp;=\frac{e^{2x}}{\fe{\sin^4}{x}\sqrt[4]{x^5}}\left(2-4\fe{\cot}{x}-\frac{5}{4x}\right)</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{e^{2x}}{\fe{\sin^4}{x}\sqrt[4]{x^5}}\left(2-4\fe{\cot}{x}-\frac{5}{4x}\right)</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>y=\dfrac{\fe{\ln}{4x^3}}{x^5\fe{\ln}{x}}</m></p>
                 </statement>
+                <answer>
+                    <p><m>\frac{\fe{\ln}{4x^3}}{x^5\fe{\ln}{x}}\left(\frac{3}{x\fe{\ln}{4x^3}}-\frac{5}{x}-\frac{1}{x\fe{\ln}{x}}\right)</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>y&amp;=\frac{\fe{\ln}{4x^3}}{x^5\fe{\ln}{x}}</mrow>
@@ -234,9 +238,6 @@
                     <mrow>\lz{y}{x}&amp;=\frac{\fe{\ln}{4x^3}}{x^5\fe{\ln}{x}}\left(\frac{3}{x\fe{\ln}{4x^3}}-\frac{5}{x}-\frac{1}{x\fe{\ln}{x}}\right)</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{\fe{\ln}{4x^3}}{x^5\fe{\ln}{x}}\left(\frac{3}{x\fe{\ln}{4x^3}}-\frac{5}{x}-\frac{1}{x\fe{\ln}{x}}\right)</m></p>
-                </answer>
             </exercise>
 
         </exercisegroup>

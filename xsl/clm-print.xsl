@@ -16,7 +16,6 @@
 <xsl:param name="exercise.text.solution" select="'no'" />
 <xsl:param name="latex.preamble.early" select="concat(document('latex-preamble/latex.preamble.xml')//latex-preamble-early, document('latex-preamble/print.preamble.xml')//latex-preamble-early)" />
 <xsl:param name="latex.preamble.late" select="concat(document('latex-preamble/latex.preamble.xml')//latex-preamble-late, document('latex-preamble/print.preamble.xml')//latex-preamble-late)" />
-<xsl:param name="chunk.level" select="0" />
 
 
 <!--

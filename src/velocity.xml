@@ -67,38 +67,36 @@
             <exercise>
                 <statement>
                     <p>Now explore some average velocities in tabular form.</p>
-                    <sidebyside>
-                        <paragraphs valign="top">
-                            <p>Using the formula found in <xref ref="exercise-average-velocity-formula"/>, replace <m>t_0</m> with <m>3</m> but leave <m>t_1</m> as a variable; simplify the result. Then copy <xref ref="table-velocity"/> onto your paper and fill in the missing entries.</p>
-                        </paragraphs>
+                    <sidebyside widths="47% 47%">
+                        <p>Using the formula found in <xref ref="exercise-average-velocity-formula"/>, replace <m>t_0</m> with <m>3</m> but leave <m>t_1</m> as a variable; simplify the result. Then copy <xref ref="table-velocity"/> onto your paper and fill in the missing entries.</p>
 
-                        <table xml:id="table-velocity" valign="top" width="55%">
+                        <table xml:id="table-velocity">
                             <caption>Values of <m>\frac{\fe{p}{t_1}-\fe{p}{3}}{t_1-3}</m></caption>
                             <tabular top="major">
                             <col halign="left" />
-                            <col halign="center"/>
+                            <col halign="center" width="60%"/>
 
                             <row bottom="medium">
                                 <cell><m>t_1</m> (<quantity><unit base="second"/></quantity>)</cell>
-                                <cell><m>\frac{\fe{p}{t_1}-\fe{p}{3}}{t_1-3}</m> (<quantity><unit base="meter"/><per base="second"/></quantity>)</cell>
+                                <cell><p><m>\frac{\fe{p}{t_1}-\fe{p}{3}}{t_1-3}</m> (<quantity><unit base="meter"/><per base="second"/></quantity>)</p></cell>
                             </row>
-                            <row>
+                            <row bottom="minor">
                                 <cell>2.9</cell>
                                 <cell></cell>
                             </row>
-                            <row>
+                            <row bottom="minor">
                                 <cell>2.99</cell>
                                 <cell></cell>
                             </row>
-                            <row>
+                            <row bottom="minor">
                                 <cell>2.999</cell>
                                 <cell></cell>
                             </row>
-                            <row>
+                            <row bottom="minor">
                                 <cell>3.001</cell>
                                 <cell></cell>
                             </row>
-                            <row>
+                            <row bottom="minor">
                                 <cell>3.01</cell>
                                 <cell></cell>
                             </row>

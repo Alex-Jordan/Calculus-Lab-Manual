@@ -39,7 +39,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Which of the following limits exist?<br /> <m>\lim\limits_{t\to-3^{-}}\fe{g}{t}</m>? <m>\lim\limits_{t\to-3^{+}}\fe{g}{t}</m>? <m>\lim\limits_{t\to-3}\fe{g}{t}</m>?</p>
+                    <p>Which of the following limits exist? <me>\lim\limits_{t\to-3^{-}}\fe{g}{t}\text{?}\quad\lim\limits_{t\to-3^{+}}\fe{g}{t}\text{?}\quad\lim\limits_{t\to-3}\fe{g}{t}\text{?}</me></p>
                 </statement>
             </exercise>
         </exercisegroup>
@@ -65,7 +65,7 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Which of the following limits exist?<br /> <m>\lim\limits_{x\to2^{-}}\fe{z}{x}</m>? <m>\lim\limits_{x\to2^{+}}\fe{z}{x}</m>? <m>\lim\limits_{x\to2}\fe{z}{x}</m>?</p>
+                    <p>Which of the following limits exist? <me>\lim\limits_{x\to2^{-}}\fe{z}{x}\text{?}\quad\lim\limits_{x\to2^{+}}\fe{z}{x}\text{?}\quad\lim\limits_{x\to2}\fe{z}{x}\text{?}</me></p>
                 </statement>
             </exercise>
         </exercisegroup>
@@ -74,12 +74,10 @@
             <statement>
                 <p>Consider the function <m>f</m> defined by <m>\fe{f}{x}=\frac{x+7}{x-8}</m>. Complete <xref ref="table-vertical-asymptote"/> without the use of your calculator.</p>
 
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p>Use this as an opportunity to discuss why limits of form <q>not-zero over zero</q> are <q>infinite limits.</q> What limit equation is being illustrated in the table?</p>
-                    </paragraphs>
+                <sidebyside widths="47% 47%">
+                    <p>Use this as an opportunity to discuss why limits of form <q>not-zero over zero</q> are <q>infinite limits.</q> What limit equation is being illustrated in the table?</p>
 
-                    <table valign="top" xml:id="table-vertical-asymptote" width="53%"><!-- this table is a bit too wide for 50% in print-->
+                    <table valign="top" xml:id="table-vertical-asymptote">
                         <caption><m>\fe{f}{x}=\frac{x+7}{x-8}</m></caption>
                         <tabular top="major">
                            <col halign="left"/>
@@ -172,17 +170,16 @@
 
         <exercise>
             <statement>
-                <p>Mindy tried to evaluate <m>\lim\limits_{x\to6^{+}}\frac{4x-24}{x^2-12x+36}</m> using the limit laws. Things went horribly wrong for Mindy (her work is shown below). Identify what is wrong in Mindy's work and discuss what a more reasonable approach might have been. <alert>This <q>solution</q> is not correct! Do not emulate Mindy's work!</alert></p>
-
-                <p><md>
+                <p>Mindy tried to evaluate <m>\lim\limits_{x\to6^{+}}\frac{4x-24}{x^2-12x+36}</m> using the limit laws. Things went horribly wrong for Mindy (her work is shown below). Identify what is wrong in Mindy's work and discuss what a more reasonable approach might have been. <alert>This <q>solution</q> is not correct! Do not emulate Mindy's work!</alert>
+                <md>
                 <mrow>\lim_{x\to6^{+}}\frac{4x-24}{x^2-12x+36}&amp;=\lim_{x\to6^{+}}\frac{4(x-6)}{(x-6)^2}</mrow>
                 <mrow>&amp;=\lim_{x\to6^{+}}\frac{4}{x-6}</mrow>
-                <mrow>&amp;=\frac{\lim\limits_{x\to6^{+}}4}{\lim\limits_{x\to6^{+}}(x-6)}&amp;&amp;\text{Limit Law A5}</mrow>
-                <mrow>&amp;=\frac{\lim\limits_{x\to6^{+}}4}{\lim\limits_{x\to6^{+}}x-\lim\limits_{x\to6^{+}}6}&amp;&amp;\text{Limit Law A2}</mrow>
-                <mrow>&amp;=\frac{4}{6-6}&amp;&amp;\text{Limit Laws R1 and R2}</mrow>
+                <mrow>&amp;=\frac{\lim\limits_{x\to6^{+}}4}{\lim\limits_{x\to6^{+}}(x-6)}&amp;&amp;<xref autoname="title" ref="lla5"/></mrow>
+                <mrow>&amp;=\frac{\lim\limits_{x\to6^{+}}4}{\lim\limits_{x\to6^{+}}x-\lim\limits_{x\to6^{+}}6}&amp;&amp;<xref autoname="title" ref="lla2"/></mrow>
+                <mrow>&amp;=\frac{4}{6-6}&amp;&amp;<xref autoname="title" ref="llr1"/>, <xref autoname="title" ref="llr2"/></mrow>
                 <mrow>&amp;=\frac{4}{0}</mrow>
-                </md></p>
-                <p><alert>This <q>solution</q> is not correct! Do not emulate Mindy's work!</alert></p>
+                </md>
+                <alert>This <q>solution</q> is not correct! Do not emulate Mindy's work!</alert></p>
             </statement>
         </exercise>
 

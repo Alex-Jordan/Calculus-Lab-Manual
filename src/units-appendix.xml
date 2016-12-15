@@ -12,11 +12,11 @@
 
     <table>
         <caption>Distance</caption>
-        <tabular top="major">
-            <col halign="0.4in"/>
-            <col halign="0.8in"/>
-            <col halign="1.8in"/>
-            <col halign="2.4in"/>
+        <tabular valign="top" top="major">
+            <col halign="left"/>
+            <col halign="left"/>
+            <col width="33%"/>
+            <col width="33%"/>
             <row bottom="medium">
                 <cell>Unit</cell>
                 <cell>Stands For</cell>
@@ -26,54 +26,54 @@
             <row bottom="minor">
                 <cell><quantity><unit base="meter"/></quantity></cell>
                 <cell>meter</cell>
-                <cell>the distance light travels in <m>\sfrac{1}{299792458}</m> of a second</cell>
-                <cell>half the height of a typical doorway</cell>
+                <cell><p>the distance light travels in <m>\sfrac{1}{299792458}</m> of a second</p></cell>
+                <cell><p>half the height of a typical doorway</p></cell>
             </row>
             <row bottom="minor">
                 <cell><quantity><unit prefix="milli" base="meter"/></quantity></cell>
                 <cell>millimeter</cell>
-                <cell>exactly <m>\sfrac{1}{1000}</m> of a meter</cell>
-                <cell>the thickness of a credit card</cell>
+                <cell><p>exactly <m>\sfrac{1}{1000}</m> of a meter</p></cell>
+                <cell><p>the thickness of a credit card</p></cell>
             </row>
             <row bottom="minor">
                 <cell><quantity><unit prefix="centi" base="meter"/></quantity></cell>
                 <cell>centimeter</cell>
-                <cell>exactly <m>\sfrac{1}{100}</m> of a meter</cell>
-                <cell>the width of your pinky finger</cell>
+                <cell><p>exactly <m>\sfrac{1}{100}</m> of a meter</p></cell>
+                <cell><p>the width of your pinky finger</p></cell>
             </row>
             <row bottom="minor">
                 <cell><quantity><unit prefix="kilo" base="meter"/></quantity></cell>
                 <cell>kilometer</cell>
-                <cell>exactly <m>1000</m> meters</cell>
-                <cell>in parts of Portland where the city blocks are square, about <m>12.5</m> blocks</cell>
+                <cell><p>exactly <m>1000</m> meters</p></cell>
+                <cell><p>in parts of Portland where the city blocks are square, about <m>12.5</m> blocks</p></cell>
             </row>
             <row bottom="minor">
                 <cell><quantity><unit base="inch"/></quantity></cell>
                 <cell>inch</cell>
-                <cell>exactly <m>0.0254</m> meters</cell>
-                <cell>the diameter of a bottle cap</cell>
+                <cell><p>exactly <m>0.0254</m> meters</p></cell>
+                <cell><p>the diameter of a bottle cap</p></cell>
             </row>
             <row bottom="minor">
                 <cell><quantity><unit base="foot"/></quantity></cell>
                 <cell>foot</cell>
-                <cell>exactly <m>12</m> inches</cell>
-                <cell>the exterior length of an average adult male's shoe</cell>
+                <cell><p>exactly <m>12</m> inches</p></cell>
+                <cell><p>the exterior length of an average adult male's shoe</p></cell>
             </row>
             <row bottom="major">
                 <cell><quantity><unit base="mile"/></quantity></cell>
                 <cell>mile</cell>
-                <cell>exactly <m>5280</m> feet</cell>
-                <cell>in parts of Portland where the city blocks are square, about <m>20</m> blocks</cell>
+                <cell><p>exactly <m>5280</m> feet</p></cell>
+                <cell><p>in parts of Portland where the city blocks are square, about <m>20</m> blocks</p></cell>
             </row>
         </tabular>
     </table>
     <table>
         <caption>Area</caption>
-        <tabular top="major">
-            <col halign="0.4in"/>
-            <col halign="0.8in"/>
-            <col halign="1.8in"/>
-            <col halign="2.4in"/>
+        <tabular valign="top" top="major">
+            <col halign="left"/>
+            <col halign="left"/>
+            <col width="30%"/>
+            <col width="30%"/>
             <row bottom="medium">
                 <cell>Unit</cell>
                 <cell>Stands For</cell>
@@ -83,24 +83,24 @@
             <row bottom="minor">
                 <cell><quantity><unit prefix="centi" base="meter" exp="2"/></quantity></cell>
                 <cell>square centimeter</cell>
-                <cell>the area of a square whose sides are each one centimeter</cell>
-                <cell>a little less than the circular area of a new pencil eraser</cell>
+                <cell><p>the area of a square whose sides are each one centimeter</p></cell>
+                <cell><p>a little less than the circular area of a new pencil eraser</p></cell>
             </row>
             <row bottom="major">
                 <cell><quantity><unit base="inch" exp="2"/></quantity></cell>
                 <cell>square inch</cell>
-                <cell>the area of a square whose sides are each one inch</cell>
-                <cell>the area of a photograph on an ID card</cell>
+                <cell><p>the area of a square whose sides are each one inch</p></cell>
+                <cell><p>the area of a photograph on an ID card</p></cell>
             </row>
         </tabular>
     </table>
     <table>
         <caption>Volume</caption>
-        <tabular top="major">
-            <col halign="0.4in"/>
-            <col halign="0.8in"/>
-            <col halign="2.2in"/>
-            <col halign="2.0in"/>
+        <tabular valign="top" top="major">
+            <col halign="left"/>
+            <col halign="left"/>
+            <col width="30%"/>
+            <col width="31%"/>
             <row bottom="medium">
                 <cell>Unit</cell>
                 <cell>Stands For</cell>
@@ -110,42 +110,42 @@
             <row bottom="minor">
                 <cell><quantity><unit prefix="centi" base="meter" exp="3"/></quantity></cell>
                 <cell>cubic centimeter</cell>
-                <cell>the volume of a cube whose sides are each one centimeter</cell>
-                <cell>the volume of a blueberry</cell>
+                <cell><p>the volume of a cube whose sides are each one centimeter</p></cell>
+                <cell><p>the volume of a blueberry</p></cell>
             </row>
             <row bottom="minor">
                 <cell><quantity><unit base="liter"/></quantity></cell>
                 <cell>liter</cell>
-                <cell>exactly <m>1000</m> cubic centimeters</cell>
-                <cell>a bottle of wine is <m>\sfrac{3}{4}</m> of a liter</cell>
+                <cell><p>exactly <m>1000</m> cubic centimeters</p></cell>
+                <cell><p>a bottle of wine is <m>\sfrac{3}{4}</m> of a liter</p></cell>
             </row>
             <row bottom="minor">
                 <cell><quantity><unit prefix="milli" base="liter"/></quantity></cell>
                 <cell>milliliter</cell>
-                <cell>exactly <m>1</m> cubic centimeter; <m>\sfrac{1}{1000}</m> of a liter</cell>
-                <cell>the volume of a blueberry</cell>
+                <cell><p>exactly <m>1</m> cubic centimeter; <m>\sfrac{1}{1000}</m> of a liter</p></cell>
+                <cell><p>the volume of a blueberry</p></cell>
             </row>
             <row bottom="minor">
                 <cell><quantity><unit base="inch" exp="3"/></quantity></cell>
                 <cell>cubic inch</cell>
-                <cell>the volume of a cube whose sides are each one inch</cell>
-                <cell>the volume of an shelled whole walnut</cell>
+                <cell><p>the volume of a cube whose sides are each one inch</p></cell>
+                <cell><p>the volume of an shelled whole walnut</p></cell>
             </row>
             <row bottom="major">
                 <cell><quantity><unit base="gallon"/></quantity></cell>
                 <cell>liter</cell>
-                <cell>exactly <m>231</m> cubic inches</cell>
-                <cell>the volume of the larger type of plastic milk containers sold in supermarkets</cell>
+                <cell><p>exactly <m>231</m> cubic inches</p></cell>
+                <cell><p>the volume of the larger type of plastic milk containers sold in supermarkets</p></cell>
             </row>
         </tabular>
     </table>
     <table>
         <caption>Time</caption>
-        <tabular top="major">
-            <col halign="0.4in"/>
-            <col halign="0.8in"/>
-            <col halign="2.4in"/>
-            <col halign="1.8in"/>
+        <tabular valign="top" top="major">
+            <col halign="left"/>
+            <col halign="left"/>
+            <col width="33%"/>
+            <col width="33%"/>
             <row bottom="medium">
                 <cell>Unit</cell>
                 <cell>Stands For</cell>
@@ -155,30 +155,30 @@
             <row bottom="minor">
                 <cell><quantity><unit base="second"/></quantity></cell>
                 <cell>second</cell>
-                <cell>the duration of <quantity><mag>9192631770</mag></quantity> periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the cesium-133 atom</cell>
-                <cell>the time it takes you to say the phrase <q>differential calculus</q></cell>
+                <cell><p>the duration of <quantity><mag>9192631770</mag></quantity> periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the cesium-133 atom</p></cell>
+                <cell><p>the time it takes you to say the phrase <q>differential calculus</q></p></cell>
             </row>
             <row bottom="minor">
                 <cell><quantity><unit base="minute"/></quantity></cell>
                 <cell>minute</cell>
-                <cell>exactly <m>60</m> seconds</cell>
-                <cell>how long it takes to microwave a full dinner plate from the refrigerator</cell>
+                <cell><p>exactly <m>60</m> seconds</p></cell>
+                <cell><p>how long it takes to microwave a full dinner plate from the refrigerator</p></cell>
             </row>
             <row bottom="major">
                 <cell><quantity><unit base="hour"/></quantity></cell>
                 <cell>hour</cell>
-                <cell>exactly <m>3600</m> seconds; exaclty <m>60</m> minutes</cell>
-                <cell>the length of one episode of a premium cable television show</cell>
+                <cell><p>exactly <m>3600</m> seconds; exactly <m>60</m> minutes</p></cell>
+                <cell><p>the length of one episode of a premium cable television show</p></cell>
             </row>
         </tabular>
     </table>
     <table>
         <caption>Speed</caption>
-        <tabular top="major">
-            <col halign="0.4in"/>
-            <col halign="0.95in"/>
-            <col halign="2.025in"/>
-            <col halign="2.025in"/>
+        <tabular valign="top" top="major">
+            <col halign="left"/>
+            <col halign="left"/>
+            <col width="33%"/>
+            <col width="32%"/>
             <row bottom="medium">
                 <cell>Unit</cell>
                 <cell>Stands For</cell>
@@ -188,19 +188,19 @@
             <row bottom="major">
                 <cell><quantity><unit base="mileperhour"/></quantity></cell>
                 <cell>mile per hour</cell>
-                <cell>exactly one mile per hour</cell>
-                <cell>a typical walking speed is about three miles per hour</cell>
+                <cell><p>exactly one mile per hour</p></cell>
+                <cell><p>a typical walking speed is about three miles per hour</p></cell>
             </row>
         </tabular>
     </table>
 
     <table>
         <caption>Mass</caption>
-        <tabular top="major">
-            <col halign="0.4in"/>
-            <col halign="0.8in"/>
-            <col halign="2.4in"/>
-            <col halign="1.8in"/>
+        <tabular valign="top" top="major">
+            <col halign="left"/>
+            <col halign="left"/>
+            <col width="33%"/>
+            <col width="33%"/>
             <row bottom="medium">
                 <cell>Unit</cell>
                 <cell>Stands For</cell>
@@ -210,24 +210,24 @@
             <row bottom="minor">
                 <cell><quantity><unit prefix="kilo" base="gram"/></quantity></cell>
                 <cell>kilogram</cell>
-                <cell>the mass of a certain cylindrical object made of a platinum-iridium alloy called the International Protoype of the Kilogram, which is stored in Sèvres, France</cell>
-                <cell>the mass of a <m>500</m>-page paberback book</cell>
+                <cell><p>the mass of a certain cylindrical object made of a platinum-iridium alloy called the International Prototype of the Kilogram, which is stored in Sèvres, France</p></cell>
+                <cell><p>the mass of a <m>500</m>-page paperback book</p></cell>
             </row>
             <row bottom="major">
                 <cell><quantity><unit prefix="milli" base="gram"/></quantity></cell>
                 <cell>milligram</cell>
-                <cell>exactly <m>\sfrac{1}{1000000}</m> of a kilogram</cell>
-                <cell>the mass of a small snowflake</cell>
+                <cell><p>exactly <m>\sfrac{1}{1000000}</m> of a kilogram</p></cell>
+                <cell><p>the mass of a small snowflake</p></cell>
             </row>
         </tabular>
     </table>
     <table>
         <caption>Angle</caption>
-        <tabular top="major">
-            <col halign="0.4in"/>
-            <col halign="0.8in"/>
-            <col halign="2.1in"/>
-            <col halign="2.1in"/>
+        <tabular valign="top" top="major">
+            <col halign="left"/>
+            <col halign="left"/>
+            <col width="33%"/>
+            <col width="33%"/>
             <row bottom="medium">
                 <cell>Unit</cell>
                 <cell>Stands For</cell>
@@ -237,24 +237,24 @@
             <row bottom="minor">
                 <cell><quantity><unit base="radian"/></quantity></cell>
                 <cell>radian</cell>
-                <cell>the angle subtended at the center of a circle by an arc that is equal in length to the radius of the circle</cell>
-                <cell>a little less than the angles on an equilateral triangle</cell>
+                <cell><p>the angle subtended at the center of a circle by an arc that is equal in length to the radius of the circle</p></cell>
+                <cell><p>a little less than the angles on an equilateral triangle</p></cell>
             </row>
             <row bottom="major">
                 <cell><quantity><unit base="degree"/></quantity></cell>
                 <cell>degree</cell>
-                <cell>the angle subtended at the center of a circly by an arc whose length is <m>\sfrac{1}{360}</m> the circumferece of the circle</cell>
-                <cell>a very small angle; if you could look directly at the bottom of the sun, and then moved your eyes to look at the top of the sun, you would have moved your eyes about half of one degree</cell>
+                <cell><p>the angle subtended at the center of a circle by an arc whose length is <m>\sfrac{1}{360}</m> the circumference of the circle</p></cell>
+                <cell><p>a very small angle; if you could look directly at the bottom of the sun, and then moved your eyes to look at the top of the sun, you would have moved your eyes about half of one degree</p></cell>
             </row>
         </tabular>
     </table>
     <table>
         <caption>Force</caption>
-        <tabular top="major">
-            <col halign="0.4in"/>
-            <col halign="0.8in"/>
-            <col halign="2.4in"/>
-            <col halign="1.8in"/>
+        <tabular valign="top" top="major">
+            <col halign="left"/>
+            <col halign="left"/>
+            <col width="33%"/>
+            <col width="33%"/>
             <row bottom="medium">
                 <cell>Unit</cell>
                 <cell>Stands For</cell>
@@ -264,19 +264,19 @@
             <row bottom="major">
                 <cell><quantity><unit base="newton"/></quantity></cell>
                 <cell>newton</cell>
-                <cell>the force needed to accelerate one kilogram from rest up to a speed of one meter per second with one second of time</cell>
-                <cell>if you hold an apple in the palm of your hand, it applies about two newtons of force</cell>
+                <cell><p>the force needed to accelerate one kilogram from rest up to a speed of one meter per second with one second of time</p></cell>
+                <cell><p>if you hold an apple in the palm of your hand, it applies about two newtons of force</p></cell>
             </row>
         </tabular>
     </table>
 
     <table>
         <caption>Power</caption>
-        <tabular top="major">
-            <col halign="0.4in"/>
-            <col halign="0.8in"/>
-            <col halign="2.4in"/>
-            <col halign="1.8in"/>
+        <tabular valign="top" top="major">
+            <col halign="left"/>
+            <col halign="left"/>
+            <col width="33%"/>
+            <col width="33%"/>
             <row bottom="medium">
                 <cell>Unit</cell>
                 <cell>Stands For</cell>
@@ -286,8 +286,8 @@
             <row bottom="major">
                 <cell><quantity><unit prefix="kilo" base="watt"/></quantity></cell>
                 <cell>kilowatt</cell>
-                <cell>the power to transfer one thousand joules of energy in one second (one joule is the amount of energy used when one newton of force pushes an object one meter)</cell>
-                <cell>the power used by a nicer microwave oven</cell>
+                <cell><p>the power to transfer one thousand joules of energy in one second (one joule is the amount of energy used when one newton of force pushes an object one meter)</p></cell>
+                <cell><p>the power used by a nicer microwave oven</p></cell>
             </row>
         </tabular>
     </table>

@@ -10,7 +10,7 @@
 <section xml:id="derivative-formulas-supplementary-exercises">
     <title>Supplement</title>
     <exercises>
-        <exercisegroup cols="3" by="row">
+        <exercisegroup cols="3">
             <introduction>
                 <p>Apply the constant factor and power rules of differentiation to find the first derivative of each of the following functions.  In each case take the derivative with respect to the independent variable suggested by the expression on the right side of the equal sign.  Make sure that you assign the proper name to the derivative function.  Please note that there is no need to employ either the quotient rule or the product rule to find any of these derivative formulas.</p>
             </introduction> 
@@ -18,6 +18,9 @@
                 <statement>
                     <p><m>\fe{f}{x}=\dfrac{\sqrt[11]{x^6}}{6}</m></p>
                 </statement>
+                <answer>
+                    <p><m>\frac{1}{11\sqrt[11]{x^{5}}}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{f}{x}&amp;=\frac{1}{6}x^{\sfrac{6}{11}}</mrow>
@@ -25,14 +28,14 @@
                     <mrow>&amp;=\frac{1}{11\sqrt[11]{x^{5}}}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{1}{11\sqrt[11]{x^{5}}}</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>y=-\dfrac{5}{t^7}</m></p>
                 </statement>
+                <answer>
+                    <p><m>\frac{35}{t^8}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>y&amp;=-5t^{-7}</mrow>
@@ -40,14 +43,14 @@
                     <mrow>&amp;=\frac{35}{t^8}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{35}{t^8}</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{y}{u}=12\sqrt[3]{u}</m></p>
                 </statement>
+                <answer>
+                    <p><m>\frac{4}{\sqrt[3]{u^2}}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{y}{u}&amp;=12u^{\sfrac{1}{3}}</mrow>
@@ -55,28 +58,28 @@
                     <mrow>&amp;=\frac{4}{\sqrt[3]{u^2}}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{4}{\sqrt[3]{u^2}}</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{z}{\alpha}=e\alpha^{\pi}</m></p>
                 </statement>
+                <answer>
+                    <p><m>e\pi\alpha^{\pi-1}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{z}{\alpha}&amp;=e\alpha^{\pi}</mrow>
                     <mrow>\fe{\fd{z}}{\alpha}&amp;=e\pi\alpha^{\pi-1}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>e\pi\alpha^{\pi-1}</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>z=\dfrac{8}{\sqrt{t^7}}</m></p>
                 </statement>
+                <answer>
+                    <p><m>-\frac{28}{\sqrt{t^{9}}}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>z&amp;=8t^{-\sfrac{7}{2}}</mrow>
@@ -84,14 +87,14 @@
                     <mrow>&amp;=-\frac{28}{\sqrt{t^{9}}}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>-\frac{28}{\sqrt{t^{9}}}</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>T=\dfrac{4\sqrt[3]{t^7}}{t^2}</m></p>
                 </statement>
+                <answer>
+                    <p><m>\frac{4}{3\sqrt[3]{t^{2}}}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>T&amp;=\frac{4t^{\sfrac{7}{3}}}{t^2}</mrow>
@@ -100,9 +103,6 @@
                     <mrow>&amp;=\frac{4}{3\sqrt[3]{t^{2}}}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{4}{3\sqrt[3]{t^{2}}}</m></p>
-                </answer>
             </exercise>
         </exercisegroup>
         <exercisegroup cols="2">
@@ -113,6 +113,9 @@
                 <statement>
                     <p><m>y=5\fe{\sin}{x}\fe{\cos}{x}</m></p>
                 </statement>
+                <answer>
+                    <p><m>5\left[\fe{\cos^2}{x}-\fe{\sin^2}{x}\right]</m> or <m>5\fe{\cos}{2x}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>y&amp;=5\fe{\sin}{x}\fe{\cos}{x}</mrow>
@@ -123,14 +126,14 @@
                     <mrow>&amp;=5\fe{\cos}{2x}\qquad\text{(optional simplification)}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>5\left[\fe{\cos^2}{x}-\fe{\sin^2}{x}\right]</m> or <m>5\fe{\cos}{2x}</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>y=\dfrac{5t^2e^t}{7}</m></p>
                 </statement>
+                <answer>
+                    <p><m>\frac{5}{7}te^t(2+t)</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>y&amp;=\frac{5}{7}t^2e^t</mrow>
@@ -140,14 +143,14 @@
                     <mrow>&amp;=\frac{5}{7}te^t(2+t)</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{5}{7}te^t(2+t)</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{F}{x}=4x\fe{\ln}{x}</m></p>
                 </statement>
+                <answer>
+                    <p><m>4(\fe{\ln}{x}+1)</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{\fd{F}}{x}&amp;=4\lz{x}{x\fe{\ln}{x}}</mrow>
@@ -156,14 +159,14 @@
                     <mrow>&amp;=4(\fe{\ln}{x}+1)</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>4(\fe{\ln}{x}+1)</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>z=x^2\fe{\sin^{-1}}{x}</m></p>
                 </statement>
+                <answer>
+                    <p><m>2x\fe{\sin^{-1}}{x}+\frac{x^2}{\sqrt{1-x^2}}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>z&amp;=x^2\fe{\sin^{-1}}{x}</mrow>
@@ -173,14 +176,14 @@
                     <mrow>&amp;=2x\fe{\sin^{-1}}{x}+\frac{x^2}{\sqrt{1-x^2}}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>2x\fe{\sin^{-1}}{x}+\frac{x^2}{\sqrt{1-x^2}}</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{T}{t}=(t^2+1)\fe{\tan^{-1}}{t}</m></p>
                 </statement>
+                <answer>
+                    <p><m>2t\fe{\tan^{-1}}{t}+1</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{T}{t}&amp;=(t^2+1)\fe{\tan^{-1}}{t}</mrow>
@@ -190,14 +193,14 @@
                     <mrow>&amp;=2t\fe{\tan^{-1}}{t}+1</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>2t\fe{\tan^{-1}}{t}+1</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>T=\dfrac{x^77^x}{3}</m></p>
                 </statement>
+                <answer>
+                    <p><m>\frac{x^67^x}{3}(7+x\fe{\ln}{7})</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>T&amp;=\frac{1}{3}x^77^x</mrow>
@@ -207,9 +210,6 @@
                     <mrow>&amp;=\frac{x^67^x}{3}(7+x\fe{\ln}{7})</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{x^67^x}{3}(7+x\fe{\ln}{7})</m></p>
-                </answer>
             </exercise>
         </exercisegroup>
         <exercisegroup cols="2">
@@ -220,6 +220,9 @@
                 <statement>
                     <p><m>\fe{q}{\theta}=\dfrac{4e^{\theta}}{e^\theta+1}</m></p>
                 </statement>
+                <answer>
+                    <p><m>\frac{4e^{\theta}}{\left(e^\theta+1\right)^2}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{q}{\theta}&amp;=4\frac{e^{\theta}}{e^\theta+1}</mrow>
@@ -229,14 +232,14 @@
                     <mrow>&amp;=\frac{4e^{\theta}}{\left(e^\theta+1\right)^2}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{4e^{\theta}}{\left(e^\theta+1\right)^2}</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{u}{x}=2\dfrac{\fe{\ln}{x}}{x^4}</m></p>
                 </statement>
+                <answer>
+                    <p><m>\frac{2-8\fe{\ln}{x}}{x^5}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{u}{x}&amp;=2\frac{\fe{\ln}{x}}{x^4}</mrow>
@@ -247,14 +250,14 @@
                     <mrow>&amp;=\frac{2-8\fe{\ln}{x}}{x^5}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{2-8\fe{\ln}{x}}{x^5}</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>F=\dfrac{\sqrt{t}}{3t^2-5\sqrt{t^3}}</m></p>
                 </statement>
+                <answer>
+                    <p><m>\frac{-9\sqrt{t}+10}{2\left(3\sqrt{t^3}-5t\right)^2}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>F&amp;=\frac{\sqrt{t}}{3t^2-5\sqrt{t^3}}</mrow>
@@ -266,14 +269,14 @@
                     <mrow>&amp;=\frac{-9\sqrt{t}+10}{2\left(3\sqrt{t^3}-5t\right)^2}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{-9\sqrt{t}+10}{2\left(3\sqrt{t^3}-5t\right)^2}</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{F}{x}=\dfrac{\fe{\tan}{x}}{\fe{\tan^{-1}}{x}}</m></p>
                 </statement>
+                <answer>
+                    <p><m>\frac{\fe{\sec^2}{x}\fe{\tan^{-1}}{x}\left(1+x^2\right)-\fe{\tan}{x}}{\left(\fe{\tan^{-1}}{x}\right)^2\left(1+x^2\right)}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{F}{x}&amp;=\frac{\fe{\tan}{x}}{\fe{\tan^{-1}}{x}}</mrow>
@@ -283,14 +286,14 @@
                     <mrow>&amp;=\frac{\fe{\sec^2}{x}\fe{\tan^{-1}}{x}\left(1+x^2\right)-\fe{\tan}{x}}{\left(\fe{\tan^{-1}}{x}\right)^2\left(1+x^2\right)}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{\fe{\sec^2}{x}\fe{\tan^{-1}}{x}\left(1+x^2\right)-\fe{\tan}{x}}{\left(\fe{\tan^{-1}}{x}\right)^2\left(1+x^2\right)}</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>p=\dfrac{\fe{\tan^{-1}}{t}}{1+t^2}</m></p>
                 </statement>
+                <answer>
+                    <p><m>\frac{1-2t\fe{\tan^{-1}}{t}}{\left(1+t^2\right)^2}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>p&amp;=\frac{\fe{\tan^{-1}}{t}}{1+t^2}</mrow>
@@ -299,14 +302,14 @@
                     <mrow>&amp;=\frac{1-2t\fe{\tan^{-1}}{t}}{\left(1+t^2\right)^2}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{1-2t\fe{\tan^{-1}}{t}}{\left(1+t^2\right)^2}</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>y=\dfrac{4}{\fe{\sin}{\beta}-2\fe{\cos}{\beta}}</m></p>
                 </statement>
+                <answer>
+                    <p><m>\frac{-4\left(\fe{\cos}{\beta}+2\fe{\sin}{\beta}\right)}{\left(\fe{\sin}{\beta}-2\fe{\cos}{\beta}\right)^2}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>y&amp;=\frac{4}{\fe{\sin}{\beta}-2\fe{\cos}{\beta}}</mrow>
@@ -315,9 +318,6 @@
                     <mrow>&amp;=\frac{-4\left(\fe{\cos}{\beta}+2\fe{\sin}{\beta}\right)}{\left(\fe{\sin}{\beta}-2\fe{\cos}{\beta}\right)^2}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{-4\left(\fe{\cos}{\beta}+2\fe{\sin}{\beta}\right)}{\left(\fe{\sin}{\beta}-2\fe{\cos}{\beta}\right)^2}</m></p>
-                </answer>
             </exercise>
         </exercisegroup>
         <exercisegroup>
@@ -335,6 +335,9 @@ formula stated above for the product of three functions.  The first application 
                     <mrow>\lzoo{x}{\fe{f}{x}\fe{g}{x}\fe{h}{x}}&amp;=\lzoo{x}{\fe{f}{x}\cdot\left[\fe{g}{x}\fe{h}{x}\right]}</mrow> 
                     </md></p>
                 </statement>
+                <answer>
+                    <p>See the solutions section.</p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>&amp;\phantom{={}}\lzoo{x}{\fe{f}{x}\fe{g}{x}\fe{h}{x}}</mrow>
@@ -345,14 +348,14 @@ formula stated above for the product of three functions.  The first application 
                     <mrow>&amp;=\fe{\fd{f}}{x}\fe{g}{x}\fe{h}{x}+\fe{f}{x}\fe{\fd{g}}{x}\fe{h}{x}+\fe{f}{x}\fe{g}{x}\fe{\fd{h}}{x}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p>See the solutions section.</p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                      <p>Apply the formula shown for the product of four functions to determine the derivative with respect to <m>x</m> of the function <m>p</m> defined by  <m>\fe{p}{x}=x^2e^x\fe{\sin}{x}\fe{\cos}{x}</m>.</p>
                 </statement>
+                <answer>
+                     <p><m>xe^x\big(2\fe{\sin}{x}\fe{\cos}{x}+x\fe{\sin}{x}\fe{\cos}{x}+2x\fe{\cos^2}{x}-x\big)</m></p>
+                </answer>
                 <solution>
                      <p><md>
                      <mrow>\fe{f}{x}&amp;=x^2e^x\fe{\sin}{x}\fe{\cos}{x}</mrow>
@@ -363,9 +366,6 @@ formula stated above for the product of three functions.  The first application 
                      <mrow>&amp;=xe^x\left(2\fe{\sin}{x}\fe{\cos}{x}+x\fe{\sin}{x}\fe{\cos}{x}+x\fe{\cos^2}{x}-x\fe{\sin^2}{x}\right)</mrow>
                      </md></p>
                 </solution>
-                <answer>
-                     <p><m>xe^x\big(2\fe{\sin}{x}\fe{\cos}{x}+x\fe{\sin}{x}\fe{\cos}{x}+2x\fe{\cos^2}{x}-x\big)</m></p>
-                </answer>
             </exercise>
         </exercisegroup>
         <exercisegroup>
@@ -376,6 +376,9 @@ formula stated above for the product of three functions.  The first application 
                 <statement>
                     <p><m>\fe{f}{x}=\dfrac{x^3+x^2}{x}</m>; tangent line at <m>5</m></p>
                 </statement>
+                <answer>
+                    <p><m>y=11(x-5)+30</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{f}{x}&amp;=\frac{x^3+x^2}{x}</mrow>
@@ -383,14 +386,14 @@ formula stated above for the product of three functions.  The first application 
                     <mrow>\fe{\fd{f}}{x}&amp;=2x+1&amp; x\neq0</mrow>
                     </md><m>\fe{f}{5}=30</m> and <m>\fe{\fd{f}}{5}=11</m>, so the tangent line to <m>f</m> at <m>5</m> passes through the point <m>\point{5}{30}</m> and has a slope of <m>11</m>.  The equation of this line is <m>y=11(x-5)+30</m>.</p>
                 </solution>
-                <answer>
-                    <p><m>y=11(x-5)+30</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{h}{x}=\dfrac{x}{1+x}</m>; tangent line at <m>-2</m></p>
                 </statement>
+                <answer>
+                    <p><m>y=x+4</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{f}{x}&amp;=\frac{x}{1+x}</mrow>
@@ -398,14 +401,14 @@ formula stated above for the product of three functions.  The first application 
                     <mrow>&amp;=\frac{1}{(1+x)^2}</mrow>
                     </md><m>\fe{f}{-2}=2</m> and <m>\fe{\fd{f}}{-2}=1</m>, so the tangent line to <m>f</m> at <m>-2</m> passes through the point <m>\point{-2}{2}</m> and has a slope of <m>1</m>.  The equation of this line is <m>y=1(x-(-2))+2</m>, or just <m>y=x+4</m>.</p>
                 </solution>
-                <answer>
-                    <p><m>y=x+4</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{K}{x}=\dfrac{1+x}{2x+2}</m>; tangent line at <m>8</m></p>
                 </statement>
+                <answer>
+                    <p><m>y=\frac{1}{2}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{K}{x}&amp;=\frac{1+x}{2x+2}</mrow>
@@ -414,14 +417,14 @@ formula stated above for the product of three functions.  The first application 
                     <mrow>\fe{\fd{K}}{x}&amp;=0&amp;x\neq-1</mrow>
                     </md><m>\fe{K}{8}=\frac{1}{2}</m> and <m>\fe{\fd{K}}{8}=0</m>, so the tangent line to <m>K</m> at <m>8</m> passes through the point <m>\point{8}{\frac{1}{2}}</m> and has a slope of <m>0</m>.  The equation of this line is <m>y=\frac{1}{2}</m>.</p>
                 </solution>
-                <answer>
-                    <p><m>y=\frac{1}{2}</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{r}{x}=3\sqrt[3]{x}e^x</m>; tangent line at <m>0</m></p>
                 </statement>
+                <answer>
+                    <p><m>x=0</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{r}{x}&amp;=3\sqrt[3]{x}e^x</mrow>
@@ -431,15 +434,15 @@ formula stated above for the product of three functions.  The first application 
                     <mrow>\fe{\fd{r}}{x}&amp;=\frac{e^x}{\sqrt[3]{x^2}}+3\sqrt[3]{x}e^x</mrow>
                     </md><m>\fe{r}{0}=0</m> and <m>\fe{\fd{r}}{0}</m> is undefined. But <m>\lim_{x\to0^{-}}\fe{\fd{r}}{x}=\infty</m> and <m>\lim_{x\to0^{+}}\fe{\fd{r}}{x}=\infty</m>, so there is a tangent line to <m>f</m> at <m>0</m> that is vertical. The equation of this line is <m>x=0</m>.</p>
                 </solution>
-                <answer>
-                    <p><m>x=0</m></p>
-                </answer>
             </exercise>
         </exercisegroup>
         <exercise>
             <statement>
                 <p>Find the second derivative of <m>y</m> with respect to <m>t</m> if <m>y=4\sqrt{t}\,t^5</m>.  Make sure that you use appropriate techniques of differentiation and that you use proper notation on both sides of the equal sign.</p>
             </statement>
+            <answer>
+                <p><m>\lzn{2}{y}{t}=99\sqrt{t^7}</m></p>
+            </answer>
             <solution>
                 <p><md>
                 <mrow>y&amp;=4\sqrt{t}\,t^5</mrow>
@@ -451,17 +454,12 @@ formula stated above for the product of three functions.  The first application 
                 <mrow>&amp;=99\sqrt{t^7}</mrow>
                 </md></p>
             </solution>
-            <answer>
-                <p><m>\lzn{2}{y}{t}=99\sqrt{t^7}</m></p>
-            </answer>
         </exercise>
-        <exercisegroup>
+        <exercisegroup xml:id="exercisegroup-analyze-intervals-from-graph-first">
             <introduction>
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p>A function <m>f</m> is shown in <xref ref="figure-analyze-intervals-supplement"/>. Each question below is in reference to this function.  Please note that the numeric endpoints of each interval answer are all integers.</p> 
-                    </paragraphs>
-                    <figure valign="top" xml:id="figure-analyze-intervals-supplement">
+                <sidebyside widths="47% 47%">
+                    <p>A function <m>f</m> is shown in <xref ref="figure-analyze-intervals-supplement"/>. Each question below is in reference to this function.  Please note that the numeric endpoints of each interval answer are all integers.</p> 
+                    <figure xml:id="figure-analyze-intervals-supplement">
                         <caption><m>y=\fe{f}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -483,49 +481,50 @@ formula stated above for the product of three functions.  The first application 
                 <statement>
                     <p>Over what intervals is <m>\fd{f}</m> positive and over what intervals is <m>\fd{f}</m> negative?</p> 
                 </statement>
-                <solution>
-                    <p><m>\fd{f}</m> is positive over <m>\ointerval{-\infty}{-8}</m> and <m>\ointerval{2}{\infty}</m>. <m>\fd{f}</m> is negative over <m>\ointerval{-8}{2}</m>.</p>
-                </solution>
                 <answer>
                     <p><m>\fd{f}</m> positive over <m>\ointerval{-\infty}{-8}</m> and <m>\ointerval{2}{\infty}</m>; negative over <m>\ointerval{-8}{2}</m></p>
                 </answer>
+                <solution>
+                    <p><m>\fd{f}</m> is positive over <m>\ointerval{-\infty}{-8}</m> and <m>\ointerval{2}{\infty}</m>. <m>\fd{f}</m> is negative over <m>\ointerval{-8}{2}</m>.</p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p>Over what intervals is <m>\fd{f}</m> increasing and over what intervals is <m>\fd{f}</m> decreasing?</p> 
                 </statement>
-                <solution>
-                    <p><m>\fd{f}</m> is increasing over <m>\ointerval{-3}{\infty}</m>. <m>\fd{f}</m> is decreasing over <m>\ointerval{-\infty}{-3}</m>.</p>
-                </solution>
                 <answer>
                     <p><m>\fd{f}</m> increasing over <m>\ointerval{-3}{\infty}</m>; decreasing over <m>\ointerval{-\infty}{-3}</m></p>
                 </answer>
+                <solution>
+                    <p><m>\fd{f}</m> is increasing over <m>\ointerval{-3}{\infty}</m>. <m>\fd{f}</m> is decreasing over <m>\ointerval{-\infty}{-3}</m>.</p>
+                </solution>
             </exercise>
             <exercise xml:id="exercise-analyze-intervals-from-graph-third">
                 <statement>
                     <p>Over what intervals is <m>\sd{f}</m> positive and over what intervals is <m>\sd{f}</m> negative?</p> 
                 </statement>
-                <solution>
-                    <p>This is essentially the same exercise as the previous exercise. <m>\sd{f}</m> is positive over <m>\ointerval{-3}{\infty}</m>. <m>\sd{f}</m> is negative over <m>\ointerval{-\infty}{-3}</m>.</p>
-                </solution>
                 <answer>
                     <p><m>\sd{f}</m> positive over <m>\ointerval{-3}{\infty}</m>; negative over <m>\ointerval{-\infty}{-3}</m></p>
                 </answer>
+                <solution>
+                    <p>This is essentially the same exercise as the previous exercise. <m>\sd{f}</m> is positive over <m>\ointerval{-3}{\infty}</m>. <m>\sd{f}</m> is negative over <m>\ointerval{-\infty}{-3}</m>.</p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
-                    <p>The formula for <m>f</m> is <m>\fe{f}{x}=\frac{x^3}{3}+3x^2-16x</m>.  Find the formulas for <m>\fd{f}</m> and <m>\sd{f}</m>, and then graph the derivatives and verify your answers to <xref autoname="plural" ref="exercise-analyze-intervals-from-graph-first"/><ndash/><xref autoname="no" ref="exercise-analyze-intervals-from-graph-third"/>.</p> 
+                    <p>The formula for <m>f</m> is <m>\fe{f}{x}=\frac{x^3}{3}+3x^2-16x</m>.  Find the formulas for <m>\fd{f}</m> and <m>\sd{f}</m>, and then graph the derivatives and verify your answers to <xref ref="exercisegroup-analyze-intervals-from-graph-first">Exercises</xref>.</p> 
                 </statement>
+                <answer>
+                    <p><m>\fe{\fd{f}}{x}=x^2+6x-16</m>, <m>\fe{\sd{f}}{x}=2x+6</m></p>
+                </answer>
                 <solution>
-                    <sidebyside>
-                        <paragraphs valign="top">
-                            <p><md>
+                    <sidebyside widths="32% 32% 32%">
+                        <p><md>
                             <mrow>\fe{f}{x}&amp;=\frac{x^3}{3}+3x^2-16x</mrow>
                             <mrow>\fe{\fd{f}}{x}&amp;=x^2+6x-16</mrow>
                             <mrow>\fe{\sd{f}}{x}&amp;=2x+6</mrow>
-                            </md></p>
-                        </paragraphs>
-                        <figure valign="top" xml:id="figure-analyze-intervals-supplement-derivative">
+                        </md></p>
+                        <figure xml:id="figure-analyze-intervals-supplement-derivative">
                             <caption><m>y=\fe{\fd{f}}{x}</m></caption>
                             <image>
                                 <latex-image-code>
@@ -541,7 +540,7 @@ formula stated above for the product of three functions.  The first application 
                                 </latex-image-code>
                             </image>
                         </figure>
-                        <figure valign="top" xml:id="figure-analyze-intervals-supplement-2nd-derivative">
+                        <figure xml:id="figure-analyze-intervals-supplement-2nd-derivative">
                             <caption><m>y=\fe{\sd{f}}{x}</m></caption>
                             <image>
                                 <latex-image-code>
@@ -559,18 +558,13 @@ formula stated above for the product of three functions.  The first application 
                         </figure>
                     </sidebyside>
                 </solution>
-                <answer>
-                    <p><m>\fe{\fd{f}}{x}=x^2+6x-16</m>, <m>\fe{\sd{f}}{x}=2x+6</m></p>
-                </answer>
             </exercise>
         </exercisegroup>
         <exercisegroup>
             <introduction>
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p>A function <m>g</m> is shown in <xref ref="figure-second-analyze-intervals-supplement"/>. Each question below is in reference to this function.</p> 
-                    </paragraphs>
-                    <figure valign="top" xml:id="figure-second-analyze-intervals-supplement">
+                <sidebyside widths="47% 47%">
+                    <p>A function <m>g</m> is shown in <xref ref="figure-second-analyze-intervals-supplement"/>. Each question below is in reference to this function.</p> 
+                    <figure xml:id="figure-second-analyze-intervals-supplement">
                         <caption><m>y=\fe{g}{t}</m></caption>
                         <image>
                             <latex-image-code>
@@ -593,12 +587,12 @@ formula stated above for the product of three functions.  The first application 
                 <statement>
                     <p>Where over the interval <m>\cinterval{0}{2\pi}</m> does <m>\fe{\fd{g}}{t}=0</m>?  Please note that the <m>t</m>-scale in <xref ref="figure-second-analyze-intervals-supplement"/> is <m>\frac{\pi}{12}</m>.</p> 
                 </statement>
-                <solution>
-                    <p>Over the interval <m>\cinterval{0}{2\pi}</m>, <m>\fe{\fd{g}}{t}=0</m> at <m>\frac{\pi}{2},\frac{7\pi}{6},\frac{3\pi}{2}</m>, and <m>\frac{11\pi}{6}</m>.</p>
-                </solution>
                 <answer>
                     <p><m>\frac{\pi}{2},\frac{7\pi}{6},\frac{3\pi}{2}</m>, and <m>\frac{11\pi}{6}</m></p>
                 </answer>
+                <solution>
+                    <p>Over the interval <m>\cinterval{0}{2\pi}</m>, <m>\fe{\fd{g}}{t}=0</m> at <m>\frac{\pi}{2},\frac{7\pi}{6},\frac{3\pi}{2}</m>, and <m>\frac{11\pi}{6}</m>.</p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
@@ -607,6 +601,9 @@ formula stated above for the product of three functions.  The first application 
                 <hint>
                     <p><m>\fe{\sin^2}{t}=\fe{\sin}{t}\cdot\fe{\sin}{t}</m></p>
                 </hint>
+                <answer>
+                    <p><m>\fe{\fd{g}}{t}=3\fe{\cos}{t}\left(1+2\fe{\sin}{t}\right)</m>, with zeros at <m>\frac{\pi}{2},\frac{7\pi}{6},\frac{3\pi}{2}</m>, and <m>\frac{11\pi}{6}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{g}{t}&amp;=3\fe{\sin}{t}+3\fe{\sin^2}{t}-5</mrow>
@@ -617,9 +614,6 @@ formula stated above for the product of three functions.  The first application 
                     <mrow>\fe{\fd{g}}{t}&amp;=3\fe{\cos}{t}\left(1+2\fe{\sin}{t}\right)</mrow>
                     </md>So <m>\fe{\fd{g}}{t}=0</m> where <m>\fe{\cos}{t}=0</m> and where <m>\fe{\sin}{t}=-\frac{1}{2}</m>. Over <m>\cinterval{0}{2\pi}</m>, <m>\fe{\cos}{t}=0</m> at <m>t=\frac{\pi}{2}</m> and <m>t=\frac{3\pi}{2}</m>. Over <m>\cinterval{0}{2\pi}</m>, <m>\fe{\sin}{t}=-\frac{1}{2}</m> at <m>t=\frac{7\pi}{6}</m> and <m>t=\frac{11\pi}{6}</m>. This agrees with the answer to <xref ref="exercise-second-analyze-intervals-supplement-first"/>.</p>
                 </solution>
-                <answer>
-                    <p><m>\fe{\fd{g}}{t}=3\fe{\cos}{t}\left(1+2\fe{\sin}{t}\right)</m>, with zeros at <m>\frac{\pi}{2},\frac{7\pi}{6},\frac{3\pi}{2}</m>, and <m>\frac{11\pi}{6}</m></p>
-                </answer>
             </exercise>
         </exercisegroup>
         <exercise>
@@ -629,6 +623,9 @@ formula stated above for the product of three functions.  The first application 
             <hint>
                 <p>Begin by applying a double angle identity.  Also, make sure that you read the question carefully.</p>
             </hint>
+            <answer>
+                <p><m>y=2</m></p>
+            </answer>
             <solution>
                 <p><md>
                 <mrow>\fe{f}{x}&amp;=\fe{\sin}{2x}</mrow>
@@ -644,9 +641,6 @@ formula stated above for the product of three functions.  The first application 
                 <mrow>&amp;=-8\fe{\sin}{x}\fe{\cos}{x}</mrow>
                 </md><m>\fe{\fd{f}}{\pi}=2</m>, and <m>\fe{\sd{f}}{\pi}=0</m>, so the tangent line to <m>\fd{f}</m> at <m>\pi</m> passes through <m>\point{\pi}{2}</m> and has a slope of <m>0</m>. The equation of this line is <m>y=2</m>.</p>
             </solution>
-            <answer>
-                <p><m>y=2</m></p>
-            </answer>
         </exercise>
         <exercisegroup>
             <introduction>
@@ -729,6 +723,9 @@ formula stated above for the product of three functions.  The first application 
                 <statement>
                     <p>Find <m>\fe{\fd{h}}{4}</m>, where <m>\fe{h}{x}=\fe{f}{x}\fe{g}{x}</m>.</p>
                 </statement>
+                <answer>
+                    <p><m>24{,}749</m></p>
+                </answer>
                 <solution>
                     <p><md>            
                     <mrow>\fe{\fd{h}}{x}&amp;=\lzoo{x}{\fe{f}{x}}\fe{g}{x}+\fe{f}{x}\lzoo{x}{\fe{g}{x}}</mrow>
@@ -738,14 +735,14 @@ formula stated above for the product of three functions.  The first application 
                     <mrow>&amp;=24{,}749</mrow> 
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>24{,}749</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p>Find <m>\fe{\sd{h}}{2}</m>, where <m>\fe{h}{x}=\fe{f}{x}\fe{g}{x}</m>.</p>
                 </statement>
+                <answer>
+                    <p><m>860</m></p>
+                </answer>
                 <solution>
                     <p><md> 
                     <mrow>\fe{\fd{h}}{x}&amp;=\lzoo{x}{\fe{f}{x}}\fe{g}{x}+\fe{f}{x}\lzoo{x}{\fe{g}{x}}</mrow>
@@ -758,14 +755,14 @@ formula stated above for the product of three functions.  The first application 
                     <mrow>&amp;=860</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>860</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p>Find <m>\fe{\fd{k}}{3}</m>, where <m>\fe{k}{x}=\dfrac{\fe{g}{x}}{\fe{f}{x}}</m>.</p>
                 </statement>
+                <answer>
+                    <p><m>\frac{2}{3}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{\fd{k}}{x}&amp;=\frac{\lzoo{x}{\fe{g}{x}}\fe{f}{x}-\fe{g}{x}\lzoo{x}{\fe{f}{x}}}{(\fe{f}{x})^2}</mrow>
@@ -775,14 +772,14 @@ formula stated above for the product of three functions.  The first application 
                     <mrow>&amp;=\frac{2}{3}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{2}{3}</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p>Find <m>\fe{\fd{p}}{4}</m>, where <m>\fe{p}{x}=6\sqrt{x}\fe{f}{x}</m>.</p>
                 </statement>
+                <answer>
+                    <p><m>537</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{\fd{p}}{x}&amp;=6\left(\lzoo{x}{\sqrt{x}}\fe{f}{x}+\sqrt{x}\lzoo{x}{\fe{f}{x}}\right)</mrow>
@@ -792,14 +789,14 @@ formula stated above for the product of three functions.  The first application 
                     <mrow>&amp;=537</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>537</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p>Find <m>\fe{\fd{r}}{1}</m>, where <m>\fe{r}{x}=\left(\fe{g}{x}\right)^2</m>.</p>
                 </statement>
+                <answer>
+                    <p><m>-20</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{r}{x}&amp;=\fe{g}{x}\fe{g}{x}</mrow>
@@ -811,14 +808,14 @@ formula stated above for the product of three functions.  The first application 
                     <mrow>&amp;=-20</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>-20</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p>Find <m>\fe{\fd{s}}{2}</m>, where <m>\fe{s}{x}=x\fe{g}{x}\fe{g}{x}</m>.</p>
                 </statement>
+                <answer>
+                    <p><m>494</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{\fd{s}}{x}&amp;=\lzoo{x}{x}\fe{f}{x}\fe{g}{x}+x\lzoo{x}{\fe{f}{x}}\fe{g}{x}+x\fe{f}{x}\lzoo{x}{\fe{g}{x}}</mrow>
@@ -828,14 +825,14 @@ formula stated above for the product of three functions.  The first application 
                     <mrow>&amp;=494</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>494</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p>Find <m>\fe{\fd{F}}{4}</m>, where <m>\fe{F}{x}=\sqrt{x}\fe{g}{4}</m>.</p>
                 </statement>
+                <answer>
+                    <p><m>\frac{289}{4}</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{F}{x}&amp;=289\sqrt{x}</mrow>
@@ -845,14 +842,14 @@ formula stated above for the product of three functions.  The first application 
                     <mrow>&amp;=\frac{289}{4}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>\frac{289}{4}</m></p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p>Find <m>\fe{\sd{T}}{0}</m>, where <m>\fe{T}{x}=\dfrac{\fe{f}{x}}{e^x}</m>.</p>
                 </statement>
+                <answer>
+                    <p><m>2</m></p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{\fd{T}}{x}&amp;=\frac{\lzoo{x}{\fe{f}{x}}e^x-\fe{f}{x}\lzoo{x}{e^x}}{e^{2x}}</mrow>
@@ -867,9 +864,6 @@ formula stated above for the product of three functions.  The first application 
                     <mrow>&amp;=2</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p><m>2</m></p>
-                </answer>
             </exercise>
 
         </exercisegroup>

@@ -17,8 +17,8 @@
             <introduction> 
                 <p>A parabolic function is shown in <xref ref="figure-graphical-derivative"/>. The next several questions are in reference to that function.</p>
 
-                <sidebyside> 
-                    <figure xml:id="figure-graphical-derivative" width="40%">
+                <sidebyside widths="40% 40% 16%"> 
+                    <figure xml:id="figure-graphical-derivative">
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
                             <description>a graph of a quadratic function having the shape of a parabola; the parabola has its vertex at (1,6) and opens downward; the following points are on the parabola and are emphasized with a solid dot: (-5,-12), (-3,-2), (-1,4), (1,6), (3,4), (5,-2), and (7,-12)</description>
@@ -44,7 +44,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure xml:id="figure-graphical-derivative-plot" width="40%">
+                    <figure xml:id="figure-graphical-derivative-plot">
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
                             <description>a graph of a quadratic function having the shape of a parabola; the parabola has its vertex at (1,6) and opens downward; the plot is of the same function from the previous image, but no points are emphasized in this version</description>
@@ -135,8 +135,8 @@
         <exercisegroup> 
             <introduction> 
                 <p>A function <m>f</m> is shown in <xref ref="figure-cubic"/> and the corresponding first derivative function <m>\fd{f}</m> is shown in <xref ref="figure-cubic-derivative"/>. Answer each of the following questions referencing these two functions.</p>
-                <sidebyside>
-                    <figure xml:id="figure-cubic" valign="top">
+                <sidebyside widths="47% 47%">
+                    <figure xml:id="figure-cubic">
                         <caption><m>y=\fe{f}{x}</m></caption>
                         <image>
                             <description>the graph of a function; the curve enters from below at about (-4.2,-7), heading slightly to the right as it mainly moves upward; near (-2.5,6), the curve bends by a lot, smoothly, until it reaches about (-2,6.2), at which point the curve turns around and begins moving predominantly downward and to the right; it passes through (0,1); as it reaches about (1.5,-4), the curve bends by a lot, smoothly, so that it reaches about (2,-4.2) and turns around again; from here it moves predominantly upward and to the right, passing through (3,-2), and exiting the graph at about (4,7)</description>
@@ -158,7 +158,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <figure xml:id="figure-cubic-derivative" valign="top">
+                    <figure xml:id="figure-cubic-derivative">
                         <caption><m>y=\fe{\fd{f}}{x}</m></caption>
                         <image>
                             <description>the graph of a function; the overall appearance resembles a parabola, although there is no solid evidence that it is a true parabola; the curve enters from above at about (-3.5,7), moving mostly downward and slightly to the right; as it moves downward, it tapers more and more, passing through -2 on the x-axis, and then smoothly flattening out at -4 on the y-axis; then the curve bends upward, bending more and more upward as it moves to the right; it passes through (3,5); it exits the graph at about (3.5,7)</description>
@@ -206,8 +206,8 @@
         </exercisegroup> 
         <exercise>
             <statement>
-                <p>In each of <xref autoname="plural" ref="figure-sine"/> and <xref autoname="no" ref="figure-rational"/> a function (the solid curve) is given; both of these functions are symmetric about the <m>y</m>-axis. The first derivative of each function (the dash-dotted curves) have been drawn over the interval <m>\ointerval{0}{7}</m>. Use the given portion of the first derivative together with the symmetry of the function to help you draw each first derivative over the interval <m>\ointerval{-7}{0}</m>. Please note that a function that is symmetric across a vertical line has a first derivative that is symmetric about a point.  Similarly, a function that is symmetric about a point has a first derivative that is symmetric across a vertical line.</p>
-                <sidebyside>
+                <p>In each of <xref ref="figure-sine">Figures</xref> and <xref autoname="no" ref="figure-rational"/> a function (the solid curve) is given; both of these functions are symmetric about the <m>y</m>-axis. The first derivative of each function (the dash-dotted curves) have been drawn over the interval <m>\ointerval{0}{7}</m>. Use the given portion of the first derivative together with the symmetry of the function to help you draw each first derivative over the interval <m>\ointerval{-7}{0}</m>. Please note that a function that is symmetric across a vertical line has a first derivative that is symmetric about a point.  Similarly, a function that is symmetric about a point has a first derivative that is symmetric across a vertical line.</p>
+                <sidebyside widths="47% 47%">
                     <figure xml:id="figure-sine">
                         <caption><m>y=\fe{f}{x}</m> and part of the curve <m>y=\fe{\fd{f}}{x}</m></caption>
                         <image>
@@ -261,7 +261,7 @@
         <exercisegroup>
             <introduction>
                 <p>A graph of the function <m>f</m> given by <m>\fe{f}{x}=\frac{1}{x}</m> is shown in <xref ref="figure-one-over-x"/>.</p>
-                <sidebyside>
+                <sidebyside widths="47% 47%">
                     <figure xml:id="figure-one-over-x" >
                         <caption><m>y=\fe{f}{x}=\frac{1}{x}</m></caption>
                         <image>
@@ -332,7 +332,7 @@
         <exercise>
             <statement>
                 <p>A graph of the function <m>g</m> is shown in <xref ref="figure-arctangent"/>. The absolute minimum value ever obtained by <m>\fd{g}</m> is <m>-3</m>. With that in mind, draw <m>\fd{g}</m> onto <xref ref="figure-derivative-of-arctangent"/>. Make sure that you draw and label any and all necessary asymptotes. Please note that <m>g</m> is symmetric about the point <m>\point{1}{2}</m>.</p>
-                <sidebyside>
+                <sidebyside widths="47% 47%">
                     <figure xml:id="figure-arctangent" >
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
@@ -344,11 +344,11 @@
                                     domain=-6.8:6.8,
                                 ]{2-atan((x-1)*sqrt(3))/30};
                                 \addplot[asymptote,
-                                    domain=0:-7,
+                                    domain=7:-7,
                                     ->,
                                 ]{5} node[above right] {$y=5$};
                                 \addplot[asymptote,
-                                    domain=0:7,
+                                    domain=-7:7,
                                     ->,
                                 ]{-1} node[below left] {$y=-1$};
                             \end{axis}
@@ -395,48 +395,51 @@
 
             <exercise>
                 <statement>
-                    <p> An <term>inflection point</term> is a point where the function is continuous and the concavity of the function changes. The inflection points on <m>w</m> occur at <m>2</m>, <m>3.25</m>, and <m>6</m>. With that in mind, over each interval stated in <xref ref="table-inflection-points"/> exactly two of the properties from its caption apply to <m>\fd{w}</m>. Complete <xref ref="table-inflection-points"/> with the appropriate pairs of properties.</p> 
-                    <table xml:id="table-inflection-points">
-                        <caption>Properties of <m>\fd{w}</m> (positive, negative, increasing, or decreasing)</caption>
-                        <tabular top="major">
-                            <col halign="center"/>
-                            <col halign="center"/>
-                            <row bottom="medium">
-                                <cell>Interval</cell>
-                                <cell>Properties of <m>\fd{w}</m></cell>
-                            </row>
-                            <row bottom="minor">
-                                <cell><m>\ointerval{-\infty}{2}</m></cell>
-                                <cell><m>\phantom{\text{positive/negative, increasing/decreasing}}</m></cell>
-                            </row>
-                            <row bottom="minor">
-                                <cell><m>\ointerval{2}{3.25}</m></cell>
-                                <cell />
-                            </row>
-                            <row bottom="minor">
-                                <cell><m>\ointerval{3.25}{4}</m></cell>
-                                <cell />
-                            </row>
-                            <row bottom="minor">
-                                <cell><m>\ointerval{4}{6}</m></cell>
-                                <cell />
-                            </row>
-                            <row bottom="minor">
-                                <cell><m>\ointerval{6}{7}</m></cell>
-                                <cell />
-                            </row>
-                            <row bottom="minor">
-                                <cell><m>\ointerval{7}{\infty}</m></cell>
-                                <cell />
-                            </row>
-                        </tabular>
-                    </table>
+                    <p>An <term>inflection point</term> is a point where the function is continuous and the concavity of the function changes.</p>
+                    <sidebyside widths="32% 64%">
+                        <p>The inflection points on <m>w</m> occur at <m>2</m>, <m>3.25</m>, and <m>6</m>. With that in mind, over each interval stated in <xref ref="table-inflection-points"/> exactly two of the properties from its caption apply to <m>\fd{w}</m>. Complete <xref ref="table-inflection-points"/> with the appropriate pairs of properties.</p> 
+                        <table xml:id="table-inflection-points">
+                            <caption>Properties of <m>\fd{w}</m> (positive, negative, increasing, or decreasing)</caption>
+                            <tabular top="major">
+                                <col halign="center"/>
+                                <col halign="center"/>
+                                <row bottom="medium">
+                                    <cell>Interval</cell>
+                                    <cell>Properties of <m>\fd{w}</m></cell>
+                                </row>
+                                <row bottom="minor">
+                                    <cell><m>\ointerval{-\infty}{2}</m></cell>
+                                    <cell><m>\phantom{\text{positive/negative, increasing/decreasing}}</m></cell>
+                                </row>
+                                <row bottom="minor">
+                                    <cell><m>\ointerval{2}{3.25}</m></cell>
+                                    <cell />
+                                </row>
+                                <row bottom="minor">
+                                    <cell><m>\ointerval{3.25}{4}</m></cell>
+                                    <cell />
+                                </row>
+                                <row bottom="minor">
+                                    <cell><m>\ointerval{4}{6}</m></cell>
+                                    <cell />
+                                </row>
+                                <row bottom="minor">
+                                    <cell><m>\ointerval{6}{7}</m></cell>
+                                    <cell />
+                                </row>
+                                <row bottom="minor">
+                                    <cell><m>\ointerval{7}{\infty}</m></cell>
+                                    <cell />
+                                </row>
+                            </tabular>
+                        </table>
+                    </sidebyside>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
                     <p>In <xref ref="table-values-for-w-prime"/>, three possible values are given for <m>\fd{w}</m> at several values of <m>x</m>. In each case, one of the values is correct. Use tangent lines to <m>w</m> to determine each of the correct values.</p>
-                    <sidebyside>
+                    <sidebyside  widths="47% 47%" valign="bottom">
                         <table xml:id="table-values-for-w-prime" >
                             <caption>Choose the correct values for <m>\fd{w}</m></caption>
                             <tabular top="major">

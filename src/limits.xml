@@ -24,59 +24,59 @@
         <exercise>
             <statement>
                 <p>Several function values and limit values for the function in <xref ref="figure-first-limit"/> are given below. You and your group mates should take turns reading the equations aloud. Make sure that you read the symbols correctly, that's part of what you are learning! Also, discuss why the values are what they are and make sure that you get help from your instructor to clear up any confusion.</p>
-                        <ul>
-                            <li><p><m>\fe{f}{-2}=6</m>, but <m>\lim\limits_{x\to-2}\fe{f}{x}=3</m></p></li>
-                            <li><p><m>\fe{f}{-4}</m> is undefined, but <m>\lim\limits_{x\to-4}\fe{f}{x}=2</m></p></li>
-                            <li><p><m>\fe{f}{1}=-1</m>, but <m>\lim\limits_{x\to1}\fe{f}{x}</m> does not exist</p></li>
-                            <li><p><m>\underbrace{\lim_{x\to1^{-}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the left}\end{array}}=-3</m>, but <m>\underbrace{\lim_{x\to1^{+}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the right}\end{array}}=-1</m></p></li>
-                        </ul>
 
-                    <figure valign="bottom" xml:id="figure-first-limit">
-                        <caption><m>y=\fe{f}{x}</m></caption>
-                        <image xml:id="image-first-limit">
-                            <description>a graph of a discontinuous function; reading the graph left to right, the graph enters from the left with an upward slope until it reaches (-3,5), however there is a hole at (-4,2); from (-3,5), the graph slopes in a straight line downward to (1,-3), however the plot has a hole at (1,-3); additionally, there is a hole back at (-2,3), but the graph has a solid dot above that hole at (-2,6); back at x=1, a second piece of the graph begins from (1,-1) sloping upward to the right; this piece of the graph is not connected to the piece that ended just shy of (1,-3)</description>
-                            <latex-image-code>
-                            <![CDATA[\begin{tikzpicture}
-                            \begin{axis}[]
-                                \addplot[
-                                   pccplot,
-                                    ->
-                                    ]coordinates{
-                                        (1,-3)
-                                        (-3,5)
-                                        (-6.9,-6.7)};
-                                \addplot[
-                                    pccplot,
-                                    ->
-                                    ]coordinates{
-                                        (1,-1)
-                                        (6.9,4.9)};
-                                \addplot[
-                                    soldot,
-                                    ]coordinates{
-                                        (-2,6)
-                                        (1,-1)};
-                                \addplot[
-                                    holdot,
-                                    ]coordinates{
-                                        (-4,2)
-                                        (-2,3)
-                                        (1,-3)};
-                            \end{axis}
-                            \end{tikzpicture}]]>
-                            </latex-image-code>
-                        </image>
-                    </figure>
+                <p><m>\fe{f}{-2}=6</m>, but <m>\lim\limits_{x\to-2}\fe{f}{x}=3</m>.</p>
+
+                <p><m>\fe{f}{-4}</m> is undefined, but <m>\lim\limits_{x\to-4}\fe{f}{x}=2</m>.</p>
+
+                <p><m>\fe{f}{1}=-1</m>, but <m>\lim\limits_{x\to1}\fe{f}{x}</m> does not exist.</p>
+
+                <p><m>\underbrace{\lim_{x\to1^{-}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the left}\end{array}}=-3</m>, but <m>\underbrace{\lim_{x\to1^{+}}\fe{f}{x}}_{\begin{array}{c}\text{the limit of }\fe{f}{x}\\\text{as }x\text{ approaches }1\\\text{from the right}\end{array}}=-1</m>.</p>
+
+                <figure xml:id="figure-first-limit">
+                    <caption><m>y=\fe{f}{x}</m></caption>
+                    <image xml:id="image-first-limit">
+                        <description>a graph of a discontinuous function; reading the graph left to right, the graph enters from the left with an upward slope until it reaches (-3,5), however there is a hole at (-4,2); from (-3,5), the graph slopes in a straight line downward to (1,-3), however the plot has a hole at (1,-3); additionally, there is a hole back at (-2,3), but the graph has a solid dot above that hole at (-2,6); back at x=1, a second piece of the graph begins from (1,-1) sloping upward to the right; this piece of the graph is not connected to the piece that ended just shy of (1,-3)</description>
+                        <latex-image-code>
+                        <![CDATA[\begin{tikzpicture}
+                        \begin{axis}[]
+                            \addplot[
+                               pccplot,
+                                ->
+                                ]coordinates{
+                                    (1,-3)
+                                    (-3,5)
+                                    (-6.9,-6.7)};
+                            \addplot[
+                                pccplot,
+                                ->
+                                ]coordinates{
+                                    (1,-1)
+                                    (6.9,4.9)};
+                            \addplot[
+                                soldot,
+                                ]coordinates{
+                                    (-2,6)
+                                    (1,-1)};
+                            \addplot[
+                                holdot,
+                                ]coordinates{
+                                    (-4,2)
+                                    (-2,3)
+                                    (1,-3)};
+                        \end{axis}
+                        \end{tikzpicture}]]>
+                        </latex-image-code>
+                    </image>
+                </figure>
             </statement>
         </exercise>
 
         <exercisegroup cols="3">
             <introduction>
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p>Copy each of the following expressions onto your paper and either state the value or state that the value is undefined or doesn't exist. Make sure that when discussing the values you use proper terminology. All expressions are in reference to the function <m>g</m> shown in <xref ref="figure-second-limit"/>.</p>
-                    </paragraphs>
-                    <figure xml:id="figure-second-limit" valign="top">
+                <sidebyside widths="47% 47%">
+                    <p>Copy each of the following expressions onto your paper and either state the value or state that the value is undefined or doesn't exist. Make sure that when discussing the values you use proper terminology. All expressions are in reference to the function <m>g</m> shown in <xref ref="figure-second-limit"/>.</p>
+                    <figure xml:id="figure-second-limit">
                         <caption><m>y=\fe{g}{t}</m></caption>
                         <image xml:id="image-second-limit">
                             <description>a graph of a discontinuous function; reading the graph left to right, the graph enters from the left with an upward slope until it reaches (-2,5); a second, separated, piece of the graph begins at (-2,-3.5), except there is a hole right where it begins; the graph moves upward linearly until reaching (3,-1), except ther was a hole at (2,-1.5); from (3,-1), the curve enters a parabolic path, dipping down to a vertex at (4,-2) and then curving upward off to the right; however there is a hole at (5,-1), with a solid dot above the hole at (5,1)</description>
@@ -196,7 +196,7 @@
         <exercisegroup>
             <introduction>
                 <p>Values of the function <m>f</m>, where <m>\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}</m>, are shown in <xref ref="table-rational-function-values"/>, and values of the function <m>p</m>, where <m>\fe{p}{t}=\sqrt{t-12}</m>, are shown in <xref ref="table-square-root-values"/>. These questions are in reference to these functions.</p>
-                <sidebyside>
+                <sidebyside widths="47% 47%">
                     <table xml:id="table-rational-function-values">
                         <caption><m>\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}</m></caption>
                         <tabular top="major">
@@ -299,7 +299,7 @@
 
         <exercisegroup cols="2">
             <introduction>
-                 <p>Create tables similar to <xref autoname="plural" ref="table-rational-function-values"/> and <xref autoname="no" ref="table-square-root-values"/> from which you can deduce each of the following limit values. Make sure that you include table numbers, table captions, and meaningful column headings. Make sure that your input values follow patterns similar to those used in <xref autoname="plural" ref="table-rational-function-values"/> and <xref autoname="no" ref="table-square-root-values"/>. Make sure that you round your output values in such a way that a clear and compelling pattern in the output is clearly demonstrated by your stated values. Make sure that you state the limit value!</p> 
+                 <p>Create tables similar to <xref ref="table-rational-function-values">Tables</xref> and <xref autoname="no" ref="table-square-root-values"/> from which you can deduce each of the following limit values. Make sure that you include table numbers, table captions, and meaningful column headings. Make sure that your input values follow patterns similar to those used in <xref ref="table-rational-function-values">Tables</xref> and <xref autoname="no" ref="table-square-root-values"/>. Make sure that you round your output values in such a way that a clear and compelling pattern in the output is clearly demonstrated by your stated values. Make sure that you state the limit value!</p> 
             </introduction>
 
             <exercise>

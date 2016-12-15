@@ -1,4 +1,4 @@
-.table .caption {
+/*.table .caption {
     caption-side: top;
 }
 
@@ -14,10 +14,6 @@
 
 .mathbook-content .paragraphs .heading::after {
     content: "";
-}
-
-.exercisegroup .hidden-knowl-wrapper {
-    margin-left: 5%;
 }
 
 .exercisegroup .knowl-output {
@@ -100,4 +96,4 @@
     border:0px;
 }
 
-
+*/

@@ -22,7 +22,7 @@
         </exercise>
         <exercisegroup>
             <introduction>
-                <p>The first two derivatives of the function <m>\fe{y}{x}=\frac{(x+2)^2}{(x+3)^3}</m> are <me>\fe{\fd{y}}{x}=\frac{-x(x+2)}{(x+3)^4}\qquad\fe{\sd{y}}{x}=\frac{2(x+\sqrt{3})(x-\sqrt{3})}{(x+3)^5}\text{.}</me> The first derivative of the function <m>\fe{g}{t}=\frac{\sqrt{t-4}}{(t-1)^2}</m> is <me>\fe{\fd{g}}{t}=\frac{-3(t-5)}{2(t-1)^3\sqrt{t-4}}\text{.}</me></p>
+                <p>The first two derivatives of the function <m>\fe{y}{x}=\frac{(x+2)^2}{(x+3)^3}</m> are <me>\fe{\fd{y}}{x}=\frac{-x(x+2)}{(x+3)^4}\qquad\fe{\sd{y}}{x}=\frac{2(x+\sqrt{3})(x-\sqrt{3})}{(x+3)^5}\text{.}</me></p>
             </introduction>
             <exercise>
                 <statement>
@@ -41,8 +41,8 @@
                         <caption><m>\fe{\sd{y}}{x}=\frac{2\left(x+\sqrt{3}\right)\left(x-\sqrt{3}\right)}{(x+3)^5}</m></caption> 
                         <tabular top="major">
                             <col halign="center"/>
-                            <col halign="1.5in"/>
-                            <col halign="1.5in"/>
+                            <col halign="left"/>
+                            <col halign="left"/>
                             <row bottom="medium">
                                 <cell>Interval</cell>
                                 <cell halign="center">Sign of <m>\sd{y}</m></cell>
@@ -83,14 +83,14 @@
                 </statement>
             </exercise>
         </exercisegroup>
-        <exercisegroup>
+        <exercisegroup xml:id="exercisegroup-make-second-derivative-table-first">
             <introduction>
-                <p>Perform each of the following for the functions in <xref autoname="plural" ref="exercise-make-second-derivative-table-first"/><ndash/><xref autoname="no" ref="exercise-make-second-derivative-table-last"/>.</p>
+                <p>Perform each of the following for the functions in <xref ref="exercisegroup-make-second-derivative-table-first">Exercises</xref>.</p>
                 <ul> 
                     <li><p>State the domain of the function.</p></li> 
                     <li><p>Find, and completely simplify, the formula for the second derivative of the function. It is <em>not</em> necessary to simplify the formula for the first derivative of the function.</p></li> 
                     <li><p>State the values in the domain of the function where the second derivative is either zero or does not exist.</p></li>
-                    <li><p>Create a table similar to <xref autoname="plural" ref="table-second-derivative-signs"/>.  Number the table.  Don't forget to include table headings and column headings.</p></li> 
+                    <li><p>Create a table similar to <xref ref="table-second-derivative-signs"/>.  Number the table.  Don't forget to include table headings and column headings.</p></li> 
                     <li><p>State the inflection points on the function.  Make sure that you explicitly address this question even if there are no inflection points.</p></li> 
                 </ul> 
             </introduction>

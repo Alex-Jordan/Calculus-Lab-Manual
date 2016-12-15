@@ -17,7 +17,6 @@
 <xsl:param name="exercise.backmatter.solution" select="'no'" />
 <xsl:param name="latex.preamble.early" select="concat(document('latex-preamble/latex.preamble.xml')//latex-preamble-early, document('latex-preamble/screenpdf.preamble.xml')//latex-preamble-early)" />
 <xsl:param name="latex.preamble.late" select="concat(document('latex-preamble/latex.preamble.xml')//latex-preamble-late, document('latex-preamble/screenpdf.preamble.xml')//latex-preamble-late)" />
-<xsl:param name="chunk.level" select="0" />
 
 
 </xsl:stylesheet>

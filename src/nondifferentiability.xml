@@ -10,7 +10,7 @@
 <section xml:id="section-nondifferentiability">
     <title>Nondifferentiability</title>
 
-    <p>A function is said to be nondifferentiable at any value its first derivative is undefined.  There are three graphical behaviors that lead to non-differentiability.</p>
+    <p>A function is said to be nondifferentiable at any value where its first derivative is undefined.  There are three graphical behaviors that lead to non-differentiability.</p>
 
     <ul> 
         <li><p><m>f</m> is nondifferentiable at <m>a</m> if <m>f</m> is discontinuous at <m>a</m>.</p></li> 
@@ -22,7 +22,7 @@
         <exercisegroup>
             <introduction>
                 <p>Consider the function <m>k</m> shown in <xref ref="figure-nondifferentiable"/>. Please note that <m>k</m> has a vertical tangent line at <m>-4</m>.</p>
-                <sidebyside>
+                <sidebyside widths="47% 47%">
                     <figure xml:id="figure-nondifferentiable">
                         <caption><m>y=\fe{k}{x}</m></caption>
                         <image>
@@ -87,7 +87,7 @@
         <exercisegroup> 
             <introduction> 
                 <p>Consider the function <m>g</m> shown in <xref ref="figure-bounce"/>.</p>  
-                <sidebyside>
+                <sidebyside widths="47% 47%">
                     <figure xml:id="figure-bounce" >
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>

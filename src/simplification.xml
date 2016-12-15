@@ -10,7 +10,7 @@
 <section xml:id="section-simplification">
     <title>Simplification</title>
 
-    <p>In <xref ref="exercisegroup-unsimplified-product"/> from <xref ref="section-product-rule"/> and <xref ref="exercisegroup-unsimplified-quotient"/> from <xref ref="section-quotient-rule"/> you applied the product and quotient rules to expressions where the derivative could have been found much more quickly had you simplified the expression before taking the derivative.  For example, while you can find the correct derivative formula using the quotient rule when working <xref ref="unsimplified-quotient-last"/>, the derivative can be found much more quickly if you simplify the expression before applying the rules of differentiation. This is illustrated in <xref ref="example-simplify-first"/>.</p>
+    <p>In <xref ref="exercisegroup-unsimplified-product"><xref ref="section-product-rule"/> Exercises</xref> and <xref ref="exercisegroup-unsimplified-quotient"><xref ref="section-quotient-rule"/> Exercises</xref> you applied the product and quotient rules to expressions where the derivative could have been found much more quickly had you simplified the expression before taking the derivative.  For example, while you can find the correct derivative formula using the quotient rule when working <xref ref="unsimplified-quotient-last"/>, the derivative can be found much more quickly if you simplify the expression before applying the rules of differentiation. This is illustrated in <xref ref="example-simplify-first"/>.</p>
 
     <example xml:id="example-simplify-first"> 
         <p><md>
@@ -20,7 +20,7 @@
         </md></p>
     </example> 
 
-    <p>Part of learning to take derivatives is learning  to make good choices about the methodology to employ when taking derivatives.  In <xref autoname="plural" ref="example-simplify-second"/> and <xref autoname="no" ref="example-simplify-third"/>, the need to use the product rule or quotient rule is obviated by first simplifying the expression being differentiated.</p>
+    <p>Part of learning to take derivatives is learning  to make good choices about the methodology to employ when taking derivatives.  In <xref ref="example-simplify-second">Examples</xref> and <xref autoname="no" ref="example-simplify-third"/>, the need to use the product rule or quotient rule is obviated by first simplifying the expression being differentiated.</p>
 
     <example xml:id="example-simplify-second">
         <p><md>   
@@ -28,7 +28,8 @@
         <mrow>&amp;&amp;&amp;=\frac{1}{\fe{\cos}{x}}\fe{\cos}{x}</mrow>
         <mrow>&amp;&amp;&amp;=1</mrow>
         <mrow>&amp;&amp;\lz{y}{x}&amp;=0</mrow>
-        </md></p>
+        </md>
+        Note that since <m>y</m> is undefined for <m>x=\frac{\pi}{2}+k\pi</m> with <m>k\in\mathbb{Z}</m>, <m>\lz{y}{x}</m> is also undefined at such <m>x</m>-values.</p>
     </example>
 
     <example xml:id="example-simplify-third">
@@ -37,7 +38,7 @@
         <mrow>&amp;&amp;&amp;=\frac{4t^5}{2t^2}-\frac{3t^3}{2t^2}</mrow>
         <mrow>&amp;&amp;&amp;=2t^3-\frac{3}{2}t</mrow>
         <mrow>&amp;&amp;\fe{\fd{f}}{t}&amp;=6t^2-\frac{3}{2}</mrow>
-        <mrow>&amp;&amp;\fe{\fd{f}}{t}&amp;=\frac{12t^2-3}{2}</mrow>
+        <mrow>&amp;&amp;&amp;=\frac{12t^2-3}{2}</mrow>
         </md>
         Note that since <m>f</m> is undefined at <m>0</m>, <m>\fd{f}</m> is also undefined at <m>0</m>.</p>
     </example>

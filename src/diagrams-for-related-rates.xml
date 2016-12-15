@@ -9,7 +9,7 @@
 
 <section xml:id="section-diagrams-for-related-rates">
     <title>Diagrams for  Related Rates</title>
-    <p>A particular challenge when working most related rates problems is identifying the quantity-variables. For example, when working a problem that invloves a right triangle, there are six potential quantity-variables (the lengths of the three sides, the measurements of the two acute angles, and the area). In each related rates problem involving a right triangle, at least two of these measurements must be quantity-variables, or you will not end up with two (or more) rates to relate!</p>
+    <p>A particular challenge when working most related rates problems is identifying the quantity-variables. For example, when working a problem that involves a right triangle, there are six potential quantity-variables (the lengths of the three sides, the measurements of the two acute angles, and the area). In each related rates problem involving a right triangle, at least two of these measurements must be quantity-variables, or you will not end up with two (or more) rates to relate!</p>
     <example>
         <blockquote><p>A small drone is flying straight upward at the rate of <quantity><mag>0.88</mag><unit base="foot"/><per base="second"/></quantity>. The drone is tethered to the ground (with a lot of slack) at a point that lies <quantity><mag>400</mag><unit base="foot"/></quantity> west of the launch point of the drone. Assuming that the ground is perfectly level, determine the rate at which the angle of elevation from the tether point to the drone increases at the moment the drone is <quantity><mag>300</mag><unit base="foot"/></quantity> above ground.</p></blockquote>
         <p>When searching for your quantity-variables, you need to identify sentences or phrases in the problem statement that contain the word <q>rate</q> or something similar (hence the <acro>R</acro> in <acro>DREDS</acro>). There are two such phrases in this problem:</p>
@@ -43,7 +43,7 @@
             <caption>Variable table for the drone problem</caption>
             <tabular top="major">
                 <col halign="center"/>
-                <col halign="3.5in"/>
+                <col width="75%"/>
                 <col halign="center"/>
                 <row bottom="medium">
                     <cell>Variable</cell>
@@ -52,33 +52,33 @@
                 </row>
                 <row bottom="minor">
                     <cell><m>h</m></cell>
-                    <cell>The elevation of the drone <m>t</m> seconds after the drone begins to rise.</cell>
+                    <cell><p>The elevation of the drone <m>t</m> seconds after the drone begins to rise.</p></cell>
                     <cell><quantity><unit base="foot"/></quantity></cell>
                 </row>
                 <row bottom="minor">
                     <cell><m>\theta</m></cell>
-                    <cell>The angle of elevation from the tether point to the drone <m>t</m> seconds after the drone begins to rise.</cell>
+                    <cell><p>The angle of elevation from the tether point to the drone <m>t</m> seconds after the drone begins to rise.</p></cell>
                     <cell><quantity><unit base="radian"/></quantity></cell>
                 </row>
                 <row bottom="minor">
                     <cell><m>\lz{h}{t}</m></cell>
-                    <cell>The rate of change in elevation of the drone <m>t</m> seconds after the drone begins to rise.</cell>
+                    <cell><p>The rate of change in elevation of the drone <m>t</m> seconds after the drone begins to rise.</p></cell>
                     <cell><quantity><unit base="foot"/><per base="second"/></quantity></cell>
                 </row>
                 <row bottom="minor">
                     <cell><m>\lz{\theta}{t}</m></cell>
-                    <cell>The rate of change in the angle of elevation from the tether point to the drone <m>t</m> seconds after the drone begins to rise.</cell>
+                    <cell><p>The rate of change in the angle of elevation from the tether point to the drone <m>t</m> seconds after the drone begins to rise.</p></cell>
                     <cell><quantity><unit base="radian"/><per base="second"/></quantity></cell>
                 </row>
                 <row bottom="major">
                     <cell><m>t</m></cell>
-                    <cell>The amount of time that elapses after the drone begins to rise.</cell>
+                    <cell><p>The amount of time that elapses after the drone begins to rise.</p></cell>
                     <cell><quantity><unit base="second"/></quantity></cell>
                 </row>
             </tabular>
         </table>
 
-        <sidebyside>
+        <sidebyside widths="47% 47%">
             <figure>
                 <caption>Variable Diagram</caption>
                 <image>
@@ -96,20 +96,18 @@
                     </latex-image-code>
                 </image>
             </figure>
-            <paragraphs>
-                <p><md>
+            <p><md>
                 <mrow>\fe{\tan}{\theta}&amp;=\frac{h}{400}</mrow>
                 <mrow>\lzoo{t}{\fe{\tan}{\theta}}&amp;=\lzoo{t}{\frac{h}{400}}</mrow>
                 <mrow>\fe{\sec^2}{\theta}\lz{\theta}{t}&amp;=\frac{1}{400}\lz{h}{t}</mrow>
-                </md>This is our related rates equation.</p>
-            </paragraphs>
+            </md>This is our related rates equation.</p>
         </sidebyside>
         <p>At the moment the drone is <quantity><mag>300</mag><unit base="foot"/></quantity> above the ground and rising at a rate of <quantity><mag>0.88</mag><unit base="foot"/><per base="second"/></quantity>.</p>
         <table xml:id="table-drone-what-we-know">
             <caption>What we know about the variables at the described moment</caption>
             <tabular top="major">
                 <col halign="center"/>
-                <col halign="4in"/>
+                <col halign="left"/>
             <row bottom="medium">
                 <cell>Variable</cell>
                 <cell>What we know</cell>
@@ -151,21 +149,21 @@
                 </statement>
             </exercise>
             <exercise>
-                <statement><todo>adjectival form for quantities</todo>
+                <statement>
                     <p>A <quantity><mag>17</mag><unit base="foot"/></quantity> ladder is propped against a very tall wall but the top of the ladder is slipping down the wall. At the moment the top of the ladder is <quantity><mag>12</mag><unit base="foot"/></quantity> above the ground it is slipping at the rate of <quantity><mag>0.2</mag><unit base="foot"/><per base="second"/></quantity>. At what rate is the distance between the foot of the ladder and the wall changing at that moment?</p>
                 </statement>
             </exercise>
             <exercise xml:id="exercise-triangle-last">
-                <statement><todo>times of day</todo>
+                <statement>
                     <p>In Kansas, Highway A runs due north-south for <quantity><mag>125</mag></quantity> miles and Highway B runs dues east-west for <quantity><mag>222</mag></quantity> miles. The elevation of both highways is constantly <quantity><mag>725</mag></quantity> feet their entire lengths. The highways intersect at a point exactly halfway through their runs. One Tuesday a car is travelling east on Highway B at the constant speed of <quantity><mag>76</mag><unit base="mileperhour"/></quantity> and a truck is traveling north on Highway A at a constant speed of <quantity><mag>84</mag><unit base="mileperhour"/></quantity>. The car passes through the point of intersection at 4:12 pm and the truck passes through the point of intersection at 4:17 pm. At what rate is the distance between the two vehicles changing at 4:27 that afternoon? Assume that the speeds of the car and truck do not vary at all between 4:10 pm and 4:30 pm.</p>
                 </statement>
             </exercise>
         </exercisegroup>
         <exercise>
             <statement>
-                <p>Go ahead and finish the three problems stated in <xref ref="exercisegroup-related-rates-using-diagrams"/>. Remember to complete each step in the problems solving process.</p>
+                <p>Go ahead and finish the three problems stated in <xref ref="exercisegroup-related-rates-using-diagrams">Exercises</xref>. Remember to complete each step in the problems solving process.</p>
                 <ol>
-                    <li><p>Draw a properly labeled variable diagram. (<acro>D</acro>) Note that you completed this step while working <xref ref="exercisegroup-related-rates-using-diagrams"/>.</p></li>
+                    <li><p>Draw a properly labeled variable diagram. (<acro>D</acro>) Note that you completed this step while working <xref ref="exercisegroup-related-rates-using-diagrams">Exercises</xref>.</p></li>
                     <li><p>Make a variable definition table. Include each variable type (quantity, rate, and time). Include the unit for each variable (<acro>R</acro>)</p></li>
                     <li><p>Write down an equation that relates the two quantity-variables. (<acro>E</acro>)</p></li>
                     <li><p>Differentiate both sides of the equation you just wrote with respect to <m>t</m>. Simplify the result. This equation is called the <term>related rates equation</term>. (<acro>D</acro>)</p></li>
@@ -182,7 +180,7 @@
                 <p>The presence of the cubic-centimeter unit indicates that the problem is rooted in a volume formula. Specifically, we need the volume formula for a right circular cone which is <m>V=\frac{\pi}{3}r^2h</m> where <m>r</m> is the radius at the top of the cone and <m>h</m> is the height of the cone.</p>
                 <p>In the stated problem, we are told the rate at which the volume of the remaining slushy changes and we are asked to determine the rate at which the depth of the remaining slushy changes. The rates correspond to <m>\lz{V}{t}</m> and <m>\lz{h}{t}</m> where <m>V</m> and <m>h</m> are, respectively, the volume (<quantity><unit prefix="centi" base="meter" exp="3"/></quantity>) and depth (<quantity><unit prefix="centi" base="meter"/></quantity>) of the slushy that remains in the cup <m>t</m> seconds after the slushy begins to flow out of the bottom of the cup.</p>
                 <p>Since the value of <m>\lz{r}{t}</m> is neither given nor desired, we need to eliminate the variable <m>r</m> from the formula <m>V=\frac{\pi}{3}r^2h</m>. We do this by exploiting a property of similar triangles. Two triangles are said to be similar if and only if the three angular measurements of the first triangle are identical to the angular measurements of the second triangle. One thing that is always true about similar triangles is that their corresponding sides are proportional. This latter fact is the only reason we are able to define trigonometric functions in terms of the ratios of the sides of a right triangle!</p>
-                <sidebyside>
+                <sidebyside widths="47% 47%">
                     <figure xml:id="figure-slushy">
                         <caption>Slushy Cone</caption>
                         <image>
@@ -216,9 +214,7 @@
                             </latex-image-code>
                         </image>
                     </figure>
-                    <paragraphs>
-                        <p>A cross-section of the cup is shown in <xref ref="figure-slushy"/>. The radius of the cone at the top of the remaining slushy is labeled as <m>r</m> and the depth of the remaining slushy is labeled as <m>h</m>. The radius at the top of the cup as well as the height of the cup are also shown.</p>
-                    </paragraphs>
+                    <p>A diagram of the cup is shown in <xref ref="figure-slushy"/>. The radius of the cone at the top of the remaining slushy is labeled as <m>r</m> and the depth of the remaining slushy is labeled as <m>h</m>. The radius at the top of the cup as well as the height of the cup are also shown.</p>
                 </sidebyside>
                 <p>Use the fact that the two right triangles in <xref ref="figure-slushy"/> are similar to write a proportion that relates <m>r</m>, <m>h</m>, <quantity><mag>3</mag><unit prefix="centi" base="meter"/></quantity>, and <quantity><mag>12</mag><unit prefix="centi" base="meter"/></quantity>. Solve that equation for <m>r</m> and substitute the resultant formula into <m>V=\frac{\pi}{3}r^2h</m>. Simplify the resultant formula of <m>h</m>; that's the actual volume formula you want to use while solving the related rates problem<mdash/>the formula that relates <m>V</m> and <m>h</m>.</p>
                 <p>Go ahead and solve the related rates problem.</p>

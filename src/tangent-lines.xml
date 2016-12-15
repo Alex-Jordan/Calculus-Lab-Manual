@@ -16,10 +16,9 @@
 
     <example xml:id="example-tangent-line">
         <p>The tangent line at <m>x=4</m> to the function <m>f</m> defined by <m>\fe{f}{x}=\sqrt{x}</m> is shown in <xref ref="figure-tangent-line"/>. Here is a calculation of the slope of this line.</p>
-        <sidebyside>
-            <paragraphs valign="top">
-                <p><md>
-                <mrow>\qquad\;m_{\text{tan}}&amp;=\lim_{h\to0}\frac{\fe{f}{4+h}-\fe{f}{4}}{h}</mrow>
+        <sidebyside widths="51% 47%" valign="bottom">
+            <p><md>
+                <mrow>m_{\text{tan}}&amp;=\lim_{h\to0}\frac{\fe{f}{4+h}-\fe{f}{4}}{h}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{\sqrt{4+h}-\sqrt{4}}{h}</mrow>
                 <mrow>&amp;=\lim_{h\to0}\left(\frac{\sqrt{4+h}-2}{h}\cdot\frac{\sqrt{4+h}+2}{\sqrt{4+h}+2}\right)</mrow>
                 <mrow>&amp;=\lim_{h\to0}\frac{4+h-4}{h\left(\sqrt{4+h}+2\right)}</mrow>
@@ -27,9 +26,8 @@
                 <mrow>&amp;=\lim_{h\to0}\frac{1}{1\left(\sqrt{4+h}+2\right)}</mrow>
                 <mrow>&amp;=\frac{1}{\sqrt{4+0}+2}</mrow>
                 <mrow>&amp;=\frac{1}{4}</mrow>
-                </md></p>
-            </paragraphs>
-            <figure xml:id="figure-tangent-line" valign="bottom">
+            </md></p>
+            <figure xml:id="figure-tangent-line">
                 <caption><m>y=\fe{f}{x}</m> and its tangent line at <m>x=4</m></caption>
                 <image>
                     <description>the curve y=sqrt(x) is plotted; beginning with a solid dot at (0,0), this curve briefly moves more upward than rightward, but quickly moves more and more rightward; it exits the graph on its right edge at about (11,3.3); the point (4,2) is on the curve, and has a solid dot to emphasize this; a straight line has been superimposed onto the graph that passes through (4,2), and is perfectly tangent to the curve; all of the curve is below the line, except for at the point (4,2) where they touch</description>
@@ -70,10 +68,8 @@
     <exercises>
         <exercisegroup>
             <introduction>
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p>Consider the function <m>g</m> given by <m>\fe{g}{x}=5-\sqrt{4-x}</m> graphed in <xref ref="figure-tangent-line-exercise"/>.</p>
-                    </paragraphs>
+                <sidebyside widths="47% 47%">
+                    <p>Consider the function <m>g</m> given by <m>\fe{g}{x}=5-\sqrt{4-x}</m> graphed in <xref ref="figure-tangent-line-exercise"/>.</p>
 
                     <figure xml:id="figure-tangent-line-exercise">
                         <caption><m>y=\fe{g}{x}</m> and its tangent line at <m>x=3</m></caption>

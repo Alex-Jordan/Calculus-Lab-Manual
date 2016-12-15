@@ -27,18 +27,14 @@
         <mrow>&amp;=\lim_{h\to0}\left(-24-16h\right)</mrow>
         <mrow>&amp;=-24-16\cdot0</mrow>
         <mrow>&amp;=-24</mrow>
-        </md></p>
-
-        <p>From this we can infer that the velocity of the object <m>2</m> seconds into its flight is <quantity><mag>-24</mag><unit base="foot"/><per base="second"/></quantity>. From that we know that the object is falling at a speed of <quantity><mag>24</mag><unit base="foot"/><per base="second"/></quantity>.</p>
+        </md>From this we can infer that the velocity of the object <m>2</m> seconds into its flight is <quantity><mag>-24</mag><unit base="foot"/><per base="second"/></quantity>. From that we know that the object is falling at a speed of <quantity><mag>24</mag><unit base="foot"/><per base="second"/></quantity>.</p>
     </example>
 
     <exercises>
         <exercisegroup>
             <introduction>
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p>Suppose that an object is tossed into the air so that its elevation <m>p</m> (measured in <quantity><unit base="meter"/></quantity>) is given by <m>\fe{p}{t}=300+10t-4.9t^2</m>, where <m>t</m> is the amount of time that has passed since the object was tossed (measured in <quantity><unit base="second"/></quantity>).</p>
-                    </paragraphs>
+                <sidebyside widths="47% 47%">
+                    <p>Suppose that an object is tossed into the air so that its elevation <m>p</m> (measured in <quantity><unit base="meter"/></quantity>) is given by <m>\fe{p}{t}=300+10t-4.9t^2</m>, where <m>t</m> is the amount of time that has passed since the object was tossed (measured in <quantity><unit base="second"/></quantity>).</p>
                     <table xml:id="table-instantaneous-velocity">
                         <caption>Average Velocities</caption>
                         <tabular top="major">

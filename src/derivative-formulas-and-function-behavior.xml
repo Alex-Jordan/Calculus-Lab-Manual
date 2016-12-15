@@ -44,7 +44,7 @@
             </exercise>
             <exercise xml:id="exercise-evaluate-gravity">
                 <statement>
-                    <p>Leaving <m>G</m>, <m>m_1</m>, and <m>m_2</m> as constants, find each of <m>\fe{\fd{F}}{1.00\times10^{12}}</m>, <m>\fe{\fd{F}}{1.01\times10^{12}}</m>, and <m>\fe{\fd{F}}{1.02\times10^{12}}</m>.</p>
+                    <p>Find each of <m>\fe{\fd{F}}{1.00\times10^{12}}</m>, <m>\fe{\fd{F}}{1.01\times10^{12}}</m>, and <m>\fe{\fd{F}}{1.02\times10^{12}}</m>, leaving <m>G</m>, <m>m_1</m>, and <m>m_2</m> as constants.</p>
                 </statement>
             </exercise>
             <exercise>

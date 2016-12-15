@@ -9,6 +9,13 @@
    
 <chapter xml:id="chapter-related-rates" xmlns:xi="http://www.w3.org/2001/XInclude">
     <title>Related Rates</title>
+
+    <introduction>
+        <aside>
+            <title>Read this lab early!</title>
+            <p>The author of the lab manual uses a specific approach to finding solutions to related rates problems.  Because the author's approach may vary in its details from that shown by your instructor, it is important that you read a couple of examples before you come to lab.  You don't need to fully understand the examples, you just need to have a general sense of the author's approach so that you can follow the directions in the actual activities.  Make sure that you read the examples from <xref ref="section-introduction-related-rates">Activity</xref> and <xref ref="section-diagrams-for-related-rates">Activity</xref> before you come to lab so that you are prepared to work on the actual activities as soon as lab begins.</p>
+        </aside>
+    </introduction>
     
     <xi:include href="./introduction-related-rates.xml" />
     <xi:include href="./diagrams-for-related-rates.xml" />

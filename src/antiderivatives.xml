@@ -10,7 +10,7 @@
 <section xml:id="section-antiderivatives">
     <title>Antiderivatives</title>
 
-    <p>The derivative continuum can be expressed backwards as well as forwards.  When you move from function to function in the reverse direction the resultant functions are called <term>antiderivatives</term> and the process is called <term>antidifferentiation</term>.  These relationships are shown in <xref autoname="plural" ref="figure-derivative-chain"/> and <xref autoname="no" ref="figure-antiderivative-chain"/>.</p>
+    <p>The derivative continuum can be expressed backwards as well as forwards.  When you move from function to function in the reverse direction the resultant functions are called <term>antiderivatives</term> and the process is called <term>antidifferentiation</term>.  These relationships are shown in <xref ref="figure-derivative-chain">Figures</xref> and <xref autoname="no" ref="figure-antiderivative-chain"/>.</p>
 
     <figure xml:id="figure-derivative-chain">
         <caption>Differentiating</caption>
@@ -38,10 +38,8 @@
     <exercises>
         <exercisegroup>
             <introduction>
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p>Each of the linear functions in <xref ref="figure-parallel-lines"/> have the same first derivative function.</p>
-                    </paragraphs>
+                <sidebyside widths="47% 47%">
+                    <p>Each of the linear functions in <xref ref="figure-parallel-lines"/> have the same first derivative function.</p>
                     <figure xml:id="figure-parallel-lines">
                         <caption/>
                         <image>
@@ -78,7 +76,7 @@
         <exercisegroup> 
             <introduction>
                 <p>The function <m>f</m> is shown in <xref ref="figure-plot-antiderivative-one"/>. Reference this function in the following questions.</p>
-                <sidebyside>
+                <sidebyside widths="47% 47%">
                     <figure xml:id="figure-plot-antiderivative-one" >
                         <caption><m>y=\fe{f}{x}</m></caption>
                         <image>
@@ -106,7 +104,7 @@
                         </image>
                     </figure>
                 </sidebyside>
-                <sidebyside>
+                <sidebyside widths="47% 47%">
                     <figure xml:id="figure-plot-antiderivative-three" >
                         <caption/>
                         <image>
@@ -148,21 +146,21 @@
             </exercise>
             <exercise>
                 <statement>
-                    <p>Because <m>f</m> is not continuous, there are other antiderivatives of <m>f</m> that pass through the point <m>\point{-3}{1}</m>. Specifically, antiderivatives of <m>f</m> may or may not be continuous at <m>-1</m>.  Draw onto <xref autoname="plural" ref="figure-plot-antiderivative-three"/> and <xref autoname="no" ref="figure-plot-antiderivative-four"/> different antiderivatives of <m>f</m> that pass through the point <m>\point{-3}{1}</m>.</p>
+                    <p>Because <m>f</m> is not continuous, there are other antiderivatives of <m>f</m> that pass through the point <m>\point{-3}{1}</m>. Specifically, antiderivatives of <m>f</m> may or may not be continuous at <m>-1</m>.  Draw onto <xref ref="figure-plot-antiderivative-three">Figures</xref> and <xref autoname="no" ref="figure-plot-antiderivative-four"/> different antiderivatives of <m>f</m> that pass through the point <m>\point{-3}{1}</m>.</p>
                 </statement>
             </exercise>
         </exercisegroup>
         <exercise>
             <statement>
-                <p>The function <m>y=\fe{\sin}{x}</m> is an example of a periodic function.  Specifically, the function has a period of <m>2\pi</m> because over any interval of length <m>2\pi</m> the behavior of the function is exactly the same as it was the previous interval of length <m>2\pi</m>.  A little more precisely, <m>\fe{\sin}{x+2\pi}=\fe{\sin}{x}</m> regardless of the value of <m>x</m>.</p>
+                <p>Recall that a function, <m>f</m>, is periodic if there exists a constant, <m>C</m>, with the property that <m>\fe{f}{x+C}=\fe{f}{x}</m> for all values of <m>x</m> in the domain of <m>f</m>. The function <m>y=\fe{\sin}{x}</m> is an example of a periodic function.  Specifically, the function has a period of <m>2\pi</m> because over any interval of length <m>2\pi</m> the behavior of the function is exactly the same as it was the previous interval of length <m>2\pi</m>.  A little more precisely, <m>\fe{\sin}{x+2\pi}=\fe{\sin}{x}</m> regardless of the value of <m>x</m>.</p>
 
-                <p>Jasmine was thinking and told her lab assistant that derivatives and antiderivatives of periodic functions must also be periodic.  Jasmine's lab assistant told her that she was half right.  Which half did Jasmine have correct?  Also, draw a function that illustrates that the other half of Jasmine's statement is not correct.</p>
+                <p>Jasmine was thinking and told her lab assistant that derivatives and antiderivatives of periodic functions must also be periodic.  Jasmine's lab assistant told her that she was half right.  Which half did Jasmine have correct<mdash />the part about the derivatives necessarily being periodic or the part about antiderivatives necessarily being periodic? Also, draw a function that illustrates that the other half of Jasmine's statement is not correct.</p>
             </statement>
         </exercise>
         <exercise>
             <statement>
                 <p>Consider the function <m>g</m> shown in <xref ref="figure-line-segments"/>.</p>
-                <sidebyside>
+                <sidebyside widths="47% 47%">
                     <figure xml:id="figure-line-segments" >
                         <caption><m>y=\fe{g}{t}</m></caption>
                         <image>
@@ -196,12 +194,10 @@
         </exercise>
         <exercisegroup>
             <introduction>
-                <sidebyside>
-                    <paragraphs valign="top">
-                        <p>Answer the following questions in reference to a continuous function <m>g</m> whose first derivative is shown in <xref ref="figure-discontinuous-derivative"/>.  You do not need to state how you made your determination; just state the interval(s) or values of <m>x</m> that satisfy the stated property. Note: the correct answer to one or more of these questions may be <q>There is no way of knowing.</q></p> 
-                    </paragraphs>
+                <sidebyside widths="47% 47%"> 
+                    <p>Answer the following questions in reference to a continuous function <m>g</m> whose first derivative is shown in <xref ref="figure-discontinuous-derivative"/>.  You do not need to state how you made your determination; just state the interval(s) or values of <m>x</m> that satisfy the stated property. Note: the correct answer to one or more of these questions may be <q>There is no way of knowing.</q></p> 
 
-                    <figure xml:id="figure-discontinuous-derivative" valign="top" >
+                    <figure xml:id="figure-discontinuous-derivative">
                         <caption><m>y=\fe{\fd{g}}{x}</m></caption>
                         <image>
                             <latex-image-code>

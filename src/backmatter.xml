@@ -11,7 +11,7 @@
 
 <backmatter xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <title>Back Matter</title>
+    <title>Appendices</title>
 
     <xi:include href="./limit-laws-appendix.xml" />
     <xi:include href="./derivative-formulas-appendix.xml" />

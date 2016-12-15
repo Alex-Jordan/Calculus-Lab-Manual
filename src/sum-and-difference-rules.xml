@@ -17,7 +17,7 @@
     <table xml:id="table-sum-and-difference-rule">
         <caption>Examples of the Sum and Difference Rules</caption>
         <tabular top="major">
-            <col halign="0.63in" right="minor"/>
+            <col halign="left" right="minor"/>
             <col halign="left" right="minor"/>
             <col halign="left"/>
             <row bottom="medium">
@@ -30,9 +30,9 @@
                 <cell><m>y=4t^{\frac{6}{5}}-\frac{1}{6}t^{-\frac{1}{2}}+8t</m></cell>
                 <cell><m>\fe{P}{\gamma}=\frac{1}{2}\fe{\sin}{\gamma}-\frac{1}{2}\fe{\cos}{\gamma}+4</m></cell>
             </row>
-            <row bottom="major">
+            <row bottom="major" valign="top">
                 <cell>You should write</cell>
-                <cell><m>\begin{aligned}\lz{y}{t}&amp;=\tfrac{24}{5}t^{\frac{1}{5}}+\tfrac{1}{12}t^{-\frac{3}{2}}+8\\&amp;=\tfrac{24\sqrt[5]{t}}{5}+\tfrac{1}{12\sqrt{t^3}}+8\end{aligned}</m></cell>
+                <cell><m>\begin{aligned}[t]\lz{y}{t}&amp;=\tfrac{24}{5}t^{\frac{1}{5}}+\tfrac{1}{12}t^{-\frac{3}{2}}+8\\&amp;=\tfrac{24\sqrt[5]{t}}{5}+\tfrac{1}{12\sqrt{t^3}}+8\end{aligned}</m></cell>
                 <cell><m>\fe{\fd{P}}{\gamma}=\frac{1}{2}\fe{\cos}{\gamma}+\frac{1}{2}\fe{\sin}{\gamma}</m></cell>
             </row>
         </tabular>

@@ -16,8 +16,8 @@
         <exercisegroup>
             <introduction>
                 <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
-                <sidebyside>
-                    <table width="52%" xml:id="table-based-on-derivatives" valign="top">
+                <sidebyside widths="47% 47%">
+                    <table xml:id="table-based-on-derivatives">
                         <caption>Signs on <m>\fd{f}</m> and <m>\sd{f}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -40,7 +40,7 @@
                             </row>
                         </tabular>
                     </table>
-                    <figure xml:id="figure-based-on-derivatives" valign="top">
+                    <figure xml:id="figure-based-on-derivatives">
                         <caption><m>y=\fe{f}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -77,8 +77,8 @@
         <exercisegroup>
             <introduction>
                 <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
-                <sidebyside>
-                    <table width="52%" xml:id="table-based-on-derivatives-two" valign="top">
+                <sidebyside widths="47% 47%">
+                    <table xml:id="table-based-on-derivatives-two">
                         <caption>Signs on <m>\fd{g}</m> and <m>\sd{g}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -101,7 +101,7 @@
                             </row>
                         </tabular>
                     </table>
-                    <figure xml:id="figure-based-on-derivatives-two" valign="top">
+                    <figure xml:id="figure-based-on-derivatives-two">
                         <caption><m>y=\fe{g}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -138,8 +138,8 @@
         <exercisegroup>
             <introduction>
                 <p>In the next few exercises, you will construct a function and then answer questions about it.</p>
-                <sidebyside>
-                    <table width="52%" xml:id="table-based-on-derivatives-three" valign="top">
+                <sidebyside widths="47% 47%">
+                    <table xml:id="table-based-on-derivatives-three">
                         <caption>Signs on <m>\fd{k}</m> and <m>\sd{k}</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -200,7 +200,7 @@
                     <p>Referring to the function <m>V</m> in <xref ref="exercise-ice-cube"/>, what would the shape of <m>V</m> be over the interval <m>\cinterval{6}{11}</m>?  (Choose from options <xref autoname="no" ref="figure-curve-one"/><ndash/><xref autoname="no" ref="figure-curve-four"/>.)</p>
                     <sidebyside xml:id="sidebyside-curves">
                         <caption/>
-                        <figure xml:id="figure-curve-one" width="12%">
+                        <figure xml:id="figure-curve-one">
                             <caption/>
                             <image>
                                 <latex-image-code>
@@ -212,7 +212,7 @@
                                 </latex-image-code>
                             </image>
                         </figure>
-                        <figure xml:id="figure-curve-two" width="12%">
+                        <figure xml:id="figure-curve-two">
                             <caption/>
                             <image>
                                 <latex-image-code>
@@ -224,7 +224,7 @@
                                 </latex-image-code>
                             </image>
                         </figure>
-                        <figure xml:id="figure-curve-three" width="12%">
+                        <figure xml:id="figure-curve-three">
                             <caption/>
                             <image>
                                 <latex-image-code>
@@ -236,7 +236,7 @@
                                 </latex-image-code>
                             </image>
                         </figure>
-                        <figure xml:id="figure-curve-four" width="12%">
+                        <figure xml:id="figure-curve-four">
                             <caption/>
                             <image>
                                 <latex-image-code>

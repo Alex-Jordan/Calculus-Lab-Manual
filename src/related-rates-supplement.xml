@@ -14,6 +14,9 @@
             <statement>
                 <p>A weather balloon is rising vertically at the rate of <quantity><mag>10</mag><unit base="foot"/><per base="second"/></quantity>. An observer is standing on the ground <quantity><mag>300</mag><unit base="foot"/></quantity> horizontally from the point where the balloon was released. At what rate is the distance between the observer and the balloon changing when the balloon is <quantity><mag>400</mag><unit base="foot"/></quantity> height?</p> 
             </statement>
+            <answer>
+                <p><quantity><mag>8</mag><unit base="foot"/><per base="second"/></quantity></p>
+            </answer>
             <solution>
                 <p>First we make a diagram of the situation.</p>
                 <figure>
@@ -41,7 +44,7 @@
                     <caption>Variable table for the balloon problem</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="3.5in"/>
+                        <col halign="left"/>
                         <col halign="center"/>
                         <row bottom="medium">
                             <cell>Variable</cell>
@@ -80,7 +83,7 @@
                     <caption>What we know about the variables at the described moment</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="4in"/>
+                        <col halign="left"/>
                     <row bottom="medium">
                         <cell>Variable</cell>
                         <cell>What we know</cell>
@@ -109,14 +112,14 @@
                 <mrow>\lz{d}{t}&amp;=8</mrow>
                 </md>So when the balloon is <quantity><mag>400</mag><unit base="foot"/></quantity> in the air, the distance between the observer and the balloon is increasing at a rate of <quantity><mag>8</mag><unit base="foot"/><per base="second"/></quantity>.</p>
             </solution>
-            <answer>
-                <p><quantity><mag>8</mag><unit base="foot"/><per base="second"/></quantity></p>
-            </answer>
         </exercise>
         <exercise>
             <statement>
                 <p>At 2:00 PM one day, Muffin and Rex were sleeping atop one another.  A loud noise startled the animals and Muffin began to run due north at a constant rate of <quantity><mag>1.7</mag><unit base="foot"/><per base="second"/></quantity> while Rex ran due east at a constant rate of <quantity><mag>2.1</mag><unit base="foot"/><per base="second"/></quantity>.  The critters maintained these paths and rates for several seconds. Calculate the rate at which the distance between the cat and dog was changing three seconds into their run.</p> 
             </statement>
+            <answer>
+                <p>approximately <quantity><mag>2.701</mag><unit base="foot"/><per base="second"/></quantity></p>
+            </answer>
             <solution>
                 <p>First we make a diagram of the situation.</p>
                 <figure>
@@ -144,7 +147,7 @@
                     <caption>Variable table for the Rex-Muffin problem</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="3.5in"/>
+                        <col halign="left"/>
                         <col halign="center"/>
                         <row bottom="medium">
                             <cell>Variable</cell>
@@ -192,7 +195,7 @@
                     <caption>What we know about the variables at the described moment</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="4in"/>
+                        <col halign="left"/>
                     <row bottom="medium">
                         <cell>Variable</cell>
                         <cell>What we know</cell>
@@ -230,14 +233,14 @@
                 <mrow>\lz{d}{t}&amp;\approx2.701\ldots</mrow>
                 </md>So <quantity><mag>3</mag><unit base="second"/></quantity> after the animals begin to run, their distance apart from each other is increasing at a rate of approximately <quantity><mag>2.701</mag><unit base="foot"/><per base="second"/></quantity>.</p>
             </solution>
-            <answer>
-                <p>approximately <quantity><mag>2.701</mag><unit base="foot"/><per base="second"/></quantity></p>
-            </answer>
         </exercise>
         <exercise>
             <statement>
                 <p>Schuyler's clock is kaput; the minute hand functions as it should but the hour hand is stuck at <m>4</m>. The minute hand on the clock is <quantity><mag>30</mag><unit prefix="centi" base="meter"/></quantity> long and the hour hand is <quantity><mag>20</mag><unit prefix="centi" base="meter"/></quantity> long.  Determine the rate of change between the tips of the hands every time the minute hand points directly at <m>12</m>.</p> 
             </statement>
+            <answer>
+                <p>approximately <quantity><mag>1.248</mag><unit prefix="centi" base="meter"/><per base="minute"/></quantity></p>
+            </answer>
             <solution>
                 <p>First we make a diagram of the situation.</p>
                 <figure>
@@ -284,7 +287,7 @@
                     <caption>Variable table for the clock problem</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="3.5in"/>
+                        <col halign="left"/>
                         <col halign="center"/>
                         <row bottom="medium">
                             <cell>Variable</cell>
@@ -323,7 +326,7 @@
                     <caption>What we know about the variables at the described moment</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="4in"/>
+                        <col halign="left"/>
                     <row bottom="medium">
                         <cell>Variable</cell>
                         <cell>What we know</cell>
@@ -353,14 +356,14 @@
                 <mrow>\lz{d}{t}&amp;\approx-1.248\ldots</mrow>
                 </md>So when the minute hand reaches the 12, the distance betwen the tips of the two hands is decreasing at a rate of about <quantity><mag>1.248</mag><unit prefix="centi" base="meter"/><per base="minute"/></quantity>.</p>
             </solution>
-            <answer>
-                <p>approximately <quantity><mag>1.248</mag><unit prefix="centi" base="meter"/><per base="minute"/></quantity></p>
-            </answer>
         </exercise>
         <exercise>
             <statement>
                 <p>It was a dark night and <quantity><mag>5.5</mag><unit base="foot"/></quantity> tall Bahram was walking towards a street lamp whose light was perched <quantity><mag>40</mag><unit base="foot"/></quantity> into the air.  As he walked, the light caused a shadow to fall behind Bahram.  When Bahram was <quantity><mag>80</mag><unit base="foot"/></quantity> from the base of the lamp he was walking at a pace of <quantity><mag>2</mag><unit base="foot"/><per base="second"/></quantity>.  At what rate was the length of Bahram's shadow changing at that instant?   Make sure that each stated and calculated rate value has the correct sign.   Make sure that your conclusion sentence clearly communicates whether the length of the shadow was increasing or decreasing at the indicated time.</p>
             </statement>
+            <answer>
+                <p>decreasing at approximately <quantity><mag>0.3188</mag><unit base="foot"/><per base="second"/></quantity></p>
+            </answer>
             <solution>
                 <p>First we make a diagram of the situation.</p>
                 <figure>
@@ -394,7 +397,7 @@
                     <caption>Variable table for the shadow problem</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="3.5in"/>
+                        <col halign="left"/>
                         <col halign="center"/>
                         <row bottom="medium">
                             <cell>Variable</cell>
@@ -432,7 +435,7 @@
                     <caption>What we know about the variables at the described moment</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="4in"/>
+                        <col halign="left"/>
                     <row bottom="medium">
                         <cell>Variable</cell>
                         <cell>What we know</cell>
@@ -463,22 +466,22 @@
                 <mrow>\lz{\ell}{t}&amp;=-0.3188\ldots</mrow>
                 </md>So when Bahram is <quantity><mag>80</mag><unit base="foot"/></quantity> from the lamp post, approaching it with a pace of <quantity><mag>2</mag><unit base="foot"/><per base="second"/></quantity>, his shadow is decreasing in lenght at a rate of about <quantity><mag>0.3188</mag><unit base="foot"/><per base="second"/></quantity>.</p>
             </solution>
-            <answer>
-                <p>decreasing at approximately <quantity><mag>0.3188</mag><unit base="foot"/><per base="second"/></quantity></p>
-            </answer>
         </exercise>
         <exercise>
             <statement>
                 <p>The gravitational force, <m>F</m>,  between two objects in space with masses <m>m_1</m> and <m>m_2</m> is given by the formula <m>F=\frac{Gm_1m_2}{r^2}</m> where <m>r</m> is the distance between the objects' centers of mass and <m>G</m> is the universal gravitational constant.</p>
                 <p>Two pieces of space junk, one with mass <quantity><mag>500</mag><unit prefix="kilo" base="gram"/></quantity> and the other with mass <quantity><mag>3000</mag><unit prefix="kilo" base="gram"/></quantity>, were drifting directly toward one another.  When the objects' centers of mass were <quantity><mag>250</mag><unit prefix="kilo" base="meter"/></quantity> apart the lighter piece was moving at a rate of <quantity><mag>0.5</mag><unit prefix="kilo" base="meter"/><per base="hour"/></quantity> and the heavier piece was moving at a rate of <quantity><mag>0.9</mag><unit prefix="kilo" base="meter"/><per base="hour"/></quantity>.  Leaving <m>G</m> as a constant, determine the rate at which the gravitational force between the two objects was changing at that instant.  Make sure that each stated and calculated rate value has the correct sign.   Make sure that your conclusion sentence clearly communicates whether the force was increasing or decreasing at that given time.  The unit for <m>F</m> is Newtons (<quantity><unit base="newton"/></quantity>). </p>
             </statement>
+            <answer>
+                <p><m>0.2688G</m> newtons per our, for <m>G</m> measured in <quantity><unit base="newton"/><unit prefix="kilo" base="meter" exp="2"/><per prefix="kilo" base="gram" exp="2"/></quantity></p>
+            </answer>
             <solution>
                 <p>We don't really need a diagram here, since the equation relating the various quantities has been given. Accounting for the various quantities and rates in the problem:</p>
                 <table>
                     <caption>Variable table for the shadow problem</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="3.5in"/>
+                        <col halign="left"/>
                         <col halign="center"/>
                         <row bottom="medium">
                             <cell>Variable</cell>
@@ -517,7 +520,7 @@
                     <caption>What we know about the variables at the described moment</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="4in"/>
+                        <col halign="left"/>
                     <row bottom="medium">
                         <cell>Variable</cell>
                         <cell>What we know</cell>
@@ -546,14 +549,14 @@
                 <mrow>\lz{F}{t}=0.2688G</mrow>
                 </md>So at the moment when the objects are <quantity><mag>250</mag><unit prefix="kilo" base="meter"/></quantity> apart, the gravitational force between them is increasing at a rate of <m>0.2688G</m> newtons per hour. (<m>G</m> is measured in <quantity><unit base="newton"/><unit prefix="kilo" base="meter" exp="2"/><per prefix="kilo" base="gram" exp="2"/></quantity>.)</p>
             </solution>
-            <answer>
-                <p><m>0.2688G</m> newtons per our, for <m>G</m> measured in <quantity><unit base="newton"/><unit prefix="kilo" base="meter" exp="2"/><per prefix="kilo" base="gram" exp="2"/></quantity></p>
-            </answer>
         </exercise>
         <exercise>
             <statement>
                 <p>An eighteen inch pendulum sitting atop a table is in the downward part of its motion.  The pivot point for the pendulum is <quantity><mag>30</mag><unit base="inch"/></quantity> above the table top.  When the pendulum is <quantity><mag>45</mag><unit base="degree"/></quantity> away from vertical, the angle formed at the pivot is decreasing at the rate of <quantity><mag>25</mag><unit base="degree"/><per base="second"/></quantity>.  At what rate is the end of the pendulum approaching the table top at this instant? Make sure that each stated and calculated rate value has the correct sign.  Make sure that you use appropriate units when defining your variables.</p>
             </statement>
+            <answer>
+                <p>decreasing at approximately <quantity><mag>5.553</mag><unit base="inch"/><per base="second"/></quantity></p>
+            </answer>
             <solution>
                 <p>First we make a diagram of the situation.</p>
                 <figure>
@@ -589,7 +592,7 @@
                     <caption>Variable table for the shadow problem</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="3.5in"/>
+                        <col halign="left"/>
                         <col halign="center"/>
                         <row bottom="medium">
                             <cell>Variable</cell>
@@ -628,7 +631,7 @@
                     <caption>What we know about the variables at the described moment</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="4in"/>
+                        <col halign="left"/>
                     <row bottom="medium">
                         <cell>Variable</cell>
                         <cell>What we know</cell>
@@ -659,9 +662,6 @@
                 <mrow>lz{h}{t}&amp;\approx-5.553\ldots</mrow>
                 </md>So at the moment in question, the distance between the pendulum weight and the table is decreasing with a rate of about <quantity><mag>5.553</mag><unit base="inch"/><per base="second"/></quantity>.</p>
             </solution>
-            <answer>
-                <p>decreasing at approximately <quantity><mag>5.553</mag><unit base="inch"/><per base="second"/></quantity></p>
-            </answer>
         </exercise>
     </exercises>
 </section>

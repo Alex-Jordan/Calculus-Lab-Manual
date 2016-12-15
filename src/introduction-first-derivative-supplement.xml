@@ -18,6 +18,9 @@
                 <statement>
                     <p><m>\fe{f}{x}=x^2</m></p>
                 </statement>
+                <answer>
+                    <p>Both methods yield <m>\fe{\fd{f}}{x}=2x</m>.</p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}&amp;\fe{\fd{f}}{x}&amp;=\lim_{t\to x}\frac{\fe{f}{t}-\fe{f}{x}}{t-x}</mrow>
@@ -30,14 +33,14 @@
                     <mrow>&amp;=2x</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p>Both methods yield <m>\fe{\fd{f}}{x}=2x</m>.</p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{f}{x}=\sqrt{x}</m></p>
                 </statement>
+                <answer>
+                    <p>Both methods yield <m>\fe{\fd{f}}{x}=\frac{1}{2\sqrt{x}}</m>.</p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}&amp;\fe{\fd{f}}{x}&amp;=\lim_{t\to x}\frac{\fe{f}{t}-\fe{f}{x}}{t-x}</mrow>
@@ -50,14 +53,14 @@
                     <mrow>&amp;=\frac{1}{2\sqrt{x}}</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p>Both methods yield <m>\fe{\fd{f}}{x}=\frac{1}{2\sqrt{x}}</m>.</p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{f}{x}=7</m></p>
                 </statement>
+                <answer>
+                    <p>Both methods yield <m>\fe{\fd{f}}{x}=0</m>.</p>
+                </answer>
                 <solution>
                     <p><md>
                     <mrow>\fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}&amp;\fe{\fd{f}}{x}&amp;=
@@ -68,9 +71,6 @@
                     <mrow>&amp;=0&amp;&amp;=0</mrow>
                     </md></p>
                 </solution>
-                <answer>
-                    <p>Both methods yield <m>\fe{\fd{f}}{x}=0</m>.</p>
-                </answer>
             </exercise>
         </exercisegroup>
         <exercise>
@@ -80,6 +80,9 @@
             <hint>
                 <p>Begin with <m>\lim\limits_{h\to0}\frac{\fe{\sin}{x+h}-\fe{\sin}{x}}{h}</m> and use the angle addition formula for <m>\fe{\sin}{x+h}</m>.</p>
             </hint>
+            <answer>
+                <p>If <m>\fe{f}{x}=\fe{\sin}{x}</m>, then <m>\fe{\fd{f}}{x}=\fe{\cos}{x}</m>.</p>
+            </answer>
             <solution>
                 <p>If <m>\fe{f}{x}=\fe{\sin}{x}</m>, then <md>
                 <mrow>\fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}</mrow>
@@ -91,9 +94,6 @@
                 <mrow>&amp;=\fe{\cos}{x}</mrow>
                 </md></p>
             </solution>
-            <answer>
-                <p>If <m>\fe{f}{x}=\fe{\sin}{x}</m>, then <m>\fe{\fd{f}}{x}=\fe{\cos}{x}</m>.</p>
-            </answer>
         </exercise>
         <exercisegroup>
             <introduction>
@@ -103,6 +103,9 @@
                 <statement>
                     <p>Find the velocity function for this motion and use it to determine the velocity of the object <quantity><mag>4.1</mag><unit base="second"/></quantity> into its motion.</p>
                 </statement>
+                <answer>
+                    <p><quantity><mag>-71.2</mag><unit base="foot"/><per base="second"/></quantity>.</p>
+                </answer>
                 <solution>
                     <p>The velocity function is:<md>
                     <mrow>\fe{v}{t}&amp;=\lim_{h\to0}\frac{\fe{s}{t+h}-\fe{s}{t}}{h}</mrow>
@@ -117,14 +120,14 @@
                     <mrow>\fe{v}{4.1}&amp;=-71.2</mrow>
                     </md>So <quantity><mag>4.1</mag><unit base="second"/></quantity> into its motion, the object has velocity <quantity><mag>-71.2</mag><unit base="foot"/><per base="second"/></quantity>.</p>
                 </solution>
-                <answer>
-                    <p><quantity><mag>-71.2</mag><unit base="foot"/><per base="second"/></quantity>.</p>
-                </answer>
             </exercise>
             <exercise>
                 <statement>
                     <p>Find the acceleration function for this motion and use that function to determine the acceleration of the object <quantity><mag>4.1</mag><unit base="second"/></quantity> into its motion.</p>
                 </statement>
+                <answer>
+                    <p><quantity><mag>-32</mag><unit base="foot"/><per base="second" exp="2"/></quantity>.</p>
+                </answer>
                 <solution>
                     <p>The acceleration function is:<md>
                     <mrow>\fe{a}{t}&amp;=\lim_{h\to0}\frac{\fe{v}{t+h}-\fe{v}{t}}{h}</mrow>
@@ -137,9 +140,6 @@
                     </md>So <quantity><mag>4.1</mag><unit base="second"/></quantity> into its motion (and in fact at any point during its motion), the object h
 as acceleration <quantity><mag>-32</mag><unit base="foot"/><per base="second" exp="2"/></quantity>.</p>
                 </solution>
-                <answer>
-                    <p><quantity><mag>-32</mag><unit base="foot"/><per base="second" exp="2"/></quantity>.</p>
-                </answer>
             </exercise>
         </exercisegroup>
         <exercisegroup xml:id="exercisegroup-derivative-units-supplement">
@@ -150,138 +150,138 @@ as acceleration <quantity><mag>-32</mag><unit base="foot"/><per base="second" ex
                 <statement>
                     <p><m>\fe{R}{p}</m> is Carl's heart rate (beats per min) when he jogs at a rate of <m>p</m> (measured in <quantity><unit base="foot"/><per base="minute"/></quantity>).</p>
                 </statement>
-                <solution>
-                    <p>The unit for <m>\fe{\fd{R}}{p}</m> is <m>\frac{\sfrac{\text{beats}}{\text{min}}}{\sfrac{\text{ft}}{\text{min}}}</m>.</p>
-                </solution>
                 <answer>
                     <p><m>\frac{\sfrac{\text{beats}}{\text{min}}}{\sfrac{\text{ft}}{\text{min}}}</m></p>
                 </answer>
+                <solution>
+                    <p>The unit for <m>\fe{\fd{R}}{p}</m> is <m>\frac{\sfrac{\text{beats}}{\text{min}}}{\sfrac{\text{ft}}{\text{min}}}</m>.</p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{F}{v}</m> is the fuel consumption rate <quantity><unit base="gallon"/><per base="mile"/></quantity> of Hanh's pick-up when she drives it on level ground at a constant speed of <m>v</m> (measured in <quantity><unit base="mile"/><per base="hour"/></quantity>).</p>
                 </statement>
-                <solution>
-                    <p>The unit for <m>\fe{\fd{F}}{v}</m> is <m>\frac{\sfrac{\text{gal}}{\text{mi}}}{\sfrac{\text{mi}}{\text{hr}}}</m>.</p>
-                </solution>
                 <answer>
                     <p><m>\frac{\sfrac{\text{gal}}{\text{mi}}}{\sfrac{\text{mi}}{\text{hr}}}</m></p>
                 </answer>
+                <solution>
+                    <p>The unit for <m>\fe{\fd{F}}{v}</m> is <m>\frac{\sfrac{\text{gal}}{\text{mi}}}{\sfrac{\text{mi}}{\text{hr}}}</m>.</p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{v}{t}</m> is the velocity of the space shuttle  <quantity><unit base="mile"/><per base="hour"/></quantity> where <m>t</m> is the amount of time that has passed since liftoff (measured in <quantity><unit base="second"/></quantity>).</p>
                 </statement>
-                <solution>
-                    <p>The unit for <m>\fe{\fd{v}}{t}</m> is <m>\frac{\sfrac{\text{mi}}{\text{hr}}}{\text{s}}</m>.</p>
-                </solution>
                 <answer>
                     <p><m>\frac{\sfrac{\text{mi}}{\text{hr}}}{\text{s}}</m></p>
                 </answer>
+                <solution>
+                    <p>The unit for <m>\fe{\fd{v}}{t}</m> is <m>\frac{\sfrac{\text{mi}}{\text{hr}}}{\text{s}}</m>.</p>
+                </solution>
             </exercise>
             <exercise xml:id="exercise-derivative-units-supplement-last">
                 <statement>
                     <p><m>\fe{h}{t}</m> is the elevation of the space shuttle (<quantity><unit base="mile"/></quantity>) where <m>t</m> is the amount of time that has passed since lift-off (measured in <quantity><unit base="second"/></quantity>).</p>
                 </statement>
-                <solution>
-                    <p>The unit for <m>\fe{\fd{h}}{t}</m> is <quantity><unit base="mile"/><per base="second"/></quantity>.</p>
-                </solution>
                 <answer>
                     <p><quantity><unit base="mile"/><per base="second"/></quantity></p>
                 </answer>
+                <solution>
+                    <p>The unit for <m>\fe{\fd{h}}{t}</m> is <quantity><unit base="mile"/><per base="second"/></quantity>.</p>
+                </solution>
             </exercise>
         </exercisegroup>
-        <exercisegroup cols="2" by="row">
+        <exercisegroup cols="2">
             <introduction>
-                <p>Referring to the functions in <xref ref="exercisegroup-derivative-units-supplement"/>, write sentences that explain the meaning of each of the following function values.</p>
+                <p>Referring to the functions in <xref ref="exercisegroup-derivative-units-supplement">Exercises</xref>, write sentences that explain the meaning of each of the following function values.</p>
             </introduction>
             <exercise>
                 <statement>
                     <p><m>\fe{R}{300}=84</m></p>
                 </statement>
-                <solution>
-                    <p>When Carl jogs at a pace of <quantity><mag>300</mag><unit base="foot"/><per base="minute"/></quantity> his heart rate is <m>84\,\frac{\text{beats}}{\text{min}}</m>.</p>
-                </solution>
                 <answer>
                     <p>When Carl jogs at a pace of <quantity><mag>300</mag><unit base="foot"/><per base="minute"/></quantity> his heart rate is <m>84\,\frac{\text{beats}}{\text{min}}</m>.</p>
                 </answer>
+                <solution>
+                    <p>When Carl jogs at a pace of <quantity><mag>300</mag><unit base="foot"/><per base="minute"/></quantity> his heart rate is <m>84\,\frac{\text{beats}}{\text{min}}</m>.</p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{\fd{R}}{300}=0.02</m></p>
                 </statement>
-                <solution>
-                    <p>At the pace of <quantity><mag>300</mag><unit base="foot"/><per base="minute"/></quantity>, Carl's heart rate changes relative to his pace at a rate of <m>0.02\,\frac{\sfrac{\text{beats}}{\text{min}}}{\sfrac{\text{ft}}{\text{min}}}</m>.  So, if Carl picks up his pace from <quantity><mag>300</mag><unit base="foot"/><per base="minute"/></quantity> to <quantity><mag>301</mag><unit base="foot"/><per base="minute"/></quantity> we'd expect his heart rate to increase to about <m>84.02\,\frac{\text{beats}}{\text{min}}</m>.  Conversely, if Carl decreases his pace from <quantity><mag>300</mag><unit base="foot"/><per base="minute"/></quantity> to <quantity><mag>299</mag><unit base="foot"/><per base="minute"/></quantity> we'd expect his heart rate to decrease to about <m>83.98\,\frac{\text{beats}}{\text{min}}</m>.</p>
-                </solution>
                 <answer>
                     <p>At the pace of <quantity><mag>300</mag><unit base="foot"/><per base="minute"/></quantity>, Carl's heart rate changes relative to his pace at a rate of <m>0.02\,\frac{\sfrac{\text{beats}}{\text{min}}}{\sfrac{\text{ft}}{\text{min}}}</m>.</p>
                 </answer>
+                <solution>
+                    <p>At the pace of <quantity><mag>300</mag><unit base="foot"/><per base="minute"/></quantity>, Carl's heart rate changes relative to his pace at a rate of <m>0.02\,\frac{\sfrac{\text{beats}}{\text{min}}}{\sfrac{\text{ft}}{\text{min}}}</m>.  So, if Carl picks up his pace from <quantity><mag>300</mag><unit base="foot"/><per base="minute"/></quantity> to <quantity><mag>301</mag><unit base="foot"/><per base="minute"/></quantity> we'd expect his heart rate to increase to about <m>84.02\,\frac{\text{beats}}{\text{min}}</m>.  Conversely, if Carl decreases his pace from <quantity><mag>300</mag><unit base="foot"/><per base="minute"/></quantity> to <quantity><mag>299</mag><unit base="foot"/><per base="minute"/></quantity> we'd expect his heart rate to decrease to about <m>83.98\,\frac{\text{beats}}{\text{min}}</m>.</p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{F}{50}=0.03</m></p>
                 </statement>
-                <solution>
-                    <p>When Hanh drives her pick-up on level ground at a constant speed of <quantity><mag>50</mag><unit base="mileperhour"/></quantity>, the truck burns fuel at the rate of <quantity><mag>0.03</mag><unit base="gallon"/><per base="mile"/></quantity>.</p>
-                </solution>
                 <answer>
                     <p>When Hanh drives her pick-up on level ground at a constant speed of <quantity><mag>50</mag><unit base="mileperhour"/></quantity>, the truck burns fuel at the rate of <quantity><mag>0.03</mag><unit base="gallon"/><per base="mile"/></quantity>.</p>
                 </answer>
+                <solution>
+                    <p>When Hanh drives her pick-up on level ground at a constant speed of <quantity><mag>50</mag><unit base="mileperhour"/></quantity>, the truck burns fuel at the rate of <quantity><mag>0.03</mag><unit base="gallon"/><per base="mile"/></quantity>.</p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{\fd{F}}{50}=-0.0006</m></p>
                 </statement>
-                <solution>
-                    <p>(On level ground), at the speed of <quantity><mag>50</mag><unit base="mileperhour"/></quantity>, the rate at which Hanh's truck burns fuel changes relative to the speed at a rate of <m>-0.006\,\frac{\sfrac{\text{gal}}{\text{mi}}}{\sfrac{\text{mi}}{\text{hr}}}</m>.  So, if Hanh increased her speed from <quantity><mag>50</mag><unit base="mileperhour"/></quantity> to <quantity><mag>51</mag><unit base="mileperhour"/></quantity>, we'd expect the fuel consumption rate for her truck to decrease to about <quantity><mag>0.0294</mag><unit base="gallon"/><per base="mile"/></quantity>.  Conversely, if Hanh decreased her speed from <quantity><mag>50</mag><unit base="mileperhour"/></quantity> to <quantity><mag>49</mag><unit base="mileperhour"/></quantity> we'd expect to fuel consumption rate for her truck to increase to about <quantity><mag>0.0306</mag><unit base="gallon"/><per base="mile"/></quantity>.</p> 
-                </solution>
                 <answer>
                     <p>(On level ground), at the speed of <quantity><mag>50</mag><unit base="mileperhour"/></quantity>, the rate at which Hanh's truck burns fuel changes relative to the speed at a rate of <m>-0.006\,\frac{\sfrac{\text{gal}}{\text{mi}}}{\sfrac{\text{mi}}{\text{hr}}}</m>.</p>
                 </answer>
+                <solution>
+                    <p>(On level ground), at the speed of <quantity><mag>50</mag><unit base="mileperhour"/></quantity>, the rate at which Hanh's truck burns fuel changes relative to the speed at a rate of <m>-0.006\,\frac{\sfrac{\text{gal}}{\text{mi}}}{\sfrac{\text{mi}}{\text{hr}}}</m>.  So, if Hanh increased her speed from <quantity><mag>50</mag><unit base="mileperhour"/></quantity> to <quantity><mag>51</mag><unit base="mileperhour"/></quantity>, we'd expect the fuel consumption rate for her truck to decrease to about <quantity><mag>0.0294</mag><unit base="gallon"/><per base="mile"/></quantity>.  Conversely, if Hanh decreased her speed from <quantity><mag>50</mag><unit base="mileperhour"/></quantity> to <quantity><mag>49</mag><unit base="mileperhour"/></quantity> we'd expect to fuel consumption rate for her truck to increase to about <quantity><mag>0.0306</mag><unit base="gallon"/><per base="mile"/></quantity>.</p> 
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{v}{20}=266</m></p>
                 </statement>
-                <solution>
-                    <p>Twenty seconds after lift-off the space shuttle is cruising at the rate of <quantity><mag>266</mag><unit base="mile"/><per base="hour"/></quantity>.</p>
-                </solution>
                 <answer>
                     <p>Twenty seconds after lift-off the space shuttle is cruising at the rate of <quantity><mag>266</mag><unit base="mile"/><per base="hour"/></quantity>.</p>
                 </answer>
+                <solution>
+                    <p>Twenty seconds after lift-off the space shuttle is cruising at the rate of <quantity><mag>266</mag><unit base="mile"/><per base="hour"/></quantity>.</p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{\fd{v}}{20}=18.9</m></p>
                 </statement>
-                <solution>                    
-                    <p>Twenty seconds after lift-off the velocity of the space shuttle is increasing at the rate <m>18.9\,\frac{\sfrac{\text{mi}}{\text{hr}}}{\text{s}}</m>.  So, we'd expect that <m>19</m> seconds into lift-off the velocity was <em>about</em> <quantity><mag>247.1</mag><unit base="mile"/><per base="hour"/></quantity> and <m>21</m> seconds into lift-off the velocity will be <em>about</em> <quantity><mag>284.9</mag><unit base="mile"/><per base="hour"/></quantity>.</p>
-                </solution>
                 <answer>
                     <p>Twenty seconds after lift-off the velocity of the space shuttle is increasing at the rate <m>18.9\,\frac{\sfrac{\text{mi}}{\text{hr}}}{\text{s}}</m>.</p>
                 </answer>
+                <solution>                    
+                    <p>Twenty seconds after lift-off the velocity of the space shuttle is increasing at the rate <m>18.9\,\frac{\sfrac{\text{mi}}{\text{hr}}}{\text{s}}</m>.  So, we'd expect that <m>19</m> seconds into lift-off the velocity was <em>about</em> <quantity><mag>247.1</mag><unit base="mile"/><per base="hour"/></quantity> and <m>21</m> seconds into lift-off the velocity will be <em>about</em> <quantity><mag>284.9</mag><unit base="mile"/><per base="hour"/></quantity>.</p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{h}{20}=0.7</m></p>
                 </statement>
-                <solution>
-                    <p>Twenty seconds after lift-off the space shuttle is at an elevation of <quantity><mag>0.7</mag><unit base="mile"/></quantity>.</p>
-                </solution>
                 <answer>                    
                     <p>Twenty seconds after lift-off the space shuttle is at an elevation of <quantity><mag>0.7</mag><unit base="mile"/></quantity>.</p>
                 </answer>
+                <solution>
+                    <p>Twenty seconds after lift-off the space shuttle is at an elevation of <quantity><mag>0.7</mag><unit base="mile"/></quantity>.</p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>\fe{\fd{h}}{20}=0.074</m></p>
                 </statement>
-                <solution>
-                    <p>Twenty seconds after lift-off the space shuttle's elevation is increasing at a rate of <quantity><mag>0.074</mag><unit base="mile"/><per base="second"/></quantity>.  So, we'd expect that <m>19</m> seconds into lift-off the elevation was <em>about</em> <quantity><mag>0.626</mag><unit base="mile"/></quantity> and <m>21</m> seconds into lift-off the elevation will be <em>about</em> <quantity><mag>0.774</mag><unit base="mile"/></quantity>.</p> 
-                </solution>
                 <answer>
                     <p>Twenty seconds after lift-off the space shuttle's elevation is increasing at a rate of <quantity><mag>0.074</mag><unit base="mile"/><per base="second"/></quantity>.</p>
                 </answer>
+                <solution>
+                    <p>Twenty seconds after lift-off the space shuttle's elevation is increasing at a rate of <quantity><mag>0.074</mag><unit base="mile"/><per base="second"/></quantity>.  So, we'd expect that <m>19</m> seconds into lift-off the elevation was <em>about</em> <quantity><mag>0.626</mag><unit base="mile"/></quantity> and <m>21</m> seconds into lift-off the elevation will be <em>about</em> <quantity><mag>0.774</mag><unit base="mile"/></quantity>.</p> 
+                </solution>
             </exercise>
         </exercisegroup>
         <exercisegroup>
@@ -292,21 +292,19 @@ as acceleration <quantity><mag>-32</mag><unit base="foot"/><per base="second" ex
                 <statement>
                     <p>Determine the equation of the tangent line to <m>f</m> at <m>1</m>.</p>
                 </statement>
-                <solution>
-                    <p>The point on <m>f</m> when <m>x=1</m> is <m>\point{1}{\frac{5}{8}}</m>.  The value of <m>\fe{\fd{f}}{1}</m> tells us the slope of the tangent line to <m>f</m> through <m>\point{1}{\frac{5}{8}}</m>; this value is <m>\frac{7}{32}</m>.  Consequently, the equation of the tangent line to <m>f</m> at <m>1</m> is <m>y=\frac{7}{32}\left(x-1\right)+\frac{5}{8}</m>.</p>
-                </solution>
                 <answer>
                     <p><m>y=\frac{7}{32}\left(x-1\right)+\frac{5}{8}</m></p>
                 </answer>
+                <solution>
+                    <p>The point on <m>f</m> when <m>x=1</m> is <m>\point{1}{\frac{5}{8}}</m>.  The value of <m>\fe{\fd{f}}{1}</m> tells us the slope of the tangent line to <m>f</m> through <m>\point{1}{\frac{5}{8}}</m>; this value is <m>\frac{7}{32}</m>.  Consequently, the equation of the tangent line to <m>f</m> at <m>1</m> is <m>y=\frac{7}{32}\left(x-1\right)+\frac{5}{8}</m>.</p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p>A graph of <m>f</m> is shown in <xref ref="figure-long-term-behavior-supplement"/>; axis scales have deliberately been omitted from the graph.</p>
-                    <sidebyside>
-                        <paragraphs valign="top">
-                            <p>The graph shows that <m>f</m> quickly resembles a line. In a detailed sketch of <m>f</m> we would reflect this apparent linear behavior by adding a skew asymptote.  What is the slope of this skew asymptote?</p> 
-                        </paragraphs>
-                        <figure xml:id="figure-long-term-behavior-supplement" valign="top">
+                    <sidebyside widths="47% 47%">
+                        <p>The graph shows that <m>f</m> quickly resembles a line. In a detailed sketch of <m>f</m> we would reflect this apparent linear behavior by adding a skew asymptote.  What is the slope of this skew asymptote?</p> 
+                        <figure xml:id="figure-long-term-behavior-supplement">
                             <caption><m>y=\fe{f}{x}=\frac{2x^3+2x+1}{3+5x^2}</m></caption>
                             <image>
                                 <description>a plot of a curve; there is an x-axis and a y-axis, but no tick marks for a sense of scale; the curve begins just a little above and to the right from the origin; the curve here has an arrow to the left, indicating that it continues to the left, but that part of it is omitted form the picture; the curve extends to the right with a small positive slope, but that slope gradually increases; the slope appears to reach some value and stay there, giving most of the curve the appearance of being a straight line with a positive slope; the curve exits the graph on its right edge still seeming to have a straight line shape</description>
@@ -330,15 +328,15 @@ as acceleration <quantity><mag>-32</mag><unit base="foot"/><per base="second" ex
                         </figure>
                     </sidebyside>
                 </statement>
+                <answer>
+                    <p><m>\frac{2}{5}</m></p>
+                </answer>
                 <solution>
                     <p>The long term slope of <m>f</m> is given by:<md>
                     <mrow>\lim_{x\to\infty}\fe{\fd{f}}{x}&amp;=\lim_{x\to\infty}\frac{10x^4+8x^2-10x+6}{25x^4+30x^2+9}</mrow>
                     <mrow>&amp;=\frac{2}{5}</mrow>
                     </md>So the slope of the skew asymptote is <m>\frac{2}{5}</m>.</p>
                 </solution>
-                <answer>
-                    <p><m>\frac{2}{5}</m></p>
-                </answer>
             </exercise>
         </exercisegroup>
     </exercises>

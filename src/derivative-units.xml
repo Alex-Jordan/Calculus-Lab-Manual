@@ -50,13 +50,13 @@
 
         <exercise>
             <statement>
-                <p>Akbar was given a formula for the function described in <xref ref="exercise-bathtub"/>. Akbar did some calculations and decided that the value of <m>\fe{\fd{V}}{20}</m> was (without unit) <m>1.5</m>. Nguyen took one look at Akbar's value and said <q>that's wrong</q> What is it about Akbar's value that caused Nguyen to dismiss it as wrong?</p>
+                <p>Akbar was given a formula for the function described in <xref ref="exercise-bathtub"/>. Akbar did some calculations and decided that the value of <m>\fe{\fd{V}}{2}</m> was (without unit) <m>1.5</m>. Nguyen took one look at Akbar's value and said <q>that's wrong</q> What is it about Akbar's value that caused Nguyen to dismiss it as wrong?</p>
             </statement>
         </exercise>
 
         <exercise>
             <statement>
-                <p>After a while Nguyen convinced Akbar that he was wrong, so Akbar set about doing the calculation over again. This time Akbar came up with a value of <quantity><mag>-12528</mag></quantity>. Nguyen took one look at Akbar's value and declared <q>still wrong.</q> What's the problem now?</p>
+                <p>After a while Nguyen convinced Akbar that he was wrong, so Akbar set about doing the calculation over again. This time Akbar came up with a value of <m>-12528</m>. Nguyen took one look at Akbar's value and declared <q>still wrong.</q> What's the problem now?</p>
             </statement>
         </exercise>
 

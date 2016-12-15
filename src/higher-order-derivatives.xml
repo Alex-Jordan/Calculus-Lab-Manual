@@ -11,12 +11,10 @@
     <title>Higher Order Derivatives</title>
 
     <p>Seeing as the first derivative of <m>f</m> is a function in its own right, <m>\fd{f}</m> must have its own first derivative.  The first derivative of <m>\fd{f}</m> is the <term>second derivative</term> of <m>f</m> and is symbolized as <m>\sd{f}</m> (<m>f</m> double-prime).  Likewise, <m>\td{f}</m> (<m>f</m> triple-prime) is the first derivative of <m>\sd{f}</m>, the second derivative of <m>\fd{f}</m>, and the <term>third derivative</term> of <m>f</m>.</p> 
-    <sidebyside>
-        <paragraphs valign="top">
-            <p>All of the graphical relationships you've established between <m>f</m> and <m>\fd{f}</m> work their way down the derivative chain; this is illustrated in <xref ref="table-f-prime-and-f"/>.</p>
-        </paragraphs>
+    <sidebyside widths="47% 47%">
+        <p>All of the graphical relationships you've established between <m>f</m> and <m>\fd{f}</m> work their way down the derivative chain; this is illustrated in <xref ref="table-f-prime-and-f"/>.</p>
 
-        <table xml:id="table-f-prime-and-f" valign="top" width="55%">
+        <table xml:id="table-f-prime-and-f">
         <caption>Relationships between <m>f</m>, <m>\fd{f}</m>, <m>\sd{f}</m> and <m>\td{f}</m></caption>
             <tabular top="major">
                 <col halign="left"/>
@@ -69,7 +67,7 @@
         </exercise>
         <exercise>
             <statement>
-                <p>A function, <m>g</m>, and its first three derivatives are shown in <xref autoname="plural" ref="figure-derivatives-one"/><ndash/><xref autoname="no" ref="figure-derivatives-four"/>, although not in that order.  Determine which curve is which function (<m>g,\fd{g},\sd{g},\td{g}</m>).</p>
+                <p>A function, <m>g</m>, and its first three derivatives are shown in <xref ref="figure-derivatives-one">Figures</xref><ndash/><xref autoname="no" ref="figure-derivatives-four"/>, although not in that order.  Determine which curve is which function (<m>g,\fd{g},\sd{g},\td{g}</m>).</p>
                 <sidebyside>
                     <figure xml:id="figure-derivatives-one" >
                         <caption />
@@ -142,7 +140,7 @@
         </exercise>
         <exercisegroup>
             <introduction>
-                <p>Three containers are shown in <xref autoname="plural" ref="figure-prism-uniform"/><ndash/><xref autoname="no" ref="figure-prism-bottom-heavy"/>. Each of the following questions are in reference to these containers.</p>
+                <p>Three containers are shown in <xref ref="figure-prism-uniform">Figures</xref><ndash/><xref autoname="no" ref="figure-prism-bottom-heavy"/>. Each of the following questions are in reference to these containers.</p>
                 <sidebyside> 
                     <figure xml:id="figure-prism-uniform">
                         <caption />
