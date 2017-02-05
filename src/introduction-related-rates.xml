@@ -40,11 +40,11 @@
     <p>An acronym sometimes associated with the solution process for related rates problems is <acro>DREDS</acro>. The first four letters of the acronym stand for Diagram, Rates, Equation, and Differentiate. The final letter stands for Substitute. The reason the substitution steps comes last is that you need to have a rates equation before you have a place to substitute your values.</p>
 
     <p>The first thing we need to do is clearly identify our variables. In related rates problems there are three broad types of variables.</p>
-    <ol>
+    <p><ol>
         <li><p>Variables that measure physical quantities. These include, among other things, length variables, angle measurement variables, area variables, and volume variables. We will call these <term>quantity-variables</term>.</p></li>
         <li><p>Variables that measure rates (with respect to time). These variables always <em>emerge</em> by taking the derivatives (with respect to time) of the quantity-variables. We will call these <term>rate-variables</term>.</p></li>
         <li><p>A <term>time variable</term>. Depending on context, time may be measured in seconds, minutes, hours, days, weeks, years, <etc/></p></li>
-    </ol>
+    </ol></p>
     <p>The first three letters of <acro>DREDS</acro> (Diagram, Rates, Equation) are all interrelated and are not always to be taken literally. Basically they are meant to suggest that you need to identify the rates in the problem (either a given rate or the unknown rate you seek to find), identify quantity-variables that differentiate to each rate, and find an equation that relates those quantity-variables. A diagram is frequently useful during this part of the problem solving process.</p>
 
     <p>Let's make a variable table for the snowball problem. Please note that we will need a volume variable. We know this because of the presence of <quantity><unit prefix="centi" base="meter" exp="3"/></quantity> in the given rate unit; cubic-centimeters always measure volume (just as square-centimeters always measure area and centimeters always measure length). We will also need a radius variable (as the rate of change in the radius is stated in the problem).</p>
@@ -89,10 +89,10 @@
     </table>
     <p>Since we are asked to determine a rate at which the radius changes, we are ultimately going to need to determine a value of <m>\lz{r}{t}</m>. We cannot do that until we have an equation that includes the symbol <m>\lz{r}{t}</m>. There is a two-step process that we follow to find that equation.</p>
 
-    <ol>
+    <p><ol>
         <li><p>Find an equation that relates the quantity variables. This step is one of the places where a diagram sometimes comes into play. This step corresponds to <acro>E</acro> in the <acro>DREDS</acro> acronym.</p></li>
         <li><p>Differentiate both sides of the first equation with respect to time and simplify each side. The resultant equation is called the <em>related rates equation</em>. This step corresponds to the second <acro>D</acro> in the <acro>DREDS</acro> acronym.</p></li>
-    </ol>
+    </ol></p>
     <p>The quantity variables in the snowball problem are <m>V</m> and <m>r</m>. We don't need a diagram in this problem as it is <q>standard knowledge</q> that the equation that relates the volume and radius of a sphere is <m>V=\frac{4}{3}\pi r^3</m>. Now that we have our (<acro>E</acro>)quation, we need to (<acro>D</acro>)ifferentiate both sides of this equation with respect to <m>t</m>, keeping in mind that both <m>V</m> and <m>r</m> are variables dependent upon <m>t</m>.<md>
     <mrow>V&amp;=\frac{4}{3}\pi r^3</mrow>
     <mrow>\lzoo{t}{V}&amp;=\lzoo{t}{\frac{4}{3}\pi r^3}</mrow>
@@ -248,14 +248,14 @@
             <statement>
                 <p>The radius of a circle is decreasing at the rate of <quantity><mag>0.2</mag><unit prefix="centi" base="meter"/><per base="minute"/></quantity>. At what rate is the area of the circle decreasing when the area of the circle is <m>4\pi</m> <quantity><unit prefix="centi" base="meter" exp="2"/></quantity>?</p>
                 <p>Use the problem solving strategy:</p>
-                <ol>
+                <p><ol>
                     <li><p>Create your variable table. (<acro>DR</acro>)</p></li>
                     <li><p>Write an equation that relates the two quantity-variables. (<acro>E</acro>)</p></li>
                     <li><p>Differentiate both sides of the equation you just wrote with respect to <m>t</m>. Simplify the result. This equation is called the <term>related rates equation</term>. (<acro>D</acro>)</p></li>
                     <li><p>Write an orientation sentence or phrase and create a summary table for your quantity and rate variables. (preparing for <acro>S</acro>)</p></li>
                     <li><p>Substitute the known values into the related rates equation and solve for the unknown rate. (<acro>S</acro>)</p></li>
                     <li><p>Write a conclusion.</p></li>
-                </ol> 
+                </ol></p> 
             </statement>
         </exercise>
         <exercise>

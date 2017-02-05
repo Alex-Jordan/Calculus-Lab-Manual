@@ -134,10 +134,10 @@
                         <latex-image-code>
                         <![CDATA[\begin{tikzpicture}
                                 \begin{axis}[variable=v]
-                                \addplot[pccplot,domain=0.173587:0.70346,<-] ({ln(v^2)+sqrt((ln(v^2))^2-v^2)}, {v^2/(ln(v^2)+sqrt((ln(v^2))^2-v^2))});
-                                \addplot[pccplot,domain=0.173587:0.70346,<-] ({v^2/(ln(v^2)+sqrt((ln(v^2))^2-v^2))},{ln(v^2)+sqrt((ln(v^2))^2-v^2)});
-                                \addplot[pccplot,domain=0.173587:3.6116] ({ln(v^2)+sqrt((ln(v^2))^2+v^2)}, {-v^2/(ln(v^2)+sqrt((ln(v^2))^2+v^2))});
-                                \addplot[pccplot,domain=0.173587:3.6116] ({-v^2/(ln(v^2)+sqrt((ln(v^2))^2+v^2))}, {ln(v^2)+sqrt((ln(v^2))^2+v^2)});
+                                \addplot[pccplot,domain=0.173587:0.70346,<-,samples=50] ({ln(v^2)+sqrt((ln(v^2))^2-v^2)}, {v^2/(ln(v^2)+sqrt((ln(v^2))^2-v^2))});
+                                \addplot[pccplot,domain=0.173587:0.70346,<-,samples=50] ({v^2/(ln(v^2)+sqrt((ln(v^2))^2-v^2))},{ln(v^2)+sqrt((ln(v^2))^2-v^2)});
+                                \addplot[pccplot,domain=0.173587:3.6116,samples=50] ({ln(v^2)+sqrt((ln(v^2))^2+v^2)}, {-v^2/(ln(v^2)+sqrt((ln(v^2))^2+v^2))});
+                                \addplot[pccplot,domain=0.173587:3.6116,samples=50] ({-v^2/(ln(v^2)+sqrt((ln(v^2))^2+v^2))}, {ln(v^2)+sqrt((ln(v^2))^2+v^2)});
                                 \end{axis}
                         \end{tikzpicture}]]>
                         </latex-image-code>

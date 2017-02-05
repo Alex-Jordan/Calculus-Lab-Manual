@@ -28,7 +28,7 @@
             <introduction>
                 <sidebyside widths="47% 47%">
                     <p>Values of the function <m>f</m> defined by <m>\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}</m> are shown in <xref ref="table-limit-at-minus-infinity"/>. Both of the questions below are in reference to this function.</p>
-                    <table valign="top" xml:id="table-limit-at-minus-infinity">
+                    <table xml:id="table-limit-at-minus-infinity">
                         <caption><m>\fe{f}{x}=\frac{3x^2-16x+5}{2x^2-13x+15}</m></caption>
                         <tabular top="major">
                         <col halign="right" />

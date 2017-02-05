@@ -16,28 +16,28 @@
         <title>A process for formal determination of critical numbers</title>
         <statement>
             <p>Please note that you should present your work in narrative form using complete sentences that establish the significance of all stated intervals and values.  For example, for the function <m>\fe{g}{t}=\sqrt{t-7}</m> the first sentence you should write is <q>The domain of <m>g</m> is <m>\cointerval{7}{\infty}</m>.</q></p>
-            <ol>
+            <p><ol>
                 <li><p>Using interval notation, state the domain of the function.</p></li>
                 <li><p>Differentiate the function and completely simplify the resultant formula.  Simplification includes:</p>
-                    <ol>
+                    <p><ol>
                         <li><p>Manipulating all negative exponents into positive exponents.</p></li>
                         <li><p>If any rational expression occurs in the formula, all terms must be written in rational form and a common denominator must be established for the terms.  The final expression should be a single rational expression.</p></li>
                         <li><p>The final expression must be completely factored.</p></li>
-                    </ol>
+                    </ol></p>
                 </li>
                 <li><p>State the values where the first derivative is equal to zero; show any non-trivial work necessary in making this determination.  Make sure that you write a sentence addressing this issue even if the first derivative has no zeros.</p></li>
                 <li><p>State the values <em>in the domain of the function</em> where the first derivative does not exist; show any non-trivial work necessary in making this determination.    Make sure that you write a sentence addressing this issue even if no such numbers exist.</p></li>
                 <li><p>State the critical numbers of the function.  Make sure that you write this conclusion even if the function has no critical numbers.</p></li>
-            </ol> 
+            </ol></p>
             <p>Because the domain of a function is such an important issue when determining critical numbers, there are some things you should keep in mind when determining domains.</p>
-            <ul> 
+            <p><ul> 
                 <li><p>Division by zero is never a good thing.</p></li> 
                 <li><p>Over the real numbers, you <em>cannot</em> take <em>even</em> roots of negative numbers.</p></li> 
                 <li><p>Over the real numbers, you <em>can</em> take <em>odd</em> roots of negative numbers.</p></li> 
                 <li><p><m>\sqrt[n]{0}=0</m> for any positive integer <m>n</m>.</p></li> 
                 <li><p>Over the real numbers, you can only take logarithms of positive numbers.</p></li> 
                 <li><p>The sine and cosine function are defined at all real numbers.  You should check with your lecture instructor to see if you are expected to know the domains of the other four trigonometric functions and/or the inverse trigonometric functions.</p></li> 
-            </ul> 
+            </ul></p> 
         </statement>
     </algorithm>
 

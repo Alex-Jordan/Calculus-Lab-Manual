@@ -55,7 +55,7 @@
         </exercise>
         <exercisegroup>
             <introduction>
-                <sidebyside>
+                <sidebyside widths="47% 47%">
                     <p>Answer each of the following questions (using complete sentences) in reference to the function <m>f</m> shown in <xref ref="figure-lots-of-critical-points"/>.</p> 
                     <figure xml:id="figure-lots-of-critical-points">
                         <caption><m>y=\fe{f}{x}</m></caption>

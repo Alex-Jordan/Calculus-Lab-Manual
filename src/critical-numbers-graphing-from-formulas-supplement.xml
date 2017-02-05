@@ -20,7 +20,7 @@
                             <latex-image-code>
                             <![CDATA[\begin{tikzpicture}
                             \begin{axis}[xmin=-3,xmax=3,ymin=-3,ymax=3,xtick={9},ytick={9},unit vector ratio*=1 1 1, clip=false]
-                                \addplot[pccplot,domain=0:360,-,variable=t]({cos(t)},{sin(t)});
+                                \addplot[pccplot,domain=0:360,-,variable=t,samples=60]({cos(t)},{sin(t)});
                                 \addplot[-] coordinates {(0.8,0.6) (0,0)};
                                 \addplot[mark=*] coordinates {(0.8,0.6)} node[pin={$(\fe{\cos}{t},\fe{\sin}{t})$}]{} ;
                             \end{axis}

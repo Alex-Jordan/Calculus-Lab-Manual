@@ -35,11 +35,11 @@
             <exercise xml:id="exercise-sketch-first-critical-numbers">
                 <statement>
                     <p>Use the formulas <m>\fe{\fd{f}}{x}=\frac{4(1-2x)}{(x-2)^3}</m> and <m>\fe{\sd{f}}{x}=\frac{4(4x+1)}{(x-2)^4}</m> to help you accomplish each of the following.</p>
-                    <ul>
+                    <p><ul>
                         <li><p>State the critical numbers of <m>f</m>.</p></li>
                         <li><p>Create well-documented increasing/decreasing and concavity tables for <m>f</m>.</p></li> 
                         <li><p>State the local minimum, local maximum, and inflection points on <m>f</m>.  Make sure that you explicitly address all three types of points whether they exist or not.</p></li> 
-                    </ul>
+                    </ul></p>
                 </statement>
             </exercise>
             <exercise xml:id="exercise-sketch-first-total">

@@ -13,14 +13,14 @@
     <example>
         <blockquote><p>A small drone is flying straight upward at the rate of <quantity><mag>0.88</mag><unit base="foot"/><per base="second"/></quantity>. The drone is tethered to the ground (with a lot of slack) at a point that lies <quantity><mag>400</mag><unit base="foot"/></quantity> west of the launch point of the drone. Assuming that the ground is perfectly level, determine the rate at which the angle of elevation from the tether point to the drone increases at the moment the drone is <quantity><mag>300</mag><unit base="foot"/></quantity> above ground.</p></blockquote>
         <p>When searching for your quantity-variables, you need to identify sentences or phrases in the problem statement that contain the word <q>rate</q> or something similar (hence the <acro>R</acro> in <acro>DREDS</acro>). There are two such phrases in this problem:</p>
-        <ul>
+        <p><ul>
             <li><p><q>A small drone is flying straight upward at the rate of<ellipsis/></q></p></li>
             <li><p><q><ellipsis/>determine the rate at which the angle of elevation from the tether point to the drone increase<ellipsis/></q></p></li>
-        </ul>
+        </ul></p>
         <p>The pieces of the right triangle that correspond to those phrases have been marked in <xref ref="figure-drone-triangle"/> as, respectively, <m>h</m> and <m>\theta</m>. The distance between the tether point and launch point remains constant, hence the side labeled as <m>400</m>. Please note that there should be no other annotations of any kind on this diagram. If writing other numbers down helps you think through the problem, draw a second triangle on your scratch paper and annotate that in any way the helps. That said, you need a clean variable diagram in your solution, so leave <xref ref="figure-drone-triangle"/> as it is.</p>
         <figure xml:id="figure-drone-triangle">
             <caption>Variable Diagram</caption>
-            <image>
+            <image width="47%">
                 <latex-image-code>
                 <![CDATA[\begin{tikzpicture}
                 \coordinate (O) at (0,0);
@@ -88,6 +88,9 @@
                     \coordinate (A) at (4,0);
                     \coordinate (B) at (4,2);
                     \draw (O)--(A)--(B)--cycle;
+                    \tkzLabelPoint[below=2pt](O){tether point}
+                    \tkzLabelPoint[below=2pt](A){launch point}
+                    \tkzLabelPoint[right=2pt](B){drone}
                     \tkzLabelSegment[below=2pt](O,A){$400$}
                     \tkzLabelSegment[right=2pt](A,B){$h$}
                     \tkzMarkAngle(A,O,B)
@@ -162,7 +165,7 @@
         <exercise>
             <statement>
                 <p>Go ahead and finish the three problems stated in <xref ref="exercisegroup-related-rates-using-diagrams">Exercises</xref>. Remember to complete each step in the problems solving process.</p>
-                <ol>
+                <p><ol>
                     <li><p>Draw a properly labeled variable diagram. (<acro>D</acro>) Note that you completed this step while working <xref ref="exercisegroup-related-rates-using-diagrams">Exercises</xref>.</p></li>
                     <li><p>Make a variable definition table. Include each variable type (quantity, rate, and time). Include the unit for each variable (<acro>R</acro>)</p></li>
                     <li><p>Write down an equation that relates the two quantity-variables. (<acro>E</acro>)</p></li>
@@ -170,7 +173,7 @@
                     <li><p>Write an orientation sentence or phrase and create a summary table for your quantity and rate variables. (preparing for <acro>S</acro>)</p></li>
                     <li><p>Substitute the known values into the related rates equation and solve for the unknown rate. (<acro>S</acro>)</p></li>
                     <li><p>Write a conclusion.</p></li>
-                </ol> 
+                </ol></p> 
             </statement>
         </exercise>
         <exercise>

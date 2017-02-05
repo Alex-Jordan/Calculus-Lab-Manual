@@ -12,11 +12,11 @@
 
     <p>Many limit values do not exist. Sometimes the non-existence is caused by the function value either increasing without bound or decreasing without bound. In these special cases we use the symbols <m>\infty</m> and <m>-\infty</m> to communicate the non-existence of the limits. <xref ref="figure-first-nonexistent-limit">Figures</xref><ndash/><xref autoname="no" ref="figure-last-nonexistent-limit"/> can be used to illustrate some ways in which we communicate the <term>non-existence</term> of these types of limits.</p>
 
-    <ul>
+    <p><ul>
         <li><p>In <xref ref="figure-first-nonexistent-limit"/> we could (correctly) write<me>\lim\limits_{x\to2}\fe{k}{x}=\infty, \lim\limits_{x\to2^{-}}\fe{k}{x}=\infty,\text{ and }\lim\limits_{x\to2^{+}}\fe{k}{x}=\infty\text{.}</me></p></li>
        <li><p>In <xref ref="figure-middle-nonexistent-limit"/> we could (correctly) write<me>\lim\limits_{t\to4}\fe{w}{t}=-\infty, \lim\limits_{t\to4^{-}}\fe{w}{t}=-\infty,\text{ and }\lim\limits_{t\to4^{+}}\fe{w}{t}=-\infty\text{.}</me></p></li>
        <li><p>In <xref ref="figure-last-nonexistent-limit"/> we could (correctly) write<me>\lim\limits_{x\to-3^{-}}\fe{T}{x}=\infty\text{ and }\lim\limits_{x\to-3^{+}}\fe{T}{x}=-\infty\text{.}</me> There is no shorthand way of communicating the non-existence of the two-sided limit <m>\lim\limits_{x\to-3}\fe{T}{x}</m>.</p></li>
-    </ul>
+    </ul></p>
 
     <sidebyside widths="32% 32% 32%">
         <figure xml:id="figure-first-nonexistent-limit">
@@ -115,7 +115,7 @@
                     </md></p>
                     <figure>
                     <caption><m>y=\fe{f}{x}</m></caption>
-                    <image valign="top">
+                    <image>
                         <description>a blank Cartesian grid, with x-axis covering the interval from -7 to 7, and y-axis covering the interval from -7 to 7</description>
                         <latex-image-code>
                         <![CDATA[\begin{tikzpicture}

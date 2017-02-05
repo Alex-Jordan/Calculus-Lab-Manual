@@ -21,7 +21,7 @@
                 <p>First we make a diagram of the situation.</p>
                 <figure>
                     <caption>Variable Diagram</caption>
-                    <image>
+                    <image width="47%">
                         <latex-image-code>
                         <![CDATA[\begin{tikzpicture}
                         \coordinate (O) at (0,0);
@@ -44,7 +44,7 @@
                     <caption>Variable table for the balloon problem</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="left"/>
+                        <col halign="left" width="70%"/>
                         <col halign="center"/>
                         <row bottom="medium">
                             <cell>Variable</cell>
@@ -53,22 +53,22 @@
                         </row>
                         <row bottom="minor">
                             <cell><m>h</m></cell>
-                            <cell>How far the balloon has risen since it was released.</cell>
+                            <cell><p>How far the balloon has risen since it was released.</p></cell>
                             <cell><quantity><unit base="foot"/></quantity></cell>
                         </row>
                         <row bottom="minor">
                             <cell><m>d</m></cell>
-                            <cell>How far is the observer from the balloon <m>t</m> seconds after it was released.</cell>
+                            <cell><p>How far is the observer from the balloon <m>t</m> seconds after it was released.</p></cell>
                             <cell><quantity><unit base="foot"/></quantity></cell>
                         </row>
                         <row bottom="minor">
                             <cell><m>\lz{h}{t}</m></cell>
-                            <cell>The rate at which the balloon is rising.</cell>
+                            <cell><p>The rate at which the balloon is rising.</p></cell>
                             <cell><quantity><unit base="foot"/><per base="second"/></quantity></cell>
                         </row>
                         <row bottom="major">
                             <cell><m>\lz{d}{t}</m></cell>
-                            <cell>The rate at which the distance between the observer and the balloon is changing.</cell>
+                            <cell><p>The rate at which the distance between the observer and the balloon is changing.</p></cell>
                             <cell><quantity><unit base="foot"/><per base="second"/></quantity></cell>
                         </row>
                     </tabular>
@@ -124,7 +124,7 @@
                 <p>First we make a diagram of the situation.</p>
                 <figure>
                     <caption>Variable Diagram</caption>
-                    <image>
+                    <image width="47%">
                         <latex-image-code>
                         <![CDATA[\begin{tikzpicture}
                         \coordinate (O) at (0,0);
@@ -147,7 +147,7 @@
                     <caption>Variable table for the Rex-Muffin problem</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="left"/>
+                        <col halign="left" width="70%"/>
                         <col halign="center"/>
                         <row bottom="medium">
                             <cell>Variable</cell>
@@ -156,32 +156,32 @@
                         </row>
                         <row bottom="minor">
                             <cell><m>x</m></cell>
-                            <cell>How far Rex has run <m>t</m> seconds after the loud noise.</cell>
+                            <cell><p>How far Rex has run <m>t</m> seconds after the loud noise.</p></cell>
                             <cell><quantity><unit base="foot"/></quantity></cell>
                         </row>
                         <row bottom="minor">
                             <cell><m>y</m></cell>
-                            <cell>How far Muffin has run <m>t</m> seconds after the loud noise.</cell>
+                            <cell><p>How far Muffin has run <m>t</m> seconds after the loud noise.</p></cell>
                             <cell><quantity><unit base="foot"/></quantity></cell>
                         </row>
                         <row bottom="minor">
                             <cell><m>d</m></cell>
-                            <cell>The distance between Muffin and Rex <m>t</m> seconds after the loud noise.</cell>
+                            <cell><p>The distance between Muffin and Rex <m>t</m> seconds after the loud noise.</p></cell>
                             <cell><quantity><unit base="foot"/></quantity></cell>
                         </row>
                         <row bottom="minor">
                             <cell><m>\lz{x}{t}</m></cell>
-                            <cell>The rate at which Rex is running <m>t</m> seconds after the loud noise.</cell>
+                            <cell><p>The rate at which Rex is running <m>t</m> seconds after the loud noise.</p></cell>
                             <cell><quantity><unit base="foot"/><per base="second"/></quantity></cell>
                         </row>
                         <row bottom="minor">
                             <cell><m>\lz{y}{t}</m></cell>
-                            <cell>The rate at which Muffin is running <m>t</m> seconds after the loud noise.</cell>
+                            <cell><p>The rate at which Muffin is running <m>t</m> seconds after the loud noise.</p></cell>
                             <cell><quantity><unit base="foot"/><per base="second"/></quantity></cell>
                         </row>
                         <row bottom="major">
                             <cell><m>\lz{d}{t}</m></cell>
-                            <cell>The rate at which the distance between Rex and Muffin is changing <m>t</m> seconds after the loud noise.</cell>
+                            <cell><p>The rate at which the distance between Rex and Muffin is changing <m>t</m> seconds after the loud noise.</p></cell>
                             <cell><quantity><unit base="foot"/><per base="second"/></quantity></cell>
                         </row>
                     </tabular>
@@ -195,34 +195,34 @@
                     <caption>What we know about the variables at the described moment</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="left"/>
+                        <col halign="left" width="70%"/>
                     <row bottom="medium">
                         <cell>Variable</cell>
                         <cell>What we know</cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>x</m></cell>
-                        <cell>The value of this variable is <m>3\cdot2.1=6.3</m>.</cell>
+                        <cell><p>The value of this variable is <m>3\cdot2.1=6.3</m>.</p></cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>y</m></cell>
-                        <cell>The value of this variable is <m>3\cdot1.7=5.1</m>.</cell>
+                        <cell><p>The value of this variable is <m>3\cdot1.7=5.1</m>.</p></cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>d</m></cell>
-                        <cell>Using the diagram and the Pythagorean Theorem, we find that <m>d=\sqrt{6.3^2+5.1^2}\approx8.105\ldots</m>.</cell>
+                        <cell><p>Using the diagram and the Pythagorean Theorem, we find that <m>d=\sqrt{6.3^2+5.1^2}\approx8.105\ldots</m>.</p></cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>\lz{x}{t}</m></cell>
-                        <cell>The value of this variable is <m>2.1</m>.</cell>
+                        <cell><p>The value of this variable is <m>2.1</m>.</p></cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>\lz{y}{t}</m></cell>
-                        <cell>The value of this variable is <m>1.7</m>.</cell>
+                        <cell><p>The value of this variable is <m>1.7</m>.</p></cell>
                     </row>
                     <row bottom="major">
                         <cell><m>\lz{d}{t}</m></cell>
-                        <cell>This is the variable for which we need to solve.</cell>
+                        <cell><p>This is the variable for which we need to solve.</p></cell>
                     </row>
                     </tabular>
                 </table>
@@ -287,7 +287,7 @@
                     <caption>Variable table for the clock problem</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="left"/>
+                        <col halign="left" width="70%"/>
                         <col halign="center"/>
                         <row bottom="medium">
                             <cell>Variable</cell>
@@ -296,22 +296,22 @@
                         </row>
                         <row bottom="minor">
                             <cell><m>d</m></cell>
-                            <cell>The distance between the tips of the hands at time <m>t</m>.</cell>
+                            <cell><p>The distance between the tips of the hands at time <m>t</m>.</p></cell>
                             <cell><quantity><unit prefix="centi" base="meter"/></quantity></cell>
                         </row>
                         <row bottom="minor">
                             <cell><m>\theta</m></cell>
-                            <cell>The angle from the minute hand to the hour hand at time <m>t</m>.</cell>
+                            <cell><p>The angle from the minute hand to the hour hand at time <m>t</m>.</p></cell>
                             <cell><quantity><unit base="radian"/></quantity></cell>
                         </row>
                         <row bottom="minor">
                             <cell><m>\lz{d}{t}</m></cell>
-                            <cell>The rate at which the distance between the tips of the hands at time <m>t</m> is changing.</cell>
+                            <cell><p>The rate at which the distance between the tips of the hands at time <m>t</m> is changing.</p></cell>
                             <cell><quantity><unit prefix="centi" base="meter"/><per base="minute"/></quantity></cell>
                         </row>
                         <row bottom="major">
                             <cell><m>\lz{\theta}{t}</m></cell>
-                            <cell>The rate at which the angle from the minute hand to the hour hand at time <m>t</m> is changing.</cell>
+                            <cell><p>The rate at which the angle from the minute hand to the hour hand at time <m>t</m> is changing.</p></cell>
                             <cell><quantity><unit base="radian"/><per base="second"/></quantity></cell>
                         </row>
                     </tabular>
@@ -326,26 +326,26 @@
                     <caption>What we know about the variables at the described moment</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="left"/>
+                        <col halign="left" width="70%"/>
                     <row bottom="medium">
                         <cell>Variable</cell>
                         <cell>What we know</cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>d</m></cell>
-                        <cell>The value of this variable is found using the Law of Cosines: <m>d=\sqrt{30^2+20^2-2(30)(20)\fe{\cos}{\frac{2\pi}{3}}}\approx43.58\ldots</m>.</cell>
+                        <cell><p>The value of this variable is found using the Law of Cosines: <m>d=\sqrt{30^2+20^2-2(30)(20)\fe{\cos}{\frac{2\pi}{3}}}\approx43.58\ldots</m>.</p></cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>\theta</m></cell>
-                        <cell>The value of this variable is <m>\frac{2\pi}{3}</m>.</cell>
+                        <cell><p>The value of this variable is <m>\frac{2\pi}{3}</m>.</p></cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>\lz{d}{t}</m></cell>
-                        <cell>This is the variable for which we need to solve.</cell>
+                        <cell><p>This is the variable for which we need to solve.</p></cell>
                     </row>
                     <row bottom="major">
                         <cell><m>\lz{\theta}{t}</m></cell>
-                        <cell>The value of this variable is <m>-\frac{2\pi}{60}</m>, since the minute hand goes through an entire revolution every <quantity><mag>60</mag><unit base="minute"/></quantity>. It is negative, because at the moment we are investigating, the minute hand is moving closer to the hour hand.</cell>
+                        <cell><p>The value of this variable is <m>-\frac{2\pi}{60}</m>, since the minute hand goes through an entire revolution every <quantity><mag>60</mag><unit base="minute"/></quantity>. It is negative, because at the moment we are investigating, the minute hand is moving closer to the hour hand.</p></cell>
                     </row>
                     </tabular>
                 </table>
@@ -368,7 +368,7 @@
                 <p>First we make a diagram of the situation.</p>
                 <figure>
                     <caption>Variable Diagram</caption>
-                    <image>
+                    <image width="47%">
                         <latex-image-code>
                         <![CDATA[\begin{tikzpicture}
                         \coordinate (O) at (0,0);
@@ -397,7 +397,7 @@
                     <caption>Variable table for the shadow problem</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="left"/>
+                        <col halign="left" width="70%"/>
                         <col halign="center"/>
                         <row bottom="medium">
                             <cell>Variable</cell>
@@ -406,22 +406,22 @@
                         </row>
                         <row bottom="minor">
                             <cell><m>x</m></cell>
-                            <cell>The distance from the lamp base to wher Bahram is standing at time <m>t</m>.</cell>
+                            <cell><p>The distance from the lamp base to where Bahram is standing at time <m>t</m>.</p></cell>
                             <cell><quantity><unit base="foot"/></quantity></cell>
                         </row>
                         <row bottom="minor">
                             <cell><m>\ell</m></cell>
-                            <cell>The length of Bahram's shadow at time <m>t</m>.</cell>
+                            <cell><p>The length of Bahram's shadow at time <m>t</m>.</p></cell>
                             <cell><quantity><unit base="foot"/></quantity></cell>
                         </row>
                         <row bottom="minor">
                             <cell><m>\lz{x}{t}</m></cell>
-                            <cell>The rate at which Bahram's distance from the base of the lamp post is changing at time <m>t</m>.</cell>
+                            <cell><p>The rate at which Bahram's distance from the base of the lamp post is changing at time <m>t</m>.</p></cell>
                             <cell><quantity><unit base="foot"/><per base="second"/></quantity></cell>
                         </row>
                         <row bottom="major">
                             <cell><m>\lz{\ell}{t}</m></cell>
-                            <cell>The rate at which the length of Bahram's shadow is changing at time <m>t</m>.</cell>
+                            <cell><p>The rate at which the length of Bahram's shadow is changing at time <m>t</m>.</p></cell>
                             <cell><quantity><unit base="foot"/><per base="second"/></quantity></cell>
                         </row>
                     </tabular>
@@ -435,26 +435,26 @@
                     <caption>What we know about the variables at the described moment</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="left"/>
+                        <col halign="left" width="70%"/>
                     <row bottom="medium">
                         <cell>Variable</cell>
                         <cell>What we know</cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>x</m></cell>
-                        <cell>The value of this variable is <m>80</m>.</cell>
+                        <cell><p>The value of this variable is <m>80</m>.</p></cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>\ell</m></cell>
-                        <cell>The value of this variable could be found using the similar triangles quation, but since this variable does not appear in the related rates equation, there is no need to find its value.</cell>
+                        <cell><p>The value of this variable could be found using the similar triangles quation, but since this variable does not appear in the related rates equation, there is no need to find its value.</p></cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>\lz{x}{t}</m></cell>
-                        <cell>Since Bahram is walking with a pace of <quantity><mag>2</mag><unit base="foot"/><per base="second"/></quantity> \emph{toward} the lamp, the value of this variable is <m>-2</m>.</cell>
+                        <cell><p>Since Bahram is walking with a pace of <quantity><mag>2</mag><unit base="foot"/><per base="second"/></quantity> \emph{toward} the lamp, the value of this variable is <m>-2</m>.</p></cell>
                     </row>
                     <row bottom="major">
                         <cell><m>\lz{\ell}{t}</m></cell>
-                        <cell>This is the variable for which we must solve.</cell>
+                        <cell><p>This is the variable for which we must solve.</p></cell>
                     </row>
                     </tabular>
                 </table>
@@ -481,7 +481,7 @@
                     <caption>Variable table for the shadow problem</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="left"/>
+                        <col halign="left" width="70%"/>
                         <col halign="center"/>
                         <row bottom="medium">
                             <cell>Variable</cell>
@@ -490,22 +490,22 @@
                         </row>
                         <row bottom="minor">
                             <cell><m>r</m></cell>
-                            <cell>The distance between the two objects' centers of mass at time <m>t</m>.</cell>
+                            <cell><p>The distance between the two objects' centers of mass at time <m>t</m>.</p></cell>
                             <cell><quantity><unit prefix="kilo" base="meter"/></quantity></cell>
                         </row>
                         <row bottom="minor">
                             <cell><m>F</m></cell>
-                            <cell>The gravitaional force between the two objects at time <m>t</m>.</cell>
+                            <cell><p>The gravitaional force between the two objects at time <m>t</m>.</p></cell>
                             <cell><quantity><unit base="newton"/></quantity></cell>
                         </row>
                         <row bottom="minor">
                             <cell><m>\lz{r}{t}</m></cell>
-                            <cell>The rate at which the distance between the two objects' centers of mass is changing at time <m>t</m>.</cell>
+                            <cell><p>The rate at which the distance between the two objects' centers of mass is changing at time <m>t</m>.</p></cell>
                             <cell><quantity><unit prefix="kilo" base="meter"/><per base="hour"/></quantity></cell>
                         </row>
                         <row bottom="major">
                             <cell><m>\lz{F}{t}</m></cell>
-                            <cell>The rate at which the gravitaional force between the two objects is changing at time <m>t</m>.</cell>
+                            <cell><p>The rate at which the gravitaional force between the two objects is changing at time <m>t</m>.</p></cell>
                             <cell><quantity><unit base="newton"/><per base="hour"/></quantity></cell>
                         </row>
                     </tabular>
@@ -520,26 +520,26 @@
                     <caption>What we know about the variables at the described moment</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="left"/>
+                        <col halign="left" width="70%"/>
                     <row bottom="medium">
                         <cell>Variable</cell>
                         <cell>What we know</cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>r</m></cell>
-                        <cell>The value of this variable is <m>250</m>.</cell>
+                        <cell><p>The value of this variable is <m>250</m>.</p></cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>F</m></cell>
-                        <cell>This variable does not appear in the related rates equation, so we do not need to compute it.</cell>
+                        <cell><p>This variable does not appear in the related rates equation, so we do not need to compute it.</p></cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>\lz{r}{t}</m></cell>
-                        <cell>The value of this variable is negative, since the objecta are getting closer to each other. Given their speeds at the moment under consideration, the value of <m>\lz{r}{t}</m> is <m>-(0.9+0.5)=-1.4</m>.</cell>
+                        <cell><p>The value of this variable is negative, since the objecta are getting closer to each other. Given their speeds at the moment under consideration, the value of <m>\lz{r}{t}</m> is <m>-(0.9+0.5)=-1.4</m>.</p></cell>
                     </row>
                     <row bottom="major">
                         <cell><m>\lz{F}{t}</m></cell>
-                        <cell>This is the variable for which we must solve.</cell>
+                        <cell><p>This is the variable for which we must solve.</p></cell>
                     </row>
                     </tabular>
                 </table>
@@ -561,7 +561,7 @@
                 <p>First we make a diagram of the situation.</p>
                 <figure>
                     <caption>Variable Diagram</caption>
-                    <image>
+                    <image width="50%">
                         <latex-image-code>
                         <![CDATA[\begin{tikzpicture}
                         \coordinate (O) at (0,0);
@@ -592,7 +592,7 @@
                     <caption>Variable table for the shadow problem</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="left"/>
+                        <col halign="left" width="70%"/>
                         <col halign="center"/>
                         <row bottom="medium">
                             <cell>Variable</cell>
@@ -601,22 +601,22 @@
                         </row>
                         <row bottom="minor">
                             <cell><m>\theta</m></cell>
-                            <cell>The angle between the pendulum and the vertical.</cell>
+                            <cell><p>The angle between the pendulum and the vertical.</p></cell>
                             <cell><quantity><unit base="radian"/></quantity></cell>
                         </row>
                         <row bottom="minor">
                             <cell><m>h</m></cell>
-                            <cell>The distance from the pendulum weight to the table.</cell>
+                            <cell><p>The distance from the pendulum weight to the table.</p></cell>
                             <cell><quantity><unit base="inch"/></quantity></cell>
                         </row>
                         <row bottom="minor">
                             <cell><m>\lz{\theta}{t}</m></cell>
-                            <cell>The rate at which the angle between the pendulum and the vertical is changing at time <m>t</m>.</cell>
+                            <cell><p>The rate at which the angle between the pendulum and the vertical is changing at time <m>t</m>.</p></cell>
                             <cell><quantity><unit base="radian"/><per base="second"/></quantity></cell>
                         </row>
                         <row bottom="major">
                             <cell><m>\lz{h}{t}</m></cell>
-                            <cell>The rate at which the distance from the pendulum weight to the table is changing at time <m>t</m>.</cell>
+                            <cell><p>The rate at which the distance from the pendulum weight to the table is changing at time <m>t</m>.</p></cell>
                             <cell><quantity><unit base="inch"/><per base="second"/></quantity></cell>
                         </row>
                     </tabular>
@@ -631,26 +631,26 @@
                     <caption>What we know about the variables at the described moment</caption>
                     <tabular top="major">
                         <col halign="center"/>
-                        <col halign="left"/>
+                        <col halign="left" width="70%"/>
                     <row bottom="medium">
                         <cell>Variable</cell>
                         <cell>What we know</cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>theta</m></cell>
-                        <cell>The value of this variable is <m>\frac{\pi}{4}</m>.</cell>
+                        <cell><p>The value of this variable is <m>\frac{\pi}{4}</m>.</p></cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>h</m></cell>
-                        <cell>This variable does not appear in the related rates equation, so there is no need to solve for it.</cell>
+                        <cell><p>This variable does not appear in the related rates equation, so there is no need to solve for it.</p></cell>
                     </row>
                     <row bottom="minor">
                         <cell><m>\lz{\theta}{t}</m></cell>
-                        <cell>The value of this variable is <m>-25\frac{\pi}{180}</m>, or just <m>-\frac{5}{36}\pi</m>.</cell>
+                        <cell><p>The value of this variable is <m>-25\frac{\pi}{180}</m>, or just <m>-\frac{5}{36}\pi</m>.</p></cell>
                     </row>
                     <row bottom="major">
                         <cell><m>\lz{h}{t}</m></cell>
-                        <cell>This is the variable for which we must solve.</cell>
+                        <cell><p>This is the variable for which we must solve.</p></cell>
                     </row>
                     </tabular>
                 </table>

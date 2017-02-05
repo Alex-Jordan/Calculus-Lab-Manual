@@ -73,7 +73,7 @@
                     <p>Check your slope formula using the two points indicated in <xref ref="figure-secant-exercise"/>.</p>
                     <sidebyside widths="47% 47%">
                         <p>That is, use the graph to find the slope between the two points and then use your formula to find the slope; make sure that the two values agree!</p>
-                        <figure valign="top" xml:id="figure-secant-exercise">
+                        <figure xml:id="figure-secant-exercise">
                             <caption><m>y=\fe{g}{x}=x^2-5</m> and a secant line</caption>
                             <image xml:id="image-secant-exercise">
                                 <description>an upward opening parabola with vertex at (0,-5) and x-intercepts at a little less than -2 and a little greater than 2; an upward slanting line intersects the parabola at (-2,-1) and (3,4)</description>

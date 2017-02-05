@@ -18,7 +18,7 @@
                 <p>The first derivative of <m>\fe{f}{x}=x^3-21x^2+135x-24</m> is <m>\fe{\fd{f}}{x}=3(x-5)(x-9)</m>.</p>
                 <sidebyside valign="bottom" widths="47% 47%">
                     <p>The critical numbers of <m>f</m> are trivially shown to be <m>5</m> and <m>9</m>. Copy <xref ref="table-polynomial-sign-table"/> onto your paper and fill in the missing information.  Then state the local minimum and maximum points on <m>f</m>.  Specifically address both minimum and maximum points even if one and/or the other does not exist.  Remember that points on the plane are represented by ordered pairs. <em>Make sure that you state points on <m>f</m> and not <m>\fd{f}</m>!</em></p>
-                    <table xml:id="table-polynomial-sign-table" valign="bottom">
+                    <table xml:id="table-polynomial-sign-table">
                         <caption><m>\fe{\fd{f}}{x}=3(x-5)(x-9)</m></caption>
                         <tabular top="major">
                             <col halign="center"/>
@@ -163,11 +163,11 @@
         <exercisegroup xml:id="exercisegroup-make-sign-table-first" cols="2">
             <introduction>
                 <p>Perform each of the following for the functions in <xref ref="exercisegroup-make-sign-table-first">Exercises</xref>.</p>
-                <ul> 
+                <p><ul> 
                     <li><p>Formally establish the critical numbers of the function.</p></li> 
                     <li><p>Create a table similar to <xref ref="table-polynomial-sign-table">Tables</xref><ndash/><xref autoname="no" ref="table-trient-rational-sign-table"/>. Number the tables.  Don't forget to include table headings and column headings.</p></li> 
                     <li><p>State the local minimum points and local maximum points on the function.  Make sure that you explicitly address both types of points even if there are none of one type and/or the other.</p></li> 
-                </ul> 
+                </ul></p> 
             </introduction>
             <exercise xml:id="exercise-make-sign-table-first">
                 <statement>

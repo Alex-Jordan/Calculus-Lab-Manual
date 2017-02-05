@@ -12,11 +12,11 @@
 
     <p>A function is said to be nondifferentiable at any value where its first derivative is undefined.  There are three graphical behaviors that lead to non-differentiability.</p>
 
-    <ul> 
+    <p><ul> 
         <li><p><m>f</m> is nondifferentiable at <m>a</m> if <m>f</m> is discontinuous at <m>a</m>.</p></li> 
         <li><p><m>f</m> is nondifferentiable at <m>a</m> if the slope of <m>f</m> is different from the left and right at <m>a</m>.</p></li> 
         <li><p><m>f</m> is nondifferentiable at <m>a</m> if <m>f</m> has a vertical tangent line at <m>a</m>.</p></li> 
-    </ul> 
+    </ul></p> 
 
     <exercises> 
         <exercisegroup>

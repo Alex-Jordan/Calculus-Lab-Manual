@@ -66,7 +66,7 @@
                     <mrow>\fe{\fd{f}}{x}&amp;=\lim_{h\to0}\frac{\fe{f}{x+h}-\fe{f}{x}}{h}&amp;\fe{\fd{f}}{x}&amp;=
 \lim_{t\to x}\frac{\fe{f}{t}-\fe{f}{x}}{t-x}</mrow>
                     <mrow>&amp;=\lim_{h\to0}\frac{7-7}{h}&amp;&amp;=\lim_{t\to x}\frac{7-7}{t-x}</mrow>
-                    <mrow>&amp;=\lim_{h\to0}\frac{0}{h}\qquad\text{(Form $\frac{0}{0}$\ldots)}&amp;&amp;=\lim_{t\to x}\frac{0}{t-x}\qquad\text{(Form $\frac{0}{0}$\ldots)}</mrow>
+                    <mrow>&amp;=\lim_{h\to0}\frac{0}{h}\qquad\text{(Form $\frac{0}{0}\ldots$)}&amp;&amp;=\lim_{t\to x}\frac{0}{t-x}\qquad\text{(Form $\frac{0}{0}\ldots$)}</mrow>
                     <mrow>&amp;=\lim_{h\to0}0&amp;&amp;=\lim_{t\to x}0</mrow>
                     <mrow>&amp;=0&amp;&amp;=0</mrow>
                     </md></p>

@@ -53,6 +53,7 @@ SRC = $(CLM)/src
 CLMXSL = $(CLM)/xsl
 CLMCSS = $(CLM)/css
 IMAGESSRC = $(SRC)/images
+GGBSRC = $(SRC)/geogebra
 
 # These paths are subdirectories of
 # the Mathbook XML distribution
@@ -99,15 +100,16 @@ html:
 	-rm $(HTMLOUT)/images/*.svg
 	cp -a $(IMAGESOUT) $(HTMLOUT)
 	cp -a $(IMAGESSRC) $(HTMLOUT)
+	cp -a $(GGBSRC) $(HTMLOUT)
 	install -d $(HTMLOUT)/css
 	cp -a $(CLMCSS) $(HTMLOUT)
 	cd $(HTMLOUT); \
-	xsltproc -xinclude --stringparam html.knowl.exercise.inline no $(CLMXSL)/clm-html.xsl $(SRC)/clm.xml
-	perl -pi -e 's/<\/div><\/main>/<footer><a rel="license" href="http:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/"><img alt="Creative Commons License" style="border-width:0" src="https:\/\/i\.creativecommons\.org\/l\/by-sa\/4\.0\/88x31\.png" \/><\/a><br \/>This work is licensed under a <a rel="license" href="http:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/">Creative Commons Attribution-ShareAlike 4\.0 International License<\/a>\.<\/footer><\/div><\/main>/g' *.html
-	perl -pi -e 's/<footer><a rel="license" href="http:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/"><img alt="Creative Commons License" style="border-width:0" src="https:\/\/i\.creativecommons\.org\/l\/by-sa\/4\.0\/88x31\.png" \/><\/a><br \/>This work is licensed under a <a rel="license" href="http:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/">Creative Commons Attribution-ShareAlike 4\.0 International License<\/a>\.<\/footer>//g' colophon-1.html
-	perl -pi -e 's/^<div class="svg-and-links">/<div style="width:90%;" class="svg-and-links">/g' functions-derivatives-antiderivatives-supplementary-exercises.html
-	perl -pi -e 's/<figure class="figure-like" id="figure-inflection-points"><div class="svg-and-links">/<figure class="figure-like" id="figure-inflection-points"><div style="width:75%; min-width:220px" class="svg-and-links">/g' section-graphical-derivatives.html
-	perl -pi -e 's/width:10%;min-width:[0-9]*px;/width:23%;min-width:100px;/g' section-graphical-features-from-derivatives.html
+	xsltproc -xinclude --stringparam html.knowl.exercise.inline no $(CLMXSL)/clm-html.xsl $(SRC)/clm.xml; \
+	perl -pi -e 's/<\/div><\/main>/<footer><a rel="license" href="http:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/"><img alt="Creative Commons License" style="border-width:0" src="https:\/\/i\.creativecommons\.org\/l\/by-sa\/4\.0\/88x31\.png" \/><\/a><br \/>This work is licensed under a <a rel="license" href="http:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/">Creative Commons Attribution-ShareAlike 4\.0 International License<\/a>\.<\/footer><\/div><\/main>/g' *.html; \
+	perl -pi -e 's/<footer><a rel="license" href="http:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/"><img alt="Creative Commons License" style="border-width:0" src="https:\/\/i\.creativecommons\.org\/l\/by-sa\/4\.0\/88x31\.png" \/><\/a><br \/>This work is licensed under a <a rel="license" href="http:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\/">Creative Commons Attribution-ShareAlike 4\.0 International License<\/a>\.<\/footer>//g' colophon-1.html; \
+	perl -pi -e 's/^<div class="svg-and-links">/<div style="width:90%;" class="svg-and-links">/g' functions-derivatives-antiderivatives-supplementary-exercises.html; \
+	perl -pi -e 's/<figure class="figure-like" id="figure-inflection-points"><div class="svg-and-links">/<figure class="figure-like" id="figure-inflection-points"><div style="width:75%; min-width:220px" class="svg-and-links">/g' section-graphical-derivatives.html; \
+	perl -pi -e 's/width:10%;min-width:[0-9]*px;/width:23%;min-width:100px;/g' section-graphical-features-from-derivatives.html; \
 
 # make all the image files, in all formats
 # To more surgically create a subset of the image files, use mbx 
@@ -132,7 +134,7 @@ latex:
 	install -d $(PDFOUT)
 	-rm $(PDFOUT)/*.tex
 	cd $(PDFOUT); \
-	xsltproc -xinclude --stringparam webwork.server.latex $(PDFOUT)/webwork-tex/ $(CLMXSL)/clm-print.xsl $(SRC)/clm.xml; \
+	xsltproc -xinclude --stringparam whitespace flexible --stringparam webwork.server.latex $(PDFOUT)/webwork-tex/ $(CLMXSL)/clm-print.xsl $(SRC)/clm.xml; \
 
 # PDF for print
 # see prerequisite just above

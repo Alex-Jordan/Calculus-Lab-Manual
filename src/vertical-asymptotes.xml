@@ -77,7 +77,7 @@
                 <sidebyside widths="47% 47%">
                     <p>Use this as an opportunity to discuss why limits of form <q>not-zero over zero</q> are <q>infinite limits.</q> What limit equation is being illustrated in the table?</p>
 
-                    <table valign="top" xml:id="table-vertical-asymptote">
+                    <table xml:id="table-vertical-asymptote">
                         <caption><m>\fe{f}{x}=\frac{x+7}{x-8}</m></caption>
                         <tabular top="major">
                            <col halign="left"/>

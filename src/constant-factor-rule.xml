@@ -14,7 +14,7 @@
 
             <p>In the following examples and problems several derivative rules are used that are shown in <xref ref="appendix-derivative-formulas"/>.  While working this lab you should refer to those rules; you may want to cover up the chain rule and implicit derivative columns this week!  You should make a goal of having all of the basic formulas memorized within a week.</p>
 
-        <table xml:id="table-constant-factor-rule" valign="top">
+        <table xml:id="table-constant-factor-rule">
             <caption>Examples of the Constant Factor Rule</caption>
             <tabular top="major">
                 <col halign="left" right="minor"/>

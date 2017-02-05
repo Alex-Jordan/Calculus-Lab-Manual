@@ -14,7 +14,7 @@
             <introduction>
                 <p>For <xref ref="exercisegroup-limits-supplement-first">Exercises</xref>, state the limit suggested by the values in the table and state whether or not the limit exists.  The correct answer for <xref ref="exercise-limits-supplement-first"/> has been given to help you understand the instructions.</p> 
             </introduction>
-            <exercise xml:id="exercise-limits-supplement-first" long="yes">
+            <exercise xml:id="exercise-limits-supplement-first">
                 <statement>
                     <tabular valign="top" halign="left" top="major">
                         <col halign="right"/>
@@ -36,11 +36,8 @@
                             <cell><m>9999.9997</m></cell>
                         </row>
                     </tabular>
-                    <paragraphs>
-                        <title>Answer:</title>
-                        <p><m>\lim\limits_{t\to-\infty}\fe{g}{t}=\infty</m>.</p>
-                        <p> The limit does <em>not</em> exist.</p>
-                    </paragraphs>
+                    <p><alert>Answer:</alert><m>\lim\limits_{t\to-\infty}\fe{g}{t}=\infty</m>.</p>
+                    <p> The limit does <em>not</em> exist.</p>
                 </statement>
                 <answer>
                     <p><m>\lim\limits_{t\to-\infty}\fe{g}{t}=\infty</m>; <m>\lim\limits_{t\to-\infty}\fe{g}{t}</m> does not exist.</p>

@@ -472,12 +472,12 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             <exercise>
                 <statement>
                     <p>Suppose that <m>\fe{V}{t}</m> is the amount of water (<quantity><unit base="gallon"/></quantity>) left in the tank where <m>t</m> is the amount of time that has elapsed (<quantity><unit base="second"/></quantity>) since the drainage began.  What are the units on <m>\fe{\fd{V}}{45}</m> and <m>\fe{\sd{V}}{45}</m>? Which of the following is the most realistic value for <m>\fe{\fd{V}}{45}</m>?</p>
-                    <ol cols="4"> 
+                    <p><ol cols="4"> 
                         <li><p><m>0.8</m></p></li>
                         <li><p><m>1.2</m></p></li>
                         <li><p><m>-0.8</m></p></li>
                         <li><p><m>-1.2</m></p></li>
-                    </ol>
+                    </ol></p>
                 </statement>
                 <answer>
                     <p>The unit for <m>\fe{\fd{V}}{45}</m> is <quantity><unit base="gallon"/><per base="second"/></quantity> and the unit for <m>\fe{\sd{V}}{45}</m> is <m>\frac{\sfrac{\text{gal}}{\text{s}}}{\text{s}}</m>. The most realistic value for <m>\fe{\fd{V}}{45}</m> is <quantity><mag>-1.2</mag><unit base="gallon"/><per base="second"/></quantity>.</p>
@@ -489,12 +489,12 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             <exercise>
                 <statement>
                     <p>Suppose that <m>\fe{R}{t}</m> is the water's flow rate (<quantity><unit base="gallon"/><per base="second"/></quantity>) where <m>t</m> is the amount of time that has elapsed (<quantity><unit base="second"/></quantity>) since the drainage began.  What are the units on <m>\fe{\fd{R}}{45}</m> and <m>\fe{\sd{R}}{45}</m>?  Which of the following is the most realistic value for <m>\fe{\fd{R}}{45}</m>?</p>
-                    <ol cols="4">
+                    <p><ol cols="4">
                         <li><p><m>1.0</m></p></li>
                         <li><p><m>0.001</m></p></li>
                         <li><p><m>-1.0</m></p></li>
                         <li><p><m>-0.001</m></p></li>
-                    </ol>
+                    </ol></p>
                 </statement>
                 <answer>
                     <p>The unit for <m>\fe{\fd{R}}{45}</m> is <m>\frac{\sfrac{\text{gal}}{\text{s}}}{\text{s}}</m>, and the unit for <m>\fe{\sd{R}}{45}</m> is <m>\sfrac{\frac{\sfrac{\text{gal}}{\text{s}}}{\text{s}}}{\text{s}}</m>. The most realistic value for <m>\fe{\fd{R}}{45}</m> is <m>-0.001</m>.</p> 
@@ -506,12 +506,12 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
             <exercise>
                 <statement>
                     <p>Suppose that <m>\fe{V}{t}</m> is the amount of water (<quantity><unit base="gallon"/></quantity>)left in the tank where <m>t</m> is the amount of time that has elapsed (<quantity><unit base="second"/></quantity>) since the drainage began.  Which of the following is the most realistic value for <m>\fe{\sd{V}}{45}</m>?</p>
-                    <ol cols="4">
+                    <p><ol cols="4">
                         <li><p><m>1.0</m></p></li>
                         <li><p><m>0.001</m></p></li>
                         <li><p><m>-1.0</m></p></li>
                         <li><p><m>-0.001</m></p></li>
-                    </ol>
+                    </ol></p>
                 </statement> 
                 <answer>
                     <p>The most realistic value for <m>\fe{\sd{V}}{45}</m> is <m>0.001</m>.</p>
@@ -524,11 +524,11 @@ that initially holds <quantity><mag>360</mag><unit base="gallon"/></quantity> of
         <exercisegroup>
             <introduction>
                 <p>For each statement in <xref ref="exercise-function-statement-first">Exercises</xref><ndash/><xref autoname="no" ref="exercise-function-statement-last"/>, decide which of the following is true. </p>
-                <ol>
+                <p><ol>
                    <li><p>The statement is true regardless of the specific function <m>f</m>.</p></li>
                    <li><p>The statement is true for some functions and false for other functions.</p></li>
                    <li><p>The statement is false regardless of the specific function <m>f</m>.</p></li>
-                </ol>
+                </ol></p>
             </introduction>
             <exercise xml:id="exercise-function-statement-first">
                 <statement>

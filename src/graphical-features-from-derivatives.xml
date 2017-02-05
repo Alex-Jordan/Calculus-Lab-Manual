@@ -162,7 +162,7 @@
                             </row>
                         </tabular>
                     </table>
-                    <figure xml:id="figure-based-on-derivatives-three" valign="top">
+                    <figure xml:id="figure-based-on-derivatives-three">
                         <caption><m>y=\fe{k}{x}</m></caption>
                         <image>
                             <latex-image-code>
@@ -198,7 +198,7 @@
             <exercise>
                 <statement>
                     <p>Referring to the function <m>V</m> in <xref ref="exercise-ice-cube"/>, what would the shape of <m>V</m> be over the interval <m>\cinterval{6}{11}</m>?  (Choose from options <xref autoname="no" ref="figure-curve-one"/><ndash/><xref autoname="no" ref="figure-curve-four"/>.)</p>
-                    <sidebyside xml:id="sidebyside-curves">
+                    <sidebyside xml:id="sidebyside-curves" widths="23% 23% 23% 23%">
                         <caption/>
                         <figure xml:id="figure-curve-one">
                             <caption/>
@@ -206,7 +206,7 @@
                                 <latex-image-code>
                                 <![CDATA[\begin{tikzpicture}
                                 \begin{axis}[axis x line=none, axis y line=none,xmin=0,xmax=1,ymin=,ymax=]
-                                    \addplot[domain=0:1,-]{sqrt((1-((x-1)/1.1)^2))};
+                                    \addplot[domain=0:1,pccplot,-]{sqrt((1-((x-1)/1.1)^2))};
                                 \end{axis}
                                 \end{tikzpicture}]]>
                                 </latex-image-code>
@@ -218,7 +218,7 @@
                                 <latex-image-code>
                                 <![CDATA[\begin{tikzpicture}
                                 \begin{axis}[axis x line=none, axis y line=none,xmin=0,xmax=1,ymin=,ymax=]
-                                    \addplot[domain=0:1,-]{(x/1.1)^2};
+                                    \addplot[domain=0:1,pccplot,-]{(x/1.1)^2};
                                 \end{axis}
                                 \end{tikzpicture}]]>
                                 </latex-image-code>
@@ -230,7 +230,7 @@
                                 <latex-image-code>
                                 <![CDATA[\begin{tikzpicture}
                                 \begin{axis}[axis x line=none, axis y line=none,xmin=0,xmax=1,ymin=,ymax=]
-                                    \addplot[domain=0:1,-]{((x-1)/1.1)^2};
+                                    \addplot[domain=0:1,pccplot,-]{((x-1)/1.1)^2};
                                 \end{axis}
                                 \end{tikzpicture}]]>
                                 </latex-image-code>
@@ -242,7 +242,7 @@
                                 <latex-image-code>
                                 <![CDATA[\begin{tikzpicture}
                                 \begin{axis}[axis x line=none, axis y line=none,xmin=0,xmax=1,ymin=,ymax=]
-                                    \addplot[domain=0:1,-]{1-(x/1.1)^2};
+                                    \addplot[domain=0:1,pccplot,-]{1-(x/1.1)^2};
                                 \end{axis}
                                 \end{tikzpicture}]]>
                                 </latex-image-code>
@@ -295,21 +295,21 @@
             <exercise>
                 <statement>
                     <p>Which of the following propositions is true? If a given proposition is not true, draw a graph that illustrates its untruth.</p>
-                    <ol cols="2">
+                    <p><ol cols="2">
                         <li><p>If the graph of <m>f</m> has a vertical asymptote, then the graph of <m>\fd{f}</m> must also have a vertical asymptote.</p></li>
                         <li><p>If the graph of <m>\fd{f}</m> has a vertical asymptote, then the graph of <m>f</m> must also have a vertical asymptote.</p></li> 
-                    </ol>
+                    </ol></p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
                     <p>Suppose that the function <m>f</m> is continuous, concave down, and is such that <m>\fe{f}{7}=5</m> and <m>\fe{\fd{f}}{7}=3</m>.  Which of the following is true?</p>
-                    <ol cols="2">
+                    <p><ol cols="2">
                         <li><p><m>\fe{f}{9}\lt11</m></p></li>
                         <li><p><m>\fe{f}{9}=11</m></p></li>
                         <li><p><m>\fe{f}{9}\gt11</m></p></li>
                         <li><p>There is not enough information to determine the relationship between <m>\fe{f}{9}</m> and <m>11</m>.</p></li>
-                    </ol>
+                    </ol></p>
                  </statement>
             </exercise>
         </exercisegroup>

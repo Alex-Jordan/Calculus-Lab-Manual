@@ -645,7 +645,7 @@ formula stated above for the product of three functions.  The first application 
         <exercisegroup>
             <introduction>
                 <p>In <xref ref="table-functions-for-derivative-rules"/> several function and derivative values are given for the functions <m>f</m> and <m>g</m>.  The exercises that follow are based upon these two functions.</p>
-                <table xml:id="table-functions-for-derivative-rules" valign="top">
+                <table xml:id="table-functions-for-derivative-rules">
                     <caption>Various values for derivatives of <m>f</m> and <m>g</m></caption>
                     <tabular top="major">
                         <col halign="right"/>

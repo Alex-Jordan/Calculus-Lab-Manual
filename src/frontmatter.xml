@@ -31,6 +31,11 @@
 
     <colophon>
 
+        <website>
+            <name>spot.pcc.edu/math/clm</name>
+            <address>http://spot.pcc.edu/math/clm</address>
+        </website>
+
         <copyright>
             <year>2012<ndash />2016</year>
             <holder>Portland Community College</holder>
@@ -55,11 +60,11 @@
         <paragraphs>
             <title>HTML and PDF</title>
             <p>This manual has been released with several synchronous versions that offer different features. The essential content of each version is the same as for all others.</p>
-            <ul>
+            <p><ul>
                 <li><p>A web version is available at <url href="http://spot.pcc.edu/math/clm"/>, and this version is recommended. The web version offers full walk-through solutions to supplemental problems. More importantly, it offers interactive elements and easier navigation than print versions.</p></li>
                 <li><p>A PDF-for-print is available at <url href="http://spot.pcc.edu/math/clm/clm-print.pdf"/>. This version is designed to be printed, not read on a screen. To save on printing expense, this version is mostly black-and-white, and only offers short answers to the supplemental exercises (as opposed to full solutions).</p></li>
                 <li><p>A <q>for-printing-with-color</q> PDF is available at <url href="http://spot.pcc.edu/math/clm/clm-print-color.pdf"/>. This version is like the above, except links and graphs retain their color.</p></li>
-            </ul>
+            </ul></p>
         </paragraphs>
 
         <paragraphs>
@@ -74,12 +79,12 @@
         <paragraphs>
             <title>Accessibility</title>
             <p>The HTML version is intended to meet or exceed all web accessibility standards. If you encounter an accessibility issue, please report it to the editor.</p>
-            <ul>
+            <p><ul>
                 <li><p>All graphs and images should have meaningful alt text that communicates what a sighted person would see, without necessarily giving away anything that is intended to be deduced from the image.</p></li>
                 <li><p>All math content is rendered using MathJax. MathJax has a contextual menu that can be accessed in several ways, depending on what operating system and browser you are using. The most common way is to right-click or control-click on some piece of math content.</p></li>
                 <li><p>In the MathJax contextual menu, you may set options for triggering a zoom effect on math content, and also by what factor the zoom will be.</p></li>
                 <li><p>If you change the MathJax renderer to MathML, then a screen reader will generally have success verbalizing the math content.</p></li>
-            </ul>
+            </ul></p>
         </paragraphs>
 
         <paragraphs>
@@ -115,12 +120,12 @@
         <p>This version of the calculus lab manual is significantly different from versions prior to 2012. The topics have been arranged in a developmental order. Because of this, students who work each activity in the order they appear may not get to all of the topics covered in a particular week.</p>
 
         <p>Additionally, a few changes have been introduced with the release of the MathBook XML version. The most notable changes are:</p>
-        <ul>
+        <p><ul>
             <li><p>The numbering scheme does not match the earlier numbering scheme. This was a necessary consequence of converting to MathBook XML.</p></li>
             <li><p>The related rates lab has been mostly rewritten using the DREDS approach.</p></li>
             <li><p>In the implicit differentiation lab, a section on logarithmic differentiation has been added.</p></li>
             <li><p>The printed version only contains short answers to the supplemental questions rather than complete walk-through solutions. However, complete solutions may still be found in the HTML version.</p></li>
-        </ul>
+        </ul></p>
 
         <p>It is strongly recommended that you pick and choose what you consider to be the most vital activities for a given week, and that you have your students work those activities first. For some activities you might also want to have the students only work selected problems in the activity. Students who complete the high priority activities and problems can then go back and work the activities that they initially skipped. There are also fully keyed problems in the supplementary exercises that the students could work on both during lab time and outside of class. (The full solutions are only in the HTML version.)</p>
 

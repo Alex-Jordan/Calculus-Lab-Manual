@@ -10,12 +10,7 @@
 <docinfo>
 
     <!-- Thumbnail for HTML -->
-    <brandlogo url="http://spot.pcc.edu/math/calclabbeta" source="coverthumbnail.png" />
-
-    <website>
-        <title>spot.pcc.edu/math/clm</title>
-        <url>http://spot.pcc.edu/math/clm</url>
-    </website>
+    <brandlogo url="http://spot.pcc.edu/math/calclabbeta" source="images/coverthumbnail.png" />
 
     <!-- For title into HTML head, then tabs, bookmarks, etc -->
     <initialism>CLM</initialism>

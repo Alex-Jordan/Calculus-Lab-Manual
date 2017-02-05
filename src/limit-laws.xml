@@ -59,12 +59,12 @@
 
                 <p>Use the limit laws to establish the value of each of the following limits. Make sure that you use the step-by-step, vertical format shown in <xref ref="exercise-apply-limit-laws"/>. Make sure that you cite the limit laws used in each step. To help you get started, the steps necessary in <xref ref="exercise-first-apply-limit-laws"/> are outlined as:</p>
 
-                <ol>
+                <p><ol>
                     <li><p>Apply <xref autoname="title" ref="lla6"/></p></li>
                     <li><p>Apply <xref autoname="title" ref="lla1"/></p></li>
                     <li><p>Apply <xref autoname="title" ref="lla3"/></p></li>
                     <li><p>Apply <xref autoname="title" ref="llr1"/> and <xref autoname="title" ref="llr2"/></p></li>
-                </ol> 
+                </ol></p> 
 
             </introduction>
 

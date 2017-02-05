@@ -23,10 +23,10 @@
 
     <p>There are (at least) two important differences between the differentiation chain and the antidifferentiation chain (besides their reversed order).</p>
 
-    <ul>
+    <p><ul>
         <li><p>When you differentiate, the resultant function is unique. When you antidifferentiate, you do not get a unique function<mdash/>you get a family of functions; specifically, you get a set of parallel curves.</p></li>
         <li><p>We introduce a new function in the antidifferentiation chain. We say that <m>F</m> is an antiderivative of <m>f</m>.  This is where we stop in that direction; we do not have a variable name for an antiderivative of <m>F</m>.</p></li>
-    </ul>
+    </ul></p>
 
     <p>Since <m>F</m> is considered an antiderivative of <m>f</m>, it must be the case that <m>f</m> is the first derivative of <m>F</m>. Hence we can add <m>F</m> to our derivative chain resulting in <xref ref="figure-longer-derivative-chain"/>.</p>
 
