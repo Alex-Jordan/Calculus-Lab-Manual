@@ -40,7 +40,7 @@
 
     <p>To get around this problem we are going to employ a technique called <term>implicit differentiation</term>.  We use this technique to find the formula for <m>\lz{y}{x}</m> whenever the equation relating <m>x</m> and <m>y</m> is not explicitly solved for <m>y</m>.  What we are going to do is treat <m>y</m> <em>as if it were</em> a function of <m>x</m> and set the derivatives of the two sides of the equation equal to one another.  This is actually a reasonable thing to do because so long as we are at a point on the curve where the tangent line is not vertical, we could make <m>y</m> a function of <m>x</m> using appropriate restrictions on the domain and range.</p>
 
-    <p>Since we are treating <m>y</m> as a function of <m>x</m>, we need to make sure that we use the chain rule when differentiating terms like <m>y^3</m>.  When <m>u</m> is a function of <m>x</m>, we know that <m>\lzoo{x}{u^3}=3u^2\lzoo{x}{u}</m>. Since the name we give <m>\lzoo{x}{y}</m> is <m>\lz{y}{x}</m>, it follows that when <m>y</m> is a function of <m>x</m>, <m>\lzoo{x}{y^3}=3y^2\lz{y}{x}</m>. The derivation of <m>\lz{y}{x}</m> for the equation <m>y^3-4y=x^2-1</m> is shown in <xref ref="example-implicit-differentiation"/></p>
+    <p>Since we are treating <m>y</m> as a function of <m>x</m>, we need to make sure that we use the chain rule when differentiating terms like <m>y^3</m>.  When <m>u</m> is a function of <m>x</m>, we know that <m>\lzoo{x}{u^3}=3u^2\lzoo{x}{u}</m>. Since the name we give <m>\lzoo{x}{y}</m> is <m>\lz{y}{x}</m>, it follows that when <m>y</m> is a function of <m>x</m>, <m>\lzoo{x}{y^3}=3y^2\lz{y}{x}</m>. The derivation of <m>\lz{y}{x}</m> for the equation <m>y^3-4y=x^2-1</m> is shown in <xref ref="example-implicit-differentiation"/>.</p>
 
     <example xml:id="example-implicit-differentiation">
         <p><md>
@@ -102,7 +102,7 @@
             <statement>
                 <p>Several points that satisfy the equation <m>y=xe^y</m> are graphed in <xref ref="figure-lambert"/>.</p>
                 <sidebyside widths="47% 47%">
-                    <p>Find the slope and equation of the tangent line to this curve at the origin.  (Please note that you already found the formula for <m>\lz{y}{x}</m> in <xref ref="exercise-implicit-lambert"/>.</p>
+                    <p>Find the slope and equation of the tangent line to this curve at the origin.  (Please note that you already found the formula for <m>\lz{y}{x}</m> in <xref ref="exercise-implicit-lambert"/>.)</p>
                     <figure xml:id="figure-lambert">
                         <caption><m>y=xe^y</m></caption>
                         <image>

@@ -661,8 +661,8 @@ formula stated above for the product of three functions.  The first application 
                             <cell><m>\fe{\fd{f}}{x}</m></cell>
                             <cell><m>\fe{\sd{f}}{x}</m></cell>
                             <cell><m>\fe{g}{x}</m></cell>
-                            <cell><m>\fe{\fd{f}}{x}</m></cell>
-                            <cell><m>\fe{\sd{f}}{x}</m></cell>
+                            <cell><m>\fe{\fd{g}}{x}</m></cell>
+                            <cell><m>\fe{\sd{g}}{x}</m></cell>
                         </row>
                         <row>
                             <cell><m>0</m></cell>
@@ -811,7 +811,7 @@ formula stated above for the product of three functions.  The first application 
             </exercise>
             <exercise>
                 <statement>
-                    <p>Find <m>\fe{\fd{s}}{2}</m>, where <m>\fe{s}{x}=x\fe{g}{x}\fe{g}{x}</m>.</p>
+                    <p>Find <m>\fe{\fd{s}}{2}</m>, where <m>\fe{s}{x}=x\fe{f}{x}\fe{g}{x}</m>.</p>
                 </statement>
                 <answer>
                     <p><m>494</m></p>

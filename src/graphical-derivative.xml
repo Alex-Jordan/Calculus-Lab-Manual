@@ -260,10 +260,10 @@
         </exercise>
         <exercisegroup>
             <introduction>
-                <p>A graph of the function <m>f</m> given by <m>\fe{f}{x}=\frac{1}{x}</m> is shown in <xref ref="figure-one-over-x"/>.</p>
+                <p>A graph of the function <m>h</m> given by <m>\fe{h}{x}=\frac{1}{x}</m> is shown in <xref ref="figure-one-over-x"/>.</p>
                 <sidebyside widths="47% 47%">
                     <figure xml:id="figure-one-over-x" >
-                        <caption><m>y=\fe{f}{x}=\frac{1}{x}</m></caption>
+                        <caption><m>y=\fe{h}{x}=\frac{1}{x}</m></caption>
                         <image>
                             <description>a graph of a function whose curve has two portions; the first portion enters from the left, only a small bit below the x-axis; as it travels to the right, it slowly moves more and more downward; at about (-1,-1), it bends much more downward, moving almost vertically downward and exiting the graph a bit to the left of the y-axis; the second portion is a symmetric opposite from the first; the second portion enters the graph from the top, just to the right of the y-axis; it moves mostly straight down and slightly to the right, until at about (1,1) it smoothly bends rightward; it continues moving rightward, moving slightly downard too, until it leaves the graph on the right side slightly above the x-axis</description> 
                             <latex-image-code>
@@ -290,7 +290,7 @@
                         </image>
                     </figure>
                      <figure xml:id="figure-derivative-of-one-over-x" >
-                        <caption><m>y=\fe{\fd{f}}{x}</m></caption>
+                        <caption><m>y=\fe{\fd{h}}{x}</m></caption>
                         <image>
                             <description>a blank graph, with x-axis and y-axis each ranging from -7 to 7</description>
                             <latex-image-code>
@@ -305,27 +305,27 @@
             </introduction>
             <exercise xml:id="exercise-negative-derivative-of-one-over-x">
                 <statement>
-                    <p>Except at <m>0</m>, there is something that is always true about the value of <m>\fd{f}</m>; what is the common trait?</p> 
+                    <p>Except at <m>0</m>, there is something that is always true about the value of <m>\fd{h}</m>; what is the common trait?</p> 
                 </statement>
             </exercise>
             <exercise xml:id="exercise-derivative-of-one-over-x">
                 <statement>
-                    <p>Use <xref ref="definition-first-derivative"/> to find the formula for <m>\fe{\fd{f}}{x}</m>.</p>
+                    <p>Use <xref ref="definition-first-derivative"/> to find the formula for <m>\fe{\fd{h}}{x}</m>.</p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>Does the formula for <m>\fe{\fd{f}}{x}</m> support your answer to <xref ref="exercise-negative-derivative-of-one-over-x"/>?</p>
+                    <p>Does the formula for <m>\fe{\fd{h}}{x}</m> support your answer to <xref ref="exercise-negative-derivative-of-one-over-x"/>?</p>
                 </statement>
             </exercise>
             <exercise xml:id="exercise-asymptotes-one-over-x">
                 <statement>
-                    <p>Use the formula for <m>\fe{\fd{f}}{x}</m> to determine the horizontal and vertical asymptotes to the graph of <m>y=\fe{\fd{f}}{x}</m>.</p>
+                    <p>Use the formula for <m>\fe{\fd{h}}{x}</m> to determine the horizontal and vertical asymptotes to the graph of <m>y=\fe{\fd{h}}{x}</m>.</p>
                 </statement>
             </exercise>
             <exercise>
                 <statement>
-                    <p>Keeping it simple, draw onto <xref ref="figure-derivative-of-one-over-x"/> a curve with the asymptotes found in <xref ref="exercise-asymptotes-one-over-x"/> and the property determined in <xref ref="exercise-negative-derivative-of-one-over-x"/>. Does the curve you drew have the properties you would expect to see in the first derivative of <m>f</m>? For example, <m>f</m> is concave down over <m>\ointerval{-\infty}{0}</m>, and concave up over <m>\ointerval{0}{\infty}</m>; what are the corresponding differences in the behavior of <m>\fd{f}</m> over those two intervals?</p>
+                    <p>Keeping it simple, draw onto <xref ref="figure-derivative-of-one-over-x"/> a curve with the asymptotes found in <xref ref="exercise-asymptotes-one-over-x"/> and the property determined in <xref ref="exercise-negative-derivative-of-one-over-x"/>. Does the curve you drew have the properties you would expect to see in the first derivative of <m>h</m>? For example, <m>h</m> is concave down over <m>\ointerval{-\infty}{0}</m>, and concave up over <m>\ointerval{0}{\infty}</m>; what are the corresponding differences in the behavior of <m>\fd{h}</m> over those two intervals?</p>
                 </statement>
             </exercise> 
         </exercisegroup>

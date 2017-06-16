@@ -39,7 +39,7 @@
         <exercisegroup>
             <introduction>
                 <sidebyside widths="47% 47%">
-                    <p>Each of the linear functions in <xref ref="figure-parallel-lines"/> have the same first derivative function.</p>
+                    <p>Each of the linear functions in <xref ref="figure-parallel-lines"/> has the same first derivative function.</p>
                     <figure xml:id="figure-parallel-lines">
                         <caption/>
                         <image>
